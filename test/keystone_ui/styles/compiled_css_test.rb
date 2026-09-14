@@ -69,6 +69,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:focus.*?--tw-ring-color: var\(--color-accent-500\)/m, block(".ks-input"))
   end
 
+  def test_input_turns_dark_in_dark_mode
+    assert_match(/data-theme="dark".*?background-color: var\(--color-zinc-900\)/m, block(".ks-input"))
+  end
+
   private
 
   def block(selector)
