@@ -45,6 +45,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-button-secondary"), "background-color: var(--color-gray-500)"
   end
 
+  def test_danger_button_has_a_red_background
+    assert_includes rule(".ks-button-danger"), "background-color: var(--color-red-600)"
+  end
+
   private
 
   def block(selector)

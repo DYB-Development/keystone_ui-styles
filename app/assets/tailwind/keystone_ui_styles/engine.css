@@ -49,6 +49,10 @@
     @apply bg-gray-500 text-white hover:bg-gray-400;
   }
 
+  .ks-button-danger {
+    @apply bg-red-600 text-white hover:bg-red-500;
+  }
+
   .ks-panel {
     @apply border border-gray-200 bg-white dark:bg-zinc-900 dark:border-zinc-700;
   }
