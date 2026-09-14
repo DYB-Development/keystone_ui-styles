@@ -73,6 +73,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--color-zinc-900\)/m, block(".ks-input"))
   end
 
+  def test_disabled_input_shows_a_not_allowed_cursor
+    assert_includes rule(".ks-input-disabled"), "cursor: not-allowed"
+  end
+
   private
 
   def block(selector)
