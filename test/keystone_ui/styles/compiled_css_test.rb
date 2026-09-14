@@ -77,6 +77,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-input-disabled"), "cursor: not-allowed"
   end
 
+  def test_label_uses_gray_text
+    assert_includes rule(".ks-label"), "color: var(--color-gray-700)"
+  end
+
   private
 
   def block(selector)

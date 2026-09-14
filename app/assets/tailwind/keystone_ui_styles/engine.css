@@ -76,4 +76,8 @@
   .ks-input-disabled {
     @apply cursor-not-allowed bg-gray-50 text-gray-500 dark:bg-zinc-800 dark:text-gray-400;
   }
+
+  .ks-label {
+    @apply block text-sm font-medium text-gray-700 dark:text-gray-300;
+  }
 }
