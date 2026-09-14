@@ -25,6 +25,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-button-primary"), "background-color: var(--color-accent-600)"
   end
 
+  def test_panel_has_a_white_background
+    assert_includes rule(".ks-panel"), "background-color: var(--color-white)"
+  end
+
   private
 
   def rule(selector)

@@ -32,4 +32,8 @@
   .ks-button-primary {
     @apply bg-accent-600 text-white hover:bg-accent-500;
   }
+
+  .ks-panel {
+    @apply border border-gray-200 bg-white;
+  }
 }
