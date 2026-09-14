@@ -1,3 +1,5 @@
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 @theme {
   --color-accent-50: #eff6ff;
   --color-accent-100: #dbeafe;
@@ -34,6 +36,6 @@
   }
 
   .ks-panel {
-    @apply border border-gray-200 bg-white;
+    @apply border border-gray-200 bg-white dark:bg-zinc-900 dark:border-zinc-700;
   }
 }
