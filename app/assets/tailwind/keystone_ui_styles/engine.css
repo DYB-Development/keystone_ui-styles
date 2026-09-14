@@ -10,7 +10,7 @@
   }
 }
 
-@theme {
+@theme static {
   --color-accent-50: #eff6ff;
   --color-accent-100: #dbeafe;
   --color-accent-200: #bfdbfe;

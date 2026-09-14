@@ -97,6 +97,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-checkbox"), "color: var(--color-accent-600)"
   end
 
+  def test_defines_every_surface_color_variable_even_when_no_class_uses_it
+    assert_includes self.class.compiled, "--color-surface-950: #09090b"
+  end
+
   private
 
   def block(selector)
