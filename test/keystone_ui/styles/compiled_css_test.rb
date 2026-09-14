@@ -65,6 +65,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-input"), "border-color: var(--color-gray-300)"
   end
 
+  def test_focused_input_rings_in_the_accent_color
+    assert_match(/:focus.*?--tw-ring-color: var\(--color-accent-500\)/m, block(".ks-input"))
+  end
+
   private
 
   def block(selector)
