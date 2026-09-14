@@ -13,4 +13,8 @@ class KeystoneUi::Styles::EngineTest < Minitest::Test
   def test_keeps_the_tailwind_file_where_released_keystone_ui_versions_import_it
     assert KeystoneUi::Styles::Engine.root.join("app/assets/tailwind/keystone_ui_styles/engine.css").exist?
   end
+
+  def test_tells_keystone_ui_where_its_tailwind_file_is
+    assert_equal KeystoneUi::Styles::Engine.root.join("app/assets/tailwind/keystone_ui_styles/engine.css"), KeystoneUi::Styles.tailwind_file
+  end
 end
