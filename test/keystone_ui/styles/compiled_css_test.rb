@@ -89,6 +89,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-hint"), "color: var(--color-gray-500)"
   end
 
+  def test_error_uses_red_text
+    assert_includes rule(".ks-error"), "color: var(--color-red-600)"
+  end
+
   private
 
   def block(selector)
