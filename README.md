@@ -10,7 +10,7 @@ depend on it, and their install generators add its stylesheet import.
 ## Requirements
 
 - Rails 7.0 or later
-- [tailwindcss-rails](https://github.com/rails/tailwindcss-rails) 4 or later
+- [tailwindcss-rails](https://github.com/rails/tailwindcss-rails) 4.3 or later, the first version that compiles engine entry files
 
 ## How a host gets it
 
