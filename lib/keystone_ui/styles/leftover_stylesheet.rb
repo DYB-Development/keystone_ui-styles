@@ -10,7 +10,8 @@ module KeystoneUi
       end
 
       def remove
-        @root.join("app/assets/builds/tailwind/keystone_ui_styles.css").delete
+        leftover = @root.join("app/assets/builds/tailwind/keystone_ui_styles.css")
+        leftover.delete if leftover.exist?
       end
     end
   end

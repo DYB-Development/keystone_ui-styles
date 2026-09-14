@@ -16,4 +16,12 @@ class KeystoneUi::Styles::LeftoverStylesheetTest < Minitest::Test
       refute leftover.exist?
     end
   end
+
+  def test_does_nothing_when_the_host_has_no_leftover_stylesheet
+    Dir.mktmpdir do |root|
+      KeystoneUi::Styles::LeftoverStylesheet.new(root).remove
+
+      refute Pathname.new(root).join("app/assets/builds/tailwind/keystone_ui_styles.css").exist?
+    end
+  end
 end
