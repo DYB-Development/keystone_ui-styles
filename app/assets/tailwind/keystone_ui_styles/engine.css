@@ -1,4 +1,12 @@
-@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+@custom-variant dark {
+  &:where([data-theme="dark"], [data-theme="dark"] *) {
+    @slot;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @slot;
+  }
+}
 
 @theme {
   --color-accent-50: #eff6ff;

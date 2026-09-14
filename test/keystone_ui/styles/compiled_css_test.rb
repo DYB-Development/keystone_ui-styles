@@ -33,6 +33,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--color-zinc-900\)/m, block(".ks-panel"))
   end
 
+  def test_panel_turns_dark_when_the_operating_system_is_dark
+    assert_match(/prefers-color-scheme: dark.*?background-color: var\(--color-zinc-900\)/m, block(".ks-panel"))
+  end
+
   private
 
   def block(selector)
