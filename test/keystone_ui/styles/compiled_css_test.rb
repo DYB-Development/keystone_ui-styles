@@ -41,6 +41,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/prefers-color-scheme: dark.*?:not\(\[data-theme="light"\], \[data-theme="light"\] \*\)/m, block(".ks-panel"))
   end
 
+  def test_secondary_button_has_a_gray_background
+    assert_includes rule(".ks-button-secondary"), "background-color: var(--color-gray-500)"
+  end
+
   private
 
   def block(selector)

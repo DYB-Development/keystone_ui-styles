@@ -45,6 +45,10 @@
     @apply bg-accent-600 text-white hover:bg-accent-500;
   }
 
+  .ks-button-secondary {
+    @apply bg-gray-500 text-white hover:bg-gray-400;
+  }
+
   .ks-panel {
     @apply border border-gray-200 bg-white dark:bg-zinc-900 dark:border-zinc-700;
   }
