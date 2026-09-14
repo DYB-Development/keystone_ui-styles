@@ -49,6 +49,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-button-danger"), "background-color: var(--color-red-600)"
   end
 
+  def test_small_button_uses_small_text
+    assert_includes rule(".ks-button-sm"), "font-size: var(--text-sm)"
+  end
+
   private
 
   def block(selector)

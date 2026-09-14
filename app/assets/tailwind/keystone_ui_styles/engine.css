@@ -53,6 +53,10 @@
     @apply bg-red-600 text-white hover:bg-red-500;
   }
 
+  .ks-button-sm {
+    @apply text-sm px-3 py-1.5;
+  }
+
   .ks-panel {
     @apply border border-gray-200 bg-white dark:bg-zinc-900 dark:border-zinc-700;
   }
