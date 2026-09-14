@@ -4,8 +4,8 @@ Shared CSS for [keystone_ui](https://github.com/DYB-Development/keystone_ui) and
 keystone_ui-react: keystone's color variables, its light and dark mode, and the
 classes for buttons, panels and form fields.
 
-Host apps do not install this gem directly. keystone_ui and keystone_ui-react
-depend on it, and their install generators add its stylesheet import.
+Host apps do not install this gem directly. keystone_ui depends on it and brings it
+into the host's Tailwind build.
 
 ## Requirements
 
