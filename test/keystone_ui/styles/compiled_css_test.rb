@@ -81,6 +81,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-label"), "color: var(--color-gray-700)"
   end
 
+  def test_required_marker_is_red
+    assert_includes rule(".ks-required"), "color: var(--color-red-500)"
+  end
+
   private
 
   def block(selector)
