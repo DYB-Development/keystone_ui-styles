@@ -4,7 +4,9 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    @slot;
+    &:where(:not([data-theme="light"], [data-theme="light"] *)) {
+      @slot;
+    }
   }
 }
 
