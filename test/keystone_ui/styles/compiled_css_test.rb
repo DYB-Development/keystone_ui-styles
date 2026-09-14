@@ -61,6 +61,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-button-lg"), "font-size: var(--text-lg)"
   end
 
+  def test_input_has_a_gray_border
+    assert_includes rule(".ks-input"), "border-color: var(--color-gray-300)"
+  end
+
   private
 
   def block(selector)

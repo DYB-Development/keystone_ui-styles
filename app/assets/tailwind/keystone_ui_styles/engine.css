@@ -68,4 +68,8 @@
   .ks-panel {
     @apply border border-gray-200 bg-white dark:bg-zinc-900 dark:border-zinc-700;
   }
+
+  .ks-input {
+    @apply block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-1;
+  }
 }
