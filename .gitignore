@@ -1,0 +1,7 @@
+Gemfile.lock
+pkg/
+*.gem
+.claude/
+.DS_Store
+.env*
+/tmp/
