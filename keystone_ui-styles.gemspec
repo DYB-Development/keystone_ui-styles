@@ -23,4 +23,6 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["lib/**/*", "app/**/*"] + [ "MIT-LICENSE" ]
   spec.require_paths = [ "lib" ]
+
+  spec.add_dependency "railties", ">= 7.0"
 end
