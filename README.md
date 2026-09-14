@@ -4,24 +4,22 @@ Shared CSS for [keystone_ui](https://github.com/DYB-Development/keystone_ui) and
 keystone_ui-react: keystone's color variables, its light and dark mode, and the
 classes for buttons, panels and form fields.
 
-Host apps do not install this gem directly. keystone_ui and keystone_ui-react
-depend on it, and their install generators add its stylesheet import.
+Host apps do not install this gem directly. keystone_ui depends on it and brings it
+into the host's Tailwind build.
 
 ## Requirements
 
 - Rails 7.0 or later
-- [tailwindcss-rails](https://github.com/rails/tailwindcss-rails) 4.3 or later, the first version that compiles engine entry files
+- [tailwindcss-rails](https://github.com/rails/tailwindcss-rails) 4 or later
 
 ## How a host gets it
 
-tailwindcss-rails compiles the entry file of every loaded engine into
-`app/assets/builds/tailwind/keystone_ui_styles.css`. The host stylesheet imports it
-once, after Tailwind:
+keystone_ui imports keystone_ui-styles into the host's Tailwind build through the
+`keystone_source.css` file it writes at boot. A host imports nothing for
+keystone_ui-styles itself.
 
-```css
-@import "tailwindcss";
-@import "../builds/tailwind/keystone_ui_styles";
-```
+A gem that needs the file directly can read its path from
+`KeystoneUi::Styles.tailwind_file`.
 
 ## Colors
 
