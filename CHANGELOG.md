@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-09-14
+
+Initial release.
+
 - Color variables for the accent and surface scales.
 - Light and dark mode that follows the operating system unless the page sets `data-theme`.
 - Button, panel and form field classes.
