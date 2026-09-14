@@ -93,6 +93,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-error"), "color: var(--color-red-600)"
   end
 
+  def test_checkbox_uses_the_accent_color
+    assert_includes rule(".ks-checkbox"), "color: var(--color-accent-600)"
+  end
+
   private
 
   def block(selector)
