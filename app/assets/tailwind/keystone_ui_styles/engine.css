@@ -1,0 +1,99 @@
+@custom-variant dark {
+  &:where([data-theme="dark"], [data-theme="dark"] *) {
+    @slot;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &:where(:not([data-theme="light"], [data-theme="light"] *)) {
+      @slot;
+    }
+  }
+}
+
+@theme static {
+  --color-accent-50: #eff6ff;
+  --color-accent-100: #dbeafe;
+  --color-accent-200: #bfdbfe;
+  --color-accent-300: #93c5fd;
+  --color-accent-400: #60a5fa;
+  --color-accent-500: #3b82f6;
+  --color-accent-600: #2563eb;
+  --color-accent-700: #1d4ed8;
+  --color-accent-800: #1e40af;
+  --color-accent-900: #1e3a8a;
+  --color-accent-950: #172554;
+
+  --color-surface-50: #fafafa;
+  --color-surface-100: #f4f4f5;
+  --color-surface-200: #e4e4e7;
+  --color-surface-300: #d4d4d8;
+  --color-surface-400: #a1a1aa;
+  --color-surface-500: #71717a;
+  --color-surface-600: #52525b;
+  --color-surface-700: #3f3f46;
+  --color-surface-800: #27272a;
+  --color-surface-900: #18181b;
+  --color-surface-950: #09090b;
+}
+
+@layer components {
+  .ks-button {
+    @apply inline-flex items-center justify-center font-semibold rounded-lg border-0 cursor-pointer no-underline;
+  }
+
+  .ks-button-primary {
+    @apply bg-accent-600 text-white hover:bg-accent-500;
+  }
+
+  .ks-button-secondary {
+    @apply bg-gray-500 text-white hover:bg-gray-400;
+  }
+
+  .ks-button-danger {
+    @apply bg-red-600 text-white hover:bg-red-500;
+  }
+
+  .ks-button-sm {
+    @apply text-sm px-3 py-1.5;
+  }
+
+  .ks-button-md {
+    @apply text-base px-4 py-2;
+  }
+
+  .ks-button-lg {
+    @apply text-lg px-5 py-3;
+  }
+
+  .ks-panel {
+    @apply border border-gray-200 bg-white dark:bg-zinc-900 dark:border-zinc-700;
+  }
+
+  .ks-input {
+    @apply block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:border-accent-500 focus:ring-accent-500 dark:bg-zinc-900 dark:border-zinc-700 dark:text-white dark:placeholder:text-gray-500 dark:focus:border-accent-400 dark:focus:ring-accent-400;
+  }
+
+  .ks-input-disabled {
+    @apply cursor-not-allowed bg-gray-50 text-gray-500 dark:bg-zinc-800 dark:text-gray-400;
+  }
+
+  .ks-label {
+    @apply block text-sm font-medium text-gray-700 dark:text-gray-300;
+  }
+
+  .ks-required {
+    @apply text-red-500 ml-0.5;
+  }
+
+  .ks-hint {
+    @apply mt-1 text-sm text-gray-500 dark:text-gray-400;
+  }
+
+  .ks-error {
+    @apply mt-1 text-sm text-red-600 dark:text-red-400;
+  }
+
+  .ks-checkbox {
+    @apply rounded border-gray-300 text-accent-600 focus:ring-accent-500 dark:border-zinc-600 dark:bg-zinc-900;
+  }
+}
