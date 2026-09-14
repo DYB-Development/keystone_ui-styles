@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Fixed
+- A host app that ran its Tailwind build with keystone_ui-styles 0.1.0 no longer keeps `app/assets/builds/tailwind/keystone_ui_styles.css` after upgrading. The gem deletes that file when the host app boots, and leaves the folder's other files alone.
+
+### Upgrading
+- No manual step. The 0.1.1 advice to run `rails tailwindcss:clobber` did not remove this file, and deleting it by hand is no longer needed.
+
 ## [0.1.1] - 2026-09-14
 
 ### Fixed
