@@ -53,6 +53,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-button-sm"), "font-size: var(--text-sm)"
   end
 
+  def test_medium_button_uses_base_text
+    assert_includes rule(".ks-button-md"), "font-size: var(--text-base)"
+  end
+
   private
 
   def block(selector)
