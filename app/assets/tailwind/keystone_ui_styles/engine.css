@@ -61,6 +61,10 @@
     @apply text-base px-4 py-2;
   }
 
+  .ks-button-lg {
+    @apply text-lg px-5 py-3;
+  }
+
   .ks-panel {
     @apply border border-gray-200 bg-white dark:bg-zinc-900 dark:border-zinc-700;
   }
