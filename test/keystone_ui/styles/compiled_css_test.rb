@@ -148,6 +148,14 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--color-white\)/m, block(".ks-section-title"))
   end
 
+  def test_page_header_classes_match_keystone_ui_page_header
+    assert_includes rule(".ks-page-header"), "margin-bottom: calc(var(--spacing) * 6)"
+    assert_includes rule(".ks-page-header-title"), "font-size: var(--text-2xl)"
+    assert_includes rule(".ks-page-header-subtitle"), "color: var(--color-gray-500)"
+    assert_includes rule(".ks-page-header-actions"), "flex-shrink: 0"
+    assert_match(/data-theme="dark".*?color: var\(--color-white\)/m, block(".ks-page-header-title"))
+  end
+
   private
 
   def block(selector)

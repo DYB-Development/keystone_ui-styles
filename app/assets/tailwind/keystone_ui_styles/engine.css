@@ -97,6 +97,22 @@
     @apply rounded border-gray-300 text-accent-600 focus:ring-accent-500 dark:border-zinc-600 dark:bg-zinc-900;
   }
 
+  .ks-page-header {
+    @apply hidden sm:block mb-6 sm:flex sm:items-center sm:justify-between;
+  }
+
+  .ks-page-header-title {
+    @apply text-2xl font-bold text-gray-900 dark:text-white;
+  }
+
+  .ks-page-header-subtitle {
+    @apply mt-1 text-sm text-gray-500 dark:text-gray-400;
+  }
+
+  .ks-page-header-actions {
+    @apply hidden sm:block mt-4 sm:mt-0 sm:ml-4 flex-shrink-0;
+  }
+
   .ks-section-sm {
     @apply mt-4;
   }
