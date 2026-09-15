@@ -126,6 +126,17 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--color-accent-300\)/m, block(".ks-alert-info"))
   end
 
+  def test_card_classes_match_keystone_ui_card
+    assert_includes rule(".ks-card"), "border-radius: var(--radius-lg)"
+    assert_includes rule(".ks-card-edge"), "border-block-width: 1px"
+    assert_includes rule(".ks-card-body"), "padding-inline: calc(var(--spacing) * 4)"
+    assert_includes rule(".ks-card-title"), "font-size: var(--text-lg)"
+    assert_includes rule(".ks-card-summary"), "color: var(--color-gray-500)"
+    assert_includes rule(".ks-card-cta"), "padding-bottom: calc(var(--spacing) * 4)"
+    assert_includes rule(".ks-card-link"), "color: var(--color-accent-600)"
+    assert_match(/data-theme="dark".*?background-color: var\(--color-zinc-900\)/m, block(".ks-card"))
+  end
+
   private
 
   def block(selector)
