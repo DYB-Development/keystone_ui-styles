@@ -55,6 +55,19 @@ The `dark:` variant in the host's own Tailwind classes follows the same rule.
 | `ks-hint` | Field hint |
 | `ks-error` | Field error |
 | `ks-checkbox` | Checkbox |
+| `ks-page` | Page padding |
+| `ks-page-sm`, `ks-page-md`, `ks-page-lg`, `ks-page-xl` | Page maximum width, centered |
+| `ks-page-offset-sm`, `ks-page-offset-md`, `ks-page-offset-lg`, `ks-page-offset-xl` | Space above a page |
+| `ks-page-header`, `ks-page-header-title`, `ks-page-header-subtitle`, `ks-page-header-actions` | Page header and its parts |
+| `ks-section-sm`, `ks-section-md`, `ks-section-lg` | Space above a section |
+| `ks-section-header`, `ks-section-title`, `ks-section-subtitle`, `ks-section-action` | Section header and its parts |
+| `ks-card`, `ks-card-edge` | Card, and a card that runs edge to edge on small screens |
+| `ks-card-body`, `ks-card-title`, `ks-card-summary`, `ks-card-cta`, `ks-card-link` | Card parts |
+| `ks-alert` | Every alert |
+| `ks-alert-info`, `ks-alert-success`, `ks-alert-warning`, `ks-alert-error` | Alert color |
+| `ks-alert-body`, `ks-alert-content`, `ks-alert-title`, `ks-alert-message`, `ks-alert-message-titled`, `ks-alert-dismiss` | Alert parts |
+| `ks-badge` | Every badge |
+| `ks-badge-neutral`, `ks-badge-success`, `ks-badge-danger`, `ks-badge-warning`, `ks-badge-info` | Badge color |
 
 ```html
 <button class="ks-button ks-button-primary ks-button-md">Save</button>
