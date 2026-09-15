@@ -111,6 +111,21 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: color-mix\(in (srgb|oklab), var\(--color-accent-900\) 50%, transparent\)/m, block(".ks-badge-info"))
   end
 
+  def test_alert_classes_match_keystone_ui_alert
+    assert_includes rule(".ks-alert"), "border-radius: var(--radius-md)"
+    assert_includes rule(".ks-alert-info"), "background-color: var(--color-accent-50)"
+    assert_includes rule(".ks-alert-success"), "background-color: var(--color-green-50)"
+    assert_includes rule(".ks-alert-warning"), "background-color: var(--color-yellow-50)"
+    assert_includes rule(".ks-alert-error"), "background-color: var(--color-red-50)"
+    assert_includes rule(".ks-alert-body"), "display: flex"
+    assert_includes rule(".ks-alert-content"), "flex: 1"
+    assert_includes rule(".ks-alert-title"), "font-weight: var(--font-weight-semibold)"
+    assert_includes rule(".ks-alert-message"), "font-size: var(--text-sm)"
+    assert_includes rule(".ks-alert-message-titled"), "margin-top: var(--spacing)"
+    assert_includes rule(".ks-alert-dismiss"), "cursor: pointer"
+    assert_match(/data-theme="dark".*?color: var\(--color-accent-300\)/m, block(".ks-alert-info"))
+  end
+
   private
 
   def block(selector)

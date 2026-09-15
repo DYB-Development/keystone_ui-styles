@@ -97,6 +97,50 @@
     @apply rounded border-gray-300 text-accent-600 focus:ring-accent-500 dark:border-zinc-600 dark:bg-zinc-900;
   }
 
+  .ks-alert {
+    @apply rounded-md p-4;
+  }
+
+  .ks-alert-info {
+    @apply bg-accent-50 text-accent-800 dark:bg-accent-900/30 dark:text-accent-300;
+  }
+
+  .ks-alert-success {
+    @apply bg-green-50 text-green-800 dark:bg-green-900/30 dark:text-green-300;
+  }
+
+  .ks-alert-warning {
+    @apply bg-yellow-50 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300;
+  }
+
+  .ks-alert-error {
+    @apply bg-red-50 text-red-800 dark:bg-red-900/30 dark:text-red-300;
+  }
+
+  .ks-alert-body {
+    @apply flex;
+  }
+
+  .ks-alert-content {
+    @apply flex-1;
+  }
+
+  .ks-alert-title {
+    @apply font-semibold;
+  }
+
+  .ks-alert-message {
+    @apply text-sm;
+  }
+
+  .ks-alert-message-titled {
+    @apply text-sm mt-1;
+  }
+
+  .ks-alert-dismiss {
+    @apply ml-auto -mr-1.5 -mt-1.5 inline-flex rounded-md p-1.5 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer;
+  }
+
   .ks-badge {
     @apply inline-flex items-center rounded-full px-2 py-1 text-xs font-medium;
   }
