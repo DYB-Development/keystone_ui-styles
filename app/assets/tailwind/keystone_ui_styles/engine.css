@@ -97,6 +97,34 @@
     @apply rounded border-gray-300 text-accent-600 focus:ring-accent-500 dark:border-zinc-600 dark:bg-zinc-900;
   }
 
+  .ks-section-sm {
+    @apply mt-4;
+  }
+
+  .ks-section-md {
+    @apply mt-6;
+  }
+
+  .ks-section-lg {
+    @apply mt-8;
+  }
+
+  .ks-section-header {
+    @apply flex items-center justify-between mb-4;
+  }
+
+  .ks-section-title {
+    @apply text-lg font-semibold text-gray-900 dark:text-white;
+  }
+
+  .ks-section-subtitle {
+    @apply mt-1 text-sm text-gray-500 dark:text-gray-400;
+  }
+
+  .ks-section-action {
+    @apply text-sm text-accent-600 hover:text-accent-900 dark:text-accent-400 dark:hover:text-accent-300;
+  }
+
   .ks-card {
     @apply overflow-hidden rounded-lg border border-gray-200 bg-white dark:bg-zinc-900 dark:border-zinc-700;
   }
