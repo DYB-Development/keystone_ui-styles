@@ -96,4 +96,28 @@
   .ks-checkbox {
     @apply rounded border-gray-300 text-accent-600 focus:ring-accent-500 dark:border-zinc-600 dark:bg-zinc-900;
   }
+
+  .ks-badge {
+    @apply inline-flex items-center rounded-full px-2 py-1 text-xs font-medium;
+  }
+
+  .ks-badge-neutral {
+    @apply bg-gray-100 text-gray-700 dark:bg-zinc-700 dark:text-gray-300;
+  }
+
+  .ks-badge-success {
+    @apply bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-400;
+  }
+
+  .ks-badge-danger {
+    @apply bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-400;
+  }
+
+  .ks-badge-warning {
+    @apply bg-yellow-100 text-yellow-700 dark:bg-yellow-900/50 dark:text-yellow-400;
+  }
+
+  .ks-badge-info {
+    @apply bg-accent-100 text-accent-700 dark:bg-accent-900/50 dark:text-accent-400;
+  }
 }
