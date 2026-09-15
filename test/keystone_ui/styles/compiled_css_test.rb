@@ -101,6 +101,74 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes self.class.compiled, "--color-surface-950: #09090b"
   end
 
+  def test_badge_classes_match_keystone_ui_badge
+    assert_includes rule(".ks-badge"), "border-radius: calc(infinity * 1px)"
+    assert_includes rule(".ks-badge-neutral"), "background-color: var(--color-gray-100)"
+    assert_includes rule(".ks-badge-success"), "background-color: var(--color-green-100)"
+    assert_includes rule(".ks-badge-danger"), "background-color: var(--color-red-100)"
+    assert_includes rule(".ks-badge-warning"), "background-color: var(--color-yellow-100)"
+    assert_includes rule(".ks-badge-info"), "background-color: var(--color-accent-100)"
+    assert_match(/data-theme="dark".*?background-color: color-mix\(in (srgb|oklab), var\(--color-accent-900\) 50%, transparent\)/m, block(".ks-badge-info"))
+  end
+
+  def test_alert_classes_match_keystone_ui_alert
+    assert_includes rule(".ks-alert"), "border-radius: var(--radius-md)"
+    assert_includes rule(".ks-alert-info"), "background-color: var(--color-accent-50)"
+    assert_includes rule(".ks-alert-success"), "background-color: var(--color-green-50)"
+    assert_includes rule(".ks-alert-warning"), "background-color: var(--color-yellow-50)"
+    assert_includes rule(".ks-alert-error"), "background-color: var(--color-red-50)"
+    assert_includes rule(".ks-alert-body"), "display: flex"
+    assert_includes rule(".ks-alert-content"), "flex: 1"
+    assert_includes rule(".ks-alert-title"), "font-weight: var(--font-weight-semibold)"
+    assert_includes rule(".ks-alert-message"), "font-size: var(--text-sm)"
+    assert_includes rule(".ks-alert-message-titled"), "margin-top: var(--spacing)"
+    assert_includes rule(".ks-alert-dismiss"), "cursor: pointer"
+    assert_match(/data-theme="dark".*?color: var\(--color-accent-300\)/m, block(".ks-alert-info"))
+  end
+
+  def test_card_classes_match_keystone_ui_card
+    assert_includes rule(".ks-card"), "border-radius: var(--radius-lg)"
+    assert_includes rule(".ks-card-edge"), "border-block-width: 1px"
+    assert_includes rule(".ks-card-body"), "padding-inline: calc(var(--spacing) * 4)"
+    assert_includes rule(".ks-card-title"), "font-size: var(--text-lg)"
+    assert_includes rule(".ks-card-summary"), "color: var(--color-gray-500)"
+    assert_includes rule(".ks-card-cta"), "padding-bottom: calc(var(--spacing) * 4)"
+    assert_includes rule(".ks-card-link"), "color: var(--color-accent-600)"
+    assert_match(/data-theme="dark".*?background-color: var\(--color-zinc-900\)/m, block(".ks-card"))
+  end
+
+  def test_section_classes_match_keystone_ui_section
+    assert_includes rule(".ks-section-sm"), "margin-top: calc(var(--spacing) * 4)"
+    assert_includes rule(".ks-section-md"), "margin-top: calc(var(--spacing) * 6)"
+    assert_includes rule(".ks-section-lg"), "margin-top: calc(var(--spacing) * 8)"
+    assert_includes rule(".ks-section-header"), "justify-content: space-between"
+    assert_includes rule(".ks-section-title"), "font-size: var(--text-lg)"
+    assert_includes rule(".ks-section-subtitle"), "color: var(--color-gray-500)"
+    assert_includes rule(".ks-section-action"), "color: var(--color-accent-600)"
+    assert_match(/data-theme="dark".*?color: var\(--color-white\)/m, block(".ks-section-title"))
+  end
+
+  def test_page_header_classes_match_keystone_ui_page_header
+    assert_includes rule(".ks-page-header"), "margin-bottom: calc(var(--spacing) * 6)"
+    assert_includes rule(".ks-page-header-title"), "font-size: var(--text-2xl)"
+    assert_includes rule(".ks-page-header-subtitle"), "color: var(--color-gray-500)"
+    assert_includes rule(".ks-page-header-actions"), "flex-shrink: 0"
+    assert_match(/data-theme="dark".*?color: var\(--color-white\)/m, block(".ks-page-header-title"))
+  end
+
+  def test_page_classes_match_keystone_ui_page
+    assert_includes rule(".ks-page"), "padding-inline: calc(var(--spacing) * 4)"
+    assert_includes rule(".ks-page-sm"), "max-width: var(--container-2xl)"
+    assert_includes rule(".ks-page-md"), "max-width: var(--container-4xl)"
+    assert_includes rule(".ks-page-lg"), "max-width: var(--container-6xl)"
+    assert_includes rule(".ks-page-xl"), "max-width: var(--container-7xl)"
+    assert_includes rule(".ks-page-xl"), "margin-inline: auto"
+    assert_includes rule(".ks-page-offset-sm"), "padding-top: calc(var(--spacing) * 12)"
+    assert_includes rule(".ks-page-offset-md"), "padding-top: calc(var(--spacing) * 16)"
+    assert_includes rule(".ks-page-offset-lg"), "padding-top: calc(var(--spacing) * 20)"
+    assert_includes rule(".ks-page-offset-xl"), "padding-top: calc(var(--spacing) * 24)"
+  end
+
   private
 
   def block(selector)

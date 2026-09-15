@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Added
+- Shared classes for keystone_ui's page, page header, section, card, alert and badge, matching how keystone_ui styles those components today.
+
 ## [0.1.2] - 2026-09-14
 
 ### Fixed
