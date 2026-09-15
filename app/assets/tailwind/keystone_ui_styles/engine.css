@@ -97,6 +97,42 @@
     @apply rounded border-gray-300 text-accent-600 focus:ring-accent-500 dark:border-zinc-600 dark:bg-zinc-900;
   }
 
+  .ks-page {
+    @apply px-4 py-4 sm:px-6 lg:px-8;
+  }
+
+  .ks-page-sm {
+    @apply max-w-2xl mx-auto;
+  }
+
+  .ks-page-md {
+    @apply max-w-4xl mx-auto;
+  }
+
+  .ks-page-lg {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .ks-page-xl {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .ks-page-offset-sm {
+    @apply pt-12;
+  }
+
+  .ks-page-offset-md {
+    @apply pt-16;
+  }
+
+  .ks-page-offset-lg {
+    @apply pt-20;
+  }
+
+  .ks-page-offset-xl {
+    @apply pt-24;
+  }
+
   .ks-page-header {
     @apply hidden sm:block mb-6 sm:flex sm:items-center sm:justify-between;
   }
