@@ -63,6 +63,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_equal [], missing
   end
 
+  def test_custom_background_defaults_to_white
+    assert_includes self.class.compiled, "--color-custom-background: #ffffff"
+  end
+
   def test_secondary_button_has_a_gray_background
     assert_includes rule(".ks-button-secondary"), "background-color: var(--color-gray-500)"
   end
