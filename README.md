@@ -35,10 +35,17 @@ element overrides it:
 ```html
 <html data-theme="dark">   <!-- always dark -->
 <html data-theme="light">  <!-- always light -->
+<html data-theme="custom"> <!-- drawn from a background and a text colour -->
 <html>                     <!-- follows the operating system -->
 ```
 
-The `dark:` variant in the host's own Tailwind classes follows the same rule.
+The `dark:` variant in the host's own Tailwind classes follows the same rule, and
+a custom page never takes it.
+
+On a custom page, white is `--color-custom-background`, and every `gray-*` and
+`zinc-*` shade is a blend of `--color-custom-text` into that background, from 3%
+at shade 50 to 100% at shade 950. They default to white and `#18181b`, and
+keystone_ui-colors sets them from the colours a user picks.
 
 ## Classes
 
