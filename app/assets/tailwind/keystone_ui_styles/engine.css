@@ -4,7 +4,7 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    &:where(:not([data-theme="light"], [data-theme="light"] *)) {
+    &:where(:not([data-theme="light"], [data-theme="light"] *, [data-theme="custom"], [data-theme="custom"] *)) {
       @slot;
     }
   }
@@ -34,6 +34,35 @@
   --color-surface-800: #27272a;
   --color-surface-900: #18181b;
   --color-surface-950: #09090b;
+
+  --color-custom-background: #ffffff;
+  --color-custom-text: #18181b;
+}
+
+[data-theme="custom"] {
+  --color-white: var(--color-custom-background);
+  --color-gray-50: color-mix(in oklab, var(--color-custom-text) 3%, var(--color-custom-background));
+  --color-gray-100: color-mix(in oklab, var(--color-custom-text) 6%, var(--color-custom-background));
+  --color-gray-200: color-mix(in oklab, var(--color-custom-text) 12%, var(--color-custom-background));
+  --color-gray-300: color-mix(in oklab, var(--color-custom-text) 20%, var(--color-custom-background));
+  --color-gray-400: color-mix(in oklab, var(--color-custom-text) 40%, var(--color-custom-background));
+  --color-gray-500: color-mix(in oklab, var(--color-custom-text) 55%, var(--color-custom-background));
+  --color-gray-600: color-mix(in oklab, var(--color-custom-text) 68%, var(--color-custom-background));
+  --color-gray-700: color-mix(in oklab, var(--color-custom-text) 78%, var(--color-custom-background));
+  --color-gray-800: color-mix(in oklab, var(--color-custom-text) 87%, var(--color-custom-background));
+  --color-gray-900: color-mix(in oklab, var(--color-custom-text) 94%, var(--color-custom-background));
+  --color-gray-950: color-mix(in oklab, var(--color-custom-text) 100%, var(--color-custom-background));
+  --color-zinc-50: color-mix(in oklab, var(--color-custom-text) 3%, var(--color-custom-background));
+  --color-zinc-100: color-mix(in oklab, var(--color-custom-text) 6%, var(--color-custom-background));
+  --color-zinc-200: color-mix(in oklab, var(--color-custom-text) 12%, var(--color-custom-background));
+  --color-zinc-300: color-mix(in oklab, var(--color-custom-text) 20%, var(--color-custom-background));
+  --color-zinc-400: color-mix(in oklab, var(--color-custom-text) 40%, var(--color-custom-background));
+  --color-zinc-500: color-mix(in oklab, var(--color-custom-text) 55%, var(--color-custom-background));
+  --color-zinc-600: color-mix(in oklab, var(--color-custom-text) 68%, var(--color-custom-background));
+  --color-zinc-700: color-mix(in oklab, var(--color-custom-text) 78%, var(--color-custom-background));
+  --color-zinc-800: color-mix(in oklab, var(--color-custom-text) 87%, var(--color-custom-background));
+  --color-zinc-900: color-mix(in oklab, var(--color-custom-text) 94%, var(--color-custom-background));
+  --color-zinc-950: color-mix(in oklab, var(--color-custom-text) 100%, var(--color-custom-background));
 }
 
 @layer components {

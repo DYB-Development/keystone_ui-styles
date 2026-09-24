@@ -38,7 +38,41 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_panel_stays_light_on_a_dark_operating_system_when_the_page_chooses_light
-    assert_match(/prefers-color-scheme: dark.*?:not\(\[data-theme="light"\], \[data-theme="light"\] \*\)/m, block(".ks-panel"))
+    assert_match(/prefers-color-scheme: dark.*?:not\(\[data-theme="light"\], \[data-theme="light"\] \*/m, block(".ks-panel"))
+  end
+
+  def test_panel_stays_light_on_a_dark_operating_system_when_the_page_chooses_custom
+    assert_match(/prefers-color-scheme: dark.*?:not\(.*?\[data-theme="custom"\], \[data-theme="custom"\] \*\)/m, block(".ks-panel"))
+  end
+
+  def test_custom_page_draws_white_in_the_custom_background
+    assert_includes rule('[data-theme="custom"]'), "--color-white: var(--color-custom-background)"
+  end
+
+  def test_custom_page_draws_every_gray_shade_as_a_blend_of_text_into_background
+    blends = { 50 => 3, 100 => 6, 200 => 12, 300 => 20, 400 => 40, 500 => 55, 600 => 68, 700 => 78, 800 => 87, 900 => 94, 950 => 100 }
+    missing = blends.reject do |shade, share|
+      self.class.compiled.include?("--color-gray-#{shade}: color-mix(in oklab, var(--color-custom-text) #{share}%, var(--color-custom-background))")
+    end
+
+    assert_equal({}, missing)
+  end
+
+  def test_custom_page_draws_every_zinc_shade_as_a_blend_of_text_into_background
+    blends = { 50 => 3, 100 => 6, 200 => 12, 300 => 20, 400 => 40, 500 => 55, 600 => 68, 700 => 78, 800 => 87, 900 => 94, 950 => 100 }
+    missing = blends.reject do |shade, share|
+      self.class.compiled.include?("--color-zinc-#{shade}: color-mix(in oklab, var(--color-custom-text) #{share}%, var(--color-custom-background))")
+    end
+
+    assert_equal({}, missing)
+  end
+
+  def test_custom_background_defaults_to_white
+    assert_includes self.class.compiled, "--color-custom-background: #ffffff"
+  end
+
+  def test_custom_text_defaults_to_near_black
+    assert_includes self.class.compiled, "--color-custom-text: #18181b"
   end
 
   def test_secondary_button_has_a_gray_background
