@@ -52,7 +52,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   def test_custom_page_draws_every_gray_shade_as_a_blend_of_text_into_background
     blends = { 50 => 3, 100 => 6, 200 => 12, 300 => 20, 400 => 40, 500 => 55, 600 => 68, 700 => 78, 800 => 87, 900 => 94, 950 => 100 }
     missing = blends.reject do |shade, share|
-      rule('[data-theme="custom"]').include?("--color-gray-#{shade}: color-mix(in oklab, var(--color-custom-text) #{share}%, var(--color-custom-background))")
+      self.class.compiled.include?("--color-gray-#{shade}: color-mix(in oklab, var(--color-custom-text) #{share}%, var(--color-custom-background))")
     end
 
     assert_equal({}, missing)
@@ -61,7 +61,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   def test_custom_page_draws_every_zinc_shade_as_a_blend_of_text_into_background
     blends = { 50 => 3, 100 => 6, 200 => 12, 300 => 20, 400 => 40, 500 => 55, 600 => 68, 700 => 78, 800 => 87, 900 => 94, 950 => 100 }
     missing = blends.reject do |shade, share|
-      rule('[data-theme="custom"]').include?("--color-zinc-#{shade}: color-mix(in oklab, var(--color-custom-text) #{share}%, var(--color-custom-background))")
+      self.class.compiled.include?("--color-zinc-#{shade}: color-mix(in oklab, var(--color-custom-text) #{share}%, var(--color-custom-background))")
     end
 
     assert_equal({}, missing)
