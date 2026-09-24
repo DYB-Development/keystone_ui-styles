@@ -45,8 +45,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/prefers-color-scheme: dark.*?:not\(.*?\[data-theme="custom"\], \[data-theme="custom"\] \*\)/m, block(".ks-panel"))
   end
 
-  def test_custom_page_draws_white_in_the_lightest_surface_shade
-    assert_includes rule('[data-theme="custom"]'), "--color-white: var(--color-surface-50)"
+  def test_custom_page_draws_white_in_the_custom_background
+    assert_includes rule('[data-theme="custom"]'), "--color-white: var(--color-custom-background)"
   end
 
   def test_custom_page_draws_every_gray_shade_in_the_matching_surface_shade
