@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-09-24
+
 ### Added
 - A page marked custom is drawn from a background colour and a text colour, and stays light when the operating system is dark.
 
