@@ -36,6 +36,10 @@
   --color-surface-950: #09090b;
 }
 
+[data-theme="custom"] {
+  --color-white: var(--color-surface-50);
+}
+
 @layer components {
   .ks-button {
     @apply inline-flex items-center justify-center font-semibold rounded-lg border-0 cursor-pointer no-underline;

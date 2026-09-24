@@ -45,6 +45,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/prefers-color-scheme: dark.*?:not\(.*?\[data-theme="custom"\], \[data-theme="custom"\] \*\)/m, block(".ks-panel"))
   end
 
+  def test_custom_page_draws_white_in_the_lightest_surface_shade
+    assert_includes rule('[data-theme="custom"]'), "--color-white: var(--color-surface-50)"
+  end
+
   def test_secondary_button_has_a_gray_background
     assert_includes rule(".ks-button-secondary"), "background-color: var(--color-gray-500)"
   end
