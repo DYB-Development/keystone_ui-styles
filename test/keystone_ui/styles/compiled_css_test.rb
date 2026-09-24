@@ -58,11 +58,13 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_equal({}, missing)
   end
 
-  def test_custom_page_draws_every_zinc_shade_in_the_matching_surface_shade
-    shades = [ 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950 ]
-    missing = shades.reject { |n| rule('[data-theme="custom"]').include?("--color-zinc-#{n}: var(--color-surface-#{n})") }
+  def test_custom_page_draws_every_zinc_shade_as_a_blend_of_text_into_background
+    blends = { 50 => 3, 100 => 6, 200 => 12, 300 => 20, 400 => 40, 500 => 55, 600 => 68, 700 => 78, 800 => 87, 900 => 94, 950 => 100 }
+    missing = blends.reject do |shade, share|
+      rule('[data-theme="custom"]').include?("--color-zinc-#{shade}: color-mix(in oklab, var(--color-custom-text) #{share}%, var(--color-custom-background))")
+    end
 
-    assert_equal [], missing
+    assert_equal({}, missing)
   end
 
   def test_custom_background_defaults_to_white
