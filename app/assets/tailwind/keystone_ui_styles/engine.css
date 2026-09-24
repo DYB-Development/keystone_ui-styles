@@ -36,6 +36,7 @@
   --color-surface-950: #09090b;
 
   --color-custom-background: #ffffff;
+  --color-custom-text: #18181b;
 }
 
 [data-theme="custom"] {
