@@ -2255,6 +2255,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-divider-dark\)/m, block(".ks-table-body"))
   end
 
+  def test_color_table_body_defaults_to_var_color_white
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-body: var\(--color-white\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

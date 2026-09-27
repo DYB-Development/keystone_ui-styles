@@ -192,6 +192,7 @@
     --ks-shadow-surface-dark: 0 0 #0000;
     --ks-color-table-head: var(--color-gray-50);
     --ks-color-table-head-dark: color-mix(in oklab, var(--color-gray-800) 75%, transparent);
+    --ks-color-table-body: var(--color-white);
   }
 }
 
