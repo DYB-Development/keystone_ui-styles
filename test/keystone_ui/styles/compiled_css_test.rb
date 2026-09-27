@@ -2979,6 +2979,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-pipeline-box"), "background-color: var(--ks-color-pipeline-box)"
   end
 
+  def test_pipeline_box_padding_is_4_spacing_units
+    assert_includes block(".ks-pipeline-box"), "padding: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
