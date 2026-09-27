@@ -1819,6 +1819,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-chart-card-title"), "color: var(--ks-color-text-muted)"
   end
 
+  def test_chart_card_title_margin_bottom_is_4_spacing_units
+    assert_includes block(".ks-chart-card-title"), "margin-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
