@@ -1403,6 +1403,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-file-upload-drop-zone"), "margin-top: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_file_upload_drop_zone_radius_is_0_75_of_the_surface_radius
+    assert_includes rule(".ks-file-upload-drop-zone"), "border-radius: calc(var(--ks-radius-surface) * 0.75)"
+  end
+
   private
 
   def block(selector)
