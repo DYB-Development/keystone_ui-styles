@@ -639,4 +639,8 @@
   .ks-tone-info {
     @apply text-(color:--ks-color-info-600) dark:text-(color:--ks-color-info-400);
   }
+
+  .ks-chart-card-title {
+    @apply font-(weight:--ks-font-weight-medium);
+  }
 }
