@@ -1056,4 +1056,8 @@
   .ks-swipe-empty {
     @apply py-[calc(var(--ks-spacing)*16)];
   }
+
+  .ks-swipe-empty-title {
+    @apply font-(weight:--ks-font-weight-heading);
+  }
 }
