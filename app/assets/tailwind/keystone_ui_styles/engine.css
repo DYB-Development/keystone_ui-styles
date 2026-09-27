@@ -791,4 +791,8 @@
   .ks-table-cell-first {
     @apply py-[calc(var(--ks-spacing)*4)] pr-[calc(var(--ks-spacing)*3)] pl-[calc(var(--ks-spacing)*6)] font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
+
+  .ks-table-cell-middle {
+    @apply px-[calc(var(--ks-spacing)*3)];
+  }
 }

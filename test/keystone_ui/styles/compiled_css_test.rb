@@ -2335,6 +2335,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-table-cell-first"))
   end
 
+  def test_table_cell_middle_padding_inline_is_3_spacing_units
+    assert_includes block(".ks-table-cell-middle"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
