@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Added
+- Buttons take their corner radius, font, label weight, border width, padding and colours from `--ks-` variables, so a host restyles every button by setting those variables. Buttons look the same until a variable is set.
+
 ## [0.3.0] - 2026-09-24
 
 ### Added
