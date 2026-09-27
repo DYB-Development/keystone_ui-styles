@@ -415,6 +415,6 @@
   }
 
   .ks-modal-title {
-    @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text-heading);
+    @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text-heading) dark:text-(color:--ks-color-text-heading-dark);
   }
 }
