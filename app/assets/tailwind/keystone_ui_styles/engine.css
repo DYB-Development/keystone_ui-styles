@@ -1036,4 +1036,8 @@
   .ks-pipeline-count-amber {
     @apply text-(color:--ks-color-pipeline-amber);
   }
+
+  .ks-pipeline-count-emerald {
+    @apply text-(color:--ks-color-info-400);
+  }
 }
