@@ -1859,6 +1859,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-border: color-mix\(in oklab, var\(--color-accent-500\) 50%, transparent\)/m, self.class.compiled)
   end
 
+  def test_link_card_shadow_shadow_reads_the_surface_shadow_variable
+    assert_includes block(".ks-link-card-shadow"), "--tw-shadow: var(--ks-shadow-surface)"
+  end
+
   private
 
   def block(selector)
