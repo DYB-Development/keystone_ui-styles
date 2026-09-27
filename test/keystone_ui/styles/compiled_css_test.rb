@@ -1603,6 +1603,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-radius-pill: calc\(infinity \* 1px\)/m, self.class.compiled)
   end
 
+  def test_color_success_600_defaults_to_var_color_green_600
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-success-600: var\(--color-green-600\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
