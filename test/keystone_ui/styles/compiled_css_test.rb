@@ -2411,6 +2411,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-code-caption"), "border-color: var(--ks-color-border-subtle)"
   end
 
+  def test_code_caption_fill_reads_the_fill_muted_colour_role
+    assert_includes block(".ks-code-caption"), "background-color: var(--ks-color-fill-muted)"
+  end
+
   private
 
   def block(selector)
