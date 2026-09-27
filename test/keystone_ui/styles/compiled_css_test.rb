@@ -131,6 +131,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-spacing: var\(--spacing\)/m, self.class.compiled)
   end
 
+  def test_accent_colour_role_defaults_to_accent_600
+    assert_match(/:root \{[^}]*\-\-ks\-color\-accent:\ var\(\-\-color\-accent\-600\)/m, self.class.compiled)
+  end
+
   def test_secondary_button_has_a_gray_background
     assert_includes rule(".ks-button-secondary"), "background-color: var(--color-gray-500)"
   end
