@@ -439,6 +439,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-control-dark\)/m, block(".ks-input"))
   end
 
+  def test_color_border_control_dark_defaults_to_var_color_zinc_700
+    assert_match(/:root \{[^}]*--ks-color-border-control-dark: var\(--color-zinc-700\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

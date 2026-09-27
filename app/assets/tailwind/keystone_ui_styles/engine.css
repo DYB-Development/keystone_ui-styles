@@ -90,6 +90,7 @@
     --ks-color-border: var(--color-gray-200);
     --ks-color-border-dark: var(--color-zinc-700);
     --ks-color-border-control: var(--color-gray-300);
+    --ks-color-border-control-dark: var(--color-zinc-700);
   }
 }
 
