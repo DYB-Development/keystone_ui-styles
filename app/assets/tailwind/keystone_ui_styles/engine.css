@@ -727,4 +727,8 @@
   .ks-hero-inner {
     @apply px-[calc(var(--ks-spacing)*6)] py-[calc(var(--ks-spacing)*24)] lg:py-[calc(var(--ks-spacing)*32)];
   }
+
+  .ks-hero-content {
+    @apply gap-[calc(var(--ks-spacing)*8)];
+  }
 }

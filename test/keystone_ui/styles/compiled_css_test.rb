@@ -2115,6 +2115,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 64rem.*?padding-block: calc\(var\(--ks-spacing\) \* 32\)/m, block(".ks-hero-inner"))
   end
 
+  def test_hero_content_gap_is_8_spacing_units
+    assert_includes block(".ks-hero-content"), "gap: calc(var(--ks-spacing) * 8)"
+  end
+
   private
 
   def block(selector)
