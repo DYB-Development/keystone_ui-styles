@@ -2855,6 +2855,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bucket-tank"), "border-color: var(--ks-color-border-strong)"
   end
 
+  def test_bucket_tank_fill_reads_the_hover_colour_role
+    assert_includes block(".ks-bucket-tank"), "background-color: var(--ks-color-hover)"
+  end
+
   private
 
   def block(selector)

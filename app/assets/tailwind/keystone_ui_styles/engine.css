@@ -965,6 +965,6 @@
   }
 
   .ks-bucket-tank {
-    @apply rounded-t-[calc(var(--ks-radius-surface)*0.5)] rounded-b-[calc(var(--ks-radius-surface)*1.5)] border-[calc(var(--ks-border-width)*2)] border-(color:--ks-color-border-strong);
+    @apply rounded-t-[calc(var(--ks-radius-surface)*0.5)] rounded-b-[calc(var(--ks-radius-surface)*1.5)] border-[calc(var(--ks-border-width)*2)] border-(color:--ks-color-border-strong) bg-(color:--ks-color-hover);
   }
 }
