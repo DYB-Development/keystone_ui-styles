@@ -731,4 +731,8 @@
   .ks-hero-content {
     @apply gap-[calc(var(--ks-spacing)*8)];
   }
+
+  .ks-hero-split {
+    @apply gap-[calc(var(--ks-spacing)*12)];
+  }
 }

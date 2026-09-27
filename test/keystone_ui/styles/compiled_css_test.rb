@@ -2119,6 +2119,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-hero-content"), "gap: calc(var(--ks-spacing) * 8)"
   end
 
+  def test_hero_split_gap_is_12_spacing_units
+    assert_includes block(".ks-hero-split"), "gap: calc(var(--ks-spacing) * 12)"
+  end
+
   private
 
   def block(selector)
