@@ -399,6 +399,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-color-border-dark: var\(--color-zinc-700\)/m, self.class.compiled)
   end
 
+  def test_card_background_reads_the_surface_colour_role
+    assert_includes rule(".ks-card"), "background-color: var(--ks-color-surface)"
+  end
+
   private
 
   def block(selector)
