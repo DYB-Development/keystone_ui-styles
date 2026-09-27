@@ -2351,6 +2351,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-table-cell-middle"))
   end
 
+  def test_table_cell_last_padding_block_is_4_spacing_units
+    assert_includes block(".ks-table-cell-last"), "padding-block: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
