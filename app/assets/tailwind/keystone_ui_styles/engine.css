@@ -95,7 +95,7 @@
   }
 
   .ks-button-md {
-    @apply text-base px-[calc(var(--ks-spacing)*4)] py-2;
+    @apply text-base px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*2)];
   }
 
   .ks-button-lg {
