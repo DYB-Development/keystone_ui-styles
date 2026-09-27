@@ -2663,6 +2663,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-progress-track"), "border-radius: var(--ks-radius-pill)"
   end
 
+  def test_progress_track_fill_reads_the_track_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-track-dark\)/m, block(".ks-progress-track"))
+  end
+
   private
 
   def block(selector)
