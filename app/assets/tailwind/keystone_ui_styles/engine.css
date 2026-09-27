@@ -601,6 +601,6 @@
   }
 
   .ks-stat-card-disclosure {
-    @apply mt-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface);
+    @apply mt-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-(length:--ks-border-width);
   }
 }
