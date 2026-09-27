@@ -928,4 +928,8 @@
   .ks-funnel-bar-sky {
     @apply bg-(color:--ks-color-funnel-sky);
   }
+
+  .ks-funnel-bar-violet {
+    @apply bg-(color:--ks-color-funnel-violet);
+  }
 }
