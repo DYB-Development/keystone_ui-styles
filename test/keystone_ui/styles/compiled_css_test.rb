@@ -619,6 +619,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-panel-padding-md"), "padding: calc(var(--ks-spacing) * 5)"
   end
 
+  def test_lg_panel_padding_reads_the_spacing_variable
+    assert_includes rule(".ks-panel-padding-lg"), "padding: calc(var(--ks-spacing) * 6)"
+  end
+
   private
 
   def block(selector)

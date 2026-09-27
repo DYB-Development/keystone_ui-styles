@@ -363,4 +363,8 @@
   .ks-panel-padding-md {
     @apply p-[calc(var(--ks-spacing)*5)];
   }
+
+  .ks-panel-padding-lg {
+    @apply p-[calc(var(--ks-spacing)*6)];
+  }
 }
