@@ -623,6 +623,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-panel-padding-lg"), "padding: calc(var(--ks-spacing) * 6)"
   end
 
+  def test_success_alert_text_reads_the_success_scale
+    assert_includes rule(".ks-alert-success"), "color: var(--ks-color-success-800)"
+  end
+
   private
 
   def block(selector)
