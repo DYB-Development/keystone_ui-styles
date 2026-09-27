@@ -127,6 +127,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-button-lg"), "padding-block: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_spacing_defaults_to_the_tailwind_spacing_unit
+    assert_match(/:root \{[^}]*--ks-spacing: var\(--spacing\)/m, self.class.compiled)
+  end
+
   def test_secondary_button_has_a_gray_background
     assert_includes rule(".ks-button-secondary"), "background-color: var(--color-gray-500)"
   end
