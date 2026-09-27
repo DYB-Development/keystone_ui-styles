@@ -1431,6 +1431,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-strong-dark\)/m, block(".ks-file-upload-drop-zone"))
   end
 
+  def test_file_upload_drop_zone_active_border_reads_the_selected_border_colour_role
+    assert_includes rule(".ks-file-upload-drop-zone-active"), "border-color: var(--ks-color-selected-border)"
+  end
+
   private
 
   def block(selector)
