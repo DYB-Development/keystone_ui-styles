@@ -2923,6 +2923,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-pipeline-border: var\(--color-surface-700\)/m, self.class.compiled)
   end
 
+  def test_color_pipeline_defaults_to_var_color_surface_800
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-pipeline: var\(--color-surface-800\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
