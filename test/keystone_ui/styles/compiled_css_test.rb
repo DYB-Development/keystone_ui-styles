@@ -3043,6 +3043,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-swipe-card"), "background-color: var(--ks-color-surface)"
   end
 
+  def test_swipe_card_shadow_reads_the_overlay_shadow_variable
+    assert_includes block(".ks-swipe-card"), "--tw-shadow: var(--ks-shadow-overlay)"
+  end
+
   private
 
   def block(selector)
