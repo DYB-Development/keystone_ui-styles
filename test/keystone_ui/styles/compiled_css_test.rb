@@ -1855,6 +1855,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-surface-dark\)/m, block(".ks-link-card"))
   end
 
+  def test_color_hover_border_defaults_to_color_mix_in_oklab_var_color_accent_500_50_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-border: color-mix\(in oklab, var\(--color-accent-500\) 50%, transparent\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
