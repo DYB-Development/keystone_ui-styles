@@ -2387,6 +2387,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-icon-dark\)/m, block(".ks-table-sort-icon"))
   end
 
+  def test_code_radius_reads_the_surface_radius
+    assert_includes block(".ks-code"), "border-radius: var(--ks-radius-surface)"
+  end
+
   private
 
   def block(selector)
