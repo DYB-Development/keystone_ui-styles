@@ -1427,6 +1427,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-file-upload-drop-zone"), "padding-block: calc(var(--ks-spacing) * 8)"
   end
 
+  def test_file_upload_drop_zone_border_reads_the_border_strong_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-strong-dark\)/m, block(".ks-file-upload-drop-zone"))
+  end
+
   private
 
   def block(selector)
