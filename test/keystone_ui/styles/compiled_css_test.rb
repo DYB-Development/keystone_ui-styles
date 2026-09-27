@@ -3047,6 +3047,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-swipe-card"), "--tw-shadow: var(--ks-shadow-overlay)"
   end
 
+  def test_swipe_card_padding_is_6_spacing_units
+    assert_includes block(".ks-swipe-card"), "padding: calc(var(--ks-spacing) * 6)"
+  end
+
   private
 
   def block(selector)
