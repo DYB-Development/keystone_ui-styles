@@ -65,6 +65,12 @@
   --color-zinc-950: color-mix(in oklab, var(--color-custom-text) 100%, var(--color-custom-background));
 }
 
+@layer base {
+  :root {
+    --ks-radius-control: var(--radius-lg);
+  }
+}
+
 @layer components {
   .ks-button {
     @apply inline-flex items-center justify-center font-semibold rounded-(--ks-radius-control) border-0 cursor-pointer no-underline;
