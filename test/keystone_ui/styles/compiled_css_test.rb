@@ -2703,6 +2703,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-meter-label-dark\)/m, block(".ks-meter-label"))
   end
 
+  def test_color_text_meter_label_defaults_to_var_color_surface_700
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-meter-label: var\(--color-surface-700\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

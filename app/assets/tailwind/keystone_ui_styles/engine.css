@@ -205,6 +205,7 @@
     --ks-color-track: var(--color-surface-200);
     --ks-color-track-dark: var(--color-surface-700);
     --ks-color-meter: var(--color-accent-500);
+    --ks-color-text-meter-label: var(--color-surface-700);
   }
 }
 
