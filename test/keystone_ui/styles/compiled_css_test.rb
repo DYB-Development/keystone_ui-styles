@@ -2575,6 +2575,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-disclosure-body"), "padding-inline: calc(var(--ks-spacing) * 6)"
   end
 
+  def test_disclosure_body_padding_bottom_is_4_spacing_units
+    assert_includes block(".ks-disclosure-body"), "padding-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
