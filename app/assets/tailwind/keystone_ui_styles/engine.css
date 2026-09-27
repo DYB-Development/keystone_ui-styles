@@ -591,4 +591,8 @@
   .ks-stat-card-label {
     @apply font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
+
+  .ks-stat-card-value {
+    @apply mt-[calc(var(--ks-spacing)*1)];
+  }
 }
