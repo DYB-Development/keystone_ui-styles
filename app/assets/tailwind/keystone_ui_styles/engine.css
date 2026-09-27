@@ -436,4 +436,8 @@
   .ks-action-menu-button {
     @apply text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
+
+  .ks-menu {
+    @apply mt-[calc(var(--ks-spacing)*1)];
+  }
 }

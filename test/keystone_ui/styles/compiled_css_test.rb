@@ -983,6 +983,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-action-menu-button"))
   end
 
+  def test_menu_margin_top_is_1_spacing_units
+    assert_includes rule(".ks-menu"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)
