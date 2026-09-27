@@ -459,6 +459,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-color-text-dark: var\(--color-white\)/m, self.class.compiled)
   end
 
+  def test_color_text_label_defaults_to_var_color_gray_700
+    assert_match(/:root \{[^}]*--ks-color-text-label: var\(--color-gray-700\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
