@@ -180,6 +180,7 @@
     --ks-color-border-subtle: var(--color-surface-200);
     --ks-color-border-subtle-dark: var(--color-surface-700);
     --ks-color-fill-muted: var(--color-surface-50);
+    --ks-color-fill-muted-dark: var(--color-surface-800);
   }
 }
 
