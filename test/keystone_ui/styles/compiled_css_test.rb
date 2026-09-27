@@ -791,6 +791,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-badge-info"), "color: var(--ks-color-info-700)"
   end
 
+  def test_info_badge_dtext_reads_the_info_scale
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-info-400\)/m, block(".ks-badge-info"))
+  end
+
   private
 
   def block(selector)
