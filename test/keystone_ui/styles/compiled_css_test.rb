@@ -867,6 +867,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-overlay-dark: var\(--color-zinc-800\)/m, self.class.compiled)
   end
 
+  def test_modal_panel_padding_is_6_spacing_units
+    assert_includes rule(".ks-modal-panel"), "padding: calc(var(--ks-spacing) * 6)"
+  end
+
   private
 
   def block(selector)
