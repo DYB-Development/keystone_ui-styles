@@ -2199,6 +2199,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table"), "border-width: var(--ks-border-width)"
   end
 
+  def test_table_border_reads_the_border_colour_role
+    assert_includes block(".ks-table"), "border-color: var(--ks-color-border)"
+  end
+
   private
 
   def block(selector)
