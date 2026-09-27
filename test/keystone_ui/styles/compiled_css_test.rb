@@ -2399,6 +2399,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-code"), "border-color: var(--ks-color-border-subtle)"
   end
 
+  def test_code_border_reads_the_border_subtle_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-subtle-dark\)/m, block(".ks-code"))
+  end
+
   private
 
   def block(selector)
