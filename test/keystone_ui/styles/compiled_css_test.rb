@@ -1683,6 +1683,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-stat-card-suffix"))
   end
 
+  def test_stat_card_disclosure_margin_top_is_2_spacing_units
+    assert_includes block(".ks-stat-card-disclosure"), "margin-top: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)

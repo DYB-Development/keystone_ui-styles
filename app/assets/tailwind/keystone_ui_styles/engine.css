@@ -599,4 +599,8 @@
   .ks-stat-card-suffix {
     @apply text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
+
+  .ks-stat-card-disclosure {
+    @apply mt-[calc(var(--ks-spacing)*2)];
+  }
 }
