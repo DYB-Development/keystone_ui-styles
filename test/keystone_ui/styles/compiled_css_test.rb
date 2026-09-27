@@ -1495,6 +1495,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-file-upload-browse"), "color: var(--ks-color-link)"
   end
 
+  def test_file_upload_browse_text_reads_the_link_hover_colour_role_on_hover
+    assert_match(/:hover.*?color: var\(--ks-color-link-hover\)/m, block(".ks-file-upload-browse"))
+  end
+
   private
 
   def block(selector)
