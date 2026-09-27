@@ -627,4 +627,8 @@
   .ks-tone-success {
     @apply text-(color:--ks-color-success-600) dark:text-(color:--ks-color-success-400);
   }
+
+  .ks-tone-danger {
+    @apply text-(color:--ks-color-danger-600);
+  }
 }
