@@ -118,7 +118,7 @@
   }
 
   .ks-panel {
-    @apply border border-gray-200 bg-white dark:bg-zinc-900 dark:border-zinc-700;
+    @apply border border-gray-200 bg-(color:--ks-color-surface) dark:bg-zinc-900 dark:border-zinc-700;
   }
 
   .ks-input {
