@@ -1035,6 +1035,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-menu-trigger"), "padding-block: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_menu_trigger_border_reads_the_border_control_colour_role
+    assert_includes rule(".ks-menu-trigger"), "border-color: var(--ks-color-border-control)"
+  end
+
   private
 
   def block(selector)
