@@ -1195,6 +1195,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-theme-toggle-option.*?aria-pressed="true".*?background-color: var\(--ks-color-accent\)/m, self.class.compiled)
   end
 
+  def test_theme_toggle_option_fill_reads_the_accent_hover_colour_role_when_pressed_and_on_hover
+    assert_match(/\.ks-theme-toggle-option.*?aria-pressed="true".*?:hover.*?background-color: var\(--ks-color-accent-hover\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
