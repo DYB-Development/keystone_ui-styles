@@ -955,6 +955,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-action-menu"), "calc(var(--ks-border-width) + var(--tw-ring-offset-width))"
   end
 
+  def test_action_menu_ring_reads_the_ring_colour_role
+    assert_includes rule(".ks-action-menu"), "--tw-ring-color: var(--ks-color-ring)"
+  end
+
   private
 
   def block(selector)
