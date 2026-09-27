@@ -664,4 +664,8 @@
   .ks-link-card-padding-lg {
     @apply p-[calc(var(--ks-spacing)*6)];
   }
+
+  .ks-cta-banner {
+    @apply rounded-[calc(var(--ks-radius-surface)*2)];
+  }
 }

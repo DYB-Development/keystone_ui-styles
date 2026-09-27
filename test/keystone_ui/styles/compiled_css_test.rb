@@ -1875,6 +1875,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-link-card-padding-lg"), "padding: calc(var(--ks-spacing) * 6)"
   end
 
+  def test_cta_banner_radius_is_2_of_the_surface_radius
+    assert_includes block(".ks-cta-banner"), "border-radius: calc(var(--ks-radius-surface) * 2)"
+  end
+
   private
 
   def block(selector)
