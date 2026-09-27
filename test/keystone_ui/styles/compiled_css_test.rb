@@ -2419,6 +2419,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-code-caption"), "padding-inline: calc(var(--ks-spacing) * 4)"
   end
 
+  def test_code_caption_padding_block_is_2_spacing_units
+    assert_includes block(".ks-code-caption"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
