@@ -210,6 +210,7 @@
     --ks-color-funnel-accent: var(--color-accent-500);
     --ks-color-funnel-sky: var(--color-sky-500);
     --ks-color-funnel-violet: var(--color-violet-500);
+    --ks-color-funnel-amber: var(--color-amber-500);
   }
 }
 
