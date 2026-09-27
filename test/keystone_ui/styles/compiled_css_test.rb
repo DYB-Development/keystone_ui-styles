@@ -2343,6 +2343,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table-cell-middle"), "padding-block: calc(var(--ks-spacing) * 4)"
   end
 
+  def test_table_cell_middle_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-table-cell-middle"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)
