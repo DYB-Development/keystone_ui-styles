@@ -1351,6 +1351,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option-dark: var\(--color-gray-100\)/m, self.class.compiled)
   end
 
+  def test_radio_card_hint_margin_top_is_1_spacing_units
+    assert_includes rule(".ks-radio-card-hint"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)

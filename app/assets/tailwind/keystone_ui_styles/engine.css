@@ -505,4 +505,8 @@
   .ks-radio-card-label {
     @apply font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-option) dark:text-(color:--ks-color-text-option-dark);
   }
+
+  .ks-radio-card-hint {
+    @apply mt-[calc(var(--ks-spacing)*1)];
+  }
 }
