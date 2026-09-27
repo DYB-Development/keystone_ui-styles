@@ -292,7 +292,7 @@
   }
 
   .ks-alert-warning {
-    @apply bg-(color:--ks-color-warning-50) text-(color:--ks-color-warning-800) dark:bg-yellow-900/30 dark:text-yellow-300;
+    @apply bg-(color:--ks-color-warning-50) text-(color:--ks-color-warning-800) dark:bg-(color:--ks-color-warning-900)/30 dark:text-yellow-300;
   }
 
   .ks-alert-error {
