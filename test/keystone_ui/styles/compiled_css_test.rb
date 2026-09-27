@@ -891,6 +891,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-modal-title"), "font-weight: var(--ks-font-weight-heading)"
   end
 
+  def test_modal_title_text_reads_the_text_heading_colour_role
+    assert_includes rule(".ks-modal-title"), "color: var(--ks-color-text-heading)"
+  end
+
   private
 
   def block(selector)
