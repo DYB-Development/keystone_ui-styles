@@ -702,6 +702,6 @@
   }
 
   .ks-feature-card {
-    @apply rounded-[calc(var(--ks-radius-surface)*1.5)] border-(length:--ks-border-width);
+    @apply rounded-[calc(var(--ks-radius-surface)*1.5)] border-(length:--ks-border-width) p-[calc(var(--ks-spacing)*6)];
   }
 }
