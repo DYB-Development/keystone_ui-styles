@@ -793,6 +793,6 @@
   }
 
   .ks-table-cell-middle {
-    @apply px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*4)] text-(color:--ks-color-text-muted);
+    @apply px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*4)] text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 }
