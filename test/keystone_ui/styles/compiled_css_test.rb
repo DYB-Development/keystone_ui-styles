@@ -2947,6 +2947,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-pipeline-subtitle"), "margin-top: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_pipeline_subtitle_text_reads_the_pipeline_muted_colour_role
+    assert_includes block(".ks-pipeline-subtitle"), "color: var(--ks-color-pipeline-muted)"
+  end
+
   private
 
   def block(selector)
