@@ -234,7 +234,7 @@
   }
 
   .ks-section-subtitle {
-    @apply mt-1 text-sm text-(color:--ks-color-text-muted) dark:text-gray-400;
+    @apply mt-1 text-sm text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 
   .ks-section-action {
