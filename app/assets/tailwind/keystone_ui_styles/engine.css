@@ -783,4 +783,8 @@
   .ks-table-header-middle {
     @apply px-[calc(var(--ks-spacing)*3)];
   }
+
+  .ks-table-header-last {
+    @apply py-[calc(var(--ks-spacing)*3.5)];
+  }
 }
