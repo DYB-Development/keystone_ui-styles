@@ -194,6 +194,7 @@
     --ks-color-table-head-dark: color-mix(in oklab, var(--color-gray-800) 75%, transparent);
     --ks-color-table-body: var(--color-white);
     --ks-color-table-body-dark: color-mix(in oklab, var(--color-gray-800) 50%, transparent);
+    --ks-color-divider: var(--color-gray-200);
   }
 }
 
