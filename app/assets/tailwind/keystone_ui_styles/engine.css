@@ -645,6 +645,6 @@
   }
 
   .ks-link-card {
-    @apply rounded-(--ks-radius-surface);
+    @apply rounded-(--ks-radius-surface) border-(length:--ks-border-width);
   }
 }
