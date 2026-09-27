@@ -3067,6 +3067,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-swipe-empty-title"), "font-weight: var(--ks-font-weight-heading)"
   end
 
+  def test_swipe_empty_title_text_reads_the_text_colour_role
+    assert_includes block(".ks-swipe-empty-title"), "color: var(--ks-color-text)"
+  end
+
   private
 
   def block(selector)
