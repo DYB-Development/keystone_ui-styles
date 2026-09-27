@@ -1727,6 +1727,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-secondary-dark\)/m, block(".ks-stat-card-disclosure"))
   end
 
+  def test_stat_card_disclosure_vertical_gap_between_children_is_1_spacing_units
+    assert_match(/\.ks-stat-card-disclosure(?![\w-]).*?:not\(:last-child\).*?calc\(var\(--ks-spacing\) \* 1\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
