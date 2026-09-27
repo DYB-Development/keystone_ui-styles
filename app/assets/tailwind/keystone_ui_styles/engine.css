@@ -452,6 +452,6 @@
   }
 
   .ks-menu-checkbox {
-    @apply rounded-[calc(var(--ks-radius-control)*0.5)];
+    @apply rounded-[calc(var(--ks-radius-control)*0.5)] border-(color:--ks-color-border-strong);
   }
 }
