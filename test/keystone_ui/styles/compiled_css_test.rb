@@ -1835,6 +1835,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-link-card"), "border-width: var(--ks-border-width)"
   end
 
+  def test_link_card_border_reads_the_border_colour_role
+    assert_includes block(".ks-link-card"), "border-color: var(--ks-color-border)"
+  end
+
   private
 
   def block(selector)
