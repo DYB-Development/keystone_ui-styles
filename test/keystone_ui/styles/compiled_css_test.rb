@@ -2603,6 +2603,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon-soft: var\(--color-surface-400\)/m, self.class.compiled)
   end
 
+  def test_tab_bar_margin_bottom_is_8_spacing_units
+    assert_includes block(".ks-tab-bar"), "margin-bottom: calc(var(--ks-spacing) * 8)"
+  end
+
   private
 
   def block(selector)
