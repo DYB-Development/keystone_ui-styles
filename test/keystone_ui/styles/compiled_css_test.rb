@@ -2879,6 +2879,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-bucket-actual"))
   end
 
+  def test_bucket_fill_fill_reads_the_meter_colour_role
+    assert_includes block(".ks-bucket-fill"), "background-color: var(--ks-color-meter)"
+  end
+
   private
 
   def block(selector)

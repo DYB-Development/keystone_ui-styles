@@ -971,4 +971,8 @@
   .ks-bucket-actual {
     @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
+
+  .ks-bucket-fill {
+    @apply bg-(color:--ks-color-meter);
+  }
 }
