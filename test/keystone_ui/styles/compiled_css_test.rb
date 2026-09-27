@@ -2475,6 +2475,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-accordion-item"), "border-radius: calc(var(--ks-radius-surface) * 1.5)"
   end
 
+  def test_accordion_item_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-accordion-item"), "border-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)
