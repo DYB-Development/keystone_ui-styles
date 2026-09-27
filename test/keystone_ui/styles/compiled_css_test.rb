@@ -2643,6 +2643,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?:hover.*?color: var\(--ks-color-text-dark\)/m, block(".ks-tab"))
   end
 
+  def test_tab_active_fill_reads_the_tint_colour_role_when_active
+    assert_match(/\.ks-tab-active(?![\w-]).*?\[data-active\].*?background-color: var\(--ks-color-tint\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
