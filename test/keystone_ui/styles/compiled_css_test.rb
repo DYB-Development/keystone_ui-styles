@@ -291,8 +291,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-required"), "color: var(--color-red-500)"
   end
 
-  def test_hint_uses_muted_gray_text
-    assert_includes rule(".ks-hint"), "color: var(--color-gray-500)"
+  def test_hint_reads_the_muted_text_colour_role
+    assert_includes rule(".ks-hint"), "color: var(--ks-color-text-muted)"
   end
 
   def test_error_uses_red_text

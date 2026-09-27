@@ -148,7 +148,7 @@
   }
 
   .ks-hint {
-    @apply mt-1 text-sm text-gray-500 dark:text-gray-400;
+    @apply mt-1 text-sm text-(color:--ks-color-text-muted) dark:text-gray-400;
   }
 
   .ks-error {
