@@ -1079,6 +1079,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\&:hover.*?background-color: var\(--ks-color-hover\)/m, block(".ks-menu-option"))
   end
 
+  def test_menu_option_text_reads_the_text_label_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-label-dark\)/m, block(".ks-menu-option"))
+  end
+
   private
 
   def block(selector)
