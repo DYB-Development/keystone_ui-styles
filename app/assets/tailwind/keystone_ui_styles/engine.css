@@ -101,6 +101,7 @@
     --ks-radius-surface: var(--radius-lg);
     --ks-shadow-surface: var(--shadow-sm);
     --ks-color-success-50: var(--color-green-50);
+    --ks-color-success-100: var(--color-green-100);
   }
 }
 
