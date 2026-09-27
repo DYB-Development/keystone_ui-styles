@@ -150,6 +150,7 @@
     --ks-color-hover-raised-dark: var(--color-zinc-700);
     --ks-color-border-choice: var(--color-surface-300);
     --ks-color-text-choice: var(--color-surface-900);
+    --ks-color-text-choice-dark: var(--color-surface-100);
   }
 }
 
