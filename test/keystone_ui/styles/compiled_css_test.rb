@@ -2203,6 +2203,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table"), "border-color: var(--ks-color-border)"
   end
 
+  def test_table_shadow_reads_the_surface_shadow_variable
+    assert_includes block(".ks-table"), "--tw-shadow: var(--ks-shadow-surface)"
+  end
+
   private
 
   def block(selector)
