@@ -479,6 +479,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*? color: var\(--ks-color-text-muted-dark\)/m, block(".ks-hint"))
   end
 
+  def test_color_text_muted_dark_defaults_to_var_color_gray_400
+    assert_match(/:root \{[^}]*--ks-color-text-muted-dark: var\(--color-gray-400\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
