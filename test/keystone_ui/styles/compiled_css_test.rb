@@ -963,6 +963,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-overlay-dark\)/m, block(".ks-action-menu"))
   end
 
+  def test_action_menu_ring_reads_the_ring_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?--tw-ring-color: var\(--ks-color-ring-dark\)/m, block(".ks-action-menu"))
+  end
+
   private
 
   def block(selector)
