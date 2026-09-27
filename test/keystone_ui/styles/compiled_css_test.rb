@@ -1047,6 +1047,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-menu-trigger"), "color: var(--ks-color-text)"
   end
 
+  def test_menu_trigger_border_reads_the_border_control_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-control-dark\)/m, block(".ks-menu-trigger"))
+  end
+
   private
 
   def block(selector)

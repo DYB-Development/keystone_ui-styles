@@ -442,6 +442,6 @@
   }
 
   .ks-menu-trigger {
-    @apply gap-[calc(var(--ks-spacing)*1)] rounded-[calc(var(--ks-radius-control)*0.75)] border-(length:--ks-border-width) px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] border-(color:--ks-color-border-control) bg-(color:--ks-color-surface) text-(color:--ks-color-text);
+    @apply gap-[calc(var(--ks-spacing)*1)] rounded-[calc(var(--ks-radius-control)*0.75)] border-(length:--ks-border-width) px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] border-(color:--ks-color-border-control) bg-(color:--ks-color-surface) text-(color:--ks-color-text) dark:border-(color:--ks-color-border-control-dark);
   }
 }
