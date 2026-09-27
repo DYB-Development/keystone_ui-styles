@@ -531,6 +531,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-radius-surface: var\(--radius-lg\)/m, self.class.compiled)
   end
 
+  def test_edge_to_edge_card_radius_reads_the_surface_radius_variable_on_wider_screens
+    assert_match(/width >= 40rem.*?border-radius: var\(--ks-radius-surface\)/m, block(".ks-card-edge"))
+  end
+
   private
 
   def block(selector)

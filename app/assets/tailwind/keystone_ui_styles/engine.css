@@ -248,7 +248,7 @@
   }
 
   .ks-card-edge {
-    @apply overflow-hidden border-y border-(color:--ks-color-border) bg-(color:--ks-color-surface) sm:rounded-lg sm:border-x dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-dark);
+    @apply overflow-hidden border-y border-(color:--ks-color-border) bg-(color:--ks-color-surface) sm:rounded-(--ks-radius-surface) sm:border-x dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-dark);
   }
 
   .ks-card-body {
