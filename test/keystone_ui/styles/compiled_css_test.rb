@@ -3003,6 +3003,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-pipeline-link-healthy"), "color: var(--ks-color-meter)"
   end
 
+  def test_pipeline_link_broken_text_reads_the_danger_500_colour_role
+    assert_includes block(".ks-pipeline-link-broken"), "color: var(--ks-color-danger-500)"
+  end
+
   private
 
   def block(selector)

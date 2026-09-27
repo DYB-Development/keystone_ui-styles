@@ -1027,4 +1027,8 @@
   .ks-pipeline-link-healthy {
     @apply text-(color:--ks-color-meter);
   }
+
+  .ks-pipeline-link-broken {
+    @apply text-(color:--ks-color-danger-500);
+  }
 }
