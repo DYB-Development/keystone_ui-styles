@@ -1523,6 +1523,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-link-hover-dark: var\(--color-accent-300\)/m, self.class.compiled)
   end
 
+  def test_file_upload_hint_margin_top_is_1_spacing_units
+    assert_includes rule(".ks-file-upload-hint"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)

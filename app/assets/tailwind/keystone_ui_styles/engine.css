@@ -557,4 +557,8 @@
   .ks-file-upload-browse {
     @apply font-(weight:--ks-font-weight-strong) text-(color:--ks-color-link) hover:text-(color:--ks-color-link-hover) dark:text-(color:--ks-color-link-dark) dark:hover:text-(color:--ks-color-link-hover-dark);
   }
+
+  .ks-file-upload-hint {
+    @apply mt-[calc(var(--ks-spacing)*1)];
+  }
 }
