@@ -1507,6 +1507,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?:hover.*?color: var\(--ks-color-link-hover-dark\)/m, block(".ks-file-upload-browse"))
   end
 
+  def test_color_link_defaults_to_var_color_accent_600
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-link: var\(--color-accent-600\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
