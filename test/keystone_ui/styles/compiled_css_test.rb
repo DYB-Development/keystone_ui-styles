@@ -2823,6 +2823,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-label-dark\)/m, block(".ks-bucket-label"))
   end
 
+  def test_bucket_goal_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-bucket-goal"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)

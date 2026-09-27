@@ -955,4 +955,8 @@
   .ks-bucket-label {
     @apply font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark);
   }
+
+  .ks-bucket-goal {
+    @apply text-(color:--ks-color-text-muted);
+  }
 }
