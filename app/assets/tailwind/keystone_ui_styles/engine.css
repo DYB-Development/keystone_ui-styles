@@ -711,4 +711,8 @@
   .ks-feature-card-icon {
     @apply mb-[calc(var(--ks-spacing)*4)] rounded-(--ks-radius-surface) bg-(color:--ks-color-tint) text-(color:--ks-color-link) dark:text-(color:--ks-color-link-dark);
   }
+
+  .ks-feature-card-title {
+    @apply mb-[calc(var(--ks-spacing)*2)];
+  }
 }

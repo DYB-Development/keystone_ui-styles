@@ -2075,6 +2075,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-tint: color-mix\(in oklab, var\(--color-accent-500\) 10%, transparent\)/m, self.class.compiled)
   end
 
+  def test_feature_card_title_margin_bottom_is_2_spacing_units
+    assert_includes block(".ks-feature-card-title"), "margin-bottom: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
