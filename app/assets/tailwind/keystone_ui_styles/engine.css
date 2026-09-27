@@ -230,7 +230,7 @@
   }
 
   .ks-section-title {
-    @apply text-lg font-semibold text-gray-900 dark:text-white;
+    @apply text-lg font-semibold text-(color:--ks-color-text) dark:text-white;
   }
 
   .ks-section-subtitle {

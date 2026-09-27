@@ -483,6 +483,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-color-text-muted-dark: var\(--color-gray-400\)/m, self.class.compiled)
   end
 
+  def test_section_title_reads_the_text_colour_role
+    assert_includes rule(".ks-section-title"), "color: var(--ks-color-text)"
+  end
+
   private
 
   def block(selector)
