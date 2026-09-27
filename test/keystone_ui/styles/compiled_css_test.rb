@@ -2579,6 +2579,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-disclosure-body"), "padding-bottom: calc(var(--ks-spacing) * 4)"
   end
 
+  def test_disclosure_body_text_reads_the_text_body_colour_role
+    assert_includes block(".ks-disclosure-body"), "color: var(--ks-color-text-body)"
+  end
+
   private
 
   def block(selector)

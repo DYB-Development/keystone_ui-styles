@@ -852,6 +852,6 @@
   }
 
   .ks-disclosure-body {
-    @apply px-[calc(var(--ks-spacing)*6)] pb-[calc(var(--ks-spacing)*4)];
+    @apply px-[calc(var(--ks-spacing)*6)] pb-[calc(var(--ks-spacing)*4)] text-(color:--ks-color-text-body);
   }
 }
