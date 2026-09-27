@@ -254,7 +254,7 @@
   }
 
   .ks-card-title {
-    @apply text-lg font-semibold text-gray-900 dark:text-white m-0;
+    @apply text-lg font-semibold text-(color:--ks-color-text) dark:text-white m-0;
   }
 
   .ks-card-summary {
