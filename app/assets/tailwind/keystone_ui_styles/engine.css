@@ -817,6 +817,6 @@
   }
 
   .ks-code-caption {
-    @apply border-b-(length:--ks-border-width) border-(color:--ks-color-border-subtle) bg-(color:--ks-color-fill-muted);
+    @apply border-b-(length:--ks-border-width) border-(color:--ks-color-border-subtle) bg-(color:--ks-color-fill-muted) px-[calc(var(--ks-spacing)*4)];
   }
 }

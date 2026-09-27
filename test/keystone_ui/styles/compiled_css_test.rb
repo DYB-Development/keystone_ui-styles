@@ -2415,6 +2415,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-code-caption"), "background-color: var(--ks-color-fill-muted)"
   end
 
+  def test_code_caption_padding_inline_is_4_spacing_units
+    assert_includes block(".ks-code-caption"), "padding-inline: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
