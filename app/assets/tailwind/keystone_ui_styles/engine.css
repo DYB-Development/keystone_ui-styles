@@ -684,4 +684,8 @@
   .ks-cta-banner-subtitle {
     @apply mb-[calc(var(--ks-spacing)*8)] text-(color:--ks-color-text-display-muted) dark:text-(color:--ks-color-text-display-muted-dark);
   }
+
+  .ks-cta-banner-actions {
+    @apply gap-[calc(var(--ks-spacing)*4)];
+  }
 }

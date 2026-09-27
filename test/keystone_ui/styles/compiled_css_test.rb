@@ -1975,6 +1975,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display-muted-dark: var\(--color-surface-400\)/m, self.class.compiled)
   end
 
+  def test_cta_banner_actions_gap_is_4_spacing_units
+    assert_includes block(".ks-cta-banner-actions"), "gap: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
