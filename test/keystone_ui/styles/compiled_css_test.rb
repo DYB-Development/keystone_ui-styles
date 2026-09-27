@@ -2687,6 +2687,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-meter: var\(--color-accent-500\)/m, self.class.compiled)
   end
 
+  def test_meter_label_margin_bottom_is_1_spacing_units
+    assert_includes block(".ks-meter-label"), "margin-bottom: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)

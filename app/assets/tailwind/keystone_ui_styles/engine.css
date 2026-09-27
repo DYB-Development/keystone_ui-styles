@@ -884,4 +884,8 @@
   .ks-progress-bar {
     @apply bg-(color:--ks-color-meter) rounded-(--ks-radius-pill);
   }
+
+  .ks-meter-label {
+    @apply mb-[calc(var(--ks-spacing)*1)];
+  }
 }
