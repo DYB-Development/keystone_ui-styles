@@ -1827,6 +1827,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-chart-card-title"))
   end
 
+  def test_link_card_radius_reads_the_surface_radius
+    assert_includes block(".ks-link-card"), "border-radius: var(--ks-radius-surface)"
+  end
+
   private
 
   def block(selector)
