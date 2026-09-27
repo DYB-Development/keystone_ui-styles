@@ -2875,6 +2875,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bucket-actual"), "color: var(--ks-color-text)"
   end
 
+  def test_bucket_actual_text_reads_the_text_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-bucket-actual"))
+  end
+
   private
 
   def block(selector)
