@@ -322,7 +322,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-alert-info"), "background-color: var(--color-accent-50)"
     assert_includes rule(".ks-alert-success"), "background-color: var(--ks-color-success-50)"
     assert_includes rule(".ks-alert-warning"), "background-color: var(--ks-color-warning-50)"
-    assert_includes rule(".ks-alert-error"), "background-color: var(--color-red-50)"
+    assert_includes rule(".ks-alert-error"), "background-color: var(--ks-color-danger-50)"
     assert_includes rule(".ks-alert-body"), "display: flex"
     assert_includes rule(".ks-alert-content"), "flex: 1"
     assert_includes rule(".ks-alert-title"), "font-weight: var(--ks-font-weight-heading)"
