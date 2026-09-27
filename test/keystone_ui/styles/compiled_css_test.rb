@@ -599,6 +599,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 40rem.*?padding-bottom: calc\(var\(--ks-spacing\) \* 6\)/m, block(".ks-card-cta"))
   end
 
+  def test_alert_p_base_reads_the_spacing_variable
+    assert_includes rule(".ks-alert"), "padding: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
