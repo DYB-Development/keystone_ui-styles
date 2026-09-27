@@ -2899,6 +2899,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-over-goal-warning: var\(--color-amber-500\)/m, self.class.compiled)
   end
 
+  def test_pipeline_radius_is_1_5_of_the_surface_radius
+    assert_includes block(".ks-pipeline"), "border-radius: calc(var(--ks-radius-surface) * 1.5)"
+  end
+
   private
 
   def block(selector)

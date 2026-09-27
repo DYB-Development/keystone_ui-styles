@@ -985,4 +985,8 @@
   .ks-bucket-fill-over-warning {
     @apply bg-(color:--ks-color-over-goal-warning);
   }
+
+  .ks-pipeline {
+    @apply rounded-[calc(var(--ks-radius-surface)*1.5)];
+  }
 }
