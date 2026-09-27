@@ -2327,6 +2327,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table-cell-first"), "font-weight: var(--ks-font-weight-medium)"
   end
 
+  def test_table_cell_first_text_reads_the_text_colour_role
+    assert_includes block(".ks-table-cell-first"), "color: var(--ks-color-text)"
+  end
+
   private
 
   def block(selector)
