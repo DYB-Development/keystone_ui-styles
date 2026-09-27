@@ -1147,6 +1147,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-copy-button"), "background-color: var(--ks-color-overlay)"
   end
 
+  def test_copy_button_padding_inline_is_3_spacing_units
+    assert_includes rule(".ks-copy-button"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
