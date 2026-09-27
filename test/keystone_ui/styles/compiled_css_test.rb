@@ -971,6 +971,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-ring: color-mix\(in oklab, var\(--color-black\) 5%, transparent\)/m, self.class.compiled)
   end
 
+  def test_color_ring_dark_defaults_to_color_mix_in_oklab_var_color_white_10_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-ring-dark: color-mix\(in oklab, var\(--color-white\) 10%, transparent\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
