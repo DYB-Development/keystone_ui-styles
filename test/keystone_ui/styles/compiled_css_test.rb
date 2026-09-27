@@ -1543,6 +1543,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-file-upload-file-name"), "color: var(--ks-color-text-label)"
   end
 
+  def test_file_upload_file_name_text_reads_the_text_label_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-label-dark\)/m, block(".ks-file-upload-file-name"))
+  end
+
   private
 
   def block(selector)
