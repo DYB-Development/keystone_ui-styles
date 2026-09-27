@@ -1235,6 +1235,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\&:checked.*?background-color: var\(--ks-color-accent\)/m, block(".ks-checkbox-row-input"))
   end
 
+  def test_checkbox_row_input_ring_reads_the_focus_colour_role_on_focus
+    assert_match(/\&:focus.*?--tw-ring-color: var\(--ks-color-focus\)/m, block(".ks-checkbox-row-input"))
+  end
+
   private
 
   def block(selector)
