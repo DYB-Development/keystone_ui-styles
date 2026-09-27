@@ -203,7 +203,7 @@
   }
 
   .ks-page-header-title {
-    @apply text-2xl font-bold text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+    @apply text-2xl font-[weight:calc(var(--ks-font-weight-heading)+100)] text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 
   .ks-page-header-subtitle {
