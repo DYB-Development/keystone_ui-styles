@@ -234,7 +234,7 @@
   }
 
   .ks-card {
-    @apply overflow-hidden rounded-lg border border-(color:--ks-color-border) bg-(color:--ks-color-surface) dark:bg-(color:--ks-color-surface-dark) dark:border-zinc-700;
+    @apply overflow-hidden rounded-lg border border-(color:--ks-color-border) bg-(color:--ks-color-surface) dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-dark);
   }
 
   .ks-card-edge {
