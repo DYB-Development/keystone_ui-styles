@@ -840,6 +840,6 @@
   }
 
   .ks-accordion-button {
-    @apply px-[calc(var(--ks-spacing)*6)];
+    @apply px-[calc(var(--ks-spacing)*6)] py-[calc(var(--ks-spacing)*4)];
   }
 }

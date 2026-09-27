@@ -2507,6 +2507,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-accordion-button"), "padding-inline: calc(var(--ks-spacing) * 6)"
   end
 
+  def test_accordion_button_padding_block_is_4_spacing_units
+    assert_includes block(".ks-accordion-button"), "padding-block: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
