@@ -1623,6 +1623,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-danger-500: var\(--color-red-500\)/m, self.class.compiled)
   end
 
+  def test_metric_card_radius_is_1_5_of_the_surface_radius
+    assert_includes block(".ks-metric-card"), "border-radius: calc(var(--ks-radius-surface) * 1.5)"
+  end
+
   private
 
   def block(selector)

@@ -579,4 +579,8 @@
   .ks-color-picker-panel {
     @apply mt-[calc(var(--ks-spacing)*2)] p-[calc(var(--ks-spacing)*3)] rounded-(--ks-radius-surface) shadow-(--ks-shadow-overlay) bg-(color:--ks-color-overlay) border-(length:--ks-border-width) border-(color:--ks-color-border) dark:bg-(color:--ks-color-overlay-dark) dark:border-(color:--ks-color-border-dark);
   }
+
+  .ks-metric-card {
+    @apply rounded-[calc(var(--ks-radius-surface)*1.5)];
+  }
 }
