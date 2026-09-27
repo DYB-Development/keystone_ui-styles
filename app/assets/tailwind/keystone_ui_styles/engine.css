@@ -656,4 +656,8 @@
   .ks-link-card-padding-sm {
     @apply p-[calc(var(--ks-spacing)*3)];
   }
+
+  .ks-link-card-padding-md {
+    @apply p-[calc(var(--ks-spacing)*4)];
+  }
 }

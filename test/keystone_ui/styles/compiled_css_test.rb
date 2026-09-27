@@ -1867,6 +1867,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-link-card-padding-sm"), "padding: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_link_card_padding_md_padding_is_4_spacing_units
+    assert_includes block(".ks-link-card-padding-md"), "padding: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
