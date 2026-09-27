@@ -635,4 +635,8 @@
   .ks-tone-warning {
     @apply text-(color:--ks-color-warning-600) dark:text-(color:--ks-color-warning-400);
   }
+
+  .ks-tone-info {
+    @apply text-(color:--ks-color-info-600);
+  }
 }

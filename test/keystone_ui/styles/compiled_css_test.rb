@@ -1803,6 +1803,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-warning-400\)/m, block(".ks-tone-warning"))
   end
 
+  def test_tone_info_text_reads_the_info_600_colour_role
+    assert_includes block(".ks-tone-info"), "color: var(--ks-color-info-600)"
+  end
+
   private
 
   def block(selector)
