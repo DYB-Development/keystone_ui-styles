@@ -1487,6 +1487,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-secondary-dark: var\(--color-gray-400\)/m, self.class.compiled)
   end
 
+  def test_file_upload_browse_weight_reads_the_strong_font_weight_variable
+    assert_includes rule(".ks-file-upload-browse"), "font-weight: var(--ks-font-weight-strong)"
+  end
+
   private
 
   def block(selector)

@@ -549,4 +549,8 @@
   .ks-file-upload-prompt {
     @apply text-(color:--ks-color-text-secondary) dark:text-(color:--ks-color-text-secondary-dark);
   }
+
+  .ks-file-upload-browse {
+    @apply font-(weight:--ks-font-weight-strong);
+  }
 }
