@@ -1539,6 +1539,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-file-upload-file-name"), "margin-top: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_file_upload_file_name_text_reads_the_text_label_colour_role
+    assert_includes rule(".ks-file-upload-file-name"), "color: var(--ks-color-text-label)"
+  end
+
   private
 
   def block(selector)

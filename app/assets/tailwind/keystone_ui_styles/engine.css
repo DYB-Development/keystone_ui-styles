@@ -563,6 +563,6 @@
   }
 
   .ks-file-upload-file-name {
-    @apply mt-[calc(var(--ks-spacing)*2)];
+    @apply mt-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label);
   }
 }
