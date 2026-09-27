@@ -2943,6 +2943,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-on-dark: var\(--color-white\)/m, self.class.compiled)
   end
 
+  def test_pipeline_subtitle_margin_top_is_1_spacing_units
+    assert_includes block(".ks-pipeline-subtitle"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)
