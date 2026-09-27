@@ -2407,6 +2407,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-code-caption"), "border-bottom-width: var(--ks-border-width)"
   end
 
+  def test_code_caption_border_reads_the_border_subtle_colour_role
+    assert_includes block(".ks-code-caption"), "border-color: var(--ks-color-border-subtle)"
+  end
+
   private
 
   def block(selector)
