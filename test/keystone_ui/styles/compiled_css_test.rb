@@ -2423,6 +2423,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-code-caption"), "padding-block: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_code_caption_text_reads_the_text_display_muted_colour_role
+    assert_includes block(".ks-code-caption"), "color: var(--ks-color-text-display-muted)"
+  end
+
   private
 
   def block(selector)
