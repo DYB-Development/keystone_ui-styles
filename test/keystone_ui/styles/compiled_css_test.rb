@@ -2895,6 +2895,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bucket-fill-over-warning"), "background-color: var(--ks-color-over-goal-warning)"
   end
 
+  def test_color_over_goal_warning_defaults_to_var_color_amber_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-over-goal-warning: var\(--color-amber-500\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
