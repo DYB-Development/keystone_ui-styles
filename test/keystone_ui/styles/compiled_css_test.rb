@@ -1815,6 +1815,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-chart-card-title"), "font-weight: var(--ks-font-weight-medium)"
   end
 
+  def test_chart_card_title_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-chart-card-title"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)
