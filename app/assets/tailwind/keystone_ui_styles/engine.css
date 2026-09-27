@@ -499,4 +499,8 @@
   .ks-radio-card-highlight {
     @apply border-(color:--ks-color-border) dark:border-(color:--ks-color-border-dark) peer-checked:border-(color:--ks-color-selected-border) peer-checked:bg-(color:--ks-color-selected) dark:peer-checked:bg-(color:--ks-color-selected-dark);
   }
+
+  .ks-radio-card-label {
+    @apply font-(weight:--ks-font-weight-medium);
+  }
 }
