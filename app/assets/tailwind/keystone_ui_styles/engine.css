@@ -199,6 +199,7 @@
     --ks-color-code: var(--color-surface-900);
     --ks-color-code-dark: var(--color-black);
     --ks-color-text-code: var(--color-surface-100);
+    --ks-color-text-body: var(--color-surface-600);
   }
 }
 
