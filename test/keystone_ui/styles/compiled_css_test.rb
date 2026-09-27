@@ -243,6 +243,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*? color: var\(--ks-color-on-fill-dark\)/m, block(".ks-button-secondary"))
   end
 
+  def test_danger_button_text_reads_the_dark_on_fill_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-fill-dark\)/m, block(".ks-button-danger"))
+  end
+
   def test_secondary_button_background_reads_the_neutral_colour_role
     assert_includes rule(".ks-button-secondary"), "background-color: var(--ks-color-neutral)"
   end
