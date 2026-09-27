@@ -795,6 +795,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*? color: var\(--ks-color-info-400\)/m, block(".ks-badge-info"))
   end
 
+  def test_color_info_50_defaults_to_var_color_accent_50
+    assert_match(/:root \{[^}]*--ks-color-info-50: var\(--color-accent-50\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
