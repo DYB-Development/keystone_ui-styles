@@ -1355,6 +1355,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-radio-card-hint"), "margin-top: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_radio_card_hint_text_reads_the_text_option_muted_colour_role
+    assert_includes rule(".ks-radio-card-hint"), "color: var(--ks-color-text-option-muted)"
+  end
+
   private
 
   def block(selector)
