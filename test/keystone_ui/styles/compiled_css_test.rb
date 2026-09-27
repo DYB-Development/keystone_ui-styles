@@ -1219,6 +1219,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-checkbox-row-input"), "margin-top: calc(var(--ks-spacing) * 0.5)"
   end
 
+  def test_checkbox_row_input_radius_is_0_5_of_the_control_radius
+    assert_includes rule(".ks-checkbox-row-input"), "border-radius: calc(var(--ks-radius-control) * 0.5)"
+  end
+
   private
 
   def block(selector)
