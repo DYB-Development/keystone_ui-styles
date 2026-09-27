@@ -515,6 +515,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-section-title"), "font-weight: var(--ks-font-weight-heading)"
   end
 
+  def test_font_weight_heading_defaults_to_var_font_weight_semibold
+    assert_match(/:root \{[^}]*--ks-font-weight-heading: var\(--font-weight-semibold\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
