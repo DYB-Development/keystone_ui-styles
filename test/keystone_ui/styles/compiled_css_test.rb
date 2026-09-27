@@ -947,6 +947,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-action-menu"), "padding-block: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_action_menu_shadow_reads_the_overlay_shadow_variable
+    assert_includes rule(".ks-action-menu"), "--tw-shadow: var(--ks-shadow-overlay)"
+  end
+
   private
 
   def block(selector)
