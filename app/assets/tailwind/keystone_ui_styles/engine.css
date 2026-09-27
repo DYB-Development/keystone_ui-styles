@@ -189,6 +189,7 @@
     --ks-color-raised-dark: var(--color-surface-800);
     --ks-color-tint: color-mix(in oklab, var(--color-accent-500) 10%, transparent);
     --ks-color-tint-border: color-mix(in oklab, var(--color-accent-500) 20%, transparent);
+    --ks-shadow-surface-dark: 0 0 #0000;
   }
 }
 
