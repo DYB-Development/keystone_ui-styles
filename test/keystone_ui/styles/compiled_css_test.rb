@@ -1163,6 +1163,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-copy-button"), "color: var(--ks-color-text-label)"
   end
 
+  def test_copy_button_fill_reads_the_hover_raised_colour_role_on_hover
+    assert_match(/\&:hover.*?background-color: var\(--ks-color-hover-raised\)/m, block(".ks-copy-button"))
+  end
+
   private
 
   def block(selector)
