@@ -2379,6 +2379,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-label-dark\)/m, block(".ks-table-sort-icon-active"))
   end
 
+  def test_table_sort_icon_text_reads_the_icon_colour_role
+    assert_includes block(".ks-table-sort-icon"), "color: var(--ks-color-icon)"
+  end
+
   private
 
   def block(selector)

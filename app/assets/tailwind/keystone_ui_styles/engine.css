@@ -807,4 +807,8 @@
   .ks-table-sort-icon-active {
     @apply text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark);
   }
+
+  .ks-table-sort-icon {
+    @apply text-(color:--ks-color-icon);
+  }
 }
