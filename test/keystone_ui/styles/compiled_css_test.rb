@@ -2655,6 +2655,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-tab-active(?![\w-]).*?data-theme="dark".*?\[data-active\].*?color: var\(--ks-color-link-dark\)/m, self.class.compiled)
   end
 
+  def test_progress_track_fill_reads_the_track_colour_role
+    assert_includes block(".ks-progress-track"), "background-color: var(--ks-color-track)"
+  end
+
   private
 
   def block(selector)
