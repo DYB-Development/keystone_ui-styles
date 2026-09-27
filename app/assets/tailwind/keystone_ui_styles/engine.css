@@ -619,4 +619,8 @@
   .ks-tone-neutral {
     @apply text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
+
+  .ks-tone-muted {
+    @apply text-(color:--ks-color-text-muted);
+  }
 }
