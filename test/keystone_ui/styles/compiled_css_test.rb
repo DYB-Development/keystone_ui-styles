@@ -1643,6 +1643,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-metric-card"), "padding: calc(var(--ks-spacing) * 6)"
   end
 
+  def test_metric_card_border_reads_the_border_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-metric-card"))
+  end
+
   private
 
   def block(selector)
