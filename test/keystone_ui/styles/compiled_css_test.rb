@@ -2179,6 +2179,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-hero-badge"), "color: var(--ks-color-link)"
   end
 
+  def test_hero_badge_text_reads_the_link_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-link-dark\)/m, block(".ks-hero-badge"))
+  end
+
   private
 
   def block(selector)
