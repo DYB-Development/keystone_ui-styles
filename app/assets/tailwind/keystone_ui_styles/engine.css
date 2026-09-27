@@ -87,6 +87,7 @@
     --ks-color-on-fill-dark: var(--color-white);
     --ks-color-surface: var(--color-white);
     --ks-color-surface-dark: var(--color-zinc-900);
+    --ks-color-border: var(--color-gray-200);
   }
 }
 
