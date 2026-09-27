@@ -609,6 +609,6 @@
   }
 
   .ks-stat-card-change {
-    @apply mt-[calc(var(--ks-spacing)*1)];
+    @apply mt-[calc(var(--ks-spacing)*1)] font-(weight:--ks-font-weight-medium);
   }
 }

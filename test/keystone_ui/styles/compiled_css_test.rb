@@ -1747,6 +1747,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stat-card-change"), "margin-top: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_stat_card_change_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-stat-card-change"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
   private
 
   def block(selector)
