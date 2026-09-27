@@ -333,7 +333,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_card_classes_match_keystone_ui_card
-    assert_includes rule(".ks-card"), "border-radius: var(--radius-lg)"
+    assert_includes rule(".ks-card"), "border-radius: var(--ks-radius-surface)"
     assert_includes rule(".ks-card-edge"), "border-block-width: 1px"
     assert_includes rule(".ks-card-body"), "padding-inline: calc(var(--spacing) * 4)"
     assert_includes rule(".ks-card-title"), "font-size: var(--text-lg)"
