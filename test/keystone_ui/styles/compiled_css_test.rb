@@ -1535,6 +1535,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-file-upload-hint"))
   end
 
+  def test_file_upload_file_name_margin_top_is_2_spacing_units
+    assert_includes rule(".ks-file-upload-file-name"), "margin-top: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
