@@ -823,6 +823,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-color-info-900: var\(--color-accent-900\)/m, self.class.compiled)
   end
 
+  def test_border_width_defaults_to_1px
+    assert_match(/:root \{[^}]*--ks-border-width: 1px/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
