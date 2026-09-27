@@ -733,6 +733,6 @@
   }
 
   .ks-hero-split {
-    @apply gap-[calc(var(--ks-spacing)*12)];
+    @apply gap-[calc(var(--ks-spacing)*12)] lg:gap-[calc(var(--ks-spacing)*16)];
   }
 }
