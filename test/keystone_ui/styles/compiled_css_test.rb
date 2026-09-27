@@ -443,6 +443,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-color-border-control-dark: var\(--color-zinc-700\)/m, self.class.compiled)
   end
 
+  def test_input_text_reads_the_text_colour_role
+    assert_includes rule(".ks-input"), "color: var(--ks-color-text)"
+  end
+
   private
 
   def block(selector)
