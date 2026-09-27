@@ -2223,6 +2223,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table-head"), "background-color: var(--ks-color-table-head)"
   end
 
+  def test_table_head_fill_reads_the_table_head_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-table-head-dark\)/m, block(".ks-table-head"))
+  end
+
   private
 
   def block(selector)
