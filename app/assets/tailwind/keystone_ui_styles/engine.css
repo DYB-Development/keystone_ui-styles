@@ -752,4 +752,8 @@
   .ks-hero-actions {
     @apply gap-[calc(var(--ks-spacing)*4)];
   }
+
+  .ks-table {
+    @apply rounded-(--ks-radius-surface);
+  }
 }
