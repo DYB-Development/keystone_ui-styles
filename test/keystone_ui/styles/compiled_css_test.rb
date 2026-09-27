@@ -991,6 +991,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-menu"), "border-radius: calc(var(--ks-radius-surface) * 0.75)"
   end
 
+  def test_menu_border_width_reads_the_border_width_variable
+    assert_includes rule(".ks-menu"), "border-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)
