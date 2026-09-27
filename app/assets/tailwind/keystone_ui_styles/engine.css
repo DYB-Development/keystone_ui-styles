@@ -407,6 +407,6 @@
   }
 
   .ks-modal-panel {
-    @apply rounded-[calc(var(--ks-radius-surface)*1.5)] border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-overlay) p-[calc(var(--ks-spacing)*6)] mx-[calc(var(--ks-spacing)*4)] dark:border-(color:--ks-color-border-dark);
+    @apply rounded-[calc(var(--ks-radius-surface)*1.5)] border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-overlay) p-[calc(var(--ks-spacing)*6)] mx-[calc(var(--ks-spacing)*4)] dark:border-(color:--ks-color-border-dark) dark:bg-(color:--ks-color-overlay-dark);
   }
 }
