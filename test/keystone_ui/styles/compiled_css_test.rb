@@ -1563,6 +1563,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-strong-dark\)/m, block(".ks-color-swatch"))
   end
 
+  def test_color_picker_panel_margin_top_is_2_spacing_units
+    assert_includes rule(".ks-color-picker-panel"), "margin-top: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
