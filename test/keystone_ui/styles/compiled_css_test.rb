@@ -527,6 +527,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-page-header-title"), "font-weight: calc(var(--ks-font-weight-heading) + 100)"
   end
 
+  def test_radius_surface_defaults_to_var_radius_lg
+    assert_match(/:root \{[^}]*--ks-radius-surface: var\(--radius-lg\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
