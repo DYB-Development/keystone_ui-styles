@@ -165,6 +165,7 @@
     --ks-color-icon: var(--color-gray-400);
     --ks-color-icon-dark: var(--color-gray-500);
     --ks-color-text-secondary: var(--color-gray-600);
+    --ks-color-text-secondary-dark: var(--color-gray-400);
   }
 }
 
