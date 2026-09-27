@@ -2083,6 +2083,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-feature-card-title"), "font-weight: var(--ks-font-weight-heading)"
   end
 
+  def test_feature_card_title_text_reads_the_text_display_colour_role
+    assert_includes block(".ks-feature-card-title"), "color: var(--ks-color-text-display)"
+  end
+
   private
 
   def block(selector)
