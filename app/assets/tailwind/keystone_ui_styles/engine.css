@@ -265,7 +265,7 @@
   }
 
   .ks-card-cta {
-    @apply px-[calc(var(--ks-spacing)*4)] pb-[calc(var(--ks-spacing)*4)] sm:px-[calc(var(--ks-spacing)*6)] sm:pb-6;
+    @apply px-[calc(var(--ks-spacing)*4)] pb-[calc(var(--ks-spacing)*4)] sm:px-[calc(var(--ks-spacing)*6)] sm:pb-[calc(var(--ks-spacing)*6)];
   }
 
   .ks-card-link {
