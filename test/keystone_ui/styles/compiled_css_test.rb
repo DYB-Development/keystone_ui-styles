@@ -2867,6 +2867,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-hover-dark\)/m, block(".ks-bucket-tank"))
   end
 
+  def test_bucket_actual_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-bucket-actual"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
   private
 
   def block(selector)
