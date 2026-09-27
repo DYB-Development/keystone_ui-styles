@@ -1735,6 +1735,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stat-card-emphasis"), "font-weight: var(--ks-font-weight-medium)"
   end
 
+  def test_stat_card_emphasis_text_reads_the_text_label_colour_role
+    assert_includes block(".ks-stat-card-emphasis"), "color: var(--ks-color-text-label)"
+  end
+
   private
 
   def block(selector)
