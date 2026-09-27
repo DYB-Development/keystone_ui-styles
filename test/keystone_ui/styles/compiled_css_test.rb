@@ -1627,6 +1627,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-metric-card"), "border-radius: calc(var(--ks-radius-surface) * 1.5)"
   end
 
+  def test_metric_card_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-metric-card"), "border-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)
