@@ -719,4 +719,8 @@
   .ks-feature-card-description {
     @apply text-(color:--ks-color-text-display-muted) dark:text-(color:--ks-color-text-display-muted-dark);
   }
+
+  .ks-hero {
+    @apply pt-[calc(var(--ks-spacing)*24)];
+  }
 }

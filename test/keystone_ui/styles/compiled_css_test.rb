@@ -2099,6 +2099,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-muted-dark\)/m, block(".ks-feature-card-description"))
   end
 
+  def test_hero_padding_top_is_24_spacing_units
+    assert_includes block(".ks-hero"), "padding-top: calc(var(--ks-spacing) * 24)"
+  end
+
   private
 
   def block(selector)
