@@ -890,4 +890,8 @@
   .ks-meter-label {
     @apply mb-[calc(var(--ks-spacing)*1)] font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-meter-label) dark:text-(color:--ks-color-text-meter-label-dark);
   }
+
+  .ks-funnel {
+    @apply space-y-[calc(var(--ks-spacing)*2)];
+  }
 }

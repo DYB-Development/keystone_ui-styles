@@ -2711,6 +2711,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-meter-label-dark: var\(--color-surface-300\)/m, self.class.compiled)
   end
 
+  def test_funnel_vertical_gap_between_children_is_2_spacing_units
+    assert_match(/\.ks-funnel(?![\w-]).*?:not\(:last-child\).*?calc\(var\(--ks-spacing\) \* 2\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
