@@ -629,6 +629,6 @@
   }
 
   .ks-tone-danger {
-    @apply text-(color:--ks-color-danger-600);
+    @apply text-(color:--ks-color-danger-600) dark:text-(color:--ks-color-danger-400);
   }
 }
