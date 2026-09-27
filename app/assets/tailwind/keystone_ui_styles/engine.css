@@ -325,7 +325,7 @@
   }
 
   .ks-badge-success {
-    @apply bg-(color:--ks-color-success-100) text-(color:--ks-color-success-700) dark:bg-(color:--ks-color-success-900)/50 dark:text-green-400;
+    @apply bg-(color:--ks-color-success-100) text-(color:--ks-color-success-700) dark:bg-(color:--ks-color-success-900)/50 dark:text-(color:--ks-color-success-400);
   }
 
   .ks-badge-danger {
