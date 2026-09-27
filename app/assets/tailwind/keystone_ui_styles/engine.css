@@ -694,6 +694,6 @@
   }
 
   .ks-feature-grid-title {
-    @apply mb-[calc(var(--ks-spacing)*4)] font-[weight:calc(var(--ks-font-weight-heading)+100)] text-(color:--ks-color-text-display);
+    @apply mb-[calc(var(--ks-spacing)*4)] font-[weight:calc(var(--ks-font-weight-heading)+100)] text-(color:--ks-color-text-display) dark:text-(color:--ks-color-text-display-dark);
   }
 }
