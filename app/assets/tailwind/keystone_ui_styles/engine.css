@@ -688,4 +688,8 @@
   .ks-cta-banner-actions {
     @apply gap-[calc(var(--ks-spacing)*4)];
   }
+
+  .ks-feature-grid {
+    @apply gap-[calc(var(--ks-spacing)*6)];
+  }
 }
