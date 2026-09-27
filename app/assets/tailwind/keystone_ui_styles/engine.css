@@ -987,6 +987,6 @@
   }
 
   .ks-pipeline {
-    @apply rounded-[calc(var(--ks-radius-surface)*1.5)] border-(length:--ks-border-width) border-(color:--ks-color-pipeline-border);
+    @apply rounded-[calc(var(--ks-radius-surface)*1.5)] border-(length:--ks-border-width) border-(color:--ks-color-pipeline-border) bg-(color:--ks-color-pipeline);
   }
 }
