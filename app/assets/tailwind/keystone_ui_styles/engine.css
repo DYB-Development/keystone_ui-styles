@@ -403,4 +403,8 @@
   .ks-modal-backdrop {
     @apply bg-(color:--ks-color-backdrop);
   }
+
+  .ks-modal-panel {
+    @apply rounded-[calc(var(--ks-radius-surface)*1.5)];
+  }
 }

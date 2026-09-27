@@ -843,6 +843,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-color-backdrop: color-mix\(in oklab, var\(--color-black\) 60%, transparent\)/m, self.class.compiled)
   end
 
+  def test_modal_panel_radius_is_1_5_of_the_surface_radius
+    assert_includes rule(".ks-modal-panel"), "border-radius: calc(var(--ks-radius-surface) * 1.5)"
+  end
+
   private
 
   def block(selector)
