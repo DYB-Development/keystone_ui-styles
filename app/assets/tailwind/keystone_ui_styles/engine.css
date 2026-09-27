@@ -128,6 +128,48 @@
     --ks-color-info-700: var(--color-accent-700);
     --ks-color-info-800: var(--color-accent-800);
     --ks-color-info-900: var(--color-accent-900);
+    --ks-border-width: 1px;
+    --ks-shadow-overlay: var(--shadow-lg);
+    --ks-font-weight-medium: var(--font-weight-medium);
+    --ks-color-backdrop: color-mix(in oklab, var(--color-black) 60%, transparent);
+    --ks-color-overlay: var(--color-white);
+    --ks-color-overlay-dark: var(--color-zinc-800);
+    --ks-color-text-heading: var(--color-gray-900);
+    --ks-color-text-heading-dark: var(--color-gray-200);
+    --ks-color-close: var(--color-gray-400);
+    --ks-color-close-hover: var(--color-gray-600);
+    --ks-color-close-hover-dark: var(--color-gray-200);
+    --ks-color-ring: color-mix(in oklab, var(--color-black) 5%, transparent);
+    --ks-color-ring-dark: color-mix(in oklab, var(--color-white) 10%, transparent);
+    --ks-color-hover: var(--color-gray-50);
+    --ks-color-hover-dark: var(--color-zinc-800);
+    --ks-color-border-strong: var(--color-gray-300);
+    --ks-color-border-strong-dark: var(--color-zinc-600);
+    --ks-color-focus: var(--color-accent-500);
+    --ks-color-hover-raised: var(--color-gray-50);
+    --ks-color-hover-raised-dark: var(--color-zinc-700);
+    --ks-color-border-choice: var(--color-surface-300);
+    --ks-color-text-choice: var(--color-surface-900);
+    --ks-color-text-choice-dark: var(--color-surface-100);
+    --ks-color-text-choice-muted: var(--color-surface-500);
+    --ks-color-text-choice-muted-dark: var(--color-surface-400);
+    --ks-color-selected-border: var(--color-accent-500);
+    --ks-color-selected: var(--color-accent-50);
+    --ks-color-selected-dark: var(--color-zinc-800);
+    --ks-color-text-option: var(--color-gray-900);
+    --ks-color-text-option-dark: var(--color-gray-100);
+    --ks-color-text-option-muted: var(--color-surface-500);
+    --ks-color-text-option-muted-dark: var(--color-gray-400);
+    --ks-color-drop-active: var(--color-accent-50);
+    --ks-color-drop-active-dark: color-mix(in oklab, var(--color-accent-900) 10%, transparent);
+    --ks-color-icon: var(--color-gray-400);
+    --ks-color-icon-dark: var(--color-gray-500);
+    --ks-color-text-secondary: var(--color-gray-600);
+    --ks-color-text-secondary-dark: var(--color-gray-400);
+    --ks-color-link: var(--color-accent-600);
+    --ks-color-link-dark: var(--color-accent-400);
+    --ks-color-link-hover: var(--color-accent-500);
+    --ks-color-link-hover-dark: var(--color-accent-300);
   }
 }
 
@@ -394,5 +436,141 @@
 
   .ks-panel-padding-lg {
     @apply p-[calc(var(--ks-spacing)*6)];
+  }
+
+  .ks-modal-backdrop {
+    @apply bg-(color:--ks-color-backdrop);
+  }
+
+  .ks-modal-panel {
+    @apply rounded-[calc(var(--ks-radius-surface)*1.5)] border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-overlay) p-[calc(var(--ks-spacing)*6)] mx-[calc(var(--ks-spacing)*4)] dark:border-(color:--ks-color-border-dark) dark:bg-(color:--ks-color-overlay-dark);
+  }
+
+  .ks-modal-header {
+    @apply mb-[calc(var(--ks-spacing)*4)];
+  }
+
+  .ks-modal-title {
+    @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text-heading) dark:text-(color:--ks-color-text-heading-dark);
+  }
+
+  .ks-modal-close {
+    @apply text-(color:--ks-color-close) hover:text-(color:--ks-color-close-hover) dark:hover:text-(color:--ks-color-close-hover-dark);
+  }
+
+  .ks-action-menu {
+    @apply mt-[calc(var(--ks-spacing)*2)] rounded-[calc(var(--ks-radius-surface)*0.75)] bg-(color:--ks-color-overlay) py-[calc(var(--ks-spacing)*1)] shadow-(--ks-shadow-overlay) ring-(length:--ks-border-width) ring-(color:--ks-color-ring) dark:bg-(color:--ks-color-overlay-dark) dark:ring-(color:--ks-color-ring-dark);
+  }
+
+  .ks-action-menu-button {
+    @apply text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+  }
+
+  .ks-menu {
+    @apply mt-[calc(var(--ks-spacing)*1)] rounded-[calc(var(--ks-radius-surface)*0.75)] border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-surface) shadow-(--ks-shadow-overlay) dark:border-(color:--ks-color-border-dark) dark:bg-(color:--ks-color-surface-dark);
+  }
+
+  .ks-menu-trigger {
+    @apply gap-[calc(var(--ks-spacing)*1)] rounded-[calc(var(--ks-radius-control)*0.75)] border-(length:--ks-border-width) px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] border-(color:--ks-color-border-control) bg-(color:--ks-color-surface) text-(color:--ks-color-text) dark:border-(color:--ks-color-border-control-dark) dark:bg-(color:--ks-color-surface-dark) dark:text-(color:--ks-color-text-dark);
+  }
+
+  .ks-menu-option {
+    @apply gap-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) hover:bg-(color:--ks-color-hover) dark:text-(color:--ks-color-text-label-dark) dark:hover:bg-(color:--ks-color-hover-dark);
+  }
+
+  .ks-menu-checkbox {
+    @apply rounded-[calc(var(--ks-radius-control)*0.5)] border-(color:--ks-color-border-strong) text-(color:--ks-color-accent) focus:ring-(color:--ks-color-focus) dark:border-(color:--ks-color-border-strong-dark);
+  }
+
+  .ks-copy-button {
+    @apply gap-[calc(var(--ks-spacing)*1.5)] rounded-[calc(var(--ks-radius-control)*0.75)] border-(length:--ks-border-width) border-(color:--ks-color-border-strong) bg-(color:--ks-color-overlay) px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*1.5)] font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-label) hover:bg-(color:--ks-color-hover-raised) dark:border-(color:--ks-color-border-strong-dark) dark:bg-(color:--ks-color-overlay-dark) dark:text-(color:--ks-color-text-label-dark) dark:hover:bg-(color:--ks-color-hover-raised-dark);
+  }
+
+  .ks-theme-toggle-option {
+    @apply aria-pressed:bg-(color:--ks-color-accent) aria-pressed:hover:bg-(color:--ks-color-accent-hover) dark:aria-pressed:bg-(color:--ks-color-accent-dark) dark:aria-pressed:hover:bg-(color:--ks-color-accent-hover-dark);
+  }
+
+  .ks-checkbox-row {
+    @apply gap-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*3)];
+  }
+
+  .ks-checkbox-row-input {
+    @apply mt-[calc(var(--ks-spacing)*0.5)] rounded-[calc(var(--ks-radius-control)*0.5)] border-(color:--ks-color-border-choice) text-(color:--ks-color-accent) checked:bg-(color:--ks-color-accent) focus:ring-(color:--ks-color-focus);
+  }
+
+  .ks-checkbox-row-label {
+    @apply font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-choice) dark:text-(color:--ks-color-text-choice-dark);
+  }
+
+  .ks-checkbox-row-hint {
+    @apply mt-[calc(var(--ks-spacing)*0.5)] text-(color:--ks-color-text-choice-muted) dark:text-(color:--ks-color-text-choice-muted-dark);
+  }
+
+  .ks-radio-card {
+    @apply px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*3)] rounded-(--ks-radius-surface) border-[calc(var(--ks-border-width)*2)];
+  }
+
+  .ks-radio-card-highlight {
+    @apply border-(color:--ks-color-border) dark:border-(color:--ks-color-border-dark) peer-checked:border-(color:--ks-color-selected-border) peer-checked:bg-(color:--ks-color-selected) dark:peer-checked:bg-(color:--ks-color-selected-dark);
+  }
+
+  .ks-radio-card-label {
+    @apply font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-option) dark:text-(color:--ks-color-text-option-dark);
+  }
+
+  .ks-radio-card-hint {
+    @apply mt-[calc(var(--ks-spacing)*1)] text-(color:--ks-color-text-option-muted) dark:text-(color:--ks-color-text-option-muted-dark);
+  }
+
+  .ks-option-card {
+    @apply gap-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-[calc(var(--ks-border-width)*2)];
+  }
+
+  .ks-option-card-selected {
+    @apply border-(color:--ks-color-selected-border);
+  }
+
+  .ks-file-upload {
+    @apply space-y-[calc(var(--ks-spacing)*1)];
+  }
+
+  .ks-file-upload-drop-zone {
+    @apply mt-[calc(var(--ks-spacing)*1)] rounded-[calc(var(--ks-radius-surface)*0.75)] border-[calc(var(--ks-border-width)*2)] border-dashed border-(color:--ks-color-border-strong) px-[calc(var(--ks-spacing)*6)] py-[calc(var(--ks-spacing)*8)] dark:border-(color:--ks-color-border-strong-dark);
+  }
+
+  .ks-file-upload-drop-zone-active {
+    @apply border-(color:--ks-color-selected-border) bg-(color:--ks-color-drop-active) dark:bg-(color:--ks-color-drop-active-dark);
+  }
+
+  .ks-file-upload-inner {
+    @apply space-y-[calc(var(--ks-spacing)*2)];
+  }
+
+  .ks-file-upload-icon {
+    @apply text-(color:--ks-color-icon) dark:text-(color:--ks-color-icon-dark);
+  }
+
+  .ks-file-upload-prompt {
+    @apply text-(color:--ks-color-text-secondary) dark:text-(color:--ks-color-text-secondary-dark);
+  }
+
+  .ks-file-upload-browse {
+    @apply font-(weight:--ks-font-weight-strong) text-(color:--ks-color-link) hover:text-(color:--ks-color-link-hover) dark:text-(color:--ks-color-link-dark) dark:hover:text-(color:--ks-color-link-hover-dark);
+  }
+
+  .ks-file-upload-hint {
+    @apply mt-[calc(var(--ks-spacing)*1)] text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+  }
+
+  .ks-file-upload-file-name {
+    @apply mt-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark);
+  }
+
+  .ks-color-swatch {
+    @apply rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border-strong) dark:border-(color:--ks-color-border-strong-dark);
+  }
+
+  .ks-color-picker-panel {
+    @apply mt-[calc(var(--ks-spacing)*2)] p-[calc(var(--ks-spacing)*3)] rounded-(--ks-radius-surface) shadow-(--ks-shadow-overlay) bg-(color:--ks-color-overlay) border-(length:--ks-border-width) border-(color:--ks-color-border) dark:bg-(color:--ks-color-overlay-dark) dark:border-(color:--ks-color-border-dark);
   }
 }

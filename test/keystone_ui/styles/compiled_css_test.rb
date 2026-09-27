@@ -823,6 +823,782 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-color-info-900: var\(--color-accent-900\)/m, self.class.compiled)
   end
 
+  def test_border_width_defaults_to_1px
+    assert_match(/:root \{[^}]*--ks-border-width: 1px/m, self.class.compiled)
+  end
+
+  def test_shadow_overlay_defaults_to_var_shadow_lg
+    assert_match(/:root \{[^}]*--ks-shadow-overlay: var\(--shadow-lg\)/m, self.class.compiled)
+  end
+
+  def test_font_weight_medium_defaults_to_var_font_weight_medium
+    assert_match(/:root \{[^}]*--ks-font-weight-medium: var\(--font-weight-medium\)/m, self.class.compiled)
+  end
+
+  def test_modal_backdrop_fill_reads_the_backdrop_colour_role
+    assert_includes rule(".ks-modal-backdrop"), "background-color: var(--ks-color-backdrop)"
+  end
+
+  def test_color_backdrop_defaults_to_color_mix_in_oklab_var_color_black_60_transparent
+    assert_match(/:root \{[^}]*--ks-color-backdrop: color-mix\(in oklab, var\(--color-black\) 60%, transparent\)/m, self.class.compiled)
+  end
+
+  def test_modal_panel_radius_is_1_5_of_the_surface_radius
+    assert_includes rule(".ks-modal-panel"), "border-radius: calc(var(--ks-radius-surface) * 1.5)"
+  end
+
+  def test_modal_panel_border_width_reads_the_border_width_variable
+    assert_includes rule(".ks-modal-panel"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_modal_panel_border_reads_the_border_colour_role
+    assert_includes rule(".ks-modal-panel"), "border-color: var(--ks-color-border)"
+  end
+
+  def test_modal_panel_fill_reads_the_overlay_colour_role
+    assert_includes rule(".ks-modal-panel"), "background-color: var(--ks-color-overlay)"
+  end
+
+  def test_color_overlay_defaults_to_var_color_white
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-overlay: var\(--color-white\)/m, self.class.compiled)
+  end
+
+  def test_color_overlay_dark_defaults_to_var_color_zinc_800
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-overlay-dark: var\(--color-zinc-800\)/m, self.class.compiled)
+  end
+
+  def test_modal_panel_padding_is_6_spacing_units
+    assert_includes rule(".ks-modal-panel"), "padding: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_modal_panel_margin_inline_is_4_spacing_units
+    assert_includes rule(".ks-modal-panel"), "margin-inline: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_modal_panel_border_reads_the_border_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-modal-panel"))
+  end
+
+  def test_modal_panel_fill_reads_the_overlay_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-overlay-dark\)/m, block(".ks-modal-panel"))
+  end
+
+  def test_modal_header_margin_bottom_is_4_spacing_units
+    assert_includes rule(".ks-modal-header"), "margin-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_modal_title_weight_reads_the_heading_font_weight_variable
+    assert_includes rule(".ks-modal-title"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
+  def test_modal_title_text_reads_the_text_heading_colour_role
+    assert_includes rule(".ks-modal-title"), "color: var(--ks-color-text-heading)"
+  end
+
+  def test_modal_title_text_reads_the_text_heading_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-heading-dark\)/m, block(".ks-modal-title"))
+  end
+
+  def test_color_text_heading_defaults_to_var_color_gray_900
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-heading: var\(--color-gray-900\)/m, self.class.compiled)
+  end
+
+  def test_color_text_heading_dark_defaults_to_var_color_gray_200
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-heading-dark: var\(--color-gray-200\)/m, self.class.compiled)
+  end
+
+  def test_modal_close_text_reads_the_close_colour_role
+    assert_includes rule(".ks-modal-close"), "color: var(--ks-color-close)"
+  end
+
+  def test_modal_close_text_reads_the_close_hover_colour_role_on_hover
+    assert_match(/\&:hover.*?color: var\(--ks-color-close-hover\)/m, block(".ks-modal-close"))
+  end
+
+  def test_modal_close_text_reads_the_close_hover_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?\&:hover.*?color: var\(--ks-color-close-hover-dark\)/m, block(".ks-modal-close"))
+  end
+
+  def test_color_close_defaults_to_var_color_gray_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-close: var\(--color-gray-400\)/m, self.class.compiled)
+  end
+
+  def test_color_close_hover_defaults_to_var_color_gray_600
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-close-hover: var\(--color-gray-600\)/m, self.class.compiled)
+  end
+
+  def test_color_close_hover_dark_defaults_to_var_color_gray_200
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-close-hover-dark: var\(--color-gray-200\)/m, self.class.compiled)
+  end
+
+  def test_action_menu_margin_top_is_2_spacing_units
+    assert_includes rule(".ks-action-menu"), "margin-top: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_action_menu_radius_is_0_75_of_the_surface_radius
+    assert_includes rule(".ks-action-menu"), "border-radius: calc(var(--ks-radius-surface) * 0.75)"
+  end
+
+  def test_action_menu_fill_reads_the_overlay_colour_role
+    assert_includes rule(".ks-action-menu"), "background-color: var(--ks-color-overlay)"
+  end
+
+  def test_action_menu_padding_block_is_1_spacing_units
+    assert_includes rule(".ks-action-menu"), "padding-block: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_action_menu_shadow_reads_the_overlay_shadow_variable
+    assert_includes rule(".ks-action-menu"), "--tw-shadow: var(--ks-shadow-overlay)"
+  end
+
+  def test_action_menu_ring_width_reads_the_border_width_variable
+    assert_includes rule(".ks-action-menu"), "calc(var(--ks-border-width) + var(--tw-ring-offset-width))"
+  end
+
+  def test_action_menu_ring_reads_the_ring_colour_role
+    assert_includes rule(".ks-action-menu"), "--tw-ring-color: var(--ks-color-ring)"
+  end
+
+  def test_action_menu_fill_reads_the_overlay_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-overlay-dark\)/m, block(".ks-action-menu"))
+  end
+
+  def test_action_menu_ring_reads_the_ring_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?--tw-ring-color: var\(--ks-color-ring-dark\)/m, block(".ks-action-menu"))
+  end
+
+  def test_color_ring_defaults_to_color_mix_in_oklab_var_color_black_5_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-ring: color-mix\(in oklab, var\(--color-black\) 5%, transparent\)/m, self.class.compiled)
+  end
+
+  def test_color_ring_dark_defaults_to_color_mix_in_oklab_var_color_white_10_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-ring-dark: color-mix\(in oklab, var\(--color-white\) 10%, transparent\)/m, self.class.compiled)
+  end
+
+  def test_action_menu_button_text_reads_the_text_muted_colour_role
+    assert_includes rule(".ks-action-menu-button"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_action_menu_button_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-action-menu-button"))
+  end
+
+  def test_menu_margin_top_is_1_spacing_units
+    assert_includes rule(".ks-menu"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_menu_radius_is_0_75_of_the_surface_radius
+    assert_includes rule(".ks-menu"), "border-radius: calc(var(--ks-radius-surface) * 0.75)"
+  end
+
+  def test_menu_border_width_reads_the_border_width_variable
+    assert_includes rule(".ks-menu"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_menu_border_reads_the_border_colour_role
+    assert_includes rule(".ks-menu"), "border-color: var(--ks-color-border)"
+  end
+
+  def test_menu_fill_reads_the_surface_colour_role
+    assert_includes rule(".ks-menu"), "background-color: var(--ks-color-surface)"
+  end
+
+  def test_menu_shadow_reads_the_overlay_shadow_variable
+    assert_includes rule(".ks-menu"), "--tw-shadow: var(--ks-shadow-overlay)"
+  end
+
+  def test_menu_border_reads_the_border_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-menu"))
+  end
+
+  def test_menu_fill_reads_the_surface_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-surface-dark\)/m, block(".ks-menu"))
+  end
+
+  def test_menu_trigger_gap_is_1_spacing_units
+    assert_includes rule(".ks-menu-trigger"), "gap: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_menu_trigger_radius_is_0_75_of_the_control_radius
+    assert_includes rule(".ks-menu-trigger"), "border-radius: calc(var(--ks-radius-control) * 0.75)"
+  end
+
+  def test_menu_trigger_border_width_reads_the_border_width_variable
+    assert_includes rule(".ks-menu-trigger"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_menu_trigger_padding_inline_is_3_spacing_units
+    assert_includes rule(".ks-menu-trigger"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_menu_trigger_padding_block_is_2_spacing_units
+    assert_includes rule(".ks-menu-trigger"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_menu_trigger_border_reads_the_border_control_colour_role
+    assert_includes rule(".ks-menu-trigger"), "border-color: var(--ks-color-border-control)"
+  end
+
+  def test_menu_trigger_fill_reads_the_surface_colour_role
+    assert_includes rule(".ks-menu-trigger"), "background-color: var(--ks-color-surface)"
+  end
+
+  def test_menu_trigger_text_reads_the_text_colour_role
+    assert_includes rule(".ks-menu-trigger"), "color: var(--ks-color-text)"
+  end
+
+  def test_menu_trigger_border_reads_the_border_control_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-control-dark\)/m, block(".ks-menu-trigger"))
+  end
+
+  def test_menu_trigger_fill_reads_the_surface_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-surface-dark\)/m, block(".ks-menu-trigger"))
+  end
+
+  def test_menu_trigger_text_reads_the_text_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-menu-trigger"))
+  end
+
+  def test_menu_option_gap_is_2_spacing_units
+    assert_includes rule(".ks-menu-option"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_menu_option_padding_inline_is_3_spacing_units
+    assert_includes rule(".ks-menu-option"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_menu_option_padding_block_is_2_spacing_units
+    assert_includes rule(".ks-menu-option"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_menu_option_text_reads_the_text_label_colour_role
+    assert_includes rule(".ks-menu-option"), "color: var(--ks-color-text-label)"
+  end
+
+  def test_menu_option_fill_reads_the_hover_colour_role_on_hover
+    assert_match(/\&:hover.*?background-color: var\(--ks-color-hover\)/m, block(".ks-menu-option"))
+  end
+
+  def test_menu_option_text_reads_the_text_label_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-label-dark\)/m, block(".ks-menu-option"))
+  end
+
+  def test_menu_option_fill_reads_the_hover_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?\&:hover.*?background-color: var\(--ks-color-hover-dark\)/m, block(".ks-menu-option"))
+  end
+
+  def test_color_hover_defaults_to_var_color_gray_50
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover: var\(--color-gray-50\)/m, self.class.compiled)
+  end
+
+  def test_color_hover_dark_defaults_to_var_color_zinc_800
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-dark: var\(--color-zinc-800\)/m, self.class.compiled)
+  end
+
+  def test_menu_checkbox_radius_is_0_5_of_the_control_radius
+    assert_includes rule(".ks-menu-checkbox"), "border-radius: calc(var(--ks-radius-control) * 0.5)"
+  end
+
+  def test_menu_checkbox_border_reads_the_border_strong_colour_role
+    assert_includes rule(".ks-menu-checkbox"), "border-color: var(--ks-color-border-strong)"
+  end
+
+  def test_menu_checkbox_text_reads_the_accent_colour_role
+    assert_includes rule(".ks-menu-checkbox"), "color: var(--ks-color-accent)"
+  end
+
+  def test_menu_checkbox_ring_reads_the_focus_colour_role_on_focus
+    assert_match(/\&:focus.*?--tw-ring-color: var\(--ks-color-focus\)/m, block(".ks-menu-checkbox"))
+  end
+
+  def test_menu_checkbox_border_reads_the_border_strong_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-strong-dark\)/m, block(".ks-menu-checkbox"))
+  end
+
+  def test_color_border_strong_defaults_to_var_color_gray_300
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-strong: var\(--color-gray-300\)/m, self.class.compiled)
+  end
+
+  def test_color_border_strong_dark_defaults_to_var_color_zinc_600
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-strong-dark: var\(--color-zinc-600\)/m, self.class.compiled)
+  end
+
+  def test_color_focus_defaults_to_var_color_accent_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-focus: var\(--color-accent-500\)/m, self.class.compiled)
+  end
+
+  def test_copy_button_gap_is_1_5_spacing_units
+    assert_includes rule(".ks-copy-button"), "gap: calc(var(--ks-spacing) * 1.5)"
+  end
+
+  def test_copy_button_radius_is_0_75_of_the_control_radius
+    assert_includes rule(".ks-copy-button"), "border-radius: calc(var(--ks-radius-control) * 0.75)"
+  end
+
+  def test_copy_button_border_width_reads_the_border_width_variable
+    assert_includes rule(".ks-copy-button"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_copy_button_border_reads_the_border_strong_colour_role
+    assert_includes rule(".ks-copy-button"), "border-color: var(--ks-color-border-strong)"
+  end
+
+  def test_copy_button_fill_reads_the_overlay_colour_role
+    assert_includes rule(".ks-copy-button"), "background-color: var(--ks-color-overlay)"
+  end
+
+  def test_copy_button_padding_inline_is_3_spacing_units
+    assert_includes rule(".ks-copy-button"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_copy_button_padding_block_is_1_5_spacing_units
+    assert_includes rule(".ks-copy-button"), "padding-block: calc(var(--ks-spacing) * 1.5)"
+  end
+
+  def test_copy_button_weight_reads_the_medium_font_weight_variable
+    assert_includes rule(".ks-copy-button"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_copy_button_text_reads_the_text_label_colour_role
+    assert_includes rule(".ks-copy-button"), "color: var(--ks-color-text-label)"
+  end
+
+  def test_copy_button_fill_reads_the_hover_raised_colour_role_on_hover
+    assert_match(/\&:hover.*?background-color: var\(--ks-color-hover-raised\)/m, block(".ks-copy-button"))
+  end
+
+  def test_copy_button_border_reads_the_border_strong_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-strong-dark\)/m, block(".ks-copy-button"))
+  end
+
+  def test_copy_button_fill_reads_the_overlay_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-overlay-dark\)/m, block(".ks-copy-button"))
+  end
+
+  def test_copy_button_text_reads_the_text_label_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-label-dark\)/m, block(".ks-copy-button"))
+  end
+
+  def test_copy_button_fill_reads_the_hover_raised_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?\&:hover.*?background-color: var\(--ks-color-hover-raised-dark\)/m, block(".ks-copy-button"))
+  end
+
+  def test_color_hover_raised_defaults_to_var_color_gray_50
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-raised: var\(--color-gray-50\)/m, self.class.compiled)
+  end
+
+  def test_color_hover_raised_dark_defaults_to_var_color_zinc_700
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-raised-dark: var\(--color-zinc-700\)/m, self.class.compiled)
+  end
+
+  def test_theme_toggle_option_fill_reads_the_accent_colour_role_when_pressed
+    assert_match(/\.ks-theme-toggle-option.*?aria-pressed="true".*?background-color: var\(--ks-color-accent\)/m, self.class.compiled)
+  end
+
+  def test_theme_toggle_option_fill_reads_the_accent_hover_colour_role_when_pressed_and_on_hover
+    assert_match(/\.ks-theme-toggle-option.*?aria-pressed="true".*?:hover.*?background-color: var\(--ks-color-accent-hover\)/m, self.class.compiled)
+  end
+
+  def test_theme_toggle_option_fill_reads_the_accent_dark_colour_role_on_a_dark_page_and_when_pressed
+    assert_match(/\.ks-theme-toggle-option.*?data-theme="dark".*?aria-pressed="true".*?background-color: var\(--ks-color-accent-dark\)/m, self.class.compiled)
+  end
+
+  def test_theme_toggle_option_fill_reads_the_accent_hover_dark_colour_role_on_a_dark_page_and_when_pressed_and_on_hover
+    assert_match(/\.ks-theme-toggle-option.*?data-theme="dark".*?aria-pressed="true".*?:hover.*?background-color: var\(--ks-color-accent-hover-dark\)/m, self.class.compiled)
+  end
+
+  def test_checkbox_row_gap_is_3_spacing_units
+    assert_includes rule(".ks-checkbox-row"), "gap: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_checkbox_row_padding_block_is_3_spacing_units
+    assert_includes rule(".ks-checkbox-row"), "padding-block: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_checkbox_row_input_margin_top_is_0_5_spacing_units
+    assert_includes rule(".ks-checkbox-row-input"), "margin-top: calc(var(--ks-spacing) * 0.5)"
+  end
+
+  def test_checkbox_row_input_radius_is_0_5_of_the_control_radius
+    assert_includes rule(".ks-checkbox-row-input"), "border-radius: calc(var(--ks-radius-control) * 0.5)"
+  end
+
+  def test_checkbox_row_input_border_reads_the_border_choice_colour_role
+    assert_includes rule(".ks-checkbox-row-input"), "border-color: var(--ks-color-border-choice)"
+  end
+
+  def test_checkbox_row_input_text_reads_the_accent_colour_role
+    assert_includes rule(".ks-checkbox-row-input"), "color: var(--ks-color-accent)"
+  end
+
+  def test_checkbox_row_input_fill_reads_the_accent_colour_role_when_checked
+    assert_match(/\&:checked.*?background-color: var\(--ks-color-accent\)/m, block(".ks-checkbox-row-input"))
+  end
+
+  def test_checkbox_row_input_ring_reads_the_focus_colour_role_on_focus
+    assert_match(/\&:focus.*?--tw-ring-color: var\(--ks-color-focus\)/m, block(".ks-checkbox-row-input"))
+  end
+
+  def test_color_border_choice_defaults_to_var_color_surface_300
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-choice: var\(--color-surface-300\)/m, self.class.compiled)
+  end
+
+  def test_checkbox_row_label_weight_reads_the_medium_font_weight_variable
+    assert_includes rule(".ks-checkbox-row-label"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_checkbox_row_label_text_reads_the_text_choice_colour_role
+    assert_includes rule(".ks-checkbox-row-label"), "color: var(--ks-color-text-choice)"
+  end
+
+  def test_checkbox_row_label_text_reads_the_text_choice_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-choice-dark\)/m, block(".ks-checkbox-row-label"))
+  end
+
+  def test_color_text_choice_defaults_to_var_color_surface_900
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-choice: var\(--color-surface-900\)/m, self.class.compiled)
+  end
+
+  def test_color_text_choice_dark_defaults_to_var_color_surface_100
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-choice-dark: var\(--color-surface-100\)/m, self.class.compiled)
+  end
+
+  def test_checkbox_row_hint_margin_top_is_0_5_spacing_units
+    assert_includes rule(".ks-checkbox-row-hint"), "margin-top: calc(var(--ks-spacing) * 0.5)"
+  end
+
+  def test_checkbox_row_hint_text_reads_the_text_choice_muted_colour_role
+    assert_includes rule(".ks-checkbox-row-hint"), "color: var(--ks-color-text-choice-muted)"
+  end
+
+  def test_checkbox_row_hint_text_reads_the_text_choice_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-choice-muted-dark\)/m, block(".ks-checkbox-row-hint"))
+  end
+
+  def test_color_text_choice_muted_defaults_to_var_color_surface_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-choice-muted: var\(--color-surface-500\)/m, self.class.compiled)
+  end
+
+  def test_color_text_choice_muted_dark_defaults_to_var_color_surface_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-choice-muted-dark: var\(--color-surface-400\)/m, self.class.compiled)
+  end
+
+  def test_radio_card_padding_inline_is_4_spacing_units
+    assert_includes rule(".ks-radio-card"), "padding-inline: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_radio_card_padding_block_is_3_spacing_units
+    assert_includes rule(".ks-radio-card"), "padding-block: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_radio_card_radius_reads_the_surface_radius
+    assert_includes rule(".ks-radio-card"), "border-radius: var(--ks-radius-surface)"
+  end
+
+  def test_radio_card_border_width_is_2_times_the_border_width_variable
+    assert_includes rule(".ks-radio-card"), "border-width: calc(var(--ks-border-width) * 2)"
+  end
+
+  def test_radio_card_highlight_border_reads_the_border_colour_role
+    assert_includes rule(".ks-radio-card-highlight"), "border-color: var(--ks-color-border)"
+  end
+
+  def test_radio_card_highlight_border_reads_the_border_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-radio-card-highlight"))
+  end
+
+  def test_radio_card_highlight_border_reads_the_selected_border_colour_role_when_its_input_is_checked
+    assert_match(/:checked \~.*?border-color: var\(--ks-color-selected-border\)/m, block(".ks-radio-card-highlight"))
+  end
+
+  def test_radio_card_highlight_fill_reads_the_selected_colour_role_when_its_input_is_checked
+    assert_match(/:checked \~.*?background-color: var\(--ks-color-selected\)/m, block(".ks-radio-card-highlight"))
+  end
+
+  def test_radio_card_highlight_fill_reads_the_selected_dark_colour_role_on_a_dark_page_and_when_its_input_is_checked
+    assert_match(/data-theme="dark".*?:checked \~.*?background-color: var\(--ks-color-selected-dark\)/m, block(".ks-radio-card-highlight"))
+  end
+
+  def test_color_selected_border_defaults_to_var_color_accent_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-selected-border: var\(--color-accent-500\)/m, self.class.compiled)
+  end
+
+  def test_color_selected_defaults_to_var_color_accent_50
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-selected: var\(--color-accent-50\)/m, self.class.compiled)
+  end
+
+  def test_color_selected_dark_defaults_to_var_color_zinc_800
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-selected-dark: var\(--color-zinc-800\)/m, self.class.compiled)
+  end
+
+  def test_radio_card_label_weight_reads_the_medium_font_weight_variable
+    assert_includes rule(".ks-radio-card-label"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_radio_card_label_text_reads_the_text_option_colour_role
+    assert_includes rule(".ks-radio-card-label"), "color: var(--ks-color-text-option)"
+  end
+
+  def test_radio_card_label_text_reads_the_text_option_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-option-dark\)/m, block(".ks-radio-card-label"))
+  end
+
+  def test_color_text_option_defaults_to_var_color_gray_900
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option: var\(--color-gray-900\)/m, self.class.compiled)
+  end
+
+  def test_color_text_option_dark_defaults_to_var_color_gray_100
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option-dark: var\(--color-gray-100\)/m, self.class.compiled)
+  end
+
+  def test_radio_card_hint_margin_top_is_1_spacing_units
+    assert_includes rule(".ks-radio-card-hint"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_radio_card_hint_text_reads_the_text_option_muted_colour_role
+    assert_includes rule(".ks-radio-card-hint"), "color: var(--ks-color-text-option-muted)"
+  end
+
+  def test_radio_card_hint_text_reads_the_text_option_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-option-muted-dark\)/m, block(".ks-radio-card-hint"))
+  end
+
+  def test_color_text_option_muted_defaults_to_var_color_surface_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option-muted: var\(--color-surface-500\)/m, self.class.compiled)
+  end
+
+  def test_color_text_option_muted_dark_defaults_to_var_color_gray_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option-muted-dark: var\(--color-gray-400\)/m, self.class.compiled)
+  end
+
+  def test_option_card_gap_is_2_spacing_units
+    assert_includes rule(".ks-option-card"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_option_card_padding_inline_is_3_spacing_units
+    assert_includes rule(".ks-option-card"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_option_card_padding_block_is_2_spacing_units
+    assert_includes rule(".ks-option-card"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_option_card_radius_reads_the_surface_radius
+    assert_includes rule(".ks-option-card"), "border-radius: var(--ks-radius-surface)"
+  end
+
+  def test_option_card_border_width_is_2_times_the_border_width_variable
+    assert_includes rule(".ks-option-card"), "border-width: calc(var(--ks-border-width) * 2)"
+  end
+
+  def test_option_card_selected_border_reads_the_selected_border_colour_role
+    assert_includes rule(".ks-option-card-selected"), "border-color: var(--ks-color-selected-border)"
+  end
+
+  def test_file_upload_vertical_gap_between_children_is_1_spacing_units
+    assert_match(/:where\(\.ks-file-upload > :not\(:last-child\)\).*?calc\(var\(--ks-spacing\) \* 1\)/m, self.class.compiled)
+  end
+
+  def test_file_upload_drop_zone_margin_top_is_1_spacing_units
+    assert_includes rule(".ks-file-upload-drop-zone"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_file_upload_drop_zone_radius_is_0_75_of_the_surface_radius
+    assert_includes rule(".ks-file-upload-drop-zone"), "border-radius: calc(var(--ks-radius-surface) * 0.75)"
+  end
+
+  def test_file_upload_drop_zone_border_width_is_2_times_the_border_width_variable
+    assert_includes rule(".ks-file-upload-drop-zone"), "border-width: calc(var(--ks-border-width) * 2)"
+  end
+
+  def test_file_upload_drop_zone_border_is_dashed
+    assert_includes rule(".ks-file-upload-drop-zone"), "border-style: dashed"
+  end
+
+  def test_file_upload_drop_zone_border_reads_the_border_strong_colour_role
+    assert_includes rule(".ks-file-upload-drop-zone"), "border-color: var(--ks-color-border-strong)"
+  end
+
+  def test_file_upload_drop_zone_padding_inline_is_6_spacing_units
+    assert_includes rule(".ks-file-upload-drop-zone"), "padding-inline: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_file_upload_drop_zone_padding_block_is_8_spacing_units
+    assert_includes rule(".ks-file-upload-drop-zone"), "padding-block: calc(var(--ks-spacing) * 8)"
+  end
+
+  def test_file_upload_drop_zone_border_reads_the_border_strong_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-strong-dark\)/m, block(".ks-file-upload-drop-zone"))
+  end
+
+  def test_file_upload_drop_zone_active_border_reads_the_selected_border_colour_role
+    assert_includes rule(".ks-file-upload-drop-zone-active"), "border-color: var(--ks-color-selected-border)"
+  end
+
+  def test_file_upload_drop_zone_active_fill_reads_the_drop_active_colour_role
+    assert_includes rule(".ks-file-upload-drop-zone-active"), "background-color: var(--ks-color-drop-active)"
+  end
+
+  def test_file_upload_drop_zone_active_fill_reads_the_drop_active_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-drop-active-dark\)/m, block(".ks-file-upload-drop-zone-active"))
+  end
+
+  def test_color_drop_active_defaults_to_var_color_accent_50
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-drop-active: var\(--color-accent-50\)/m, self.class.compiled)
+  end
+
+  def test_color_drop_active_dark_defaults_to_color_mix_in_oklab_var_color_accent_900_10_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-drop-active-dark: color-mix\(in oklab, var\(--color-accent-900\) 10%, transparent\)/m, self.class.compiled)
+  end
+
+  def test_file_upload_inner_vertical_gap_between_children_is_2_spacing_units
+    assert_match(/:where\(\.ks-file-upload-inner > :not\(:last-child\)\).*?calc\(var\(--ks-spacing\) \* 2\)/m, self.class.compiled)
+  end
+
+  def test_file_upload_icon_text_reads_the_icon_colour_role
+    assert_includes rule(".ks-file-upload-icon"), "color: var(--ks-color-icon)"
+  end
+
+  def test_file_upload_icon_text_reads_the_icon_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-icon-dark\)/m, block(".ks-file-upload-icon"))
+  end
+
+  def test_color_icon_defaults_to_var_color_gray_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon: var\(--color-gray-400\)/m, self.class.compiled)
+  end
+
+  def test_color_icon_dark_defaults_to_var_color_gray_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon-dark: var\(--color-gray-500\)/m, self.class.compiled)
+  end
+
+  def test_file_upload_prompt_text_reads_the_text_secondary_colour_role
+    assert_includes rule(".ks-file-upload-prompt"), "color: var(--ks-color-text-secondary)"
+  end
+
+  def test_file_upload_prompt_text_reads_the_text_secondary_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-secondary-dark\)/m, block(".ks-file-upload-prompt"))
+  end
+
+  def test_color_text_secondary_defaults_to_var_color_gray_600
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-secondary: var\(--color-gray-600\)/m, self.class.compiled)
+  end
+
+  def test_color_text_secondary_dark_defaults_to_var_color_gray_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-secondary-dark: var\(--color-gray-400\)/m, self.class.compiled)
+  end
+
+  def test_file_upload_browse_weight_reads_the_strong_font_weight_variable
+    assert_includes rule(".ks-file-upload-browse"), "font-weight: var(--ks-font-weight-strong)"
+  end
+
+  def test_file_upload_browse_text_reads_the_link_colour_role
+    assert_includes rule(".ks-file-upload-browse"), "color: var(--ks-color-link)"
+  end
+
+  def test_file_upload_browse_text_reads_the_link_hover_colour_role_on_hover
+    assert_match(/:hover.*?color: var\(--ks-color-link-hover\)/m, block(".ks-file-upload-browse"))
+  end
+
+  def test_file_upload_browse_text_reads_the_link_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-link-dark\)/m, block(".ks-file-upload-browse"))
+  end
+
+  def test_file_upload_browse_text_reads_the_link_hover_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?color: var\(--ks-color-link-hover-dark\)/m, block(".ks-file-upload-browse"))
+  end
+
+  def test_color_link_defaults_to_var_color_accent_600
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-link: var\(--color-accent-600\)/m, self.class.compiled)
+  end
+
+  def test_color_link_dark_defaults_to_var_color_accent_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-link-dark: var\(--color-accent-400\)/m, self.class.compiled)
+  end
+
+  def test_color_link_hover_defaults_to_var_color_accent_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-link-hover: var\(--color-accent-500\)/m, self.class.compiled)
+  end
+
+  def test_color_link_hover_dark_defaults_to_var_color_accent_300
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-link-hover-dark: var\(--color-accent-300\)/m, self.class.compiled)
+  end
+
+  def test_file_upload_hint_margin_top_is_1_spacing_units
+    assert_includes rule(".ks-file-upload-hint"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_file_upload_hint_text_reads_the_text_muted_colour_role
+    assert_includes rule(".ks-file-upload-hint"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_file_upload_hint_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-file-upload-hint"))
+  end
+
+  def test_file_upload_file_name_margin_top_is_2_spacing_units
+    assert_includes rule(".ks-file-upload-file-name"), "margin-top: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_file_upload_file_name_text_reads_the_text_label_colour_role
+    assert_includes rule(".ks-file-upload-file-name"), "color: var(--ks-color-text-label)"
+  end
+
+  def test_file_upload_file_name_text_reads_the_text_label_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-label-dark\)/m, block(".ks-file-upload-file-name"))
+  end
+
+  def test_color_swatch_radius_reads_the_surface_radius
+    assert_includes rule(".ks-color-swatch"), "border-radius: var(--ks-radius-surface)"
+  end
+
+  def test_color_swatch_border_width_reads_the_border_width_variable
+    assert_includes rule(".ks-color-swatch"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_color_swatch_border_reads_the_border_strong_colour_role
+    assert_includes rule(".ks-color-swatch"), "border-color: var(--ks-color-border-strong)"
+  end
+
+  def test_color_swatch_border_reads_the_border_strong_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-strong-dark\)/m, block(".ks-color-swatch"))
+  end
+
+  def test_color_picker_panel_margin_top_is_2_spacing_units
+    assert_includes rule(".ks-color-picker-panel"), "margin-top: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_color_picker_panel_padding_is_3_spacing_units
+    assert_includes rule(".ks-color-picker-panel"), "padding: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_color_picker_panel_radius_reads_the_surface_radius
+    assert_includes rule(".ks-color-picker-panel"), "border-radius: var(--ks-radius-surface)"
+  end
+
+  def test_color_picker_panel_shadow_reads_the_overlay_shadow_variable
+    assert_includes rule(".ks-color-picker-panel"), "--tw-shadow: var(--ks-shadow-overlay)"
+  end
+
+  def test_color_picker_panel_fill_reads_the_overlay_colour_role
+    assert_includes rule(".ks-color-picker-panel"), "background-color: var(--ks-color-overlay)"
+  end
+
+  def test_color_picker_panel_border_width_reads_the_border_width_variable
+    assert_includes rule(".ks-color-picker-panel"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_color_picker_panel_border_reads_the_border_colour_role
+    assert_includes rule(".ks-color-picker-panel"), "border-color: var(--ks-color-border)"
+  end
+
+  def test_color_picker_panel_fill_reads_the_overlay_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-overlay-dark\)/m, block(".ks-color-picker-panel"))
+  end
+
+  def test_color_picker_panel_border_reads_the_border_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-color-picker-panel"))
+  end
+
   private
 
   def block(selector)

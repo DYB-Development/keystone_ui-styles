@@ -3,6 +3,9 @@
 ## [Unreleased]
 
 ### Added
+- Classes for the dialog, action menu, column picker and multi select menus, copy button, theme toggle, checkbox row, radio card, option card, file upload and colour picker, which draw what those components draw today from `--ks-` variables.
+
+### Added
 - Panels, cards, inputs, labels, hints, alerts, badges, pages, sections and page headers take their colours, corner radius, title weight and padding from `--ks-` variables, and look the same until a variable is set.
 - Alerts and badges take their colours from a shade scale per status, which a look can set.
 - Panel radius, padding and shadow classes that read the same variables, for keystone_ui's panel to render.
