@@ -1251,6 +1251,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-checkbox-row-label"), "color: var(--ks-color-text-choice)"
   end
 
+  def test_checkbox_row_label_text_reads_the_text_choice_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-choice-dark\)/m, block(".ks-checkbox-row-label"))
+  end
+
   private
 
   def block(selector)
