@@ -717,6 +717,6 @@
   }
 
   .ks-feature-card-description {
-    @apply text-(color:--ks-color-text-display-muted);
+    @apply text-(color:--ks-color-text-display-muted) dark:text-(color:--ks-color-text-display-muted-dark);
   }
 }
