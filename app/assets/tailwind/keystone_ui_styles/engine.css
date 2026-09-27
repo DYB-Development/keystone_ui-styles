@@ -201,6 +201,7 @@
     --ks-color-text-code: var(--color-surface-100);
     --ks-color-text-body: var(--color-surface-600);
     --ks-color-text-body-dark: var(--color-surface-400);
+    --ks-color-icon-soft: var(--color-surface-400);
   }
 }
 

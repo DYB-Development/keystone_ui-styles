@@ -2599,6 +2599,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-disclosure-icon"), "color: var(--ks-color-icon-soft)"
   end
 
+  def test_color_icon_soft_defaults_to_var_color_surface_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon-soft: var\(--color-surface-400\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
