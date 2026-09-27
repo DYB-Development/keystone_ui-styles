@@ -69,6 +69,7 @@
   :root {
     --ks-radius-control: var(--radius-lg);
     --ks-font-weight-strong: var(--font-weight-semibold);
+    --ks-border-width-control: 0px;
   }
 }
 
