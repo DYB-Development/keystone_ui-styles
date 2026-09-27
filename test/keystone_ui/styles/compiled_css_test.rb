@@ -1391,6 +1391,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-option-card"), "border-width: calc(var(--ks-border-width) * 2)"
   end
 
+  def test_option_card_selected_border_reads_the_selected_border_colour_role
+    assert_includes rule(".ks-option-card-selected"), "border-color: var(--ks-color-selected-border)"
+  end
+
   private
 
   def block(selector)

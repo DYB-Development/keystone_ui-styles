@@ -515,4 +515,8 @@
   .ks-option-card {
     @apply gap-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-[calc(var(--ks-border-width)*2)];
   }
+
+  .ks-option-card-selected {
+    @apply border-(color:--ks-color-selected-border);
+  }
 }
