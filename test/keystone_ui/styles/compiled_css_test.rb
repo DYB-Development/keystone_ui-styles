@@ -1983,6 +1983,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-feature-grid"), "gap: calc(var(--ks-spacing) * 6)"
   end
 
+  def test_feature_grid_title_margin_bottom_is_4_spacing_units
+    assert_includes block(".ks-feature-grid-title"), "margin-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)

@@ -692,4 +692,8 @@
   .ks-feature-grid {
     @apply gap-[calc(var(--ks-spacing)*6)];
   }
+
+  .ks-feature-grid-title {
+    @apply mb-[calc(var(--ks-spacing)*4)];
+  }
 }
