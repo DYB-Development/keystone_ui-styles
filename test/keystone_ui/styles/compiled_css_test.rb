@@ -1575,6 +1575,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-color-picker-panel"), "border-radius: var(--ks-radius-surface)"
   end
 
+  def test_color_picker_panel_shadow_reads_the_overlay_shadow_variable
+    assert_includes rule(".ks-color-picker-panel"), "--tw-shadow: var(--ks-shadow-overlay)"
+  end
+
   private
 
   def block(selector)
