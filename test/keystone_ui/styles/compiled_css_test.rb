@@ -1551,6 +1551,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-color-swatch"), "border-radius: var(--ks-radius-surface)"
   end
 
+  def test_color_swatch_border_width_reads_the_border_width_variable
+    assert_includes rule(".ks-color-swatch"), "border-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)
