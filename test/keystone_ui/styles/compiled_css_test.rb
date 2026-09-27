@@ -2751,6 +2751,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-funnel-bar"), "border-radius: calc(var(--ks-radius-surface) * 0.75)"
   end
 
+  def test_funnel_transition_padding_block_is_1_spacing_units
+    assert_includes block(".ks-funnel-transition"), "padding-block: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)

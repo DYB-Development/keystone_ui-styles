@@ -914,4 +914,8 @@
   .ks-funnel-bar {
     @apply rounded-[calc(var(--ks-radius-surface)*0.75)];
   }
+
+  .ks-funnel-transition {
+    @apply py-[calc(var(--ks-spacing)*1)];
+  }
 }
