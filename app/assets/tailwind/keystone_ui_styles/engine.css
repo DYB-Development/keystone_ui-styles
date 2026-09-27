@@ -457,4 +457,8 @@
   .ks-menu-checkbox {
     @apply rounded-[calc(var(--ks-radius-control)*0.5)] border-(color:--ks-color-border-strong) text-(color:--ks-color-accent) focus:ring-(color:--ks-color-focus) dark:border-(color:--ks-color-border-strong-dark);
   }
+
+  .ks-copy-button {
+    @apply gap-[calc(var(--ks-spacing)*1.5)];
+  }
 }

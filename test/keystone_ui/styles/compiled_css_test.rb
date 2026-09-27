@@ -1127,6 +1127,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-focus: var\(--color-accent-500\)/m, self.class.compiled)
   end
 
+  def test_copy_button_gap_is_1_5_spacing_units
+    assert_includes rule(".ks-copy-button"), "gap: calc(var(--ks-spacing) * 1.5)"
+  end
+
   private
 
   def block(selector)
