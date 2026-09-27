@@ -1887,6 +1887,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-cta-banner"), "padding-inline: calc(var(--ks-spacing) * 6)"
   end
 
+  def test_cta_banner_padding_block_is_12_spacing_units
+    assert_includes block(".ks-cta-banner"), "padding-block: calc(var(--ks-spacing) * 12)"
+  end
+
   private
 
   def block(selector)
