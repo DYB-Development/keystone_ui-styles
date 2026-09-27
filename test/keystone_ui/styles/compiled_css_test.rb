@@ -2683,6 +2683,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-progress-bar"), "border-radius: var(--ks-radius-pill)"
   end
 
+  def test_color_meter_defaults_to_var_color_accent_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-meter: var\(--color-accent-500\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
