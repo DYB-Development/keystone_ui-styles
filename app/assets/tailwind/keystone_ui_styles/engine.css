@@ -209,6 +209,7 @@
     --ks-color-text-meter-label-dark: var(--color-surface-300);
     --ks-color-funnel-accent: var(--color-accent-500);
     --ks-color-funnel-sky: var(--color-sky-500);
+    --ks-color-funnel-violet: var(--color-violet-500);
   }
 }
 
