@@ -490,6 +490,6 @@
   }
 
   .ks-radio-card {
-    @apply px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*3)] rounded-(--ks-radius-surface);
+    @apply px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*3)] rounded-(--ks-radius-surface) border-[calc(var(--ks-border-width)*2)];
   }
 }
