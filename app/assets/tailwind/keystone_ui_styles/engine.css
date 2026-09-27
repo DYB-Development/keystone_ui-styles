@@ -1014,4 +1014,8 @@
   .ks-pipeline-box {
     @apply gap-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-pipeline-border) bg-(color:--ks-color-pipeline-box) p-[calc(var(--ks-spacing)*4)];
   }
+
+  .ks-pipeline-box-label {
+    @apply text-(color:--ks-color-pipeline-label);
+  }
 }

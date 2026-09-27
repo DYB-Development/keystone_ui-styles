@@ -2987,6 +2987,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-pipeline-box: var\(--color-surface-900\)/m, self.class.compiled)
   end
 
+  def test_pipeline_box_label_text_reads_the_pipeline_label_colour_role
+    assert_includes block(".ks-pipeline-box-label"), "color: var(--ks-color-pipeline-label)"
+  end
+
   private
 
   def block(selector)
