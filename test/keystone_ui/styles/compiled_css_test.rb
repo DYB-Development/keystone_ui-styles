@@ -1795,6 +1795,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-danger-400\)/m, block(".ks-tone-danger"))
   end
 
+  def test_tone_warning_text_reads_the_warning_600_colour_role
+    assert_includes block(".ks-tone-warning"), "color: var(--ks-color-warning-600)"
+  end
+
   private
 
   def block(selector)
