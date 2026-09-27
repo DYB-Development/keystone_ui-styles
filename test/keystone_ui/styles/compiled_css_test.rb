@@ -3079,6 +3079,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-swipe-empty-message"), "margin-top: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_swipe_empty_message_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-swipe-empty-message"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)
