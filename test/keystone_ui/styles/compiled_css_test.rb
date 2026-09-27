@@ -2071,6 +2071,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-link-dark\)/m, block(".ks-feature-card-icon"))
   end
 
+  def test_color_tint_defaults_to_color_mix_in_oklab_var_color_accent_500_10_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-tint: color-mix\(in oklab, var\(--color-accent-500\) 10%, transparent\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

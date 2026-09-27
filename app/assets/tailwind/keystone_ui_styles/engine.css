@@ -187,6 +187,7 @@
     --ks-color-text-display-muted-dark: var(--color-surface-400);
     --ks-color-raised: var(--color-white);
     --ks-color-raised-dark: var(--color-surface-800);
+    --ks-color-tint: color-mix(in oklab, var(--color-accent-500) 10%, transparent);
   }
 }
 
