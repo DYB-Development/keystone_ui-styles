@@ -777,6 +777,6 @@
   }
 
   .ks-table-header-first {
-    @apply pr-[calc(var(--ks-spacing)*3)];
+    @apply pr-[calc(var(--ks-spacing)*3)] pl-[calc(var(--ks-spacing)*6)];
   }
 }
