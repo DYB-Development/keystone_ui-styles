@@ -2615,6 +2615,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab"), "border-radius: var(--ks-radius-surface)"
   end
 
+  def test_tab_padding_inline_is_4_spacing_units
+    assert_includes block(".ks-tab"), "padding-inline: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)

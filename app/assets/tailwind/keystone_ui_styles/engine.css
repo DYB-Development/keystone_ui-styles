@@ -867,6 +867,6 @@
   }
 
   .ks-tab {
-    @apply rounded-(--ks-radius-surface);
+    @apply rounded-(--ks-radius-surface) px-[calc(var(--ks-spacing)*4)];
   }
 }
