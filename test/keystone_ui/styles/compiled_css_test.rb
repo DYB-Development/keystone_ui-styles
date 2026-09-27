@@ -2027,6 +2027,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-feature-card"), "border-color: var(--ks-color-border-subtle)"
   end
 
+  def test_feature_card_fill_reads_the_raised_colour_role
+    assert_includes block(".ks-feature-card"), "background-color: var(--ks-color-raised)"
+  end
+
   private
 
   def block(selector)
