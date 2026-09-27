@@ -1415,6 +1415,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-file-upload-drop-zone"), "border-style: dashed"
   end
 
+  def test_file_upload_drop_zone_border_reads_the_border_strong_colour_role
+    assert_includes rule(".ks-file-upload-drop-zone"), "border-color: var(--ks-color-border-strong)"
+  end
+
   private
 
   def block(selector)

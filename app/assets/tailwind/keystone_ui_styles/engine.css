@@ -525,6 +525,6 @@
   }
 
   .ks-file-upload-drop-zone {
-    @apply mt-[calc(var(--ks-spacing)*1)] rounded-[calc(var(--ks-radius-surface)*0.75)] border-[calc(var(--ks-border-width)*2)] border-dashed;
+    @apply mt-[calc(var(--ks-spacing)*1)] rounded-[calc(var(--ks-radius-surface)*0.75)] border-[calc(var(--ks-border-width)*2)] border-dashed border-(color:--ks-color-border-strong);
   }
 }
