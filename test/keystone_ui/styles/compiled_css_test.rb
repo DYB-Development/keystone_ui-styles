@@ -1227,6 +1227,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-checkbox-row-input"), "border-color: var(--ks-color-border-choice)"
   end
 
+  def test_checkbox_row_input_text_reads_the_accent_colour_role
+    assert_includes rule(".ks-checkbox-row-input"), "color: var(--ks-color-accent)"
+  end
+
   private
 
   def block(selector)
