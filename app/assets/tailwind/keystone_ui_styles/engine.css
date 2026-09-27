@@ -214,6 +214,7 @@
     --ks-color-funnel-rose: var(--color-rose-500);
     --ks-color-over-goal: var(--color-green-500);
     --ks-color-over-goal-warning: var(--color-amber-500);
+    --ks-color-pipeline-border: var(--color-surface-700);
   }
 }
 

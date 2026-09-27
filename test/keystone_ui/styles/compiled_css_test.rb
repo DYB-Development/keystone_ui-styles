@@ -2919,6 +2919,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-pipeline"), "padding: calc(var(--ks-spacing) * 6)"
   end
 
+  def test_color_pipeline_border_defaults_to_var_color_surface_700
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-pipeline-border: var\(--color-surface-700\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
