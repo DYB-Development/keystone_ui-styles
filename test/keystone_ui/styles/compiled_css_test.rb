@@ -1075,6 +1075,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-menu-option"), "color: var(--ks-color-text-label)"
   end
 
+  def test_menu_option_fill_reads_the_hover_colour_role_on_hover
+    assert_match(/\&:hover.*?background-color: var\(--ks-color-hover\)/m, block(".ks-menu-option"))
+  end
+
   private
 
   def block(selector)

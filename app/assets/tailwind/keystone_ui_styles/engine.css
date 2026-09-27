@@ -446,6 +446,6 @@
   }
 
   .ks-menu-option {
-    @apply gap-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label);
+    @apply gap-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) hover:bg-(color:--ks-color-hover);
   }
 }
