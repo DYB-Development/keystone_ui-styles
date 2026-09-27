@@ -465,6 +465,6 @@
   }
 
   .ks-theme-toggle-option {
-    @apply aria-pressed:bg-(color:--ks-color-accent) aria-pressed:hover:bg-(color:--ks-color-accent-hover);
+    @apply aria-pressed:bg-(color:--ks-color-accent) aria-pressed:hover:bg-(color:--ks-color-accent-hover) dark:aria-pressed:bg-(color:--ks-color-accent-dark);
   }
 }
