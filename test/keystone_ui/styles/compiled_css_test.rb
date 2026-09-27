@@ -2231,6 +2231,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-head: var\(--color-gray-50\)/m, self.class.compiled)
   end
 
+  def test_color_table_head_dark_defaults_to_color_mix_in_oklab_var_color_gray_800_75_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-head-dark: color-mix\(in oklab, var\(--color-gray-800\) 75%, transparent\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
