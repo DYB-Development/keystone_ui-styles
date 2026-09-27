@@ -923,6 +923,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-close: var\(--color-gray-400\)/m, self.class.compiled)
   end
 
+  def test_color_close_hover_defaults_to_var_color_gray_600
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-close-hover: var\(--color-gray-600\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
