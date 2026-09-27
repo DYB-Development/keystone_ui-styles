@@ -119,6 +119,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-button-md"), "padding-block: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_large_button_side_padding_reads_the_spacing_variable
+    assert_includes rule(".ks-button-lg"), "padding-inline: calc(var(--ks-spacing) * 5)"
+  end
+
   def test_secondary_button_has_a_gray_background
     assert_includes rule(".ks-button-secondary"), "background-color: var(--color-gray-500)"
   end
