@@ -2063,6 +2063,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-feature-card-icon"), "background-color: var(--ks-color-tint)"
   end
 
+  def test_feature_card_icon_text_reads_the_link_colour_role
+    assert_includes block(".ks-feature-card-icon"), "color: var(--ks-color-link)"
+  end
+
   private
 
   def block(selector)
