@@ -1899,6 +1899,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-cta-banner"), "background-color: var(--ks-color-fill-muted)"
   end
 
+  def test_cta_banner_padding_inline_is_16_spacing_units_on_large_screens
+    assert_match(/width >= 64rem.*?padding-inline: calc\(var\(--ks-spacing\) \* 16\)/m, block(".ks-cta-banner"))
+  end
+
   private
 
   def block(selector)

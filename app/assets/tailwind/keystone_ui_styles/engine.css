@@ -666,6 +666,6 @@
   }
 
   .ks-cta-banner {
-    @apply rounded-[calc(var(--ks-radius-surface)*2)] border-(length:--ks-border-width) px-[calc(var(--ks-spacing)*6)] py-[calc(var(--ks-spacing)*12)] border-(color:--ks-color-border-subtle) bg-(color:--ks-color-fill-muted);
+    @apply rounded-[calc(var(--ks-radius-surface)*2)] border-(length:--ks-border-width) px-[calc(var(--ks-spacing)*6)] py-[calc(var(--ks-spacing)*12)] border-(color:--ks-color-border-subtle) bg-(color:--ks-color-fill-muted) lg:px-[calc(var(--ks-spacing)*16)];
   }
 }
