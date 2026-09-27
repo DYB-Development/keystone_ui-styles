@@ -3039,6 +3039,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-swipe-card"), "border-color: var(--ks-color-border)"
   end
 
+  def test_swipe_card_fill_reads_the_surface_colour_role
+    assert_includes block(".ks-swipe-card"), "background-color: var(--ks-color-surface)"
+  end
+
   private
 
   def block(selector)
