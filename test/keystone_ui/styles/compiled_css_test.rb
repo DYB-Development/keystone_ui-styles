@@ -2767,6 +2767,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-funnel-bar-accent"), "background-color: var(--ks-color-funnel-accent)"
   end
 
+  def test_color_funnel_accent_defaults_to_var_color_accent_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-funnel-accent: var\(--color-accent-500\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
