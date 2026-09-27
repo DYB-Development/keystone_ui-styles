@@ -75,6 +75,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes self.class.compiled, "--color-custom-text: #18181b"
   end
 
+  def test_button_corner_radius_reads_the_control_radius_variable
+    assert_includes rule(".ks-button"), "border-radius: var(--ks-radius-control)"
+  end
+
   def test_secondary_button_has_a_gray_background
     assert_includes rule(".ks-button-secondary"), "background-color: var(--color-gray-500)"
   end
