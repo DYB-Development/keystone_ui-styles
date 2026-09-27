@@ -272,7 +272,7 @@
   }
 
   .ks-alert {
-    @apply rounded-md p-4;
+    @apply rounded-[calc(var(--ks-radius-surface)*0.75)] p-4;
   }
 
   .ks-alert-info {
