@@ -1044,4 +1044,8 @@
   .ks-pipeline-count-danger {
     @apply text-(color:--ks-color-danger-400);
   }
+
+  .ks-pipeline-count-muted {
+    @apply text-(color:--ks-color-pipeline-label);
+  }
 }
