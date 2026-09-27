@@ -836,6 +836,6 @@
   }
 
   .ks-disclosure {
-    @apply rounded-[calc(var(--ks-radius-surface)*1.5)] border-(length:--ks-border-width);
+    @apply rounded-[calc(var(--ks-radius-surface)*1.5)] border-(length:--ks-border-width) border-(color:--ks-color-border-subtle);
   }
 }
