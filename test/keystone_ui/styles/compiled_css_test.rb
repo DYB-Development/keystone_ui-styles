@@ -139,6 +139,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/&:hover.*?background-color: var\(--ks-color-accent-hover\)/m, block(".ks-button-primary"))
   end
 
+  def test_accent_hover_colour_role_defaults_to_accent_500
+    assert_match(/:root \{[^}]*\-\-ks\-color\-accent\-hover:\ var\(\-\-color\-accent\-500\)/m, self.class.compiled)
+  end
+
   def test_secondary_button_has_a_gray_background
     assert_includes rule(".ks-button-secondary"), "background-color: var(--color-gray-500)"
   end

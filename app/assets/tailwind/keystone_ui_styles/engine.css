@@ -72,6 +72,7 @@
     --ks-border-width-control: 0px;
     --ks-spacing: var(--spacing);
     --ks-color-accent: var(--color-accent-600);
+    --ks-color-accent-hover: var(--color-accent-500);
   }
 }
 
