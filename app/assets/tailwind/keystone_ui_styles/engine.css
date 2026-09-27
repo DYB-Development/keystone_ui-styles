@@ -156,6 +156,7 @@
     --ks-color-selected-border: var(--color-accent-500);
     --ks-color-selected: var(--color-accent-50);
     --ks-color-selected-dark: var(--color-zinc-800);
+    --ks-color-text-option: var(--color-gray-900);
   }
 }
 
