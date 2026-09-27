@@ -789,6 +789,6 @@
   }
 
   .ks-table-cell-first {
-    @apply py-[calc(var(--ks-spacing)*4)];
+    @apply py-[calc(var(--ks-spacing)*4)] pr-[calc(var(--ks-spacing)*3)];
   }
 }
