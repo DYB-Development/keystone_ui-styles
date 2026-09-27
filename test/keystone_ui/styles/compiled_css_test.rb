@@ -1843,6 +1843,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-link-card"), "background-color: var(--ks-color-surface)"
   end
 
+  def test_link_card_border_reads_the_hover_border_colour_role_on_hover
+    assert_match(/:hover.*?border-color: var\(--ks-color-hover-border\)/m, block(".ks-link-card"))
+  end
+
   private
 
   def block(selector)
