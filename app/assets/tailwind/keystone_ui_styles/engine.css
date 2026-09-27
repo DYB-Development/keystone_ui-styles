@@ -298,7 +298,7 @@
   }
 
   .ks-alert-info {
-    @apply bg-(color:--ks-color-info-50) text-accent-800 dark:bg-accent-900/30 dark:text-accent-300;
+    @apply bg-(color:--ks-color-info-50) text-(color:--ks-color-info-800) dark:bg-accent-900/30 dark:text-accent-300;
   }
 
   .ks-alert-success {

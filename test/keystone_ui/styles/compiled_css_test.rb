@@ -779,6 +779,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-color-danger-900: var\(--color-red-900\)/m, self.class.compiled)
   end
 
+  def test_info_alert_text_reads_the_info_scale
+    assert_includes rule(".ks-alert-info"), "color: var(--ks-color-info-800)"
+  end
+
   private
 
   def block(selector)
