@@ -495,6 +495,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-card-title"), "color: var(--ks-color-text)"
   end
 
+  def test_card_title_reads_the_dark_text_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-text-dark\)/m, block(".ks-card-title"))
+  end
+
   private
 
   def block(selector)
