@@ -2035,6 +2035,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:hover.*?border-color: var\(--ks-color-hover-border\)/m, block(".ks-feature-card"))
   end
 
+  def test_feature_card_border_reads_the_border_subtle_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-subtle-dark\)/m, block(".ks-feature-card"))
+  end
+
   private
 
   def block(selector)
