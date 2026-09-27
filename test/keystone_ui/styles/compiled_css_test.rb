@@ -2023,6 +2023,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-feature-card"), "padding: calc(var(--ks-spacing) * 6)"
   end
 
+  def test_feature_card_border_reads_the_border_subtle_colour_role
+    assert_includes block(".ks-feature-card"), "border-color: var(--ks-color-border-subtle)"
+  end
+
   private
 
   def block(selector)
