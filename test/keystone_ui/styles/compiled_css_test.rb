@@ -2723,6 +2723,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-funnel-row"), "gap: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_funnel_label_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-funnel-label"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
   private
 
   def block(selector)
