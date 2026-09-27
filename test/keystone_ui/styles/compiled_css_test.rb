@@ -83,6 +83,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{[^}]*--ks-radius-control: var\(--radius-lg\)/m, self.class.compiled)
   end
 
+  def test_button_font_weight_reads_the_strong_weight_variable
+    assert_includes rule(".ks-button"), "font-weight: var(--ks-font-weight-strong)"
+  end
+
   def test_secondary_button_has_a_gray_background
     assert_includes rule(".ks-button-secondary"), "background-color: var(--color-gray-500)"
   end
