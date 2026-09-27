@@ -91,7 +91,7 @@
   }
 
   .ks-button-sm {
-    @apply text-sm px-3 py-1.5;
+    @apply text-sm px-[calc(var(--ks-spacing)*3)] py-1.5;
   }
 
   .ks-button-md {

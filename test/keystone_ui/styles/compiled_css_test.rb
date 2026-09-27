@@ -103,6 +103,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-border-width-control: 0px/m, self.class.compiled)
   end
 
+  def test_small_button_side_padding_reads_the_spacing_variable
+    assert_includes rule(".ks-button-sm"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
   def test_secondary_button_has_a_gray_background
     assert_includes rule(".ks-button-secondary"), "background-color: var(--color-gray-500)"
   end
