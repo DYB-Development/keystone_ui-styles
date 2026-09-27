@@ -2843,6 +2843,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bucket-tank"), "border-top-left-radius: calc(var(--ks-radius-surface) * 0.5)"
   end
 
+  def test_bucket_tank_bottom_corner_radius_is_1_5_of_the_surface_radius
+    assert_includes block(".ks-bucket-tank"), "border-bottom-left-radius: calc(var(--ks-radius-surface) * 1.5)"
+  end
+
   private
 
   def block(selector)
