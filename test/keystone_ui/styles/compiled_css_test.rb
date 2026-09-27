@@ -1751,6 +1751,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stat-card-change"), "font-weight: var(--ks-font-weight-medium)"
   end
 
+  def test_stat_card_info_text_reads_the_close_colour_role
+    assert_includes block(".ks-stat-card-info"), "color: var(--ks-color-close)"
+  end
+
   private
 
   def block(selector)

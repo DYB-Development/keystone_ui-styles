@@ -611,4 +611,8 @@
   .ks-stat-card-change {
     @apply mt-[calc(var(--ks-spacing)*1)] font-(weight:--ks-font-weight-medium);
   }
+
+  .ks-stat-card-info {
+    @apply text-(color:--ks-color-close);
+  }
 }
