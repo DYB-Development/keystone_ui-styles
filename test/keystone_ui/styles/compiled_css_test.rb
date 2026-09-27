@@ -375,6 +375,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-page-offset-xl"), "padding-top: calc(var(--spacing) * 24)"
   end
 
+  def test_color_surface_defaults_to_var_color_white
+    assert_match(/:root \{[^}]*--ks-color-surface: var\(--color-white\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
