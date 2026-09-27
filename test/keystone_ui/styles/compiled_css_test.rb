@@ -1411,6 +1411,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-file-upload-drop-zone"), "border-width: calc(var(--ks-border-width) * 2)"
   end
 
+  def test_file_upload_drop_zone_border_is_dashed
+    assert_includes rule(".ks-file-upload-drop-zone"), "border-style: dashed"
+  end
+
   private
 
   def block(selector)
