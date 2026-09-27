@@ -834,4 +834,8 @@
   .ks-accordion-item {
     @apply rounded-[calc(var(--ks-radius-surface)*1.5)] border-(length:--ks-border-width) border-(color:--ks-color-border-subtle) dark:border-(color:--ks-color-border-subtle-dark);
   }
+
+  .ks-disclosure {
+    @apply rounded-[calc(var(--ks-radius-surface)*1.5)];
+  }
 }

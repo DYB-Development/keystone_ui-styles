@@ -2487,6 +2487,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-subtle-dark\)/m, block(".ks-accordion-item"))
   end
 
+  def test_disclosure_radius_is_1_5_of_the_surface_radius
+    assert_includes block(".ks-disclosure"), "border-radius: calc(var(--ks-radius-surface) * 1.5)"
+  end
+
   private
 
   def block(selector)
