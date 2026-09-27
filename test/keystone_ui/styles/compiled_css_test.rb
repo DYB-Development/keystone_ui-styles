@@ -383,6 +383,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-color-surface-dark: var\(--color-zinc-900\)/m, self.class.compiled)
   end
 
+  def test_panel_border_reads_the_border_colour_role
+    assert_includes rule(".ks-panel"), "border-color: var(--ks-color-border)"
+  end
+
   private
 
   def block(selector)
