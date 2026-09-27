@@ -1467,6 +1467,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon: var\(--color-gray-400\)/m, self.class.compiled)
   end
 
+  def test_color_icon_dark_defaults_to_var_color_gray_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon-dark: var\(--color-gray-500\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
