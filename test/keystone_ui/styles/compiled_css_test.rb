@@ -1731,6 +1731,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-stat-card-disclosure(?![\w-]).*?:not\(:last-child\).*?calc\(var\(--ks-spacing\) \* 1\)/m, self.class.compiled)
   end
 
+  def test_stat_card_emphasis_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-stat-card-emphasis"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
   private
 
   def block(selector)
