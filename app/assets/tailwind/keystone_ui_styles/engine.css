@@ -94,6 +94,7 @@
     --ks-color-text: var(--color-gray-900);
     --ks-color-text-dark: var(--color-white);
     --ks-color-text-label: var(--color-gray-700);
+    --ks-color-text-label-dark: var(--color-gray-300);
   }
 }
 
