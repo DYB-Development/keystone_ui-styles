@@ -2059,6 +2059,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-feature-card-icon"), "border-radius: var(--ks-radius-surface)"
   end
 
+  def test_feature_card_icon_fill_reads_the_tint_colour_role
+    assert_includes block(".ks-feature-card-icon"), "background-color: var(--ks-color-tint)"
+  end
+
   private
 
   def block(selector)
