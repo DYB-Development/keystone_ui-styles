@@ -2211,6 +2211,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-table"))
   end
 
+  def test_table_shadow_reads_the_surface_dark_shadow_variable_on_a_dark_page
+    assert_match(/data-theme="dark".*?--tw-shadow: var\(--ks-shadow-surface-dark\)/m, block(".ks-table"))
+  end
+
   private
 
   def block(selector)

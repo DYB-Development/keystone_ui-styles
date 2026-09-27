@@ -754,6 +754,6 @@
   }
 
   .ks-table {
-    @apply rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) shadow-(--ks-shadow-surface) dark:border-(color:--ks-color-border-dark);
+    @apply rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) shadow-(--ks-shadow-surface) dark:border-(color:--ks-color-border-dark) dark:shadow-(--ks-shadow-surface-dark);
   }
 }
