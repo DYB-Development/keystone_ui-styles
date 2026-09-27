@@ -907,6 +907,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-heading-dark: var\(--color-gray-200\)/m, self.class.compiled)
   end
 
+  def test_modal_close_text_reads_the_close_colour_role
+    assert_includes rule(".ks-modal-close"), "color: var(--ks-color-close)"
+  end
+
   private
 
   def block(selector)
