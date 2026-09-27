@@ -1387,6 +1387,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-option-card"), "border-radius: var(--ks-radius-surface)"
   end
 
+  def test_option_card_border_width_is_2_times_the_border_width_variable
+    assert_includes rule(".ks-option-card"), "border-width: calc(var(--ks-border-width) * 2)"
+  end
+
   private
 
   def block(selector)
