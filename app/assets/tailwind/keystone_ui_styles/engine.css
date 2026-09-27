@@ -87,7 +87,7 @@
   }
 
   .ks-button-secondary {
-    @apply bg-gray-500 text-white hover:bg-gray-400;
+    @apply bg-(color:--ks-color-neutral) text-white hover:bg-gray-400;
   }
 
   .ks-button-danger {
