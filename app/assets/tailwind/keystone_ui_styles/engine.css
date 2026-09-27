@@ -819,4 +819,8 @@
   .ks-code-caption {
     @apply border-b-(length:--ks-border-width) border-(color:--ks-color-border-subtle) bg-(color:--ks-color-fill-muted) px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-display-muted) dark:border-(color:--ks-color-border-subtle-dark) dark:bg-(color:--ks-color-fill-muted-dark) dark:text-(color:--ks-color-text-display-muted-dark);
   }
+
+  .ks-code-block {
+    @apply bg-(color:--ks-color-code);
+  }
 }

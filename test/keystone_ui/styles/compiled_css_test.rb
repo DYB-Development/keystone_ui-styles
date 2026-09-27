@@ -2439,6 +2439,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-muted-dark\)/m, block(".ks-code-caption"))
   end
 
+  def test_code_block_fill_reads_the_code_colour_role
+    assert_includes block(".ks-code-block"), "background-color: var(--ks-color-code)"
+  end
+
   private
 
   def block(selector)
