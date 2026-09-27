@@ -1375,6 +1375,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-option-card"), "gap: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_option_card_padding_inline_is_3_spacing_units
+    assert_includes rule(".ks-option-card"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
