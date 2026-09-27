@@ -830,4 +830,8 @@
   .ks-accordion {
     @apply gap-[calc(var(--ks-spacing)*4)];
   }
+
+  .ks-accordion-item {
+    @apply rounded-[calc(var(--ks-radius-surface)*1.5)];
+  }
 }

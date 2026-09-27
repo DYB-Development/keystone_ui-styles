@@ -2471,6 +2471,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-accordion"), "gap: calc(var(--ks-spacing) * 4)"
   end
 
+  def test_accordion_item_radius_is_1_5_of_the_surface_radius
+    assert_includes block(".ks-accordion-item"), "border-radius: calc(var(--ks-radius-surface) * 1.5)"
+  end
+
   private
 
   def block(selector)
