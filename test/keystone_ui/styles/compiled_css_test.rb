@@ -2339,6 +2339,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table-cell-middle"), "padding-inline: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_table_cell_middle_padding_block_is_4_spacing_units
+    assert_includes block(".ks-table-cell-middle"), "padding-block: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)

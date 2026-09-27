@@ -793,6 +793,6 @@
   }
 
   .ks-table-cell-middle {
-    @apply px-[calc(var(--ks-spacing)*3)];
+    @apply px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*4)];
   }
 }
