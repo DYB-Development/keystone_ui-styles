@@ -2999,6 +2999,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-pipeline-count"), "font-weight: calc(var(--ks-font-weight-heading) + 100)"
   end
 
+  def test_pipeline_link_healthy_text_reads_the_meter_colour_role
+    assert_includes block(".ks-pipeline-link-healthy"), "color: var(--ks-color-meter)"
+  end
+
   private
 
   def block(selector)

@@ -1023,4 +1023,8 @@
   .ks-pipeline-count {
     @apply font-[weight:calc(var(--ks-font-weight-heading)+100)];
   }
+
+  .ks-pipeline-link-healthy {
+    @apply text-(color:--ks-color-meter);
+  }
 }
