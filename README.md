@@ -74,9 +74,29 @@ any layer overrides them wherever it is imported.
 | `--ks-color-text` | Input text and page, section and card titles | `--color-gray-900` |
 | `--ks-color-text-label` | Field labels | `--color-gray-700` |
 | `--ks-color-text-muted` | Hints, subtitles and card summaries | `--color-gray-500` |
+| `--ks-border-width` | Border and ring width of menus, dialogs, form controls and cards, doubled for radio and option cards and the file drop zone | `1px` |
+| `--ks-shadow-overlay` | Menu, dialog and colour picker shadow | `--shadow-lg` |
+| `--ks-font-weight-medium` | Copy button, checkbox row and radio card label weight | `--font-weight-medium` |
+| `--ks-color-overlay` | Dialog, action menu, copy button and colour picker background | `--color-white` |
+| `--ks-color-backdrop` | The dimmed page behind a dialog | Black at 60% |
+| `--ks-color-text-heading` | Dialog title | `--color-gray-900` |
+| `--ks-color-close`, `--ks-color-close-hover` | Dialog close button, and on hover | `--color-gray-400`, `--color-gray-600` |
+| `--ks-color-ring` | Action menu outline | Black at 5% |
+| `--ks-color-hover` | Menu option on hover | `--color-gray-50` |
+| `--ks-color-hover-raised` | Copy button on hover | `--color-gray-50` |
+| `--ks-color-border-strong` | Copy button, menu checkbox, colour swatch and file drop zone border | `--color-gray-300` |
+| `--ks-color-focus` | Checkbox focus ring | `--color-accent-500` |
+| `--ks-color-border-choice` | Checkbox row box border | `--color-surface-300` |
+| `--ks-color-text-choice`, `--ks-color-text-choice-muted` | Checkbox row label and hint | `--color-surface-900`, `--color-surface-500` |
+| `--ks-color-selected-border`, `--ks-color-selected` | Chosen radio card, option card and active drop zone border, and the chosen radio card background | `--color-accent-500`, `--color-accent-50` |
+| `--ks-color-text-option`, `--ks-color-text-option-muted` | Radio card label and hint | `--color-gray-900`, `--color-surface-500` |
+| `--ks-color-drop-active` | File drop zone background while a file is dragged over it | `--color-accent-50` |
+| `--ks-color-icon` | File upload icon | `--color-gray-400` |
+| `--ks-color-text-secondary` | File upload prompt | `--color-gray-600` |
+| `--ks-color-link`, `--ks-color-link-hover` | File upload browse link, and on hover | `--color-accent-600`, `--color-accent-500` |
 
-Each colour variable in the table has a `-dark` partner, such as
-`--ks-color-surface-dark`, that a component reads on a dark page.
+Each colour variable in the table whose component changes on a dark page has a
+`-dark` partner, such as `--ks-color-surface-dark`, that it reads there.
 
 Alerts and badges read a shade scale per status instead:
 `--ks-color-success-*`, `--ks-color-warning-*`, `--ks-color-danger-*` and
@@ -125,6 +145,16 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-alert-body`, `ks-alert-content`, `ks-alert-title`, `ks-alert-message`, `ks-alert-message-titled`, `ks-alert-dismiss` | Alert parts |
 | `ks-badge` | Every badge |
 | `ks-badge-neutral`, `ks-badge-success`, `ks-badge-danger`, `ks-badge-warning`, `ks-badge-info` | Badge color |
+| `ks-modal-backdrop`, `ks-modal-panel`, `ks-modal-header`, `ks-modal-title`, `ks-modal-close` | Dialog and its parts |
+| `ks-action-menu`, `ks-action-menu-button` | Mobile action menu and the button that opens it |
+| `ks-menu`, `ks-menu-trigger`, `ks-menu-option`, `ks-menu-checkbox` | Column picker and multi select menu and their parts |
+| `ks-copy-button` | Copy button |
+| `ks-theme-toggle-option` | Theme toggle button, filled when pressed |
+| `ks-checkbox-row`, `ks-checkbox-row-input`, `ks-checkbox-row-label`, `ks-checkbox-row-hint` | Checkbox row and its parts |
+| `ks-radio-card`, `ks-radio-card-highlight`, `ks-radio-card-label`, `ks-radio-card-hint` | Radio card and its parts |
+| `ks-option-card`, `ks-option-card-selected` | Option card, and a chosen one |
+| `ks-file-upload`, `ks-file-upload-drop-zone`, `ks-file-upload-drop-zone-active`, `ks-file-upload-inner`, `ks-file-upload-icon`, `ks-file-upload-prompt`, `ks-file-upload-browse`, `ks-file-upload-hint`, `ks-file-upload-file-name` | File upload and its parts |
+| `ks-color-swatch`, `ks-color-picker-panel` | Colour picker swatch and its panel |
 
 ```html
 <button class="ks-button ks-button-primary ks-button-md">Save</button>
