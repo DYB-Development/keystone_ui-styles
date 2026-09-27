@@ -1107,6 +1107,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-menu-checkbox"), "color: var(--ks-color-accent)"
   end
 
+  def test_menu_checkbox_ring_reads_the_focus_colour_role_on_focus
+    assert_match(/\&:focus.*?--tw-ring-color: var\(--ks-color-focus\)/m, block(".ks-menu-checkbox"))
+  end
+
   private
 
   def block(selector)
