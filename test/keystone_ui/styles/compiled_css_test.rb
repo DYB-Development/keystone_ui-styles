@@ -2287,6 +2287,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-heading-dark\)/m, block(".ks-table-header"))
   end
 
+  def test_table_header_first_padding_right_is_3_spacing_units
+    assert_includes block(".ks-table-header-first"), "padding-right: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
