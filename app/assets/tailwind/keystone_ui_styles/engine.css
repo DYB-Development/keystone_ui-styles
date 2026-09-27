@@ -133,6 +133,7 @@
     --ks-font-weight-medium: var(--font-weight-medium);
     --ks-color-backdrop: color-mix(in oklab, var(--color-black) 60%, transparent);
     --ks-color-overlay: var(--color-white);
+    --ks-color-overlay-dark: var(--color-zinc-800);
   }
 }
 
