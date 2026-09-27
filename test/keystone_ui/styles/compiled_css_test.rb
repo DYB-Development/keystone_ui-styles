@@ -1247,6 +1247,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-checkbox-row-label"), "font-weight: var(--ks-font-weight-medium)"
   end
 
+  def test_checkbox_row_label_text_reads_the_text_choice_colour_role
+    assert_includes rule(".ks-checkbox-row-label"), "color: var(--ks-color-text-choice)"
+  end
+
   private
 
   def block(selector)
