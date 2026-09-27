@@ -2563,6 +2563,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-accordion-answer"), "padding-bottom: calc(var(--ks-spacing) * 4)"
   end
 
+  def test_accordion_answer_text_reads_the_text_body_colour_role
+    assert_includes block(".ks-accordion-answer"), "color: var(--ks-color-text-body)"
+  end
+
   private
 
   def block(selector)
