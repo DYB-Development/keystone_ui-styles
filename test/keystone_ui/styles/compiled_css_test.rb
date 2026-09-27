@@ -2939,6 +2939,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-pipeline-title"), "color: var(--ks-color-text-on-dark)"
   end
 
+  def test_color_text_on_dark_defaults_to_var_color_white
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-on-dark: var\(--color-white\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

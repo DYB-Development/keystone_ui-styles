@@ -216,6 +216,7 @@
     --ks-color-over-goal-warning: var(--color-amber-500);
     --ks-color-pipeline-border: var(--color-surface-700);
     --ks-color-pipeline: var(--color-surface-800);
+    --ks-color-text-on-dark: var(--color-white);
   }
 }
 
