@@ -1655,6 +1655,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stat-card-header"), "gap: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_stat_card_label_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-stat-card-label"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
   private
 
   def block(selector)

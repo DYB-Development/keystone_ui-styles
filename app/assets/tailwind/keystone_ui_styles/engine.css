@@ -587,4 +587,8 @@
   .ks-stat-card-header {
     @apply gap-[calc(var(--ks-spacing)*2)];
   }
+
+  .ks-stat-card-label {
+    @apply font-(weight:--ks-font-weight-medium);
+  }
 }
