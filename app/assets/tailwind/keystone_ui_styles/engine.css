@@ -951,4 +951,8 @@
   .ks-bucket-series {
     @apply gap-[calc(var(--ks-spacing)*4)];
   }
+
+  .ks-bucket-label {
+    @apply font-(weight:--ks-font-weight-medium);
+  }
 }
