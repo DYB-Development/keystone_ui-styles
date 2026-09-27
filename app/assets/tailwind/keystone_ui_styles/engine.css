@@ -923,4 +923,8 @@
   .ks-funnel-bar-accent {
     @apply bg-(color:--ks-color-funnel-accent);
   }
+
+  .ks-funnel-bar-sky {
+    @apply bg-(color:--ks-color-funnel-sky);
+  }
 }
