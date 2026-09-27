@@ -1048,4 +1048,8 @@
   .ks-pipeline-count-muted {
     @apply text-(color:--ks-color-pipeline-label);
   }
+
+  .ks-swipe-card {
+    @apply rounded-[calc(var(--ks-radius-surface)*2)];
+  }
 }

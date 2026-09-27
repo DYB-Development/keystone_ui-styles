@@ -3027,6 +3027,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-pipeline-count-muted"), "color: var(--ks-color-pipeline-label)"
   end
 
+  def test_swipe_card_radius_is_2_of_the_surface_radius
+    assert_includes block(".ks-swipe-card"), "border-radius: calc(var(--ks-radius-surface) * 2)"
+  end
+
   private
 
   def block(selector)
