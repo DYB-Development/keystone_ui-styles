@@ -1040,4 +1040,8 @@
   .ks-pipeline-count-emerald {
     @apply text-(color:--ks-color-info-400);
   }
+
+  .ks-pipeline-count-danger {
+    @apply text-(color:--ks-color-danger-400);
+  }
 }

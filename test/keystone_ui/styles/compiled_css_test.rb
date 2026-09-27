@@ -3019,6 +3019,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-pipeline-count-emerald"), "color: var(--ks-color-info-400)"
   end
 
+  def test_pipeline_count_danger_text_reads_the_danger_400_colour_role
+    assert_includes block(".ks-pipeline-count-danger"), "color: var(--ks-color-danger-400)"
+  end
+
   private
 
   def block(selector)
