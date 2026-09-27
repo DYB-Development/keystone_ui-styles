@@ -1939,6 +1939,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-cta-banner-title"), "font-weight: calc(var(--ks-font-weight-heading) + 100)"
   end
 
+  def test_cta_banner_title_text_reads_the_text_display_colour_role
+    assert_includes block(".ks-cta-banner-title"), "color: var(--ks-color-text-display)"
+  end
+
   private
 
   def block(selector)
