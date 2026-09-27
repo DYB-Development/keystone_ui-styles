@@ -1267,6 +1267,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-checkbox-row-hint"), "margin-top: calc(var(--ks-spacing) * 0.5)"
   end
 
+  def test_checkbox_row_hint_text_reads_the_text_choice_muted_colour_role
+    assert_includes rule(".ks-checkbox-row-hint"), "color: var(--ks-color-text-choice-muted)"
+  end
+
   private
 
   def block(selector)

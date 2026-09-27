@@ -484,6 +484,6 @@
   }
 
   .ks-checkbox-row-hint {
-    @apply mt-[calc(var(--ks-spacing)*0.5)];
+    @apply mt-[calc(var(--ks-spacing)*0.5)] text-(color:--ks-color-text-choice-muted);
   }
 }
