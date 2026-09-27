@@ -172,6 +172,7 @@
     --ks-color-link-hover-dark: var(--color-accent-300);
     --ks-radius-pill: calc(infinity * 1px);
     --ks-color-success-600: var(--color-green-600);
+    --ks-color-warning-600: var(--color-yellow-600);
   }
 }
 
