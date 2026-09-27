@@ -3007,6 +3007,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-pipeline-link-broken"), "color: var(--ks-color-danger-500)"
   end
 
+  def test_pipeline_count_amber_text_reads_the_pipeline_amber_colour_role
+    assert_includes block(".ks-pipeline-count-amber"), "color: var(--ks-color-pipeline-amber)"
+  end
+
   private
 
   def block(selector)

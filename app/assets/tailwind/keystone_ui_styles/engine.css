@@ -1031,4 +1031,8 @@
   .ks-pipeline-link-broken {
     @apply text-(color:--ks-color-danger-500);
   }
+
+  .ks-pipeline-count-amber {
+    @apply text-(color:--ks-color-pipeline-amber);
+  }
 }
