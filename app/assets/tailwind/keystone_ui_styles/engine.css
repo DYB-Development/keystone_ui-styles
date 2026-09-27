@@ -871,6 +871,6 @@
   }
 
   .ks-tab-active {
-    @apply data-[active]:bg-(color:--ks-color-tint);
+    @apply data-[active]:bg-(color:--ks-color-tint) data-[active]:text-(color:--ks-color-link);
   }
 }
