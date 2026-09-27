@@ -635,6 +635,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*? color: var\(--ks-color-success-300\)/m, block(".ks-alert-success"))
   end
 
+  def test_success_badge_text_reads_the_success_scale
+    assert_includes rule(".ks-badge-success"), "color: var(--ks-color-success-700)"
+  end
+
   private
 
   def block(selector)
