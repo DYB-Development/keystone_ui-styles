@@ -943,6 +943,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-action-menu"), "background-color: var(--ks-color-overlay)"
   end
 
+  def test_action_menu_padding_block_is_1_spacing_units
+    assert_includes rule(".ks-action-menu"), "padding-block: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)
