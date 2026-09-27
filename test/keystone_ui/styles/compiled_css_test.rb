@@ -2755,6 +2755,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-funnel-transition"), "padding-block: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_funnel_transition_text_reads_the_text_display_muted_colour_role
+    assert_includes block(".ks-funnel-transition"), "color: var(--ks-color-text-display-muted)"
+  end
+
   private
 
   def block(selector)
