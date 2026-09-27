@@ -120,6 +120,7 @@
     --ks-color-danger-400: var(--color-red-400);
     --ks-color-danger-700: var(--color-red-700);
     --ks-color-danger-800: var(--color-red-800);
+    --ks-color-danger-900: var(--color-red-900);
   }
 }
 

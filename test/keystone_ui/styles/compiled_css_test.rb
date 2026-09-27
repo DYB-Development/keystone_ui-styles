@@ -775,6 +775,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-color-danger-800: var\(--color-red-800\)/m, self.class.compiled)
   end
 
+  def test_color_danger_900_defaults_to_var_color_red_900
+    assert_match(/:root \{[^}]*--ks-color-danger-900: var\(--color-red-900\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
