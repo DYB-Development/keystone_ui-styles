@@ -312,7 +312,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-badge-neutral"), "background-color: var(--color-gray-100)"
     assert_includes rule(".ks-badge-success"), "background-color: var(--ks-color-success-100)"
     assert_includes rule(".ks-badge-danger"), "background-color: var(--color-red-100)"
-    assert_includes rule(".ks-badge-warning"), "background-color: var(--color-yellow-100)"
+    assert_includes rule(".ks-badge-warning"), "background-color: var(--ks-color-warning-100)"
     assert_includes rule(".ks-badge-info"), "background-color: var(--color-accent-100)"
     assert_match(/data-theme="dark".*?background-color: color-mix\(in (srgb|oklab), var\(--color-accent-900\) 50%, transparent\)/m, block(".ks-badge-info"))
   end
