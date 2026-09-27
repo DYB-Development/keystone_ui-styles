@@ -559,6 +559,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-shadow-surface: var\(--shadow-sm\)/m, self.class.compiled)
   end
 
+  def test_page_py_base_reads_the_spacing_variable
+    assert_includes rule(".ks-page"), "padding-block: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
