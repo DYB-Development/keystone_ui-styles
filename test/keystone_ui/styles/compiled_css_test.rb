@@ -2011,6 +2011,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-muted-dark\)/m, block(".ks-feature-grid-subtitle"))
   end
 
+  def test_feature_card_radius_is_1_5_of_the_surface_radius
+    assert_includes block(".ks-feature-card"), "border-radius: calc(var(--ks-radius-surface) * 1.5)"
+  end
+
   private
 
   def block(selector)
