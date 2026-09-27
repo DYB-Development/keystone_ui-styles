@@ -1019,6 +1019,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-menu-trigger"), "gap: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_menu_trigger_radius_is_0_75_of_the_control_radius
+    assert_includes rule(".ks-menu-trigger"), "border-radius: calc(var(--ks-radius-control) * 0.75)"
+  end
+
   private
 
   def block(selector)
