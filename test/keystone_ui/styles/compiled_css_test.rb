@@ -3059,6 +3059,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-surface-dark\)/m, block(".ks-swipe-card"))
   end
 
+  def test_swipe_empty_padding_block_is_16_spacing_units
+    assert_includes block(".ks-swipe-empty"), "padding-block: calc(var(--ks-spacing) * 16)"
+  end
+
   private
 
   def block(selector)
