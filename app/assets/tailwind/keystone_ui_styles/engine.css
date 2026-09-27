@@ -84,6 +84,7 @@
     --ks-color-neutral-hover-dark: var(--color-gray-400);
     --ks-color-danger-dark: var(--color-red-600);
     --ks-color-danger-hover-dark: var(--color-red-500);
+    --ks-color-on-fill-dark: var(--color-white);
   }
 }
 
