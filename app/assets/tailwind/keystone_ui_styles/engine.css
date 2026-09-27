@@ -1009,4 +1009,8 @@
   .ks-pipeline-track {
     @apply gap-[calc(var(--ks-spacing)*3)];
   }
+
+  .ks-pipeline-box {
+    @apply gap-[calc(var(--ks-spacing)*2)];
+  }
 }

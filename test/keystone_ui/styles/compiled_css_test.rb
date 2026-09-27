@@ -2959,6 +2959,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-pipeline-track"), "gap: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_pipeline_box_gap_is_2_spacing_units
+    assert_includes block(".ks-pipeline-box"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
