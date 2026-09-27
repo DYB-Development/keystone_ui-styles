@@ -1455,6 +1455,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:where\(\.ks-file-upload-inner > :not\(:last-child\)\).*?calc\(var\(--ks-spacing\) \* 2\)/m, self.class.compiled)
   end
 
+  def test_file_upload_icon_text_reads_the_icon_colour_role
+    assert_includes rule(".ks-file-upload-icon"), "color: var(--ks-color-icon)"
+  end
+
   private
 
   def block(selector)

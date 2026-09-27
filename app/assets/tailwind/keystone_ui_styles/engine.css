@@ -537,4 +537,8 @@
   .ks-file-upload-inner {
     @apply space-y-[calc(var(--ks-spacing)*2)];
   }
+
+  .ks-file-upload-icon {
+    @apply text-(color:--ks-color-icon);
+  }
 }
