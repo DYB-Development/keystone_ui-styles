@@ -2151,6 +2151,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-hero-badge"), "gap: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_hero_badge_radius_reads_the_pill_radius
+    assert_includes block(".ks-hero-badge"), "border-radius: var(--ks-radius-pill)"
+  end
+
   private
 
   def block(selector)
