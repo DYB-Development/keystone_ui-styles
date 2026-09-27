@@ -637,6 +637,6 @@
   }
 
   .ks-tone-info {
-    @apply text-(color:--ks-color-info-600);
+    @apply text-(color:--ks-color-info-600) dark:text-(color:--ks-color-info-400);
   }
 }
