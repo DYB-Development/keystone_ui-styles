@@ -951,6 +951,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-action-menu"), "--tw-shadow: var(--ks-shadow-overlay)"
   end
 
+  def test_action_menu_ring_width_reads_the_border_width_variable
+    assert_includes rule(".ks-action-menu"), "calc(var(--ks-border-width) + var(--tw-ring-offset-width))"
+  end
+
   private
 
   def block(selector)
