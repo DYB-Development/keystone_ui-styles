@@ -1275,6 +1275,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-choice-muted-dark\)/m, block(".ks-checkbox-row-hint"))
   end
 
+  def test_color_text_choice_muted_defaults_to_var_color_surface_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-choice-muted: var\(--color-surface-500\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
