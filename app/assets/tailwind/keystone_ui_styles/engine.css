@@ -513,6 +513,6 @@
   }
 
   .ks-option-card {
-    @apply gap-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)];
+    @apply gap-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface);
   }
 }

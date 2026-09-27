@@ -1383,6 +1383,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-option-card"), "padding-block: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_option_card_radius_reads_the_surface_radius
+    assert_includes rule(".ks-option-card"), "border-radius: var(--ks-radius-surface)"
+  end
+
   private
 
   def block(selector)
