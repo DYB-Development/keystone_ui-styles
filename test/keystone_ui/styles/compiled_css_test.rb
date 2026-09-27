@@ -147,6 +147,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-button-primary"), "color: var(--ks-color-on-fill)"
   end
 
+  def test_on_fill_colour_role_defaults_to_white
+    assert_match(/:root \{[^}]*\-\-ks\-color\-on\-fill:\ var\(\-\-color\-white\)/m, self.class.compiled)
+  end
+
   def test_secondary_button_has_a_gray_background
     assert_includes rule(".ks-button-secondary"), "background-color: var(--color-gray-500)"
   end
