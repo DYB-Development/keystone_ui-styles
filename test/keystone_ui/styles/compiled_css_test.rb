@@ -1203,6 +1203,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-theme-toggle-option.*?data-theme="dark".*?aria-pressed="true".*?background-color: var\(--ks-color-accent-dark\)/m, self.class.compiled)
   end
 
+  def test_theme_toggle_option_fill_reads_the_accent_hover_dark_colour_role_on_a_dark_page_and_when_pressed_and_on_hover
+    assert_match(/\.ks-theme-toggle-option.*?data-theme="dark".*?aria-pressed="true".*?:hover.*?background-color: var\(--ks-color-accent-hover-dark\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
