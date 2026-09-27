@@ -1435,6 +1435,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-file-upload-drop-zone-active"), "border-color: var(--ks-color-selected-border)"
   end
 
+  def test_file_upload_drop_zone_active_fill_reads_the_drop_active_colour_role
+    assert_includes rule(".ks-file-upload-drop-zone-active"), "background-color: var(--ks-color-drop-active)"
+  end
+
   private
 
   def block(selector)
