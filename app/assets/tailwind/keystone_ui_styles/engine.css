@@ -217,6 +217,7 @@
     --ks-color-pipeline-border: var(--color-surface-700);
     --ks-color-pipeline: var(--color-surface-800);
     --ks-color-text-on-dark: var(--color-white);
+    --ks-color-pipeline-muted: var(--color-surface-400);
   }
 }
 

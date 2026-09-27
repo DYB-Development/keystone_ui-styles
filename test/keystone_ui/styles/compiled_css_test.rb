@@ -2951,6 +2951,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-pipeline-subtitle"), "color: var(--ks-color-pipeline-muted)"
   end
 
+  def test_color_pipeline_muted_defaults_to_var_color_surface_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-pipeline-muted: var\(--color-surface-400\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
