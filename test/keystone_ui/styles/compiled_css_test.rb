@@ -631,6 +631,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: color-mix\(in oklab, var\(--ks-color-success-900\) 30%, transparent\)/m, block(".ks-alert-success"))
   end
 
+  def test_success_alert_dtext_reads_the_success_scale
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-success-300\)/m, block(".ks-alert-success"))
+  end
+
   private
 
   def block(selector)
