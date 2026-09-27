@@ -1955,6 +1955,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display-dark: var\(--color-white\)/m, self.class.compiled)
   end
 
+  def test_cta_banner_subtitle_margin_bottom_is_8_spacing_units
+    assert_includes block(".ks-cta-banner-subtitle"), "margin-bottom: calc(var(--ks-spacing) * 8)"
+  end
+
   private
 
   def block(selector)
