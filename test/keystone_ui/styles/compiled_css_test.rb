@@ -2883,6 +2883,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bucket-fill"), "background-color: var(--ks-color-meter)"
   end
 
+  def test_bucket_fill_over_fill_reads_the_over_goal_colour_role
+    assert_includes block(".ks-bucket-fill-over"), "background-color: var(--ks-color-over-goal)"
+  end
+
   private
 
   def block(selector)

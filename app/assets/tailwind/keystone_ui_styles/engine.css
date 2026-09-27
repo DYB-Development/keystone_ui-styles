@@ -975,4 +975,8 @@
   .ks-bucket-fill {
     @apply bg-(color:--ks-color-meter);
   }
+
+  .ks-bucket-fill-over {
+    @apply bg-(color:--ks-color-over-goal);
+  }
 }
