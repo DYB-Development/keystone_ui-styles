@@ -959,4 +959,8 @@
   .ks-bucket-goal {
     @apply text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
+
+  .ks-bucket-percent {
+    @apply text-(color:--ks-color-text-muted);
+  }
 }
