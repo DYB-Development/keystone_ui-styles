@@ -1139,6 +1139,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-copy-button"), "border-width: var(--ks-border-width)"
   end
 
+  def test_copy_button_border_reads_the_border_strong_colour_role
+    assert_includes rule(".ks-copy-button"), "border-color: var(--ks-color-border-strong)"
+  end
+
   private
 
   def block(selector)
