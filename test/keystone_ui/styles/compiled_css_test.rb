@@ -2127,6 +2127,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 64rem.*?gap: calc\(var\(--ks-spacing\) \* 16\)/m, block(".ks-hero-split"))
   end
 
+  def test_hero_title_weight_is_one_step_above_the_heading_font_weight
+    assert_includes block(".ks-hero-title"), "font-weight: calc(var(--ks-font-weight-heading) + 100)"
+  end
+
   private
 
   def block(selector)
