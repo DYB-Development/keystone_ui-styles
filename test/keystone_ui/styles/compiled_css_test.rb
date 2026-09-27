@@ -2403,6 +2403,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-subtle-dark\)/m, block(".ks-code"))
   end
 
+  def test_code_caption_bottom_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-code-caption"), "border-bottom-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)
