@@ -1011,6 +1011,6 @@
   }
 
   .ks-pipeline-box {
-    @apply gap-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface);
+    @apply gap-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-(length:--ks-border-width);
   }
 }
