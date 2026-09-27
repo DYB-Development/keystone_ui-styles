@@ -267,8 +267,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-button-lg"), "font-size: var(--text-lg)"
   end
 
-  def test_input_has_a_gray_border
-    assert_includes rule(".ks-input"), "border-color: var(--color-gray-300)"
+  def test_input_border_reads_the_control_border_colour_role
+    assert_includes rule(".ks-input"), "border-color: var(--ks-color-border-control)"
   end
 
   def test_focused_input_rings_in_the_accent_color
