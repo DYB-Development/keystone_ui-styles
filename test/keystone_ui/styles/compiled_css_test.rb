@@ -2851,6 +2851,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bucket-tank"), "border-width: calc(var(--ks-border-width) * 2)"
   end
 
+  def test_bucket_tank_border_reads_the_border_strong_colour_role
+    assert_includes block(".ks-bucket-tank"), "border-color: var(--ks-color-border-strong)"
+  end
+
   private
 
   def block(selector)
