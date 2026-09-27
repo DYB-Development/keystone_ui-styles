@@ -904,6 +904,6 @@
   }
 
   .ks-funnel-label {
-    @apply font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-meter-label);
+    @apply font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-meter-label) dark:text-(color:--ks-color-text-meter-label-dark);
   }
 }
