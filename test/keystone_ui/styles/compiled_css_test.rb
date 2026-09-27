@@ -2167,6 +2167,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-hero-badge"), "padding-block: calc(var(--ks-spacing) * 1.5)"
   end
 
+  def test_hero_badge_border_reads_the_tint_border_colour_role
+    assert_includes block(".ks-hero-badge"), "border-color: var(--ks-color-tint-border)"
+  end
+
   private
 
   def block(selector)
