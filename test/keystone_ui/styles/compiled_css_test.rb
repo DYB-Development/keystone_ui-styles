@@ -835,6 +835,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-font-weight-medium: var\(--font-weight-medium\)/m, self.class.compiled)
   end
 
+  def test_modal_backdrop_fill_reads_the_backdrop_colour_role
+    assert_includes rule(".ks-modal-backdrop"), "background-color: var(--ks-color-backdrop)"
+  end
+
   private
 
   def block(selector)

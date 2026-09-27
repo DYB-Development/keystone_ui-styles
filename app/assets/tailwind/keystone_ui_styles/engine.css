@@ -398,4 +398,8 @@
   .ks-panel-padding-lg {
     @apply p-[calc(var(--ks-spacing)*6)];
   }
+
+  .ks-modal-backdrop {
+    @apply bg-(color:--ks-color-backdrop);
+  }
 }
