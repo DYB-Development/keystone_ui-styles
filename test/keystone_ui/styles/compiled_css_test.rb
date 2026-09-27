@@ -2571,6 +2571,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-body-dark\)/m, block(".ks-accordion-answer"))
   end
 
+  def test_disclosure_body_padding_inline_is_6_spacing_units
+    assert_includes block(".ks-disclosure-body"), "padding-inline: calc(var(--ks-spacing) * 6)"
+  end
+
   private
 
   def block(selector)

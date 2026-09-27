@@ -850,4 +850,8 @@
   .ks-accordion-answer {
     @apply px-[calc(var(--ks-spacing)*6)] pb-[calc(var(--ks-spacing)*4)] text-(color:--ks-color-text-body) dark:text-(color:--ks-color-text-body-dark);
   }
+
+  .ks-disclosure-body {
+    @apply px-[calc(var(--ks-spacing)*6)];
+  }
 }
