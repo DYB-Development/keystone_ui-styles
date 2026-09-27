@@ -2295,6 +2295,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table-header-first"), "padding-left: calc(var(--ks-spacing) * 6)"
   end
 
+  def test_table_header_middle_padding_inline_is_3_spacing_units
+    assert_includes block(".ks-table-header-middle"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
