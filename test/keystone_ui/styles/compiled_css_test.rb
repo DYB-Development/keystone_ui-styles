@@ -1931,6 +1931,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-fill-muted-dark: var\(--color-surface-800\)/m, self.class.compiled)
   end
 
+  def test_cta_banner_title_margin_bottom_is_4_spacing_units
+    assert_includes block(".ks-cta-banner-title"), "margin-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
