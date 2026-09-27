@@ -739,6 +739,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*? color: var\(--ks-color-danger-300\)/m, block(".ks-alert-error"))
   end
 
+  def test_danger_badge_text_reads_the_danger_scale
+    assert_includes rule(".ks-badge-danger"), "color: var(--ks-color-danger-700)"
+  end
+
   private
 
   def block(selector)
