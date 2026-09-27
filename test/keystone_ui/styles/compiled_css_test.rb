@@ -21,8 +21,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-button\s*\{/, self.class.compiled)
   end
 
-  def test_primary_button_background_reads_the_accent_color_variable
-    assert_includes rule(".ks-button-primary"), "background-color: var(--color-accent-600)"
+  def test_primary_button_background_reads_the_accent_colour_role
+    assert_includes rule(".ks-button-primary"), "background-color: var(--ks-color-accent)"
   end
 
   def test_panel_has_a_white_background
@@ -75,12 +75,184 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes self.class.compiled, "--color-custom-text: #18181b"
   end
 
-  def test_secondary_button_has_a_gray_background
-    assert_includes rule(".ks-button-secondary"), "background-color: var(--color-gray-500)"
+  def test_button_corner_radius_reads_the_control_radius_variable
+    assert_includes rule(".ks-button"), "border-radius: var(--ks-radius-control)"
   end
 
-  def test_danger_button_has_a_red_background
-    assert_includes rule(".ks-button-danger"), "background-color: var(--color-red-600)"
+  def test_control_radius_defaults_to_the_large_radius_inside_a_layer
+    assert_match(/@layer base \{.*?:root \{[^}]*--ks-radius-control: var\(--radius-lg\)/m, self.class.compiled)
+  end
+
+  def test_button_font_weight_reads_the_strong_weight_variable
+    assert_includes rule(".ks-button"), "font-weight: var(--ks-font-weight-strong)"
+  end
+
+  def test_strong_font_weight_defaults_to_semibold
+    assert_match(/:root \{[^}]*--ks-font-weight-strong: var\(--font-weight-semibold\)/m, self.class.compiled)
+  end
+
+  def test_button_font_reads_the_body_font_variable
+    assert_includes rule(".ks-button"), "font-family: var(--ks-font-body)"
+  end
+
+  def test_button_border_width_reads_the_control_border_width_variable
+    assert_includes rule(".ks-button"), "border-width: var(--ks-border-width-control)"
+  end
+
+  def test_control_border_width_defaults_to_none
+    assert_match(/:root \{[^}]*--ks-border-width-control: 0px/m, self.class.compiled)
+  end
+
+  def test_small_button_side_padding_reads_the_spacing_variable
+    assert_includes rule(".ks-button-sm"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_small_button_end_padding_reads_the_spacing_variable
+    assert_includes rule(".ks-button-sm"), "padding-block: calc(var(--ks-spacing) * 1.5)"
+  end
+
+  def test_medium_button_side_padding_reads_the_spacing_variable
+    assert_includes rule(".ks-button-md"), "padding-inline: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_medium_button_end_padding_reads_the_spacing_variable
+    assert_includes rule(".ks-button-md"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_large_button_side_padding_reads_the_spacing_variable
+    assert_includes rule(".ks-button-lg"), "padding-inline: calc(var(--ks-spacing) * 5)"
+  end
+
+  def test_large_button_end_padding_reads_the_spacing_variable
+    assert_includes rule(".ks-button-lg"), "padding-block: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_spacing_defaults_to_the_tailwind_spacing_unit
+    assert_match(/:root \{[^}]*--ks-spacing: var\(--spacing\)/m, self.class.compiled)
+  end
+
+  def test_accent_colour_role_defaults_to_accent_600
+    assert_match(/:root \{[^}]*\-\-ks\-color\-accent:\ var\(\-\-color\-accent\-600\)/m, self.class.compiled)
+  end
+
+  def test_primary_button_hover_reads_the_accent_hover_colour_role
+    assert_match(/&:hover.*?background-color: var\(--ks-color-accent-hover\)/m, block(".ks-button-primary"))
+  end
+
+  def test_accent_hover_colour_role_defaults_to_accent_500
+    assert_match(/:root \{[^}]*\-\-ks\-color\-accent\-hover:\ var\(\-\-color\-accent\-500\)/m, self.class.compiled)
+  end
+
+  def test_primary_button_text_reads_the_on_fill_colour_role
+    assert_includes rule(".ks-button-primary"), "color: var(--ks-color-on-fill)"
+  end
+
+  def test_on_fill_colour_role_defaults_to_white
+    assert_match(/:root \{[^}]*\-\-ks\-color\-on\-fill:\ var\(\-\-color\-white\)/m, self.class.compiled)
+  end
+
+  def test_neutral_colour_role_defaults_to_gray_500
+    assert_match(/:root \{[^}]*\-\-ks\-color\-neutral:\ var\(\-\-color\-gray\-500\)/m, self.class.compiled)
+  end
+
+  def test_secondary_button_hover_reads_the_neutral_hover_colour_role
+    assert_match(/&:hover.*?background-color: var\(--ks-color-neutral-hover\)/m, block(".ks-button-secondary"))
+  end
+
+  def test_neutral_hover_colour_role_defaults_to_gray_400
+    assert_match(/:root \{[^}]*\-\-ks\-color\-neutral\-hover:\ var\(\-\-color\-gray\-400\)/m, self.class.compiled)
+  end
+
+  def test_secondary_button_text_reads_the_on_fill_colour_role
+    assert_includes rule(".ks-button-secondary"), "color: var(--ks-color-on-fill)"
+  end
+
+  def test_danger_colour_role_defaults_to_red_600
+    assert_match(/:root \{[^}]*\-\-ks\-color\-danger:\ var\(\-\-color\-red\-600\)/m, self.class.compiled)
+  end
+
+  def test_danger_button_hover_reads_the_danger_hover_colour_role
+    assert_match(/&:hover.*?background-color: var\(--ks-color-danger-hover\)/m, block(".ks-button-danger"))
+  end
+
+  def test_danger_hover_colour_role_defaults_to_red_500
+    assert_match(/:root \{[^}]*\-\-ks\-color\-danger\-hover:\ var\(\-\-color\-red\-500\)/m, self.class.compiled)
+  end
+
+  def test_danger_button_text_reads_the_on_fill_colour_role
+    assert_includes rule(".ks-button-danger"), "color: var(--ks-color-on-fill)"
+  end
+
+  def test_primary_button_background_reads_the_dark_accent_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-accent-dark\)/m, block(".ks-button-primary"))
+  end
+
+  def test_dark_accent_colour_role_defaults_to_accent_600
+    assert_match(/:root \{[^}]*\-\-ks\-color\-accent\-dark:\ var\(\-\-color\-accent\-600\)/m, self.class.compiled)
+  end
+
+  def test_primary_button_hover_reads_the_dark_accent_hover_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?&:hover.*?background-color: var\(--ks-color-accent-hover-dark\)/m, block(".ks-button-primary"))
+  end
+
+  def test_dark_accent_hover_colour_role_defaults_to_accent_500
+    assert_match(/:root \{[^}]*\-\-ks\-color\-accent\-hover\-dark:\ var\(\-\-color\-accent\-500\)/m, self.class.compiled)
+  end
+
+  def test_secondary_button_background_reads_the_dark_neutral_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-neutral-dark\)/m, block(".ks-button-secondary"))
+  end
+
+  def test_dark_neutral_colour_role_defaults_to_gray_500
+    assert_match(/:root \{[^}]*\-\-ks\-color\-neutral\-dark:\ var\(\-\-color\-gray\-500\)/m, self.class.compiled)
+  end
+
+  def test_secondary_button_hover_reads_the_dark_neutral_hover_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?&:hover.*?background-color: var\(--ks-color-neutral-hover-dark\)/m, block(".ks-button-secondary"))
+  end
+
+  def test_dark_neutral_hover_colour_role_defaults_to_gray_400
+    assert_match(/:root \{[^}]*\-\-ks\-color\-neutral\-hover\-dark:\ var\(\-\-color\-gray\-400\)/m, self.class.compiled)
+  end
+
+  def test_danger_button_background_reads_the_dark_danger_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-danger-dark\)/m, block(".ks-button-danger"))
+  end
+
+  def test_dark_danger_colour_role_defaults_to_red_600
+    assert_match(/:root \{[^}]*\-\-ks\-color\-danger\-dark:\ var\(\-\-color\-red\-600\)/m, self.class.compiled)
+  end
+
+  def test_danger_button_hover_reads_the_dark_danger_hover_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?&:hover.*?background-color: var\(--ks-color-danger-hover-dark\)/m, block(".ks-button-danger"))
+  end
+
+  def test_dark_danger_hover_colour_role_defaults_to_red_500
+    assert_match(/:root \{[^}]*\-\-ks\-color\-danger\-hover\-dark:\ var\(\-\-color\-red\-500\)/m, self.class.compiled)
+  end
+
+  def test_primary_button_text_reads_the_dark_on_fill_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-fill-dark\)/m, block(".ks-button-primary"))
+  end
+
+  def test_dark_on_fill_colour_role_defaults_to_white
+    assert_match(/:root \{[^}]*\-\-ks\-color\-on\-fill\-dark:\ var\(\-\-color\-white\)/m, self.class.compiled)
+  end
+
+  def test_secondary_button_text_reads_the_dark_on_fill_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-fill-dark\)/m, block(".ks-button-secondary"))
+  end
+
+  def test_danger_button_text_reads_the_dark_on_fill_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-fill-dark\)/m, block(".ks-button-danger"))
+  end
+
+  def test_secondary_button_background_reads_the_neutral_colour_role
+    assert_includes rule(".ks-button-secondary"), "background-color: var(--ks-color-neutral)"
+  end
+
+  def test_danger_button_background_reads_the_danger_colour_role
+    assert_includes rule(".ks-button-danger"), "background-color: var(--ks-color-danger)"
   end
 
   def test_small_button_uses_small_text

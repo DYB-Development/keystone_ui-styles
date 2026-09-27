@@ -65,33 +65,56 @@
   --color-zinc-950: color-mix(in oklab, var(--color-custom-text) 100%, var(--color-custom-background));
 }
 
+@layer base {
+  :root {
+    --ks-radius-control: var(--radius-lg);
+    --ks-font-weight-strong: var(--font-weight-semibold);
+    --ks-border-width-control: 0px;
+    --ks-spacing: var(--spacing);
+    --ks-color-accent: var(--color-accent-600);
+    --ks-color-accent-hover: var(--color-accent-500);
+    --ks-color-on-fill: var(--color-white);
+    --ks-color-neutral: var(--color-gray-500);
+    --ks-color-neutral-hover: var(--color-gray-400);
+    --ks-color-danger: var(--color-red-600);
+    --ks-color-danger-hover: var(--color-red-500);
+    --ks-color-accent-dark: var(--color-accent-600);
+    --ks-color-accent-hover-dark: var(--color-accent-500);
+    --ks-color-neutral-dark: var(--color-gray-500);
+    --ks-color-neutral-hover-dark: var(--color-gray-400);
+    --ks-color-danger-dark: var(--color-red-600);
+    --ks-color-danger-hover-dark: var(--color-red-500);
+    --ks-color-on-fill-dark: var(--color-white);
+  }
+}
+
 @layer components {
   .ks-button {
-    @apply inline-flex items-center justify-center font-semibold rounded-lg border-0 cursor-pointer no-underline;
+    @apply inline-flex items-center justify-center font-(family-name:--ks-font-body) font-(weight:--ks-font-weight-strong) rounded-(--ks-radius-control) border-(length:--ks-border-width-control) cursor-pointer no-underline;
   }
 
   .ks-button-primary {
-    @apply bg-accent-600 text-white hover:bg-accent-500;
+    @apply bg-(color:--ks-color-accent) text-(color:--ks-color-on-fill) hover:bg-(color:--ks-color-accent-hover) dark:bg-(color:--ks-color-accent-dark) dark:text-(color:--ks-color-on-fill-dark) dark:hover:bg-(color:--ks-color-accent-hover-dark);
   }
 
   .ks-button-secondary {
-    @apply bg-gray-500 text-white hover:bg-gray-400;
+    @apply bg-(color:--ks-color-neutral) text-(color:--ks-color-on-fill) hover:bg-(color:--ks-color-neutral-hover) dark:bg-(color:--ks-color-neutral-dark) dark:text-(color:--ks-color-on-fill-dark) dark:hover:bg-(color:--ks-color-neutral-hover-dark);
   }
 
   .ks-button-danger {
-    @apply bg-red-600 text-white hover:bg-red-500;
+    @apply bg-(color:--ks-color-danger) text-(color:--ks-color-on-fill) hover:bg-(color:--ks-color-danger-hover) dark:bg-(color:--ks-color-danger-dark) dark:text-(color:--ks-color-on-fill-dark) dark:hover:bg-(color:--ks-color-danger-hover-dark);
   }
 
   .ks-button-sm {
-    @apply text-sm px-3 py-1.5;
+    @apply text-sm px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*1.5)];
   }
 
   .ks-button-md {
-    @apply text-base px-4 py-2;
+    @apply text-base px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*2)];
   }
 
   .ks-button-lg {
-    @apply text-lg px-5 py-3;
+    @apply text-lg px-[calc(var(--ks-spacing)*5)] py-[calc(var(--ks-spacing)*3)];
   }
 
   .ks-panel {

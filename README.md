@@ -47,6 +47,38 @@ On a custom page, white is `--color-custom-background`, and every `gray-*` and
 at shade 50 to 100% at shade 950. They default to white and `#18181b`, and
 keystone_ui-colors sets them from the colours a user picks.
 
+## Button variables
+
+Every button reads these variables, so a host restyles all of its buttons by
+setting them in a plain `:root` rule in its own stylesheet. The defaults sit in
+Tailwind's base layer, so a `:root` rule outside any layer overrides them
+wherever it is imported.
+
+| Variable | Sets | Default |
+|---|---|---|
+| `--ks-radius-control` | Corner radius | `--radius-lg` |
+| `--ks-font-body` | Font family | None, so a button keeps the page's font |
+| `--ks-font-weight-strong` | Label weight | `--font-weight-semibold` |
+| `--ks-border-width-control` | Border width | `0px` |
+| `--ks-spacing` | The unit every button's padding is a multiple of | `--spacing` |
+| `--ks-color-accent`, `--ks-color-accent-hover` | Primary fill, and on hover | `--color-accent-600`, `--color-accent-500` |
+| `--ks-color-neutral`, `--ks-color-neutral-hover` | Secondary fill, and on hover | `--color-gray-500`, `--color-gray-400` |
+| `--ks-color-danger`, `--ks-color-danger-hover` | Danger fill, and on hover | `--color-red-600`, `--color-red-500` |
+| `--ks-color-on-fill` | Label colour | `--color-white` |
+
+Each colour variable has a `-dark` partner, such as `--ks-color-accent-dark`,
+that a button reads on a dark page. Each partner defaults to the same value as
+the light variable.
+
+```css
+:root {
+  --ks-radius-control: 9999px;
+  --ks-font-weight-strong: 500;
+  --ks-color-accent: #6200ee;
+  --ks-color-accent-dark: #bb86fc;
+}
+```
+
 ## Classes
 
 | Class | Use |
