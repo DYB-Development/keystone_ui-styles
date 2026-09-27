@@ -47,28 +47,43 @@ On a custom page, white is `--color-custom-background`, and every `gray-*` and
 at shade 50 to 100% at shade 950. They default to white and `#18181b`, and
 keystone_ui-colors sets them from the colours a user picks.
 
-## Button variables
+## Look variables
 
-Every button reads these variables, so a host restyles all of its buttons by
-setting them in a plain `:root` rule in its own stylesheet. The defaults sit in
-Tailwind's base layer, so a `:root` rule outside any layer overrides them
-wherever it is imported.
+The classes below read these variables, so a host restyles every component that
+renders them by setting the variables in a plain `:root` rule in its own
+stylesheet. The defaults sit in Tailwind's base layer, so a `:root` rule outside
+any layer overrides them wherever it is imported.
 
 | Variable | Sets | Default |
 |---|---|---|
-| `--ks-radius-control` | Corner radius | `--radius-lg` |
-| `--ks-font-body` | Font family | None, so a button keeps the page's font |
-| `--ks-font-weight-strong` | Label weight | `--font-weight-semibold` |
-| `--ks-border-width-control` | Border width | `0px` |
-| `--ks-spacing` | The unit every button's padding is a multiple of | `--spacing` |
-| `--ks-color-accent`, `--ks-color-accent-hover` | Primary fill, and on hover | `--color-accent-600`, `--color-accent-500` |
-| `--ks-color-neutral`, `--ks-color-neutral-hover` | Secondary fill, and on hover | `--color-gray-500`, `--color-gray-400` |
-| `--ks-color-danger`, `--ks-color-danger-hover` | Danger fill, and on hover | `--color-red-600`, `--color-red-500` |
-| `--ks-color-on-fill` | Label colour | `--color-white` |
+| `--ks-radius-control` | Button corner radius, and three quarters of it for inputs | `--radius-lg` |
+| `--ks-radius-surface` | Card and panel corner radius, and three quarters of it for alerts | `--radius-lg` |
+| `--ks-shadow-surface` | Panel shadow | `--shadow-sm` |
+| `--ks-font-body` | Button font family | None, so a button keeps the page's font |
+| `--ks-font-weight-strong` | Button label weight | `--font-weight-semibold` |
+| `--ks-font-weight-heading` | Section, card and alert title weight, and one step heavier for page titles | `--font-weight-semibold` |
+| `--ks-border-width-control` | Button border width | `0px` |
+| `--ks-spacing` | The unit every button, input, page, card, alert and panel padding is a multiple of | `--spacing` |
+| `--ks-color-accent`, `--ks-color-accent-hover` | Primary button fill, and on hover | `--color-accent-600`, `--color-accent-500` |
+| `--ks-color-neutral`, `--ks-color-neutral-hover` | Secondary button fill, and on hover | `--color-gray-500`, `--color-gray-400` |
+| `--ks-color-danger`, `--ks-color-danger-hover` | Danger button fill, and on hover | `--color-red-600`, `--color-red-500` |
+| `--ks-color-on-fill` | Button label colour | `--color-white` |
+| `--ks-color-surface` | Panel, card and input background | `--color-white` |
+| `--ks-color-border` | Panel and card border | `--color-gray-200` |
+| `--ks-color-border-control` | Input border | `--color-gray-300` |
+| `--ks-color-text` | Input text and page, section and card titles | `--color-gray-900` |
+| `--ks-color-text-label` | Field labels | `--color-gray-700` |
+| `--ks-color-text-muted` | Hints, subtitles and card summaries | `--color-gray-500` |
 
-Each colour variable has a `-dark` partner, such as `--ks-color-accent-dark`,
-that a button reads on a dark page. Each partner defaults to the same value as
-the light variable.
+Each colour variable in the table has a `-dark` partner, such as
+`--ks-color-surface-dark`, that a component reads on a dark page.
+
+Alerts and badges read a shade scale per status instead:
+`--ks-color-success-*`, `--ks-color-warning-*`, `--ks-color-danger-*` and
+`--ks-color-info-*`, each with shades 50, 100, 300, 400, 700, 800 and 900. They
+default to Tailwind's green, yellow and red, and to the accent scale for info.
+An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
+100 and 700, and 900 and 400 on a dark page.
 
 ```css
 :root {
@@ -87,6 +102,9 @@ the light variable.
 | `ks-button-primary`, `ks-button-secondary`, `ks-button-danger` | Button color |
 | `ks-button-sm`, `ks-button-md`, `ks-button-lg` | Button size |
 | `ks-panel` | Panel border and background |
+| `ks-panel-radius-md`, `ks-panel-radius-lg`, `ks-panel-radius-xl` | Panel corner radius |
+| `ks-panel-padding-sm`, `ks-panel-padding-md`, `ks-panel-padding-lg` | Panel padding |
+| `ks-panel-shadow` | Panel shadow |
 | `ks-input` | Text inputs, text areas and selects |
 | `ks-input-disabled` | A disabled input |
 | `ks-label` | Field label |
