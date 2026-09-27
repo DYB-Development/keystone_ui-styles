@@ -1687,6 +1687,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stat-card-disclosure"), "margin-top: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_stat_card_disclosure_radius_reads_the_surface_radius
+    assert_includes block(".ks-stat-card-disclosure"), "border-radius: var(--ks-radius-surface)"
+  end
+
   private
 
   def block(selector)
