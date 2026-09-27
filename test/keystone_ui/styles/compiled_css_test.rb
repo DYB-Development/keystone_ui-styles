@@ -2227,6 +2227,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-table-head-dark\)/m, block(".ks-table-head"))
   end
 
+  def test_color_table_head_defaults_to_var_color_gray_50
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-head: var\(--color-gray-50\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
