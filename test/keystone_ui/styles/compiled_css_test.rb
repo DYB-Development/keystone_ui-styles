@@ -1711,6 +1711,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stat-card-disclosure"), "color: var(--ks-color-text-secondary)"
   end
 
+  def test_stat_card_disclosure_shadow_reads_the_overlay_shadow_variable
+    assert_includes block(".ks-stat-card-disclosure"), "--tw-shadow: var(--ks-shadow-overlay)"
+  end
+
   private
 
   def block(selector)
