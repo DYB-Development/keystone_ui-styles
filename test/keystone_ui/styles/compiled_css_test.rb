@@ -1635,6 +1635,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-metric-card"), "border-color: var(--ks-color-border)"
   end
 
+  def test_metric_card_fill_reads_the_overlay_colour_role
+    assert_includes block(".ks-metric-card"), "background-color: var(--ks-color-overlay)"
+  end
+
   private
 
   def block(selector)
