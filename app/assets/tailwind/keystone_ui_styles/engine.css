@@ -739,4 +739,8 @@
   .ks-hero-title {
     @apply font-[weight:calc(var(--ks-font-weight-heading)+100)] text-(color:--ks-color-text-display) dark:text-(color:--ks-color-text-display-dark);
   }
+
+  .ks-hero-subtitle {
+    @apply text-(color:--ks-color-text-display-muted);
+  }
 }

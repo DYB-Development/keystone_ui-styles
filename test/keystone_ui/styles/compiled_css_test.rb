@@ -2139,6 +2139,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-dark\)/m, block(".ks-hero-title"))
   end
 
+  def test_hero_subtitle_text_reads_the_text_display_muted_colour_role
+    assert_includes block(".ks-hero-subtitle"), "color: var(--ks-color-text-display-muted)"
+  end
+
   private
 
   def block(selector)
