@@ -113,6 +113,7 @@
     --ks-color-warning-400: var(--color-yellow-400);
     --ks-color-warning-700: var(--color-yellow-700);
     --ks-color-warning-800: var(--color-yellow-800);
+    --ks-color-warning-900: var(--color-yellow-900);
   }
 }
 
