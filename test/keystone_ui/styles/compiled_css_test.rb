@@ -1311,6 +1311,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:checked \~.*?border-color: var\(--ks-color-selected-border\)/m, block(".ks-radio-card-highlight"))
   end
 
+  def test_radio_card_highlight_fill_reads_the_selected_colour_role_when_its_input_is_checked
+    assert_match(/:checked \~.*?background-color: var\(--ks-color-selected\)/m, block(".ks-radio-card-highlight"))
+  end
+
   private
 
   def block(selector)
