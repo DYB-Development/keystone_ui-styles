@@ -2147,6 +2147,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-muted-dark\)/m, block(".ks-hero-subtitle"))
   end
 
+  def test_hero_badge_gap_is_2_spacing_units
+    assert_includes block(".ks-hero-badge"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)

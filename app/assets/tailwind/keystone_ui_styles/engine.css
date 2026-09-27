@@ -743,4 +743,8 @@
   .ks-hero-subtitle {
     @apply text-(color:--ks-color-text-display-muted) dark:text-(color:--ks-color-text-display-muted-dark);
   }
+
+  .ks-hero-badge {
+    @apply gap-[calc(var(--ks-spacing)*2)];
+  }
 }
