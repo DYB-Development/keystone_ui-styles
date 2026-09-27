@@ -223,6 +223,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*\-\-ks\-color\-danger\-dark:\ var\(\-\-color\-red\-600\)/m, self.class.compiled)
   end
 
+  def test_danger_button_hover_reads_the_dark_danger_hover_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?&:hover.*?background-color: var\(--ks-color-danger-hover-dark\)/m, block(".ks-button-danger"))
+  end
+
   def test_secondary_button_background_reads_the_neutral_colour_role
     assert_includes rule(".ks-button-secondary"), "background-color: var(--ks-color-neutral)"
   end

@@ -100,7 +100,7 @@
   }
 
   .ks-button-danger {
-    @apply bg-(color:--ks-color-danger) text-(color:--ks-color-on-fill) hover:bg-(color:--ks-color-danger-hover) dark:bg-(color:--ks-color-danger-dark);
+    @apply bg-(color:--ks-color-danger) text-(color:--ks-color-on-fill) hover:bg-(color:--ks-color-danger-hover) dark:bg-(color:--ks-color-danger-dark) dark:hover:bg-(color:--ks-color-danger-hover-dark);
   }
 
   .ks-button-sm {
