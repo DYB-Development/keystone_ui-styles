@@ -2679,6 +2679,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-progress-bar"), "background-color: var(--ks-color-meter)"
   end
 
+  def test_progress_bar_radius_reads_the_pill_radius
+    assert_includes block(".ks-progress-bar"), "border-radius: var(--ks-radius-pill)"
+  end
+
   private
 
   def block(selector)

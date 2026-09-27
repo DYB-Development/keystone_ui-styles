@@ -881,6 +881,6 @@
   }
 
   .ks-progress-bar {
-    @apply bg-(color:--ks-color-meter);
+    @apply bg-(color:--ks-color-meter) rounded-(--ks-radius-pill);
   }
 }
