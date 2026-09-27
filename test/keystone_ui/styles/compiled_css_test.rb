@@ -2159,6 +2159,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-hero-badge"), "border-width: var(--ks-border-width)"
   end
 
+  def test_hero_badge_padding_inline_is_4_spacing_units
+    assert_includes block(".ks-hero-badge"), "padding-inline: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
