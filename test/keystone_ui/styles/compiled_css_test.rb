@@ -2371,6 +2371,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table-sort-link"), "gap: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_table_sort_icon_active_text_reads_the_text_label_colour_role
+    assert_includes block(".ks-table-sort-icon-active"), "color: var(--ks-color-text-label)"
+  end
+
   private
 
   def block(selector)

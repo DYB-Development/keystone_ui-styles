@@ -803,4 +803,8 @@
   .ks-table-sort-link {
     @apply gap-[calc(var(--ks-spacing)*1)];
   }
+
+  .ks-table-sort-icon-active {
+    @apply text-(color:--ks-color-text-label);
+  }
 }
