@@ -1291,6 +1291,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-radio-card"), "padding-block: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_radio_card_radius_reads_the_surface_radius
+    assert_includes rule(".ks-radio-card"), "border-radius: var(--ks-radius-surface)"
+  end
+
   private
 
   def block(selector)
