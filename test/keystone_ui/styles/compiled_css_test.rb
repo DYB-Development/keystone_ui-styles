@@ -2835,6 +2835,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bucket-percent"), "color: var(--ks-color-text-muted)"
   end
 
+  def test_bucket_percent_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-bucket-percent"))
+  end
+
   private
 
   def block(selector)
