@@ -2243,6 +2243,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-table-body(?![\w-]).*?:not\(:last-child\).*?border-bottom-width: calc\(var\(--ks-border-width\) \* calc\(1 - var\(--tw-divide-y-reverse\)\)\)/m, self.class.compiled)
   end
 
+  def test_table_body_divider_reads_the_divider_colour_role
+    assert_includes block(".ks-table-body"), "border-color: var(--ks-color-divider)"
+  end
+
   private
 
   def block(selector)
