@@ -1947,6 +1947,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-dark\)/m, block(".ks-cta-banner-title"))
   end
 
+  def test_color_text_display_defaults_to_var_color_surface_900
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display: var\(--color-surface-900\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
