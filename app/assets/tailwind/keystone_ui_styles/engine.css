@@ -1050,6 +1050,6 @@
   }
 
   .ks-swipe-card {
-    @apply rounded-[calc(var(--ks-radius-surface)*2)] border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-surface) shadow-(--ks-shadow-overlay) p-[calc(var(--ks-spacing)*6)] dark:border-(color:--ks-color-border-dark);
+    @apply rounded-[calc(var(--ks-radius-surface)*2)] border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-surface) shadow-(--ks-shadow-overlay) p-[calc(var(--ks-spacing)*6)] dark:border-(color:--ks-color-border-dark) dark:bg-(color:--ks-color-surface-dark);
   }
 }
