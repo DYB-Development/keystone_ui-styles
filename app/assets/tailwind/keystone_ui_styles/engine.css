@@ -607,4 +607,8 @@
   .ks-stat-card-emphasis {
     @apply font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark);
   }
+
+  .ks-stat-card-change {
+    @apply mt-[calc(var(--ks-spacing)*1)];
+  }
 }

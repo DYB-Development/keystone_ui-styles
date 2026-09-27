@@ -1743,6 +1743,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-label-dark\)/m, block(".ks-stat-card-emphasis"))
   end
 
+  def test_stat_card_change_margin_top_is_1_spacing_units
+    assert_includes block(".ks-stat-card-change"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)
