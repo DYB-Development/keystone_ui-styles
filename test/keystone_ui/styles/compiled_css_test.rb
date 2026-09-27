@@ -2667,6 +2667,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-track-dark\)/m, block(".ks-progress-track"))
   end
 
+  def test_color_track_defaults_to_var_color_surface_200
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-track: var\(--color-surface-200\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
