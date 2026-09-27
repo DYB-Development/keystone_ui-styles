@@ -2275,6 +2275,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table-header"), "padding-block: calc(var(--ks-spacing) * 3.5)"
   end
 
+  def test_table_header_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-table-header"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
   private
 
   def block(selector)

@@ -773,6 +773,6 @@
   }
 
   .ks-table-header {
-    @apply py-[calc(var(--ks-spacing)*3.5)];
+    @apply py-[calc(var(--ks-spacing)*3.5)] font-(weight:--ks-font-weight-heading);
   }
 }
