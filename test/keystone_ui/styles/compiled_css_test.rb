@@ -1007,6 +1007,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-menu"), "--tw-shadow: var(--ks-shadow-overlay)"
   end
 
+  def test_menu_border_reads_the_border_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-menu"))
+  end
+
   private
 
   def block(selector)
