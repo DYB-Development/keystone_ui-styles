@@ -175,6 +175,7 @@
     --ks-color-warning-600: var(--color-yellow-600);
     --ks-color-danger-600: var(--color-red-600);
     --ks-color-info-600: var(--color-accent-600);
+    --ks-color-danger-500: var(--color-red-500);
   }
 }
 
