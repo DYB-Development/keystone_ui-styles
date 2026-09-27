@@ -501,6 +501,6 @@
   }
 
   .ks-radio-card-label {
-    @apply font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-option);
+    @apply font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-option) dark:text-(color:--ks-color-text-option-dark);
   }
 }
