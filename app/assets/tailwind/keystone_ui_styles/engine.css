@@ -440,4 +440,8 @@
   .ks-menu {
     @apply mt-[calc(var(--ks-spacing)*1)] rounded-[calc(var(--ks-radius-surface)*0.75)] border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-surface) shadow-(--ks-shadow-overlay) dark:border-(color:--ks-color-border-dark) dark:bg-(color:--ks-color-surface-dark);
   }
+
+  .ks-menu-trigger {
+    @apply gap-[calc(var(--ks-spacing)*1)];
+  }
 }
