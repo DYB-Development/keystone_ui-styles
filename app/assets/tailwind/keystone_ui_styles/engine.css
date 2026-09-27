@@ -428,6 +428,6 @@
   }
 
   .ks-action-menu {
-    @apply mt-[calc(var(--ks-spacing)*2)] rounded-[calc(var(--ks-radius-surface)*0.75)] bg-(color:--ks-color-overlay) py-[calc(var(--ks-spacing)*1)] shadow-(--ks-shadow-overlay) ring-(length:--ks-border-width) ring-(color:--ks-color-ring);
+    @apply mt-[calc(var(--ks-spacing)*2)] rounded-[calc(var(--ks-radius-surface)*0.75)] bg-(color:--ks-color-overlay) py-[calc(var(--ks-spacing)*1)] shadow-(--ks-shadow-overlay) ring-(length:--ks-border-width) ring-(color:--ks-color-ring) dark:bg-(color:--ks-color-overlay-dark);
   }
 }

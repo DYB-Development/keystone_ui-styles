@@ -959,6 +959,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-action-menu"), "--tw-ring-color: var(--ks-color-ring)"
   end
 
+  def test_action_menu_fill_reads_the_overlay_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-overlay-dark\)/m, block(".ks-action-menu"))
+  end
+
   private
 
   def block(selector)
