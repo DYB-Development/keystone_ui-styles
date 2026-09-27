@@ -607,6 +607,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-input"), "padding-inline: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_input_py_base_reads_the_spacing_variable
+    assert_includes rule(".ks-input"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)

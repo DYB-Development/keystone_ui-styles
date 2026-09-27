@@ -137,7 +137,7 @@
   }
 
   .ks-input {
-    @apply block w-full rounded-[calc(var(--ks-radius-control)*0.75)] border border-(color:--ks-color-border-control) bg-(color:--ks-color-surface) px-[calc(var(--ks-spacing)*3)] py-2 text-sm text-(color:--ks-color-text) placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:border-accent-500 focus:ring-accent-500 dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-control-dark) dark:text-(color:--ks-color-text-dark) dark:placeholder:text-gray-500 dark:focus:border-accent-400 dark:focus:ring-accent-400;
+    @apply block w-full rounded-[calc(var(--ks-radius-control)*0.75)] border border-(color:--ks-color-border-control) bg-(color:--ks-color-surface) px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-sm text-(color:--ks-color-text) placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:border-accent-500 focus:ring-accent-500 dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-control-dark) dark:text-(color:--ks-color-text-dark) dark:placeholder:text-gray-500 dark:focus:border-accent-400 dark:focus:ring-accent-400;
   }
 
   .ks-input-disabled {
