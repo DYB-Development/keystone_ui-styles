@@ -173,6 +173,7 @@
     --ks-radius-pill: calc(infinity * 1px);
     --ks-color-success-600: var(--color-green-600);
     --ks-color-warning-600: var(--color-yellow-600);
+    --ks-color-danger-600: var(--color-red-600);
   }
 }
 
