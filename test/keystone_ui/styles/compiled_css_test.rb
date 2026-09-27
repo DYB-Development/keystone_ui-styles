@@ -2175,6 +2175,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-hero-badge"), "background-color: var(--ks-color-tint)"
   end
 
+  def test_hero_badge_text_reads_the_link_colour_role
+    assert_includes block(".ks-hero-badge"), "color: var(--ks-color-link)"
+  end
+
   private
 
   def block(selector)
