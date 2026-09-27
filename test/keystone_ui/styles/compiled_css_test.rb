@@ -340,7 +340,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-card-summary"), "color: var(--color-gray-500)"
     assert_includes rule(".ks-card-cta"), "padding-bottom: calc(var(--spacing) * 4)"
     assert_includes rule(".ks-card-link"), "color: var(--color-accent-600)"
-    assert_match(/data-theme="dark".*?background-color: var\(--color-zinc-900\)/m, block(".ks-card"))
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-surface-dark\)/m, block(".ks-card"))
   end
 
   def test_section_classes_match_keystone_ui_section
