@@ -933,4 +933,8 @@
   .ks-funnel-bar-violet {
     @apply bg-(color:--ks-color-funnel-violet);
   }
+
+  .ks-funnel-bar-amber {
+    @apply bg-(color:--ks-color-funnel-amber);
+  }
 }

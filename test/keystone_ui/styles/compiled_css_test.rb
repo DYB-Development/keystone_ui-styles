@@ -2787,6 +2787,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-funnel-violet: var\(--color-violet-500\)/m, self.class.compiled)
   end
 
+  def test_funnel_bar_amber_fill_reads_the_funnel_amber_colour_role
+    assert_includes block(".ks-funnel-bar-amber"), "background-color: var(--ks-color-funnel-amber)"
+  end
+
   private
 
   def block(selector)
