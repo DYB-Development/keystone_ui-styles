@@ -683,6 +683,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: color-mix\(in oklab, var\(--ks-color-warning-900\) 30%, transparent\)/m, block(".ks-alert-warning"))
   end
 
+  def test_warning_alert_dtext_reads_the_warning_scale
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-warning-300\)/m, block(".ks-alert-warning"))
+  end
+
   private
 
   def block(selector)
