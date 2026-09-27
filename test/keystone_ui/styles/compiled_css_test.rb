@@ -1571,6 +1571,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-color-picker-panel"), "padding: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_color_picker_panel_radius_reads_the_surface_radius
+    assert_includes rule(".ks-color-picker-panel"), "border-radius: var(--ks-radius-surface)"
+  end
+
   private
 
   def block(selector)
