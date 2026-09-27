@@ -1059,6 +1059,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-menu-trigger"))
   end
 
+  def test_menu_option_gap_is_2_spacing_units
+    assert_includes rule(".ks-menu-option"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
