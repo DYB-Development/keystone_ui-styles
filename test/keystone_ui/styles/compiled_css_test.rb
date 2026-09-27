@@ -1935,6 +1935,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-cta-banner-title"), "margin-bottom: calc(var(--ks-spacing) * 4)"
   end
 
+  def test_cta_banner_title_weight_is_one_step_above_the_heading_font_weight
+    assert_includes block(".ks-cta-banner-title"), "font-weight: calc(var(--ks-font-weight-heading) + 100)"
+  end
+
   private
 
   def block(selector)
