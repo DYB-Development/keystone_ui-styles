@@ -2735,6 +2735,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-meter-label-dark\)/m, block(".ks-funnel-label"))
   end
 
+  def test_funnel_value_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-funnel-value"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
   private
 
   def block(selector)
