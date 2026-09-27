@@ -281,7 +281,7 @@
   }
 
   .ks-alert-success {
-    @apply bg-(color:--ks-color-success-50) text-(color:--ks-color-success-800) dark:bg-green-900/30 dark:text-green-300;
+    @apply bg-(color:--ks-color-success-50) text-(color:--ks-color-success-800) dark:bg-(color:--ks-color-success-900)/30 dark:text-green-300;
   }
 
   .ks-alert-warning {
