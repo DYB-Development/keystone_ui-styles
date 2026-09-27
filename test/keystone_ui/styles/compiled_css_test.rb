@@ -1559,6 +1559,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-color-swatch"), "border-color: var(--ks-color-border-strong)"
   end
 
+  def test_color_swatch_border_reads_the_border_strong_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-strong-dark\)/m, block(".ks-color-swatch"))
+  end
+
   private
 
   def block(selector)
