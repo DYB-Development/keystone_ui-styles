@@ -343,7 +343,7 @@
   }
 
   .ks-badge-danger {
-    @apply bg-(color:--ks-color-danger-100) text-(color:--ks-color-danger-700) dark:bg-red-900/50 dark:text-red-400;
+    @apply bg-(color:--ks-color-danger-100) text-(color:--ks-color-danger-700) dark:bg-(color:--ks-color-danger-900)/50 dark:text-red-400;
   }
 
   .ks-badge-warning {

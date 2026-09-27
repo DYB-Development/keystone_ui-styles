@@ -743,6 +743,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-badge-danger"), "color: var(--ks-color-danger-700)"
   end
 
+  def test_danger_badge_dbg_reads_the_danger_scale
+    assert_match(/data-theme="dark".*?background-color: color-mix\(in oklab, var\(--ks-color-danger-900\) 50%, transparent\)/m, block(".ks-badge-danger"))
+  end
+
   private
 
   def block(selector)
