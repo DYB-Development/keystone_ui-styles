@@ -2963,6 +2963,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-pipeline-box"), "gap: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_pipeline_box_radius_reads_the_surface_radius
+    assert_includes block(".ks-pipeline-box"), "border-radius: var(--ks-radius-surface)"
+  end
+
   private
 
   def block(selector)
