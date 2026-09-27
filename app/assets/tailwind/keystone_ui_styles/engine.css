@@ -787,4 +787,8 @@
   .ks-table-header-last {
     @apply py-[calc(var(--ks-spacing)*3.5)] pr-[calc(var(--ks-spacing)*6)] pl-[calc(var(--ks-spacing)*3)];
   }
+
+  .ks-table-cell-first {
+    @apply py-[calc(var(--ks-spacing)*4)];
+  }
 }
