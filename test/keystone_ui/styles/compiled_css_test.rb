@@ -379,6 +379,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-color-surface: var\(--color-white\)/m, self.class.compiled)
   end
 
+  def test_color_surface_dark_defaults_to_var_color_zinc_900
+    assert_match(/:root \{[^}]*--ks-color-surface-dark: var\(--color-zinc-900\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

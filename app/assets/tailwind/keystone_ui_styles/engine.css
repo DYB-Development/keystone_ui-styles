@@ -86,6 +86,7 @@
     --ks-color-danger-hover-dark: var(--color-red-500);
     --ks-color-on-fill-dark: var(--color-white);
     --ks-color-surface: var(--color-white);
+    --ks-color-surface-dark: var(--color-zinc-900);
   }
 }
 
