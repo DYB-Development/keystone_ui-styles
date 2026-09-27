@@ -2187,6 +2187,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-tint-border: color-mix\(in oklab, var\(--color-accent-500\) 20%, transparent\)/m, self.class.compiled)
   end
 
+  def test_hero_actions_gap_is_4_spacing_units
+    assert_includes block(".ks-hero-actions"), "gap: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
