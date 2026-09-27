@@ -706,4 +706,8 @@
   .ks-feature-card {
     @apply rounded-[calc(var(--ks-radius-surface)*1.5)] border-(length:--ks-border-width) p-[calc(var(--ks-spacing)*6)] border-(color:--ks-color-border-subtle) bg-(color:--ks-color-raised) hover:border-(color:--ks-color-hover-border) dark:border-(color:--ks-color-border-subtle-dark) dark:bg-(color:--ks-color-raised-dark);
   }
+
+  .ks-feature-card-icon {
+    @apply mb-[calc(var(--ks-spacing)*4)];
+  }
 }

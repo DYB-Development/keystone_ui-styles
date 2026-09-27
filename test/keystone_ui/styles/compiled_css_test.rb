@@ -2051,6 +2051,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-raised-dark: var\(--color-surface-800\)/m, self.class.compiled)
   end
 
+  def test_feature_card_icon_margin_bottom_is_4_spacing_units
+    assert_includes block(".ks-feature-card-icon"), "margin-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
