@@ -641,6 +641,6 @@
   }
 
   .ks-chart-card-title {
-    @apply font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-muted) mb-[calc(var(--ks-spacing)*4)];
+    @apply font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-muted) mb-[calc(var(--ks-spacing)*4)] dark:text-(color:--ks-color-text-muted-dark);
   }
 }
