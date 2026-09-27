@@ -450,4 +450,8 @@
   .ks-menu-option {
     @apply gap-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) hover:bg-(color:--ks-color-hover) dark:text-(color:--ks-color-text-label-dark) dark:hover:bg-(color:--ks-color-hover-dark);
   }
+
+  .ks-menu-checkbox {
+    @apply rounded-[calc(var(--ks-radius-control)*0.5)];
+  }
 }

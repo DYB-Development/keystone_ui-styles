@@ -1095,6 +1095,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-dark: var\(--color-zinc-800\)/m, self.class.compiled)
   end
 
+  def test_menu_checkbox_radius_is_0_5_of_the_control_radius
+    assert_includes rule(".ks-menu-checkbox"), "border-radius: calc(var(--ks-radius-control) * 0.5)"
+  end
+
   private
 
   def block(selector)
