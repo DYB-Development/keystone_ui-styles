@@ -2479,6 +2479,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-accordion-item"), "border-width: var(--ks-border-width)"
   end
 
+  def test_accordion_item_border_reads_the_border_subtle_colour_role
+    assert_includes block(".ks-accordion-item"), "border-color: var(--ks-color-border-subtle)"
+  end
+
   private
 
   def block(selector)
