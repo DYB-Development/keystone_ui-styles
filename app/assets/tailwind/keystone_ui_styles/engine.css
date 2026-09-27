@@ -428,6 +428,6 @@
   }
 
   .ks-action-menu {
-    @apply mt-[calc(var(--ks-spacing)*2)];
+    @apply mt-[calc(var(--ks-spacing)*2)] rounded-[calc(var(--ks-radius-surface)*0.75)];
   }
 }
