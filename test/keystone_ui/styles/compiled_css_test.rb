@@ -563,6 +563,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-page"), "padding-block: calc(var(--ks-spacing) * 4)"
   end
 
+  def test_page_px_sm_reads_the_spacing_variable
+    assert_match(/width >= 40rem.*?padding-inline: calc\(var\(--ks-spacing\) \* 6\)/m, block(".ks-page"))
+  end
+
   private
 
   def block(selector)
