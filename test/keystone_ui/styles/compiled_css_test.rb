@@ -2363,6 +2363,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table-cell-last"), "padding-left: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_table_cell_last_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-table-cell-last"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
   private
 
   def block(selector)
