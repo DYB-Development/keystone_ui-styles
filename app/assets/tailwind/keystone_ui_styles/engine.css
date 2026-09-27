@@ -698,6 +698,6 @@
   }
 
   .ks-feature-grid-subtitle {
-    @apply mb-[calc(var(--ks-spacing)*16)];
+    @apply mb-[calc(var(--ks-spacing)*16)] text-(color:--ks-color-text-display-muted);
   }
 }

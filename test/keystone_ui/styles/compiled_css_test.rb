@@ -2003,6 +2003,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-feature-grid-subtitle"), "margin-bottom: calc(var(--ks-spacing) * 16)"
   end
 
+  def test_feature_grid_subtitle_text_reads_the_text_display_muted_colour_role
+    assert_includes block(".ks-feature-grid-subtitle"), "color: var(--ks-color-text-display-muted)"
+  end
+
   private
 
   def block(selector)
