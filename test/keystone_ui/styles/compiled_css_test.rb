@@ -519,6 +519,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-font-weight-heading: var\(--font-weight-semibold\)/m, self.class.compiled)
   end
 
+  def test_card_title_weight_reads_the_heading_font_weight_variable
+    assert_includes rule(".ks-card-title"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
   private
 
   def block(selector)
