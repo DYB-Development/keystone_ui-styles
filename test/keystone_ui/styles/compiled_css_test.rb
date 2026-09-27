@@ -320,7 +320,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   def test_alert_classes_match_keystone_ui_alert
     assert_includes rule(".ks-alert"), "border-radius: calc(var(--ks-radius-surface) * 0.75)"
     assert_includes rule(".ks-alert-info"), "background-color: var(--color-accent-50)"
-    assert_includes rule(".ks-alert-success"), "background-color: var(--color-green-50)"
+    assert_includes rule(".ks-alert-success"), "background-color: var(--ks-color-success-50)"
     assert_includes rule(".ks-alert-warning"), "background-color: var(--color-yellow-50)"
     assert_includes rule(".ks-alert-error"), "background-color: var(--color-red-50)"
     assert_includes rule(".ks-alert-body"), "display: flex"
