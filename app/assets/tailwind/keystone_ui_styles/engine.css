@@ -129,6 +129,7 @@
     --ks-color-info-800: var(--color-accent-800);
     --ks-color-info-900: var(--color-accent-900);
     --ks-border-width: 1px;
+    --ks-shadow-overlay: var(--shadow-lg);
   }
 }
 

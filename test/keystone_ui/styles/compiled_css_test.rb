@@ -827,6 +827,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-border-width: 1px/m, self.class.compiled)
   end
 
+  def test_shadow_overlay_defaults_to_var_shadow_lg
+    assert_match(/:root \{[^}]*--ks-shadow-overlay: var\(--shadow-lg\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
