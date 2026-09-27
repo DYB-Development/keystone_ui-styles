@@ -1187,6 +1187,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-raised: var\(--color-gray-50\)/m, self.class.compiled)
   end
 
+  def test_color_hover_raised_dark_defaults_to_var_color_zinc_700
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-raised-dark: var\(--color-zinc-700\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
