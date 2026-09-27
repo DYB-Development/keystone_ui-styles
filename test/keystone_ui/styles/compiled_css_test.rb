@@ -183,6 +183,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-button-danger"), "color: var(--ks-color-on-fill)"
   end
 
+  def test_primary_button_background_reads_the_dark_accent_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-accent-dark\)/m, block(".ks-button-primary"))
+  end
+
   def test_secondary_button_background_reads_the_neutral_colour_role
     assert_includes rule(".ks-button-secondary"), "background-color: var(--ks-color-neutral)"
   end

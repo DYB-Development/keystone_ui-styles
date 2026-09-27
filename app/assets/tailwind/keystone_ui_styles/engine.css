@@ -87,7 +87,7 @@
   }
 
   .ks-button-primary {
-    @apply bg-(color:--ks-color-accent) text-(color:--ks-color-on-fill) hover:bg-(color:--ks-color-accent-hover);
+    @apply bg-(color:--ks-color-accent) text-(color:--ks-color-on-fill) hover:bg-(color:--ks-color-accent-hover) dark:bg-(color:--ks-color-accent-dark);
   }
 
   .ks-button-secondary {
