@@ -138,7 +138,7 @@
   }
 
   .ks-label {
-    @apply block text-sm font-medium text-gray-700 dark:text-gray-300;
+    @apply block text-sm font-medium text-(color:--ks-color-text-label) dark:text-gray-300;
   }
 
   .ks-required {
