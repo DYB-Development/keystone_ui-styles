@@ -844,6 +844,6 @@
   }
 
   .ks-disclosure-summary {
-    @apply gap-[calc(var(--ks-spacing)*4)] px-[calc(var(--ks-spacing)*6)] py-[calc(var(--ks-spacing)*4)] font-(weight:--ks-font-weight-heading);
+    @apply gap-[calc(var(--ks-spacing)*4)] px-[calc(var(--ks-spacing)*6)] py-[calc(var(--ks-spacing)*4)] font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text-display);
   }
 }
