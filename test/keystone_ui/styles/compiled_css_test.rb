@@ -2271,6 +2271,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-divider-dark: color-mix\(in oklab, var\(--color-white\) 10%, transparent\)/m, self.class.compiled)
   end
 
+  def test_table_header_padding_block_is_3_5_spacing_units
+    assert_includes block(".ks-table-header"), "padding-block: calc(var(--ks-spacing) * 3.5)"
+  end
+
   private
 
   def block(selector)

@@ -771,4 +771,8 @@
   .ks-table-body {
     @apply bg-(color:--ks-color-table-body) divide-y-(length:--ks-border-width) divide-(color:--ks-color-divider) dark:bg-(color:--ks-color-table-body-dark) dark:divide-(color:--ks-color-divider-dark);
   }
+
+  .ks-table-header {
+    @apply py-[calc(var(--ks-spacing)*3.5)];
+  }
 }
