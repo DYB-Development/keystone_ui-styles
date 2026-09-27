@@ -2531,6 +2531,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?:hover.*?color: var\(--ks-color-link-dark\)/m, block(".ks-accordion-button"))
   end
 
+  def test_disclosure_summary_gap_is_4_spacing_units
+    assert_includes block(".ks-disclosure-summary"), "gap: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
