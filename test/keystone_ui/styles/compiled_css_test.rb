@@ -95,8 +95,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-button"), "font-family: var(--ks-font-body)"
   end
 
-  def test_button_border_width_reads_the_border_width_variable
-    assert_includes rule(".ks-button"), "border-width: var(--ks-border-width)"
+  def test_button_border_width_reads_the_control_border_width_variable
+    assert_includes rule(".ks-button"), "border-width: var(--ks-border-width-control)"
   end
 
   def test_secondary_button_has_a_gray_background
