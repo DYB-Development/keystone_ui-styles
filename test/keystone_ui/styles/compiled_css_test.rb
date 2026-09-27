@@ -1451,6 +1451,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-drop-active-dark: color-mix\(in oklab, var\(--color-accent-900\) 10%, transparent\)/m, self.class.compiled)
   end
 
+  def test_file_upload_inner_vertical_gap_between_children_is_2_spacing_units
+    assert_match(/:where\(\.ks-file-upload-inner > :not\(:last-child\)\).*?calc\(var\(--ks-spacing\) \* 2\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

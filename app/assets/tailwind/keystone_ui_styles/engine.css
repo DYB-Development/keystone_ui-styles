@@ -533,4 +533,8 @@
   .ks-file-upload-drop-zone-active {
     @apply border-(color:--ks-color-selected-border) bg-(color:--ks-color-drop-active) dark:bg-(color:--ks-color-drop-active-dark);
   }
+
+  .ks-file-upload-inner {
+    @apply space-y-[calc(var(--ks-spacing)*2)];
+  }
 }
