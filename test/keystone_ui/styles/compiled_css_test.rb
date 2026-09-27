@@ -551,6 +551,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-panel-radius-xl"), "border-radius: calc(var(--ks-radius-surface) * 2)"
   end
 
+  def test_panel_shadow_reads_the_surface_shadow_variable
+    assert_includes rule(".ks-panel-shadow"), "--tw-shadow: var(--ks-shadow-surface)"
+  end
+
   private
 
   def block(selector)

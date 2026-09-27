@@ -350,4 +350,8 @@
   .ks-panel-radius-xl {
     @apply rounded-[calc(var(--ks-radius-surface)*2)];
   }
+
+  .ks-panel-shadow {
+    @apply shadow-(--ks-shadow-surface);
+  }
 }
