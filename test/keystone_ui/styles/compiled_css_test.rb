@@ -2935,6 +2935,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-pipeline-title"), "font-weight: var(--ks-font-weight-heading)"
   end
 
+  def test_pipeline_title_text_reads_the_text_on_dark_colour_role
+    assert_includes block(".ks-pipeline-title"), "color: var(--ks-color-text-on-dark)"
+  end
+
   private
 
   def block(selector)

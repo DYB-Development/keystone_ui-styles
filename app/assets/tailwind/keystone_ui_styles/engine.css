@@ -997,6 +997,6 @@
   }
 
   .ks-pipeline-title {
-    @apply font-(weight:--ks-font-weight-heading);
+    @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text-on-dark);
   }
 }
