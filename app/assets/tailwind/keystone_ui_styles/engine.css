@@ -519,4 +519,8 @@
   .ks-option-card-selected {
     @apply border-(color:--ks-color-selected-border);
   }
+
+  .ks-file-upload {
+    @apply space-y-[calc(var(--ks-spacing)*1)];
+  }
 }

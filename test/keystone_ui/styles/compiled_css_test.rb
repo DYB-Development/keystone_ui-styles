@@ -1395,6 +1395,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-option-card-selected"), "border-color: var(--ks-color-selected-border)"
   end
 
+  def test_file_upload_vertical_gap_between_children_is_1_spacing_units
+    assert_match(/:where\(\.ks-file-upload > :not\(:last-child\)\).*?calc\(var\(--ks-spacing\) \* 1\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
