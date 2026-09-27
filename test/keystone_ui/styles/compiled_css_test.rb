@@ -1131,6 +1131,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-copy-button"), "gap: calc(var(--ks-spacing) * 1.5)"
   end
 
+  def test_copy_button_radius_is_0_75_of_the_control_radius
+    assert_includes rule(".ks-copy-button"), "border-radius: calc(var(--ks-radius-control) * 0.75)"
+  end
+
   private
 
   def block(selector)
