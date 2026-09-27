@@ -565,4 +565,8 @@
   .ks-file-upload-file-name {
     @apply mt-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark);
   }
+
+  .ks-color-swatch {
+    @apply rounded-(--ks-radius-surface);
+  }
 }

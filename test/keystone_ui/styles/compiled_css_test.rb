@@ -1547,6 +1547,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-label-dark\)/m, block(".ks-file-upload-file-name"))
   end
 
+  def test_color_swatch_radius_reads_the_surface_radius
+    assert_includes rule(".ks-color-swatch"), "border-radius: var(--ks-radius-surface)"
+  end
+
   private
 
   def block(selector)
