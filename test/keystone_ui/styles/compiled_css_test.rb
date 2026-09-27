@@ -2107,6 +2107,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-hero-inner"), "padding-inline: calc(var(--ks-spacing) * 6)"
   end
 
+  def test_hero_inner_padding_block_is_24_spacing_units
+    assert_includes block(".ks-hero-inner"), "padding-block: calc(var(--ks-spacing) * 24)"
+  end
+
   private
 
   def block(selector)

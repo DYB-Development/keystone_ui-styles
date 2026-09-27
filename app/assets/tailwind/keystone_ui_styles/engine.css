@@ -725,6 +725,6 @@
   }
 
   .ks-hero-inner {
-    @apply px-[calc(var(--ks-spacing)*6)];
+    @apply px-[calc(var(--ks-spacing)*6)] py-[calc(var(--ks-spacing)*24)];
   }
 }
