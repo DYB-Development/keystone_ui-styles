@@ -2715,6 +2715,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-funnel(?![\w-]).*?:not\(:last-child\).*?calc\(var\(--ks-spacing\) \* 2\)/m, self.class.compiled)
   end
 
+  def test_funnel_layer_vertical_gap_between_children_is_1_spacing_units
+    assert_match(/\.ks-funnel-layer(?![\w-]).*?:not\(:last-child\).*?calc\(var\(--ks-spacing\) \* 1\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

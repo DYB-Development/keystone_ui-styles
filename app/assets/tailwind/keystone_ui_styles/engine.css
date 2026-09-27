@@ -894,4 +894,8 @@
   .ks-funnel {
     @apply space-y-[calc(var(--ks-spacing)*2)];
   }
+
+  .ks-funnel-layer {
+    @apply space-y-[calc(var(--ks-spacing)*1)];
+  }
 }
