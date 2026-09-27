@@ -1419,6 +1419,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-file-upload-drop-zone"), "border-color: var(--ks-color-border-strong)"
   end
 
+  def test_file_upload_drop_zone_padding_inline_is_6_spacing_units
+    assert_includes rule(".ks-file-upload-drop-zone"), "padding-inline: calc(var(--ks-spacing) * 6)"
+  end
+
   private
 
   def block(selector)
