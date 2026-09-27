@@ -329,7 +329,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-alert-message"), "font-size: var(--text-sm)"
     assert_includes rule(".ks-alert-message-titled"), "margin-top: var(--spacing)"
     assert_includes rule(".ks-alert-dismiss"), "cursor: pointer"
-    assert_match(/data-theme="dark".*?color: var\(--color-accent-300\)/m, block(".ks-alert-info"))
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-info-300\)/m, block(".ks-alert-info"))
   end
 
   def test_card_classes_match_keystone_ui_card
