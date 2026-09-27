@@ -2815,6 +2815,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bucket-label"), "font-weight: var(--ks-font-weight-medium)"
   end
 
+  def test_bucket_label_text_reads_the_text_label_colour_role
+    assert_includes block(".ks-bucket-label"), "color: var(--ks-color-text-label)"
+  end
+
   private
 
   def block(selector)
