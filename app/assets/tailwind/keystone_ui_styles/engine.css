@@ -476,4 +476,8 @@
   .ks-checkbox-row-input {
     @apply mt-[calc(var(--ks-spacing)*0.5)] rounded-[calc(var(--ks-radius-control)*0.5)] border-(color:--ks-color-border-choice) text-(color:--ks-color-accent) checked:bg-(color:--ks-color-accent) focus:ring-(color:--ks-color-focus);
   }
+
+  .ks-checkbox-row-label {
+    @apply font-(weight:--ks-font-weight-medium);
+  }
 }

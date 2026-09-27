@@ -1243,6 +1243,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-choice: var\(--color-surface-300\)/m, self.class.compiled)
   end
 
+  def test_checkbox_row_label_weight_reads_the_medium_font_weight_variable
+    assert_includes rule(".ks-checkbox-row-label"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
   private
 
   def block(selector)
