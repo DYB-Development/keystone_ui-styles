@@ -2055,6 +2055,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-feature-card-icon"), "margin-bottom: calc(var(--ks-spacing) * 4)"
   end
 
+  def test_feature_card_icon_radius_reads_the_surface_radius
+    assert_includes block(".ks-feature-card-icon"), "border-radius: var(--ks-radius-surface)"
+  end
+
   private
 
   def block(selector)
