@@ -91,6 +91,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-font-weight-strong: var\(--font-weight-semibold\)/m, self.class.compiled)
   end
 
+  def test_button_font_reads_the_body_font_variable
+    assert_includes rule(".ks-button"), "font-family: var(--ks-font-body)"
+  end
+
   def test_secondary_button_has_a_gray_background
     assert_includes rule(".ks-button-secondary"), "background-color: var(--color-gray-500)"
   end

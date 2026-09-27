@@ -74,7 +74,7 @@
 
 @layer components {
   .ks-button {
-    @apply inline-flex items-center justify-center font-(weight:--ks-font-weight-strong) rounded-(--ks-radius-control) border-0 cursor-pointer no-underline;
+    @apply inline-flex items-center justify-center font-(family-name:--ks-font-body) font-(weight:--ks-font-weight-strong) rounded-(--ks-radius-control) border-0 cursor-pointer no-underline;
   }
 
   .ks-button-primary {
