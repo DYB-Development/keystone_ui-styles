@@ -715,4 +715,8 @@
   .ks-feature-card-title {
     @apply mb-[calc(var(--ks-spacing)*2)] font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text-display) dark:text-(color:--ks-color-text-display-dark);
   }
+
+  .ks-feature-card-description {
+    @apply text-(color:--ks-color-text-display-muted);
+  }
 }

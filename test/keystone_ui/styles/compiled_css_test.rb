@@ -2091,6 +2091,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-dark\)/m, block(".ks-feature-card-title"))
   end
 
+  def test_feature_card_description_text_reads_the_text_display_muted_colour_role
+    assert_includes block(".ks-feature-card-description"), "color: var(--ks-color-text-display-muted)"
+  end
+
   private
 
   def block(selector)
