@@ -2747,6 +2747,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-dark\)/m, block(".ks-funnel-value"))
   end
 
+  def test_funnel_bar_radius_is_0_75_of_the_surface_radius
+    assert_includes block(".ks-funnel-bar"), "border-radius: calc(var(--ks-radius-surface) * 0.75)"
+  end
+
   private
 
   def block(selector)
