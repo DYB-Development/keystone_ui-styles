@@ -469,6 +469,6 @@
   }
 
   .ks-checkbox-row {
-    @apply gap-[calc(var(--ks-spacing)*3)];
+    @apply gap-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*3)];
   }
 }
