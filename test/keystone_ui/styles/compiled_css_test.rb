@@ -2631,6 +2631,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab"), "color: var(--ks-color-text-muted)"
   end
 
+  def test_tab_text_reads_the_text_colour_role_on_hover
+    assert_match(/:hover.*?color: var\(--ks-color-text\)/m, block(".ks-tab"))
+  end
+
   private
 
   def block(selector)

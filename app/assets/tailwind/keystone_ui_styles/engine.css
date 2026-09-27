@@ -867,6 +867,6 @@
   }
 
   .ks-tab {
-    @apply rounded-(--ks-radius-surface) px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*2)] font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text-muted);
+    @apply rounded-(--ks-radius-surface) px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*2)] font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text-muted) hover:text-(color:--ks-color-text);
   }
 }
