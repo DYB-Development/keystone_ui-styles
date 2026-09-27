@@ -80,6 +80,7 @@
     --ks-color-danger-hover: var(--color-red-500);
     --ks-color-accent-dark: var(--color-accent-600);
     --ks-color-accent-hover-dark: var(--color-accent-500);
+    --ks-color-neutral-dark: var(--color-gray-500);
   }
 }
 
