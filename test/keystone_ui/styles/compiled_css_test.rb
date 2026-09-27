@@ -1115,6 +1115,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-strong-dark\)/m, block(".ks-menu-checkbox"))
   end
 
+  def test_color_border_strong_defaults_to_var_color_gray_300
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-strong: var\(--color-gray-300\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

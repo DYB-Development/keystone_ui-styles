@@ -143,6 +143,7 @@
     --ks-color-ring-dark: color-mix(in oklab, var(--color-white) 10%, transparent);
     --ks-color-hover: var(--color-gray-50);
     --ks-color-hover-dark: var(--color-zinc-800);
+    --ks-color-border-strong: var(--color-gray-300);
   }
 }
 
