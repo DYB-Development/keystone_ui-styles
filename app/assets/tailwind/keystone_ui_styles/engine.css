@@ -167,6 +167,7 @@
     --ks-color-text-secondary: var(--color-gray-600);
     --ks-color-text-secondary-dark: var(--color-gray-400);
     --ks-color-link: var(--color-accent-600);
+    --ks-color-link-dark: var(--color-accent-400);
   }
 }
 
