@@ -539,6 +539,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-input"), "border-radius: calc(var(--ks-radius-control) * 0.75)"
   end
 
+  def test_md_panel_radius_reads_the_surface_radius_variable
+    assert_includes rule(".ks-panel-radius-md"), "border-radius: var(--ks-radius-surface)"
+  end
+
   private
 
   def block(selector)
