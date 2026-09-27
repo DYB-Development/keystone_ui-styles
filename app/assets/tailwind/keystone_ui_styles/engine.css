@@ -838,4 +838,8 @@
   .ks-disclosure {
     @apply rounded-[calc(var(--ks-radius-surface)*1.5)] border-(length:--ks-border-width) border-(color:--ks-color-border-subtle) dark:border-(color:--ks-color-border-subtle-dark);
   }
+
+  .ks-accordion-button {
+    @apply px-[calc(var(--ks-spacing)*6)];
+  }
 }
