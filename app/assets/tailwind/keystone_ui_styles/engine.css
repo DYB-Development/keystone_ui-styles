@@ -413,4 +413,8 @@
   .ks-modal-header {
     @apply mb-[calc(var(--ks-spacing)*4)];
   }
+
+  .ks-modal-title {
+    @apply font-(weight:--ks-font-weight-heading);
+  }
 }
