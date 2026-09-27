@@ -911,6 +911,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-modal-close"), "color: var(--ks-color-close)"
   end
 
+  def test_modal_close_text_reads_the_close_hover_colour_role_on_hover
+    assert_match(/\&:hover.*?color: var\(--ks-color-close-hover\)/m, block(".ks-modal-close"))
+  end
+
   private
 
   def block(selector)
