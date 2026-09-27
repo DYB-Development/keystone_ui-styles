@@ -2131,6 +2131,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-hero-title"), "font-weight: calc(var(--ks-font-weight-heading) + 100)"
   end
 
+  def test_hero_title_text_reads_the_text_display_colour_role
+    assert_includes block(".ks-hero-title"), "color: var(--ks-color-text-display)"
+  end
+
   private
 
   def block(selector)
