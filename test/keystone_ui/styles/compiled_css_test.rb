@@ -1359,6 +1359,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-radio-card-hint"), "color: var(--ks-color-text-option-muted)"
   end
 
+  def test_radio_card_hint_text_reads_the_text_option_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-option-muted-dark\)/m, block(".ks-radio-card-hint"))
+  end
+
   private
 
   def block(selector)
