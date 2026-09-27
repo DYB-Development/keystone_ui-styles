@@ -1879,6 +1879,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-cta-banner"), "border-radius: calc(var(--ks-radius-surface) * 2)"
   end
 
+  def test_cta_banner_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-cta-banner"), "border-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)

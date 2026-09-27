@@ -666,6 +666,6 @@
   }
 
   .ks-cta-banner {
-    @apply rounded-[calc(var(--ks-radius-surface)*2)];
+    @apply rounded-[calc(var(--ks-radius-surface)*2)] border-(length:--ks-border-width);
   }
 }
