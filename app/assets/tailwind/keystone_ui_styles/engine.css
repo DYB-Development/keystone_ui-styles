@@ -723,4 +723,8 @@
   .ks-hero {
     @apply pt-[calc(var(--ks-spacing)*24)];
   }
+
+  .ks-hero-inner {
+    @apply px-[calc(var(--ks-spacing)*6)];
+  }
 }
