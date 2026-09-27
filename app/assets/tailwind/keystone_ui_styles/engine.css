@@ -809,6 +809,6 @@
   }
 
   .ks-table-sort-icon {
-    @apply text-(color:--ks-color-icon);
+    @apply text-(color:--ks-color-icon) dark:text-(color:--ks-color-icon-dark);
   }
 }
