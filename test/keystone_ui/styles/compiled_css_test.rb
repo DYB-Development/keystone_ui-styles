@@ -2443,6 +2443,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-code-block"), "background-color: var(--ks-color-code)"
   end
 
+  def test_code_block_padding_is_4_spacing_units
+    assert_includes block(".ks-code-block"), "padding: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
