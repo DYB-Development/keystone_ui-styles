@@ -1143,6 +1143,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-copy-button"), "border-color: var(--ks-color-border-strong)"
   end
 
+  def test_copy_button_fill_reads_the_overlay_colour_role
+    assert_includes rule(".ks-copy-button"), "background-color: var(--ks-color-overlay)"
+  end
+
   private
 
   def block(selector)
