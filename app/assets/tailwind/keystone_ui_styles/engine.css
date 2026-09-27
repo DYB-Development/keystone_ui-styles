@@ -511,4 +511,8 @@
   .ks-radio-card-hint {
     @apply mt-[calc(var(--ks-spacing)*1)] text-(color:--ks-color-text-option-muted) dark:text-(color:--ks-color-text-option-muted-dark);
   }
+
+  .ks-option-card {
+    @apply gap-[calc(var(--ks-spacing)*2)];
+  }
 }

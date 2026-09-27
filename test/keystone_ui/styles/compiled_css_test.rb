@@ -1371,6 +1371,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option-muted-dark: var\(--color-gray-400\)/m, self.class.compiled)
   end
 
+  def test_option_card_gap_is_2_spacing_units
+    assert_includes rule(".ks-option-card"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
