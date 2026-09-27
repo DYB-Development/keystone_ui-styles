@@ -415,6 +415,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-card-edge"), "background-color: var(--ks-color-surface)"
   end
 
+  def test_edge_to_edge_card_background_reads_the_dark_surface_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-surface-dark\)/m, block(".ks-card-edge"))
+  end
+
   private
 
   def block(selector)
