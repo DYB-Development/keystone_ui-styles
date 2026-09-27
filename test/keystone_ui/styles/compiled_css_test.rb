@@ -2727,6 +2727,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-funnel-label"), "font-weight: var(--ks-font-weight-medium)"
   end
 
+  def test_funnel_label_text_reads_the_text_meter_label_colour_role
+    assert_includes block(".ks-funnel-label"), "color: var(--ks-color-text-meter-label)"
+  end
+
   private
 
   def block(selector)
