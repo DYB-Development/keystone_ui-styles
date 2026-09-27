@@ -1299,6 +1299,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-radio-card"), "border-width: calc(var(--ks-border-width) * 2)"
   end
 
+  def test_radio_card_highlight_border_reads_the_border_colour_role
+    assert_includes rule(".ks-radio-card-highlight"), "border-color: var(--ks-color-border)"
+  end
+
   private
 
   def block(selector)
