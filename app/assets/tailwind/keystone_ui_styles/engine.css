@@ -745,6 +745,6 @@
   }
 
   .ks-hero-badge {
-    @apply gap-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-pill) border-(length:--ks-border-width) px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*1.5)] border-(color:--ks-color-tint-border);
+    @apply gap-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-pill) border-(length:--ks-border-width) px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*1.5)] border-(color:--ks-color-tint-border) bg-(color:--ks-color-tint);
   }
 }
