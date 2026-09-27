@@ -1155,6 +1155,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-copy-button"), "padding-block: calc(var(--ks-spacing) * 1.5)"
   end
 
+  def test_copy_button_weight_reads_the_medium_font_weight_variable
+    assert_includes rule(".ks-copy-button"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
   private
 
   def block(selector)
