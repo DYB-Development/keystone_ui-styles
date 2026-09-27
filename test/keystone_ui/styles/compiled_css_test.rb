@@ -2527,6 +2527,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-dark\)/m, block(".ks-accordion-button"))
   end
 
+  def test_accordion_button_text_reads_the_link_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?color: var\(--ks-color-link-dark\)/m, block(".ks-accordion-button"))
+  end
+
   private
 
   def block(selector)
