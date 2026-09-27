@@ -1005,4 +1005,8 @@
   .ks-pipeline-subtitle {
     @apply mt-[calc(var(--ks-spacing)*1)] text-(color:--ks-color-pipeline-muted);
   }
+
+  .ks-pipeline-track {
+    @apply gap-[calc(var(--ks-spacing)*3)];
+  }
 }

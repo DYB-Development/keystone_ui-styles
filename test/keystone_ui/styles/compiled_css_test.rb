@@ -2955,6 +2955,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-pipeline-muted: var\(--color-surface-400\)/m, self.class.compiled)
   end
 
+  def test_pipeline_track_gap_is_3_spacing_units
+    assert_includes block(".ks-pipeline-track"), "gap: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
