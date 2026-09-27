@@ -571,6 +571,6 @@
   }
 
   .ks-color-picker-panel {
-    @apply mt-[calc(var(--ks-spacing)*2)] p-[calc(var(--ks-spacing)*3)] rounded-(--ks-radius-surface) shadow-(--ks-shadow-overlay);
+    @apply mt-[calc(var(--ks-spacing)*2)] p-[calc(var(--ks-spacing)*3)] rounded-(--ks-radius-surface) shadow-(--ks-shadow-overlay) bg-(color:--ks-color-overlay);
   }
 }
