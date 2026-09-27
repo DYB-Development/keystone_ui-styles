@@ -487,6 +487,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-section-title"), "color: var(--ks-color-text)"
   end
 
+  def test_page_header_title_reads_the_text_colour_role
+    assert_includes rule(".ks-page-header-title"), "color: var(--ks-color-text)"
+  end
+
   private
 
   def block(selector)
