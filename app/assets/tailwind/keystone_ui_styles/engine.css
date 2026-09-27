@@ -652,4 +652,8 @@
   .ks-link-card-shadow {
     @apply shadow-(--ks-shadow-surface);
   }
+
+  .ks-link-card-padding-sm {
+    @apply p-[calc(var(--ks-spacing)*3)];
+  }
 }
