@@ -1003,6 +1003,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-menu"), "background-color: var(--ks-color-surface)"
   end
 
+  def test_menu_shadow_reads_the_overlay_shadow_variable
+    assert_includes rule(".ks-menu"), "--tw-shadow: var(--ks-shadow-overlay)"
+  end
+
   private
 
   def block(selector)
