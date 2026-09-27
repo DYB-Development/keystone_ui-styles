@@ -471,4 +471,8 @@
   .ks-checkbox-row {
     @apply gap-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*3)];
   }
+
+  .ks-checkbox-row-input {
+    @apply mt-[calc(var(--ks-spacing)*0.5)];
+  }
 }

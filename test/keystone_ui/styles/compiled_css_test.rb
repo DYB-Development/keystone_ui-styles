@@ -1215,6 +1215,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-checkbox-row"), "padding-block: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_checkbox_row_input_margin_top_is_0_5_spacing_units
+    assert_includes rule(".ks-checkbox-row-input"), "margin-top: calc(var(--ks-spacing) * 0.5)"
+  end
+
   private
 
   def block(selector)
