@@ -93,7 +93,7 @@
   }
 
   .ks-button-secondary {
-    @apply bg-(color:--ks-color-neutral) text-(color:--ks-color-on-fill) hover:bg-(color:--ks-color-neutral-hover);
+    @apply bg-(color:--ks-color-neutral) text-(color:--ks-color-on-fill) hover:bg-(color:--ks-color-neutral-hover) dark:bg-(color:--ks-color-neutral-dark);
   }
 
   .ks-button-danger {
