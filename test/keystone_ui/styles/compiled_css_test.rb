@@ -535,6 +535,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 40rem.*?border-radius: var\(--ks-radius-surface\)/m, block(".ks-card-edge"))
   end
 
+  def test_input_radius_is_three_quarters_of_the_control_radius
+    assert_includes rule(".ks-input"), "border-radius: calc(var(--ks-radius-control) * 0.75)"
+  end
+
   private
 
   def block(selector)
