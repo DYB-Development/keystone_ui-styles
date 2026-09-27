@@ -899,6 +899,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-heading-dark\)/m, block(".ks-modal-title"))
   end
 
+  def test_color_text_heading_defaults_to_var_color_gray_900
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-heading: var\(--color-gray-900\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
