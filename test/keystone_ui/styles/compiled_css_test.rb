@@ -2519,6 +2519,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-accordion-button"), "color: var(--ks-color-text-display)"
   end
 
+  def test_accordion_button_text_reads_the_link_colour_role_on_hover
+    assert_match(/:hover.*?color: var\(--ks-color-link\)/m, block(".ks-accordion-button"))
+  end
+
   private
 
   def block(selector)

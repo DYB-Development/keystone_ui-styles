@@ -840,6 +840,6 @@
   }
 
   .ks-accordion-button {
-    @apply px-[calc(var(--ks-spacing)*6)] py-[calc(var(--ks-spacing)*4)] font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text-display);
+    @apply px-[calc(var(--ks-spacing)*6)] py-[calc(var(--ks-spacing)*4)] font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text-display) hover:text-(color:--ks-color-link);
   }
 }
