@@ -839,6 +839,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-modal-backdrop"), "background-color: var(--ks-color-backdrop)"
   end
 
+  def test_color_backdrop_defaults_to_color_mix_in_oklab_var_color_black_60_transparent
+    assert_match(/:root \{[^}]*--ks-color-backdrop: color-mix\(in oklab, var\(--color-black\) 60%, transparent\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
