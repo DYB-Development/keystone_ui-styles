@@ -2219,6 +2219,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-shadow-surface-dark: 0 0 #0000/m, self.class.compiled)
   end
 
+  def test_table_head_fill_reads_the_table_head_colour_role
+    assert_includes block(".ks-table-head"), "background-color: var(--ks-color-table-head)"
+  end
+
   private
 
   def block(selector)
