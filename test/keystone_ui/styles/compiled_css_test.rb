@@ -831,6 +831,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-shadow-overlay: var\(--shadow-lg\)/m, self.class.compiled)
   end
 
+  def test_font_weight_medium_defaults_to_var_font_weight_medium
+    assert_match(/:root \{[^}]*--ks-font-weight-medium: var\(--font-weight-medium\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

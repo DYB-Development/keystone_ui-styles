@@ -130,6 +130,7 @@
     --ks-color-info-900: var(--color-accent-900);
     --ks-border-width: 1px;
     --ks-shadow-overlay: var(--shadow-lg);
+    --ks-font-weight-medium: var(--font-weight-medium);
   }
 }
 
