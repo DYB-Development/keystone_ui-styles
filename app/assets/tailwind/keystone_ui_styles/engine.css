@@ -299,7 +299,7 @@
   }
 
   .ks-alert-title {
-    @apply font-semibold;
+    @apply font-(weight:--ks-font-weight-heading);
   }
 
   .ks-alert-message {
