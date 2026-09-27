@@ -100,6 +100,7 @@
     --ks-font-weight-heading: var(--font-weight-semibold);
     --ks-radius-surface: var(--radius-lg);
     --ks-shadow-surface: var(--shadow-sm);
+    --ks-color-success-50: var(--color-green-50);
   }
 }
 
