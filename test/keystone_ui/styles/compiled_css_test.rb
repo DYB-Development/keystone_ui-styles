@@ -1263,6 +1263,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-choice-dark: var\(--color-surface-100\)/m, self.class.compiled)
   end
 
+  def test_checkbox_row_hint_margin_top_is_0_5_spacing_units
+    assert_includes rule(".ks-checkbox-row-hint"), "margin-top: calc(var(--ks-spacing) * 0.5)"
+  end
+
   private
 
   def block(selector)

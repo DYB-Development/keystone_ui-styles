@@ -482,4 +482,8 @@
   .ks-checkbox-row-label {
     @apply font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-choice) dark:text-(color:--ks-color-text-choice-dark);
   }
+
+  .ks-checkbox-row-hint {
+    @apply mt-[calc(var(--ks-spacing)*0.5)];
+  }
 }
