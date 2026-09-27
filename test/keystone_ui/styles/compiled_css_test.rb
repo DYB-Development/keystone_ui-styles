@@ -2627,6 +2627,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab"), "font-weight: var(--ks-font-weight-heading)"
   end
 
+  def test_tab_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-tab"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)
