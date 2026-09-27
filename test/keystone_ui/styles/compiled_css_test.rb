@@ -1923,6 +1923,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-subtle-dark: var\(--color-surface-700\)/m, self.class.compiled)
   end
 
+  def test_color_fill_muted_defaults_to_var_color_surface_50
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-fill-muted: var\(--color-surface-50\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
