@@ -1915,6 +1915,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-fill-muted-dark\)/m, block(".ks-cta-banner"))
   end
 
+  def test_color_border_subtle_defaults_to_var_color_surface_200
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-subtle: var\(--color-surface-200\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
