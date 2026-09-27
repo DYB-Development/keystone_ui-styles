@@ -3075,6 +3075,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-swipe-empty-title"))
   end
 
+  def test_swipe_empty_message_margin_top_is_2_spacing_units
+    assert_includes block(".ks-swipe-empty-message"), "margin-top: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
