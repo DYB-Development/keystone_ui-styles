@@ -1043,6 +1043,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-menu-trigger"), "background-color: var(--ks-color-surface)"
   end
 
+  def test_menu_trigger_text_reads_the_text_colour_role
+    assert_includes rule(".ks-menu-trigger"), "color: var(--ks-color-text)"
+  end
+
   private
 
   def block(selector)
