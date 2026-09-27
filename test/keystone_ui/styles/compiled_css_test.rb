@@ -2183,6 +2183,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-link-dark\)/m, block(".ks-hero-badge"))
   end
 
+  def test_color_tint_border_defaults_to_color_mix_in_oklab_var_color_accent_500_20_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-tint-border: color-mix\(in oklab, var\(--color-accent-500\) 20%, transparent\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
