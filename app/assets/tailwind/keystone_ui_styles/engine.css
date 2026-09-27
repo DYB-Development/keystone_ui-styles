@@ -467,4 +467,8 @@
   .ks-theme-toggle-option {
     @apply aria-pressed:bg-(color:--ks-color-accent) aria-pressed:hover:bg-(color:--ks-color-accent-hover) dark:aria-pressed:bg-(color:--ks-color-accent-dark) dark:aria-pressed:hover:bg-(color:--ks-color-accent-hover-dark);
   }
+
+  .ks-checkbox-row {
+    @apply gap-[calc(var(--ks-spacing)*3)];
+  }
 }

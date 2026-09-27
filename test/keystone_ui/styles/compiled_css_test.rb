@@ -1207,6 +1207,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-theme-toggle-option.*?data-theme="dark".*?aria-pressed="true".*?:hover.*?background-color: var\(--ks-color-accent-hover-dark\)/m, self.class.compiled)
   end
 
+  def test_checkbox_row_gap_is_3_spacing_units
+    assert_includes rule(".ks-checkbox-row"), "gap: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
