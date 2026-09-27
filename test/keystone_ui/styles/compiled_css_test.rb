@@ -999,6 +999,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-menu"), "border-color: var(--ks-color-border)"
   end
 
+  def test_menu_fill_reads_the_surface_colour_role
+    assert_includes rule(".ks-menu"), "background-color: var(--ks-color-surface)"
+  end
+
   private
 
   def block(selector)
