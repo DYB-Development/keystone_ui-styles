@@ -135,6 +135,7 @@
     --ks-color-overlay: var(--color-white);
     --ks-color-overlay-dark: var(--color-zinc-800);
     --ks-color-text-heading: var(--color-gray-900);
+    --ks-color-text-heading-dark: var(--color-gray-200);
   }
 }
 
