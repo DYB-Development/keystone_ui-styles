@@ -459,6 +459,6 @@
   }
 
   .ks-copy-button {
-    @apply gap-[calc(var(--ks-spacing)*1.5)] rounded-[calc(var(--ks-radius-control)*0.75)] border-(length:--ks-border-width) border-(color:--ks-color-border-strong) bg-(color:--ks-color-overlay) px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*1.5)] font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-label) hover:bg-(color:--ks-color-hover-raised) dark:border-(color:--ks-color-border-strong-dark);
+    @apply gap-[calc(var(--ks-spacing)*1.5)] rounded-[calc(var(--ks-radius-control)*0.75)] border-(length:--ks-border-width) border-(color:--ks-color-border-strong) bg-(color:--ks-color-overlay) px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*1.5)] font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-label) hover:bg-(color:--ks-color-hover-raised) dark:border-(color:--ks-color-border-strong-dark) dark:bg-(color:--ks-color-overlay-dark);
   }
 }
