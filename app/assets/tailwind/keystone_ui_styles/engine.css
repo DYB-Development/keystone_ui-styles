@@ -159,6 +159,7 @@
     --ks-color-text-option: var(--color-gray-900);
     --ks-color-text-option-dark: var(--color-gray-100);
     --ks-color-text-option-muted: var(--color-surface-500);
+    --ks-color-text-option-muted-dark: var(--color-gray-400);
   }
 }
 
