@@ -1999,6 +1999,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-dark\)/m, block(".ks-feature-grid-title"))
   end
 
+  def test_feature_grid_subtitle_margin_bottom_is_16_spacing_units
+    assert_includes block(".ks-feature-grid-subtitle"), "margin-bottom: calc(var(--ks-spacing) * 16)"
+  end
+
   private
 
   def block(selector)
