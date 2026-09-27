@@ -1063,6 +1063,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-menu-option"), "gap: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_menu_option_padding_inline_is_3_spacing_units
+    assert_includes rule(".ks-menu-option"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
