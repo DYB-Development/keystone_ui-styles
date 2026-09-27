@@ -3011,6 +3011,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-pipeline-count-amber"), "color: var(--ks-color-pipeline-amber)"
   end
 
+  def test_color_pipeline_amber_defaults_to_var_color_amber_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-pipeline-amber: var\(--color-amber-400\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
