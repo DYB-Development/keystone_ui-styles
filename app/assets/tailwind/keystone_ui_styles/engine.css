@@ -1019,4 +1019,8 @@
   .ks-pipeline-box-label {
     @apply text-(color:--ks-color-pipeline-label);
   }
+
+  .ks-pipeline-count {
+    @apply font-[weight:calc(var(--ks-font-weight-heading)+100)];
+  }
 }

@@ -2995,6 +2995,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-pipeline-label: var\(--color-surface-500\)/m, self.class.compiled)
   end
 
+  def test_pipeline_count_weight_is_one_step_above_the_heading_font_weight
+    assert_includes block(".ks-pipeline-count"), "font-weight: calc(var(--ks-font-weight-heading) + 100)"
+  end
+
   private
 
   def block(selector)
