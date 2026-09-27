@@ -1587,6 +1587,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-color-picker-panel"), "border-width: var(--ks-border-width)"
   end
 
+  def test_color_picker_panel_border_reads_the_border_colour_role
+    assert_includes rule(".ks-color-picker-panel"), "border-color: var(--ks-color-border)"
+  end
+
   private
 
   def block(selector)
