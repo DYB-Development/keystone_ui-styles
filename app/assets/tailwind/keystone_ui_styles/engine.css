@@ -821,6 +821,6 @@
   }
 
   .ks-code-block {
-    @apply bg-(color:--ks-color-code) p-[calc(var(--ks-spacing)*4)] text-(color:--ks-color-text-code);
+    @apply bg-(color:--ks-color-code) p-[calc(var(--ks-spacing)*4)] text-(color:--ks-color-text-code) dark:bg-(color:--ks-color-code-dark);
   }
 }
