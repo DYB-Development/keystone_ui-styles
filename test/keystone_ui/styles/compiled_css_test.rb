@@ -447,6 +447,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-input"), "color: var(--ks-color-text)"
   end
 
+  def test_color_text_defaults_to_var_color_gray_900
+    assert_match(/:root \{[^}]*--ks-color-text: var\(--color-gray-900\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
