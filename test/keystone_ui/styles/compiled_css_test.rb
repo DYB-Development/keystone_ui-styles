@@ -2279,6 +2279,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table-header"), "font-weight: var(--ks-font-weight-heading)"
   end
 
+  def test_table_header_text_reads_the_text_heading_colour_role
+    assert_includes block(".ks-table-header"), "color: var(--ks-color-text-heading)"
+  end
+
   private
 
   def block(selector)
