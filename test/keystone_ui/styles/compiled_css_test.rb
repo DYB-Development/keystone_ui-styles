@@ -1283,6 +1283,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-choice-muted-dark: var\(--color-surface-400\)/m, self.class.compiled)
   end
 
+  def test_radio_card_padding_inline_is_4_spacing_units
+    assert_includes rule(".ks-radio-card"), "padding-inline: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)

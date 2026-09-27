@@ -488,4 +488,8 @@
   .ks-checkbox-row-hint {
     @apply mt-[calc(var(--ks-spacing)*0.5)] text-(color:--ks-color-text-choice-muted) dark:text-(color:--ks-color-text-choice-muted-dark);
   }
+
+  .ks-radio-card {
+    @apply px-[calc(var(--ks-spacing)*4)];
+  }
 }
