@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+### Added
+- Panels, cards, inputs, labels, hints, alerts, badges, pages, sections and page headers take their colours, corner radius, title weight and padding from `--ks-` variables, and look the same until a variable is set.
+- Alerts and badges take their colours from a shade scale per status, which a look can set.
+- Panel radius, padding and shadow classes that read the same variables, for keystone_ui's panel to render.
+
 ## [0.4.0] - 2026-09-27
 
 ### Added
