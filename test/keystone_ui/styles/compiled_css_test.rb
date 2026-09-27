@@ -979,6 +979,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-action-menu-button"), "color: var(--ks-color-text-muted)"
   end
 
+  def test_action_menu_button_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-action-menu-button"))
+  end
+
   private
 
   def block(selector)
