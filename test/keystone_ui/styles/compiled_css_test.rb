@@ -1959,6 +1959,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-cta-banner-subtitle"), "margin-bottom: calc(var(--ks-spacing) * 8)"
   end
 
+  def test_cta_banner_subtitle_text_reads_the_text_display_muted_colour_role
+    assert_includes block(".ks-cta-banner-subtitle"), "color: var(--ks-color-text-display-muted)"
+  end
+
   private
 
   def block(selector)
