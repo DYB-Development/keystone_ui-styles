@@ -1175,6 +1175,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-overlay-dark\)/m, block(".ks-copy-button"))
   end
 
+  def test_copy_button_text_reads_the_text_label_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-label-dark\)/m, block(".ks-copy-button"))
+  end
+
   private
 
   def block(selector)
