@@ -258,7 +258,7 @@
   }
 
   .ks-card-summary {
-    @apply mt-1 text-sm text-(color:--ks-color-text-muted) dark:text-gray-400 mb-0;
+    @apply mt-1 text-sm text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark) mb-0;
   }
 
   .ks-card-cta {
