@@ -2323,6 +2323,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table-cell-first"), "padding-left: calc(var(--ks-spacing) * 6)"
   end
 
+  def test_table_cell_first_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-table-cell-first"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
   private
 
   def block(selector)
