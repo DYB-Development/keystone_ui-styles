@@ -186,6 +186,7 @@
     --ks-color-text-display-muted: var(--color-surface-500);
     --ks-color-text-display-muted-dark: var(--color-surface-400);
     --ks-color-raised: var(--color-white);
+    --ks-color-raised-dark: var(--color-surface-800);
   }
 }
 
