@@ -939,6 +939,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-action-menu"), "border-radius: calc(var(--ks-radius-surface) * 0.75)"
   end
 
+  def test_action_menu_fill_reads_the_overlay_colour_role
+    assert_includes rule(".ks-action-menu"), "background-color: var(--ks-color-overlay)"
+  end
+
   private
 
   def block(selector)
