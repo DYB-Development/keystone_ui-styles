@@ -21,8 +21,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-button\s*\{/, self.class.compiled)
   end
 
-  def test_primary_button_background_reads_the_accent_color_variable
-    assert_includes rule(".ks-button-primary"), "background-color: var(--color-accent-600)"
+  def test_primary_button_background_reads_the_accent_colour_role
+    assert_includes rule(".ks-button-primary"), "background-color: var(--ks-color-accent)"
   end
 
   def test_panel_has_a_white_background

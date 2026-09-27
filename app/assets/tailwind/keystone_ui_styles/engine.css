@@ -80,7 +80,7 @@
   }
 
   .ks-button-primary {
-    @apply bg-accent-600 text-white hover:bg-accent-500;
+    @apply bg-(color:--ks-color-accent) text-white hover:bg-accent-500;
   }
 
   .ks-button-secondary {
