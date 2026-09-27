@@ -2611,6 +2611,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar"), "gap: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_tab_radius_reads_the_surface_radius
+    assert_includes block(".ks-tab"), "border-radius: var(--ks-radius-surface)"
+  end
+
   private
 
   def block(selector)

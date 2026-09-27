@@ -865,4 +865,8 @@
   .ks-tab-bar {
     @apply mb-[calc(var(--ks-spacing)*8)] gap-[calc(var(--ks-spacing)*2)];
   }
+
+  .ks-tab {
+    @apply rounded-(--ks-radius-surface);
+  }
 }
