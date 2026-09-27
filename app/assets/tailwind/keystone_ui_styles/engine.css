@@ -138,6 +138,7 @@
     --ks-color-text-heading-dark: var(--color-gray-200);
     --ks-color-close: var(--color-gray-400);
     --ks-color-close-hover: var(--color-gray-600);
+    --ks-color-close-hover-dark: var(--color-gray-200);
   }
 }
 
