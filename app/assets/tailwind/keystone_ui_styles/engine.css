@@ -197,6 +197,7 @@
     --ks-color-divider: var(--color-gray-200);
     --ks-color-divider-dark: color-mix(in oklab, var(--color-white) 10%, transparent);
     --ks-color-code: var(--color-surface-900);
+    --ks-color-code-dark: var(--color-black);
   }
 }
 
