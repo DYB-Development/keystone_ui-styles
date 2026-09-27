@@ -1071,6 +1071,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-menu-option"), "padding-block: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_menu_option_text_reads_the_text_label_colour_role
+    assert_includes rule(".ks-menu-option"), "color: var(--ks-color-text-label)"
+  end
+
   private
 
   def block(selector)
