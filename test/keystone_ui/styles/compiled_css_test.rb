@@ -1491,6 +1491,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-file-upload-browse"), "font-weight: var(--ks-font-weight-strong)"
   end
 
+  def test_file_upload_browse_text_reads_the_link_colour_role
+    assert_includes rule(".ks-file-upload-browse"), "color: var(--ks-color-link)"
+  end
+
   private
 
   def block(selector)

@@ -551,6 +551,6 @@
   }
 
   .ks-file-upload-browse {
-    @apply font-(weight:--ks-font-weight-strong);
+    @apply font-(weight:--ks-font-weight-strong) text-(color:--ks-color-link);
   }
 }
