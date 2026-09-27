@@ -875,6 +875,6 @@
   }
 
   .ks-progress-track {
-    @apply bg-(color:--ks-color-track);
+    @apply bg-(color:--ks-color-track) rounded-(--ks-radius-pill);
   }
 }
