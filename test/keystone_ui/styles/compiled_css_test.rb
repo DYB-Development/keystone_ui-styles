@@ -1475,6 +1475,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-file-upload-prompt"), "color: var(--ks-color-text-secondary)"
   end
 
+  def test_file_upload_prompt_text_reads_the_text_secondary_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-secondary-dark\)/m, block(".ks-file-upload-prompt"))
+  end
+
   private
 
   def block(selector)

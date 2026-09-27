@@ -545,6 +545,6 @@
   }
 
   .ks-file-upload-prompt {
-    @apply text-(color:--ks-color-text-secondary);
+    @apply text-(color:--ks-color-text-secondary) dark:text-(color:--ks-color-text-secondary-dark);
   }
 }
