@@ -2043,6 +2043,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-raised-dark\)/m, block(".ks-feature-card"))
   end
 
+  def test_color_raised_defaults_to_var_color_white
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-raised: var\(--color-white\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
