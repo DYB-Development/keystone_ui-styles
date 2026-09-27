@@ -358,7 +358,7 @@
   }
 
   .ks-badge-info {
-    @apply bg-accent-100 text-accent-700 dark:bg-accent-900/50 dark:text-accent-400;
+    @apply bg-(color:--ks-color-info-100) text-accent-700 dark:bg-accent-900/50 dark:text-accent-400;
   }
 
   .ks-panel-radius-md {
