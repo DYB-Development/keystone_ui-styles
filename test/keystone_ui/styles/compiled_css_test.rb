@@ -811,6 +811,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-color-info-400: var\(--color-accent-400\)/m, self.class.compiled)
   end
 
+  def test_color_info_700_defaults_to_var_color_accent_700
+    assert_match(/:root \{[^}]*--ks-color-info-700: var\(--color-accent-700\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

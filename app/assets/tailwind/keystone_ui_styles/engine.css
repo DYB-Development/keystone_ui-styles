@@ -125,6 +125,7 @@
     --ks-color-info-100: var(--color-accent-100);
     --ks-color-info-300: var(--color-accent-300);
     --ks-color-info-400: var(--color-accent-400);
+    --ks-color-info-700: var(--color-accent-700);
   }
 }
 
