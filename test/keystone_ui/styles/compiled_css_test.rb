@@ -871,6 +871,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-modal-panel"), "padding: calc(var(--ks-spacing) * 6)"
   end
 
+  def test_modal_panel_margin_inline_is_4_spacing_units
+    assert_includes rule(".ks-modal-panel"), "margin-inline: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
