@@ -253,7 +253,7 @@
   }
 
   .ks-card-body {
-    @apply px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*4)] sm:px-[calc(var(--ks-spacing)*6)] sm:pt-6 sm:pb-4;
+    @apply px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*4)] sm:px-[calc(var(--ks-spacing)*6)] sm:pt-[calc(var(--ks-spacing)*6)] sm:pb-4;
   }
 
   .ks-card-title {
