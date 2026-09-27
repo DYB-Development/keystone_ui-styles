@@ -625,6 +625,6 @@
   }
 
   .ks-tone-success {
-    @apply text-(color:--ks-color-success-600);
+    @apply text-(color:--ks-color-success-600) dark:text-(color:--ks-color-success-400);
   }
 }
