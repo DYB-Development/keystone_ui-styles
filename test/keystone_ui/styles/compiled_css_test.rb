@@ -276,7 +276,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_input_turns_dark_in_dark_mode
-    assert_match(/data-theme="dark".*?background-color: var\(--color-zinc-900\)/m, block(".ks-input"))
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-surface-dark\)/m, block(".ks-input"))
   end
 
   def test_disabled_input_shows_a_not_allowed_cursor
