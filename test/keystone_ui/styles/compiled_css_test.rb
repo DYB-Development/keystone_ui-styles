@@ -1447,6 +1447,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-drop-active: var\(--color-accent-50\)/m, self.class.compiled)
   end
 
+  def test_color_drop_active_dark_defaults_to_color_mix_in_oklab_var_color_accent_900_10_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-drop-active-dark: color-mix\(in oklab, var\(--color-accent-900\) 10%, transparent\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
