@@ -340,7 +340,7 @@
   }
 
   .ks-badge-warning {
-    @apply bg-(color:--ks-color-warning-100) text-(color:--ks-color-warning-700) dark:bg-yellow-900/50 dark:text-yellow-400;
+    @apply bg-(color:--ks-color-warning-100) text-(color:--ks-color-warning-700) dark:bg-(color:--ks-color-warning-900)/50 dark:text-yellow-400;
   }
 
   .ks-badge-info {
