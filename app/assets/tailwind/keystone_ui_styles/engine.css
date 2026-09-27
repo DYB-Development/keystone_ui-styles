@@ -490,6 +490,6 @@
   }
 
   .ks-radio-card {
-    @apply px-[calc(var(--ks-spacing)*4)];
+    @apply px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*3)];
   }
 }
