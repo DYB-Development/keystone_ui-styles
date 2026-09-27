@@ -963,4 +963,8 @@
   .ks-bucket-percent {
     @apply text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
+
+  .ks-bucket-tank {
+    @apply rounded-t-[calc(var(--ks-radius-surface)*0.5)];
+  }
 }

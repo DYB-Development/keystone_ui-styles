@@ -2839,6 +2839,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-bucket-percent"))
   end
 
+  def test_bucket_tank_top_corner_radius_is_0_5_of_the_surface_radius
+    assert_includes block(".ks-bucket-tank"), "border-top-left-radius: calc(var(--ks-radius-surface) * 0.5)"
+  end
+
   private
 
   def block(selector)
