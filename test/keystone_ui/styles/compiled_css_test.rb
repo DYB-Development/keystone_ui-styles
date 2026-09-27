@@ -403,6 +403,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-card"), "background-color: var(--ks-color-surface)"
   end
 
+  def test_card_border_reads_the_border_colour_role
+    assert_includes rule(".ks-card"), "border-color: var(--ks-color-border)"
+  end
+
   private
 
   def block(selector)
