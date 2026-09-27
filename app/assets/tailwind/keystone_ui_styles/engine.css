@@ -745,6 +745,6 @@
   }
 
   .ks-hero-badge {
-    @apply gap-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-pill);
+    @apply gap-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-pill) border-(length:--ks-border-width);
   }
 }

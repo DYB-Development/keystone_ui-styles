@@ -2155,6 +2155,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-hero-badge"), "border-radius: var(--ks-radius-pill)"
   end
 
+  def test_hero_badge_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-hero-badge"), "border-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)
