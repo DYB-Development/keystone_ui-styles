@@ -980,4 +980,8 @@
   .ks-bucket-fill-over {
     @apply bg-(color:--ks-color-over-goal);
   }
+
+  .ks-bucket-fill-over-warning {
+    @apply bg-(color:--ks-color-over-goal-warning);
+  }
 }
