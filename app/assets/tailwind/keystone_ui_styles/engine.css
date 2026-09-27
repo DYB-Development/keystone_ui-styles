@@ -346,4 +346,8 @@
   .ks-panel-radius-lg {
     @apply rounded-[calc(var(--ks-radius-surface)*1.5)];
   }
+
+  .ks-panel-radius-xl {
+    @apply rounded-[calc(var(--ks-radius-surface)*2)];
+  }
 }
