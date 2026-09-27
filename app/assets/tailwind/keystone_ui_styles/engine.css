@@ -589,6 +589,6 @@
   }
 
   .ks-stat-card-label {
-    @apply font-(weight:--ks-font-weight-medium);
+    @apply font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-muted);
   }
 }
