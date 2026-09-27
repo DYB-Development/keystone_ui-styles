@@ -442,6 +442,6 @@
   }
 
   .ks-menu-trigger {
-    @apply gap-[calc(var(--ks-spacing)*1)] rounded-[calc(var(--ks-radius-control)*0.75)];
+    @apply gap-[calc(var(--ks-spacing)*1)] rounded-[calc(var(--ks-radius-control)*0.75)] border-(length:--ks-border-width);
   }
 }
