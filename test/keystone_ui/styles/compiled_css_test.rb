@@ -2607,6 +2607,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar"), "margin-bottom: calc(var(--ks-spacing) * 8)"
   end
 
+  def test_tab_bar_gap_is_2_spacing_units
+    assert_includes block(".ks-tab-bar"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
