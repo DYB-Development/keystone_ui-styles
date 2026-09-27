@@ -2907,6 +2907,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-pipeline"), "border-width: var(--ks-border-width)"
   end
 
+  def test_pipeline_border_reads_the_pipeline_border_colour_role
+    assert_includes block(".ks-pipeline"), "border-color: var(--ks-color-pipeline-border)"
+  end
+
   private
 
   def block(selector)
