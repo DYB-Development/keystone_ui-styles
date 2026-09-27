@@ -144,6 +144,7 @@
     --ks-color-hover: var(--color-gray-50);
     --ks-color-hover-dark: var(--color-zinc-800);
     --ks-color-border-strong: var(--color-gray-300);
+    --ks-color-border-strong-dark: var(--color-zinc-600);
   }
 }
 
