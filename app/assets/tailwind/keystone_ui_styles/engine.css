@@ -153,6 +153,7 @@
     --ks-color-text-choice-dark: var(--color-surface-100);
     --ks-color-text-choice-muted: var(--color-surface-500);
     --ks-color-text-choice-muted-dark: var(--color-surface-400);
+    --ks-color-selected-border: var(--color-accent-500);
   }
 }
 

@@ -1319,6 +1319,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?:checked \~.*?background-color: var\(--ks-color-selected-dark\)/m, block(".ks-radio-card-highlight"))
   end
 
+  def test_color_selected_border_defaults_to_var_color_accent_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-selected-border: var\(--color-accent-500\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
