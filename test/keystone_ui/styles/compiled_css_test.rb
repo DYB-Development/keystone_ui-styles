@@ -2651,6 +2651,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-tab-active(?![\w-]).*?\[data-active\].*?color: var\(--ks-color-link\)/m, self.class.compiled)
   end
 
+  def test_tab_active_text_reads_the_link_dark_colour_role_on_a_dark_page_and_when_active
+    assert_match(/\.ks-tab-active(?![\w-]).*?data-theme="dark".*?\[data-active\].*?color: var\(--ks-color-link-dark\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
