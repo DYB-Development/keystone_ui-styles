@@ -459,6 +459,6 @@
   }
 
   .ks-copy-button {
-    @apply gap-[calc(var(--ks-spacing)*1.5)] rounded-[calc(var(--ks-radius-control)*0.75)] border-(length:--ks-border-width) border-(color:--ks-color-border-strong) bg-(color:--ks-color-overlay) px-[calc(var(--ks-spacing)*3)];
+    @apply gap-[calc(var(--ks-spacing)*1.5)] rounded-[calc(var(--ks-radius-control)*0.75)] border-(length:--ks-border-width) border-(color:--ks-color-border-strong) bg-(color:--ks-color-overlay) px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*1.5)];
   }
 }

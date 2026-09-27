@@ -1151,6 +1151,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-copy-button"), "padding-inline: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_copy_button_padding_block_is_1_5_spacing_units
+    assert_includes rule(".ks-copy-button"), "padding-block: calc(var(--ks-spacing) * 1.5)"
+  end
+
   private
 
   def block(selector)
