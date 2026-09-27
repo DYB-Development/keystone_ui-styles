@@ -848,6 +848,6 @@
   }
 
   .ks-accordion-answer {
-    @apply px-[calc(var(--ks-spacing)*6)];
+    @apply px-[calc(var(--ks-spacing)*6)] pb-[calc(var(--ks-spacing)*4)];
   }
 }
