@@ -164,6 +164,7 @@
     --ks-color-drop-active-dark: color-mix(in oklab, var(--color-accent-900) 10%, transparent);
     --ks-color-icon: var(--color-gray-400);
     --ks-color-icon-dark: var(--color-gray-500);
+    --ks-color-text-secondary: var(--color-gray-600);
   }
 }
 
