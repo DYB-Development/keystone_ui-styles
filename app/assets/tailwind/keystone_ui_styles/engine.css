@@ -605,6 +605,6 @@
   }
 
   .ks-stat-card-emphasis {
-    @apply font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-label);
+    @apply font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark);
   }
 }

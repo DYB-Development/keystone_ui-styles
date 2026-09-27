@@ -1739,6 +1739,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stat-card-emphasis"), "color: var(--ks-color-text-label)"
   end
 
+  def test_stat_card_emphasis_text_reads_the_text_label_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-label-dark\)/m, block(".ks-stat-card-emphasis"))
+  end
+
   private
 
   def block(selector)
