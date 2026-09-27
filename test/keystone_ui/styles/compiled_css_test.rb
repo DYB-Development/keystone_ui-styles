@@ -1471,6 +1471,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon-dark: var\(--color-gray-500\)/m, self.class.compiled)
   end
 
+  def test_file_upload_prompt_text_reads_the_text_secondary_colour_role
+    assert_includes rule(".ks-file-upload-prompt"), "color: var(--ks-color-text-secondary)"
+  end
+
   private
 
   def block(selector)

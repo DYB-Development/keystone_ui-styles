@@ -543,4 +543,8 @@
   .ks-file-upload-icon {
     @apply text-(color:--ks-color-icon) dark:text-(color:--ks-color-icon-dark);
   }
+
+  .ks-file-upload-prompt {
+    @apply text-(color:--ks-color-text-secondary);
+  }
 }
