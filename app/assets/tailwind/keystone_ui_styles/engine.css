@@ -765,6 +765,6 @@
   }
 
   .ks-table-body {
-    @apply bg-(color:--ks-color-table-body) divide-y-(length:--ks-border-width) divide-(color:--ks-color-divider) dark:bg-(color:--ks-color-table-body-dark);
+    @apply bg-(color:--ks-color-table-body) divide-y-(length:--ks-border-width) divide-(color:--ks-color-divider) dark:bg-(color:--ks-color-table-body-dark) dark:divide-(color:--ks-color-divider-dark);
   }
 }
