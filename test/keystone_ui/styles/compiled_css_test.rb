@@ -883,6 +883,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-overlay-dark\)/m, block(".ks-modal-panel"))
   end
 
+  def test_modal_header_margin_bottom_is_4_spacing_units
+    assert_includes rule(".ks-modal-header"), "margin-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
