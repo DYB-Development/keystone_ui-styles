@@ -303,7 +303,7 @@
   }
 
   .ks-alert-error {
-    @apply bg-(color:--ks-color-danger-50) text-red-800 dark:bg-red-900/30 dark:text-red-300;
+    @apply bg-(color:--ks-color-danger-50) text-(color:--ks-color-danger-800) dark:bg-red-900/30 dark:text-red-300;
   }
 
   .ks-alert-body {
