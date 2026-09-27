@@ -165,7 +165,7 @@
   }
 
   .ks-page {
-    @apply px-4 py-4 sm:px-6 lg:px-8;
+    @apply px-[calc(var(--ks-spacing)*4)] py-4 sm:px-6 lg:px-8;
   }
 
   .ks-page-sm {

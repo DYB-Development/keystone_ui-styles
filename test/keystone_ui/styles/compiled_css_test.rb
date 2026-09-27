@@ -363,7 +363,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_page_classes_match_keystone_ui_page
-    assert_includes rule(".ks-page"), "padding-inline: calc(var(--spacing) * 4)"
+    assert_includes rule(".ks-page"), "padding-inline: calc(var(--ks-spacing) * 4)"
     assert_includes rule(".ks-page-sm"), "max-width: var(--container-2xl)"
     assert_includes rule(".ks-page-md"), "max-width: var(--container-4xl)"
     assert_includes rule(".ks-page-lg"), "max-width: var(--container-6xl)"
