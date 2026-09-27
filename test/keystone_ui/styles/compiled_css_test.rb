@@ -1651,6 +1651,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-overlay-dark\)/m, block(".ks-metric-card"))
   end
 
+  def test_stat_card_header_gap_is_2_spacing_units
+    assert_includes block(".ks-stat-card-header"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
