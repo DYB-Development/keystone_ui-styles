@@ -1675,6 +1675,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stat-card-value"), "font-weight: calc(var(--ks-font-weight-heading) + 100)"
   end
 
+  def test_stat_card_suffix_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-stat-card-suffix"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)
