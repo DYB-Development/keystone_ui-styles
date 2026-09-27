@@ -1103,6 +1103,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-menu-checkbox"), "border-color: var(--ks-color-border-strong)"
   end
 
+  def test_menu_checkbox_text_reads_the_accent_colour_role
+    assert_includes rule(".ks-menu-checkbox"), "color: var(--ks-color-accent)"
+  end
+
   private
 
   def block(selector)
