@@ -187,6 +187,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-accent-dark\)/m, block(".ks-button-primary"))
   end
 
+  def test_dark_accent_colour_role_defaults_to_accent_600
+    assert_match(/:root \{[^}]*\-\-ks\-color\-accent\-dark:\ var\(\-\-color\-accent\-600\)/m, self.class.compiled)
+  end
+
   def test_secondary_button_background_reads_the_neutral_colour_role
     assert_includes rule(".ks-button-secondary"), "background-color: var(--ks-color-neutral)"
   end
