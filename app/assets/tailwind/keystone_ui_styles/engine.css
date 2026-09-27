@@ -99,6 +99,7 @@
     --ks-color-text-muted-dark: var(--color-gray-400);
     --ks-font-weight-heading: var(--font-weight-semibold);
     --ks-radius-surface: var(--radius-lg);
+    --ks-shadow-surface: var(--shadow-sm);
   }
 }
 

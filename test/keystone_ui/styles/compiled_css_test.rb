@@ -555,6 +555,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-panel-shadow"), "--tw-shadow: var(--ks-shadow-surface)"
   end
 
+  def test_shadow_surface_defaults_to_var_shadow_sm
+    assert_match(/:root \{[^}]*--ks-shadow-surface: var\(--shadow-sm\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
