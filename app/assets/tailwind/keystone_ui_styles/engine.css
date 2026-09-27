@@ -593,6 +593,6 @@
   }
 
   .ks-stat-card-value {
-    @apply mt-[calc(var(--ks-spacing)*1)];
+    @apply mt-[calc(var(--ks-spacing)*1)] font-[weight:calc(var(--ks-font-weight-heading)+100)];
   }
 }
