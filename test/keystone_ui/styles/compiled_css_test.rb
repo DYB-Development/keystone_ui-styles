@@ -1123,6 +1123,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-strong-dark: var\(--color-zinc-600\)/m, self.class.compiled)
   end
 
+  def test_color_focus_defaults_to_var_color_accent_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-focus: var\(--color-accent-500\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
