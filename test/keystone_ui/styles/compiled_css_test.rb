@@ -1335,6 +1335,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-radio-card-label"), "font-weight: var(--ks-font-weight-medium)"
   end
 
+  def test_radio_card_label_text_reads_the_text_option_colour_role
+    assert_includes rule(".ks-radio-card-label"), "color: var(--ks-color-text-option)"
+  end
+
   private
 
   def block(selector)
