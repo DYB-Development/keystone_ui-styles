@@ -1323,6 +1323,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-selected-border: var\(--color-accent-500\)/m, self.class.compiled)
   end
 
+  def test_color_selected_defaults_to_var_color_accent_50
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-selected: var\(--color-accent-50\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
