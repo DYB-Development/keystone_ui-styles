@@ -1851,6 +1851,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-link-card"))
   end
 
+  def test_link_card_fill_reads_the_surface_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-surface-dark\)/m, block(".ks-link-card"))
+  end
+
   private
 
   def block(selector)
