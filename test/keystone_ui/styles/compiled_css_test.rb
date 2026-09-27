@@ -1599,6 +1599,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-color-picker-panel"))
   end
 
+  def test_radius_pill_defaults_to_calc_infinity_1px
+    assert_match(/@layer base \{.*?:root \{.*?--ks-radius-pill: calc\(infinity \* 1px\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
