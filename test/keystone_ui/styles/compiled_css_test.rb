@@ -931,6 +931,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-close-hover-dark: var\(--color-gray-200\)/m, self.class.compiled)
   end
 
+  def test_action_menu_margin_top_is_2_spacing_units
+    assert_includes rule(".ks-action-menu"), "margin-top: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)

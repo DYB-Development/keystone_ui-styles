@@ -426,4 +426,8 @@
   .ks-modal-close {
     @apply text-(color:--ks-color-close) hover:text-(color:--ks-color-close-hover) dark:hover:text-(color:--ks-color-close-hover-dark);
   }
+
+  .ks-action-menu {
+    @apply mt-[calc(var(--ks-spacing)*2)];
+  }
 }
