@@ -2067,6 +2067,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-feature-card-icon"), "color: var(--ks-color-link)"
   end
 
+  def test_feature_card_icon_text_reads_the_link_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-link-dark\)/m, block(".ks-feature-card-icon"))
+  end
+
   private
 
   def block(selector)
