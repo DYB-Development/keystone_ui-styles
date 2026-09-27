@@ -1439,6 +1439,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-file-upload-drop-zone-active"), "background-color: var(--ks-color-drop-active)"
   end
 
+  def test_file_upload_drop_zone_active_fill_reads_the_drop_active_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-drop-active-dark\)/m, block(".ks-file-upload-drop-zone-active"))
+  end
+
   private
 
   def block(selector)

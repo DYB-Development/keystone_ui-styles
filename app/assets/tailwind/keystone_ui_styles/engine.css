@@ -529,6 +529,6 @@
   }
 
   .ks-file-upload-drop-zone-active {
-    @apply border-(color:--ks-color-selected-border) bg-(color:--ks-color-drop-active);
+    @apply border-(color:--ks-color-selected-border) bg-(color:--ks-color-drop-active) dark:bg-(color:--ks-color-drop-active-dark);
   }
 }
