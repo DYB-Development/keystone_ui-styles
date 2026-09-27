@@ -623,4 +623,8 @@
   .ks-tone-muted {
     @apply text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
+
+  .ks-tone-success {
+    @apply text-(color:--ks-color-success-600);
+  }
 }
