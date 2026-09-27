@@ -2267,6 +2267,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-divider: var\(--color-gray-200\)/m, self.class.compiled)
   end
 
+  def test_color_divider_dark_defaults_to_color_mix_in_oklab_var_color_white_10_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-divider-dark: color-mix\(in oklab, var\(--color-white\) 10%, transparent\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
