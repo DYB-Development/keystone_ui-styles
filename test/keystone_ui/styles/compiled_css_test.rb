@@ -975,6 +975,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-ring-dark: color-mix\(in oklab, var\(--color-white\) 10%, transparent\)/m, self.class.compiled)
   end
 
+  def test_action_menu_button_text_reads_the_text_muted_colour_role
+    assert_includes rule(".ks-action-menu-button"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)
