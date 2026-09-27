@@ -543,6 +543,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-panel-radius-md"), "border-radius: var(--ks-radius-surface)"
   end
 
+  def test_lg_panel_radius_reads_the_surface_radius_variable
+    assert_includes rule(".ks-panel-radius-lg"), "border-radius: calc(var(--ks-radius-surface) * 1.5)"
+  end
+
   private
 
   def block(selector)
