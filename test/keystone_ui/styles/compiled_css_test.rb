@@ -1399,6 +1399,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:where\(\.ks-file-upload > :not\(:last-child\)\).*?calc\(var\(--ks-spacing\) \* 1\)/m, self.class.compiled)
   end
 
+  def test_file_upload_drop_zone_margin_top_is_1_spacing_units
+    assert_includes rule(".ks-file-upload-drop-zone"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)

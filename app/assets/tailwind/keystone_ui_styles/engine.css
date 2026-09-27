@@ -523,4 +523,8 @@
   .ks-file-upload {
     @apply space-y-[calc(var(--ks-spacing)*1)];
   }
+
+  .ks-file-upload-drop-zone {
+    @apply mt-[calc(var(--ks-spacing)*1)];
+  }
 }
