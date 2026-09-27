@@ -421,6 +421,6 @@
   }
 
   .ks-modal-close {
-    @apply text-(color:--ks-color-close) hover:text-(color:--ks-color-close-hover);
+    @apply text-(color:--ks-color-close) hover:text-(color:--ks-color-close-hover) dark:hover:text-(color:--ks-color-close-hover-dark);
   }
 }
