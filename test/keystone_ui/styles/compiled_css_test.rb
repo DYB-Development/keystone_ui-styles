@@ -2511,6 +2511,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-accordion-button"), "padding-block: calc(var(--ks-spacing) * 4)"
   end
 
+  def test_accordion_button_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-accordion-button"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
   private
 
   def block(selector)
