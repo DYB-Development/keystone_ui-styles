@@ -503,6 +503,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*? color: var\(--ks-color-text-muted-dark\)/m, block(".ks-section-subtitle"))
   end
 
+  def test_page_header_subtitle_reads_the_dark_muted_text_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-text-muted-dark\)/m, block(".ks-page-header-subtitle"))
+  end
+
   private
 
   def block(selector)
