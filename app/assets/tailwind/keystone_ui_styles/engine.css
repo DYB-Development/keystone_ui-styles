@@ -995,4 +995,8 @@
   .ks-pipeline-header {
     @apply mb-[calc(var(--ks-spacing)*4)];
   }
+
+  .ks-pipeline-title {
+    @apply font-(weight:--ks-font-weight-heading);
+  }
 }
