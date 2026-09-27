@@ -1567,6 +1567,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-color-picker-panel"), "margin-top: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_color_picker_panel_padding_is_3_spacing_units
+    assert_includes rule(".ks-color-picker-panel"), "padding: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
