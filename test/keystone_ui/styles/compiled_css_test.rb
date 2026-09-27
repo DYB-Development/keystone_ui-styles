@@ -511,6 +511,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*? color: var\(--ks-color-text-muted-dark\)/m, block(".ks-card-summary"))
   end
 
+  def test_section_title_weight_reads_the_heading_font_weight_variable
+    assert_includes rule(".ks-section-title"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
   private
 
   def block(selector)
