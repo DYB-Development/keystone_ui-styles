@@ -3083,6 +3083,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-swipe-empty-message"), "color: var(--ks-color-text-muted)"
   end
 
+  def test_swipe_empty_message_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-swipe-empty-message"))
+  end
+
   private
 
   def block(selector)
