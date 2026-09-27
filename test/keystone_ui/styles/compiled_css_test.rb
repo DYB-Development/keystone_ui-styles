@@ -349,7 +349,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-section-lg"), "margin-top: calc(var(--spacing) * 8)"
     assert_includes rule(".ks-section-header"), "justify-content: space-between"
     assert_includes rule(".ks-section-title"), "font-size: var(--text-lg)"
-    assert_includes rule(".ks-section-subtitle"), "color: var(--color-gray-500)"
+    assert_includes rule(".ks-section-subtitle"), "color: var(--ks-color-text-muted)"
     assert_includes rule(".ks-section-action"), "color: var(--color-accent-600)"
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-section-title"))
   end
