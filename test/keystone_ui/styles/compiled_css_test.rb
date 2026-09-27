@@ -2455,6 +2455,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-code-dark\)/m, block(".ks-code-block"))
   end
 
+  def test_color_code_defaults_to_var_color_surface_900
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-code: var\(--color-surface-900\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
