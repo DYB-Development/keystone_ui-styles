@@ -559,6 +559,6 @@
   }
 
   .ks-file-upload-hint {
-    @apply mt-[calc(var(--ks-spacing)*1)] text-(color:--ks-color-text-muted);
+    @apply mt-[calc(var(--ks-spacing)*1)] text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 }
