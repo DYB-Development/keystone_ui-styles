@@ -943,4 +943,8 @@
   .ks-funnel-bar-rose {
     @apply bg-(color:--ks-color-funnel-rose);
   }
+
+  .ks-bucket {
+    @apply gap-[calc(var(--ks-spacing)*1)];
+  }
 }
