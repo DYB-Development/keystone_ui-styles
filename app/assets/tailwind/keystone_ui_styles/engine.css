@@ -916,6 +916,6 @@
   }
 
   .ks-funnel-transition {
-    @apply py-[calc(var(--ks-spacing)*1)] text-(color:--ks-color-text-display-muted);
+    @apply py-[calc(var(--ks-spacing)*1)] text-(color:--ks-color-text-display-muted) dark:text-(color:--ks-color-text-display-muted-dark);
   }
 }

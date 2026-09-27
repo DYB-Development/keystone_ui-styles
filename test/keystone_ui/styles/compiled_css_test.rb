@@ -2759,6 +2759,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-funnel-transition"), "color: var(--ks-color-text-display-muted)"
   end
 
+  def test_funnel_transition_text_reads_the_text_display_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-muted-dark\)/m, block(".ks-funnel-transition"))
+  end
+
   private
 
   def block(selector)
