@@ -1443,6 +1443,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-drop-active-dark\)/m, block(".ks-file-upload-drop-zone-active"))
   end
 
+  def test_color_drop_active_defaults_to_var_color_accent_50
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-drop-active: var\(--color-accent-50\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
