@@ -2467,6 +2467,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-code: var\(--color-surface-100\)/m, self.class.compiled)
   end
 
+  def test_accordion_gap_is_4_spacing_units
+    assert_includes block(".ks-accordion"), "gap: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
