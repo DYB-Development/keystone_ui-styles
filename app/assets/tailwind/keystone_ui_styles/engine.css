@@ -918,4 +918,8 @@
   .ks-funnel-transition {
     @apply py-[calc(var(--ks-spacing)*1)] text-(color:--ks-color-text-display-muted) dark:text-(color:--ks-color-text-display-muted-dark);
   }
+
+  .ks-funnel-bar-accent {
+    @apply bg-(color:--ks-color-funnel-accent);
+  }
 }

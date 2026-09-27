@@ -2763,6 +2763,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-muted-dark\)/m, block(".ks-funnel-transition"))
   end
 
+  def test_funnel_bar_accent_fill_reads_the_funnel_accent_colour_role
+    assert_includes block(".ks-funnel-bar-accent"), "background-color: var(--ks-color-funnel-accent)"
+  end
+
   private
 
   def block(selector)
