@@ -2447,6 +2447,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-code-block"), "padding: calc(var(--ks-spacing) * 4)"
   end
 
+  def test_code_block_text_reads_the_text_code_colour_role
+    assert_includes block(".ks-code-block"), "color: var(--ks-color-text-code)"
+  end
+
   private
 
   def block(selector)
