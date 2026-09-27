@@ -613,6 +613,6 @@
   }
 
   .ks-stat-card-info {
-    @apply text-(color:--ks-color-close) hover:text-(color:--ks-color-link);
+    @apply text-(color:--ks-color-close) hover:text-(color:--ks-color-link) dark:hover:text-(color:--ks-color-link-dark);
   }
 }

@@ -1759,6 +1759,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:hover.*?color: var\(--ks-color-link\)/m, block(".ks-stat-card-info"))
   end
 
+  def test_stat_card_info_text_reads_the_link_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?color: var\(--ks-color-link-dark\)/m, block(".ks-stat-card-info"))
+  end
+
   private
 
   def block(selector)
