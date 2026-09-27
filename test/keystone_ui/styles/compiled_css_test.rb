@@ -1223,6 +1223,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-checkbox-row-input"), "border-radius: calc(var(--ks-radius-control) * 0.5)"
   end
 
+  def test_checkbox_row_input_border_reads_the_border_choice_colour_role
+    assert_includes rule(".ks-checkbox-row-input"), "border-color: var(--ks-color-border-choice)"
+  end
+
   private
 
   def block(selector)
