@@ -2807,6 +2807,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bucket"), "gap: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_bucket_series_gap_is_4_spacing_units
+    assert_includes block(".ks-bucket-series"), "gap: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)

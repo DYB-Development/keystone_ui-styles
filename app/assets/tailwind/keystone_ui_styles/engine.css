@@ -947,4 +947,8 @@
   .ks-bucket {
     @apply gap-[calc(var(--ks-spacing)*1)];
   }
+
+  .ks-bucket-series {
+    @apply gap-[calc(var(--ks-spacing)*4)];
+  }
 }
