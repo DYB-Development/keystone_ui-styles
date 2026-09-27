@@ -655,6 +655,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-color-success-100: var\(--color-green-100\)/m, self.class.compiled)
   end
 
+  def test_color_success_300_defaults_to_var_color_green_300
+    assert_match(/:root \{[^}]*--ks-color-success-300: var\(--color-green-300\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
