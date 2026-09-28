@@ -1348,7 +1348,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_option_dark_defaults_to_var_color_gray_100
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option-dark: var\(--color-gray-100\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option-dark: var\(--ks-color-text-dark\)/m, self.class.compiled)
   end
 
   def test_radio_card_hint_margin_top_is_1_spacing_units

@@ -158,7 +158,7 @@
     --ks-color-selected: var(--color-accent-50);
     --ks-color-selected-dark: var(--color-zinc-800);
     --ks-color-text-option: var(--ks-color-text);
-    --ks-color-text-option-dark: var(--color-gray-100);
+    --ks-color-text-option-dark: var(--ks-color-text-dark);
     --ks-color-text-option-muted: var(--color-surface-500);
     --ks-color-text-option-muted-dark: var(--color-gray-400);
     --ks-color-drop-active: var(--color-accent-50);
