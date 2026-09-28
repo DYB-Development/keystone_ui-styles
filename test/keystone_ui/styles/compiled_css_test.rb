@@ -3631,6 +3631,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 64rem.*?left: 0px/m, block(".ks-nav-dropdown-menu"))
   end
 
+  def test_nav_dropdown_menu_margin_top_is_1_spacing_units_on_large_screens
+    assert_match(/width >= 64rem.*?margin-top: calc\(var\(--ks-spacing\) \* 1\)/m, block(".ks-nav-dropdown-menu"))
+  end
+
   private
 
   def block(selector)
