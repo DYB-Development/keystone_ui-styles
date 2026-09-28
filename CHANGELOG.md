@@ -3,6 +3,10 @@
 ## [Unreleased]
 
 ### Added
+- Classes for the bottom nav, nav dropdown, nav item, navbar title, mobile header and settings link, which draw from `--ks-` variables and have visible colours in a host that sets none.
+- The navigation colours read the old `--base-*` variables first, so a host that set them keeps its nav colours.
+
+### Added
 - Classes for the stat card, chart card, card link, call to action banner, feature grid, hero, data table, code, accordion, disclosure, tab switcher, progress, funnel, bucket, pipeline and swipe deck, which draw what those components draw today from `--ks-` variables.
 - The funnel's five step colours and the bucket's over-goal colours are colour roles a look can set.
 
