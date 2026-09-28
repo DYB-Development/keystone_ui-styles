@@ -3235,6 +3235,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav"), "display: flex"
   end
 
+  def test_bottom_nav_items_are_spaced_evenly
+    assert_includes block(".ks-bottom-nav"), "justify-content: space-around"
+  end
+
   private
 
   def block(selector)
