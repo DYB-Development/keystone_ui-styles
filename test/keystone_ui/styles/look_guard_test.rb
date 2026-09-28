@@ -11,7 +11,15 @@ class KeystoneUi::Styles::LookGuardTest < Minitest::Test
     assert_empty fixed_look_values
   end
 
+  def test_every_ks_variable_a_class_reads_has_a_default
+    assert_empty components_layer.scan(/--ks-[\w-]*[\w]/).uniq - defaults
+  end
+
   private
+
+  def defaults
+    File.read(STYLESHEET)[/@layer base \{\n  :root \{(.*?)\n  \}/m, 1].scan(/(--ks-[\w-]+):/).flatten
+  end
 
   def fixed_look_values
     ks_class_tokens.filter_map do |selector, token|

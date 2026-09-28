@@ -68,6 +68,7 @@
 @layer base {
   :root {
     --ks-radius-control: var(--radius-lg);
+    --ks-font-body: inherit;
     --ks-font-weight-strong: var(--font-weight-semibold);
     --ks-border-width-control: 0px;
     --ks-spacing: var(--spacing);
