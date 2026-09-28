@@ -1952,7 +1952,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_display_dark_defaults_to_var_color_white
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display-dark: var\(--color-white\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display-dark: var\(--ks-color-text-dark\)/m, self.class.compiled)
   end
 
   def test_cta_banner_subtitle_margin_bottom_is_8_spacing_units
