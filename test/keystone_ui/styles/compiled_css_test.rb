@@ -3247,6 +3247,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 64rem.*?display: none/m, block(".ks-bottom-nav"))
   end
 
+  def test_bottom_nav_fill_reads_the_nav_colour_role
+    assert_includes block(".ks-bottom-nav"), "background-color: var(--ks-color-nav)"
+  end
+
   private
 
   def block(selector)

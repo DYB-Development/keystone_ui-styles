@@ -1102,6 +1102,6 @@
   }
 
   .ks-bottom-nav {
-    @apply fixed bottom-0 left-0 right-0 z-40 flex justify-around pb-[env(safe-area-inset-bottom)] lg:hidden;
+    @apply fixed bottom-0 left-0 right-0 z-40 flex justify-around pb-[env(safe-area-inset-bottom)] lg:hidden bg-(color:--ks-color-nav);
   }
 }
