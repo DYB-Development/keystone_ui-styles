@@ -159,7 +159,7 @@
     --ks-color-selected-dark: var(--color-zinc-800);
     --ks-color-text-option: var(--ks-color-text);
     --ks-color-text-option-dark: var(--ks-color-text-dark);
-    --ks-color-text-option-muted: var(--color-surface-500);
+    --ks-color-text-option-muted: var(--ks-color-text-muted);
     --ks-color-text-option-muted-dark: var(--color-gray-400);
     --ks-color-drop-active: var(--color-accent-50);
     --ks-color-drop-active-dark: color-mix(in oklab, var(--color-accent-900) 10%, transparent);
