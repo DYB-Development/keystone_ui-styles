@@ -3647,6 +3647,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-menu"), "padding: 0px"
   end
 
+  def test_nav_dropdown_menu_link_link_fills_its_row
+    assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "display: block"
+  end
+
   private
 
   def block(selector)
