@@ -2600,7 +2600,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_icon_soft_defaults_to_var_color_surface_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon-soft: var\(--color-surface-400\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon-soft: var\(--ks-color-icon\)/m, self.class.compiled)
   end
 
   def test_tab_bar_margin_bottom_is_8_spacing_units
