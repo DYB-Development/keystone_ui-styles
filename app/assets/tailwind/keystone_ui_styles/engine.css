@@ -1138,4 +1138,8 @@
   .ks-nav-dropdown-caret {
     @apply size-4 transition-transform duration-200 ease-[ease];
   }
+
+  .ks-nav-dropdown:has(.ks-nav-dropdown-menu:not(.hidden)) .ks-nav-dropdown-caret {
+    transform: rotate(180deg);
+  }
 }

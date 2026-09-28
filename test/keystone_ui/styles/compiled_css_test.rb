@@ -3563,6 +3563,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-caret"), "transition-timing-function: ease"
   end
 
+  def test_nav_dropdown_caret_turns_while_its_menu_is_open
+    assert_match(/\.ks-nav-dropdown:has\(\.ks-nav-dropdown-menu:not\(\.hidden\)\) \.ks-nav-dropdown-caret \{.*?transform: rotate\(180deg\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
