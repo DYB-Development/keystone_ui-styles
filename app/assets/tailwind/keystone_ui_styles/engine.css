@@ -1072,4 +1072,8 @@
   .ks-swipe-button {
     @apply rounded-(--ks-radius-pill) border-[calc(var(--ks-border-width)*2)] border-(color:--ks-color-border-strong) text-(color:--ks-color-close) dark:border-(color:--ks-color-border-strong-dark);
   }
+
+  .ks-swipe-button-reject {
+    @apply hover:border-(color:--ks-color-danger-400);
+  }
 }
