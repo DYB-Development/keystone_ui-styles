@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-09-28
+
 ### Changed
 - Near-duplicate colour roles now default to one base role each, so a look recolours every component that shares a purpose by setting one variable. Every role still exists, so a look that sets one on its own still applies.
 - The base text, muted text, secondary text, label, icon, border, strong border, surface, overlay and hover roles draw from the surface scale instead of gray and zinc, so keystone_ui-colors' per-account palette reaches every component.
