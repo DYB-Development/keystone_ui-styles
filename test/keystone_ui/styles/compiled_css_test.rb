@@ -1968,7 +1968,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_display_muted_defaults_to_var_color_surface_500
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display-muted: var\(--color-surface-500\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display-muted: var\(--ks-color-text-muted\)/m, self.class.compiled)
   end
 
   def test_color_text_display_muted_dark_defaults_to_var_color_surface_400
