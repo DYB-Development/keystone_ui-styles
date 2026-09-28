@@ -1120,7 +1120,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_border_strong_dark_defaults_to_var_color_zinc_600
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-strong-dark: var\(--color-zinc-600\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-strong-dark: var\(--color-surface-600\)/m, self.class.compiled)
   end
 
   def test_color_focus_defaults_to_var_color_accent_500
