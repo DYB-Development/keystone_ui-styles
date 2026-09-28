@@ -3619,6 +3619,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 64rem.*?min-width: 200px/m, block(".ks-nav-dropdown-menu"))
   end
 
+  def test_nav_dropdown_menu_position_floats_below_its_trigger_on_large_screens
+    assert_match(/width >= 64rem.*?position: absolute/m, block(".ks-nav-dropdown-menu"))
+  end
+
   private
 
   def block(selector)
