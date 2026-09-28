@@ -3587,6 +3587,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-nav-menu-mobile-dark\)/m, block(".ks-nav-dropdown-menu"))
   end
 
+  def test_nav_dropdown_menu_fill_reads_the_nav_colour_role_on_large_screens
+    assert_match(/width >= 64rem.*?background-color: var\(--ks-color-nav\)/m, block(".ks-nav-dropdown-menu"))
+  end
+
   private
 
   def block(selector)
