@@ -3111,6 +3111,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-swipe-button"), "color: var(--ks-color-close)"
   end
 
+  def test_swipe_button_border_reads_the_border_strong_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-strong-dark\)/m, block(".ks-swipe-button"))
+  end
+
   private
 
   def block(selector)
