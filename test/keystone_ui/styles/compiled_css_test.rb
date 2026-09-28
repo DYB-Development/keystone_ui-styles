@@ -3375,6 +3375,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-trigger"), "display: flex"
   end
 
+  def test_nav_dropdown_trigger_content_is_centred_down
+    assert_includes block(".ks-nav-dropdown-trigger"), "align-items: center"
+  end
+
   private
 
   def block(selector)
