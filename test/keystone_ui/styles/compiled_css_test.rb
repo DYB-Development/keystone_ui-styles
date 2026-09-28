@@ -3567,6 +3567,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-nav-dropdown:has\(\.ks-nav-dropdown-menu:not\(\.hidden\)\) \.ks-nav-dropdown-caret \{.*?transform: rotate\(180deg\)/m, self.class.compiled)
   end
 
+  def test_nav_dropdown_menu_position_is_relative_on_small_screens
+    assert_includes block(".ks-nav-dropdown-menu"), "position: relative"
+  end
+
   private
 
   def block(selector)

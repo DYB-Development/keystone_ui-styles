@@ -1142,4 +1142,8 @@
   .ks-nav-dropdown:has(.ks-nav-dropdown-menu:not(.hidden)) .ks-nav-dropdown-caret {
     transform: rotate(180deg);
   }
+
+  .ks-nav-dropdown-menu {
+    @apply relative;
+  }
 }
