@@ -3355,6 +3355,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav-label"), "font-weight: var(--ks-font-weight-medium)"
   end
 
+  def test_bottom_nav_label_label_has_no_extra_line_height
+    assert_includes block(".ks-bottom-nav-label"), "line-height: 1"
+  end
+
   private
 
   def block(selector)
