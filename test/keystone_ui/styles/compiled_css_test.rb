@@ -1368,7 +1368,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_option_muted_dark_defaults_to_var_color_gray_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option-muted-dark: var\(--color-gray-400\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option-muted-dark: var\(--ks-color-text-muted-dark\)/m, self.class.compiled)
   end
 
   def test_option_card_gap_is_2_spacing_units
