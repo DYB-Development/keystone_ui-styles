@@ -3188,7 +3188,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_nav_menu_mobile_defaults_to_var_base_bg_base_var_color_white
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-menu-mobile: var\(--base-bg-base, var\(--color-white\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-menu-mobile: var\(--base-bg-base, var\(--ks-color-surface\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_menu_mobile_dark_defaults_to_var_base_bg_base_var_color_zinc_900
