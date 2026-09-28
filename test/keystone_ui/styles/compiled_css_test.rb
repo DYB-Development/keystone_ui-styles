@@ -3615,6 +3615,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 64rem.*?--tw-shadow: var\(--ks-shadow-menu\)/m, block(".ks-nav-dropdown-menu"))
   end
 
+  def test_nav_dropdown_menu_width_is_at_least_200_pixels_on_large_screens
+    assert_match(/width >= 64rem.*?min-width: 200px/m, block(".ks-nav-dropdown-menu"))
+  end
+
   private
 
   def block(selector)
