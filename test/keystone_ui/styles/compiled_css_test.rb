@@ -4091,6 +4091,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-color-picker-label"), "margin-bottom: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_settings_link_chevron_text_reads_the_close_colour_role
+    assert_includes block(".ks-settings-link-chevron"), "color: var(--ks-color-close)"
+  end
+
   private
 
   def block(selector)
