@@ -280,7 +280,7 @@
   }
 
   .ks-input {
-    @apply block w-full rounded-[calc(var(--ks-radius-control)*0.75)] border-(length:--ks-border-width) border-(color:--ks-color-border-control) bg-(color:--ks-color-surface) px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-sm text-(color:--ks-color-text) placeholder:text-(color:--ks-color-icon) focus:outline-none focus:ring-(length:--ks-border-width) focus:border-accent-500 focus:ring-accent-500 dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-control-dark) dark:text-(color:--ks-color-text-dark) dark:placeholder:text-(color:--ks-color-icon-dark) dark:focus:border-accent-400 dark:focus:ring-accent-400;
+    @apply block w-full rounded-[calc(var(--ks-radius-control)*0.75)] border-(length:--ks-border-width) border-(color:--ks-color-border-control) bg-(color:--ks-color-surface) px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-sm text-(color:--ks-color-text) placeholder:text-(color:--ks-color-icon) focus:outline-none focus:ring-(length:--ks-border-width) focus:border-(color:--ks-color-focus) focus:ring-accent-500 dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-control-dark) dark:text-(color:--ks-color-text-dark) dark:placeholder:text-(color:--ks-color-icon-dark) dark:focus:border-accent-400 dark:focus:ring-accent-400;
   }
 
   .ks-input-disabled {

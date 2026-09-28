@@ -3839,6 +3839,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\&:focus.*?calc\(var\(--ks-border-width\) \+ var\(--tw-ring-offset-width\)\)/m, block(".ks-input"))
   end
 
+  def test_input_border_reads_the_focus_colour_role_on_focus
+    assert_match(/\&:focus.*?border-color: var\(--ks-color-focus\)/m, block(".ks-input"))
+  end
+
   private
 
   def block(selector)
