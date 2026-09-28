@@ -3435,6 +3435,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\&\.active.*?\scolor: var\(--ks-color-nav-active\)/m, block(".ks-nav-dropdown-trigger"))
   end
 
+  def test_nav_dropdown_trigger_weight_reads_the_heading_font_weight_variable_when_marked_active
+    assert_match(/\&\.active.*?font-weight: var\(--ks-font-weight-heading\)/m, block(".ks-nav-dropdown-trigger"))
+  end
+
   private
 
   def block(selector)
