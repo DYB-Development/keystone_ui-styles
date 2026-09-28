@@ -300,7 +300,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_checkbox_uses_the_accent_color
-    assert_includes rule(".ks-checkbox"), "color: var(--color-accent-600)"
+    assert_includes rule(".ks-checkbox"), "color: var(--ks-color-accent)"
   end
 
   def test_defines_every_surface_color_variable_even_when_no_class_uses_it
