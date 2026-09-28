@@ -3223,6 +3223,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav"), "left: 0px"
   end
 
+  def test_bottom_nav_right_edge_sits_at_the_right_of_the_screen
+    assert_includes block(".ks-bottom-nav"), "right: 0px"
+  end
+
   private
 
   def block(selector)
