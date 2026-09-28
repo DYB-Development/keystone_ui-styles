@@ -1204,4 +1204,8 @@
   .ks-grid-gap-x-sm {
     @apply gap-x-[calc(var(--ks-spacing)*3)];
   }
+
+  .ks-grid-gap-y-sm {
+    @apply gap-y-[calc(var(--ks-spacing)*3)];
+  }
 }
