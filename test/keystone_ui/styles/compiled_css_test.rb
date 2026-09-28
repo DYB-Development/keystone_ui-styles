@@ -3859,6 +3859,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-input-disabled"), "background-color: var(--ks-color-hover)"
   end
 
+  def test_input_disabled_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-input-disabled"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)
