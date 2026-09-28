@@ -4075,6 +4075,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-form(?![\w-]).*?:not\(:last-child\).*?calc\(var\(--ks-spacing\) \* 6\)/m, self.class.compiled)
   end
 
+  def test_form_field_vertical_gap_between_children_is_1_spacing_units
+    assert_match(/\.ks-form-field(?![\w-]).*?:not\(:last-child\).*?calc\(var\(--ks-spacing\) \* 1\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

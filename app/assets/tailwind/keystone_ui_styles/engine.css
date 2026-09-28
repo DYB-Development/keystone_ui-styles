@@ -1248,4 +1248,8 @@
   .ks-form {
     @apply space-y-[calc(var(--ks-spacing)*6)];
   }
+
+  .ks-form-field {
+    @apply space-y-[calc(var(--ks-spacing)*1)];
+  }
 }
