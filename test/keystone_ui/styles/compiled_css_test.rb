@@ -3275,6 +3275,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav-item"), "display: flex"
   end
 
+  def test_bottom_nav_item_width_shares_the_bar_equally
+    assert_includes block(".ks-bottom-nav-item"), "flex: 1"
+  end
+
   private
 
   def block(selector)

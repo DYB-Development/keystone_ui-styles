@@ -1116,6 +1116,6 @@
   }
 
   .ks-bottom-nav-item {
-    @apply flex;
+    @apply flex flex-1;
   }
 }
