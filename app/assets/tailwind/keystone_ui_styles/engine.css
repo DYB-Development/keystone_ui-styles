@@ -135,7 +135,7 @@
     --ks-color-backdrop: color-mix(in oklab, var(--color-black) 60%, transparent);
     --ks-color-overlay: var(--color-white);
     --ks-color-overlay-dark: var(--color-surface-800);
-    --ks-color-text-heading: var(--color-gray-900);
+    --ks-color-text-heading: var(--ks-color-text);
     --ks-color-text-heading-dark: var(--color-gray-200);
     --ks-color-close: var(--color-gray-400);
     --ks-color-close-hover: var(--color-gray-600);
