@@ -1070,6 +1070,6 @@
   }
 
   .ks-swipe-button {
-    @apply rounded-(--ks-radius-pill) border-[calc(var(--ks-border-width)*2)];
+    @apply rounded-(--ks-radius-pill) border-[calc(var(--ks-border-width)*2)] border-(color:--ks-color-border-strong);
   }
 }
