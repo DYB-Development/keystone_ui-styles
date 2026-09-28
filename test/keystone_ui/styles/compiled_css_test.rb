@@ -2256,7 +2256,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_table_body_defaults_to_var_color_white
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-body: var\(--color-white\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-body: var\(--ks-color-surface\)/m, self.class.compiled)
   end
 
   def test_color_table_body_dark_defaults_to_color_mix_in_oklab_var_color_gray_800_50_transparent
