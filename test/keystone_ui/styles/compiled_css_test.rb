@@ -3711,6 +3711,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-nav-link-dark\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
   end
 
+  def test_nav_dropdown_menu_link_fill_reads_the_nav_hover_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?background-color: var\(--ks-color-nav-hover-dark\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
+  end
+
   private
 
   def block(selector)
