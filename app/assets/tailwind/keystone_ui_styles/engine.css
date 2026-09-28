@@ -234,6 +234,7 @@
     --ks-color-nav-link: var(--base-text, var(--color-gray-900));
     --ks-color-nav-link-dark: var(--base-text, var(--color-white));
     --ks-color-nav-indicator: var(--border-primary, var(--color-accent-600));
+    --ks-color-nav-indicator-dark: var(--border-primary, var(--color-accent-400));
   }
 }
 
