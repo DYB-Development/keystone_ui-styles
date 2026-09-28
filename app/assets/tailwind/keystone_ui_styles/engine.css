@@ -200,7 +200,7 @@
     --ks-color-code: var(--color-surface-900);
     --ks-color-code-dark: var(--color-black);
     --ks-color-text-code: var(--color-surface-100);
-    --ks-color-text-body: var(--color-surface-600);
+    --ks-color-text-body: var(--ks-color-text-secondary);
     --ks-color-text-body-dark: var(--color-surface-400);
     --ks-color-icon-soft: var(--color-surface-400);
     --ks-color-track: var(--color-surface-200);
