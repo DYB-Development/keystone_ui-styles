@@ -385,7 +385,7 @@
   }
 
   .ks-section-action {
-    @apply text-sm text-(color:--ks-color-link) hover:text-(color:--ks-color-link-strong-hover) dark:text-(color:--ks-color-link-dark) dark:hover:text-accent-300;
+    @apply text-sm text-(color:--ks-color-link) hover:text-(color:--ks-color-link-strong-hover) dark:text-(color:--ks-color-link-dark) dark:hover:text-(color:--ks-color-link-strong-hover-dark);
   }
 
   .ks-card {
