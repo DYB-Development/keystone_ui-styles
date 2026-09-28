@@ -3099,6 +3099,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-swipe-button"), "border-radius: var(--ks-radius-pill)"
   end
 
+  def test_swipe_button_border_width_is_2_times_the_border_width_variable
+    assert_includes block(".ks-swipe-button"), "border-width: calc(var(--ks-border-width) * 2)"
+  end
+
   private
 
   def block(selector)
