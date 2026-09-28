@@ -3855,6 +3855,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-focus-dark: var\(--color-accent-400\)/m, self.class.compiled)
   end
 
+  def test_input_disabled_fill_reads_the_hover_colour_role
+    assert_includes block(".ks-input-disabled"), "background-color: var(--ks-color-hover)"
+  end
+
   private
 
   def block(selector)
