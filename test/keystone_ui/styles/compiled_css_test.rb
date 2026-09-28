@@ -1188,7 +1188,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_hover_raised_dark_defaults_to_var_color_zinc_700
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-raised-dark: var\(--color-zinc-700\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-raised-dark: var\(--ks-color-hover-dark\)/m, self.class.compiled)
   end
 
   def test_theme_toggle_option_fill_reads_the_accent_colour_role_when_pressed
