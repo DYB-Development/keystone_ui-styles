@@ -3627,6 +3627,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 64rem.*?top: 100%/m, block(".ks-nav-dropdown-menu"))
   end
 
+  def test_nav_dropdown_menu_left_edge_lines_up_with_its_trigger_on_large_screens
+    assert_match(/width >= 64rem.*?left: 0px/m, block(".ks-nav-dropdown-menu"))
+  end
+
   private
 
   def block(selector)
