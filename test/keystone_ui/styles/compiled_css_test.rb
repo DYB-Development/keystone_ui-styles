@@ -2592,7 +2592,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_body_dark_defaults_to_var_color_surface_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-body-dark: var\(--color-surface-400\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-body-dark: var\(--ks-color-text-secondary-dark\)/m, self.class.compiled)
   end
 
   def test_disclosure_icon_text_reads_the_icon_soft_colour_role
