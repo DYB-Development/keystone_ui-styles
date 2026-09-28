@@ -3483,6 +3483,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-item"), "width: 100%"
   end
 
+  def test_nav_item_label_is_not_underlined
+    assert_includes block(".ks-nav-item"), "text-decoration-line: none"
+  end
+
   private
 
   def block(selector)
