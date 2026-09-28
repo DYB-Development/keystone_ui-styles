@@ -4095,6 +4095,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-settings-link-chevron"), "color: var(--ks-color-close)"
   end
 
+  def test_page_title_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-page-title"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
   private
 
   def block(selector)

@@ -1268,4 +1268,8 @@
   .ks-settings-link-chevron {
     @apply text-(color:--ks-color-close);
   }
+
+  .ks-page-title {
+    @apply font-(weight:--ks-font-weight-heading);
+  }
 }
