@@ -3383,6 +3383,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-trigger"), "justify-content: space-between"
   end
 
+  def test_nav_dropdown_trigger_text_is_small
+    assert_includes block(".ks-nav-dropdown-trigger"), "font-size: var(--text-sm)"
+  end
+
   private
 
   def block(selector)
