@@ -467,7 +467,7 @@
   }
 
   .ks-badge-neutral {
-    @apply bg-gray-100 text-gray-700 dark:bg-zinc-700 dark:text-gray-300;
+    @apply bg-(color:--ks-color-badge-neutral) text-gray-700 dark:bg-zinc-700 dark:text-gray-300;
   }
 
   .ks-badge-success {

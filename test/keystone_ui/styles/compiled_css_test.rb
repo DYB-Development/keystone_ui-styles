@@ -309,7 +309,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
 
   def test_badge_classes_match_keystone_ui_badge
     assert_includes rule(".ks-badge"), "border-radius: var(--ks-radius-pill)"
-    assert_includes rule(".ks-badge-neutral"), "background-color: var(--color-gray-100)"
+    assert_includes rule(".ks-badge-neutral"), "background-color: var(--ks-color-badge-neutral)"
     assert_includes rule(".ks-badge-success"), "background-color: var(--ks-color-success-100)"
     assert_includes rule(".ks-badge-danger"), "background-color: var(--ks-color-danger-100)"
     assert_includes rule(".ks-badge-warning"), "background-color: var(--ks-color-warning-100)"
