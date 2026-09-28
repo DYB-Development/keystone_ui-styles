@@ -1168,6 +1168,6 @@
   }
 
   .ks-settings-link {
-    @apply px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*3)];
+    @apply px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-text-option);
   }
 }

@@ -3779,6 +3779,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-settings-link"), "padding-block: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_settings_link_text_reads_the_text_option_colour_role
+    assert_includes block(".ks-settings-link"), "color: var(--ks-color-text-option)"
+  end
+
   private
 
   def block(selector)
