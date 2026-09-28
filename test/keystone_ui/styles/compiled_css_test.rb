@@ -3959,6 +3959,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-card-link"), "font-weight: var(--ks-font-weight-medium)"
   end
 
+  def test_card_link_text_reads_the_link_strong_hover_colour_role_on_hover
+    assert_match(/:hover.*?\scolor: var\(--ks-color-link-strong-hover\)/m, block(".ks-card-link"))
+  end
+
   private
 
   def block(selector)

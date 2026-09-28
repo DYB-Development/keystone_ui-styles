@@ -415,7 +415,7 @@
   }
 
   .ks-card-link {
-    @apply text-sm font-(weight:--ks-font-weight-medium) no-underline text-(color:--ks-color-link) hover:text-accent-900 dark:text-accent-400;
+    @apply text-sm font-(weight:--ks-font-weight-medium) no-underline text-(color:--ks-color-link) hover:text-(color:--ks-color-link-strong-hover) dark:text-accent-400;
   }
 
   .ks-alert {
