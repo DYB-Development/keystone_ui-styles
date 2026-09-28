@@ -285,7 +285,7 @@
   }
 
   .ks-input-disabled {
-    @apply cursor-not-allowed bg-(color:--ks-color-hover) text-(color:--ks-color-text-muted) dark:bg-zinc-800 dark:text-gray-400;
+    @apply cursor-not-allowed bg-(color:--ks-color-hover) text-(color:--ks-color-text-muted) dark:bg-(color:--ks-color-hover-dark) dark:text-gray-400;
   }
 
   .ks-label {
