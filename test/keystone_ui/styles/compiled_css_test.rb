@@ -4087,6 +4087,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-theme-toggle"), "gap: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_color_picker_label_margin_bottom_is_1_spacing_units
+    assert_includes block(".ks-color-picker-label"), "margin-bottom: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)

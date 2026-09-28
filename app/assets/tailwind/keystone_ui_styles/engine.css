@@ -1260,4 +1260,8 @@
   .ks-theme-toggle {
     @apply gap-[calc(var(--ks-spacing)*1)];
   }
+
+  .ks-color-picker-label {
+    @apply mb-[calc(var(--ks-spacing)*1)];
+  }
 }
