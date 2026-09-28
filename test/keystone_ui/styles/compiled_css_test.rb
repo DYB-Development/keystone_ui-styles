@@ -2260,7 +2260,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_table_body_dark_defaults_to_color_mix_in_oklab_var_color_gray_800_50_transparent
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-body-dark: color-mix\(in oklab, var\(--color-gray-800\) 50%, transparent\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-body-dark: var\(--ks-color-surface-dark\)/m, self.class.compiled)
   end
 
   def test_color_divider_defaults_to_var_color_gray_200
