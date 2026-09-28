@@ -3371,6 +3371,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 64rem.*?width: auto/m, block(".ks-nav-dropdown"))
   end
 
+  def test_nav_dropdown_trigger_content_is_laid_out_with_flex
+    assert_includes block(".ks-nav-dropdown-trigger"), "display: flex"
+  end
+
   private
 
   def block(selector)

@@ -1126,4 +1126,8 @@
   .ks-nav-dropdown {
     @apply relative w-full lg:w-auto;
   }
+
+  .ks-nav-dropdown-trigger {
+    @apply flex;
+  }
 }
