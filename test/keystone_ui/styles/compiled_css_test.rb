@@ -1599,6 +1599,1538 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-color-picker-panel"))
   end
 
+  def test_radius_pill_defaults_to_calc_infinity_1px
+    assert_match(/@layer base \{.*?:root \{.*?--ks-radius-pill: calc\(infinity \* 1px\)/m, self.class.compiled)
+  end
+
+  def test_color_success_600_defaults_to_var_color_green_600
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-success-600: var\(--color-green-600\)/m, self.class.compiled)
+  end
+
+  def test_color_warning_600_defaults_to_var_color_yellow_600
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-warning-600: var\(--color-yellow-600\)/m, self.class.compiled)
+  end
+
+  def test_color_danger_600_defaults_to_var_color_red_600
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-danger-600: var\(--color-red-600\)/m, self.class.compiled)
+  end
+
+  def test_color_info_600_defaults_to_var_color_accent_600
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-info-600: var\(--color-accent-600\)/m, self.class.compiled)
+  end
+
+  def test_color_danger_500_defaults_to_var_color_red_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-danger-500: var\(--color-red-500\)/m, self.class.compiled)
+  end
+
+  def test_metric_card_radius_is_1_5_of_the_surface_radius
+    assert_includes block(".ks-metric-card"), "border-radius: calc(var(--ks-radius-surface) * 1.5)"
+  end
+
+  def test_metric_card_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-metric-card"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_metric_card_border_reads_the_border_colour_role
+    assert_includes block(".ks-metric-card"), "border-color: var(--ks-color-border)"
+  end
+
+  def test_metric_card_fill_reads_the_overlay_colour_role
+    assert_includes block(".ks-metric-card"), "background-color: var(--ks-color-overlay)"
+  end
+
+  def test_metric_card_padding_is_6_spacing_units
+    assert_includes block(".ks-metric-card"), "padding: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_metric_card_border_reads_the_border_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-metric-card"))
+  end
+
+  def test_metric_card_fill_reads_the_overlay_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-overlay-dark\)/m, block(".ks-metric-card"))
+  end
+
+  def test_stat_card_header_gap_is_2_spacing_units
+    assert_includes block(".ks-stat-card-header"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_stat_card_label_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-stat-card-label"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_stat_card_label_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-stat-card-label"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_stat_card_label_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-stat-card-label"))
+  end
+
+  def test_stat_card_value_margin_top_is_1_spacing_units
+    assert_includes block(".ks-stat-card-value"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_stat_card_value_weight_is_one_step_above_the_heading_font_weight
+    assert_includes block(".ks-stat-card-value"), "font-weight: calc(var(--ks-font-weight-heading) + 100)"
+  end
+
+  def test_stat_card_suffix_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-stat-card-suffix"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_stat_card_suffix_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-stat-card-suffix"))
+  end
+
+  def test_stat_card_disclosure_margin_top_is_2_spacing_units
+    assert_includes block(".ks-stat-card-disclosure"), "margin-top: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_stat_card_disclosure_radius_reads_the_surface_radius
+    assert_includes block(".ks-stat-card-disclosure"), "border-radius: var(--ks-radius-surface)"
+  end
+
+  def test_stat_card_disclosure_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-stat-card-disclosure"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_stat_card_disclosure_border_reads_the_border_colour_role
+    assert_includes block(".ks-stat-card-disclosure"), "border-color: var(--ks-color-border)"
+  end
+
+  def test_stat_card_disclosure_fill_reads_the_overlay_colour_role
+    assert_includes block(".ks-stat-card-disclosure"), "background-color: var(--ks-color-overlay)"
+  end
+
+  def test_stat_card_disclosure_padding_is_3_spacing_units
+    assert_includes block(".ks-stat-card-disclosure"), "padding: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_stat_card_disclosure_text_reads_the_text_secondary_colour_role
+    assert_includes block(".ks-stat-card-disclosure"), "color: var(--ks-color-text-secondary)"
+  end
+
+  def test_stat_card_disclosure_shadow_reads_the_overlay_shadow_variable
+    assert_includes block(".ks-stat-card-disclosure"), "--tw-shadow: var(--ks-shadow-overlay)"
+  end
+
+  def test_stat_card_disclosure_border_reads_the_border_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-stat-card-disclosure"))
+  end
+
+  def test_stat_card_disclosure_fill_reads_the_overlay_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-overlay-dark\)/m, block(".ks-stat-card-disclosure"))
+  end
+
+  def test_stat_card_disclosure_text_reads_the_text_secondary_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-secondary-dark\)/m, block(".ks-stat-card-disclosure"))
+  end
+
+  def test_stat_card_disclosure_vertical_gap_between_children_is_1_spacing_units
+    assert_match(/\.ks-stat-card-disclosure(?![\w-]).*?:not\(:last-child\).*?calc\(var\(--ks-spacing\) \* 1\)/m, self.class.compiled)
+  end
+
+  def test_stat_card_emphasis_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-stat-card-emphasis"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_stat_card_emphasis_text_reads_the_text_label_colour_role
+    assert_includes block(".ks-stat-card-emphasis"), "color: var(--ks-color-text-label)"
+  end
+
+  def test_stat_card_emphasis_text_reads_the_text_label_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-label-dark\)/m, block(".ks-stat-card-emphasis"))
+  end
+
+  def test_stat_card_change_margin_top_is_1_spacing_units
+    assert_includes block(".ks-stat-card-change"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_stat_card_change_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-stat-card-change"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_stat_card_info_text_reads_the_close_colour_role
+    assert_includes block(".ks-stat-card-info"), "color: var(--ks-color-close)"
+  end
+
+  def test_stat_card_info_text_reads_the_link_colour_role_on_hover
+    assert_match(/:hover.*?color: var\(--ks-color-link\)/m, block(".ks-stat-card-info"))
+  end
+
+  def test_stat_card_info_text_reads_the_link_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?color: var\(--ks-color-link-dark\)/m, block(".ks-stat-card-info"))
+  end
+
+  def test_tone_neutral_text_reads_the_text_colour_role
+    assert_includes block(".ks-tone-neutral"), "color: var(--ks-color-text)"
+  end
+
+  def test_tone_neutral_text_reads_the_text_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-tone-neutral"))
+  end
+
+  def test_tone_muted_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-tone-muted"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_tone_muted_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-tone-muted"))
+  end
+
+  def test_tone_success_text_reads_the_success_600_colour_role
+    assert_includes block(".ks-tone-success"), "color: var(--ks-color-success-600)"
+  end
+
+  def test_tone_success_text_reads_the_success_400_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-success-400\)/m, block(".ks-tone-success"))
+  end
+
+  def test_tone_danger_text_reads_the_danger_600_colour_role
+    assert_includes block(".ks-tone-danger"), "color: var(--ks-color-danger-600)"
+  end
+
+  def test_tone_danger_text_reads_the_danger_400_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-danger-400\)/m, block(".ks-tone-danger"))
+  end
+
+  def test_tone_warning_text_reads_the_warning_600_colour_role
+    assert_includes block(".ks-tone-warning"), "color: var(--ks-color-warning-600)"
+  end
+
+  def test_tone_warning_text_reads_the_warning_400_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-warning-400\)/m, block(".ks-tone-warning"))
+  end
+
+  def test_tone_info_text_reads_the_info_600_colour_role
+    assert_includes block(".ks-tone-info"), "color: var(--ks-color-info-600)"
+  end
+
+  def test_tone_info_text_reads_the_info_400_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-info-400\)/m, block(".ks-tone-info"))
+  end
+
+  def test_chart_card_title_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-chart-card-title"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_chart_card_title_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-chart-card-title"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_chart_card_title_margin_bottom_is_4_spacing_units
+    assert_includes block(".ks-chart-card-title"), "margin-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_chart_card_title_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-chart-card-title"))
+  end
+
+  def test_link_card_radius_reads_the_surface_radius
+    assert_includes block(".ks-link-card"), "border-radius: var(--ks-radius-surface)"
+  end
+
+  def test_link_card_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-link-card"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_link_card_border_reads_the_border_colour_role
+    assert_includes block(".ks-link-card"), "border-color: var(--ks-color-border)"
+  end
+
+  def test_link_card_fill_reads_the_surface_colour_role
+    assert_includes block(".ks-link-card"), "background-color: var(--ks-color-surface)"
+  end
+
+  def test_link_card_border_reads_the_hover_border_colour_role_on_hover
+    assert_match(/:hover.*?border-color: var\(--ks-color-hover-border\)/m, block(".ks-link-card"))
+  end
+
+  def test_link_card_border_reads_the_border_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-link-card"))
+  end
+
+  def test_link_card_fill_reads_the_surface_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-surface-dark\)/m, block(".ks-link-card"))
+  end
+
+  def test_color_hover_border_defaults_to_color_mix_in_oklab_var_color_accent_500_50_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-border: color-mix\(in oklab, var\(--color-accent-500\) 50%, transparent\)/m, self.class.compiled)
+  end
+
+  def test_link_card_shadow_shadow_reads_the_surface_shadow_variable
+    assert_includes block(".ks-link-card-shadow"), "--tw-shadow: var(--ks-shadow-surface)"
+  end
+
+  def test_link_card_padding_sm_padding_is_3_spacing_units
+    assert_includes block(".ks-link-card-padding-sm"), "padding: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_link_card_padding_md_padding_is_4_spacing_units
+    assert_includes block(".ks-link-card-padding-md"), "padding: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_link_card_padding_lg_padding_is_6_spacing_units
+    assert_includes block(".ks-link-card-padding-lg"), "padding: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_cta_banner_radius_is_2_of_the_surface_radius
+    assert_includes block(".ks-cta-banner"), "border-radius: calc(var(--ks-radius-surface) * 2)"
+  end
+
+  def test_cta_banner_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-cta-banner"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_cta_banner_padding_inline_is_6_spacing_units
+    assert_includes block(".ks-cta-banner"), "padding-inline: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_cta_banner_padding_block_is_12_spacing_units
+    assert_includes block(".ks-cta-banner"), "padding-block: calc(var(--ks-spacing) * 12)"
+  end
+
+  def test_cta_banner_border_reads_the_border_subtle_colour_role
+    assert_includes block(".ks-cta-banner"), "border-color: var(--ks-color-border-subtle)"
+  end
+
+  def test_cta_banner_fill_reads_the_fill_muted_colour_role
+    assert_includes block(".ks-cta-banner"), "background-color: var(--ks-color-fill-muted)"
+  end
+
+  def test_cta_banner_padding_inline_is_16_spacing_units_on_large_screens
+    assert_match(/width >= 64rem.*?padding-inline: calc\(var\(--ks-spacing\) \* 16\)/m, block(".ks-cta-banner"))
+  end
+
+  def test_cta_banner_padding_block_is_16_spacing_units_on_large_screens
+    assert_match(/width >= 64rem.*?padding-block: calc\(var\(--ks-spacing\) \* 16\)/m, block(".ks-cta-banner"))
+  end
+
+  def test_cta_banner_border_reads_the_border_subtle_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-subtle-dark\)/m, block(".ks-cta-banner"))
+  end
+
+  def test_cta_banner_fill_reads_the_fill_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-fill-muted-dark\)/m, block(".ks-cta-banner"))
+  end
+
+  def test_color_border_subtle_defaults_to_var_color_surface_200
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-subtle: var\(--color-surface-200\)/m, self.class.compiled)
+  end
+
+  def test_color_border_subtle_dark_defaults_to_var_color_surface_700
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-subtle-dark: var\(--color-surface-700\)/m, self.class.compiled)
+  end
+
+  def test_color_fill_muted_defaults_to_var_color_surface_50
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-fill-muted: var\(--color-surface-50\)/m, self.class.compiled)
+  end
+
+  def test_color_fill_muted_dark_defaults_to_var_color_surface_800
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-fill-muted-dark: var\(--color-surface-800\)/m, self.class.compiled)
+  end
+
+  def test_cta_banner_title_margin_bottom_is_4_spacing_units
+    assert_includes block(".ks-cta-banner-title"), "margin-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_cta_banner_title_weight_is_one_step_above_the_heading_font_weight
+    assert_includes block(".ks-cta-banner-title"), "font-weight: calc(var(--ks-font-weight-heading) + 100)"
+  end
+
+  def test_cta_banner_title_text_reads_the_text_display_colour_role
+    assert_includes block(".ks-cta-banner-title"), "color: var(--ks-color-text-display)"
+  end
+
+  def test_cta_banner_title_text_reads_the_text_display_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-dark\)/m, block(".ks-cta-banner-title"))
+  end
+
+  def test_color_text_display_defaults_to_var_color_surface_900
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display: var\(--color-surface-900\)/m, self.class.compiled)
+  end
+
+  def test_color_text_display_dark_defaults_to_var_color_white
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display-dark: var\(--color-white\)/m, self.class.compiled)
+  end
+
+  def test_cta_banner_subtitle_margin_bottom_is_8_spacing_units
+    assert_includes block(".ks-cta-banner-subtitle"), "margin-bottom: calc(var(--ks-spacing) * 8)"
+  end
+
+  def test_cta_banner_subtitle_text_reads_the_text_display_muted_colour_role
+    assert_includes block(".ks-cta-banner-subtitle"), "color: var(--ks-color-text-display-muted)"
+  end
+
+  def test_cta_banner_subtitle_text_reads_the_text_display_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-muted-dark\)/m, block(".ks-cta-banner-subtitle"))
+  end
+
+  def test_color_text_display_muted_defaults_to_var_color_surface_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display-muted: var\(--color-surface-500\)/m, self.class.compiled)
+  end
+
+  def test_color_text_display_muted_dark_defaults_to_var_color_surface_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display-muted-dark: var\(--color-surface-400\)/m, self.class.compiled)
+  end
+
+  def test_cta_banner_actions_gap_is_4_spacing_units
+    assert_includes block(".ks-cta-banner-actions"), "gap: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_feature_grid_gap_is_6_spacing_units
+    assert_includes block(".ks-feature-grid"), "gap: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_feature_grid_title_margin_bottom_is_4_spacing_units
+    assert_includes block(".ks-feature-grid-title"), "margin-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_feature_grid_title_weight_is_one_step_above_the_heading_font_weight
+    assert_includes block(".ks-feature-grid-title"), "font-weight: calc(var(--ks-font-weight-heading) + 100)"
+  end
+
+  def test_feature_grid_title_text_reads_the_text_display_colour_role
+    assert_includes block(".ks-feature-grid-title"), "color: var(--ks-color-text-display)"
+  end
+
+  def test_feature_grid_title_text_reads_the_text_display_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-dark\)/m, block(".ks-feature-grid-title"))
+  end
+
+  def test_feature_grid_subtitle_margin_bottom_is_16_spacing_units
+    assert_includes block(".ks-feature-grid-subtitle"), "margin-bottom: calc(var(--ks-spacing) * 16)"
+  end
+
+  def test_feature_grid_subtitle_text_reads_the_text_display_muted_colour_role
+    assert_includes block(".ks-feature-grid-subtitle"), "color: var(--ks-color-text-display-muted)"
+  end
+
+  def test_feature_grid_subtitle_text_reads_the_text_display_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-muted-dark\)/m, block(".ks-feature-grid-subtitle"))
+  end
+
+  def test_feature_card_radius_is_1_5_of_the_surface_radius
+    assert_includes block(".ks-feature-card"), "border-radius: calc(var(--ks-radius-surface) * 1.5)"
+  end
+
+  def test_feature_card_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-feature-card"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_feature_card_padding_is_6_spacing_units
+    assert_includes block(".ks-feature-card"), "padding: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_feature_card_border_reads_the_border_subtle_colour_role
+    assert_includes block(".ks-feature-card"), "border-color: var(--ks-color-border-subtle)"
+  end
+
+  def test_feature_card_fill_reads_the_raised_colour_role
+    assert_includes block(".ks-feature-card"), "background-color: var(--ks-color-raised)"
+  end
+
+  def test_feature_card_border_reads_the_hover_border_colour_role_on_hover
+    assert_match(/:hover.*?border-color: var\(--ks-color-hover-border\)/m, block(".ks-feature-card"))
+  end
+
+  def test_feature_card_border_reads_the_border_subtle_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-subtle-dark\)/m, block(".ks-feature-card"))
+  end
+
+  def test_feature_card_fill_reads_the_raised_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-raised-dark\)/m, block(".ks-feature-card"))
+  end
+
+  def test_color_raised_defaults_to_var_color_white
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-raised: var\(--color-white\)/m, self.class.compiled)
+  end
+
+  def test_color_raised_dark_defaults_to_var_color_surface_800
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-raised-dark: var\(--color-surface-800\)/m, self.class.compiled)
+  end
+
+  def test_feature_card_icon_margin_bottom_is_4_spacing_units
+    assert_includes block(".ks-feature-card-icon"), "margin-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_feature_card_icon_radius_reads_the_surface_radius
+    assert_includes block(".ks-feature-card-icon"), "border-radius: var(--ks-radius-surface)"
+  end
+
+  def test_feature_card_icon_fill_reads_the_tint_colour_role
+    assert_includes block(".ks-feature-card-icon"), "background-color: var(--ks-color-tint)"
+  end
+
+  def test_feature_card_icon_text_reads_the_link_colour_role
+    assert_includes block(".ks-feature-card-icon"), "color: var(--ks-color-link)"
+  end
+
+  def test_feature_card_icon_text_reads_the_link_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-link-dark\)/m, block(".ks-feature-card-icon"))
+  end
+
+  def test_color_tint_defaults_to_color_mix_in_oklab_var_color_accent_500_10_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-tint: color-mix\(in oklab, var\(--color-accent-500\) 10%, transparent\)/m, self.class.compiled)
+  end
+
+  def test_feature_card_title_margin_bottom_is_2_spacing_units
+    assert_includes block(".ks-feature-card-title"), "margin-bottom: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_feature_card_title_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-feature-card-title"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
+  def test_feature_card_title_text_reads_the_text_display_colour_role
+    assert_includes block(".ks-feature-card-title"), "color: var(--ks-color-text-display)"
+  end
+
+  def test_feature_card_title_text_reads_the_text_display_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-dark\)/m, block(".ks-feature-card-title"))
+  end
+
+  def test_feature_card_description_text_reads_the_text_display_muted_colour_role
+    assert_includes block(".ks-feature-card-description"), "color: var(--ks-color-text-display-muted)"
+  end
+
+  def test_feature_card_description_text_reads_the_text_display_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-muted-dark\)/m, block(".ks-feature-card-description"))
+  end
+
+  def test_hero_padding_top_is_24_spacing_units
+    assert_includes block(".ks-hero"), "padding-top: calc(var(--ks-spacing) * 24)"
+  end
+
+  def test_hero_inner_padding_inline_is_6_spacing_units
+    assert_includes block(".ks-hero-inner"), "padding-inline: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_hero_inner_padding_block_is_24_spacing_units
+    assert_includes block(".ks-hero-inner"), "padding-block: calc(var(--ks-spacing) * 24)"
+  end
+
+  def test_hero_inner_padding_block_is_32_spacing_units_on_large_screens
+    assert_match(/width >= 64rem.*?padding-block: calc\(var\(--ks-spacing\) \* 32\)/m, block(".ks-hero-inner"))
+  end
+
+  def test_hero_content_gap_is_8_spacing_units
+    assert_includes block(".ks-hero-content"), "gap: calc(var(--ks-spacing) * 8)"
+  end
+
+  def test_hero_split_gap_is_12_spacing_units
+    assert_includes block(".ks-hero-split"), "gap: calc(var(--ks-spacing) * 12)"
+  end
+
+  def test_hero_split_gap_is_16_spacing_units_on_large_screens
+    assert_match(/width >= 64rem.*?gap: calc\(var\(--ks-spacing\) \* 16\)/m, block(".ks-hero-split"))
+  end
+
+  def test_hero_title_weight_is_one_step_above_the_heading_font_weight
+    assert_includes block(".ks-hero-title"), "font-weight: calc(var(--ks-font-weight-heading) + 100)"
+  end
+
+  def test_hero_title_text_reads_the_text_display_colour_role
+    assert_includes block(".ks-hero-title"), "color: var(--ks-color-text-display)"
+  end
+
+  def test_hero_title_text_reads_the_text_display_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-dark\)/m, block(".ks-hero-title"))
+  end
+
+  def test_hero_subtitle_text_reads_the_text_display_muted_colour_role
+    assert_includes block(".ks-hero-subtitle"), "color: var(--ks-color-text-display-muted)"
+  end
+
+  def test_hero_subtitle_text_reads_the_text_display_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-muted-dark\)/m, block(".ks-hero-subtitle"))
+  end
+
+  def test_hero_badge_gap_is_2_spacing_units
+    assert_includes block(".ks-hero-badge"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_hero_badge_radius_reads_the_pill_radius
+    assert_includes block(".ks-hero-badge"), "border-radius: var(--ks-radius-pill)"
+  end
+
+  def test_hero_badge_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-hero-badge"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_hero_badge_padding_inline_is_4_spacing_units
+    assert_includes block(".ks-hero-badge"), "padding-inline: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_hero_badge_padding_block_is_1_5_spacing_units
+    assert_includes block(".ks-hero-badge"), "padding-block: calc(var(--ks-spacing) * 1.5)"
+  end
+
+  def test_hero_badge_border_reads_the_tint_border_colour_role
+    assert_includes block(".ks-hero-badge"), "border-color: var(--ks-color-tint-border)"
+  end
+
+  def test_hero_badge_fill_reads_the_tint_colour_role
+    assert_includes block(".ks-hero-badge"), "background-color: var(--ks-color-tint)"
+  end
+
+  def test_hero_badge_text_reads_the_link_colour_role
+    assert_includes block(".ks-hero-badge"), "color: var(--ks-color-link)"
+  end
+
+  def test_hero_badge_text_reads_the_link_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-link-dark\)/m, block(".ks-hero-badge"))
+  end
+
+  def test_color_tint_border_defaults_to_color_mix_in_oklab_var_color_accent_500_20_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-tint-border: color-mix\(in oklab, var\(--color-accent-500\) 20%, transparent\)/m, self.class.compiled)
+  end
+
+  def test_hero_actions_gap_is_4_spacing_units
+    assert_includes block(".ks-hero-actions"), "gap: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_table_radius_reads_the_surface_radius
+    assert_includes block(".ks-table"), "border-radius: var(--ks-radius-surface)"
+  end
+
+  def test_table_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-table"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_table_border_reads_the_border_colour_role
+    assert_includes block(".ks-table"), "border-color: var(--ks-color-border)"
+  end
+
+  def test_table_shadow_reads_the_surface_shadow_variable
+    assert_includes block(".ks-table"), "--tw-shadow: var(--ks-shadow-surface)"
+  end
+
+  def test_table_border_reads_the_border_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-table"))
+  end
+
+  def test_table_shadow_reads_the_surface_dark_shadow_variable_on_a_dark_page
+    assert_match(/data-theme="dark".*?--tw-shadow: var\(--ks-shadow-surface-dark\)/m, block(".ks-table"))
+  end
+
+  def test_shadow_surface_dark_defaults_to_0_0_0000
+    assert_match(/@layer base \{.*?:root \{.*?--ks-shadow-surface-dark: 0 0 #0000/m, self.class.compiled)
+  end
+
+  def test_table_head_fill_reads_the_table_head_colour_role
+    assert_includes block(".ks-table-head"), "background-color: var(--ks-color-table-head)"
+  end
+
+  def test_table_head_fill_reads_the_table_head_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-table-head-dark\)/m, block(".ks-table-head"))
+  end
+
+  def test_color_table_head_defaults_to_var_color_gray_50
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-head: var\(--color-gray-50\)/m, self.class.compiled)
+  end
+
+  def test_color_table_head_dark_defaults_to_color_mix_in_oklab_var_color_gray_800_75_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-head-dark: color-mix\(in oklab, var\(--color-gray-800\) 75%, transparent\)/m, self.class.compiled)
+  end
+
+  def test_table_body_fill_reads_the_table_body_colour_role
+    assert_includes block(".ks-table-body"), "background-color: var(--ks-color-table-body)"
+  end
+
+  def test_table_body_row_dividers_read_the_border_width_variable
+    assert_match(/\.ks-table-body(?![\w-]).*?:not\(:last-child\).*?border-bottom-width: calc\(var\(--ks-border-width\) \* calc\(1 - var\(--tw-divide-y-reverse\)\)\)/m, self.class.compiled)
+  end
+
+  def test_table_body_divider_reads_the_divider_colour_role
+    assert_includes block(".ks-table-body"), "border-color: var(--ks-color-divider)"
+  end
+
+  def test_table_body_fill_reads_the_table_body_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-table-body-dark\)/m, block(".ks-table-body"))
+  end
+
+  def test_table_body_divider_reads_the_divider_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-divider-dark\)/m, block(".ks-table-body"))
+  end
+
+  def test_color_table_body_defaults_to_var_color_white
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-body: var\(--color-white\)/m, self.class.compiled)
+  end
+
+  def test_color_table_body_dark_defaults_to_color_mix_in_oklab_var_color_gray_800_50_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-body-dark: color-mix\(in oklab, var\(--color-gray-800\) 50%, transparent\)/m, self.class.compiled)
+  end
+
+  def test_color_divider_defaults_to_var_color_gray_200
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-divider: var\(--color-gray-200\)/m, self.class.compiled)
+  end
+
+  def test_color_divider_dark_defaults_to_color_mix_in_oklab_var_color_white_10_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-divider-dark: color-mix\(in oklab, var\(--color-white\) 10%, transparent\)/m, self.class.compiled)
+  end
+
+  def test_table_header_padding_block_is_3_5_spacing_units
+    assert_includes block(".ks-table-header"), "padding-block: calc(var(--ks-spacing) * 3.5)"
+  end
+
+  def test_table_header_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-table-header"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
+  def test_table_header_text_reads_the_text_heading_colour_role
+    assert_includes block(".ks-table-header"), "color: var(--ks-color-text-heading)"
+  end
+
+  def test_table_header_text_reads_the_text_heading_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-heading-dark\)/m, block(".ks-table-header"))
+  end
+
+  def test_table_header_first_padding_right_is_3_spacing_units
+    assert_includes block(".ks-table-header-first"), "padding-right: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_table_header_first_padding_left_is_6_spacing_units
+    assert_includes block(".ks-table-header-first"), "padding-left: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_table_header_middle_padding_inline_is_3_spacing_units
+    assert_includes block(".ks-table-header-middle"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_table_header_last_padding_block_is_3_5_spacing_units
+    assert_includes block(".ks-table-header-last"), "padding-block: calc(var(--ks-spacing) * 3.5)"
+  end
+
+  def test_table_header_last_padding_right_is_6_spacing_units
+    assert_includes block(".ks-table-header-last"), "padding-right: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_table_header_last_padding_left_is_3_spacing_units
+    assert_includes block(".ks-table-header-last"), "padding-left: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_table_cell_first_padding_block_is_4_spacing_units
+    assert_includes block(".ks-table-cell-first"), "padding-block: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_table_cell_first_padding_right_is_3_spacing_units
+    assert_includes block(".ks-table-cell-first"), "padding-right: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_table_cell_first_padding_left_is_6_spacing_units
+    assert_includes block(".ks-table-cell-first"), "padding-left: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_table_cell_first_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-table-cell-first"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_table_cell_first_text_reads_the_text_colour_role
+    assert_includes block(".ks-table-cell-first"), "color: var(--ks-color-text)"
+  end
+
+  def test_table_cell_first_text_reads_the_text_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-table-cell-first"))
+  end
+
+  def test_table_cell_middle_padding_inline_is_3_spacing_units
+    assert_includes block(".ks-table-cell-middle"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_table_cell_middle_padding_block_is_4_spacing_units
+    assert_includes block(".ks-table-cell-middle"), "padding-block: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_table_cell_middle_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-table-cell-middle"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_table_cell_middle_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-table-cell-middle"))
+  end
+
+  def test_table_cell_last_padding_block_is_4_spacing_units
+    assert_includes block(".ks-table-cell-last"), "padding-block: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_table_cell_last_padding_right_is_6_spacing_units
+    assert_includes block(".ks-table-cell-last"), "padding-right: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_table_cell_last_padding_left_is_3_spacing_units
+    assert_includes block(".ks-table-cell-last"), "padding-left: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_table_cell_last_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-table-cell-last"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_table_sort_link_gap_is_1_spacing_units
+    assert_includes block(".ks-table-sort-link"), "gap: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_table_sort_icon_active_text_reads_the_text_label_colour_role
+    assert_includes block(".ks-table-sort-icon-active"), "color: var(--ks-color-text-label)"
+  end
+
+  def test_table_sort_icon_active_text_reads_the_text_label_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-label-dark\)/m, block(".ks-table-sort-icon-active"))
+  end
+
+  def test_table_sort_icon_text_reads_the_icon_colour_role
+    assert_includes block(".ks-table-sort-icon"), "color: var(--ks-color-icon)"
+  end
+
+  def test_table_sort_icon_text_reads_the_icon_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-icon-dark\)/m, block(".ks-table-sort-icon"))
+  end
+
+  def test_code_radius_reads_the_surface_radius
+    assert_includes block(".ks-code"), "border-radius: var(--ks-radius-surface)"
+  end
+
+  def test_code_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-code"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_code_border_reads_the_border_subtle_colour_role
+    assert_includes block(".ks-code"), "border-color: var(--ks-color-border-subtle)"
+  end
+
+  def test_code_border_reads_the_border_subtle_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-subtle-dark\)/m, block(".ks-code"))
+  end
+
+  def test_code_caption_bottom_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-code-caption"), "border-bottom-width: var(--ks-border-width)"
+  end
+
+  def test_code_caption_border_reads_the_border_subtle_colour_role
+    assert_includes block(".ks-code-caption"), "border-color: var(--ks-color-border-subtle)"
+  end
+
+  def test_code_caption_fill_reads_the_fill_muted_colour_role
+    assert_includes block(".ks-code-caption"), "background-color: var(--ks-color-fill-muted)"
+  end
+
+  def test_code_caption_padding_inline_is_4_spacing_units
+    assert_includes block(".ks-code-caption"), "padding-inline: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_code_caption_padding_block_is_2_spacing_units
+    assert_includes block(".ks-code-caption"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_code_caption_text_reads_the_text_display_muted_colour_role
+    assert_includes block(".ks-code-caption"), "color: var(--ks-color-text-display-muted)"
+  end
+
+  def test_code_caption_border_reads_the_border_subtle_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-subtle-dark\)/m, block(".ks-code-caption"))
+  end
+
+  def test_code_caption_fill_reads_the_fill_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-fill-muted-dark\)/m, block(".ks-code-caption"))
+  end
+
+  def test_code_caption_text_reads_the_text_display_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-muted-dark\)/m, block(".ks-code-caption"))
+  end
+
+  def test_code_block_fill_reads_the_code_colour_role
+    assert_includes block(".ks-code-block"), "background-color: var(--ks-color-code)"
+  end
+
+  def test_code_block_padding_is_4_spacing_units
+    assert_includes block(".ks-code-block"), "padding: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_code_block_text_reads_the_text_code_colour_role
+    assert_includes block(".ks-code-block"), "color: var(--ks-color-text-code)"
+  end
+
+  def test_code_block_fill_reads_the_code_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-code-dark\)/m, block(".ks-code-block"))
+  end
+
+  def test_color_code_defaults_to_var_color_surface_900
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-code: var\(--color-surface-900\)/m, self.class.compiled)
+  end
+
+  def test_color_code_dark_defaults_to_var_color_black
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-code-dark: var\(--color-black\)/m, self.class.compiled)
+  end
+
+  def test_color_text_code_defaults_to_var_color_surface_100
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-code: var\(--color-surface-100\)/m, self.class.compiled)
+  end
+
+  def test_accordion_gap_is_4_spacing_units
+    assert_includes block(".ks-accordion"), "gap: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_accordion_item_radius_is_1_5_of_the_surface_radius
+    assert_includes block(".ks-accordion-item"), "border-radius: calc(var(--ks-radius-surface) * 1.5)"
+  end
+
+  def test_accordion_item_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-accordion-item"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_accordion_item_border_reads_the_border_subtle_colour_role
+    assert_includes block(".ks-accordion-item"), "border-color: var(--ks-color-border-subtle)"
+  end
+
+  def test_accordion_item_border_reads_the_border_subtle_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-subtle-dark\)/m, block(".ks-accordion-item"))
+  end
+
+  def test_disclosure_radius_is_1_5_of_the_surface_radius
+    assert_includes block(".ks-disclosure"), "border-radius: calc(var(--ks-radius-surface) * 1.5)"
+  end
+
+  def test_disclosure_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-disclosure"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_disclosure_border_reads_the_border_subtle_colour_role
+    assert_includes block(".ks-disclosure"), "border-color: var(--ks-color-border-subtle)"
+  end
+
+  def test_disclosure_border_reads_the_border_subtle_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-subtle-dark\)/m, block(".ks-disclosure"))
+  end
+
+  def test_accordion_button_padding_inline_is_6_spacing_units
+    assert_includes block(".ks-accordion-button"), "padding-inline: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_accordion_button_padding_block_is_4_spacing_units
+    assert_includes block(".ks-accordion-button"), "padding-block: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_accordion_button_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-accordion-button"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
+  def test_accordion_button_text_reads_the_text_display_colour_role
+    assert_includes block(".ks-accordion-button"), "color: var(--ks-color-text-display)"
+  end
+
+  def test_accordion_button_text_reads_the_link_colour_role_on_hover
+    assert_match(/:hover.*?color: var\(--ks-color-link\)/m, block(".ks-accordion-button"))
+  end
+
+  def test_accordion_button_text_reads_the_text_display_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-dark\)/m, block(".ks-accordion-button"))
+  end
+
+  def test_accordion_button_text_reads_the_link_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?color: var\(--ks-color-link-dark\)/m, block(".ks-accordion-button"))
+  end
+
+  def test_disclosure_summary_gap_is_4_spacing_units
+    assert_includes block(".ks-disclosure-summary"), "gap: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_disclosure_summary_padding_inline_is_6_spacing_units
+    assert_includes block(".ks-disclosure-summary"), "padding-inline: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_disclosure_summary_padding_block_is_4_spacing_units
+    assert_includes block(".ks-disclosure-summary"), "padding-block: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_disclosure_summary_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-disclosure-summary"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
+  def test_disclosure_summary_text_reads_the_text_display_colour_role
+    assert_includes block(".ks-disclosure-summary"), "color: var(--ks-color-text-display)"
+  end
+
+  def test_disclosure_summary_text_reads_the_text_display_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-dark\)/m, block(".ks-disclosure-summary"))
+  end
+
+  def test_accordion_answer_padding_inline_is_6_spacing_units
+    assert_includes block(".ks-accordion-answer"), "padding-inline: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_accordion_answer_padding_bottom_is_4_spacing_units
+    assert_includes block(".ks-accordion-answer"), "padding-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_accordion_answer_text_reads_the_text_body_colour_role
+    assert_includes block(".ks-accordion-answer"), "color: var(--ks-color-text-body)"
+  end
+
+  def test_accordion_answer_text_reads_the_text_body_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-body-dark\)/m, block(".ks-accordion-answer"))
+  end
+
+  def test_disclosure_body_padding_inline_is_6_spacing_units
+    assert_includes block(".ks-disclosure-body"), "padding-inline: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_disclosure_body_padding_bottom_is_4_spacing_units
+    assert_includes block(".ks-disclosure-body"), "padding-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_disclosure_body_text_reads_the_text_body_colour_role
+    assert_includes block(".ks-disclosure-body"), "color: var(--ks-color-text-body)"
+  end
+
+  def test_disclosure_body_text_reads_the_text_body_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-body-dark\)/m, block(".ks-disclosure-body"))
+  end
+
+  def test_color_text_body_defaults_to_var_color_surface_600
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-body: var\(--color-surface-600\)/m, self.class.compiled)
+  end
+
+  def test_color_text_body_dark_defaults_to_var_color_surface_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-body-dark: var\(--color-surface-400\)/m, self.class.compiled)
+  end
+
+  def test_disclosure_icon_text_reads_the_icon_soft_colour_role
+    assert_includes block(".ks-disclosure-icon"), "color: var(--ks-color-icon-soft)"
+  end
+
+  def test_color_icon_soft_defaults_to_var_color_surface_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon-soft: var\(--color-surface-400\)/m, self.class.compiled)
+  end
+
+  def test_tab_bar_margin_bottom_is_8_spacing_units
+    assert_includes block(".ks-tab-bar"), "margin-bottom: calc(var(--ks-spacing) * 8)"
+  end
+
+  def test_tab_bar_gap_is_2_spacing_units
+    assert_includes block(".ks-tab-bar"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_tab_radius_reads_the_surface_radius
+    assert_includes block(".ks-tab"), "border-radius: var(--ks-radius-surface)"
+  end
+
+  def test_tab_padding_inline_is_4_spacing_units
+    assert_includes block(".ks-tab"), "padding-inline: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_tab_padding_block_is_2_spacing_units
+    assert_includes block(".ks-tab"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_tab_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-tab"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
+  def test_tab_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-tab"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_tab_text_reads_the_text_colour_role_on_hover
+    assert_match(/:hover.*?color: var\(--ks-color-text\)/m, block(".ks-tab"))
+  end
+
+  def test_tab_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-tab"))
+  end
+
+  def test_tab_text_reads_the_text_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?color: var\(--ks-color-text-dark\)/m, block(".ks-tab"))
+  end
+
+  def test_tab_active_fill_reads_the_tint_colour_role_when_active
+    assert_match(/\.ks-tab-active(?![\w-]).*?\[data-active\].*?background-color: var\(--ks-color-tint\)/m, self.class.compiled)
+  end
+
+  def test_tab_active_text_reads_the_link_colour_role_when_active
+    assert_match(/\.ks-tab-active(?![\w-]).*?\[data-active\].*?color: var\(--ks-color-link\)/m, self.class.compiled)
+  end
+
+  def test_tab_active_text_reads_the_link_dark_colour_role_on_a_dark_page_and_when_active
+    assert_match(/\.ks-tab-active(?![\w-]).*?data-theme="dark".*?\[data-active\].*?color: var\(--ks-color-link-dark\)/m, self.class.compiled)
+  end
+
+  def test_progress_track_fill_reads_the_track_colour_role
+    assert_includes block(".ks-progress-track"), "background-color: var(--ks-color-track)"
+  end
+
+  def test_progress_track_radius_reads_the_pill_radius
+    assert_includes block(".ks-progress-track"), "border-radius: var(--ks-radius-pill)"
+  end
+
+  def test_progress_track_fill_reads_the_track_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-track-dark\)/m, block(".ks-progress-track"))
+  end
+
+  def test_color_track_defaults_to_var_color_surface_200
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-track: var\(--color-surface-200\)/m, self.class.compiled)
+  end
+
+  def test_color_track_dark_defaults_to_var_color_surface_700
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-track-dark: var\(--color-surface-700\)/m, self.class.compiled)
+  end
+
+  def test_progress_bar_fill_reads_the_meter_colour_role
+    assert_includes block(".ks-progress-bar"), "background-color: var(--ks-color-meter)"
+  end
+
+  def test_progress_bar_radius_reads_the_pill_radius
+    assert_includes block(".ks-progress-bar"), "border-radius: var(--ks-radius-pill)"
+  end
+
+  def test_color_meter_defaults_to_var_color_accent_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-meter: var\(--color-accent-500\)/m, self.class.compiled)
+  end
+
+  def test_meter_label_margin_bottom_is_1_spacing_units
+    assert_includes block(".ks-meter-label"), "margin-bottom: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_meter_label_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-meter-label"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_meter_label_text_reads_the_text_meter_label_colour_role
+    assert_includes block(".ks-meter-label"), "color: var(--ks-color-text-meter-label)"
+  end
+
+  def test_meter_label_text_reads_the_text_meter_label_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-meter-label-dark\)/m, block(".ks-meter-label"))
+  end
+
+  def test_color_text_meter_label_defaults_to_var_color_surface_700
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-meter-label: var\(--color-surface-700\)/m, self.class.compiled)
+  end
+
+  def test_color_text_meter_label_dark_defaults_to_var_color_surface_300
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-meter-label-dark: var\(--color-surface-300\)/m, self.class.compiled)
+  end
+
+  def test_funnel_vertical_gap_between_children_is_2_spacing_units
+    assert_match(/\.ks-funnel(?![\w-]).*?:not\(:last-child\).*?calc\(var\(--ks-spacing\) \* 2\)/m, self.class.compiled)
+  end
+
+  def test_funnel_layer_vertical_gap_between_children_is_1_spacing_units
+    assert_match(/\.ks-funnel-layer(?![\w-]).*?:not\(:last-child\).*?calc\(var\(--ks-spacing\) \* 1\)/m, self.class.compiled)
+  end
+
+  def test_funnel_row_gap_is_3_spacing_units
+    assert_includes block(".ks-funnel-row"), "gap: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_funnel_label_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-funnel-label"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_funnel_label_text_reads_the_text_meter_label_colour_role
+    assert_includes block(".ks-funnel-label"), "color: var(--ks-color-text-meter-label)"
+  end
+
+  def test_funnel_label_text_reads_the_text_meter_label_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-meter-label-dark\)/m, block(".ks-funnel-label"))
+  end
+
+  def test_funnel_value_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-funnel-value"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
+  def test_funnel_value_text_reads_the_text_display_colour_role
+    assert_includes block(".ks-funnel-value"), "color: var(--ks-color-text-display)"
+  end
+
+  def test_funnel_value_text_reads_the_text_display_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-dark\)/m, block(".ks-funnel-value"))
+  end
+
+  def test_funnel_bar_radius_is_0_75_of_the_surface_radius
+    assert_includes block(".ks-funnel-bar"), "border-radius: calc(var(--ks-radius-surface) * 0.75)"
+  end
+
+  def test_funnel_transition_padding_block_is_1_spacing_units
+    assert_includes block(".ks-funnel-transition"), "padding-block: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_funnel_transition_text_reads_the_text_display_muted_colour_role
+    assert_includes block(".ks-funnel-transition"), "color: var(--ks-color-text-display-muted)"
+  end
+
+  def test_funnel_transition_text_reads_the_text_display_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-display-muted-dark\)/m, block(".ks-funnel-transition"))
+  end
+
+  def test_funnel_bar_accent_fill_reads_the_funnel_accent_colour_role
+    assert_includes block(".ks-funnel-bar-accent"), "background-color: var(--ks-color-funnel-accent)"
+  end
+
+  def test_color_funnel_accent_defaults_to_var_color_accent_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-funnel-accent: var\(--color-accent-500\)/m, self.class.compiled)
+  end
+
+  def test_funnel_bar_sky_fill_reads_the_funnel_sky_colour_role
+    assert_includes block(".ks-funnel-bar-sky"), "background-color: var(--ks-color-funnel-sky)"
+  end
+
+  def test_color_funnel_sky_defaults_to_var_color_sky_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-funnel-sky: var\(--color-sky-500\)/m, self.class.compiled)
+  end
+
+  def test_funnel_bar_violet_fill_reads_the_funnel_violet_colour_role
+    assert_includes block(".ks-funnel-bar-violet"), "background-color: var(--ks-color-funnel-violet)"
+  end
+
+  def test_color_funnel_violet_defaults_to_var_color_violet_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-funnel-violet: var\(--color-violet-500\)/m, self.class.compiled)
+  end
+
+  def test_funnel_bar_amber_fill_reads_the_funnel_amber_colour_role
+    assert_includes block(".ks-funnel-bar-amber"), "background-color: var(--ks-color-funnel-amber)"
+  end
+
+  def test_color_funnel_amber_defaults_to_var_color_amber_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-funnel-amber: var\(--color-amber-500\)/m, self.class.compiled)
+  end
+
+  def test_funnel_bar_rose_fill_reads_the_funnel_rose_colour_role
+    assert_includes block(".ks-funnel-bar-rose"), "background-color: var(--ks-color-funnel-rose)"
+  end
+
+  def test_color_funnel_rose_defaults_to_var_color_rose_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-funnel-rose: var\(--color-rose-500\)/m, self.class.compiled)
+  end
+
+  def test_bucket_gap_is_1_spacing_units
+    assert_includes block(".ks-bucket"), "gap: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_bucket_series_gap_is_4_spacing_units
+    assert_includes block(".ks-bucket-series"), "gap: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_bucket_label_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-bucket-label"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_bucket_label_text_reads_the_text_label_colour_role
+    assert_includes block(".ks-bucket-label"), "color: var(--ks-color-text-label)"
+  end
+
+  def test_bucket_label_text_reads_the_text_label_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-label-dark\)/m, block(".ks-bucket-label"))
+  end
+
+  def test_bucket_goal_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-bucket-goal"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_bucket_goal_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-bucket-goal"))
+  end
+
+  def test_bucket_percent_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-bucket-percent"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_bucket_percent_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-bucket-percent"))
+  end
+
+  def test_bucket_tank_top_corner_radius_is_0_5_of_the_surface_radius
+    assert_includes block(".ks-bucket-tank"), "border-top-left-radius: calc(var(--ks-radius-surface) * 0.5)"
+  end
+
+  def test_bucket_tank_bottom_corner_radius_is_1_5_of_the_surface_radius
+    assert_includes block(".ks-bucket-tank"), "border-bottom-left-radius: calc(var(--ks-radius-surface) * 1.5)"
+  end
+
+  def test_bucket_tank_border_width_is_2_times_the_border_width_variable
+    assert_includes block(".ks-bucket-tank"), "border-width: calc(var(--ks-border-width) * 2)"
+  end
+
+  def test_bucket_tank_border_reads_the_border_strong_colour_role
+    assert_includes block(".ks-bucket-tank"), "border-color: var(--ks-color-border-strong)"
+  end
+
+  def test_bucket_tank_fill_reads_the_hover_colour_role
+    assert_includes block(".ks-bucket-tank"), "background-color: var(--ks-color-hover)"
+  end
+
+  def test_bucket_tank_border_reads_the_border_strong_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-strong-dark\)/m, block(".ks-bucket-tank"))
+  end
+
+  def test_bucket_tank_fill_reads_the_hover_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-hover-dark\)/m, block(".ks-bucket-tank"))
+  end
+
+  def test_bucket_actual_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-bucket-actual"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
+  def test_bucket_actual_text_reads_the_text_colour_role
+    assert_includes block(".ks-bucket-actual"), "color: var(--ks-color-text)"
+  end
+
+  def test_bucket_actual_text_reads_the_text_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-bucket-actual"))
+  end
+
+  def test_bucket_fill_fill_reads_the_meter_colour_role
+    assert_includes block(".ks-bucket-fill"), "background-color: var(--ks-color-meter)"
+  end
+
+  def test_bucket_fill_over_fill_reads_the_over_goal_colour_role
+    assert_includes block(".ks-bucket-fill-over"), "background-color: var(--ks-color-over-goal)"
+  end
+
+  def test_color_over_goal_defaults_to_var_color_green_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-over-goal: var\(--color-green-500\)/m, self.class.compiled)
+  end
+
+  def test_bucket_fill_over_warning_fill_reads_the_over_goal_warning_colour_role
+    assert_includes block(".ks-bucket-fill-over-warning"), "background-color: var(--ks-color-over-goal-warning)"
+  end
+
+  def test_color_over_goal_warning_defaults_to_var_color_amber_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-over-goal-warning: var\(--color-amber-500\)/m, self.class.compiled)
+  end
+
+  def test_pipeline_radius_is_1_5_of_the_surface_radius
+    assert_includes block(".ks-pipeline"), "border-radius: calc(var(--ks-radius-surface) * 1.5)"
+  end
+
+  def test_pipeline_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-pipeline"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_pipeline_border_reads_the_pipeline_border_colour_role
+    assert_includes block(".ks-pipeline"), "border-color: var(--ks-color-pipeline-border)"
+  end
+
+  def test_pipeline_fill_reads_the_pipeline_colour_role
+    assert_includes block(".ks-pipeline"), "background-color: var(--ks-color-pipeline)"
+  end
+
+  def test_pipeline_padding_is_6_spacing_units
+    assert_includes block(".ks-pipeline"), "padding: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_color_pipeline_border_defaults_to_var_color_surface_700
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-pipeline-border: var\(--color-surface-700\)/m, self.class.compiled)
+  end
+
+  def test_color_pipeline_defaults_to_var_color_surface_800
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-pipeline: var\(--color-surface-800\)/m, self.class.compiled)
+  end
+
+  def test_pipeline_header_margin_bottom_is_4_spacing_units
+    assert_includes block(".ks-pipeline-header"), "margin-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_pipeline_title_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-pipeline-title"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
+  def test_pipeline_title_text_reads_the_text_on_dark_colour_role
+    assert_includes block(".ks-pipeline-title"), "color: var(--ks-color-text-on-dark)"
+  end
+
+  def test_color_text_on_dark_defaults_to_var_color_white
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-on-dark: var\(--color-white\)/m, self.class.compiled)
+  end
+
+  def test_pipeline_subtitle_margin_top_is_1_spacing_units
+    assert_includes block(".ks-pipeline-subtitle"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_pipeline_subtitle_text_reads_the_pipeline_muted_colour_role
+    assert_includes block(".ks-pipeline-subtitle"), "color: var(--ks-color-pipeline-muted)"
+  end
+
+  def test_color_pipeline_muted_defaults_to_var_color_surface_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-pipeline-muted: var\(--color-surface-400\)/m, self.class.compiled)
+  end
+
+  def test_pipeline_track_gap_is_3_spacing_units
+    assert_includes block(".ks-pipeline-track"), "gap: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_pipeline_box_gap_is_2_spacing_units
+    assert_includes block(".ks-pipeline-box"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_pipeline_box_radius_reads_the_surface_radius
+    assert_includes block(".ks-pipeline-box"), "border-radius: var(--ks-radius-surface)"
+  end
+
+  def test_pipeline_box_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-pipeline-box"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_pipeline_box_border_reads_the_pipeline_border_colour_role
+    assert_includes block(".ks-pipeline-box"), "border-color: var(--ks-color-pipeline-border)"
+  end
+
+  def test_pipeline_box_fill_reads_the_pipeline_box_colour_role
+    assert_includes block(".ks-pipeline-box"), "background-color: var(--ks-color-pipeline-box)"
+  end
+
+  def test_pipeline_box_padding_is_4_spacing_units
+    assert_includes block(".ks-pipeline-box"), "padding: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_color_pipeline_box_defaults_to_var_color_surface_900
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-pipeline-box: var\(--color-surface-900\)/m, self.class.compiled)
+  end
+
+  def test_pipeline_box_label_text_reads_the_pipeline_label_colour_role
+    assert_includes block(".ks-pipeline-box-label"), "color: var(--ks-color-pipeline-label)"
+  end
+
+  def test_color_pipeline_label_defaults_to_var_color_surface_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-pipeline-label: var\(--color-surface-500\)/m, self.class.compiled)
+  end
+
+  def test_pipeline_count_weight_is_one_step_above_the_heading_font_weight
+    assert_includes block(".ks-pipeline-count"), "font-weight: calc(var(--ks-font-weight-heading) + 100)"
+  end
+
+  def test_pipeline_link_healthy_text_reads_the_meter_colour_role
+    assert_includes block(".ks-pipeline-link-healthy"), "color: var(--ks-color-meter)"
+  end
+
+  def test_pipeline_link_broken_text_reads_the_danger_500_colour_role
+    assert_includes block(".ks-pipeline-link-broken"), "color: var(--ks-color-danger-500)"
+  end
+
+  def test_pipeline_count_amber_text_reads_the_pipeline_amber_colour_role
+    assert_includes block(".ks-pipeline-count-amber"), "color: var(--ks-color-pipeline-amber)"
+  end
+
+  def test_color_pipeline_amber_defaults_to_var_color_amber_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-pipeline-amber: var\(--color-amber-400\)/m, self.class.compiled)
+  end
+
+  def test_pipeline_count_emerald_text_reads_the_info_400_colour_role
+    assert_includes block(".ks-pipeline-count-emerald"), "color: var(--ks-color-info-400)"
+  end
+
+  def test_pipeline_count_danger_text_reads_the_danger_400_colour_role
+    assert_includes block(".ks-pipeline-count-danger"), "color: var(--ks-color-danger-400)"
+  end
+
+  def test_pipeline_count_muted_text_reads_the_pipeline_label_colour_role
+    assert_includes block(".ks-pipeline-count-muted"), "color: var(--ks-color-pipeline-label)"
+  end
+
+  def test_swipe_card_radius_is_2_of_the_surface_radius
+    assert_includes block(".ks-swipe-card"), "border-radius: calc(var(--ks-radius-surface) * 2)"
+  end
+
+  def test_swipe_card_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-swipe-card"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_swipe_card_border_reads_the_border_colour_role
+    assert_includes block(".ks-swipe-card"), "border-color: var(--ks-color-border)"
+  end
+
+  def test_swipe_card_fill_reads_the_surface_colour_role
+    assert_includes block(".ks-swipe-card"), "background-color: var(--ks-color-surface)"
+  end
+
+  def test_swipe_card_shadow_reads_the_overlay_shadow_variable
+    assert_includes block(".ks-swipe-card"), "--tw-shadow: var(--ks-shadow-overlay)"
+  end
+
+  def test_swipe_card_padding_is_6_spacing_units
+    assert_includes block(".ks-swipe-card"), "padding: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_swipe_card_border_reads_the_border_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-swipe-card"))
+  end
+
+  def test_swipe_card_fill_reads_the_surface_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-surface-dark\)/m, block(".ks-swipe-card"))
+  end
+
+  def test_swipe_empty_padding_block_is_16_spacing_units
+    assert_includes block(".ks-swipe-empty"), "padding-block: calc(var(--ks-spacing) * 16)"
+  end
+
+  def test_swipe_empty_title_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-swipe-empty-title"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
+  def test_swipe_empty_title_text_reads_the_text_colour_role
+    assert_includes block(".ks-swipe-empty-title"), "color: var(--ks-color-text)"
+  end
+
+  def test_swipe_empty_title_text_reads_the_text_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-swipe-empty-title"))
+  end
+
+  def test_swipe_empty_message_margin_top_is_2_spacing_units
+    assert_includes block(".ks-swipe-empty-message"), "margin-top: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_swipe_empty_message_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-swipe-empty-message"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_swipe_empty_message_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-swipe-empty-message"))
+  end
+
+  def test_swipe_actions_gap_is_8_spacing_units
+    assert_includes block(".ks-swipe-actions"), "gap: calc(var(--ks-spacing) * 8)"
+  end
+
+  def test_swipe_actions_margin_top_is_8_spacing_units
+    assert_includes block(".ks-swipe-actions"), "margin-top: calc(var(--ks-spacing) * 8)"
+  end
+
+  def test_swipe_button_radius_reads_the_pill_radius
+    assert_includes block(".ks-swipe-button"), "border-radius: var(--ks-radius-pill)"
+  end
+
+  def test_swipe_button_border_width_is_2_times_the_border_width_variable
+    assert_includes block(".ks-swipe-button"), "border-width: calc(var(--ks-border-width) * 2)"
+  end
+
+  def test_swipe_button_border_reads_the_border_strong_colour_role
+    assert_includes block(".ks-swipe-button"), "border-color: var(--ks-color-border-strong)"
+  end
+
+  def test_swipe_button_text_reads_the_close_colour_role
+    assert_includes block(".ks-swipe-button"), "color: var(--ks-color-close)"
+  end
+
+  def test_swipe_button_border_reads_the_border_strong_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-strong-dark\)/m, block(".ks-swipe-button"))
+  end
+
+  def test_swipe_button_reject_border_reads_the_danger_400_colour_role_on_hover
+    assert_match(/\.ks-swipe-button-reject(?![\w-]).*?:hover.*?border-color: var\(--ks-color-danger-400\)/m, self.class.compiled)
+  end
+
+  def test_swipe_button_reject_text_reads_the_danger_400_colour_role_on_hover
+    assert_match(/\.ks-swipe-button-reject(?![\w-]).*?:hover.*?\scolor: var\(--ks-color-danger-400\)/m, self.class.compiled)
+  end
+
+  def test_swipe_button_accept_border_reads_the_success_400_colour_role_on_hover
+    assert_match(/\.ks-swipe-button-accept(?![\w-]).*?:hover.*?border-color: var\(--ks-color-success-400\)/m, self.class.compiled)
+  end
+
+  def test_swipe_button_accept_text_reads_the_success_400_colour_role_on_hover
+    assert_match(/\.ks-swipe-button-accept(?![\w-]).*?:hover.*?\scolor: var\(--ks-color-success-400\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

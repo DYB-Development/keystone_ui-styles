@@ -95,12 +95,30 @@ any layer overrides them wherever it is imported.
 | `--ks-color-text-secondary` | File upload prompt | `--color-gray-600` |
 | `--ks-color-link`, `--ks-color-link-hover` | File upload browse link, and on hover | `--color-accent-600`, `--color-accent-500` |
 
+| `--ks-radius-pill` | Progress bar, hero badge and swipe button corners | Fully rounded |
+| `--ks-color-hover-border` | Link card and feature card border on hover | Accent 500 at 50% |
+| `--ks-color-tint`, `--ks-color-tint-border` | Feature icon, hero badge and active tab background, and the hero badge border | Accent 500 at 10% and 20% |
+| `--ks-color-border-subtle` | Call to action, feature card, code, accordion and disclosure border | `--color-surface-200` |
+| `--ks-color-fill-muted` | Call to action and code caption background | `--color-surface-50` |
+| `--ks-color-raised` | Feature card background | `--color-white` |
+| `--ks-color-text-display`, `--ks-color-text-display-muted` | Marketing titles and values, and their subtitles | `--color-surface-900`, `--color-surface-500` |
+| `--ks-color-text-body` | Accordion and disclosure body text | `--color-surface-600` |
+| `--ks-color-icon-soft` | Disclosure icon | `--color-surface-400` |
+| `--ks-color-track`, `--ks-color-meter` | Progress track, and the progress bar, funnel accent step and bucket fill | `--color-surface-200`, `--color-accent-500` |
+| `--ks-color-text-meter-label` | Progress and funnel labels | `--color-surface-700` |
+| `--ks-color-funnel-accent`, `-sky`, `-violet`, `-amber`, `-rose` | The five funnel step colours | The matching Tailwind 500 shade |
+| `--ks-color-over-goal`, `--ks-color-over-goal-warning` | Bucket fill over its goal | `--color-green-500`, `--color-amber-500` |
+| `--ks-color-table-head`, `--ks-color-table-body`, `--ks-color-divider` | Table head and body background, and the line between rows | `--color-gray-50`, `--color-white`, `--color-gray-200` |
+| `--ks-shadow-surface-dark` | Table shadow on a dark page | None |
+| `--ks-color-code`, `--ks-color-text-code` | Code block background and text | `--color-surface-900`, `--color-surface-100` |
+| `--ks-color-pipeline`, `--ks-color-pipeline-box`, `--ks-color-pipeline-border` | Pipeline and box background, and their border | `--color-surface-800`, `--color-surface-900`, `--color-surface-700` |
+| `--ks-color-text-on-dark`, `--ks-color-pipeline-muted`, `--ks-color-pipeline-label`, `--ks-color-pipeline-amber` | Pipeline title, subtitle, box label and amber count | `--color-white`, `--color-surface-400`, `--color-surface-500`, `--color-amber-400` |
 Each colour variable in the table whose component changes on a dark page has a
 `-dark` partner, such as `--ks-color-surface-dark`, that it reads there.
 
 Alerts and badges read a shade scale per status instead:
 `--ks-color-success-*`, `--ks-color-warning-*`, `--ks-color-danger-*` and
-`--ks-color-info-*`, each with shades 50, 100, 300, 400, 700, 800 and 900. They
+`--ks-color-info-*`, each with shades 50, 100, 300, 400, 600, 700, 800 and 900, and 500 for danger. They
 default to Tailwind's green, yellow and red, and to the accent scale for info.
 An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 100 and 700, and 900 and 400 on a dark page.
@@ -155,6 +173,24 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-option-card`, `ks-option-card-selected` | Option card, and a chosen one |
 | `ks-file-upload`, `ks-file-upload-drop-zone`, `ks-file-upload-drop-zone-active`, `ks-file-upload-inner`, `ks-file-upload-icon`, `ks-file-upload-prompt`, `ks-file-upload-browse`, `ks-file-upload-hint`, `ks-file-upload-file-name` | File upload and its parts |
 | `ks-color-swatch`, `ks-color-picker-panel` | Colour picker swatch and its panel |
+| `ks-metric-card` | Stat card and chart card |
+| `ks-stat-card-header`, `ks-stat-card-label`, `ks-stat-card-value`, `ks-stat-card-suffix`, `ks-stat-card-disclosure`, `ks-stat-card-emphasis`, `ks-stat-card-change`, `ks-stat-card-info` | Stat card parts |
+| `ks-tone-neutral`, `ks-tone-muted`, `ks-tone-success`, `ks-tone-danger`, `ks-tone-warning`, `ks-tone-info` | Stat card value and change colour |
+| `ks-chart-card-title` | Chart card title |
+| `ks-link-card`, `ks-link-card-shadow`, `ks-link-card-padding-sm`, `ks-link-card-padding-md`, `ks-link-card-padding-lg` | Card link, its shadow and its padding |
+| `ks-cta-banner`, `ks-cta-banner-title`, `ks-cta-banner-subtitle`, `ks-cta-banner-actions` | Call to action banner and its parts |
+| `ks-feature-grid`, `ks-feature-grid-title`, `ks-feature-grid-subtitle`, `ks-feature-card`, `ks-feature-card-icon`, `ks-feature-card-title`, `ks-feature-card-description` | Feature grid and its cards |
+| `ks-hero`, `ks-hero-inner`, `ks-hero-content`, `ks-hero-split`, `ks-hero-title`, `ks-hero-subtitle`, `ks-hero-badge`, `ks-hero-actions` | Hero and its parts |
+| `ks-table`, `ks-table-head`, `ks-table-body`, `ks-table-header`, `ks-table-header-first`, `ks-table-header-middle`, `ks-table-header-last`, `ks-table-cell-first`, `ks-table-cell-middle`, `ks-table-cell-last`, `ks-table-sort-link`, `ks-table-sort-icon`, `ks-table-sort-icon-active` | Data table and its parts |
+| `ks-code`, `ks-code-caption`, `ks-code-block` | Code block and its caption |
+| `ks-accordion`, `ks-accordion-item`, `ks-accordion-button`, `ks-accordion-answer` | Accordion and its parts |
+| `ks-disclosure`, `ks-disclosure-summary`, `ks-disclosure-body`, `ks-disclosure-icon` | Disclosure and its parts |
+| `ks-tab-bar`, `ks-tab`, `ks-tab-active` | Tab switcher, a tab, and the active tab |
+| `ks-progress-track`, `ks-progress-bar`, `ks-meter-label` | Progress bar and its label |
+| `ks-funnel`, `ks-funnel-layer`, `ks-funnel-row`, `ks-funnel-label`, `ks-funnel-value`, `ks-funnel-bar`, `ks-funnel-transition`, `ks-funnel-bar-accent`, `ks-funnel-bar-sky`, `ks-funnel-bar-violet`, `ks-funnel-bar-amber`, `ks-funnel-bar-rose` | Funnel and its parts |
+| `ks-bucket`, `ks-bucket-series`, `ks-bucket-label`, `ks-bucket-goal`, `ks-bucket-percent`, `ks-bucket-tank`, `ks-bucket-actual`, `ks-bucket-fill`, `ks-bucket-fill-over`, `ks-bucket-fill-over-warning` | Bucket and its parts |
+| `ks-pipeline`, `ks-pipeline-header`, `ks-pipeline-title`, `ks-pipeline-subtitle`, `ks-pipeline-track`, `ks-pipeline-box`, `ks-pipeline-box-label`, `ks-pipeline-count`, `ks-pipeline-link-healthy`, `ks-pipeline-link-broken`, `ks-pipeline-count-amber`, `ks-pipeline-count-emerald`, `ks-pipeline-count-danger`, `ks-pipeline-count-muted` | Pipeline and its parts |
+| `ks-swipe-card`, `ks-swipe-empty`, `ks-swipe-empty-title`, `ks-swipe-empty-message`, `ks-swipe-actions`, `ks-swipe-button`, `ks-swipe-button-reject`, `ks-swipe-button-accept` | Swipe deck and its parts |
 
 ```html
 <button class="ks-button ks-button-primary ks-button-md">Save</button>

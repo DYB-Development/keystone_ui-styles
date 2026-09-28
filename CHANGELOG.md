@@ -3,6 +3,10 @@
 ## [Unreleased]
 
 ### Added
+- Classes for the stat card, chart card, card link, call to action banner, feature grid, hero, data table, code, accordion, disclosure, tab switcher, progress, funnel, bucket, pipeline and swipe deck, which draw what those components draw today from `--ks-` variables.
+- The funnel's five step colours and the bucket's over-goal colours are colour roles a look can set.
+
+### Added
 - Classes for the dialog, action menu, column picker and multi select menus, copy button, theme toggle, checkbox row, radio card, option card, file upload and colour picker, which draw what those components draw today from `--ks-` variables.
 
 ### Added
