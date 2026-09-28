@@ -1164,6 +1164,6 @@
   }
 
   .ks-mobile-header-subtitle {
-    @apply font-(weight:--ks-font-weight-normal);
+    @apply font-(weight:--ks-font-weight-normal) text-(color:--ks-color-text-muted);
   }
 }

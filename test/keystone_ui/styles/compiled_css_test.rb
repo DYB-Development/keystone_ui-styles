@@ -3763,6 +3763,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-mobile-header-subtitle"), "font-weight: var(--ks-font-weight-normal)"
   end
 
+  def test_mobile_header_subtitle_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-mobile-header-subtitle"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)
