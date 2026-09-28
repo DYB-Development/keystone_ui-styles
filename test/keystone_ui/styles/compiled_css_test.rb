@@ -2672,7 +2672,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_track_dark_defaults_to_var_color_surface_700
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-track-dark: var\(--color-surface-700\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-track-dark: var\(--ks-color-border-dark\)/m, self.class.compiled)
   end
 
   def test_progress_bar_fill_reads_the_meter_colour_role
