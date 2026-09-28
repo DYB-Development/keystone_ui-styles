@@ -1256,7 +1256,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_choice_defaults_to_var_color_surface_900
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-choice: var\(--color-surface-900\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-choice: var\(--ks-color-text\)/m, self.class.compiled)
   end
 
   def test_color_text_choice_dark_defaults_to_var_color_surface_100

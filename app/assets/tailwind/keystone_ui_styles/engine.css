@@ -150,7 +150,7 @@
     --ks-color-hover-raised: var(--color-gray-50);
     --ks-color-hover-raised-dark: var(--color-zinc-700);
     --ks-color-border-choice: var(--color-surface-300);
-    --ks-color-text-choice: var(--color-surface-900);
+    --ks-color-text-choice: var(--ks-color-text);
     --ks-color-text-choice-dark: var(--color-surface-100);
     --ks-color-text-choice-muted: var(--color-surface-500);
     --ks-color-text-choice-muted-dark: var(--color-surface-400);
