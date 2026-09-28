@@ -345,7 +345,7 @@
   }
 
   .ks-page-header {
-    @apply hidden sm:block mb-6 sm:flex sm:items-center sm:justify-between;
+    @apply hidden sm:block mb-[calc(var(--ks-spacing)*6)] sm:flex sm:items-center sm:justify-between;
   }
 
   .ks-page-header-title {

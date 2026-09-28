@@ -355,7 +355,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_page_header_classes_match_keystone_ui_page_header
-    assert_includes rule(".ks-page-header"), "margin-bottom: calc(var(--spacing) * 6)"
+    assert_includes rule(".ks-page-header"), "margin-bottom: calc(var(--ks-spacing) * 6)"
     assert_includes rule(".ks-page-header-title"), "font-size: var(--text-2xl)"
     assert_includes rule(".ks-page-header-subtitle"), "color: var(--ks-color-text-muted)"
     assert_includes rule(".ks-page-header-actions"), "flex-shrink: 0"
