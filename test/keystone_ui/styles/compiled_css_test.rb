@@ -4103,6 +4103,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-page-title"), "color: var(--ks-color-text)"
   end
 
+  def test_page_title_text_reads_the_text_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-text-dark\)/m, block(".ks-page-title"))
+  end
+
   private
 
   def block(selector)
