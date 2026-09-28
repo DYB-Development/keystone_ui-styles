@@ -3887,6 +3887,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-error"), "margin-top: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_error_text_reads_the_danger_400_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-danger-400\)/m, block(".ks-error"))
+  end
+
   private
 
   def block(selector)
