@@ -272,7 +272,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_focused_input_rings_in_the_accent_color
-    assert_match(/:focus.*?--tw-ring-color: var\(--color-accent-500\)/m, block(".ks-input"))
+    assert_match(/:focus.*?--tw-ring-color: var\(--ks-color-focus\)/m, block(".ks-input"))
   end
 
   def test_input_turns_dark_in_dark_mode
