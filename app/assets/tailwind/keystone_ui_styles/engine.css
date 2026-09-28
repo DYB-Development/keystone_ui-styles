@@ -90,7 +90,7 @@
     --ks-color-surface-dark: var(--color-surface-900);
     --ks-color-border: var(--color-surface-200);
     --ks-color-border-dark: var(--color-surface-700);
-    --ks-color-border-control: var(--color-gray-300);
+    --ks-color-border-control: var(--ks-color-border-strong);
     --ks-color-border-control-dark: var(--color-zinc-700);
     --ks-color-text: var(--color-surface-900);
     --ks-color-text-dark: var(--color-white);
