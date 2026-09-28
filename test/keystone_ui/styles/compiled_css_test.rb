@@ -3423,6 +3423,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 64rem.*?width: auto/m, block(".ks-nav-dropdown-trigger"))
   end
 
+  def test_nav_dropdown_trigger_text_reads_the_nav_link_colour_role
+    assert_includes block(".ks-nav-dropdown-trigger"), "color: var(--ks-color-nav-link)"
+  end
+
   private
 
   def block(selector)

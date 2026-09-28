@@ -1128,6 +1128,6 @@
   }
 
   .ks-nav-dropdown-trigger {
-    @apply flex items-center justify-between text-sm text-nowrap w-full no-underline gap-[calc(var(--ks-spacing)*1)] px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*3)] lg:px-[calc(var(--ks-spacing)*1)] lg:py-[calc(var(--ks-spacing)*2)] lg:w-auto;
+    @apply flex items-center justify-between text-sm text-nowrap w-full no-underline gap-[calc(var(--ks-spacing)*1)] px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*3)] lg:px-[calc(var(--ks-spacing)*1)] lg:py-[calc(var(--ks-spacing)*2)] lg:w-auto text-(color:--ks-color-nav-link);
   }
 }
