@@ -2048,7 +2048,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_raised_dark_defaults_to_var_color_surface_800
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-raised-dark: var\(--color-surface-800\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-raised-dark: var\(--ks-color-overlay-dark\)/m, self.class.compiled)
   end
 
   def test_feature_card_icon_margin_bottom_is_4_spacing_units

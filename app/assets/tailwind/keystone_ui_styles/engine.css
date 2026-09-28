@@ -187,7 +187,7 @@
     --ks-color-text-display-muted: var(--ks-color-text-muted);
     --ks-color-text-display-muted-dark: var(--ks-color-text-muted-dark);
     --ks-color-raised: var(--ks-color-overlay);
-    --ks-color-raised-dark: var(--color-surface-800);
+    --ks-color-raised-dark: var(--ks-color-overlay-dark);
     --ks-color-tint: color-mix(in oklab, var(--color-accent-500) 10%, transparent);
     --ks-color-tint-border: color-mix(in oklab, var(--color-accent-500) 20%, transparent);
     --ks-shadow-surface-dark: 0 0 #0000;
