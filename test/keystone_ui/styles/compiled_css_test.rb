@@ -3727,6 +3727,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?\&\.active.*?\scolor: var\(--ks-color-nav-active-dark\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
   end
 
+  def test_navbar_title_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-navbar-title"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
   private
 
   def block(selector)
