@@ -1066,6 +1066,6 @@
   }
 
   .ks-swipe-actions {
-    @apply gap-[calc(var(--ks-spacing)*8)];
+    @apply gap-[calc(var(--ks-spacing)*8)] mt-[calc(var(--ks-spacing)*8)];
   }
 }

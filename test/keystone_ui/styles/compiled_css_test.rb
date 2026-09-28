@@ -3091,6 +3091,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-swipe-actions"), "gap: calc(var(--ks-spacing) * 8)"
   end
 
+  def test_swipe_actions_margin_top_is_8_spacing_units
+    assert_includes block(".ks-swipe-actions"), "margin-top: calc(var(--ks-spacing) * 8)"
+  end
+
   private
 
   def block(selector)
