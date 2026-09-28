@@ -1144,6 +1144,6 @@
   }
 
   .ks-nav-dropdown-menu {
-    @apply relative w-full;
+    @apply relative w-full z-50;
   }
 }

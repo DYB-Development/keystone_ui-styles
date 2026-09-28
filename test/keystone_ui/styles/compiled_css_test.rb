@@ -3575,6 +3575,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-menu"), "width: 100%"
   end
 
+  def test_nav_dropdown_menu_stacking_level_is_50
+    assert_includes block(".ks-nav-dropdown-menu"), "z-index: 50"
+  end
+
   private
 
   def block(selector)
