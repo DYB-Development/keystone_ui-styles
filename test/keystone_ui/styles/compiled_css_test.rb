@@ -3283,6 +3283,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav-item"), "flex-direction: column"
   end
 
+  def test_bottom_nav_item_content_is_centred_across
+    assert_includes block(".ks-bottom-nav-item"), "align-items: center"
+  end
+
   private
 
   def block(selector)

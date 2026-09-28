@@ -1116,6 +1116,6 @@
   }
 
   .ks-bottom-nav-item {
-    @apply flex flex-1 flex-col;
+    @apply flex flex-1 flex-col items-center;
   }
 }
