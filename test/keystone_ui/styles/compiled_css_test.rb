@@ -3271,6 +3271,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-bottom-nav::after \{.*?background: inherit/m, self.class.compiled)
   end
 
+  def test_bottom_nav_item_content_is_laid_out_with_flex
+    assert_includes block(".ks-bottom-nav-item"), "display: flex"
+  end
+
   private
 
   def block(selector)

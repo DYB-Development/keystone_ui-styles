@@ -1114,4 +1114,8 @@
     height: 100px;
     background: inherit;
   }
+
+  .ks-bottom-nav-item {
+    @apply flex;
+  }
 }
