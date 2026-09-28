@@ -3239,6 +3239,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav"), "justify-content: space-around"
   end
 
+  def test_bottom_nav_bottom_padding_clears_the_safe_area
+    assert_includes block(".ks-bottom-nav"), "padding-bottom: env(safe-area-inset-bottom)"
+  end
+
   private
 
   def block(selector)
