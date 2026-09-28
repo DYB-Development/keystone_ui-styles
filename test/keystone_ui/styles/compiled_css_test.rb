@@ -3499,6 +3499,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-item"), "padding-block: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_nav_item_padding_inline_is_1_spacing_units_on_large_screens
+    assert_match(/width >= 64rem.*?padding-inline: calc\(var\(--ks-spacing\) \* 1\)/m, block(".ks-nav-item"))
+  end
+
   private
 
   def block(selector)
