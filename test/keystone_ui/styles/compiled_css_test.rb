@@ -3539,6 +3539,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?\&\.active.*?\scolor: var\(--ks-color-nav-active-dark\)/m, block(".ks-nav-item"))
   end
 
+  def test_nav_item_underline_reads_the_nav_indicator_colour_role_on_large_screens_and_when_marked_active
+    assert_match(/width >= 64rem.*?\&\.active.*?inset 0 calc\(var\(--ks-border-width\) \* -4\) 0 0 var\(--tw-shadow-color, var\(--ks-color-nav-indicator\)\)/m, block(".ks-nav-item"))
+  end
+
   private
 
   def block(selector)
