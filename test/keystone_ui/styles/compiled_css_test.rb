@@ -288,7 +288,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_required_marker_is_red
-    assert_includes rule(".ks-required"), "color: var(--color-red-500)"
+    assert_includes rule(".ks-required"), "color: var(--ks-color-danger-500)"
   end
 
   def test_hint_reads_the_muted_text_colour_role
