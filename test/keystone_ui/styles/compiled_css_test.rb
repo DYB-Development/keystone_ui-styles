@@ -3203,6 +3203,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-hover-dark: var\(--base-bg-hover, var\(--color-zinc-800\)\)/m, self.class.compiled)
   end
 
+  def test_shadow_menu_defaults_to_var_shadow_md
+    assert_match(/@layer base \{.*?:root \{.*?--ks-shadow-menu: var\(--shadow-md\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
