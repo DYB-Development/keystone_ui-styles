@@ -2,21 +2,17 @@
 
 ## [Unreleased]
 
-### Added
-- Classes for the bottom nav, nav dropdown, nav item, navbar title, mobile header and settings link, which draw from `--ks-` variables and have visible colours in a host that sets none.
-- The navigation colours read the old `--base-*` variables first, so a host that set them keeps its nav colours.
-
-### Added
-- Classes for the stat card, chart card, card link, call to action banner, feature grid, hero, data table, code, accordion, disclosure, tab switcher, progress, funnel, bucket, pipeline and swipe deck, which draw what those components draw today from `--ks-` variables.
-- The funnel's five step colours and the bucket's over-goal colours are colour roles a look can set.
-
-### Added
-- Classes for the dialog, action menu, column picker and multi select menus, copy button, theme toggle, checkbox row, radio card, option card, file upload and colour picker, which draw what those components draw today from `--ks-` variables.
+## [0.5.0] - 2026-09-27
 
 ### Added
 - Panels, cards, inputs, labels, hints, alerts, badges, pages, sections and page headers take their colours, corner radius, title weight and padding from `--ks-` variables, and look the same until a variable is set.
 - Alerts and badges take their colours from a shade scale per status, which a look can set.
 - Panel radius, padding and shadow classes that read the same variables, for keystone_ui's panel to render.
+- Classes for the dialog, action menu, column picker and multi select menus, copy button, theme toggle, checkbox row, radio card, option card, file upload and colour picker, which draw what those components draw today from `--ks-` variables.
+- Classes for the stat card, chart card, card link, call to action banner, feature grid, hero, data table, code, accordion, disclosure, tab switcher, progress, funnel, bucket, pipeline and swipe deck, which draw what those components draw today from `--ks-` variables.
+- The funnel's five step colours and the bucket's over-goal colours are colour roles a look can set.
+- Classes for the bottom nav, nav dropdown, nav item, navbar title, mobile header and settings link, which draw from `--ks-` variables and have visible colours in a host that sets none.
+- The navigation colours read the old `--base-*` variables first, so a host that set them keeps its nav colours.
 
 ## [0.4.0] - 2026-09-27
 
