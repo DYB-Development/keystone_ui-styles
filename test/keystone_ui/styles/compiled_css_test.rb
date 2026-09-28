@@ -3799,6 +3799,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-soft: var\(--color-gray-50\)/m, self.class.compiled)
   end
 
+  def test_color_hover_soft_dark_defaults_to_var_color_gray_800
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-soft-dark: var\(--color-gray-800\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
