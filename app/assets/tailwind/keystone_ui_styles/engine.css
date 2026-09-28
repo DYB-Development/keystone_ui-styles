@@ -226,6 +226,7 @@
     --ks-color-nav-border: var(--base-border-tertiary, var(--color-gray-200));
     --ks-color-nav-border-dark: var(--base-border-tertiary, var(--color-zinc-700));
     --ks-color-nav-text: var(--base-text-tertiary, var(--color-gray-500));
+    --ks-color-nav-text-dark: var(--base-text-tertiary, var(--color-gray-400));
   }
 }
 
