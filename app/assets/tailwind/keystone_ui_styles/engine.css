@@ -1132,6 +1132,6 @@
   }
 
   .ks-nav-item {
-    @apply flex;
+    @apply flex items-center;
   }
 }
