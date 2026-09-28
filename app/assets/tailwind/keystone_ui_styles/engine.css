@@ -247,6 +247,7 @@
     --ks-color-link-strong-hover: var(--color-accent-900);
     --ks-color-link-strong-hover-dark: var(--color-accent-300);
     --ks-color-badge-neutral: var(--color-gray-100);
+    --ks-color-badge-neutral-dark: var(--color-zinc-700);
   }
 }
 
