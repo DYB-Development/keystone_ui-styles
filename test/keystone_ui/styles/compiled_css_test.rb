@@ -3527,6 +3527,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\&\.active.*?font-weight: var\(--ks-font-weight-heading\)/m, block(".ks-nav-item"))
   end
 
+  def test_nav_item_text_reads_the_nav_link_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-nav-link-dark\)/m, block(".ks-nav-item"))
+  end
+
   private
 
   def block(selector)
