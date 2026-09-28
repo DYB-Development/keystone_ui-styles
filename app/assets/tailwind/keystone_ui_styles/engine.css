@@ -1148,6 +1148,6 @@
   }
 
   .ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a {
-    @apply block text-sm;
+    @apply block text-sm no-underline;
   }
 }

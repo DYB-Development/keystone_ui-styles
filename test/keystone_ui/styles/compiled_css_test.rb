@@ -3655,6 +3655,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "font-size: var(--text-sm)"
   end
 
+  def test_nav_dropdown_menu_link_label_is_not_underlined
+    assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "text-decoration-line: none"
+  end
+
   private
 
   def block(selector)
