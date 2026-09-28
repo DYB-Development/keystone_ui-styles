@@ -3663,6 +3663,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "white-space: nowrap"
   end
 
+  def test_nav_dropdown_menu_link_padding_block_is_3_spacing_units
+    assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "padding-block: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
