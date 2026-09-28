@@ -3951,6 +3951,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-link-strong-hover: var\(--color-accent-900\)/m, self.class.compiled)
   end
 
+  def test_color_link_strong_hover_dark_defaults_to_var_color_accent_300
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-link-strong-hover-dark: var\(--color-accent-300\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
