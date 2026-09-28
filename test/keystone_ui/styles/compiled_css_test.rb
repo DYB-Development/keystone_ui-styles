@@ -3251,6 +3251,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav"), "background-color: var(--ks-color-nav)"
   end
 
+  def test_bottom_nav_fill_reads_the_nav_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-nav-dark\)/m, block(".ks-bottom-nav"))
+  end
+
   private
 
   def block(selector)
