@@ -2044,7 +2044,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_raised_defaults_to_var_color_white
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-raised: var\(--color-white\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-raised: var\(--ks-color-overlay\)/m, self.class.compiled)
   end
 
   def test_color_raised_dark_defaults_to_var_color_surface_800
