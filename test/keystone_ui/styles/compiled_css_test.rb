@@ -2232,7 +2232,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_table_head_dark_defaults_to_color_mix_in_oklab_var_color_gray_800_75_transparent
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-head-dark: color-mix\(in oklab, var\(--color-gray-800\) 75%, transparent\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-head-dark: var\(--ks-color-hover-dark\)/m, self.class.compiled)
   end
 
   def test_table_body_fill_reads_the_table_body_colour_role
