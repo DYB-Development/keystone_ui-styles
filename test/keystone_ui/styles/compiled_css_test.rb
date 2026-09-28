@@ -3207,6 +3207,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-shadow-menu: var\(--shadow-md\)/m, self.class.compiled)
   end
 
+  def test_font_weight_normal_defaults_to_var_font_weight_normal
+    assert_match(/@layer base \{.*?:root \{.*?--ks-font-weight-normal: var\(--font-weight-normal\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
