@@ -223,6 +223,7 @@
     --ks-color-pipeline-amber: var(--color-amber-400);
     --ks-color-nav: var(--base-bg-low, var(--color-white));
     --ks-color-nav-dark: var(--base-bg-low, var(--color-zinc-900));
+    --ks-color-nav-border: var(--base-border-tertiary, var(--color-gray-200));
   }
 }
 
