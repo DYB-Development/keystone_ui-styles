@@ -3571,6 +3571,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-menu"), "position: relative"
   end
 
+  def test_nav_dropdown_menu_width_fills_its_row_on_small_screens
+    assert_includes block(".ks-nav-dropdown-menu"), "width: 100%"
+  end
+
   private
 
   def block(selector)
