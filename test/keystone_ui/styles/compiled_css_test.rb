@@ -920,7 +920,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_close_defaults_to_var_color_gray_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-close: var\(--color-gray-400\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-close: var\(--ks-color-icon\)/m, self.class.compiled)
   end
 
   def test_color_close_hover_defaults_to_var_color_gray_600
