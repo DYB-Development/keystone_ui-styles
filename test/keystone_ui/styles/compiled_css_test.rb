@@ -3291,6 +3291,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav-item"), "justify-content: center"
   end
 
+  def test_bottom_nav_item_height_is_at_least_56_pixels
+    assert_includes block(".ks-bottom-nav-item"), "min-height: calc(var(--spacing) * 14)"
+  end
+
   private
 
   def block(selector)
