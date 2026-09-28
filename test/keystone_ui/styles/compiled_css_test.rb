@@ -3823,6 +3823,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 40rem.*?border-inline-width: var\(--ks-border-width\)/m, block(".ks-card-edge"))
   end
 
+  def test_input_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-input"), "border-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)
