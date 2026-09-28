@@ -3359,6 +3359,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav-label"), "line-height: 1"
   end
 
+  def test_nav_dropdown_menu_is_placed_against_it
+    assert_includes block(".ks-nav-dropdown"), "position: relative"
+  end
+
   private
 
   def block(selector)
