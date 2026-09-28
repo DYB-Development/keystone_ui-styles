@@ -152,7 +152,7 @@
     --ks-color-border-choice: var(--color-surface-300);
     --ks-color-text-choice: var(--ks-color-text);
     --ks-color-text-choice-dark: var(--ks-color-text-dark);
-    --ks-color-text-choice-muted: var(--color-surface-500);
+    --ks-color-text-choice-muted: var(--ks-color-text-muted);
     --ks-color-text-choice-muted-dark: var(--color-surface-400);
     --ks-color-selected-border: var(--color-accent-500);
     --ks-color-selected: var(--color-accent-50);
