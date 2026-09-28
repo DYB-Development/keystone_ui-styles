@@ -289,7 +289,7 @@
   }
 
   .ks-label {
-    @apply block text-sm font-medium text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark);
+    @apply block text-sm font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark);
   }
 
   .ks-required {

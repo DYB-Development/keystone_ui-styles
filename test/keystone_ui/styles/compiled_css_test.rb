@@ -3871,6 +3871,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-text-muted-dark\)/m, block(".ks-input-disabled"))
   end
 
+  def test_label_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-label"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
   private
 
   def block(selector)
