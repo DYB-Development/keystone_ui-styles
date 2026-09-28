@@ -3267,6 +3267,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-top-color: var\(--ks-color-nav-border-dark\)/m, block(".ks-bottom-nav"))
   end
 
+  def test_bottom_nav_background_extends_below_the_screen_edge
+    assert_match(/\.ks-bottom-nav::after \{.*?background: inherit/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
