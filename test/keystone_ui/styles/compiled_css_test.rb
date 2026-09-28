@@ -3227,6 +3227,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav"), "right: 0px"
   end
 
+  def test_bottom_nav_stacking_level_is_40
+    assert_includes block(".ks-bottom-nav"), "z-index: 40"
+  end
+
   private
 
   def block(selector)
