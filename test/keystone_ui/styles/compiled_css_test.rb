@@ -3907,6 +3907,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-strong-dark\)/m, block(".ks-checkbox"))
   end
 
+  def test_checkbox_fill_reads_the_surface_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-surface-dark\)/m, block(".ks-checkbox"))
+  end
+
   private
 
   def block(selector)
