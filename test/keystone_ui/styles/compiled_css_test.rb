@@ -3995,6 +3995,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-badge"), "padding-inline: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_badge_padding_block_is_1_spacing_units
+    assert_includes block(".ks-badge"), "padding-block: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)

@@ -463,7 +463,7 @@
   }
 
   .ks-badge {
-    @apply inline-flex items-center rounded-(--ks-radius-pill) px-[calc(var(--ks-spacing)*2)] py-1 text-xs font-medium;
+    @apply inline-flex items-center rounded-(--ks-radius-pill) px-[calc(var(--ks-spacing)*2)] py-[calc(var(--ks-spacing)*1)] text-xs font-medium;
   }
 
   .ks-badge-neutral {
