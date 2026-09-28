@@ -1236,4 +1236,8 @@
   .ks-grid-gap-xl {
     @apply gap-[calc(var(--ks-spacing)*8)];
   }
+
+  .ks-grid-gap-x-xl {
+    @apply gap-x-[calc(var(--ks-spacing)*8)];
+  }
 }
