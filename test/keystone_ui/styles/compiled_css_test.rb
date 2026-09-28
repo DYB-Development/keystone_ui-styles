@@ -3311,6 +3311,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav-item"), "padding-inline: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_bottom_nav_item_text_reads_the_nav_text_colour_role
+    assert_includes block(".ks-bottom-nav-item"), "color: var(--ks-color-nav-text)"
+  end
+
   private
 
   def block(selector)
