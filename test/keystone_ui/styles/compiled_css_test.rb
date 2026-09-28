@@ -396,7 +396,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_border_dark_defaults_to_var_color_zinc_700
-    assert_match(/:root \{[^}]*--ks-color-border-dark: var\(--color-zinc-700\)/m, self.class.compiled)
+    assert_match(/:root \{[^}]*--ks-color-border-dark: var\(--color-surface-700\)/m, self.class.compiled)
   end
 
   def test_card_background_reads_the_surface_colour_role
