@@ -3783,6 +3783,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-settings-link"), "color: var(--ks-color-text-option)"
   end
 
+  def test_settings_link_fill_reads_the_hover_soft_colour_role_on_hover
+    assert_match(/:hover.*?background-color: var\(--ks-color-hover-soft\)/m, block(".ks-settings-link"))
+  end
+
   private
 
   def block(selector)
