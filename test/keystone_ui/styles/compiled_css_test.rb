@@ -3803,6 +3803,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-soft-dark: var\(--color-gray-800\)/m, self.class.compiled)
   end
 
+  def test_settings_link_label_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-settings-link-label"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
   private
 
   def block(selector)

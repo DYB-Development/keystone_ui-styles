@@ -1172,4 +1172,8 @@
   .ks-settings-link {
     @apply px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-text-option) hover:bg-(color:--ks-color-hover-soft) dark:text-(color:--ks-color-text-option-dark) dark:hover:bg-(color:--ks-color-hover-soft-dark);
   }
+
+  .ks-settings-link-label {
+    @apply font-(weight:--ks-font-weight-medium);
+  }
 }
