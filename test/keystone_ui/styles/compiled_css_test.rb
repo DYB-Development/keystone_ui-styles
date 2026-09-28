@@ -3819,6 +3819,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-card"), "border-width: var(--ks-border-width)"
   end
 
+  def test_card_edge_side_border_width_reads_the_border_width_variable_on_wider_screens
+    assert_match(/width >= 40rem.*?border-inline-width: var\(--ks-border-width\)/m, block(".ks-card-edge"))
+  end
+
   private
 
   def block(selector)
