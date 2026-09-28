@@ -3923,6 +3923,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 40rem.*?margin-left: calc\(var\(--ks-spacing\) \* 4\)/m, block(".ks-page-header-actions"))
   end
 
+  def test_section_header_margin_bottom_is_4_spacing_units
+    assert_includes block(".ks-section-header"), "margin-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)

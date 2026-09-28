@@ -373,7 +373,7 @@
   }
 
   .ks-section-header {
-    @apply flex items-center justify-between mb-4;
+    @apply flex items-center justify-between mb-[calc(var(--ks-spacing)*4)];
   }
 
   .ks-section-title {
