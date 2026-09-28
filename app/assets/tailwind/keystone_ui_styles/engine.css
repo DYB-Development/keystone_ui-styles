@@ -1196,4 +1196,8 @@
   .hotwire-native main {
     padding-bottom: 0;
   }
+
+  .ks-grid-gap-sm {
+    @apply gap-[calc(var(--ks-spacing)*3)];
+  }
 }

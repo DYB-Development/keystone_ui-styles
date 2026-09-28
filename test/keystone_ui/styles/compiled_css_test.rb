@@ -4023,6 +4023,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-badge-neutral-dark: var\(--color-zinc-700\)/m, self.class.compiled)
   end
 
+  def test_grid_gap_sm_gap_is_3_spacing_units
+    assert_includes block(".ks-grid-gap-sm"), "gap: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
