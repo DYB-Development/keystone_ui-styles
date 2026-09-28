@@ -3131,6 +3131,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-swipe-button-accept(?![\w-]).*?:hover.*?\scolor: var\(--ks-color-success-400\)/m, self.class.compiled)
   end
 
+  def test_color_nav_defaults_to_var_base_bg_low_var_color_white
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav: var\(--base-bg-low, var\(--color-white\)\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
