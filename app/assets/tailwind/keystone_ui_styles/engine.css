@@ -1148,6 +1148,6 @@
   }
 
   .ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a {
-    @apply block text-sm no-underline whitespace-nowrap py-[calc(var(--ks-spacing)*3)] pr-[calc(var(--ks-spacing)*4)] pl-[calc(var(--ks-spacing)*8)] lg:py-[calc(var(--ks-spacing)*2)] lg:px-[calc(var(--ks-spacing)*4)] text-(color:--ks-color-nav-link) hover:bg-(color:--ks-color-nav-hover) hover:text-(color:--ks-color-nav-text-hover) [&.active]:bg-(color:--ks-color-nav-hover) [&.active]:text-(color:--ks-color-nav-active) [&.active]:font-(weight:--ks-font-weight-heading) dark:text-(color:--ks-color-nav-link-dark) dark:hover:bg-(color:--ks-color-nav-hover-dark) dark:hover:text-(color:--ks-color-nav-text-hover-dark);
+    @apply block text-sm no-underline whitespace-nowrap py-[calc(var(--ks-spacing)*3)] pr-[calc(var(--ks-spacing)*4)] pl-[calc(var(--ks-spacing)*8)] lg:py-[calc(var(--ks-spacing)*2)] lg:px-[calc(var(--ks-spacing)*4)] text-(color:--ks-color-nav-link) hover:bg-(color:--ks-color-nav-hover) hover:text-(color:--ks-color-nav-text-hover) [&.active]:bg-(color:--ks-color-nav-hover) [&.active]:text-(color:--ks-color-nav-active) [&.active]:font-(weight:--ks-font-weight-heading) dark:text-(color:--ks-color-nav-link-dark) dark:hover:bg-(color:--ks-color-nav-hover-dark) dark:hover:text-(color:--ks-color-nav-text-hover-dark) dark:[&.active]:bg-(color:--ks-color-nav-hover-dark);
   }
 }
