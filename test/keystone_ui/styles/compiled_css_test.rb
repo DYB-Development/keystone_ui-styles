@@ -3987,6 +3987,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\&:focus.*?calc\(calc\(var\(--ks-border-width\) \* 2\) \+ var\(--tw-ring-offset-width\)\)/m, block(".ks-alert-dismiss"))
   end
 
+  def test_alert_dismiss_focus_ring_gap_is_twice_the_border_width_on_focus
+    assert_match(/\&:focus.*?--tw-ring-offset-width: calc\(var\(--ks-border-width\) \* 2\)/m, block(".ks-alert-dismiss"))
+  end
+
   private
 
   def block(selector)

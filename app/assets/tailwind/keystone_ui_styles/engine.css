@@ -459,7 +459,7 @@
   }
 
   .ks-alert-dismiss {
-    @apply ml-auto -mr-[calc(var(--ks-spacing)*1.5)] -mt-[calc(var(--ks-spacing)*1.5)] inline-flex rounded-[calc(var(--ks-radius-control)*0.75)] p-[calc(var(--ks-spacing)*1.5)] focus:outline-none focus:ring-[length:calc(var(--ks-border-width)*2)] focus:ring-offset-2 cursor-pointer;
+    @apply ml-auto -mr-[calc(var(--ks-spacing)*1.5)] -mt-[calc(var(--ks-spacing)*1.5)] inline-flex rounded-[calc(var(--ks-radius-control)*0.75)] p-[calc(var(--ks-spacing)*1.5)] focus:outline-none focus:ring-[length:calc(var(--ks-border-width)*2)] focus:ring-offset-[calc(var(--ks-border-width)*2)] cursor-pointer;
   }
 
   .ks-badge {
