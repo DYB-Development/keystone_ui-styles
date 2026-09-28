@@ -3759,6 +3759,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-text-muted-dark\)/m, block(".ks-mobile-header-back"))
   end
 
+  def test_mobile_header_subtitle_weight_reads_the_normal_font_weight_variable
+    assert_includes block(".ks-mobile-header-subtitle"), "font-weight: var(--ks-font-weight-normal)"
+  end
+
   private
 
   def block(selector)
