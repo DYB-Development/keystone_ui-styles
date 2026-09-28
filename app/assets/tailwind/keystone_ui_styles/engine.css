@@ -357,7 +357,7 @@
   }
 
   .ks-page-header-actions {
-    @apply hidden sm:block mt-4 sm:mt-0 sm:ml-4 flex-shrink-0;
+    @apply hidden sm:block mt-[calc(var(--ks-spacing)*4)] sm:mt-0 sm:ml-4 flex-shrink-0;
   }
 
   .ks-section-sm {
