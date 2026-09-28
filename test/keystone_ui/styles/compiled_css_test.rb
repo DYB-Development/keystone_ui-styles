@@ -3319,6 +3319,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:hover.*?\scolor: var\(--ks-color-nav-text-hover\)/m, block(".ks-bottom-nav-item"))
   end
 
+  def test_bottom_nav_item_text_reads_the_nav_text_hover_colour_role_while_pressed
+    assert_match(/\&:active.*?\scolor: var\(--ks-color-nav-text-hover\)/m, block(".ks-bottom-nav-item"))
+  end
+
   private
 
   def block(selector)
