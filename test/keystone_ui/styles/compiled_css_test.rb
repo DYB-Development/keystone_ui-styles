@@ -460,7 +460,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_label_defaults_to_var_color_gray_700
-    assert_match(/:root \{[^}]*--ks-color-text-label: var\(--color-gray-700\)/m, self.class.compiled)
+    assert_match(/:root \{[^}]*--ks-color-text-label: var\(--color-surface-700\)/m, self.class.compiled)
   end
 
   def test_label_reads_the_dark_label_text_colour_role_on_a_dark_page
