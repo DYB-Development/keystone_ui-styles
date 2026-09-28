@@ -3459,6 +3459,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?width >= 64rem.*?\&\.active.*?inset 0 calc\(var\(--ks-border-width\) \* -4\) 0 0 var\(--tw-shadow-color, var\(--ks-color-nav-indicator-dark\)\)/m, block(".ks-nav-dropdown-trigger"))
   end
 
+  def test_nav_item_content_is_laid_out_with_flex
+    assert_includes block(".ks-nav-item"), "display: flex"
+  end
+
   private
 
   def block(selector)
