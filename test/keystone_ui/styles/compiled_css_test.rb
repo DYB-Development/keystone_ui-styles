@@ -3259,6 +3259,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav"), "border-top-width: var(--ks-border-width)"
   end
 
+  def test_bottom_nav_top_border_reads_the_nav_border_colour_role
+    assert_includes block(".ks-bottom-nav"), "border-top-color: var(--ks-color-nav-border)"
+  end
+
   private
 
   def block(selector)
