@@ -3599,6 +3599,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 64rem.*?border-width: var\(--ks-border-width\)/m, block(".ks-nav-dropdown-menu"))
   end
 
+  def test_nav_dropdown_menu_border_reads_the_nav_border_colour_role_on_large_screens
+    assert_match(/width >= 64rem.*?border-color: var\(--ks-color-nav-border\)/m, block(".ks-nav-dropdown-menu"))
+  end
+
   private
 
   def block(selector)
