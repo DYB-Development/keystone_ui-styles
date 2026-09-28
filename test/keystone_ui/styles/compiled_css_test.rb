@@ -3295,6 +3295,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav-item"), "min-height: calc(var(--spacing) * 14)"
   end
 
+  def test_bottom_nav_item_label_is_not_underlined
+    assert_includes block(".ks-bottom-nav-item"), "text-decoration-line: none"
+  end
+
   private
 
   def block(selector)
