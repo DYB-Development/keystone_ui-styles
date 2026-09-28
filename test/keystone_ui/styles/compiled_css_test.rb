@@ -3168,7 +3168,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_nav_active_dark_defaults_to_var_text_primary_var_color_accent_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-active-dark: var\(--text-primary, var\(--color-accent-400\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-active-dark: var\(--text-primary, var\(--ks-color-link-dark\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_link_defaults_to_var_base_text_var_color_gray_900

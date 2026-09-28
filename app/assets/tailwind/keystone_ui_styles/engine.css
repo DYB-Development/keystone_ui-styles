@@ -231,7 +231,7 @@
     --ks-color-nav-text-hover: var(--base-text-secondary, var(--ks-color-text-label));
     --ks-color-nav-text-hover-dark: var(--base-text-secondary, var(--ks-color-text-label-dark));
     --ks-color-nav-active: var(--text-primary, var(--ks-color-link));
-    --ks-color-nav-active-dark: var(--text-primary, var(--color-accent-400));
+    --ks-color-nav-active-dark: var(--text-primary, var(--ks-color-link-dark));
     --ks-color-nav-link: var(--base-text, var(--ks-color-text));
     --ks-color-nav-link-dark: var(--base-text, var(--ks-color-text-dark));
     --ks-color-nav-indicator: var(--border-primary, var(--color-accent-600));
