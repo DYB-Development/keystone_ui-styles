@@ -369,7 +369,7 @@
   }
 
   .ks-section-lg {
-    @apply mt-8;
+    @apply mt-[calc(var(--ks-spacing)*8)];
   }
 
   .ks-section-header {
