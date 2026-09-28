@@ -3331,6 +3331,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-nav-text-dark\)/m, block(".ks-bottom-nav-item"))
   end
 
+  def test_bottom_nav_item_text_reads_the_nav_text_hover_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?\scolor: var\(--ks-color-nav-text-hover-dark\)/m, block(".ks-bottom-nav-item"))
+  end
+
   private
 
   def block(selector)
