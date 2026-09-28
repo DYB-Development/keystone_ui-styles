@@ -1468,7 +1468,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_icon_dark_defaults_to_var_color_gray_500
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon-dark: var\(--color-gray-500\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon-dark: var\(--color-surface-500\)/m, self.class.compiled)
   end
 
   def test_file_upload_prompt_text_reads_the_text_secondary_colour_role
