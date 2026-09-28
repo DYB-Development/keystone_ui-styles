@@ -1484,7 +1484,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_secondary_dark_defaults_to_var_color_gray_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-secondary-dark: var\(--color-gray-400\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-secondary-dark: var\(--color-surface-400\)/m, self.class.compiled)
   end
 
   def test_file_upload_browse_weight_reads_the_strong_font_weight_variable
