@@ -3379,6 +3379,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-trigger"), "align-items: center"
   end
 
+  def test_nav_dropdown_trigger_label_and_caret_sit_at_either_end
+    assert_includes block(".ks-nav-dropdown-trigger"), "justify-content: space-between"
+  end
+
   private
 
   def block(selector)
