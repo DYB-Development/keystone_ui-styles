@@ -244,6 +244,7 @@
     --ks-color-hover-soft: var(--color-gray-50);
     --ks-color-hover-soft-dark: var(--color-gray-800);
     --ks-color-focus-dark: var(--color-accent-400);
+    --ks-color-link-strong-hover: var(--color-accent-900);
   }
 }
 
