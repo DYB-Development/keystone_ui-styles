@@ -3243,6 +3243,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav"), "padding-bottom: env(safe-area-inset-bottom)"
   end
 
+  def test_bottom_nav_bar_is_hidden_on_large_screens
+    assert_match(/width >= 64rem.*?display: none/m, block(".ks-bottom-nav"))
+  end
+
   private
 
   def block(selector)
