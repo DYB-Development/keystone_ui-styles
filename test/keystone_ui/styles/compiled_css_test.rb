@@ -3184,7 +3184,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_nav_indicator_dark_defaults_to_var_border_primary_var_color_accent_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-indicator-dark: var\(--border-primary, var\(--color-accent-400\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-indicator-dark: var\(--border-primary, var\(--ks-color-link-dark\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_menu_mobile_defaults_to_var_base_bg_base_var_color_white
