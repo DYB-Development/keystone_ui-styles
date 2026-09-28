@@ -3551,6 +3551,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-caret"), "width: calc(var(--spacing) * 4)"
   end
 
+  def test_nav_dropdown_caret_caret_animates_its_turn
+    assert_includes block(".ks-nav-dropdown-caret"), "transition-property: transform"
+  end
+
   private
 
   def block(selector)

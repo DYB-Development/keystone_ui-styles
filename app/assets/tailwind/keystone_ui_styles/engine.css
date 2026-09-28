@@ -1136,6 +1136,6 @@
   }
 
   .ks-nav-dropdown-caret {
-    @apply size-4;
+    @apply size-4 transition-transform;
   }
 }
