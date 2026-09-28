@@ -1116,6 +1116,6 @@
   }
 
   .ks-bottom-nav-item {
-    @apply flex flex-1 flex-col items-center justify-center min-h-14 no-underline gap-[calc(var(--ks-spacing)*0.5)];
+    @apply flex flex-1 flex-col items-center justify-center min-h-14 no-underline gap-[calc(var(--ks-spacing)*0.5)] py-[calc(var(--ks-spacing)*2)];
   }
 }

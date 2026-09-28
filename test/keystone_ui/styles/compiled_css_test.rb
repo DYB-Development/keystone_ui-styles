@@ -3303,6 +3303,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav-item"), "gap: calc(var(--ks-spacing) * 0.5)"
   end
 
+  def test_bottom_nav_item_padding_block_is_2_spacing_units
+    assert_includes block(".ks-bottom-nav-item"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
