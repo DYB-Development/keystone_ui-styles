@@ -3851,6 +3851,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?\&:focus.*?--tw-ring-color: var\(--ks-color-focus-dark\)/m, block(".ks-input"))
   end
 
+  def test_color_focus_dark_defaults_to_var_color_accent_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-focus-dark: var\(--color-accent-400\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
