@@ -329,7 +329,7 @@
   }
 
   .ks-page-offset-sm {
-    @apply pt-12;
+    @apply pt-[calc(var(--ks-spacing)*12)];
   }
 
   .ks-page-offset-md {
