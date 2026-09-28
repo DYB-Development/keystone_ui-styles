@@ -1116,6 +1116,6 @@
   }
 
   .ks-bottom-nav-item {
-    @apply flex flex-1 flex-col items-center justify-center min-h-14 no-underline gap-[calc(var(--ks-spacing)*0.5)] py-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*1)] text-(color:--ks-color-nav-text) hover:text-(color:--ks-color-nav-text-hover) active:text-(color:--ks-color-nav-text-hover) [&.active]:text-(color:--ks-color-nav-active) dark:text-(color:--ks-color-nav-text-dark) dark:hover:text-(color:--ks-color-nav-text-hover-dark);
+    @apply flex flex-1 flex-col items-center justify-center min-h-14 no-underline gap-[calc(var(--ks-spacing)*0.5)] py-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*1)] text-(color:--ks-color-nav-text) hover:text-(color:--ks-color-nav-text-hover) active:text-(color:--ks-color-nav-text-hover) [&.active]:text-(color:--ks-color-nav-active) dark:text-(color:--ks-color-nav-text-dark) dark:hover:text-(color:--ks-color-nav-text-hover-dark) dark:active:text-(color:--ks-color-nav-text-hover-dark);
   }
 }
