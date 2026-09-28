@@ -3651,6 +3651,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "display: block"
   end
 
+  def test_nav_dropdown_menu_link_text_is_small
+    assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "font-size: var(--text-sm)"
+  end
+
   private
 
   def block(selector)
