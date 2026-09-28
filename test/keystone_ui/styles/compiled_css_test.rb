@@ -3991,6 +3991,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\&:focus.*?--tw-ring-offset-width: calc\(var\(--ks-border-width\) \* 2\)/m, block(".ks-alert-dismiss"))
   end
 
+  def test_badge_padding_inline_is_2_spacing_units
+    assert_includes block(".ks-badge"), "padding-inline: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
