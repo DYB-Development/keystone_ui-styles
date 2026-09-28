@@ -4015,6 +4015,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-text-label-dark\)/m, block(".ks-badge-neutral"))
   end
 
+  def test_color_badge_neutral_defaults_to_var_color_gray_100
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-badge-neutral: var\(--color-gray-100\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
