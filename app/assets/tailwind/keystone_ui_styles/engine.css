@@ -242,7 +242,7 @@
     --ks-color-nav-hover-dark: var(--base-bg-hover, var(--color-zinc-800));
     --ks-shadow-menu: var(--shadow-md);
     --ks-font-weight-normal: var(--font-weight-normal);
-    --ks-color-hover-soft: var(--color-gray-50);
+    --ks-color-hover-soft: var(--ks-color-hover);
     --ks-color-hover-soft-dark: var(--color-gray-800);
     --ks-color-focus-dark: var(--color-accent-400);
     --ks-color-link-strong-hover: var(--color-accent-900);
