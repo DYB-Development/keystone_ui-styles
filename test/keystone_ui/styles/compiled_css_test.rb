@@ -308,7 +308,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_badge_classes_match_keystone_ui_badge
-    assert_includes rule(".ks-badge"), "border-radius: calc(infinity * 1px)"
+    assert_includes rule(".ks-badge"), "border-radius: var(--ks-radius-pill)"
     assert_includes rule(".ks-badge-neutral"), "background-color: var(--color-gray-100)"
     assert_includes rule(".ks-badge-success"), "background-color: var(--ks-color-success-100)"
     assert_includes rule(".ks-badge-danger"), "background-color: var(--ks-color-danger-100)"
