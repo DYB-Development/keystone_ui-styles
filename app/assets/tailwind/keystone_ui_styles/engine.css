@@ -136,7 +136,7 @@
     --ks-color-overlay: var(--color-white);
     --ks-color-overlay-dark: var(--color-surface-800);
     --ks-color-text-heading: var(--ks-color-text);
-    --ks-color-text-heading-dark: var(--color-gray-200);
+    --ks-color-text-heading-dark: var(--ks-color-text-dark);
     --ks-color-close: var(--color-gray-400);
     --ks-color-close-hover: var(--color-gray-600);
     --ks-color-close-hover-dark: var(--color-gray-200);
