@@ -3971,6 +3971,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-alert-dismiss"), "margin-right: calc(calc(var(--ks-spacing) * 1.5) * -1)"
   end
 
+  def test_alert_dismiss_top_margin_pulls_in_1_5_spacing_units
+    assert_includes block(".ks-alert-dismiss"), "margin-top: calc(calc(var(--ks-spacing) * 1.5) * -1)"
+  end
+
   private
 
   def block(selector)
