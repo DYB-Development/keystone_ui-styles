@@ -3787,6 +3787,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:hover.*?background-color: var\(--ks-color-hover-soft\)/m, block(".ks-settings-link"))
   end
 
+  def test_settings_link_text_reads_the_text_option_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-text-option-dark\)/m, block(".ks-settings-link"))
+  end
+
   private
 
   def block(selector)
