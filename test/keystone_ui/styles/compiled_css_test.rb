@@ -3231,6 +3231,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav"), "z-index: 40"
   end
 
+  def test_bottom_nav_items_sit_in_a_row
+    assert_includes block(".ks-bottom-nav"), "display: flex"
+  end
+
   private
 
   def block(selector)
