@@ -3979,6 +3979,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-alert-dismiss"), "border-radius: calc(var(--ks-radius-control) * 0.75)"
   end
 
+  def test_alert_dismiss_padding_is_1_5_spacing_units
+    assert_includes block(".ks-alert-dismiss"), "padding: calc(var(--ks-spacing) * 1.5)"
+  end
+
   private
 
   def block(selector)
