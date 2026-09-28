@@ -3811,6 +3811,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/^  main \{.*?padding-bottom: calc\(56px \+ env\(safe-area-inset-bottom\)\)/m, self.class.compiled)
   end
 
+  def test_panel_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-panel"), "border-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)
