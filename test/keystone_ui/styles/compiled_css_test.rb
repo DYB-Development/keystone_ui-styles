@@ -4003,6 +4003,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-badge"), "font-weight: var(--ks-font-weight-medium)"
   end
 
+  def test_badge_neutral_text_reads_the_text_label_colour_role
+    assert_includes block(".ks-badge-neutral"), "color: var(--ks-color-text-label)"
+  end
+
   private
 
   def block(selector)
