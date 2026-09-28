@@ -2228,7 +2228,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_table_head_defaults_to_var_color_gray_50
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-head: var\(--color-gray-50\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-head: var\(--ks-color-hover\)/m, self.class.compiled)
   end
 
   def test_color_table_head_dark_defaults_to_color_mix_in_oklab_var_color_gray_800_75_transparent
