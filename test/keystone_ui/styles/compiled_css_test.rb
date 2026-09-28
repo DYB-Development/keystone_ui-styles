@@ -1916,7 +1916,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_border_subtle_defaults_to_var_color_surface_200
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-subtle: var\(--color-surface-200\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-subtle: var\(--ks-color-border\)/m, self.class.compiled)
   end
 
   def test_color_border_subtle_dark_defaults_to_var_color_surface_700

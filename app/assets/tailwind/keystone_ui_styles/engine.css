@@ -178,7 +178,7 @@
     --ks-color-info-600: var(--color-accent-600);
     --ks-color-danger-500: var(--color-red-500);
     --ks-color-hover-border: color-mix(in oklab, var(--color-accent-500) 50%, transparent);
-    --ks-color-border-subtle: var(--color-surface-200);
+    --ks-color-border-subtle: var(--ks-color-border);
     --ks-color-border-subtle-dark: var(--color-surface-700);
     --ks-color-fill-muted: var(--color-surface-50);
     --ks-color-fill-muted-dark: var(--color-surface-800);
