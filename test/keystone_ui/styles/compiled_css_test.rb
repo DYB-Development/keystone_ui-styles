@@ -3751,6 +3751,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-text-dark\)/m, block(".ks-mobile-header-title"))
   end
 
+  def test_mobile_header_back_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-mobile-header-back"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)
