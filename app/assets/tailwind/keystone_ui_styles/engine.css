@@ -230,6 +230,7 @@
     --ks-color-nav-text-hover: var(--base-text-secondary, var(--color-gray-700));
     --ks-color-nav-text-hover-dark: var(--base-text-secondary, var(--color-gray-300));
     --ks-color-nav-active: var(--text-primary, var(--color-accent-600));
+    --ks-color-nav-active-dark: var(--text-primary, var(--color-accent-400));
   }
 }
 
