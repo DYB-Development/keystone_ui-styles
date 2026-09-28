@@ -3607,6 +3607,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?width >= 64rem.*?border-color: var\(--ks-color-nav-border-dark\)/m, block(".ks-nav-dropdown-menu"))
   end
 
+  def test_nav_dropdown_menu_radius_reads_the_surface_radius_on_large_screens
+    assert_match(/width >= 64rem.*?border-radius: var\(--ks-radius-surface\)/m, block(".ks-nav-dropdown-menu"))
+  end
+
   private
 
   def block(selector)
