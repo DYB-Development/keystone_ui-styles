@@ -3299,6 +3299,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav-item"), "text-decoration-line: none"
   end
 
+  def test_bottom_nav_item_gap_is_0_5_spacing_units
+    assert_includes block(".ks-bottom-nav-item"), "gap: calc(var(--ks-spacing) * 0.5)"
+  end
+
   private
 
   def block(selector)
