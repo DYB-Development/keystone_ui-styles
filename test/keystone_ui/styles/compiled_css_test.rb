@@ -3771,6 +3771,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-text-muted-dark\)/m, block(".ks-mobile-header-subtitle"))
   end
 
+  def test_settings_link_padding_inline_is_4_spacing_units
+    assert_includes block(".ks-settings-link"), "padding-inline: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
