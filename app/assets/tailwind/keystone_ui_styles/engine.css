@@ -1144,6 +1144,6 @@
   }
 
   .ks-nav-dropdown-menu {
-    @apply relative w-full z-50 bg-(color:--ks-color-nav-menu-mobile) dark:bg-(color:--ks-color-nav-menu-mobile-dark) lg:bg-(color:--ks-color-nav) dark:lg:bg-(color:--ks-color-nav-dark) lg:border-(length:--ks-border-width) lg:border-(color:--ks-color-nav-border) dark:lg:border-(color:--ks-color-nav-border-dark) lg:rounded-(--ks-radius-surface) lg:shadow-(--ks-shadow-menu) lg:min-w-[200px] lg:absolute lg:top-full lg:left-0 lg:mt-[calc(var(--ks-spacing)*1)];
+    @apply relative w-full z-50 bg-(color:--ks-color-nav-menu-mobile) dark:bg-(color:--ks-color-nav-menu-mobile-dark) lg:bg-(color:--ks-color-nav) dark:lg:bg-(color:--ks-color-nav-dark) lg:border-(length:--ks-border-width) lg:border-(color:--ks-color-nav-border) dark:lg:border-(color:--ks-color-nav-border-dark) lg:rounded-(--ks-radius-surface) lg:shadow-(--ks-shadow-menu) lg:min-w-[200px] lg:absolute lg:top-full lg:left-0 lg:mt-[calc(var(--ks-spacing)*1)] [&_ul]:list-none;
   }
 }

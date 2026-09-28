@@ -3635,6 +3635,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 64rem.*?margin-top: calc\(var\(--ks-spacing\) \* 1\)/m, block(".ks-nav-dropdown-menu"))
   end
 
+  def test_nav_dropdown_menu_list_has_no_bullets
+    assert_includes block(".ks-nav-dropdown-menu"), "list-style-type: none"
+  end
+
   private
 
   def block(selector)
