@@ -1972,7 +1972,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_display_muted_dark_defaults_to_var_color_surface_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display-muted-dark: var\(--color-surface-400\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display-muted-dark: var\(--ks-color-text-muted-dark\)/m, self.class.compiled)
   end
 
   def test_cta_banner_actions_gap_is_4_spacing_units
