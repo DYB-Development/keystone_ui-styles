@@ -372,7 +372,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-page-offset-sm"), "padding-top: calc(var(--ks-spacing) * 12)"
     assert_includes rule(".ks-page-offset-md"), "padding-top: calc(var(--ks-spacing) * 16)"
     assert_includes rule(".ks-page-offset-lg"), "padding-top: calc(var(--ks-spacing) * 20)"
-    assert_includes rule(".ks-page-offset-xl"), "padding-top: calc(var(--spacing) * 24)"
+    assert_includes rule(".ks-page-offset-xl"), "padding-top: calc(var(--ks-spacing) * 24)"
   end
 
   def test_color_surface_defaults_to_var_color_white

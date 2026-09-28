@@ -341,7 +341,7 @@
   }
 
   .ks-page-offset-xl {
-    @apply pt-24;
+    @apply pt-[calc(var(--ks-spacing)*24)];
   }
 
   .ks-page-header {
