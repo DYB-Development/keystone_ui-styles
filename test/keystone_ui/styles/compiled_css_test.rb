@@ -3555,6 +3555,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-caret"), "transition-property: transform"
   end
 
+  def test_nav_dropdown_caret_turn_takes_200_milliseconds
+    assert_includes block(".ks-nav-dropdown-caret"), "transition-duration: 200ms"
+  end
+
   private
 
   def block(selector)
