@@ -3695,6 +3695,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:hover.*?\scolor: var\(--ks-color-nav-text-hover\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
   end
 
+  def test_nav_dropdown_menu_link_fill_reads_the_nav_hover_colour_role_when_marked_active
+    assert_match(/\&\.active.*?background-color: var\(--ks-color-nav-hover\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
+  end
+
   private
 
   def block(selector)
