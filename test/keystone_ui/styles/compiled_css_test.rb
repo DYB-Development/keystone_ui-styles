@@ -3255,6 +3255,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-nav-dark\)/m, block(".ks-bottom-nav"))
   end
 
+  def test_bottom_nav_top_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-bottom-nav"), "border-top-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)
