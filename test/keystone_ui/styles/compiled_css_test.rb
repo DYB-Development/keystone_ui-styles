@@ -3579,6 +3579,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-menu"), "z-index: 50"
   end
 
+  def test_nav_dropdown_menu_fill_reads_the_nav_menu_mobile_colour_role
+    assert_includes block(".ks-nav-dropdown-menu"), "background-color: var(--ks-color-nav-menu-mobile)"
+  end
+
   private
 
   def block(selector)
