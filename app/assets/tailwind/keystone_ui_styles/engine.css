@@ -1100,4 +1100,8 @@
   .ks-swipe-button-accept {
     @apply hover:border-(color:--ks-color-success-400) hover:text-(color:--ks-color-success-400);
   }
+
+  .ks-bottom-nav {
+    @apply fixed;
+  }
 }

@@ -3211,6 +3211,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-font-weight-normal: var\(--font-weight-normal\)/m, self.class.compiled)
   end
 
+  def test_bottom_nav_position_is_fixed
+    assert_includes block(".ks-bottom-nav"), "position: fixed"
+  end
+
   private
 
   def block(selector)
