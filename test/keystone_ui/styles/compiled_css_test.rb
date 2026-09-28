@@ -3879,6 +3879,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-required"), "margin-left: calc(var(--ks-spacing) * 0.5)"
   end
 
+  def test_hint_margin_top_is_1_spacing_units
+    assert_includes block(".ks-hint"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)
