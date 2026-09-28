@@ -467,7 +467,7 @@
   }
 
   .ks-badge-neutral {
-    @apply bg-(color:--ks-color-badge-neutral) text-(color:--ks-color-text-label) dark:bg-(color:--ks-color-badge-neutral-dark) dark:text-gray-300;
+    @apply bg-(color:--ks-color-badge-neutral) text-(color:--ks-color-text-label) dark:bg-(color:--ks-color-badge-neutral-dark) dark:text-(color:--ks-color-text-label-dark);
   }
 
   .ks-badge-success {
