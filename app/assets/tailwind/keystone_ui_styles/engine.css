@@ -293,7 +293,7 @@
   }
 
   .ks-required {
-    @apply text-(color:--ks-color-danger-500) ml-0.5;
+    @apply text-(color:--ks-color-danger-500) ml-[calc(var(--ks-spacing)*0.5)];
   }
 
   .ks-hint {

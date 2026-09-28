@@ -3875,6 +3875,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-label"), "font-weight: var(--ks-font-weight-medium)"
   end
 
+  def test_required_margin_left_is_0_5_spacing_units
+    assert_includes block(".ks-required"), "margin-left: calc(var(--ks-spacing) * 0.5)"
+  end
+
   private
 
   def block(selector)
