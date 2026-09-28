@@ -388,7 +388,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_border_defaults_to_var_color_gray_200
-    assert_match(/:root \{[^}]*--ks-color-border: var\(--color-gray-200\)/m, self.class.compiled)
+    assert_match(/:root \{[^}]*--ks-color-border: var\(--color-surface-200\)/m, self.class.compiled)
   end
 
   def test_panel_border_reads_the_dark_border_colour_role_on_a_dark_page

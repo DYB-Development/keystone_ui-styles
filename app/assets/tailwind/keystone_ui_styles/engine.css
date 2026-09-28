@@ -88,7 +88,7 @@
     --ks-color-on-fill-dark: var(--color-white);
     --ks-color-surface: var(--color-white);
     --ks-color-surface-dark: var(--color-zinc-900);
-    --ks-color-border: var(--color-gray-200);
+    --ks-color-border: var(--color-surface-200);
     --ks-color-border-dark: var(--color-zinc-700);
     --ks-color-border-control: var(--color-gray-300);
     --ks-color-border-control-dark: var(--color-zinc-700);
