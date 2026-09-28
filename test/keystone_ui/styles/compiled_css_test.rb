@@ -3395,6 +3395,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-trigger"), "width: 100%"
   end
 
+  def test_nav_dropdown_trigger_label_is_not_underlined
+    assert_includes block(".ks-nav-dropdown-trigger"), "text-decoration-line: none"
+  end
+
   private
 
   def block(selector)

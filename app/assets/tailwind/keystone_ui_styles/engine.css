@@ -1128,6 +1128,6 @@
   }
 
   .ks-nav-dropdown-trigger {
-    @apply flex items-center justify-between text-sm text-nowrap w-full;
+    @apply flex items-center justify-between text-sm text-nowrap w-full no-underline;
   }
 }
