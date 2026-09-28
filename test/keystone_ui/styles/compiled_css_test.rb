@@ -296,7 +296,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_error_uses_red_text
-    assert_includes rule(".ks-error"), "color: var(--color-red-600)"
+    assert_includes rule(".ks-error"), "color: var(--ks-color-danger-600)"
   end
 
   def test_checkbox_uses_the_accent_color
