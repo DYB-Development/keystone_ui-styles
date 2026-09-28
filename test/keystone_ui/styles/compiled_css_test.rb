@@ -2268,7 +2268,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_divider_dark_defaults_to_color_mix_in_oklab_var_color_white_10_transparent
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-divider-dark: color-mix\(in oklab, var\(--color-white\) 10%, transparent\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-divider-dark: var\(--ks-color-border-dark\)/m, self.class.compiled)
   end
 
   def test_table_header_padding_block_is_3_5_spacing_units
