@@ -3547,6 +3547,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?width >= 64rem.*?\&\.active.*?inset 0 calc\(var\(--ks-border-width\) \* -4\) 0 0 var\(--tw-shadow-color, var\(--ks-color-nav-indicator-dark\)\)/m, block(".ks-nav-item"))
   end
 
+  def test_nav_dropdown_caret_caret_is_16_pixels
+    assert_includes block(".ks-nav-dropdown-caret"), "width: calc(var(--spacing) * 4)"
+  end
+
   private
 
   def block(selector)
