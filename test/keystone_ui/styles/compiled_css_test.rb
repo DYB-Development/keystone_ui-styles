@@ -3935,6 +3935,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-card-summary"), "margin-top: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_section_action_text_reads_the_link_strong_hover_colour_role_on_hover
+    assert_match(/:hover.*?\scolor: var\(--ks-color-link-strong-hover\)/m, block(".ks-section-action"))
+  end
+
   private
 
   def block(selector)
