@@ -3144,7 +3144,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_nav_border_dark_defaults_to_var_base_border_tertiary_var_color_zinc_700
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-border-dark: var\(--base-border-tertiary, var\(--color-zinc-700\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-border-dark: var\(--base-border-tertiary, var\(--ks-color-border-dark\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_text_defaults_to_var_base_text_tertiary_var_color_gray_500
