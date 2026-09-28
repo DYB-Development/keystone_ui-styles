@@ -1256,4 +1256,8 @@
   .ks-form-field-checkbox {
     @apply gap-[calc(var(--ks-spacing)*2)];
   }
+
+  .ks-theme-toggle {
+    @apply gap-[calc(var(--ks-spacing)*1)];
+  }
 }
