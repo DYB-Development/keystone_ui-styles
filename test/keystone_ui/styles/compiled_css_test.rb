@@ -3843,6 +3843,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\&:focus.*?border-color: var\(--ks-color-focus\)/m, block(".ks-input"))
   end
 
+  def test_input_border_reads_the_focus_dark_colour_role_on_a_dark_page_and_on_focus
+    assert_match(/data-theme="dark".*?\&:focus.*?border-color: var\(--ks-color-focus-dark\)/m, block(".ks-input"))
+  end
+
   private
 
   def block(selector)
