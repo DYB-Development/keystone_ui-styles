@@ -228,6 +228,7 @@
     --ks-color-nav-text: var(--base-text-tertiary, var(--color-gray-500));
     --ks-color-nav-text-dark: var(--base-text-tertiary, var(--color-gray-400));
     --ks-color-nav-text-hover: var(--base-text-secondary, var(--color-gray-700));
+    --ks-color-nav-text-hover-dark: var(--base-text-secondary, var(--color-gray-300));
   }
 }
 
