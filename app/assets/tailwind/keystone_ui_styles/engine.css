@@ -97,7 +97,7 @@
     --ks-color-text-label: var(--color-gray-700);
     --ks-color-text-label-dark: var(--color-gray-300);
     --ks-color-text-muted: var(--color-surface-500);
-    --ks-color-text-muted-dark: var(--color-gray-400);
+    --ks-color-text-muted-dark: var(--color-surface-400);
     --ks-font-weight-heading: var(--font-weight-semibold);
     --ks-radius-surface: var(--radius-lg);
     --ks-shadow-surface: var(--shadow-sm);

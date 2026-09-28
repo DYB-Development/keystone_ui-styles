@@ -480,7 +480,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_muted_dark_defaults_to_var_color_gray_400
-    assert_match(/:root \{[^}]*--ks-color-text-muted-dark: var\(--color-gray-400\)/m, self.class.compiled)
+    assert_match(/:root \{[^}]*--ks-color-text-muted-dark: var\(--color-surface-400\)/m, self.class.compiled)
   end
 
   def test_section_title_reads_the_text_colour_role
