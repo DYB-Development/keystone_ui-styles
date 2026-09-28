@@ -3827,6 +3827,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-input"), "border-width: var(--ks-border-width)"
   end
 
+  def test_input_text_reads_the_icon_colour_role_for_its_placeholder
+    assert_match(/\&::placeholder.*?\scolor: var\(--ks-color-icon\)/m, block(".ks-input"))
+  end
+
   private
 
   def block(selector)
