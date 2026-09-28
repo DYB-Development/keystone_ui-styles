@@ -3800,7 +3800,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_hover_soft_dark_defaults_to_var_color_gray_800
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-soft-dark: var\(--color-gray-800\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-soft-dark: var\(--ks-color-hover-dark\)/m, self.class.compiled)
   end
 
   def test_settings_link_label_weight_reads_the_medium_font_weight_variable
