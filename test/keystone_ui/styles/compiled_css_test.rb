@@ -3387,6 +3387,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-trigger"), "font-size: var(--text-sm)"
   end
 
+  def test_nav_dropdown_trigger_label_stays_on_one_line
+    assert_includes block(".ks-nav-dropdown-trigger"), "text-wrap: nowrap"
+  end
+
   private
 
   def block(selector)
