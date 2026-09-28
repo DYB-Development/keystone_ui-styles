@@ -113,8 +113,19 @@ any layer overrides them wherever it is imported.
 | `--ks-color-code`, `--ks-color-text-code` | Code block background and text | `--color-surface-900`, `--color-surface-100` |
 | `--ks-color-pipeline`, `--ks-color-pipeline-box`, `--ks-color-pipeline-border` | Pipeline and box background, and their border | `--color-surface-800`, `--color-surface-900`, `--color-surface-700` |
 | `--ks-color-text-on-dark`, `--ks-color-pipeline-muted`, `--ks-color-pipeline-label`, `--ks-color-pipeline-amber` | Pipeline title, subtitle, box label and amber count | `--color-white`, `--color-surface-400`, `--color-surface-500`, `--color-amber-400` |
+| `--ks-color-nav`, `--ks-color-nav-border` | Bottom nav and desktop nav menu background and border | `--base-bg-low`, then `--color-white`; `--base-border-tertiary`, then `--color-gray-200` |
+| `--ks-color-nav-text`, `--ks-color-nav-text-hover` | Bottom nav item, and nav links on hover | `--base-text-tertiary`, then `--color-gray-500`; `--base-text-secondary`, then `--color-gray-700` |
+| `--ks-color-nav-link`, `--ks-color-nav-active`, `--ks-color-nav-indicator` | Nav link text, the current page's link, and its underline on wide screens | `--base-text`, `--text-primary` and `--border-primary`, then `--color-gray-900`, `--color-accent-600` and `--color-accent-600` |
+| `--ks-color-nav-menu-mobile`, `--ks-color-nav-hover` | Nav menu background on small screens, and a menu link on hover | `--base-bg-base`, then `--color-white`; `--base-bg-hover`, then `--color-gray-50` |
+| `--ks-shadow-menu` | Desktop nav menu shadow | `--shadow-md` |
+| `--ks-font-weight-normal` | Mobile header subtitle weight | `--font-weight-normal` |
+| `--ks-color-hover-soft` | Settings link on hover | `--color-gray-50` |
 Each colour variable in the table whose component changes on a dark page has a
 `-dark` partner, such as `--ks-color-surface-dark`, that it reads there.
+
+The navigation colours read the `--base-*` variables keystone_ui's nav used
+before, when a host sets them, so a host that coloured its nav that way keeps
+its colours.
 
 Alerts and badges read a shade scale per status instead:
 `--ks-color-success-*`, `--ks-color-warning-*`, `--ks-color-danger-*` and
@@ -191,6 +202,15 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-bucket`, `ks-bucket-series`, `ks-bucket-label`, `ks-bucket-goal`, `ks-bucket-percent`, `ks-bucket-tank`, `ks-bucket-actual`, `ks-bucket-fill`, `ks-bucket-fill-over`, `ks-bucket-fill-over-warning` | Bucket and its parts |
 | `ks-pipeline`, `ks-pipeline-header`, `ks-pipeline-title`, `ks-pipeline-subtitle`, `ks-pipeline-track`, `ks-pipeline-box`, `ks-pipeline-box-label`, `ks-pipeline-count`, `ks-pipeline-link-healthy`, `ks-pipeline-link-broken`, `ks-pipeline-count-amber`, `ks-pipeline-count-emerald`, `ks-pipeline-count-danger`, `ks-pipeline-count-muted` | Pipeline and its parts |
 | `ks-swipe-card`, `ks-swipe-empty`, `ks-swipe-empty-title`, `ks-swipe-empty-message`, `ks-swipe-actions`, `ks-swipe-button`, `ks-swipe-button-reject`, `ks-swipe-button-accept` | Swipe deck and its parts |
+| `ks-bottom-nav`, `ks-bottom-nav-item`, `ks-bottom-nav-label` | Bottom nav bar, fixed to the bottom of small screens, and its items |
+| `ks-nav-dropdown`, `ks-nav-dropdown-trigger`, `ks-nav-dropdown-caret`, `ks-nav-dropdown-menu` | Nav dropdown and its parts, including the links inside the menu |
+| `ks-nav-item` | A nav link |
+| `ks-navbar-title` | Navbar title on small screens |
+| `ks-mobile-header-title`, `ks-mobile-header-back`, `ks-mobile-header-subtitle` | Mobile header parts |
+| `ks-settings-link`, `ks-settings-link-label` | Settings link and its label |
+
+On small screens the page's `main` element is padded to clear the bottom nav,
+and a page inside Hotwire Native hides the bottom nav and drops that padding.
 
 ```html
 <button class="ks-button ks-button-primary ks-button-md">Save</button>

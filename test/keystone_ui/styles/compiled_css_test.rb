@@ -3131,6 +3131,686 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-swipe-button-accept(?![\w-]).*?:hover.*?\scolor: var\(--ks-color-success-400\)/m, self.class.compiled)
   end
 
+  def test_color_nav_defaults_to_var_base_bg_low_var_color_white
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav: var\(--base-bg-low, var\(--color-white\)\)/m, self.class.compiled)
+  end
+
+  def test_color_nav_dark_defaults_to_var_base_bg_low_var_color_zinc_900
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-dark: var\(--base-bg-low, var\(--color-zinc-900\)\)/m, self.class.compiled)
+  end
+
+  def test_color_nav_border_defaults_to_var_base_border_tertiary_var_color_gray_200
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-border: var\(--base-border-tertiary, var\(--color-gray-200\)\)/m, self.class.compiled)
+  end
+
+  def test_color_nav_border_dark_defaults_to_var_base_border_tertiary_var_color_zinc_700
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-border-dark: var\(--base-border-tertiary, var\(--color-zinc-700\)\)/m, self.class.compiled)
+  end
+
+  def test_color_nav_text_defaults_to_var_base_text_tertiary_var_color_gray_500
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-text: var\(--base-text-tertiary, var\(--color-gray-500\)\)/m, self.class.compiled)
+  end
+
+  def test_color_nav_text_dark_defaults_to_var_base_text_tertiary_var_color_gray_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-text-dark: var\(--base-text-tertiary, var\(--color-gray-400\)\)/m, self.class.compiled)
+  end
+
+  def test_color_nav_text_hover_defaults_to_var_base_text_secondary_var_color_gray_700
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-text-hover: var\(--base-text-secondary, var\(--color-gray-700\)\)/m, self.class.compiled)
+  end
+
+  def test_color_nav_text_hover_dark_defaults_to_var_base_text_secondary_var_color_gray_300
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-text-hover-dark: var\(--base-text-secondary, var\(--color-gray-300\)\)/m, self.class.compiled)
+  end
+
+  def test_color_nav_active_defaults_to_var_text_primary_var_color_accent_600
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-active: var\(--text-primary, var\(--color-accent-600\)\)/m, self.class.compiled)
+  end
+
+  def test_color_nav_active_dark_defaults_to_var_text_primary_var_color_accent_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-active-dark: var\(--text-primary, var\(--color-accent-400\)\)/m, self.class.compiled)
+  end
+
+  def test_color_nav_link_defaults_to_var_base_text_var_color_gray_900
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-link: var\(--base-text, var\(--color-gray-900\)\)/m, self.class.compiled)
+  end
+
+  def test_color_nav_link_dark_defaults_to_var_base_text_var_color_white
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-link-dark: var\(--base-text, var\(--color-white\)\)/m, self.class.compiled)
+  end
+
+  def test_color_nav_indicator_defaults_to_var_border_primary_var_color_accent_600
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-indicator: var\(--border-primary, var\(--color-accent-600\)\)/m, self.class.compiled)
+  end
+
+  def test_color_nav_indicator_dark_defaults_to_var_border_primary_var_color_accent_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-indicator-dark: var\(--border-primary, var\(--color-accent-400\)\)/m, self.class.compiled)
+  end
+
+  def test_color_nav_menu_mobile_defaults_to_var_base_bg_base_var_color_white
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-menu-mobile: var\(--base-bg-base, var\(--color-white\)\)/m, self.class.compiled)
+  end
+
+  def test_color_nav_menu_mobile_dark_defaults_to_var_base_bg_base_var_color_zinc_900
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-menu-mobile-dark: var\(--base-bg-base, var\(--color-zinc-900\)\)/m, self.class.compiled)
+  end
+
+  def test_color_nav_hover_defaults_to_var_base_bg_hover_var_color_gray_50
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-hover: var\(--base-bg-hover, var\(--color-gray-50\)\)/m, self.class.compiled)
+  end
+
+  def test_color_nav_hover_dark_defaults_to_var_base_bg_hover_var_color_zinc_800
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-hover-dark: var\(--base-bg-hover, var\(--color-zinc-800\)\)/m, self.class.compiled)
+  end
+
+  def test_shadow_menu_defaults_to_var_shadow_md
+    assert_match(/@layer base \{.*?:root \{.*?--ks-shadow-menu: var\(--shadow-md\)/m, self.class.compiled)
+  end
+
+  def test_font_weight_normal_defaults_to_var_font_weight_normal
+    assert_match(/@layer base \{.*?:root \{.*?--ks-font-weight-normal: var\(--font-weight-normal\)/m, self.class.compiled)
+  end
+
+  def test_bottom_nav_position_is_fixed
+    assert_includes block(".ks-bottom-nav"), "position: fixed"
+  end
+
+  def test_bottom_nav_bottom_edge_sits_at_the_bottom_of_the_screen
+    assert_includes block(".ks-bottom-nav"), "bottom: 0px"
+  end
+
+  def test_bottom_nav_left_edge_sits_at_the_left_of_the_screen
+    assert_includes block(".ks-bottom-nav"), "left: 0px"
+  end
+
+  def test_bottom_nav_right_edge_sits_at_the_right_of_the_screen
+    assert_includes block(".ks-bottom-nav"), "right: 0px"
+  end
+
+  def test_bottom_nav_stacking_level_is_40
+    assert_includes block(".ks-bottom-nav"), "z-index: 40"
+  end
+
+  def test_bottom_nav_items_sit_in_a_row
+    assert_includes block(".ks-bottom-nav"), "display: flex"
+  end
+
+  def test_bottom_nav_items_are_spaced_evenly
+    assert_includes block(".ks-bottom-nav"), "justify-content: space-around"
+  end
+
+  def test_bottom_nav_bottom_padding_clears_the_safe_area
+    assert_includes block(".ks-bottom-nav"), "padding-bottom: env(safe-area-inset-bottom)"
+  end
+
+  def test_bottom_nav_bar_is_hidden_on_large_screens
+    assert_match(/width >= 64rem.*?display: none/m, block(".ks-bottom-nav"))
+  end
+
+  def test_bottom_nav_fill_reads_the_nav_colour_role
+    assert_includes block(".ks-bottom-nav"), "background-color: var(--ks-color-nav)"
+  end
+
+  def test_bottom_nav_fill_reads_the_nav_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-nav-dark\)/m, block(".ks-bottom-nav"))
+  end
+
+  def test_bottom_nav_top_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-bottom-nav"), "border-top-width: var(--ks-border-width)"
+  end
+
+  def test_bottom_nav_top_border_reads_the_nav_border_colour_role
+    assert_includes block(".ks-bottom-nav"), "border-top-color: var(--ks-color-nav-border)"
+  end
+
+  def test_bottom_nav_top_border_reads_the_nav_border_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-top-color: var\(--ks-color-nav-border-dark\)/m, block(".ks-bottom-nav"))
+  end
+
+  def test_bottom_nav_background_extends_below_the_screen_edge
+    assert_match(/\.ks-bottom-nav::after \{.*?background: inherit/m, self.class.compiled)
+  end
+
+  def test_bottom_nav_item_content_is_laid_out_with_flex
+    assert_includes block(".ks-bottom-nav-item"), "display: flex"
+  end
+
+  def test_bottom_nav_item_width_shares_the_bar_equally
+    assert_includes block(".ks-bottom-nav-item"), "flex: 1"
+  end
+
+  def test_bottom_nav_item_icon_sits_above_its_label
+    assert_includes block(".ks-bottom-nav-item"), "flex-direction: column"
+  end
+
+  def test_bottom_nav_item_content_is_centred_across
+    assert_includes block(".ks-bottom-nav-item"), "align-items: center"
+  end
+
+  def test_bottom_nav_item_content_is_centred_down
+    assert_includes block(".ks-bottom-nav-item"), "justify-content: center"
+  end
+
+  def test_bottom_nav_item_height_is_at_least_56_pixels
+    assert_includes block(".ks-bottom-nav-item"), "min-height: calc(var(--spacing) * 14)"
+  end
+
+  def test_bottom_nav_item_label_is_not_underlined
+    assert_includes block(".ks-bottom-nav-item"), "text-decoration-line: none"
+  end
+
+  def test_bottom_nav_item_gap_is_0_5_spacing_units
+    assert_includes block(".ks-bottom-nav-item"), "gap: calc(var(--ks-spacing) * 0.5)"
+  end
+
+  def test_bottom_nav_item_padding_block_is_2_spacing_units
+    assert_includes block(".ks-bottom-nav-item"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_bottom_nav_item_padding_inline_is_1_spacing_units
+    assert_includes block(".ks-bottom-nav-item"), "padding-inline: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_bottom_nav_item_text_reads_the_nav_text_colour_role
+    assert_includes block(".ks-bottom-nav-item"), "color: var(--ks-color-nav-text)"
+  end
+
+  def test_bottom_nav_item_text_reads_the_nav_text_hover_colour_role_on_hover
+    assert_match(/:hover.*?\scolor: var\(--ks-color-nav-text-hover\)/m, block(".ks-bottom-nav-item"))
+  end
+
+  def test_bottom_nav_item_text_reads_the_nav_text_hover_colour_role_while_pressed
+    assert_match(/\&:active.*?\scolor: var\(--ks-color-nav-text-hover\)/m, block(".ks-bottom-nav-item"))
+  end
+
+  def test_bottom_nav_item_text_reads_the_nav_active_colour_role_when_marked_active
+    assert_match(/\&\.active.*?\scolor: var\(--ks-color-nav-active\)/m, block(".ks-bottom-nav-item"))
+  end
+
+  def test_bottom_nav_item_text_reads_the_nav_text_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-nav-text-dark\)/m, block(".ks-bottom-nav-item"))
+  end
+
+  def test_bottom_nav_item_text_reads_the_nav_text_hover_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?\scolor: var\(--ks-color-nav-text-hover-dark\)/m, block(".ks-bottom-nav-item"))
+  end
+
+  def test_bottom_nav_item_text_reads_the_nav_text_hover_dark_colour_role_on_a_dark_page_and_while_pressed
+    assert_match(/data-theme="dark".*?\&:active.*?\scolor: var\(--ks-color-nav-text-hover-dark\)/m, block(".ks-bottom-nav-item"))
+  end
+
+  def test_bottom_nav_item_text_reads_the_nav_active_dark_colour_role_on_a_dark_page_and_when_marked_active
+    assert_match(/data-theme="dark".*?\&\.active.*?\scolor: var\(--ks-color-nav-active-dark\)/m, block(".ks-bottom-nav-item"))
+  end
+
+  def test_bottom_nav_item_icon_is_24_pixels_for_its_icon
+    assert_match(/\& svg.*?width: calc\(var\(--spacing\) \* 6\)/m, block(".ks-bottom-nav-item"))
+  end
+
+  def test_bottom_nav_label_label_is_10_pixels
+    assert_includes block(".ks-bottom-nav-label"), "font-size: 10px"
+  end
+
+  def test_bottom_nav_label_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-bottom-nav-label"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_bottom_nav_label_label_has_no_extra_line_height
+    assert_includes block(".ks-bottom-nav-label"), "line-height: 1"
+  end
+
+  def test_nav_dropdown_menu_is_placed_against_it
+    assert_includes block(".ks-nav-dropdown"), "position: relative"
+  end
+
+  def test_nav_dropdown_width_fills_its_row
+    assert_includes block(".ks-nav-dropdown"), "width: 100%"
+  end
+
+  def test_nav_dropdown_width_fits_its_trigger_on_large_screens
+    assert_match(/width >= 64rem.*?width: auto/m, block(".ks-nav-dropdown"))
+  end
+
+  def test_nav_dropdown_trigger_content_is_laid_out_with_flex
+    assert_includes block(".ks-nav-dropdown-trigger"), "display: flex"
+  end
+
+  def test_nav_dropdown_trigger_content_is_centred_down
+    assert_includes block(".ks-nav-dropdown-trigger"), "align-items: center"
+  end
+
+  def test_nav_dropdown_trigger_label_and_caret_sit_at_either_end
+    assert_includes block(".ks-nav-dropdown-trigger"), "justify-content: space-between"
+  end
+
+  def test_nav_dropdown_trigger_text_is_small
+    assert_includes block(".ks-nav-dropdown-trigger"), "font-size: var(--text-sm)"
+  end
+
+  def test_nav_dropdown_trigger_label_stays_on_one_line
+    assert_includes block(".ks-nav-dropdown-trigger"), "text-wrap: nowrap"
+  end
+
+  def test_nav_dropdown_trigger_width_fills_its_row
+    assert_includes block(".ks-nav-dropdown-trigger"), "width: 100%"
+  end
+
+  def test_nav_dropdown_trigger_label_is_not_underlined
+    assert_includes block(".ks-nav-dropdown-trigger"), "text-decoration-line: none"
+  end
+
+  def test_nav_dropdown_trigger_gap_is_1_spacing_units
+    assert_includes block(".ks-nav-dropdown-trigger"), "gap: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_nav_dropdown_trigger_padding_inline_is_4_spacing_units
+    assert_includes block(".ks-nav-dropdown-trigger"), "padding-inline: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_nav_dropdown_trigger_padding_block_is_3_spacing_units
+    assert_includes block(".ks-nav-dropdown-trigger"), "padding-block: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_nav_dropdown_trigger_padding_inline_is_1_spacing_units_on_large_screens
+    assert_match(/width >= 64rem.*?padding-inline: calc\(var\(--ks-spacing\) \* 1\)/m, block(".ks-nav-dropdown-trigger"))
+  end
+
+  def test_nav_dropdown_trigger_padding_block_is_2_spacing_units_on_large_screens
+    assert_match(/width >= 64rem.*?padding-block: calc\(var\(--ks-spacing\) \* 2\)/m, block(".ks-nav-dropdown-trigger"))
+  end
+
+  def test_nav_dropdown_trigger_width_fits_its_label_on_large_screens
+    assert_match(/width >= 64rem.*?width: auto/m, block(".ks-nav-dropdown-trigger"))
+  end
+
+  def test_nav_dropdown_trigger_text_reads_the_nav_link_colour_role
+    assert_includes block(".ks-nav-dropdown-trigger"), "color: var(--ks-color-nav-link)"
+  end
+
+  def test_nav_dropdown_trigger_text_reads_the_nav_text_hover_colour_role_on_hover
+    assert_match(/:hover.*?\scolor: var\(--ks-color-nav-text-hover\)/m, block(".ks-nav-dropdown-trigger"))
+  end
+
+  def test_nav_dropdown_trigger_text_reads_the_nav_active_colour_role_when_marked_active
+    assert_match(/\&\.active.*?\scolor: var\(--ks-color-nav-active\)/m, block(".ks-nav-dropdown-trigger"))
+  end
+
+  def test_nav_dropdown_trigger_weight_reads_the_heading_font_weight_variable_when_marked_active
+    assert_match(/\&\.active.*?font-weight: var\(--ks-font-weight-heading\)/m, block(".ks-nav-dropdown-trigger"))
+  end
+
+  def test_nav_dropdown_trigger_text_reads_the_nav_link_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-nav-link-dark\)/m, block(".ks-nav-dropdown-trigger"))
+  end
+
+  def test_nav_dropdown_trigger_text_reads_the_nav_text_hover_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?\scolor: var\(--ks-color-nav-text-hover-dark\)/m, block(".ks-nav-dropdown-trigger"))
+  end
+
+  def test_nav_dropdown_trigger_text_reads_the_nav_active_dark_colour_role_on_a_dark_page_and_when_marked_active
+    assert_match(/data-theme="dark".*?\&\.active.*?\scolor: var\(--ks-color-nav-active-dark\)/m, block(".ks-nav-dropdown-trigger"))
+  end
+
+  def test_nav_dropdown_trigger_underline_reads_the_nav_indicator_colour_role_on_large_screens_and_when_marked_active
+    assert_match(/width >= 64rem.*?\&\.active.*?inset 0 calc\(var\(--ks-border-width\) \* -4\) 0 0 var\(--tw-shadow-color, var\(--ks-color-nav-indicator\)\)/m, block(".ks-nav-dropdown-trigger"))
+  end
+
+  def test_nav_dropdown_trigger_underline_reads_the_nav_indicator_dark_colour_role_on_a_dark_page_and_on_large_screens_and_when_marked_active
+    assert_match(/data-theme="dark".*?width >= 64rem.*?\&\.active.*?inset 0 calc\(var\(--ks-border-width\) \* -4\) 0 0 var\(--tw-shadow-color, var\(--ks-color-nav-indicator-dark\)\)/m, block(".ks-nav-dropdown-trigger"))
+  end
+
+  def test_nav_item_content_is_laid_out_with_flex
+    assert_includes block(".ks-nav-item"), "display: flex"
+  end
+
+  def test_nav_item_content_is_centred_down
+    assert_includes block(".ks-nav-item"), "align-items: center"
+  end
+
+  def test_nav_item_label_and_caret_sit_at_either_end
+    assert_includes block(".ks-nav-item"), "justify-content: space-between"
+  end
+
+  def test_nav_item_text_is_small
+    assert_includes block(".ks-nav-item"), "font-size: var(--text-sm)"
+  end
+
+  def test_nav_item_label_stays_on_one_line
+    assert_includes block(".ks-nav-item"), "text-wrap: nowrap"
+  end
+
+  def test_nav_item_width_fills_its_row
+    assert_includes block(".ks-nav-item"), "width: 100%"
+  end
+
+  def test_nav_item_label_is_not_underlined
+    assert_includes block(".ks-nav-item"), "text-decoration-line: none"
+  end
+
+  def test_nav_item_gap_is_1_spacing_units
+    assert_includes block(".ks-nav-item"), "gap: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_nav_item_padding_inline_is_4_spacing_units
+    assert_includes block(".ks-nav-item"), "padding-inline: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_nav_item_padding_block_is_3_spacing_units
+    assert_includes block(".ks-nav-item"), "padding-block: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_nav_item_padding_inline_is_1_spacing_units_on_large_screens
+    assert_match(/width >= 64rem.*?padding-inline: calc\(var\(--ks-spacing\) \* 1\)/m, block(".ks-nav-item"))
+  end
+
+  def test_nav_item_padding_block_is_2_spacing_units_on_large_screens
+    assert_match(/width >= 64rem.*?padding-block: calc\(var\(--ks-spacing\) \* 2\)/m, block(".ks-nav-item"))
+  end
+
+  def test_nav_item_width_fits_its_label_on_large_screens
+    assert_match(/width >= 64rem.*?width: auto/m, block(".ks-nav-item"))
+  end
+
+  def test_nav_item_text_reads_the_nav_link_colour_role
+    assert_includes block(".ks-nav-item"), "color: var(--ks-color-nav-link)"
+  end
+
+  def test_nav_item_text_reads_the_nav_text_hover_colour_role_on_hover
+    assert_match(/:hover.*?\scolor: var\(--ks-color-nav-text-hover\)/m, block(".ks-nav-item"))
+  end
+
+  def test_nav_item_text_reads_the_nav_active_colour_role_when_marked_active
+    assert_match(/\&\.active.*?\scolor: var\(--ks-color-nav-active\)/m, block(".ks-nav-item"))
+  end
+
+  def test_nav_item_weight_reads_the_heading_font_weight_variable_when_marked_active
+    assert_match(/\&\.active.*?font-weight: var\(--ks-font-weight-heading\)/m, block(".ks-nav-item"))
+  end
+
+  def test_nav_item_text_reads_the_nav_link_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-nav-link-dark\)/m, block(".ks-nav-item"))
+  end
+
+  def test_nav_item_text_reads_the_nav_text_hover_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?\scolor: var\(--ks-color-nav-text-hover-dark\)/m, block(".ks-nav-item"))
+  end
+
+  def test_nav_item_text_reads_the_nav_active_dark_colour_role_on_a_dark_page_and_when_marked_active
+    assert_match(/data-theme="dark".*?\&\.active.*?\scolor: var\(--ks-color-nav-active-dark\)/m, block(".ks-nav-item"))
+  end
+
+  def test_nav_item_underline_reads_the_nav_indicator_colour_role_on_large_screens_and_when_marked_active
+    assert_match(/width >= 64rem.*?\&\.active.*?inset 0 calc\(var\(--ks-border-width\) \* -4\) 0 0 var\(--tw-shadow-color, var\(--ks-color-nav-indicator\)\)/m, block(".ks-nav-item"))
+  end
+
+  def test_nav_item_underline_reads_the_nav_indicator_dark_colour_role_on_a_dark_page_and_on_large_screens_and_when_marked_active
+    assert_match(/data-theme="dark".*?width >= 64rem.*?\&\.active.*?inset 0 calc\(var\(--ks-border-width\) \* -4\) 0 0 var\(--tw-shadow-color, var\(--ks-color-nav-indicator-dark\)\)/m, block(".ks-nav-item"))
+  end
+
+  def test_nav_dropdown_caret_caret_is_16_pixels
+    assert_includes block(".ks-nav-dropdown-caret"), "width: calc(var(--spacing) * 4)"
+  end
+
+  def test_nav_dropdown_caret_caret_animates_its_turn
+    assert_includes block(".ks-nav-dropdown-caret"), "transition-property: transform"
+  end
+
+  def test_nav_dropdown_caret_turn_takes_200_milliseconds
+    assert_includes block(".ks-nav-dropdown-caret"), "transition-duration: 200ms"
+  end
+
+  def test_nav_dropdown_caret_turn_eases
+    assert_includes block(".ks-nav-dropdown-caret"), "transition-timing-function: ease"
+  end
+
+  def test_nav_dropdown_caret_turns_while_its_menu_is_open
+    assert_match(/\.ks-nav-dropdown:has\(\.ks-nav-dropdown-menu:not\(\.hidden\)\) \.ks-nav-dropdown-caret \{.*?transform: rotate\(180deg\)/m, self.class.compiled)
+  end
+
+  def test_nav_dropdown_menu_position_is_relative_on_small_screens
+    assert_includes block(".ks-nav-dropdown-menu"), "position: relative"
+  end
+
+  def test_nav_dropdown_menu_width_fills_its_row_on_small_screens
+    assert_includes block(".ks-nav-dropdown-menu"), "width: 100%"
+  end
+
+  def test_nav_dropdown_menu_stacking_level_is_50
+    assert_includes block(".ks-nav-dropdown-menu"), "z-index: 50"
+  end
+
+  def test_nav_dropdown_menu_fill_reads_the_nav_menu_mobile_colour_role
+    assert_includes block(".ks-nav-dropdown-menu"), "background-color: var(--ks-color-nav-menu-mobile)"
+  end
+
+  def test_nav_dropdown_menu_fill_reads_the_nav_menu_mobile_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-nav-menu-mobile-dark\)/m, block(".ks-nav-dropdown-menu"))
+  end
+
+  def test_nav_dropdown_menu_fill_reads_the_nav_colour_role_on_large_screens
+    assert_match(/width >= 64rem.*?background-color: var\(--ks-color-nav\)/m, block(".ks-nav-dropdown-menu"))
+  end
+
+  def test_nav_dropdown_menu_fill_reads_the_nav_dark_colour_role_on_a_dark_page_and_on_large_screens
+    assert_match(/data-theme="dark".*?width >= 64rem.*?background-color: var\(--ks-color-nav-dark\)/m, block(".ks-nav-dropdown-menu"))
+  end
+
+  def test_nav_dropdown_menu_border_width_reads_the_border_width_variable_on_large_screens
+    assert_match(/width >= 64rem.*?border-width: var\(--ks-border-width\)/m, block(".ks-nav-dropdown-menu"))
+  end
+
+  def test_nav_dropdown_menu_border_reads_the_nav_border_colour_role_on_large_screens
+    assert_match(/width >= 64rem.*?border-color: var\(--ks-color-nav-border\)/m, block(".ks-nav-dropdown-menu"))
+  end
+
+  def test_nav_dropdown_menu_border_reads_the_nav_border_dark_colour_role_on_a_dark_page_and_on_large_screens
+    assert_match(/data-theme="dark".*?width >= 64rem.*?border-color: var\(--ks-color-nav-border-dark\)/m, block(".ks-nav-dropdown-menu"))
+  end
+
+  def test_nav_dropdown_menu_radius_reads_the_surface_radius_on_large_screens
+    assert_match(/width >= 64rem.*?border-radius: var\(--ks-radius-surface\)/m, block(".ks-nav-dropdown-menu"))
+  end
+
+  def test_nav_dropdown_menu_shadow_reads_the_menu_shadow_variable_on_large_screens
+    assert_match(/width >= 64rem.*?--tw-shadow: var\(--ks-shadow-menu\)/m, block(".ks-nav-dropdown-menu"))
+  end
+
+  def test_nav_dropdown_menu_width_is_at_least_200_pixels_on_large_screens
+    assert_match(/width >= 64rem.*?min-width: 200px/m, block(".ks-nav-dropdown-menu"))
+  end
+
+  def test_nav_dropdown_menu_position_floats_below_its_trigger_on_large_screens
+    assert_match(/width >= 64rem.*?position: absolute/m, block(".ks-nav-dropdown-menu"))
+  end
+
+  def test_nav_dropdown_menu_top_sits_below_its_trigger_on_large_screens
+    assert_match(/width >= 64rem.*?top: 100%/m, block(".ks-nav-dropdown-menu"))
+  end
+
+  def test_nav_dropdown_menu_left_edge_lines_up_with_its_trigger_on_large_screens
+    assert_match(/width >= 64rem.*?left: 0px/m, block(".ks-nav-dropdown-menu"))
+  end
+
+  def test_nav_dropdown_menu_margin_top_is_1_spacing_units_on_large_screens
+    assert_match(/width >= 64rem.*?margin-top: calc\(var\(--ks-spacing\) \* 1\)/m, block(".ks-nav-dropdown-menu"))
+  end
+
+  def test_nav_dropdown_menu_list_has_no_bullets
+    assert_includes block(".ks-nav-dropdown-menu"), "list-style-type: none"
+  end
+
+  def test_nav_dropdown_menu_list_has_no_margin
+    assert_includes block(".ks-nav-dropdown-menu"), "margin: 0px"
+  end
+
+  def test_nav_dropdown_menu_list_has_no_padding
+    assert_includes block(".ks-nav-dropdown-menu"), "padding: 0px"
+  end
+
+  def test_nav_dropdown_menu_link_link_fills_its_row
+    assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "display: block"
+  end
+
+  def test_nav_dropdown_menu_link_text_is_small
+    assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "font-size: var(--text-sm)"
+  end
+
+  def test_nav_dropdown_menu_link_label_is_not_underlined
+    assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "text-decoration-line: none"
+  end
+
+  def test_nav_dropdown_menu_link_label_stays_on_one_line
+    assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "white-space: nowrap"
+  end
+
+  def test_nav_dropdown_menu_link_padding_block_is_3_spacing_units
+    assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "padding-block: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_nav_dropdown_menu_link_padding_right_is_4_spacing_units
+    assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "padding-right: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_nav_dropdown_menu_link_padding_left_is_8_spacing_units
+    assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "padding-left: calc(var(--ks-spacing) * 8)"
+  end
+
+  def test_nav_dropdown_menu_link_padding_block_is_2_spacing_units_on_large_screens
+    assert_match(/width >= 64rem.*?padding-block: calc\(var\(--ks-spacing\) \* 2\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
+  end
+
+  def test_nav_dropdown_menu_link_padding_inline_is_4_spacing_units_on_large_screens
+    assert_match(/width >= 64rem.*?padding-inline: calc\(var\(--ks-spacing\) \* 4\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
+  end
+
+  def test_nav_dropdown_menu_link_text_reads_the_nav_link_colour_role
+    assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "color: var(--ks-color-nav-link)"
+  end
+
+  def test_nav_dropdown_menu_link_fill_reads_the_nav_hover_colour_role_on_hover
+    assert_match(/:hover.*?background-color: var\(--ks-color-nav-hover\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
+  end
+
+  def test_nav_dropdown_menu_link_text_reads_the_nav_text_hover_colour_role_on_hover
+    assert_match(/:hover.*?\scolor: var\(--ks-color-nav-text-hover\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
+  end
+
+  def test_nav_dropdown_menu_link_fill_reads_the_nav_hover_colour_role_when_marked_active
+    assert_match(/\&\.active.*?background-color: var\(--ks-color-nav-hover\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
+  end
+
+  def test_nav_dropdown_menu_link_text_reads_the_nav_active_colour_role_when_marked_active
+    assert_match(/\&\.active.*?\scolor: var\(--ks-color-nav-active\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
+  end
+
+  def test_nav_dropdown_menu_link_weight_reads_the_heading_font_weight_variable_when_marked_active
+    assert_match(/\&\.active.*?font-weight: var\(--ks-font-weight-heading\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
+  end
+
+  def test_nav_dropdown_menu_link_text_reads_the_nav_link_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-nav-link-dark\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
+  end
+
+  def test_nav_dropdown_menu_link_fill_reads_the_nav_hover_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?background-color: var\(--ks-color-nav-hover-dark\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
+  end
+
+  def test_nav_dropdown_menu_link_text_reads_the_nav_text_hover_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?\scolor: var\(--ks-color-nav-text-hover-dark\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
+  end
+
+  def test_nav_dropdown_menu_link_fill_reads_the_nav_hover_dark_colour_role_on_a_dark_page_and_when_marked_active
+    assert_match(/data-theme="dark".*?\&\.active.*?background-color: var\(--ks-color-nav-hover-dark\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
+  end
+
+  def test_nav_dropdown_menu_link_text_reads_the_nav_active_dark_colour_role_on_a_dark_page_and_when_marked_active
+    assert_match(/data-theme="dark".*?\&\.active.*?\scolor: var\(--ks-color-nav-active-dark\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
+  end
+
+  def test_navbar_title_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-navbar-title"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
+  def test_navbar_title_text_reads_the_text_colour_role
+    assert_includes block(".ks-navbar-title"), "color: var(--ks-color-text)"
+  end
+
+  def test_navbar_title_text_reads_the_text_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-text-dark\)/m, block(".ks-navbar-title"))
+  end
+
+  def test_mobile_header_title_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-mobile-header-title"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
+  def test_mobile_header_title_text_reads_the_text_colour_role
+    assert_includes block(".ks-mobile-header-title"), "color: var(--ks-color-text)"
+  end
+
+  def test_mobile_header_title_text_reads_the_text_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-text-dark\)/m, block(".ks-mobile-header-title"))
+  end
+
+  def test_mobile_header_back_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-mobile-header-back"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_mobile_header_back_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-text-muted-dark\)/m, block(".ks-mobile-header-back"))
+  end
+
+  def test_mobile_header_subtitle_weight_reads_the_normal_font_weight_variable
+    assert_includes block(".ks-mobile-header-subtitle"), "font-weight: var(--ks-font-weight-normal)"
+  end
+
+  def test_mobile_header_subtitle_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-mobile-header-subtitle"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_mobile_header_subtitle_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-text-muted-dark\)/m, block(".ks-mobile-header-subtitle"))
+  end
+
+  def test_settings_link_padding_inline_is_4_spacing_units
+    assert_includes block(".ks-settings-link"), "padding-inline: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_settings_link_padding_block_is_3_spacing_units
+    assert_includes block(".ks-settings-link"), "padding-block: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_settings_link_text_reads_the_text_option_colour_role
+    assert_includes block(".ks-settings-link"), "color: var(--ks-color-text-option)"
+  end
+
+  def test_settings_link_fill_reads_the_hover_soft_colour_role_on_hover
+    assert_match(/:hover.*?background-color: var\(--ks-color-hover-soft\)/m, block(".ks-settings-link"))
+  end
+
+  def test_settings_link_text_reads_the_text_option_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-text-option-dark\)/m, block(".ks-settings-link"))
+  end
+
+  def test_settings_link_fill_reads_the_hover_soft_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?background-color: var\(--ks-color-hover-soft-dark\)/m, block(".ks-settings-link"))
+  end
+
+  def test_color_hover_soft_defaults_to_var_color_gray_50
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-soft: var\(--color-gray-50\)/m, self.class.compiled)
+  end
+
+  def test_color_hover_soft_dark_defaults_to_var_color_gray_800
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-soft-dark: var\(--color-gray-800\)/m, self.class.compiled)
+  end
+
+  def test_settings_link_label_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-settings-link-label"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_main_element_clears_the_bottom_nav_on_small_screens
+    assert_match(/^  main \{.*?padding-bottom: calc\(56px \+ env\(safe-area-inset-bottom\)\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
