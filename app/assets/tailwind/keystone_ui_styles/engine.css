@@ -1102,6 +1102,6 @@
   }
 
   .ks-bottom-nav {
-    @apply fixed;
+    @apply fixed bottom-0;
   }
 }

@@ -3215,6 +3215,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav"), "position: fixed"
   end
 
+  def test_bottom_nav_bottom_edge_sits_at_the_bottom_of_the_screen
+    assert_includes block(".ks-bottom-nav"), "bottom: 0px"
+  end
+
   private
 
   def block(selector)
