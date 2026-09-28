@@ -3455,6 +3455,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 64rem.*?\&\.active.*?inset 0 calc\(var\(--ks-border-width\) \* -4\) 0 0 var\(--tw-shadow-color, var\(--ks-color-nav-indicator\)\)/m, block(".ks-nav-dropdown-trigger"))
   end
 
+  def test_nav_dropdown_trigger_underline_reads_the_nav_indicator_dark_colour_role_on_a_dark_page_and_on_large_screens_and_when_marked_active
+    assert_match(/data-theme="dark".*?width >= 64rem.*?\&\.active.*?inset 0 calc\(var\(--ks-border-width\) \* -4\) 0 0 var\(--tw-shadow-color, var\(--ks-color-nav-indicator-dark\)\)/m, block(".ks-nav-dropdown-trigger"))
+  end
+
   private
 
   def block(selector)
