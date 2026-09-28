@@ -3895,6 +3895,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-checkbox"), "border-radius: calc(var(--ks-radius-control) * 0.5)"
   end
 
+  def test_checkbox_border_reads_the_border_strong_colour_role
+    assert_includes block(".ks-checkbox"), "border-color: var(--ks-color-border-strong)"
+  end
+
   private
 
   def block(selector)
