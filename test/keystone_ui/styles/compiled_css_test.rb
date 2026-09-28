@@ -3611,6 +3611,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 64rem.*?border-radius: var\(--ks-radius-surface\)/m, block(".ks-nav-dropdown-menu"))
   end
 
+  def test_nav_dropdown_menu_shadow_reads_the_menu_shadow_variable_on_large_screens
+    assert_match(/width >= 64rem.*?--tw-shadow: var\(--ks-shadow-menu\)/m, block(".ks-nav-dropdown-menu"))
+  end
+
   private
 
   def block(selector)
