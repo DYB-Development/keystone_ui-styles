@@ -1068,4 +1068,8 @@
   .ks-swipe-actions {
     @apply gap-[calc(var(--ks-spacing)*8)] mt-[calc(var(--ks-spacing)*8)];
   }
+
+  .ks-swipe-button {
+    @apply rounded-(--ks-radius-pill);
+  }
 }
