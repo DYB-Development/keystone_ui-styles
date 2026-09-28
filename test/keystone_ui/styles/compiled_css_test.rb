@@ -327,7 +327,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-alert-content"), "flex: 1"
     assert_includes rule(".ks-alert-title"), "font-weight: var(--ks-font-weight-heading)"
     assert_includes rule(".ks-alert-message"), "font-size: var(--text-sm)"
-    assert_includes rule(".ks-alert-message-titled"), "margin-top: var(--spacing)"
+    assert_includes rule(".ks-alert-message-titled"), "margin-top: calc(var(--ks-spacing) * 1)"
     assert_includes rule(".ks-alert-dismiss"), "cursor: pointer"
     assert_match(/data-theme="dark".*? color: var\(--ks-color-info-300\)/m, block(".ks-alert-info"))
   end

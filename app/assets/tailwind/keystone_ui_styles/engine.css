@@ -453,7 +453,7 @@
   }
 
   .ks-alert-message-titled {
-    @apply text-sm mt-1;
+    @apply text-sm mt-[calc(var(--ks-spacing)*1)];
   }
 
   .ks-alert-dismiss {
