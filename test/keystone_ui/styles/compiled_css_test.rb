@@ -3391,6 +3391,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-trigger"), "text-wrap: nowrap"
   end
 
+  def test_nav_dropdown_trigger_width_fills_its_row
+    assert_includes block(".ks-nav-dropdown-trigger"), "width: 100%"
+  end
+
   private
 
   def block(selector)
