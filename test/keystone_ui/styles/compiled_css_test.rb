@@ -3287,6 +3287,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav-item"), "align-items: center"
   end
 
+  def test_bottom_nav_item_content_is_centred_down
+    assert_includes block(".ks-bottom-nav-item"), "justify-content: center"
+  end
+
   private
 
   def block(selector)
