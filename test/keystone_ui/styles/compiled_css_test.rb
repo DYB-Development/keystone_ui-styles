@@ -3471,6 +3471,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-item"), "justify-content: space-between"
   end
 
+  def test_nav_item_text_is_small
+    assert_includes block(".ks-nav-item"), "font-size: var(--text-sm)"
+  end
+
   private
 
   def block(selector)
