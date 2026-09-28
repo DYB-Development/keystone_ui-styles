@@ -380,7 +380,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_surface_dark_defaults_to_var_color_zinc_900
-    assert_match(/:root \{[^}]*--ks-color-surface-dark: var\(--color-zinc-900\)/m, self.class.compiled)
+    assert_match(/:root \{[^}]*--ks-color-surface-dark: var\(--color-surface-900\)/m, self.class.compiled)
   end
 
   def test_panel_border_reads_the_border_colour_role
@@ -388,7 +388,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_border_defaults_to_var_color_gray_200
-    assert_match(/:root \{[^}]*--ks-color-border: var\(--color-gray-200\)/m, self.class.compiled)
+    assert_match(/:root \{[^}]*--ks-color-border: var\(--color-surface-200\)/m, self.class.compiled)
   end
 
   def test_panel_border_reads_the_dark_border_colour_role_on_a_dark_page
@@ -396,7 +396,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_border_dark_defaults_to_var_color_zinc_700
-    assert_match(/:root \{[^}]*--ks-color-border-dark: var\(--color-zinc-700\)/m, self.class.compiled)
+    assert_match(/:root \{[^}]*--ks-color-border-dark: var\(--color-surface-700\)/m, self.class.compiled)
   end
 
   def test_card_background_reads_the_surface_colour_role
@@ -432,7 +432,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_border_control_defaults_to_var_color_gray_300
-    assert_match(/:root \{[^}]*--ks-color-border-control: var\(--color-gray-300\)/m, self.class.compiled)
+    assert_match(/:root \{[^}]*--ks-color-border-control: var\(--ks-color-border-strong\)/m, self.class.compiled)
   end
 
   def test_input_border_reads_the_dark_control_border_colour_role_on_a_dark_page
@@ -440,7 +440,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_border_control_dark_defaults_to_var_color_zinc_700
-    assert_match(/:root \{[^}]*--ks-color-border-control-dark: var\(--color-zinc-700\)/m, self.class.compiled)
+    assert_match(/:root \{[^}]*--ks-color-border-control-dark: var\(--ks-color-border-strong-dark\)/m, self.class.compiled)
   end
 
   def test_input_text_reads_the_text_colour_role
@@ -448,7 +448,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_defaults_to_var_color_gray_900
-    assert_match(/:root \{[^}]*--ks-color-text: var\(--color-gray-900\)/m, self.class.compiled)
+    assert_match(/:root \{[^}]*--ks-color-text: var\(--color-surface-900\)/m, self.class.compiled)
   end
 
   def test_input_text_reads_the_dark_text_colour_role_on_a_dark_page
@@ -460,7 +460,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_label_defaults_to_var_color_gray_700
-    assert_match(/:root \{[^}]*--ks-color-text-label: var\(--color-gray-700\)/m, self.class.compiled)
+    assert_match(/:root \{[^}]*--ks-color-text-label: var\(--color-surface-700\)/m, self.class.compiled)
   end
 
   def test_label_reads_the_dark_label_text_colour_role_on_a_dark_page
@@ -468,11 +468,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_label_dark_defaults_to_var_color_gray_300
-    assert_match(/:root \{[^}]*--ks-color-text-label-dark: var\(--color-gray-300\)/m, self.class.compiled)
+    assert_match(/:root \{[^}]*--ks-color-text-label-dark: var\(--color-surface-300\)/m, self.class.compiled)
   end
 
   def test_color_text_muted_defaults_to_var_color_gray_500
-    assert_match(/:root \{[^}]*--ks-color-text-muted: var\(--color-gray-500\)/m, self.class.compiled)
+    assert_match(/:root \{[^}]*--ks-color-text-muted: var\(--color-surface-500\)/m, self.class.compiled)
   end
 
   def test_hint_reads_the_dark_muted_text_colour_role_on_a_dark_page
@@ -480,7 +480,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_muted_dark_defaults_to_var_color_gray_400
-    assert_match(/:root \{[^}]*--ks-color-text-muted-dark: var\(--color-gray-400\)/m, self.class.compiled)
+    assert_match(/:root \{[^}]*--ks-color-text-muted-dark: var\(--color-surface-400\)/m, self.class.compiled)
   end
 
   def test_section_title_reads_the_text_colour_role
@@ -864,7 +864,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_overlay_dark_defaults_to_var_color_zinc_800
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-overlay-dark: var\(--color-zinc-800\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-overlay-dark: var\(--color-surface-800\)/m, self.class.compiled)
   end
 
   def test_modal_panel_padding_is_6_spacing_units
@@ -900,11 +900,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_heading_defaults_to_var_color_gray_900
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-heading: var\(--color-gray-900\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-heading: var\(--ks-color-text\)/m, self.class.compiled)
   end
 
   def test_color_text_heading_dark_defaults_to_var_color_gray_200
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-heading-dark: var\(--color-gray-200\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-heading-dark: var\(--ks-color-text-dark\)/m, self.class.compiled)
   end
 
   def test_modal_close_text_reads_the_close_colour_role
@@ -920,7 +920,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_close_defaults_to_var_color_gray_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-close: var\(--color-gray-400\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-close: var\(--ks-color-icon\)/m, self.class.compiled)
   end
 
   def test_color_close_hover_defaults_to_var_color_gray_600
@@ -1088,11 +1088,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_hover_defaults_to_var_color_gray_50
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover: var\(--color-gray-50\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover: var\(--color-surface-50\)/m, self.class.compiled)
   end
 
   def test_color_hover_dark_defaults_to_var_color_zinc_800
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-dark: var\(--color-zinc-800\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-dark: var\(--color-surface-800\)/m, self.class.compiled)
   end
 
   def test_menu_checkbox_radius_is_0_5_of_the_control_radius
@@ -1116,11 +1116,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_border_strong_defaults_to_var_color_gray_300
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-strong: var\(--color-gray-300\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-strong: var\(--color-surface-300\)/m, self.class.compiled)
   end
 
   def test_color_border_strong_dark_defaults_to_var_color_zinc_600
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-strong-dark: var\(--color-zinc-600\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-strong-dark: var\(--color-surface-600\)/m, self.class.compiled)
   end
 
   def test_color_focus_defaults_to_var_color_accent_500
@@ -1184,11 +1184,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_hover_raised_defaults_to_var_color_gray_50
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-raised: var\(--color-gray-50\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-raised: var\(--ks-color-hover\)/m, self.class.compiled)
   end
 
   def test_color_hover_raised_dark_defaults_to_var_color_zinc_700
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-raised-dark: var\(--color-zinc-700\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-raised-dark: var\(--ks-color-hover-dark\)/m, self.class.compiled)
   end
 
   def test_theme_toggle_option_fill_reads_the_accent_colour_role_when_pressed
@@ -1240,7 +1240,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_border_choice_defaults_to_var_color_surface_300
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-choice: var\(--color-surface-300\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-choice: var\(--ks-color-border-strong\)/m, self.class.compiled)
   end
 
   def test_checkbox_row_label_weight_reads_the_medium_font_weight_variable
@@ -1256,11 +1256,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_choice_defaults_to_var_color_surface_900
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-choice: var\(--color-surface-900\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-choice: var\(--ks-color-text\)/m, self.class.compiled)
   end
 
   def test_color_text_choice_dark_defaults_to_var_color_surface_100
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-choice-dark: var\(--color-surface-100\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-choice-dark: var\(--ks-color-text-dark\)/m, self.class.compiled)
   end
 
   def test_checkbox_row_hint_margin_top_is_0_5_spacing_units
@@ -1276,11 +1276,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_choice_muted_defaults_to_var_color_surface_500
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-choice-muted: var\(--color-surface-500\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-choice-muted: var\(--ks-color-text-muted\)/m, self.class.compiled)
   end
 
   def test_color_text_choice_muted_dark_defaults_to_var_color_surface_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-choice-muted-dark: var\(--color-surface-400\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-choice-muted-dark: var\(--ks-color-text-muted-dark\)/m, self.class.compiled)
   end
 
   def test_radio_card_padding_inline_is_4_spacing_units
@@ -1344,11 +1344,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_option_defaults_to_var_color_gray_900
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option: var\(--color-gray-900\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option: var\(--ks-color-text\)/m, self.class.compiled)
   end
 
   def test_color_text_option_dark_defaults_to_var_color_gray_100
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option-dark: var\(--color-gray-100\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option-dark: var\(--ks-color-text-dark\)/m, self.class.compiled)
   end
 
   def test_radio_card_hint_margin_top_is_1_spacing_units
@@ -1364,11 +1364,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_option_muted_defaults_to_var_color_surface_500
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option-muted: var\(--color-surface-500\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option-muted: var\(--ks-color-text-muted\)/m, self.class.compiled)
   end
 
   def test_color_text_option_muted_dark_defaults_to_var_color_gray_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option-muted-dark: var\(--color-gray-400\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-option-muted-dark: var\(--ks-color-text-muted-dark\)/m, self.class.compiled)
   end
 
   def test_option_card_gap_is_2_spacing_units
@@ -1464,11 +1464,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_icon_defaults_to_var_color_gray_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon: var\(--color-gray-400\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon: var\(--color-surface-400\)/m, self.class.compiled)
   end
 
   def test_color_icon_dark_defaults_to_var_color_gray_500
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon-dark: var\(--color-gray-500\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon-dark: var\(--color-surface-500\)/m, self.class.compiled)
   end
 
   def test_file_upload_prompt_text_reads_the_text_secondary_colour_role
@@ -1480,11 +1480,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_secondary_defaults_to_var_color_gray_600
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-secondary: var\(--color-gray-600\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-secondary: var\(--color-surface-600\)/m, self.class.compiled)
   end
 
   def test_color_text_secondary_dark_defaults_to_var_color_gray_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-secondary-dark: var\(--color-gray-400\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-secondary-dark: var\(--color-surface-400\)/m, self.class.compiled)
   end
 
   def test_file_upload_browse_weight_reads_the_strong_font_weight_variable
@@ -1916,19 +1916,19 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_border_subtle_defaults_to_var_color_surface_200
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-subtle: var\(--color-surface-200\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-subtle: var\(--ks-color-border\)/m, self.class.compiled)
   end
 
   def test_color_border_subtle_dark_defaults_to_var_color_surface_700
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-subtle-dark: var\(--color-surface-700\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-subtle-dark: var\(--ks-color-border-dark\)/m, self.class.compiled)
   end
 
   def test_color_fill_muted_defaults_to_var_color_surface_50
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-fill-muted: var\(--color-surface-50\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-fill-muted: var\(--ks-color-hover\)/m, self.class.compiled)
   end
 
   def test_color_fill_muted_dark_defaults_to_var_color_surface_800
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-fill-muted-dark: var\(--color-surface-800\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-fill-muted-dark: var\(--ks-color-hover-dark\)/m, self.class.compiled)
   end
 
   def test_cta_banner_title_margin_bottom_is_4_spacing_units
@@ -1948,11 +1948,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_display_defaults_to_var_color_surface_900
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display: var\(--color-surface-900\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display: var\(--ks-color-text\)/m, self.class.compiled)
   end
 
   def test_color_text_display_dark_defaults_to_var_color_white
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display-dark: var\(--color-white\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display-dark: var\(--ks-color-text-dark\)/m, self.class.compiled)
   end
 
   def test_cta_banner_subtitle_margin_bottom_is_8_spacing_units
@@ -1968,11 +1968,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_display_muted_defaults_to_var_color_surface_500
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display-muted: var\(--color-surface-500\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display-muted: var\(--ks-color-text-muted\)/m, self.class.compiled)
   end
 
   def test_color_text_display_muted_dark_defaults_to_var_color_surface_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display-muted-dark: var\(--color-surface-400\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-display-muted-dark: var\(--ks-color-text-muted-dark\)/m, self.class.compiled)
   end
 
   def test_cta_banner_actions_gap_is_4_spacing_units
@@ -2044,11 +2044,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_raised_defaults_to_var_color_white
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-raised: var\(--color-white\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-raised: var\(--ks-color-overlay\)/m, self.class.compiled)
   end
 
   def test_color_raised_dark_defaults_to_var_color_surface_800
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-raised-dark: var\(--color-surface-800\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-raised-dark: var\(--ks-color-overlay-dark\)/m, self.class.compiled)
   end
 
   def test_feature_card_icon_margin_bottom_is_4_spacing_units
@@ -2228,11 +2228,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_table_head_defaults_to_var_color_gray_50
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-head: var\(--color-gray-50\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-head: var\(--ks-color-hover\)/m, self.class.compiled)
   end
 
   def test_color_table_head_dark_defaults_to_color_mix_in_oklab_var_color_gray_800_75_transparent
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-head-dark: color-mix\(in oklab, var\(--color-gray-800\) 75%, transparent\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-head-dark: var\(--ks-color-hover-dark\)/m, self.class.compiled)
   end
 
   def test_table_body_fill_reads_the_table_body_colour_role
@@ -2256,19 +2256,19 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_table_body_defaults_to_var_color_white
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-body: var\(--color-white\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-body: var\(--ks-color-surface\)/m, self.class.compiled)
   end
 
   def test_color_table_body_dark_defaults_to_color_mix_in_oklab_var_color_gray_800_50_transparent
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-body-dark: color-mix\(in oklab, var\(--color-gray-800\) 50%, transparent\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-table-body-dark: var\(--ks-color-surface-dark\)/m, self.class.compiled)
   end
 
   def test_color_divider_defaults_to_var_color_gray_200
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-divider: var\(--color-gray-200\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-divider: var\(--ks-color-border\)/m, self.class.compiled)
   end
 
   def test_color_divider_dark_defaults_to_color_mix_in_oklab_var_color_white_10_transparent
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-divider-dark: color-mix\(in oklab, var\(--color-white\) 10%, transparent\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-divider-dark: var\(--ks-color-border-dark\)/m, self.class.compiled)
   end
 
   def test_table_header_padding_block_is_3_5_spacing_units
@@ -2588,11 +2588,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_body_defaults_to_var_color_surface_600
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-body: var\(--color-surface-600\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-body: var\(--ks-color-text-secondary\)/m, self.class.compiled)
   end
 
   def test_color_text_body_dark_defaults_to_var_color_surface_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-body-dark: var\(--color-surface-400\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-body-dark: var\(--ks-color-text-secondary-dark\)/m, self.class.compiled)
   end
 
   def test_disclosure_icon_text_reads_the_icon_soft_colour_role
@@ -2600,7 +2600,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_icon_soft_defaults_to_var_color_surface_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon-soft: var\(--color-surface-400\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-icon-soft: var\(--ks-color-icon\)/m, self.class.compiled)
   end
 
   def test_tab_bar_margin_bottom_is_8_spacing_units
@@ -2668,11 +2668,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_track_defaults_to_var_color_surface_200
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-track: var\(--color-surface-200\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-track: var\(--ks-color-border\)/m, self.class.compiled)
   end
 
   def test_color_track_dark_defaults_to_var_color_surface_700
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-track-dark: var\(--color-surface-700\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-track-dark: var\(--ks-color-border-dark\)/m, self.class.compiled)
   end
 
   def test_progress_bar_fill_reads_the_meter_colour_role
@@ -2704,11 +2704,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_meter_label_defaults_to_var_color_surface_700
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-meter-label: var\(--color-surface-700\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-meter-label: var\(--ks-color-text-label\)/m, self.class.compiled)
   end
 
   def test_color_text_meter_label_dark_defaults_to_var_color_surface_300
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-meter-label-dark: var\(--color-surface-300\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-meter-label-dark: var\(--ks-color-text-label-dark\)/m, self.class.compiled)
   end
 
   def test_funnel_vertical_gap_between_children_is_2_spacing_units
@@ -3132,75 +3132,75 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_nav_defaults_to_var_base_bg_low_var_color_white
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav: var\(--base-bg-low, var\(--color-white\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav: var\(--base-bg-low, var\(--ks-color-surface\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_dark_defaults_to_var_base_bg_low_var_color_zinc_900
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-dark: var\(--base-bg-low, var\(--color-zinc-900\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-dark: var\(--base-bg-low, var\(--ks-color-surface-dark\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_border_defaults_to_var_base_border_tertiary_var_color_gray_200
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-border: var\(--base-border-tertiary, var\(--color-gray-200\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-border: var\(--base-border-tertiary, var\(--ks-color-border\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_border_dark_defaults_to_var_base_border_tertiary_var_color_zinc_700
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-border-dark: var\(--base-border-tertiary, var\(--color-zinc-700\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-border-dark: var\(--base-border-tertiary, var\(--ks-color-border-dark\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_text_defaults_to_var_base_text_tertiary_var_color_gray_500
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-text: var\(--base-text-tertiary, var\(--color-gray-500\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-text: var\(--base-text-tertiary, var\(--ks-color-text-muted\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_text_dark_defaults_to_var_base_text_tertiary_var_color_gray_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-text-dark: var\(--base-text-tertiary, var\(--color-gray-400\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-text-dark: var\(--base-text-tertiary, var\(--ks-color-text-muted-dark\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_text_hover_defaults_to_var_base_text_secondary_var_color_gray_700
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-text-hover: var\(--base-text-secondary, var\(--color-gray-700\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-text-hover: var\(--base-text-secondary, var\(--ks-color-text-label\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_text_hover_dark_defaults_to_var_base_text_secondary_var_color_gray_300
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-text-hover-dark: var\(--base-text-secondary, var\(--color-gray-300\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-text-hover-dark: var\(--base-text-secondary, var\(--ks-color-text-label-dark\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_active_defaults_to_var_text_primary_var_color_accent_600
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-active: var\(--text-primary, var\(--color-accent-600\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-active: var\(--text-primary, var\(--ks-color-link\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_active_dark_defaults_to_var_text_primary_var_color_accent_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-active-dark: var\(--text-primary, var\(--color-accent-400\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-active-dark: var\(--text-primary, var\(--ks-color-link-dark\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_link_defaults_to_var_base_text_var_color_gray_900
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-link: var\(--base-text, var\(--color-gray-900\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-link: var\(--base-text, var\(--ks-color-text\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_link_dark_defaults_to_var_base_text_var_color_white
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-link-dark: var\(--base-text, var\(--color-white\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-link-dark: var\(--base-text, var\(--ks-color-text-dark\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_indicator_defaults_to_var_border_primary_var_color_accent_600
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-indicator: var\(--border-primary, var\(--color-accent-600\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-indicator: var\(--border-primary, var\(--ks-color-link\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_indicator_dark_defaults_to_var_border_primary_var_color_accent_400
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-indicator-dark: var\(--border-primary, var\(--color-accent-400\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-indicator-dark: var\(--border-primary, var\(--ks-color-link-dark\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_menu_mobile_defaults_to_var_base_bg_base_var_color_white
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-menu-mobile: var\(--base-bg-base, var\(--color-white\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-menu-mobile: var\(--base-bg-base, var\(--ks-color-surface\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_menu_mobile_dark_defaults_to_var_base_bg_base_var_color_zinc_900
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-menu-mobile-dark: var\(--base-bg-base, var\(--color-zinc-900\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-menu-mobile-dark: var\(--base-bg-base, var\(--ks-color-surface-dark\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_hover_defaults_to_var_base_bg_hover_var_color_gray_50
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-hover: var\(--base-bg-hover, var\(--color-gray-50\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-hover: var\(--base-bg-hover, var\(--ks-color-hover\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_hover_dark_defaults_to_var_base_bg_hover_var_color_zinc_800
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-hover-dark: var\(--base-bg-hover, var\(--color-zinc-800\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-hover-dark: var\(--base-bg-hover, var\(--ks-color-hover-dark\)\)/m, self.class.compiled)
   end
 
   def test_shadow_menu_defaults_to_var_shadow_md
@@ -3796,11 +3796,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_hover_soft_defaults_to_var_color_gray_50
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-soft: var\(--color-gray-50\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-soft: var\(--ks-color-hover\)/m, self.class.compiled)
   end
 
   def test_color_hover_soft_dark_defaults_to_var_color_gray_800
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-soft-dark: var\(--color-gray-800\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-hover-soft-dark: var\(--ks-color-hover-dark\)/m, self.class.compiled)
   end
 
   def test_settings_link_label_weight_reads_the_medium_font_weight_variable
