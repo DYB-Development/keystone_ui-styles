@@ -3200,7 +3200,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_nav_hover_dark_defaults_to_var_base_bg_hover_var_color_zinc_800
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-hover-dark: var\(--base-bg-hover, var\(--color-zinc-800\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-hover-dark: var\(--base-bg-hover, var\(--ks-color-hover-dark\)\)/m, self.class.compiled)
   end
 
   def test_shadow_menu_defaults_to_var_shadow_md
