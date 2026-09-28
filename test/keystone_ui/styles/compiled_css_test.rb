@@ -3511,6 +3511,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 64rem.*?width: auto/m, block(".ks-nav-item"))
   end
 
+  def test_nav_item_text_reads_the_nav_link_colour_role
+    assert_includes block(".ks-nav-item"), "color: var(--ks-color-nav-link)"
+  end
+
   private
 
   def block(selector)
