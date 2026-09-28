@@ -3347,6 +3347,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\& svg.*?width: calc\(var\(--spacing\) \* 6\)/m, block(".ks-bottom-nav-item"))
   end
 
+  def test_bottom_nav_label_label_is_10_pixels
+    assert_includes block(".ks-bottom-nav-label"), "font-size: 10px"
+  end
+
   private
 
   def block(selector)
