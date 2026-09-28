@@ -3403,6 +3403,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-trigger"), "gap: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_nav_dropdown_trigger_padding_inline_is_4_spacing_units
+    assert_includes block(".ks-nav-dropdown-trigger"), "padding-inline: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
