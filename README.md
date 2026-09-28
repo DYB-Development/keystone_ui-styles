@@ -211,6 +211,12 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-navbar-title` | Navbar title on small screens |
 | `ks-mobile-header-title`, `ks-mobile-header-back`, `ks-mobile-header-subtitle` | Mobile header parts |
 | `ks-settings-link`, `ks-settings-link-label` | Settings link and its label |
+| `ks-grid-gap-sm`, `ks-grid-gap-md`, `ks-grid-gap-lg`, `ks-grid-gap-xl`, and the same with `-x-` and `-y-` | Grid gaps, both ways, across or down |
+| `ks-form`, `ks-form-field`, `ks-form-field-checkbox` | Space between a form's fields, inside a field, and beside a checkbox |
+| `ks-theme-toggle` | Space between the theme toggle's buttons |
+| `ks-color-picker-label` | Space under the colour picker's label |
+| `ks-settings-link-chevron` | Settings link arrow colour |
+| `ks-page-title` | Form page and show page title |
 
 On small screens the page's `main` element is padded to clear the bottom nav,
 and a page inside Hotwire Native hides the bottom nav and drops that padding.

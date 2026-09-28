@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Added
+- Classes for the grid's gaps, form and form field spacing, the theme toggle's gap, the colour picker's label spacing, the settings link's arrow colour and the form and show page title, so keystone_ui's remaining components can move their spacing and colours onto `--ks-` variables.
+
 ### Changed
 - Every `ks-` class takes its colours, corner radius, font weight, border widths, margins and padding from `--ks-` variables, including the input focus ring and placeholder, the disabled input, the checkbox, field hints and errors, page and section spacing, section actions, card links, the alert dismiss button and badges. Nothing changes on screen until a variable is set.
 - `--ks-font-body` defaults to `inherit`, so a button keeps the page's font as before.

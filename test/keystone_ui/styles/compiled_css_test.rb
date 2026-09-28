@@ -4023,6 +4023,90 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-badge-neutral-dark: var\(--color-zinc-700\)/m, self.class.compiled)
   end
 
+  def test_grid_gap_sm_gap_is_3_spacing_units
+    assert_includes block(".ks-grid-gap-sm"), "gap: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_grid_gap_x_sm_column_gap_is_3_spacing_units
+    assert_includes block(".ks-grid-gap-x-sm"), "column-gap: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_grid_gap_y_sm_row_gap_is_3_spacing_units
+    assert_includes block(".ks-grid-gap-y-sm"), "row-gap: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_grid_gap_md_gap_is_4_spacing_units
+    assert_includes block(".ks-grid-gap-md"), "gap: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_grid_gap_x_md_column_gap_is_4_spacing_units
+    assert_includes block(".ks-grid-gap-x-md"), "column-gap: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_grid_gap_y_md_row_gap_is_4_spacing_units
+    assert_includes block(".ks-grid-gap-y-md"), "row-gap: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_grid_gap_lg_gap_is_6_spacing_units
+    assert_includes block(".ks-grid-gap-lg"), "gap: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_grid_gap_x_lg_column_gap_is_6_spacing_units
+    assert_includes block(".ks-grid-gap-x-lg"), "column-gap: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_grid_gap_y_lg_row_gap_is_6_spacing_units
+    assert_includes block(".ks-grid-gap-y-lg"), "row-gap: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_grid_gap_xl_gap_is_8_spacing_units
+    assert_includes block(".ks-grid-gap-xl"), "gap: calc(var(--ks-spacing) * 8)"
+  end
+
+  def test_grid_gap_x_xl_column_gap_is_8_spacing_units
+    assert_includes block(".ks-grid-gap-x-xl"), "column-gap: calc(var(--ks-spacing) * 8)"
+  end
+
+  def test_grid_gap_y_xl_row_gap_is_8_spacing_units
+    assert_includes block(".ks-grid-gap-y-xl"), "row-gap: calc(var(--ks-spacing) * 8)"
+  end
+
+  def test_form_vertical_gap_between_children_is_6_spacing_units
+    assert_match(/\.ks-form(?![\w-]).*?:not\(:last-child\).*?calc\(var\(--ks-spacing\) \* 6\)/m, self.class.compiled)
+  end
+
+  def test_form_field_vertical_gap_between_children_is_1_spacing_units
+    assert_match(/\.ks-form-field(?![\w-]).*?:not\(:last-child\).*?calc\(var\(--ks-spacing\) \* 1\)/m, self.class.compiled)
+  end
+
+  def test_form_field_checkbox_gap_is_2_spacing_units
+    assert_includes block(".ks-form-field-checkbox"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_theme_toggle_gap_is_1_spacing_units
+    assert_includes block(".ks-theme-toggle"), "gap: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_color_picker_label_margin_bottom_is_1_spacing_units
+    assert_includes block(".ks-color-picker-label"), "margin-bottom: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_settings_link_chevron_text_reads_the_close_colour_role
+    assert_includes block(".ks-settings-link-chevron"), "color: var(--ks-color-close)"
+  end
+
+  def test_page_title_weight_reads_the_heading_font_weight_variable
+    assert_includes block(".ks-page-title"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
+  def test_page_title_text_reads_the_text_colour_role
+    assert_includes block(".ks-page-title"), "color: var(--ks-color-text)"
+  end
+
+  def test_page_title_text_reads_the_text_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-text-dark\)/m, block(".ks-page-title"))
+  end
+
   private
 
   def block(selector)

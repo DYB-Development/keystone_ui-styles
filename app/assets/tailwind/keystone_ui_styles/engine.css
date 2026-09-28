@@ -1196,4 +1196,80 @@
   .hotwire-native main {
     padding-bottom: 0;
   }
+
+  .ks-grid-gap-sm {
+    @apply gap-[calc(var(--ks-spacing)*3)];
+  }
+
+  .ks-grid-gap-x-sm {
+    @apply gap-x-[calc(var(--ks-spacing)*3)];
+  }
+
+  .ks-grid-gap-y-sm {
+    @apply gap-y-[calc(var(--ks-spacing)*3)];
+  }
+
+  .ks-grid-gap-md {
+    @apply gap-[calc(var(--ks-spacing)*4)];
+  }
+
+  .ks-grid-gap-x-md {
+    @apply gap-x-[calc(var(--ks-spacing)*4)];
+  }
+
+  .ks-grid-gap-y-md {
+    @apply gap-y-[calc(var(--ks-spacing)*4)];
+  }
+
+  .ks-grid-gap-lg {
+    @apply gap-[calc(var(--ks-spacing)*6)];
+  }
+
+  .ks-grid-gap-x-lg {
+    @apply gap-x-[calc(var(--ks-spacing)*6)];
+  }
+
+  .ks-grid-gap-y-lg {
+    @apply gap-y-[calc(var(--ks-spacing)*6)];
+  }
+
+  .ks-grid-gap-xl {
+    @apply gap-[calc(var(--ks-spacing)*8)];
+  }
+
+  .ks-grid-gap-x-xl {
+    @apply gap-x-[calc(var(--ks-spacing)*8)];
+  }
+
+  .ks-grid-gap-y-xl {
+    @apply gap-y-[calc(var(--ks-spacing)*8)];
+  }
+
+  .ks-form {
+    @apply space-y-[calc(var(--ks-spacing)*6)];
+  }
+
+  .ks-form-field {
+    @apply space-y-[calc(var(--ks-spacing)*1)];
+  }
+
+  .ks-form-field-checkbox {
+    @apply gap-[calc(var(--ks-spacing)*2)];
+  }
+
+  .ks-theme-toggle {
+    @apply gap-[calc(var(--ks-spacing)*1)];
+  }
+
+  .ks-color-picker-label {
+    @apply mb-[calc(var(--ks-spacing)*1)];
+  }
+
+  .ks-settings-link-chevron {
+    @apply text-(color:--ks-color-close);
+  }
+
+  .ks-page-title {
+    @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+  }
 }
