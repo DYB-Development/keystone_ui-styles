@@ -1152,6 +1152,6 @@
   }
 
   .ks-navbar-title {
-    @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text);
+    @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 }
