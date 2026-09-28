@@ -3535,6 +3535,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?:hover.*?\scolor: var\(--ks-color-nav-text-hover-dark\)/m, block(".ks-nav-item"))
   end
 
+  def test_nav_item_text_reads_the_nav_active_dark_colour_role_on_a_dark_page_and_when_marked_active
+    assert_match(/data-theme="dark".*?\&\.active.*?\scolor: var\(--ks-color-nav-active-dark\)/m, block(".ks-nav-item"))
+  end
+
   private
 
   def block(selector)
