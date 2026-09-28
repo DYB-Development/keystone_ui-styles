@@ -3279,6 +3279,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav-item"), "flex: 1"
   end
 
+  def test_bottom_nav_item_icon_sits_above_its_label
+    assert_includes block(".ks-bottom-nav-item"), "flex-direction: column"
+  end
+
   private
 
   def block(selector)
