@@ -3343,6 +3343,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?\&\.active.*?\scolor: var\(--ks-color-nav-active-dark\)/m, block(".ks-bottom-nav-item"))
   end
 
+  def test_bottom_nav_item_icon_is_24_pixels_for_its_icon
+    assert_match(/\& svg.*?width: calc\(var\(--spacing\) \* 6\)/m, block(".ks-bottom-nav-item"))
+  end
+
   private
 
   def block(selector)
