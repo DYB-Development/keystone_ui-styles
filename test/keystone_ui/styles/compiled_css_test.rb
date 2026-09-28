@@ -3911,6 +3911,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-surface-dark\)/m, block(".ks-checkbox"))
   end
 
+  def test_page_header_subtitle_margin_top_is_1_spacing_units
+    assert_includes block(".ks-page-header-subtitle"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)
