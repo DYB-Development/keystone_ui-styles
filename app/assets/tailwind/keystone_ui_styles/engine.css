@@ -381,7 +381,7 @@
   }
 
   .ks-section-subtitle {
-    @apply mt-1 text-sm text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+    @apply mt-[calc(var(--ks-spacing)*1)] text-sm text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 
   .ks-section-action {
