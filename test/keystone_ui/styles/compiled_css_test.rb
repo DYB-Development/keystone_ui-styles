@@ -3683,6 +3683,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 64rem.*?padding-inline: calc\(var\(--ks-spacing\) \* 4\)/m, block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"))
   end
 
+  def test_nav_dropdown_menu_link_text_reads_the_nav_link_colour_role
+    assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "color: var(--ks-color-nav-link)"
+  end
+
   private
 
   def block(selector)
