@@ -3659,6 +3659,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "text-decoration-line: none"
   end
 
+  def test_nav_dropdown_menu_link_label_stays_on_one_line
+    assert_includes block(".ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a"), "white-space: nowrap"
+  end
+
   private
 
   def block(selector)
