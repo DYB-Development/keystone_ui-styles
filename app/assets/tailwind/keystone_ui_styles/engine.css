@@ -222,6 +222,7 @@
     --ks-color-pipeline-label: var(--color-surface-500);
     --ks-color-pipeline-amber: var(--color-amber-400);
     --ks-color-nav: var(--base-bg-low, var(--color-white));
+    --ks-color-nav-dark: var(--base-bg-low, var(--color-zinc-900));
   }
 }
 
