@@ -440,7 +440,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_border_control_dark_defaults_to_var_color_zinc_700
-    assert_match(/:root \{[^}]*--ks-color-border-control-dark: var\(--color-zinc-700\)/m, self.class.compiled)
+    assert_match(/:root \{[^}]*--ks-color-border-control-dark: var\(--ks-color-border-strong-dark\)/m, self.class.compiled)
   end
 
   def test_input_text_reads_the_text_colour_role
