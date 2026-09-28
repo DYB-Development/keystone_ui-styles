@@ -59,7 +59,7 @@ any layer overrides them wherever it is imported.
 | `--ks-radius-control` | Button corner radius, and three quarters of it for inputs | `--radius-lg` |
 | `--ks-radius-surface` | Card and panel corner radius, and three quarters of it for alerts | `--radius-lg` |
 | `--ks-shadow-surface` | Panel shadow | `--shadow-sm` |
-| `--ks-font-body` | Button font family | None, so a button keeps the page's font |
+| `--ks-font-body` | Button font family | `inherit`, so a button keeps the page's font |
 | `--ks-font-weight-strong` | Button label weight | `--font-weight-semibold` |
 | `--ks-font-weight-heading` | Section, card and alert title weight, and one step heavier for page titles | `--font-weight-semibold` |
 | `--ks-border-width-control` | Button border width | `0px` |
@@ -120,6 +120,9 @@ any layer overrides them wherever it is imported.
 | `--ks-shadow-menu` | Desktop nav menu shadow | `--shadow-md` |
 | `--ks-font-weight-normal` | Mobile header subtitle weight | `--font-weight-normal` |
 | `--ks-color-hover-soft` | Settings link on hover | `--color-gray-50` |
+| `--ks-color-focus` | Input and checkbox focus border and ring | `--color-accent-500`, and `--color-accent-400` on a dark page |
+| `--ks-color-link-strong-hover` | Section action and card link on hover | `--color-accent-900`, and `--color-accent-300` on a dark page |
+| `--ks-color-badge-neutral` | Neutral badge background | `--color-gray-100`, and `--color-zinc-700` on a dark page |
 Each colour variable in the table whose component changes on a dark page has a
 `-dark` partner, such as `--ks-color-surface-dark`, that it reads there.
 

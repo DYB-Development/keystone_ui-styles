@@ -272,7 +272,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_focused_input_rings_in_the_accent_color
-    assert_match(/:focus.*?--tw-ring-color: var\(--color-accent-500\)/m, block(".ks-input"))
+    assert_match(/:focus.*?--tw-ring-color: var\(--ks-color-focus\)/m, block(".ks-input"))
   end
 
   def test_input_turns_dark_in_dark_mode
@@ -288,7 +288,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_required_marker_is_red
-    assert_includes rule(".ks-required"), "color: var(--color-red-500)"
+    assert_includes rule(".ks-required"), "color: var(--ks-color-danger-500)"
   end
 
   def test_hint_reads_the_muted_text_colour_role
@@ -296,11 +296,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_error_uses_red_text
-    assert_includes rule(".ks-error"), "color: var(--color-red-600)"
+    assert_includes rule(".ks-error"), "color: var(--ks-color-danger-600)"
   end
 
   def test_checkbox_uses_the_accent_color
-    assert_includes rule(".ks-checkbox"), "color: var(--color-accent-600)"
+    assert_includes rule(".ks-checkbox"), "color: var(--ks-color-accent)"
   end
 
   def test_defines_every_surface_color_variable_even_when_no_class_uses_it
@@ -308,8 +308,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_badge_classes_match_keystone_ui_badge
-    assert_includes rule(".ks-badge"), "border-radius: calc(infinity * 1px)"
-    assert_includes rule(".ks-badge-neutral"), "background-color: var(--color-gray-100)"
+    assert_includes rule(".ks-badge"), "border-radius: var(--ks-radius-pill)"
+    assert_includes rule(".ks-badge-neutral"), "background-color: var(--ks-color-badge-neutral)"
     assert_includes rule(".ks-badge-success"), "background-color: var(--ks-color-success-100)"
     assert_includes rule(".ks-badge-danger"), "background-color: var(--ks-color-danger-100)"
     assert_includes rule(".ks-badge-warning"), "background-color: var(--ks-color-warning-100)"
@@ -327,35 +327,35 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-alert-content"), "flex: 1"
     assert_includes rule(".ks-alert-title"), "font-weight: var(--ks-font-weight-heading)"
     assert_includes rule(".ks-alert-message"), "font-size: var(--text-sm)"
-    assert_includes rule(".ks-alert-message-titled"), "margin-top: var(--spacing)"
+    assert_includes rule(".ks-alert-message-titled"), "margin-top: calc(var(--ks-spacing) * 1)"
     assert_includes rule(".ks-alert-dismiss"), "cursor: pointer"
     assert_match(/data-theme="dark".*? color: var\(--ks-color-info-300\)/m, block(".ks-alert-info"))
   end
 
   def test_card_classes_match_keystone_ui_card
     assert_includes rule(".ks-card"), "border-radius: var(--ks-radius-surface)"
-    assert_includes rule(".ks-card-edge"), "border-block-width: 1px"
+    assert_includes rule(".ks-card-edge"), "border-block-width: var(--ks-border-width)"
     assert_includes rule(".ks-card-body"), "padding-inline: calc(var(--ks-spacing) * 4)"
     assert_includes rule(".ks-card-title"), "font-size: var(--text-lg)"
     assert_includes rule(".ks-card-summary"), "color: var(--ks-color-text-muted)"
     assert_includes rule(".ks-card-cta"), "padding-bottom: calc(var(--ks-spacing) * 4)"
-    assert_includes rule(".ks-card-link"), "color: var(--color-accent-600)"
+    assert_includes rule(".ks-card-link"), "color: var(--ks-color-link)"
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-surface-dark\)/m, block(".ks-card"))
   end
 
   def test_section_classes_match_keystone_ui_section
-    assert_includes rule(".ks-section-sm"), "margin-top: calc(var(--spacing) * 4)"
-    assert_includes rule(".ks-section-md"), "margin-top: calc(var(--spacing) * 6)"
-    assert_includes rule(".ks-section-lg"), "margin-top: calc(var(--spacing) * 8)"
+    assert_includes rule(".ks-section-sm"), "margin-top: calc(var(--ks-spacing) * 4)"
+    assert_includes rule(".ks-section-md"), "margin-top: calc(var(--ks-spacing) * 6)"
+    assert_includes rule(".ks-section-lg"), "margin-top: calc(var(--ks-spacing) * 8)"
     assert_includes rule(".ks-section-header"), "justify-content: space-between"
     assert_includes rule(".ks-section-title"), "font-size: var(--text-lg)"
     assert_includes rule(".ks-section-subtitle"), "color: var(--ks-color-text-muted)"
-    assert_includes rule(".ks-section-action"), "color: var(--color-accent-600)"
+    assert_includes rule(".ks-section-action"), "color: var(--ks-color-link)"
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-section-title"))
   end
 
   def test_page_header_classes_match_keystone_ui_page_header
-    assert_includes rule(".ks-page-header"), "margin-bottom: calc(var(--spacing) * 6)"
+    assert_includes rule(".ks-page-header"), "margin-bottom: calc(var(--ks-spacing) * 6)"
     assert_includes rule(".ks-page-header-title"), "font-size: var(--text-2xl)"
     assert_includes rule(".ks-page-header-subtitle"), "color: var(--ks-color-text-muted)"
     assert_includes rule(".ks-page-header-actions"), "flex-shrink: 0"
@@ -369,10 +369,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-page-lg"), "max-width: var(--container-6xl)"
     assert_includes rule(".ks-page-xl"), "max-width: var(--container-7xl)"
     assert_includes rule(".ks-page-xl"), "margin-inline: auto"
-    assert_includes rule(".ks-page-offset-sm"), "padding-top: calc(var(--spacing) * 12)"
-    assert_includes rule(".ks-page-offset-md"), "padding-top: calc(var(--spacing) * 16)"
-    assert_includes rule(".ks-page-offset-lg"), "padding-top: calc(var(--spacing) * 20)"
-    assert_includes rule(".ks-page-offset-xl"), "padding-top: calc(var(--spacing) * 24)"
+    assert_includes rule(".ks-page-offset-sm"), "padding-top: calc(var(--ks-spacing) * 12)"
+    assert_includes rule(".ks-page-offset-md"), "padding-top: calc(var(--ks-spacing) * 16)"
+    assert_includes rule(".ks-page-offset-lg"), "padding-top: calc(var(--ks-spacing) * 20)"
+    assert_includes rule(".ks-page-offset-xl"), "padding-top: calc(var(--ks-spacing) * 24)"
   end
 
   def test_color_surface_defaults_to_var_color_white
@@ -3809,6 +3809,218 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
 
   def test_main_element_clears_the_bottom_nav_on_small_screens
     assert_match(/^  main \{.*?padding-bottom: calc\(56px \+ env\(safe-area-inset-bottom\)\)/m, self.class.compiled)
+  end
+
+  def test_panel_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-panel"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_card_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-card"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_card_edge_side_border_width_reads_the_border_width_variable_on_wider_screens
+    assert_match(/width >= 40rem.*?border-inline-width: var\(--ks-border-width\)/m, block(".ks-card-edge"))
+  end
+
+  def test_input_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-input"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_input_text_reads_the_icon_colour_role_for_its_placeholder
+    assert_match(/\&::placeholder.*?\scolor: var\(--ks-color-icon\)/m, block(".ks-input"))
+  end
+
+  def test_input_text_reads_the_icon_dark_colour_role_on_a_dark_page_and_for_its_placeholder
+    assert_match(/data-theme="dark".*?\&::placeholder.*?\scolor: var\(--ks-color-icon-dark\)/m, block(".ks-input"))
+  end
+
+  def test_input_focus_ring_width_reads_the_border_width_variable_on_focus
+    assert_match(/\&:focus.*?calc\(var\(--ks-border-width\) \+ var\(--tw-ring-offset-width\)\)/m, block(".ks-input"))
+  end
+
+  def test_input_border_reads_the_focus_colour_role_on_focus
+    assert_match(/\&:focus.*?border-color: var\(--ks-color-focus\)/m, block(".ks-input"))
+  end
+
+  def test_input_border_reads_the_focus_dark_colour_role_on_a_dark_page_and_on_focus
+    assert_match(/data-theme="dark".*?\&:focus.*?border-color: var\(--ks-color-focus-dark\)/m, block(".ks-input"))
+  end
+
+  def test_input_ring_reads_the_focus_dark_colour_role_on_a_dark_page_and_on_focus
+    assert_match(/data-theme="dark".*?\&:focus.*?--tw-ring-color: var\(--ks-color-focus-dark\)/m, block(".ks-input"))
+  end
+
+  def test_color_focus_dark_defaults_to_var_color_accent_400
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-focus-dark: var\(--color-accent-400\)/m, self.class.compiled)
+  end
+
+  def test_input_disabled_fill_reads_the_hover_colour_role
+    assert_includes block(".ks-input-disabled"), "background-color: var(--ks-color-hover)"
+  end
+
+  def test_input_disabled_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-input-disabled"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_input_disabled_fill_reads_the_hover_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-hover-dark\)/m, block(".ks-input-disabled"))
+  end
+
+  def test_input_disabled_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-text-muted-dark\)/m, block(".ks-input-disabled"))
+  end
+
+  def test_label_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-label"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_required_margin_left_is_0_5_spacing_units
+    assert_includes block(".ks-required"), "margin-left: calc(var(--ks-spacing) * 0.5)"
+  end
+
+  def test_hint_margin_top_is_1_spacing_units
+    assert_includes block(".ks-hint"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_error_margin_top_is_1_spacing_units
+    assert_includes block(".ks-error"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_error_text_reads_the_danger_400_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-danger-400\)/m, block(".ks-error"))
+  end
+
+  def test_checkbox_radius_is_0_5_of_the_control_radius
+    assert_includes block(".ks-checkbox"), "border-radius: calc(var(--ks-radius-control) * 0.5)"
+  end
+
+  def test_checkbox_border_reads_the_border_strong_colour_role
+    assert_includes block(".ks-checkbox"), "border-color: var(--ks-color-border-strong)"
+  end
+
+  def test_checkbox_ring_reads_the_focus_colour_role_on_focus
+    assert_match(/\&:focus.*?--tw-ring-color: var\(--ks-color-focus\)/m, block(".ks-checkbox"))
+  end
+
+  def test_checkbox_border_reads_the_border_strong_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-strong-dark\)/m, block(".ks-checkbox"))
+  end
+
+  def test_checkbox_fill_reads_the_surface_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-surface-dark\)/m, block(".ks-checkbox"))
+  end
+
+  def test_page_header_subtitle_margin_top_is_1_spacing_units
+    assert_includes block(".ks-page-header-subtitle"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_page_header_actions_margin_top_is_4_spacing_units
+    assert_includes block(".ks-page-header-actions"), "margin-top: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_page_header_actions_margin_left_is_4_spacing_units_on_wider_screens
+    assert_match(/width >= 40rem.*?margin-left: calc\(var\(--ks-spacing\) \* 4\)/m, block(".ks-page-header-actions"))
+  end
+
+  def test_section_header_margin_bottom_is_4_spacing_units
+    assert_includes block(".ks-section-header"), "margin-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_section_subtitle_margin_top_is_1_spacing_units
+    assert_includes block(".ks-section-subtitle"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_card_summary_margin_top_is_1_spacing_units
+    assert_includes block(".ks-card-summary"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_section_action_text_reads_the_link_strong_hover_colour_role_on_hover
+    assert_match(/:hover.*?\scolor: var\(--ks-color-link-strong-hover\)/m, block(".ks-section-action"))
+  end
+
+  def test_section_action_text_reads_the_link_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-link-dark\)/m, block(".ks-section-action"))
+  end
+
+  def test_section_action_text_reads_the_link_strong_hover_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?\scolor: var\(--ks-color-link-strong-hover-dark\)/m, block(".ks-section-action"))
+  end
+
+  def test_color_link_strong_hover_defaults_to_var_color_accent_900
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-link-strong-hover: var\(--color-accent-900\)/m, self.class.compiled)
+  end
+
+  def test_color_link_strong_hover_dark_defaults_to_var_color_accent_300
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-link-strong-hover-dark: var\(--color-accent-300\)/m, self.class.compiled)
+  end
+
+  def test_card_link_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-card-link"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_card_link_text_reads_the_link_strong_hover_colour_role_on_hover
+    assert_match(/:hover.*?\scolor: var\(--ks-color-link-strong-hover\)/m, block(".ks-card-link"))
+  end
+
+  def test_card_link_text_reads_the_link_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-link-dark\)/m, block(".ks-card-link"))
+  end
+
+  def test_alert_dismiss_right_margin_pulls_in_1_5_spacing_units
+    assert_includes block(".ks-alert-dismiss"), "margin-right: calc(calc(var(--ks-spacing) * 1.5) * -1)"
+  end
+
+  def test_alert_dismiss_top_margin_pulls_in_1_5_spacing_units
+    assert_includes block(".ks-alert-dismiss"), "margin-top: calc(calc(var(--ks-spacing) * 1.5) * -1)"
+  end
+
+  def test_alert_dismiss_radius_is_0_75_of_the_control_radius
+    assert_includes block(".ks-alert-dismiss"), "border-radius: calc(var(--ks-radius-control) * 0.75)"
+  end
+
+  def test_alert_dismiss_padding_is_1_5_spacing_units
+    assert_includes block(".ks-alert-dismiss"), "padding: calc(var(--ks-spacing) * 1.5)"
+  end
+
+  def test_alert_dismiss_focus_ring_is_twice_the_border_width_on_focus
+    assert_match(/\&:focus.*?calc\(calc\(var\(--ks-border-width\) \* 2\) \+ var\(--tw-ring-offset-width\)\)/m, block(".ks-alert-dismiss"))
+  end
+
+  def test_alert_dismiss_focus_ring_gap_is_twice_the_border_width_on_focus
+    assert_match(/\&:focus.*?--tw-ring-offset-width: calc\(var\(--ks-border-width\) \* 2\)/m, block(".ks-alert-dismiss"))
+  end
+
+  def test_badge_padding_inline_is_2_spacing_units
+    assert_includes block(".ks-badge"), "padding-inline: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_badge_padding_block_is_1_spacing_units
+    assert_includes block(".ks-badge"), "padding-block: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_badge_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-badge"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_badge_neutral_text_reads_the_text_label_colour_role
+    assert_includes block(".ks-badge-neutral"), "color: var(--ks-color-text-label)"
+  end
+
+  def test_badge_neutral_fill_reads_the_badge_neutral_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-badge-neutral-dark\)/m, block(".ks-badge-neutral"))
+  end
+
+  def test_badge_neutral_text_reads_the_text_label_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-text-label-dark\)/m, block(".ks-badge-neutral"))
+  end
+
+  def test_color_badge_neutral_defaults_to_var_color_gray_100
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-badge-neutral: var\(--color-gray-100\)/m, self.class.compiled)
+  end
+
+  def test_color_badge_neutral_dark_defaults_to_var_color_zinc_700
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-badge-neutral-dark: var\(--color-zinc-700\)/m, self.class.compiled)
   end
 
   private

@@ -68,6 +68,7 @@
 @layer base {
   :root {
     --ks-radius-control: var(--radius-lg);
+    --ks-font-body: inherit;
     --ks-font-weight-strong: var(--font-weight-semibold);
     --ks-border-width-control: 0px;
     --ks-spacing: var(--spacing);
@@ -243,6 +244,11 @@
     --ks-font-weight-normal: var(--font-weight-normal);
     --ks-color-hover-soft: var(--color-gray-50);
     --ks-color-hover-soft-dark: var(--color-gray-800);
+    --ks-color-focus-dark: var(--color-accent-400);
+    --ks-color-link-strong-hover: var(--color-accent-900);
+    --ks-color-link-strong-hover-dark: var(--color-accent-300);
+    --ks-color-badge-neutral: var(--color-gray-100);
+    --ks-color-badge-neutral-dark: var(--color-zinc-700);
   }
 }
 
@@ -276,35 +282,35 @@
   }
 
   .ks-panel {
-    @apply border border-(color:--ks-color-border) bg-(color:--ks-color-surface) dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-dark);
+    @apply border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-surface) dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-dark);
   }
 
   .ks-input {
-    @apply block w-full rounded-[calc(var(--ks-radius-control)*0.75)] border border-(color:--ks-color-border-control) bg-(color:--ks-color-surface) px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-sm text-(color:--ks-color-text) placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:border-accent-500 focus:ring-accent-500 dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-control-dark) dark:text-(color:--ks-color-text-dark) dark:placeholder:text-gray-500 dark:focus:border-accent-400 dark:focus:ring-accent-400;
+    @apply block w-full rounded-[calc(var(--ks-radius-control)*0.75)] border-(length:--ks-border-width) border-(color:--ks-color-border-control) bg-(color:--ks-color-surface) px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-sm text-(color:--ks-color-text) placeholder:text-(color:--ks-color-icon) focus:outline-none focus:ring-(length:--ks-border-width) focus:border-(color:--ks-color-focus) focus:ring-(color:--ks-color-focus) dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-control-dark) dark:text-(color:--ks-color-text-dark) dark:placeholder:text-(color:--ks-color-icon-dark) dark:focus:border-(color:--ks-color-focus-dark) dark:focus:ring-(color:--ks-color-focus-dark);
   }
 
   .ks-input-disabled {
-    @apply cursor-not-allowed bg-gray-50 text-gray-500 dark:bg-zinc-800 dark:text-gray-400;
+    @apply cursor-not-allowed bg-(color:--ks-color-hover) text-(color:--ks-color-text-muted) dark:bg-(color:--ks-color-hover-dark) dark:text-(color:--ks-color-text-muted-dark);
   }
 
   .ks-label {
-    @apply block text-sm font-medium text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark);
+    @apply block text-sm font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark);
   }
 
   .ks-required {
-    @apply text-red-500 ml-0.5;
+    @apply text-(color:--ks-color-danger-500) ml-[calc(var(--ks-spacing)*0.5)];
   }
 
   .ks-hint {
-    @apply mt-1 text-sm text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+    @apply mt-[calc(var(--ks-spacing)*1)] text-sm text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 
   .ks-error {
-    @apply mt-1 text-sm text-red-600 dark:text-red-400;
+    @apply mt-[calc(var(--ks-spacing)*1)] text-sm text-(color:--ks-color-danger-600) dark:text-(color:--ks-color-danger-400);
   }
 
   .ks-checkbox {
-    @apply rounded border-gray-300 text-accent-600 focus:ring-accent-500 dark:border-zinc-600 dark:bg-zinc-900;
+    @apply rounded-[calc(var(--ks-radius-control)*0.5)] border-(color:--ks-color-border-strong) text-(color:--ks-color-accent) focus:ring-(color:--ks-color-focus) dark:border-(color:--ks-color-border-strong-dark) dark:bg-(color:--ks-color-surface-dark);
   }
 
   .ks-page {
@@ -328,23 +334,23 @@
   }
 
   .ks-page-offset-sm {
-    @apply pt-12;
+    @apply pt-[calc(var(--ks-spacing)*12)];
   }
 
   .ks-page-offset-md {
-    @apply pt-16;
+    @apply pt-[calc(var(--ks-spacing)*16)];
   }
 
   .ks-page-offset-lg {
-    @apply pt-20;
+    @apply pt-[calc(var(--ks-spacing)*20)];
   }
 
   .ks-page-offset-xl {
-    @apply pt-24;
+    @apply pt-[calc(var(--ks-spacing)*24)];
   }
 
   .ks-page-header {
-    @apply hidden sm:block mb-6 sm:flex sm:items-center sm:justify-between;
+    @apply hidden sm:block mb-[calc(var(--ks-spacing)*6)] sm:flex sm:items-center sm:justify-between;
   }
 
   .ks-page-header-title {
@@ -352,27 +358,27 @@
   }
 
   .ks-page-header-subtitle {
-    @apply mt-1 text-sm text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+    @apply mt-[calc(var(--ks-spacing)*1)] text-sm text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 
   .ks-page-header-actions {
-    @apply hidden sm:block mt-4 sm:mt-0 sm:ml-4 flex-shrink-0;
+    @apply hidden sm:block mt-[calc(var(--ks-spacing)*4)] sm:mt-0 sm:ml-[calc(var(--ks-spacing)*4)] flex-shrink-0;
   }
 
   .ks-section-sm {
-    @apply mt-4;
+    @apply mt-[calc(var(--ks-spacing)*4)];
   }
 
   .ks-section-md {
-    @apply mt-6;
+    @apply mt-[calc(var(--ks-spacing)*6)];
   }
 
   .ks-section-lg {
-    @apply mt-8;
+    @apply mt-[calc(var(--ks-spacing)*8)];
   }
 
   .ks-section-header {
-    @apply flex items-center justify-between mb-4;
+    @apply flex items-center justify-between mb-[calc(var(--ks-spacing)*4)];
   }
 
   .ks-section-title {
@@ -380,19 +386,19 @@
   }
 
   .ks-section-subtitle {
-    @apply mt-1 text-sm text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+    @apply mt-[calc(var(--ks-spacing)*1)] text-sm text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 
   .ks-section-action {
-    @apply text-sm text-accent-600 hover:text-accent-900 dark:text-accent-400 dark:hover:text-accent-300;
+    @apply text-sm text-(color:--ks-color-link) hover:text-(color:--ks-color-link-strong-hover) dark:text-(color:--ks-color-link-dark) dark:hover:text-(color:--ks-color-link-strong-hover-dark);
   }
 
   .ks-card {
-    @apply overflow-hidden rounded-(--ks-radius-surface) border border-(color:--ks-color-border) bg-(color:--ks-color-surface) dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-dark);
+    @apply overflow-hidden rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-surface) dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-dark);
   }
 
   .ks-card-edge {
-    @apply overflow-hidden border-y border-(color:--ks-color-border) bg-(color:--ks-color-surface) sm:rounded-(--ks-radius-surface) sm:border-x dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-dark);
+    @apply overflow-hidden border-y-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-surface) sm:rounded-(--ks-radius-surface) sm:border-x-(length:--ks-border-width) dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-dark);
   }
 
   .ks-card-body {
@@ -404,7 +410,7 @@
   }
 
   .ks-card-summary {
-    @apply mt-1 text-sm text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark) mb-0;
+    @apply mt-[calc(var(--ks-spacing)*1)] text-sm text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark) mb-0;
   }
 
   .ks-card-cta {
@@ -412,7 +418,7 @@
   }
 
   .ks-card-link {
-    @apply text-sm font-medium no-underline text-accent-600 hover:text-accent-900 dark:text-accent-400;
+    @apply text-sm font-(weight:--ks-font-weight-medium) no-underline text-(color:--ks-color-link) hover:text-(color:--ks-color-link-strong-hover) dark:text-(color:--ks-color-link-dark);
   }
 
   .ks-alert {
@@ -452,19 +458,19 @@
   }
 
   .ks-alert-message-titled {
-    @apply text-sm mt-1;
+    @apply text-sm mt-[calc(var(--ks-spacing)*1)];
   }
 
   .ks-alert-dismiss {
-    @apply ml-auto -mr-1.5 -mt-1.5 inline-flex rounded-md p-1.5 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer;
+    @apply ml-auto -mr-[calc(var(--ks-spacing)*1.5)] -mt-[calc(var(--ks-spacing)*1.5)] inline-flex rounded-[calc(var(--ks-radius-control)*0.75)] p-[calc(var(--ks-spacing)*1.5)] focus:outline-none focus:ring-[length:calc(var(--ks-border-width)*2)] focus:ring-offset-[calc(var(--ks-border-width)*2)] cursor-pointer;
   }
 
   .ks-badge {
-    @apply inline-flex items-center rounded-full px-2 py-1 text-xs font-medium;
+    @apply inline-flex items-center rounded-(--ks-radius-pill) px-[calc(var(--ks-spacing)*2)] py-[calc(var(--ks-spacing)*1)] text-xs font-(weight:--ks-font-weight-medium);
   }
 
   .ks-badge-neutral {
-    @apply bg-gray-100 text-gray-700 dark:bg-zinc-700 dark:text-gray-300;
+    @apply bg-(color:--ks-color-badge-neutral) text-(color:--ks-color-text-label) dark:bg-(color:--ks-color-badge-neutral-dark) dark:text-(color:--ks-color-text-label-dark);
   }
 
   .ks-badge-success {
