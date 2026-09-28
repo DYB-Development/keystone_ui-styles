@@ -4067,6 +4067,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-grid-gap-x-xl"), "column-gap: calc(var(--ks-spacing) * 8)"
   end
 
+  def test_grid_gap_y_xl_row_gap_is_8_spacing_units
+    assert_includes block(".ks-grid-gap-y-xl"), "row-gap: calc(var(--ks-spacing) * 8)"
+  end
+
   private
 
   def block(selector)
