@@ -3899,6 +3899,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-checkbox"), "border-color: var(--ks-color-border-strong)"
   end
 
+  def test_checkbox_ring_reads_the_focus_colour_role_on_focus
+    assert_match(/\&:focus.*?--tw-ring-color: var\(--ks-color-focus\)/m, block(".ks-checkbox"))
+  end
+
   private
 
   def block(selector)
