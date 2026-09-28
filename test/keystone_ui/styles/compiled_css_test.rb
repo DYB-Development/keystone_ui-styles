@@ -3399,6 +3399,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-trigger"), "text-decoration-line: none"
   end
 
+  def test_nav_dropdown_trigger_gap_is_1_spacing_units
+    assert_includes block(".ks-nav-dropdown-trigger"), "gap: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)
