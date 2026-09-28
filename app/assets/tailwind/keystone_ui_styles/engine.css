@@ -361,7 +361,7 @@
   }
 
   .ks-section-sm {
-    @apply mt-4;
+    @apply mt-[calc(var(--ks-spacing)*4)];
   }
 
   .ks-section-md {

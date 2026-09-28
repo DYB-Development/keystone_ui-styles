@@ -344,7 +344,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_section_classes_match_keystone_ui_section
-    assert_includes rule(".ks-section-sm"), "margin-top: calc(var(--spacing) * 4)"
+    assert_includes rule(".ks-section-sm"), "margin-top: calc(var(--ks-spacing) * 4)"
     assert_includes rule(".ks-section-md"), "margin-top: calc(var(--spacing) * 6)"
     assert_includes rule(".ks-section-lg"), "margin-top: calc(var(--spacing) * 8)"
     assert_includes rule(".ks-section-header"), "justify-content: space-between"
