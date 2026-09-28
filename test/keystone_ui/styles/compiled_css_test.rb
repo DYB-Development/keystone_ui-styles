@@ -3148,7 +3148,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_nav_text_defaults_to_var_base_text_tertiary_var_color_gray_500
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-text: var\(--base-text-tertiary, var\(--color-gray-500\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-text: var\(--base-text-tertiary, var\(--ks-color-text-muted\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_text_dark_defaults_to_var_base_text_tertiary_var_color_gray_400
