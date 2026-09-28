@@ -1120,6 +1120,6 @@
   }
 
   .ks-bottom-nav-label {
-    @apply text-[10px];
+    @apply text-[10px] font-(weight:--ks-font-weight-medium);
   }
 }

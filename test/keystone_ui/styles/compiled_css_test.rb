@@ -3351,6 +3351,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav-label"), "font-size: 10px"
   end
 
+  def test_bottom_nav_label_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-bottom-nav-label"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
   private
 
   def block(selector)
