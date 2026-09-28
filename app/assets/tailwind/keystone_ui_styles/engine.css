@@ -1076,4 +1076,8 @@
   .ks-swipe-button-reject {
     @apply hover:border-(color:--ks-color-danger-400) hover:text-(color:--ks-color-danger-400);
   }
+
+  .ks-swipe-button-accept {
+    @apply hover:border-(color:--ks-color-success-400);
+  }
 }

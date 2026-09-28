@@ -3123,6 +3123,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-swipe-button-reject(?![\w-]).*?:hover.*?\scolor: var\(--ks-color-danger-400\)/m, self.class.compiled)
   end
 
+  def test_swipe_button_accept_border_reads_the_success_400_colour_role_on_hover
+    assert_match(/\.ks-swipe-button-accept(?![\w-]).*?:hover.*?border-color: var\(--ks-color-success-400\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
