@@ -1244,4 +1244,8 @@
   .ks-grid-gap-y-xl {
     @apply gap-y-[calc(var(--ks-spacing)*8)];
   }
+
+  .ks-form {
+    @apply space-y-[calc(var(--ks-spacing)*6)];
+  }
 }

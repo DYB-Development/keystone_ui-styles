@@ -4071,6 +4071,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-grid-gap-y-xl"), "row-gap: calc(var(--ks-spacing) * 8)"
   end
 
+  def test_form_vertical_gap_between_children_is_6_spacing_units
+    assert_match(/\.ks-form(?![\w-]).*?:not\(:last-child\).*?calc\(var\(--ks-spacing\) \* 6\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
