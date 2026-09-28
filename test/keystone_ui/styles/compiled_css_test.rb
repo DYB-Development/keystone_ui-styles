@@ -4079,6 +4079,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-form-field(?![\w-]).*?:not\(:last-child\).*?calc\(var\(--ks-spacing\) \* 1\)/m, self.class.compiled)
   end
 
+  def test_form_field_checkbox_gap_is_2_spacing_units
+    assert_includes block(".ks-form-field-checkbox"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)

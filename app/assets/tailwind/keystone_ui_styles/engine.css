@@ -1252,4 +1252,8 @@
   .ks-form-field {
     @apply space-y-[calc(var(--ks-spacing)*1)];
   }
+
+  .ks-form-field-checkbox {
+    @apply gap-[calc(var(--ks-spacing)*2)];
+  }
 }
