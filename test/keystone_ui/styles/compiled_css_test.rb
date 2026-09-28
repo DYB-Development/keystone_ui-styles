@@ -1240,7 +1240,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_border_choice_defaults_to_var_color_surface_300
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-choice: var\(--color-surface-300\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-border-choice: var\(--ks-color-border-strong\)/m, self.class.compiled)
   end
 
   def test_checkbox_row_label_weight_reads_the_medium_font_weight_variable
