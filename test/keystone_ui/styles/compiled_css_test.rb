@@ -3192,7 +3192,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_nav_menu_mobile_dark_defaults_to_var_base_bg_base_var_color_zinc_900
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-menu-mobile-dark: var\(--base-bg-base, var\(--color-zinc-900\)\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-nav-menu-mobile-dark: var\(--base-bg-base, var\(--ks-color-surface-dark\)\)/m, self.class.compiled)
   end
 
   def test_color_nav_hover_defaults_to_var_base_bg_hover_var_color_gray_50
