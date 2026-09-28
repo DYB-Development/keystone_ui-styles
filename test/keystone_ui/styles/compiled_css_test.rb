@@ -3475,6 +3475,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-item"), "font-size: var(--text-sm)"
   end
 
+  def test_nav_item_label_stays_on_one_line
+    assert_includes block(".ks-nav-item"), "text-wrap: nowrap"
+  end
+
   private
 
   def block(selector)
