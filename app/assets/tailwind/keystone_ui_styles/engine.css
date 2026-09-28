@@ -236,6 +236,7 @@
     --ks-color-nav-indicator: var(--border-primary, var(--color-accent-600));
     --ks-color-nav-indicator-dark: var(--border-primary, var(--color-accent-400));
     --ks-color-nav-menu-mobile: var(--base-bg-base, var(--color-white));
+    --ks-color-nav-menu-mobile-dark: var(--base-bg-base, var(--color-zinc-900));
   }
 }
 
