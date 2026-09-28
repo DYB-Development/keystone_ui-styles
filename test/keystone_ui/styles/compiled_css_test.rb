@@ -472,7 +472,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_text_muted_defaults_to_var_color_gray_500
-    assert_match(/:root \{[^}]*--ks-color-text-muted: var\(--color-gray-500\)/m, self.class.compiled)
+    assert_match(/:root \{[^}]*--ks-color-text-muted: var\(--color-surface-500\)/m, self.class.compiled)
   end
 
   def test_hint_reads_the_dark_muted_text_colour_role_on_a_dark_page
