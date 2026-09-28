@@ -3891,6 +3891,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-danger-400\)/m, block(".ks-error"))
   end
 
+  def test_checkbox_radius_is_0_5_of_the_control_radius
+    assert_includes block(".ks-checkbox"), "border-radius: calc(var(--ks-radius-control) * 0.5)"
+  end
+
   private
 
   def block(selector)

@@ -305,7 +305,7 @@
   }
 
   .ks-checkbox {
-    @apply rounded border-gray-300 text-accent-600 focus:ring-accent-500 dark:border-zinc-600 dark:bg-zinc-900;
+    @apply rounded-[calc(var(--ks-radius-control)*0.5)] border-gray-300 text-accent-600 focus:ring-accent-500 dark:border-zinc-600 dark:bg-zinc-900;
   }
 
   .ks-page {
