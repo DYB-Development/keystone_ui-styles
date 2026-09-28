@@ -1177,3 +1177,17 @@
     @apply font-(weight:--ks-font-weight-medium);
   }
 }
+
+@media (max-width: 1023px) {
+  main {
+    padding-bottom: calc(56px + env(safe-area-inset-bottom));
+  }
+
+  .hotwire-native .ks-bottom-nav {
+    display: none;
+  }
+
+  .hotwire-native main {
+    padding-bottom: 0;
+  }
+}

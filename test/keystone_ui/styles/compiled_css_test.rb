@@ -3807,6 +3807,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-settings-link-label"), "font-weight: var(--ks-font-weight-medium)"
   end
 
+  def test_main_element_clears_the_bottom_nav_on_small_screens
+    assert_match(/^  main \{.*?padding-bottom: calc\(56px \+ env\(safe-area-inset-bottom\)\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
