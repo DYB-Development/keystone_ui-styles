@@ -2,6 +2,17 @@
 
 ## [Unreleased]
 
+### Changed
+- Near-duplicate colour roles now default to one base role each, so a look recolours every component that shares a purpose by setting one variable. Every role still exists, so a look that sets one on its own still applies.
+- The base text, muted text, secondary text, label, icon, border, strong border, surface, overlay and hover roles draw from the surface scale instead of gray and zinc, so keystone_ui-colors' per-account palette reaches every component.
+
+### Upgrading
+- Components that drew gray shades now draw the matching surface shade, which defaults to zinc, so their grays turn slightly more neutral.
+- On a dark page the dialog title, table header, radio card label and checkbox row label turn white instead of light gray.
+- On a dark page inputs and menu triggers get a zinc 600 border instead of zinc 700, the table head and body match the surface and hover backgrounds, the line between table rows matches the border colour, and the copy button and settings link hover match the menu hover.
+- The radio card hint turns surface 400 on a dark page instead of gray 400.
+- The custom theme mode blends gray and zinc, so it no longer changes the colours these roles draw.
+
 ## [0.6.0] - 2026-09-28
 
 ### Added

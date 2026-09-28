@@ -68,12 +68,12 @@ any layer overrides them wherever it is imported.
 | `--ks-color-neutral`, `--ks-color-neutral-hover` | Secondary button fill, and on hover | `--color-gray-500`, `--color-gray-400` |
 | `--ks-color-danger`, `--ks-color-danger-hover` | Danger button fill, and on hover | `--color-red-600`, `--color-red-500` |
 | `--ks-color-on-fill` | Button label colour | `--color-white` |
-| `--ks-color-surface` | Panel, card and input background | `--color-white` |
-| `--ks-color-border` | Panel and card border | `--color-gray-200` |
+| `--ks-color-surface` | Panel, card and input background | `--color-white`, and `--color-surface-900` on a dark page |
+| `--ks-color-border` | Panel and card border | `--color-surface-200` |
 | `--ks-color-border-control` | Input border | `--color-gray-300` |
-| `--ks-color-text` | Input text and page, section and card titles | `--color-gray-900` |
-| `--ks-color-text-label` | Field labels | `--color-gray-700` |
-| `--ks-color-text-muted` | Hints, subtitles and card summaries | `--color-gray-500` |
+| `--ks-color-text` | Input text and page, section and card titles | `--color-surface-900` |
+| `--ks-color-text-label` | Field labels | `--color-surface-700` |
+| `--ks-color-text-muted` | Hints, subtitles and card summaries | `--color-surface-500` |
 | `--ks-border-width` | Border and ring width of menus, dialogs, form controls and cards, doubled for radio and option cards and the file drop zone | `1px` |
 | `--ks-shadow-overlay` | Menu, dialog and colour picker shadow | `--shadow-lg` |
 | `--ks-font-weight-medium` | Copy button, checkbox row and radio card label weight | `--font-weight-medium` |
@@ -129,6 +129,27 @@ Each colour variable in the table whose component changes on a dark page has a
 The navigation colours read the `--base-*` variables keystone_ui's nav used
 before, when a host sets them, so a host that coloured its nav that way keeps
 its colours.
+
+Many roles default to a base role, so setting the base role recolours all of
+them, and setting one of them on its own still overrides it:
+
+| Base role | Roles that follow it |
+|---|---|
+| `--ks-color-text` | `text-display`, `text-heading`, `text-option`, `text-choice`, `nav-link` |
+| `--ks-color-text-muted` | `text-display-muted`, `text-choice-muted`, `text-option-muted`, `nav-text` |
+| `--ks-color-text-secondary` | `text-body` |
+| `--ks-color-text-label` | `text-meter-label`, `nav-text-hover` |
+| `--ks-color-icon` | `close`, `icon-soft` |
+| `--ks-color-border` | `border-subtle`, `track`, `divider`, `nav-border` |
+| `--ks-color-border-strong` | `border-control`, `border-choice` |
+| `--ks-color-surface` | `table-body`, `nav`, `nav-menu-mobile` |
+| `--ks-color-overlay` | `raised` |
+| `--ks-color-hover` | `fill-muted`, `hover-raised`, `hover-soft`, `table-head`, `nav-hover` |
+| `--ks-color-link` | `nav-active`, `nav-indicator` |
+
+The base roles draw from the surface scale, which keystone_ui-colors sets per
+account. The nav roles read the old `--base-*` variables first when a host sets
+them.
 
 Alerts and badges read a shade scale per status instead:
 `--ks-color-success-*`, `--ks-color-warning-*`, `--ks-color-danger-*` and
