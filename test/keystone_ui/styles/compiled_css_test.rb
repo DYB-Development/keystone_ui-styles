@@ -370,7 +370,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-page-xl"), "max-width: var(--container-7xl)"
     assert_includes rule(".ks-page-xl"), "margin-inline: auto"
     assert_includes rule(".ks-page-offset-sm"), "padding-top: calc(var(--ks-spacing) * 12)"
-    assert_includes rule(".ks-page-offset-md"), "padding-top: calc(var(--spacing) * 16)"
+    assert_includes rule(".ks-page-offset-md"), "padding-top: calc(var(--ks-spacing) * 16)"
     assert_includes rule(".ks-page-offset-lg"), "padding-top: calc(var(--spacing) * 20)"
     assert_includes rule(".ks-page-offset-xl"), "padding-top: calc(var(--spacing) * 24)"
   end

@@ -333,7 +333,7 @@
   }
 
   .ks-page-offset-md {
-    @apply pt-16;
+    @apply pt-[calc(var(--ks-spacing)*16)];
   }
 
   .ks-page-offset-lg {
