@@ -1148,6 +1148,6 @@
   }
 
   .ks-nav-dropdown-menu li a, .ks-nav-dropdown-menu > a {
-    @apply block text-sm no-underline whitespace-nowrap py-[calc(var(--ks-spacing)*3)] pr-[calc(var(--ks-spacing)*4)];
+    @apply block text-sm no-underline whitespace-nowrap py-[calc(var(--ks-spacing)*3)] pr-[calc(var(--ks-spacing)*4)] pl-[calc(var(--ks-spacing)*8)];
   }
 }
