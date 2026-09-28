@@ -3479,6 +3479,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-item"), "text-wrap: nowrap"
   end
 
+  def test_nav_item_width_fills_its_row
+    assert_includes block(".ks-nav-item"), "width: 100%"
+  end
+
   private
 
   def block(selector)
