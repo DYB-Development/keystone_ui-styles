@@ -1928,7 +1928,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_color_fill_muted_dark_defaults_to_var_color_surface_800
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-fill-muted-dark: var\(--color-surface-800\)/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-fill-muted-dark: var\(--ks-color-hover-dark\)/m, self.class.compiled)
   end
 
   def test_cta_banner_title_margin_bottom_is_4_spacing_units

@@ -181,7 +181,7 @@
     --ks-color-border-subtle: var(--ks-color-border);
     --ks-color-border-subtle-dark: var(--ks-color-border-dark);
     --ks-color-fill-muted: var(--ks-color-hover);
-    --ks-color-fill-muted-dark: var(--color-surface-800);
+    --ks-color-fill-muted-dark: var(--ks-color-hover-dark);
     --ks-color-text-display: var(--ks-color-text);
     --ks-color-text-display-dark: var(--ks-color-text-dark);
     --ks-color-text-display-muted: var(--ks-color-text-muted);
