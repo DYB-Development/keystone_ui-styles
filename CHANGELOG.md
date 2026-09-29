@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Fixed
+- Grid gaps, form spacing, the theme toggle and colour picker spacing, the settings link chevron and page titles apply on wide screens again, where 0.7.0 applied them only below 1024px.
+
 ## [0.7.0] - 2026-09-28
 
 ### Changed
