@@ -1182,20 +1182,6 @@
   .ks-settings-link-label {
     @apply font-(weight:--ks-font-weight-medium);
   }
-}
-
-@media (max-width: 1023px) {
-  main {
-    padding-bottom: calc(56px + env(safe-area-inset-bottom));
-  }
-
-  .hotwire-native .ks-bottom-nav {
-    display: none;
-  }
-
-  .hotwire-native main {
-    padding-bottom: 0;
-  }
 
   .ks-grid-gap-sm {
     @apply gap-[calc(var(--ks-spacing)*3)];
@@ -1271,5 +1257,19 @@
 
   .ks-page-title {
     @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+  }
+}
+
+@media (max-width: 1023px) {
+  main {
+    padding-bottom: calc(56px + env(safe-area-inset-bottom));
+  }
+
+  .hotwire-native .ks-bottom-nav {
+    display: none;
+  }
+
+  .hotwire-native main {
+    padding-bottom: 0;
   }
 }

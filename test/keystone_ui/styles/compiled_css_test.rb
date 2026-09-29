@@ -4107,6 +4107,12 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-text-dark\)/m, block(".ks-page-title"))
   end
 
+  def test_only_the_bottom_nav_rules_are_kept_to_narrow_screens
+    narrow_screens = self.class.compiled[/^@media \(max-width: 1023px\) \{\n(.*?)^\}\n/m, 1].to_s
+
+    assert_equal [ ".hotwire-native .ks-bottom-nav" ], narrow_screens.scan(/^  ([^{\n]*\.ks-[^{\n]*?) \{/).flatten
+  end
+
   private
 
   def block(selector)
