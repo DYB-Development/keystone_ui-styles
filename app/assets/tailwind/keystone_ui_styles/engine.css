@@ -602,7 +602,7 @@
   }
 
   .ks-radio-card-disclosure {
-    @apply mt-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-overlay) p-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-text-secondary) shadow-(--ks-shadow-overlay);
+    @apply mt-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-overlay) p-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-text-secondary) shadow-(--ks-shadow-overlay) dark:border-(color:--ks-color-border-dark);
   }
 
   .ks-radio-card-info {
