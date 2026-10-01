@@ -4209,6 +4209,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-breakdown-amount"), "white-space: nowrap"
   end
 
+  def test_breakdown_sum_has_a_rule_above_it
+    assert_includes block(".ks-breakdown-sum"), "border-top-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)

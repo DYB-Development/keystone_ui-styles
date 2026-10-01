@@ -609,6 +609,10 @@
     @apply text-(color:--ks-color-close) hover:text-(color:--ks-color-link) dark:hover:text-(color:--ks-color-link-dark);
   }
 
+  .ks-breakdown-sum {
+    @apply border-t-(length:--ks-border-width);
+  }
+
   .ks-breakdown-amount {
     @apply text-right tabular-nums whitespace-nowrap;
   }
