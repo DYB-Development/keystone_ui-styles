@@ -610,7 +610,7 @@
   }
 
   .ks-breakdown {
-    @apply grid grid-cols-[max-content_1fr] gap-x-[calc(var(--ks-spacing)*3)];
+    @apply grid grid-cols-[max-content_1fr] gap-x-[calc(var(--ks-spacing)*3)] gap-y-[calc(var(--ks-spacing)*1)];
   }
 
   .ks-option-card {

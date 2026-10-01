@@ -4185,6 +4185,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-breakdown"), "column-gap: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_breakdown_row_gap_is_1_spacing_units
+    assert_includes block(".ks-breakdown"), "row-gap: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)
