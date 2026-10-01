@@ -4113,6 +4113,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_equal [ ".hotwire-native .ks-bottom-nav" ], narrow_screens.scan(/^  ([^{\n]*\.ks-[^{\n]*?) \{/).flatten
   end
 
+  def test_radio_card_info_text_reads_the_close_colour_role
+    assert_includes block(".ks-radio-card-info"), "color: var(--ks-color-close)"
+  end
+
   private
 
   def block(selector)

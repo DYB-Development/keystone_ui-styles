@@ -601,6 +601,10 @@
     @apply mt-[calc(var(--ks-spacing)*1)] text-(color:--ks-color-text-option-muted) dark:text-(color:--ks-color-text-option-muted-dark);
   }
 
+  .ks-radio-card-info {
+    @apply text-(color:--ks-color-close);
+  }
+
   .ks-option-card {
     @apply gap-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-[calc(var(--ks-border-width)*2)];
   }
