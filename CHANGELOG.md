@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-09-30
+
+### Added
+- A radio card's info button and the panel holding its info, styled like the stat card's info button and panel, in light and dark mode.
+
 ## [0.7.1] - 2026-09-28
 
 ### Fixed
