@@ -609,6 +609,10 @@
     @apply text-(color:--ks-color-close) hover:text-(color:--ks-color-link) dark:hover:text-(color:--ks-color-link-dark);
   }
 
+  .ks-breakdown {
+    @apply grid;
+  }
+
   .ks-option-card {
     @apply gap-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-[calc(var(--ks-border-width)*2)];
   }

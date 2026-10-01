@@ -4173,6 +4173,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:not\(:last-child\).*?calc\(var\(--ks-spacing\) \* 1\)/m, block(".ks-radio-card-disclosure"))
   end
 
+  def test_breakdown_lays_its_amounts_and_labels_out_on_a_grid
+    assert_includes block(".ks-breakdown"), "display: grid"
+  end
+
   private
 
   def block(selector)
