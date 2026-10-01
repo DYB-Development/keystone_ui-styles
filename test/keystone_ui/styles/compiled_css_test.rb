@@ -4225,6 +4225,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-breakdown-sum"), "padding-top: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_breakdown_sum_reads_the_medium_font_weight
+    assert_includes block(".ks-breakdown-sum"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
   private
 
   def block(selector)
