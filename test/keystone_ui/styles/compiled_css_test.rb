@@ -4145,6 +4145,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-radio-card-disclosure"), "background-color: var(--ks-color-overlay)"
   end
 
+  def test_radio_card_disclosure_padding_is_3_spacing_units
+    assert_includes block(".ks-radio-card-disclosure"), "padding: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
