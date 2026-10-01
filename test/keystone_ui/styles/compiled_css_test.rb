@@ -4149,6 +4149,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-radio-card-disclosure"), "padding: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_radio_card_disclosure_text_reads_the_text_secondary_colour_role
+    assert_includes block(".ks-radio-card-disclosure"), "color: var(--ks-color-text-secondary)"
+  end
+
   private
 
   def block(selector)
