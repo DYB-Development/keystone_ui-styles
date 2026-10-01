@@ -4153,6 +4153,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-radio-card-disclosure"), "color: var(--ks-color-text-secondary)"
   end
 
+  def test_radio_card_disclosure_shadow_reads_the_overlay_shadow_variable
+    assert_includes block(".ks-radio-card-disclosure"), "--tw-shadow: var(--ks-shadow-overlay)"
+  end
+
   private
 
   def block(selector)
