@@ -4233,6 +4233,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-info-popup"), "white-space: normal"
   end
 
+  def test_info_popup_never_grows_wider_than_the_screen
+    assert_includes block(".ks-info-popup"), "max-width: calc(100vw - 16px)"
+  end
+
   private
 
   def block(selector)

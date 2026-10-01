@@ -610,7 +610,7 @@
   }
 
   .ks-info-popup {
-    @apply whitespace-normal;
+    @apply whitespace-normal max-w-[calc(100vw-16px)];
   }
 
   .ks-breakdown-sum {
