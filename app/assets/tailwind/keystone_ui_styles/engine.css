@@ -602,7 +602,7 @@
   }
 
   .ks-radio-card-disclosure {
-    @apply mt-[calc(var(--ks-spacing)*2)];
+    @apply mt-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface);
   }
 
   .ks-radio-card-info {
