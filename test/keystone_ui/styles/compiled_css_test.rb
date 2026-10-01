@@ -4125,6 +4125,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?:hover.*?color: var\(--ks-color-link-dark\)/m, block(".ks-radio-card-info"))
   end
 
+  def test_radio_card_disclosure_margin_top_is_2_spacing_units
+    assert_includes block(".ks-radio-card-disclosure"), "margin-top: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)

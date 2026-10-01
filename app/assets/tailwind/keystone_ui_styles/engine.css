@@ -601,6 +601,10 @@
     @apply mt-[calc(var(--ks-spacing)*1)] text-(color:--ks-color-text-option-muted) dark:text-(color:--ks-color-text-option-muted-dark);
   }
 
+  .ks-radio-card-disclosure {
+    @apply mt-[calc(var(--ks-spacing)*2)];
+  }
+
   .ks-radio-card-info {
     @apply text-(color:--ks-color-close) hover:text-(color:--ks-color-link) dark:hover:text-(color:--ks-color-link-dark);
   }
