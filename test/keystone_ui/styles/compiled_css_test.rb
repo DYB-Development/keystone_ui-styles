@@ -4117,6 +4117,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-radio-card-info"), "color: var(--ks-color-close)"
   end
 
+  def test_radio_card_info_text_reads_the_link_colour_role_on_hover
+    assert_match(/:hover.*?color: var\(--ks-color-link\)/m, block(".ks-radio-card-info"))
+  end
+
   private
 
   def block(selector)
