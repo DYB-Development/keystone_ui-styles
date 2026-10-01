@@ -4213,6 +4213,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-breakdown-sum"), "border-top-width: var(--ks-border-width)"
   end
 
+  def test_breakdown_sum_rule_reads_the_border_colour_role
+    assert_includes block(".ks-breakdown-sum"), "border-color: var(--ks-color-border)"
+  end
+
   private
 
   def block(selector)
