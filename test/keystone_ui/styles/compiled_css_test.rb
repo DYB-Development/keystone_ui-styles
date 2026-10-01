@@ -4193,6 +4193,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-breakdown-line"), "display: contents"
   end
 
+  def test_breakdown_total_hands_its_amount_and_label_to_the_grid
+    assert_includes block(".ks-breakdown-total"), "display: contents"
+  end
+
   private
 
   def block(selector)

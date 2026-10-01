@@ -609,6 +609,10 @@
     @apply text-(color:--ks-color-close) hover:text-(color:--ks-color-link) dark:hover:text-(color:--ks-color-link-dark);
   }
 
+  .ks-breakdown-total {
+    @apply contents;
+  }
+
   .ks-breakdown-line {
     @apply contents;
   }
