@@ -4197,6 +4197,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-breakdown-total"), "display: contents"
   end
 
+  def test_breakdown_amount_lines_up_on_the_right
+    assert_includes block(".ks-breakdown-amount"), "text-align: right"
+  end
+
   private
 
   def block(selector)
