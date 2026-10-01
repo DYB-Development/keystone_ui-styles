@@ -4181,6 +4181,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-breakdown"), "grid-template-columns: max-content 1fr"
   end
 
+  def test_breakdown_column_gap_is_3_spacing_units
+    assert_includes block(".ks-breakdown"), "column-gap: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
