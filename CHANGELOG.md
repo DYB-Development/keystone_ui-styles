@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-10-01
+
+### Added
+- A breakdown sets its amounts out as an equation: right-aligned in one column, labels beside them, and the total below a theme-coloured rule.
+- An info popup wraps its text even inside a table and is never wider than the screen.
+
 ## [0.8.0] - 2026-09-30
 
 ### Added
