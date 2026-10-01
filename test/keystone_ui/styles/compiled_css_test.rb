@@ -4113,6 +4113,66 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_equal [ ".hotwire-native .ks-bottom-nav" ], narrow_screens.scan(/^  ([^{\n]*\.ks-[^{\n]*?) \{/).flatten
   end
 
+  def test_radio_card_info_text_reads_the_close_colour_role
+    assert_includes block(".ks-radio-card-info"), "color: var(--ks-color-close)"
+  end
+
+  def test_radio_card_info_text_reads_the_link_colour_role_on_hover
+    assert_match(/:hover.*?color: var\(--ks-color-link\)/m, block(".ks-radio-card-info"))
+  end
+
+  def test_radio_card_info_text_reads_the_link_dark_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?color: var\(--ks-color-link-dark\)/m, block(".ks-radio-card-info"))
+  end
+
+  def test_radio_card_disclosure_margin_top_is_2_spacing_units
+    assert_includes block(".ks-radio-card-disclosure"), "margin-top: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_radio_card_disclosure_radius_reads_the_surface_radius
+    assert_includes block(".ks-radio-card-disclosure"), "border-radius: var(--ks-radius-surface)"
+  end
+
+  def test_radio_card_disclosure_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-radio-card-disclosure"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_radio_card_disclosure_border_reads_the_border_colour_role
+    assert_includes block(".ks-radio-card-disclosure"), "border-color: var(--ks-color-border)"
+  end
+
+  def test_radio_card_disclosure_fill_reads_the_overlay_colour_role
+    assert_includes block(".ks-radio-card-disclosure"), "background-color: var(--ks-color-overlay)"
+  end
+
+  def test_radio_card_disclosure_padding_is_3_spacing_units
+    assert_includes block(".ks-radio-card-disclosure"), "padding: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_radio_card_disclosure_text_reads_the_text_secondary_colour_role
+    assert_includes block(".ks-radio-card-disclosure"), "color: var(--ks-color-text-secondary)"
+  end
+
+  def test_radio_card_disclosure_shadow_reads_the_overlay_shadow_variable
+    assert_includes block(".ks-radio-card-disclosure"), "--tw-shadow: var(--ks-shadow-overlay)"
+  end
+
+  def test_radio_card_disclosure_border_reads_the_border_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-radio-card-disclosure"))
+  end
+
+  def test_radio_card_disclosure_fill_reads_the_overlay_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-overlay-dark\)/m, block(".ks-radio-card-disclosure"))
+  end
+
+  def test_radio_card_disclosure_text_reads_the_text_secondary_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-secondary-dark\)/m, block(".ks-radio-card-disclosure"))
+  end
+
+  def test_radio_card_disclosure_vertical_gap_between_children_is_1_spacing_units
+    assert_match(/:not\(:last-child\).*?calc\(var\(--ks-spacing\) \* 1\)/m, block(".ks-radio-card-disclosure"))
+  end
+
   private
 
   def block(selector)
