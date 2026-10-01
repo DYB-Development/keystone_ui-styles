@@ -610,7 +610,7 @@
   }
 
   .ks-breakdown {
-    @apply grid;
+    @apply grid grid-cols-[max-content_1fr];
   }
 
   .ks-option-card {

@@ -4177,6 +4177,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-breakdown"), "display: grid"
   end
 
+  def test_breakdown_gives_its_amounts_a_column_as_wide_as_the_widest_and_its_labels_the_rest
+    assert_includes block(".ks-breakdown"), "grid-template-columns: max-content 1fr"
+  end
+
   private
 
   def block(selector)
