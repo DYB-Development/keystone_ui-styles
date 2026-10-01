@@ -4205,6 +4205,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-breakdown-amount"), "tabular-nums"
   end
 
+  def test_breakdown_amount_never_wraps
+    assert_includes block(".ks-breakdown-amount"), "white-space: nowrap"
+  end
+
   private
 
   def block(selector)
