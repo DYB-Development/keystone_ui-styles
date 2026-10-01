@@ -4221,6 +4221,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-breakdown-sum"))
   end
 
+  def test_breakdown_sum_sits_1_spacing_unit_below_its_rule
+    assert_includes block(".ks-breakdown-sum"), "padding-top: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)

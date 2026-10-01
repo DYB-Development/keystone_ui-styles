@@ -610,7 +610,7 @@
   }
 
   .ks-breakdown-sum {
-    @apply border-t-(length:--ks-border-width) border-(color:--ks-color-border) dark:border-(color:--ks-color-border-dark);
+    @apply border-t-(length:--ks-border-width) border-(color:--ks-color-border) dark:border-(color:--ks-color-border-dark) pt-[calc(var(--ks-spacing)*1)];
   }
 
   .ks-breakdown-amount {
