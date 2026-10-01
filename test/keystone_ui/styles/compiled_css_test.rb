@@ -4237,6 +4237,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-info-popup"), "max-width: calc(100vw - 16px)"
   end
 
+  def test_info_popup_lines_its_text_up_on_the_left
+    assert_includes block(".ks-info-popup"), "text-align: left"
+  end
+
   private
 
   def block(selector)
