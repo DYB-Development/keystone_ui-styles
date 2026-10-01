@@ -4173,6 +4173,74 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:not\(:last-child\).*?calc\(var\(--ks-spacing\) \* 1\)/m, block(".ks-radio-card-disclosure"))
   end
 
+  def test_breakdown_lays_its_amounts_and_labels_out_on_a_grid
+    assert_includes block(".ks-breakdown"), "display: grid"
+  end
+
+  def test_breakdown_gives_its_amounts_a_column_as_wide_as_the_widest_and_its_labels_the_rest
+    assert_includes block(".ks-breakdown"), "grid-template-columns: max-content 1fr"
+  end
+
+  def test_breakdown_column_gap_is_3_spacing_units
+    assert_includes block(".ks-breakdown"), "column-gap: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_breakdown_row_gap_is_1_spacing_units
+    assert_includes block(".ks-breakdown"), "row-gap: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_breakdown_line_hands_its_amount_and_label_to_the_grid
+    assert_includes block(".ks-breakdown-line"), "display: contents"
+  end
+
+  def test_breakdown_total_hands_its_amount_and_label_to_the_grid
+    assert_includes block(".ks-breakdown-total"), "display: contents"
+  end
+
+  def test_breakdown_amount_lines_up_on_the_right
+    assert_includes block(".ks-breakdown-amount"), "text-align: right"
+  end
+
+  def test_breakdown_amount_uses_figures_of_one_width
+    assert_includes block(".ks-breakdown-amount"), "tabular-nums"
+  end
+
+  def test_breakdown_amount_never_wraps
+    assert_includes block(".ks-breakdown-amount"), "white-space: nowrap"
+  end
+
+  def test_breakdown_sum_has_a_rule_above_it
+    assert_includes block(".ks-breakdown-sum"), "border-top-width: var(--ks-border-width)"
+  end
+
+  def test_breakdown_sum_rule_reads_the_border_colour_role
+    assert_includes block(".ks-breakdown-sum"), "border-color: var(--ks-color-border)"
+  end
+
+  def test_breakdown_sum_rule_reads_the_border_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-breakdown-sum"))
+  end
+
+  def test_breakdown_sum_sits_1_spacing_unit_below_its_rule
+    assert_includes block(".ks-breakdown-sum"), "padding-top: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_breakdown_sum_reads_the_medium_font_weight
+    assert_includes block(".ks-breakdown-sum"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_info_popup_wraps_its_text_inside_a_table
+    assert_includes block(".ks-info-popup"), "white-space: normal"
+  end
+
+  def test_info_popup_never_grows_wider_than_the_screen
+    assert_includes block(".ks-info-popup"), "max-width: calc(100vw - 16px)"
+  end
+
+  def test_info_popup_lines_its_text_up_on_the_left
+    assert_includes block(".ks-info-popup"), "text-align: left"
+  end
+
   private
 
   def block(selector)

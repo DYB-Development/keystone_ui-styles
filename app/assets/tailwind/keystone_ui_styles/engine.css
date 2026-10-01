@@ -609,6 +609,30 @@
     @apply text-(color:--ks-color-close) hover:text-(color:--ks-color-link) dark:hover:text-(color:--ks-color-link-dark);
   }
 
+  .ks-info-popup {
+    @apply whitespace-normal max-w-[calc(100vw-16px)] text-left;
+  }
+
+  .ks-breakdown-sum {
+    @apply border-t-(length:--ks-border-width) border-(color:--ks-color-border) dark:border-(color:--ks-color-border-dark) pt-[calc(var(--ks-spacing)*1)] font-(weight:--ks-font-weight-medium);
+  }
+
+  .ks-breakdown-amount {
+    @apply text-right tabular-nums whitespace-nowrap;
+  }
+
+  .ks-breakdown-total {
+    @apply contents;
+  }
+
+  .ks-breakdown-line {
+    @apply contents;
+  }
+
+  .ks-breakdown {
+    @apply grid grid-cols-[max-content_1fr] gap-x-[calc(var(--ks-spacing)*3)] gap-y-[calc(var(--ks-spacing)*1)];
+  }
+
   .ks-option-card {
     @apply gap-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-[calc(var(--ks-border-width)*2)];
   }
