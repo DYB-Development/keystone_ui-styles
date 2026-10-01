@@ -610,7 +610,7 @@
   }
 
   .ks-breakdown-amount {
-    @apply text-right;
+    @apply text-right tabular-nums;
   }
 
   .ks-breakdown-total {

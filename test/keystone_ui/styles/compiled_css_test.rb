@@ -4201,6 +4201,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-breakdown-amount"), "text-align: right"
   end
 
+  def test_breakdown_amount_uses_figures_of_one_width
+    assert_includes block(".ks-breakdown-amount"), "tabular-nums"
+  end
+
   private
 
   def block(selector)
