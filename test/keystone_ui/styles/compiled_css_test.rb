@@ -4229,6 +4229,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-breakdown-sum"), "font-weight: var(--ks-font-weight-medium)"
   end
 
+  def test_info_popup_wraps_its_text_inside_a_table
+    assert_includes block(".ks-info-popup"), "white-space: normal"
+  end
+
   private
 
   def block(selector)
