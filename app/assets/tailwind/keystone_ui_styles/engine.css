@@ -862,7 +862,7 @@
   }
 
   .ks-table-cell-locked {
-    @apply bg-(color:--ks-color-table-body);
+    @apply bg-(color:--ks-color-table-body) dark:bg-(color:--ks-color-table-body-dark);
   }
 
   .ks-table-body {
