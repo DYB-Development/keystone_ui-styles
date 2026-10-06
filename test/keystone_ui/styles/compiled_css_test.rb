@@ -4333,6 +4333,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table-cell-locked"), "border-right-color: var(--ks-color-border)"
   end
 
+  def test_locked_body_cell_edge_reads_the_border_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-right-color: var\(--ks-color-border-dark\)/m, block(".ks-table-cell-locked"))
+  end
+
   private
 
   def block(selector)
