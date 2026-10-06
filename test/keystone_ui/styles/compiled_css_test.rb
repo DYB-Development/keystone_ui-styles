@@ -4253,6 +4253,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-funnel-band: var\(\-\-color\-white\)/m, self.class.compiled)
   end
 
+  def test_color_text_funnel_band_dark_defaults_to_var_color_surface_900
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-funnel-band-dark: var\(\-\-color\-surface\-900\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

@@ -213,6 +213,7 @@
     --ks-color-funnel-violet: var(--color-violet-500);
     --ks-color-funnel-amber: var(--color-amber-500);
     --ks-color-funnel-rose: var(--color-rose-500);
+    --ks-color-text-funnel-band-dark: var(--color-surface-900);
     --ks-color-text-funnel-band: var(--color-white);
     --ks-color-funnel-band-dark: var(--color-surface-100);
     --ks-color-funnel-band: var(--color-surface-800);
