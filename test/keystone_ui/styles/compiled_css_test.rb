@@ -4281,6 +4281,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-funnel-band-dark\)/m, block(".ks-funnel-band-label"))
   end
 
+  def test_funnel_band_label_radius_reads_the_pill_radius
+    assert_includes block(".ks-funnel-band-label"), "border-radius: var(--ks-radius-pill)"
+  end
+
   private
 
   def block(selector)
