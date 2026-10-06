@@ -1017,6 +1017,10 @@
     @apply bg-(color:--ks-color-funnel-rose);
   }
 
+  .ks-funnel-joined {
+    @apply gap-x-[calc(var(--ks-spacing)*4)];
+  }
+
   .ks-funnel-band {
     @apply bg-(color:--ks-color-funnel-band) dark:bg-(color:--ks-color-funnel-band-dark);
   }

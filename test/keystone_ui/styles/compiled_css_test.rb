@@ -4293,6 +4293,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-funnel-band-label"), "font-weight: var(--ks-font-weight-strong)"
   end
 
+  def test_funnel_joined_column_gap_is_4_spacing_units
+    assert_includes block(".ks-funnel-joined"), "column-gap: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
