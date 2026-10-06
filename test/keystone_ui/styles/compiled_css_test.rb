@@ -4241,6 +4241,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-info-popup"), "text-align: left"
   end
 
+  def test_color_funnel_band_defaults_to_var_color_surface_800
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-funnel-band: var\(\-\-color\-surface\-800\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
