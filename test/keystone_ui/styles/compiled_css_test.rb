@@ -4325,6 +4325,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-right-color: var\(--ks-color-border-dark\)/m, block(".ks-table-header-locked"))
   end
 
+  def test_locked_body_cell_shows_an_edge_on_its_right
+    assert_includes block(".ks-table-cell-locked"), "border-right-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)
