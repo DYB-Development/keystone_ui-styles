@@ -4289,6 +4289,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-funnel-band-label"), "padding-inline: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_funnel_band_label_weight_reads_the_strong_font_weight_variable
+    assert_includes block(".ks-funnel-band-label"), "font-weight: var(--ks-font-weight-strong)"
+  end
+
   private
 
   def block(selector)
