@@ -854,11 +854,11 @@
   }
 
   .ks-table-head {
-    @apply bg-(color:--ks-color-table-head) dark:bg-(color:--ks-color-table-head-dark);
+    @apply bg-(color:--ks-color-table-head) border-r-(length:--ks-border-width) dark:bg-(color:--ks-color-table-head-dark);
   }
 
   .ks-table-header-locked {
-    @apply bg-(color:--ks-color-table-head) dark:bg-(color:--ks-color-table-head-dark);
+    @apply bg-(color:--ks-color-table-head) border-r-(length:--ks-border-width) dark:bg-(color:--ks-color-table-head-dark);
   }
 
   .ks-table-cell-locked {
