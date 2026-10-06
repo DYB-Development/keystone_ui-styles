@@ -4261,6 +4261,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-funnel-band"), "background-color: var(--ks-color-funnel-band)"
   end
 
+  def test_funnel_band_fill_reads_the_funnel_band_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-funnel-band-dark\)/m, block(".ks-funnel-band"))
+  end
+
   private
 
   def block(selector)
