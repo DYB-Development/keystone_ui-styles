@@ -4329,6 +4329,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table-cell-locked"), "border-right-width: var(--ks-border-width)"
   end
 
+  def test_locked_body_cell_edge_reads_the_border_colour_role
+    assert_includes block(".ks-table-cell-locked"), "border-right-color: var(--ks-color-border)"
+  end
+
   private
 
   def block(selector)
