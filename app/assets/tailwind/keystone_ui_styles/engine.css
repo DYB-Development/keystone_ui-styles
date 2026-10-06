@@ -1021,6 +1021,10 @@
     @apply bg-(color:--ks-color-funnel-band) dark:bg-(color:--ks-color-funnel-band-dark);
   }
 
+  .ks-funnel-band-label {
+    @apply bg-(color:--ks-color-funnel-band);
+  }
+
   .ks-bucket {
     @apply gap-[calc(var(--ks-spacing)*1)];
   }
