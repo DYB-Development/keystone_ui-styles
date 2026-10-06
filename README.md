@@ -217,7 +217,7 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-cta-banner`, `ks-cta-banner-title`, `ks-cta-banner-subtitle`, `ks-cta-banner-actions` | Call to action banner and its parts |
 | `ks-feature-grid`, `ks-feature-grid-title`, `ks-feature-grid-subtitle`, `ks-feature-card`, `ks-feature-card-icon`, `ks-feature-card-title`, `ks-feature-card-description` | Feature grid and its cards |
 | `ks-hero`, `ks-hero-inner`, `ks-hero-content`, `ks-hero-split`, `ks-hero-title`, `ks-hero-subtitle`, `ks-hero-badge`, `ks-hero-actions` | Hero and its parts |
-| `ks-table`, `ks-table-head`, `ks-table-body`, `ks-table-header`, `ks-table-header-first`, `ks-table-header-middle`, `ks-table-header-last`, `ks-table-cell-first`, `ks-table-cell-middle`, `ks-table-cell-last`, `ks-table-sort-link`, `ks-table-sort-icon`, `ks-table-sort-icon-active` | Data table and its parts |
+| `ks-table`, `ks-table-head`, `ks-table-body`, `ks-table-header`, `ks-table-header-first`, `ks-table-header-middle`, `ks-table-header-last`, `ks-table-cell-first`, `ks-table-cell-middle`, `ks-table-cell-last`, `ks-table-header-locked`, `ks-table-cell-locked`, `ks-table-sort-link`, `ks-table-sort-icon`, `ks-table-sort-icon-active` | Data table and its parts |
 | `ks-code`, `ks-code-caption`, `ks-code-block` | Code block and its caption |
 | `ks-accordion`, `ks-accordion-item`, `ks-accordion-button`, `ks-accordion-answer` | Accordion and its parts |
 | `ks-disclosure`, `ks-disclosure-summary`, `ks-disclosure-body`, `ks-disclosure-icon` | Disclosure and its parts |

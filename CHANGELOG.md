@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Added
+- `ks-table-header-locked` and `ks-table-cell-locked` give a locked table cell the table head's or body's background in light and dark themes, and an edge on its right side.
+
 ## [0.10.0] - 2026-10-06
 
 ### Added
