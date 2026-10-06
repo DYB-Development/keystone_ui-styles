@@ -1017,6 +1017,10 @@
     @apply bg-(color:--ks-color-funnel-rose);
   }
 
+  .ks-funnel-band {
+    @apply bg-(color:--ks-color-funnel-band);
+  }
+
   .ks-bucket {
     @apply gap-[calc(var(--ks-spacing)*1)];
   }
