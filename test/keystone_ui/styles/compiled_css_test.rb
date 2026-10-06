@@ -4301,6 +4301,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table-header-locked"), "background-color: var(--ks-color-table-head)"
   end
 
+  def test_locked_header_cell_fill_reads_the_table_head_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-table-head-dark\)/m, block(".ks-table-header-locked"))
+  end
+
   private
 
   def block(selector)

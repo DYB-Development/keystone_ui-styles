@@ -858,7 +858,7 @@
   }
 
   .ks-table-header-locked {
-    @apply bg-(color:--ks-color-table-head);
+    @apply bg-(color:--ks-color-table-head) dark:bg-(color:--ks-color-table-head-dark);
   }
 
   .ks-table-body {
