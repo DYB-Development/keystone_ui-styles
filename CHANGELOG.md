@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-10-06
+
 ### Added
 - Classes and colour roles for the joined funnel: the space between its words and its shape, and the neutral band between steps with its percent label.
 
