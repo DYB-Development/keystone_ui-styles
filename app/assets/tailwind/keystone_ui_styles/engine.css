@@ -1022,7 +1022,7 @@
   }
 
   .ks-funnel-band-label {
-    @apply bg-(color:--ks-color-funnel-band);
+    @apply bg-(color:--ks-color-funnel-band) dark:bg-(color:--ks-color-funnel-band-dark);
   }
 
   .ks-bucket {
