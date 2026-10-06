@@ -213,6 +213,10 @@
     --ks-color-funnel-violet: var(--color-violet-500);
     --ks-color-funnel-amber: var(--color-amber-500);
     --ks-color-funnel-rose: var(--color-rose-500);
+    --ks-color-text-funnel-band-dark: var(--color-surface-900);
+    --ks-color-text-funnel-band: var(--color-white);
+    --ks-color-funnel-band-dark: var(--color-surface-100);
+    --ks-color-funnel-band: var(--color-surface-800);
     --ks-color-over-goal: var(--color-green-500);
     --ks-color-over-goal-warning: var(--color-amber-500);
     --ks-color-pipeline-border: var(--color-surface-700);
@@ -1011,6 +1015,18 @@
 
   .ks-funnel-bar-rose {
     @apply bg-(color:--ks-color-funnel-rose);
+  }
+
+  .ks-funnel-joined {
+    @apply gap-x-[calc(var(--ks-spacing)*4)];
+  }
+
+  .ks-funnel-band {
+    @apply bg-(color:--ks-color-funnel-band) dark:bg-(color:--ks-color-funnel-band-dark);
+  }
+
+  .ks-funnel-band-label {
+    @apply font-(weight:--ks-font-weight-strong) px-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-pill) dark:text-(color:--ks-color-text-funnel-band-dark) text-(color:--ks-color-text-funnel-band) bg-(color:--ks-color-funnel-band) dark:bg-(color:--ks-color-funnel-band-dark);
   }
 
   .ks-bucket {

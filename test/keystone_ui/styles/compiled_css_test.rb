@@ -4241,6 +4241,62 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-info-popup"), "text-align: left"
   end
 
+  def test_color_funnel_band_defaults_to_var_color_surface_800
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-funnel-band: var\(\-\-color\-surface\-800\)/m, self.class.compiled)
+  end
+
+  def test_color_funnel_band_dark_defaults_to_var_color_surface_100
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-funnel-band-dark: var\(\-\-color\-surface\-100\)/m, self.class.compiled)
+  end
+
+  def test_color_text_funnel_band_defaults_to_var_color_white
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-funnel-band: var\(\-\-color\-white\)/m, self.class.compiled)
+  end
+
+  def test_color_text_funnel_band_dark_defaults_to_var_color_surface_900
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-text-funnel-band-dark: var\(\-\-color\-surface\-900\)/m, self.class.compiled)
+  end
+
+  def test_funnel_band_fill_reads_the_funnel_band_colour_role
+    assert_includes block(".ks-funnel-band"), "background-color: var(--ks-color-funnel-band)"
+  end
+
+  def test_funnel_band_fill_reads_the_funnel_band_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-funnel-band-dark\)/m, block(".ks-funnel-band"))
+  end
+
+  def test_funnel_band_label_fill_reads_the_funnel_band_colour_role
+    assert_includes block(".ks-funnel-band-label"), "background-color: var(--ks-color-funnel-band)"
+  end
+
+  def test_funnel_band_label_fill_reads_the_funnel_band_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-funnel-band-dark\)/m, block(".ks-funnel-band-label"))
+  end
+
+  def test_funnel_band_label_text_reads_the_text_funnel_band_colour_role
+    assert_includes block(".ks-funnel-band-label"), "color: var(--ks-color-text-funnel-band)"
+  end
+
+  def test_funnel_band_label_text_reads_the_text_funnel_band_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-funnel-band-dark\)/m, block(".ks-funnel-band-label"))
+  end
+
+  def test_funnel_band_label_radius_reads_the_pill_radius
+    assert_includes block(".ks-funnel-band-label"), "border-radius: var(--ks-radius-pill)"
+  end
+
+  def test_funnel_band_label_padding_inline_is_2_spacing_units
+    assert_includes block(".ks-funnel-band-label"), "padding-inline: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_funnel_band_label_weight_reads_the_strong_font_weight_variable
+    assert_includes block(".ks-funnel-band-label"), "font-weight: var(--ks-font-weight-strong)"
+  end
+
+  def test_funnel_joined_column_gap_is_4_spacing_units
+    assert_includes block(".ks-funnel-joined"), "column-gap: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)
