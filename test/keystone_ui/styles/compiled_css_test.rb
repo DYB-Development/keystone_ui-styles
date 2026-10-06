@@ -4297,6 +4297,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-funnel-joined"), "column-gap: calc(var(--ks-spacing) * 4)"
   end
 
+  def test_locked_header_cell_fill_reads_the_table_head_colour_role
+    assert_includes block(".ks-table-header-locked"), "background-color: var(--ks-color-table-head)"
+  end
+
   private
 
   def block(selector)
