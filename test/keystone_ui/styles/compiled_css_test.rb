@@ -4285,6 +4285,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-funnel-band-label"), "border-radius: var(--ks-radius-pill)"
   end
 
+  def test_funnel_band_label_padding_inline_is_2_spacing_units
+    assert_includes block(".ks-funnel-band-label"), "padding-inline: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
