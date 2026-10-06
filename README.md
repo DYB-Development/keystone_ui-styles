@@ -107,6 +107,7 @@ any layer overrides them wherever it is imported.
 | `--ks-color-track`, `--ks-color-meter` | Progress track, and the progress bar, funnel accent step and bucket fill | `--color-surface-200`, `--color-accent-500` |
 | `--ks-color-text-meter-label` | Progress and funnel labels | `--color-surface-700` |
 | `--ks-color-funnel-accent`, `-sky`, `-violet`, `-amber`, `-rose` | The five funnel step colours | The matching Tailwind 500 shade |
+| `--ks-color-funnel-band`, `--ks-color-text-funnel-band` | The joined funnel's band between steps and its percent | `--color-surface-800`, `--color-white`, and `--color-surface-100`, `--color-surface-900` on a dark page |
 | `--ks-color-over-goal`, `--ks-color-over-goal-warning` | Bucket fill over its goal | `--color-green-500`, `--color-amber-500` |
 | `--ks-color-table-head`, `--ks-color-table-body`, `--ks-color-divider` | Table head and body background, and the line between rows | `--color-gray-50`, `--color-white`, `--color-gray-200` |
 | `--ks-shadow-surface-dark` | Table shadow on a dark page | None |
@@ -222,7 +223,7 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-disclosure`, `ks-disclosure-summary`, `ks-disclosure-body`, `ks-disclosure-icon` | Disclosure and its parts |
 | `ks-tab-bar`, `ks-tab`, `ks-tab-active` | Tab switcher, a tab, and the active tab |
 | `ks-progress-track`, `ks-progress-bar`, `ks-meter-label` | Progress bar and its label |
-| `ks-funnel`, `ks-funnel-layer`, `ks-funnel-row`, `ks-funnel-label`, `ks-funnel-value`, `ks-funnel-bar`, `ks-funnel-transition`, `ks-funnel-bar-accent`, `ks-funnel-bar-sky`, `ks-funnel-bar-violet`, `ks-funnel-bar-amber`, `ks-funnel-bar-rose` | Funnel and its parts |
+| `ks-funnel`, `ks-funnel-layer`, `ks-funnel-row`, `ks-funnel-label`, `ks-funnel-value`, `ks-funnel-bar`, `ks-funnel-transition`, `ks-funnel-bar-accent`, `ks-funnel-bar-sky`, `ks-funnel-bar-violet`, `ks-funnel-bar-amber`, `ks-funnel-bar-rose`, `ks-funnel-joined`, `ks-funnel-band`, `ks-funnel-band-label` | Funnel and its parts |
 | `ks-bucket`, `ks-bucket-series`, `ks-bucket-label`, `ks-bucket-goal`, `ks-bucket-percent`, `ks-bucket-tank`, `ks-bucket-actual`, `ks-bucket-fill`, `ks-bucket-fill-over`, `ks-bucket-fill-over-warning` | Bucket and its parts |
 | `ks-pipeline`, `ks-pipeline-header`, `ks-pipeline-title`, `ks-pipeline-subtitle`, `ks-pipeline-track`, `ks-pipeline-box`, `ks-pipeline-box-label`, `ks-pipeline-count`, `ks-pipeline-link-healthy`, `ks-pipeline-link-broken`, `ks-pipeline-count-amber`, `ks-pipeline-count-emerald`, `ks-pipeline-count-danger`, `ks-pipeline-count-muted` | Pipeline and its parts |
 | `ks-swipe-card`, `ks-swipe-empty`, `ks-swipe-empty-title`, `ks-swipe-empty-message`, `ks-swipe-actions`, `ks-swipe-button`, `ks-swipe-button-reject`, `ks-swipe-button-accept` | Swipe deck and its parts |
