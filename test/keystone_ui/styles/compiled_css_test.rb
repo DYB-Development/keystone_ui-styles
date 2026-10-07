@@ -4353,6 +4353,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-label-dark\)/m, block(".ks-menu-move"))
   end
 
+  def test_menu_move_button_fills_with_the_hover_colour_role_under_the_pointer
+    assert_match(/:hover.*?background-color: var\(--ks-color-hover\)/m, block(".ks-menu-move"))
+  end
+
   private
 
   def block(selector)
