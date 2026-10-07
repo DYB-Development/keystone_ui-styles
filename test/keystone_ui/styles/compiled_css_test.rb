@@ -4361,6 +4361,26 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:disabled.*?opacity: 40%/m, block(".ks-menu-move"))
   end
 
+  def test_menu_checkbox_is_large_enough_to_read_at_a_glance
+    assert_includes block(".ks-menu-checkbox"), "width: calc(var(--ks-spacing) * 5)"
+  end
+
+  def test_menu_checkbox_has_a_heavy_outline_when_empty
+    assert_includes block(".ks-menu-checkbox"), "border-width: calc(var(--ks-border-width) * 2)"
+  end
+
+  def test_menu_checkbox_ticks_in_the_accent_colour_without_the_forms_plugin
+    assert_includes block(".ks-menu-checkbox"), "accent-color: var(--ks-color-accent)"
+  end
+
+  def test_menu_option_hidden_greys_the_column_name
+    assert_includes block(".ks-menu-option-hidden"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_menu_option_hidden_greys_the_column_name_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-menu-option-hidden"))
+  end
+
   private
 
   def block(selector)
