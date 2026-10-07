@@ -232,6 +232,7 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-nav-item` | A nav link |
 | `ks-navbar-title` | Navbar title on small screens |
 | `ks-mobile-header-title`, `ks-mobile-header-back`, `ks-mobile-header-subtitle` | Mobile header parts |
+| `ks-page-back`, `ks-breadcrumbs` | Space under a page's desktop Back link and breadcrumbs, with the Back link kept close above the breadcrumbs |
 | `ks-settings-link`, `ks-settings-link-label` | Settings link and its label |
 | `ks-grid-gap-sm`, `ks-grid-gap-md`, `ks-grid-gap-lg`, `ks-grid-gap-xl`, and the same with `-x-` and `-y-` | Grid gaps, both ways, across or down |
 | `ks-form`, `ks-form-field`, `ks-form-field-checkbox` | Space between a form's fields, inside a field, and beside a checkbox |

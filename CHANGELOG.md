@@ -6,6 +6,7 @@
 - `ks-menu-checkbox` is larger, with a heavy outline and an accent-coloured tick, so a ticked and an empty box read apart at a glance.
 
 ### Added
+- `ks-page-back` and `ks-breadcrumbs` leave space between a page's desktop Back link or breadcrumbs and the content under them, and keep the Back link close above the breadcrumbs.
 - `ks-table-header-locked` and `ks-table-cell-locked` give a locked table cell the table head's or body's background in light and dark themes, and an edge on its right side.
 - `ks-menu-option-hidden` greys the name of a column the Columns menu has hidden.
 - `ks-menu-move` styles the Columns menu's up and down buttons, fading a button that cannot move its column.
