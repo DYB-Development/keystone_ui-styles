@@ -3751,6 +3751,18 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?\scolor: var\(--ks-color-text-dark\)/m, block(".ks-mobile-header-title"))
   end
 
+  def test_breadcrumbs_leave_space_before_the_page_content
+    assert_includes rule(".ks-breadcrumbs"), "margin-bottom: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_desktop_back_link_leaves_space_before_the_page_content
+    assert_includes rule(".ks-page-back"), "margin-bottom: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_desktop_back_link_sits_close_above_breadcrumbs
+    assert_includes rule(".ks-page-back:has(+ .ks-breadcrumbs)"), "margin-bottom: calc(var(--ks-spacing) * 2)"
+  end
+
   def test_mobile_header_back_text_reads_the_text_muted_colour_role
     assert_includes block(".ks-mobile-header-back"), "color: var(--ks-color-text-muted)"
   end
