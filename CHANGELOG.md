@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.11.0] - 2026-10-06
+
 ### Changed
 - `ks-menu-checkbox` is larger, with a heavy outline and an accent-coloured tick, so a ticked and an empty box read apart at a glance.
 
