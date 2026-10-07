@@ -4361,6 +4361,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:disabled.*?opacity: 40%/m, block(".ks-menu-move"))
   end
 
+  def test_menu_checkbox_is_large_enough_to_read_at_a_glance
+    assert_includes block(".ks-menu-checkbox"), "width: calc(var(--ks-spacing) * 5)"
+  end
+
   private
 
   def block(selector)
