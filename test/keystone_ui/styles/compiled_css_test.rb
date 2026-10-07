@@ -4365,6 +4365,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-menu-checkbox"), "width: calc(var(--ks-spacing) * 5)"
   end
 
+  def test_menu_checkbox_has_a_heavy_outline_when_empty
+    assert_includes block(".ks-menu-checkbox"), "border-width: 2px"
+  end
+
   private
 
   def block(selector)
