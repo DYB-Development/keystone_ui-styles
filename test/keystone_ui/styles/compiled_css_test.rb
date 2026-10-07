@@ -4369,6 +4369,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-menu-checkbox"), "border-width: 2px"
   end
 
+  def test_menu_checkbox_ticks_in_the_accent_colour_without_the_forms_plugin
+    assert_includes block(".ks-menu-checkbox"), "accent-color: var(--ks-color-accent)"
+  end
+
   private
 
   def block(selector)
