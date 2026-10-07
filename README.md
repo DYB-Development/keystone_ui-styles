@@ -201,7 +201,7 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-badge-neutral`, `ks-badge-success`, `ks-badge-danger`, `ks-badge-warning`, `ks-badge-info` | Badge color |
 | `ks-modal-backdrop`, `ks-modal-panel`, `ks-modal-header`, `ks-modal-title`, `ks-modal-close` | Dialog and its parts |
 | `ks-action-menu`, `ks-action-menu-button` | Mobile action menu and the button that opens it |
-| `ks-menu`, `ks-menu-trigger`, `ks-menu-option`, `ks-menu-checkbox` | Column picker and multi select menu and their parts |
+| `ks-menu`, `ks-menu-trigger`, `ks-menu-option`, `ks-menu-checkbox`, `ks-menu-move` | Column picker and multi select menu and their parts |
 | `ks-copy-button` | Copy button |
 | `ks-theme-toggle-option` | Theme toggle button, filled when pressed |
 | `ks-checkbox-row`, `ks-checkbox-row-input`, `ks-checkbox-row-label`, `ks-checkbox-row-hint` | Checkbox row and its parts |
