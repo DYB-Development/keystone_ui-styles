@@ -561,6 +561,10 @@
     @apply gap-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) hover:bg-(color:--ks-color-hover) dark:text-(color:--ks-color-text-label-dark) dark:hover:bg-(color:--ks-color-hover-dark);
   }
 
+  .ks-menu-option-hidden {
+    @apply text-(color:--ks-color-text-muted);
+  }
+
   .ks-menu-move {
     @apply px-[calc(var(--ks-spacing)*2)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark) hover:bg-(color:--ks-color-hover) dark:hover:bg-(color:--ks-color-hover-dark) disabled:opacity-40;
   }

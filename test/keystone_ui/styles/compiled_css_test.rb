@@ -4373,6 +4373,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-menu-checkbox"), "accent-color: var(--ks-color-accent)"
   end
 
+  def test_menu_option_hidden_greys_the_column_name
+    assert_includes block(".ks-menu-option-hidden"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)
