@@ -4366,7 +4366,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_menu_checkbox_has_a_heavy_outline_when_empty
-    assert_includes block(".ks-menu-checkbox"), "border-width: 2px"
+    assert_includes block(".ks-menu-checkbox"), "border-width: calc(var(--ks-border-width) * 2)"
   end
 
   def test_menu_checkbox_ticks_in_the_accent_colour_without_the_forms_plugin
