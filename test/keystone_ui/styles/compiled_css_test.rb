@@ -4341,6 +4341,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     refute_includes block(".ks-table-head"), "border-right-width"
   end
 
+  def test_menu_move_button_pads_its_arrow
+    assert_includes block(".ks-menu-move"), "padding-inline: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
