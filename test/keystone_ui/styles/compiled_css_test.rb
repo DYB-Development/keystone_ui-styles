@@ -4357,6 +4357,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:hover.*?background-color: var\(--ks-color-hover\)/m, block(".ks-menu-move"))
   end
 
+  def test_menu_move_button_fades_when_it_cannot_move_its_column
+    assert_match(/:disabled.*?opacity: 40%/m, block(".ks-menu-move"))
+  end
+
   private
 
   def block(selector)
