@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.13.0] - 2026-10-07
+
 ### Added
 - `ks-table-toolbar` leaves a gap between a data table and the row above it that holds its Columns menu.
 
