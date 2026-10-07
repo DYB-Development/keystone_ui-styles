@@ -4345,6 +4345,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-menu-move"), "padding-inline: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_menu_move_button_reads_the_label_text_colour_role
+    assert_includes block(".ks-menu-move"), "color: var(--ks-color-text-label)"
+  end
+
   private
 
   def block(selector)
