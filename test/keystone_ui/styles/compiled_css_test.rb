@@ -4297,6 +4297,70 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-funnel-joined"), "column-gap: calc(var(--ks-spacing) * 4)"
   end
 
+  def test_locked_header_cell_fill_reads_the_table_head_colour_role
+    assert_includes block(".ks-table-header-locked"), "background-color: var(--ks-color-table-head)"
+  end
+
+  def test_locked_header_cell_fill_reads_the_table_head_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-table-head-dark\)/m, block(".ks-table-header-locked"))
+  end
+
+  def test_locked_body_cell_fill_reads_the_table_body_colour_role
+    assert_includes block(".ks-table-cell-locked"), "background-color: var(--ks-color-table-body)"
+  end
+
+  def test_locked_body_cell_fill_reads_the_table_body_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-table-body-dark\)/m, block(".ks-table-cell-locked"))
+  end
+
+  def test_locked_header_cell_shows_an_edge_on_its_right
+    assert_includes block(".ks-table-header-locked"), "border-right-width: var(--ks-border-width)"
+  end
+
+  def test_locked_header_cell_edge_reads_the_border_colour_role
+    assert_includes block(".ks-table-header-locked"), "border-right-color: var(--ks-color-border)"
+  end
+
+  def test_locked_header_cell_edge_reads_the_border_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-right-color: var\(--ks-color-border-dark\)/m, block(".ks-table-header-locked"))
+  end
+
+  def test_locked_body_cell_shows_an_edge_on_its_right
+    assert_includes block(".ks-table-cell-locked"), "border-right-width: var(--ks-border-width)"
+  end
+
+  def test_locked_body_cell_edge_reads_the_border_colour_role
+    assert_includes block(".ks-table-cell-locked"), "border-right-color: var(--ks-color-border)"
+  end
+
+  def test_locked_body_cell_edge_reads_the_border_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-right-color: var\(--ks-color-border-dark\)/m, block(".ks-table-cell-locked"))
+  end
+
+  def test_table_head_shows_no_edge_on_its_right
+    refute_includes block(".ks-table-head"), "border-right-width"
+  end
+
+  def test_menu_move_button_pads_its_arrow
+    assert_includes block(".ks-menu-move"), "padding-inline: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_menu_move_button_reads_the_label_text_colour_role
+    assert_includes block(".ks-menu-move"), "color: var(--ks-color-text-label)"
+  end
+
+  def test_menu_move_button_reads_the_label_text_dark_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-label-dark\)/m, block(".ks-menu-move"))
+  end
+
+  def test_menu_move_button_fills_with_the_hover_colour_role_under_the_pointer
+    assert_match(/:hover.*?background-color: var\(--ks-color-hover\)/m, block(".ks-menu-move"))
+  end
+
+  def test_menu_move_button_fades_when_it_cannot_move_its_column
+    assert_match(/:disabled.*?opacity: 40%/m, block(".ks-menu-move"))
+  end
+
   private
 
   def block(selector)

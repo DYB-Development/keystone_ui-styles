@@ -561,6 +561,10 @@
     @apply gap-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) hover:bg-(color:--ks-color-hover) dark:text-(color:--ks-color-text-label-dark) dark:hover:bg-(color:--ks-color-hover-dark);
   }
 
+  .ks-menu-move {
+    @apply px-[calc(var(--ks-spacing)*2)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark) hover:bg-(color:--ks-color-hover) dark:hover:bg-(color:--ks-color-hover-dark) disabled:opacity-40;
+  }
+
   .ks-menu-checkbox {
     @apply rounded-[calc(var(--ks-radius-control)*0.5)] border-(color:--ks-color-border-strong) text-(color:--ks-color-accent) focus:ring-(color:--ks-color-focus) dark:border-(color:--ks-color-border-strong-dark);
   }
@@ -855,6 +859,14 @@
 
   .ks-table-head {
     @apply bg-(color:--ks-color-table-head) dark:bg-(color:--ks-color-table-head-dark);
+  }
+
+  .ks-table-header-locked {
+    @apply bg-(color:--ks-color-table-head) border-r-(length:--ks-border-width) border-r-(color:--ks-color-border) dark:bg-(color:--ks-color-table-head-dark) dark:border-r-(color:--ks-color-border-dark);
+  }
+
+  .ks-table-cell-locked {
+    @apply bg-(color:--ks-color-table-body) border-r-(length:--ks-border-width) border-r-(color:--ks-color-border) dark:bg-(color:--ks-color-table-body-dark) dark:border-r-(color:--ks-color-border-dark);
   }
 
   .ks-table-body {
