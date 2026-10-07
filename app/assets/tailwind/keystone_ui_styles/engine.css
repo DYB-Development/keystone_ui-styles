@@ -857,6 +857,10 @@
     @apply gap-[calc(var(--ks-spacing)*4)];
   }
 
+  .ks-table-toolbar {
+    @apply mb-[calc(var(--ks-spacing)*2)];
+  }
+
   .ks-table {
     @apply rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) shadow-(--ks-shadow-surface) dark:border-(color:--ks-color-border-dark) dark:shadow-(--ks-shadow-surface-dark);
   }
