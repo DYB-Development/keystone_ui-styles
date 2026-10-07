@@ -4393,6 +4393,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-menu-option-hidden"))
   end
 
+  def test_table_toolbar_leaves_a_gap_above_its_table
+    assert_includes block(".ks-table-toolbar"), "margin-bottom: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
