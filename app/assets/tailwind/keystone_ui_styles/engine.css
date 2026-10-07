@@ -562,7 +562,7 @@
   }
 
   .ks-menu-option-hidden {
-    @apply text-(color:--ks-color-text-muted);
+    @apply text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 
   .ks-menu-move {

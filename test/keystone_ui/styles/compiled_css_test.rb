@@ -4377,6 +4377,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-menu-option-hidden"), "color: var(--ks-color-text-muted)"
   end
 
+  def test_menu_option_hidden_greys_the_column_name_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-menu-option-hidden"))
+  end
+
   private
 
   def block(selector)
