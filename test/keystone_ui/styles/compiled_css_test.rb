@@ -3755,6 +3755,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-breadcrumbs"), "margin-bottom: calc(var(--ks-spacing) * 6)"
   end
 
+  def test_desktop_back_link_leaves_space_before_the_page_content
+    assert_includes rule(".ks-page-back"), "margin-bottom: calc(var(--ks-spacing) * 6)"
+  end
+
   def test_mobile_header_back_text_reads_the_text_muted_colour_role
     assert_includes block(".ks-mobile-header-back"), "color: var(--ks-color-text-muted)"
   end
