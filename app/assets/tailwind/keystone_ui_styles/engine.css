@@ -1239,6 +1239,10 @@
     @apply mb-[calc(var(--ks-spacing)*6)];
   }
 
+  .ks-page-back:has(+ .ks-breadcrumbs) {
+    @apply mb-[calc(var(--ks-spacing)*2)];
+  }
+
   .ks-breadcrumbs {
     @apply mb-[calc(var(--ks-spacing)*6)];
   }
