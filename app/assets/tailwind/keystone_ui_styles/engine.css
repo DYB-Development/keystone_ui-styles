@@ -1235,6 +1235,10 @@
     @apply text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 
+  .ks-breadcrumbs {
+    @apply mb-[calc(var(--ks-spacing)*6)];
+  }
+
   .ks-mobile-header-subtitle {
     @apply font-(weight:--ks-font-weight-normal) text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
