@@ -562,7 +562,7 @@
   }
 
   .ks-menu-move {
-    @apply px-[calc(var(--ks-spacing)*2)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label);
+    @apply px-[calc(var(--ks-spacing)*2)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark);
   }
 
   .ks-menu-checkbox {
