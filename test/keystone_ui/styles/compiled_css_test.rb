@@ -4405,6 +4405,42 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-group-label"), "color: var(--ks-color-nav-text)"
   end
 
+  def test_sidebar_group_label_hides_the_browser_disclosure_marker
+    assert_includes block(".ks-sidebar-group-label"), "list-style-type: none"
+  end
+
+  def test_sidebar_group_label_hides_the_safari_disclosure_marker
+    assert_match(/::-webkit-details-marker \{\s*display: none/m, block(".ks-sidebar-group-label"))
+  end
+
+  def test_sidebar_group_label_shows_a_pointer_to_say_it_can_be_clicked
+    assert_includes block(".ks-sidebar-group-label"), "cursor: pointer"
+  end
+
+  def test_sidebar_group_label_lays_its_text_and_caret_on_one_line
+    assert_includes block(".ks-sidebar-group-label"), "display: flex"
+  end
+
+  def test_sidebar_group_label_shows_a_caret_after_its_text
+    assert_match(/::after \{.*?--tw-content: '›'/m, block(".ks-sidebar-group-label"))
+  end
+
+  def test_sidebar_group_label_pushes_its_caret_to_the_far_edge
+    assert_match(/::after \{.*?margin-left: auto/m, block(".ks-sidebar-group-label"))
+  end
+
+  def test_sidebar_group_label_turns_its_caret_when_the_group_is_open
+    assert_match(/details\[open\].*?rotate: 90deg/m, block(".ks-sidebar-group-label"))
+  end
+
+  def test_active_sidebar_group_label_text_reads_the_nav_active_colour_role
+    assert_match(/\&\.active \{[^}]*color: var\(--ks-color-nav-active\)/m, block(".ks-sidebar-group-label"))
+  end
+
+  def test_active_sidebar_group_label_text_reads_the_dark_nav_active_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\&\.active.*?color: var\(--ks-color-nav-active-dark\)/m, block(".ks-sidebar-group-label"))
+  end
+
   def test_sidebar_tab_text_reads_the_nav_link_colour_role
     assert_includes block(".ks-sidebar-tab"), "color: var(--ks-color-nav-link)"
   end
