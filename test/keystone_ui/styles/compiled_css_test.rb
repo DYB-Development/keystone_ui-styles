@@ -4469,6 +4469,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-tab"), "display: block"
   end
 
+  def test_sidebar_spaces_its_groups_apart_from_the_spacing_variable
+    assert_includes block(".ks-sidebar"), "gap: calc(var(--ks-spacing) * 6)"
+  end
+
   private
 
   def block(selector)
