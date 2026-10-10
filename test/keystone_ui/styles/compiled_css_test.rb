@@ -4417,6 +4417,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-group-label"), "cursor: pointer"
   end
 
+  def test_sidebar_group_label_lays_its_text_and_caret_on_one_line
+    assert_includes block(".ks-sidebar-group-label"), "display: flex"
+  end
+
   def test_sidebar_tab_text_reads_the_nav_link_colour_role
     assert_includes block(".ks-sidebar-tab"), "color: var(--ks-color-nav-link)"
   end

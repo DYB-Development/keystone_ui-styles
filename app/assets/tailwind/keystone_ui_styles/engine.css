@@ -1232,7 +1232,7 @@
   }
 
   .ks-sidebar-group-label {
-    @apply list-none cursor-pointer [&::-webkit-details-marker]:hidden px-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-nav-text) dark:text-(color:--ks-color-nav-text-dark);
+    @apply list-none flex items-center cursor-pointer [&::-webkit-details-marker]:hidden px-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-nav-text) dark:text-(color:--ks-color-nav-text-dark);
   }
 
   .ks-sidebar-tab {
