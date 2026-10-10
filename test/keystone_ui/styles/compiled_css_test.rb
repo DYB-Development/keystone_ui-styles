@@ -4453,6 +4453,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-tab"), "padding-inline: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_sidebar_tab_end_padding_reads_the_spacing_variable
+    assert_includes block(".ks-sidebar-tab"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
