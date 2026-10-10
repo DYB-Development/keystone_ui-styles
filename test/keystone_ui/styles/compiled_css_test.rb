@@ -4497,6 +4497,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar"), "border-color: var(--ks-color-nav-border)"
   end
 
+  def test_sidebar_edge_reads_the_dark_nav_border_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-nav-border-dark\)/m, block(".ks-sidebar"))
+  end
+
   def test_sidebar_logo_links_set_no_underline_of_their_own
     assert_includes block(".ks-sidebar-logo a"), "text-decoration-line: none"
   end
