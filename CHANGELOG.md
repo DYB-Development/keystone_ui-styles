@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Changed
+- `ks-sidebar-group-label` works as the label of a group that opens and closes: it hides the browser's disclosure triangle, shows a pointer, puts a caret at its far edge that turns when the group is open, and shows the group holding the current tab in the nav active colour, light and dark.
+
 ## [0.14.0] - 2026-10-10
 
 ### Added
