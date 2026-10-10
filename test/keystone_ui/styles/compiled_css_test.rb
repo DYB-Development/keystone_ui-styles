@@ -4413,6 +4413,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\&\.active.*?\scolor: var\(--ks-color-nav-active\)/m, block(".ks-sidebar-tab"))
   end
 
+  def test_sidebar_stacks_its_contents_vertically
+    assert_includes block(".ks-sidebar"), "flex-direction: column"
+  end
+
   private
 
   def block(selector)
