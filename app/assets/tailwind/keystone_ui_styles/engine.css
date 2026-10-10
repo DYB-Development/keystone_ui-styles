@@ -1236,7 +1236,7 @@
   }
 
   .ks-sidebar-tab {
-    @apply text-(color:--ks-color-nav-link) [&.active]:text-(color:--ks-color-nav-active) [&.active]:bg-(color:--ks-color-nav-hover) dark:text-(color:--ks-color-nav-link-dark) dark:[&.active]:text-(color:--ks-color-nav-active-dark);
+    @apply text-(color:--ks-color-nav-link) [&.active]:text-(color:--ks-color-nav-active) [&.active]:bg-(color:--ks-color-nav-hover) dark:text-(color:--ks-color-nav-link-dark) dark:[&.active]:text-(color:--ks-color-nav-active-dark) dark:[&.active]:bg-(color:--ks-color-nav-hover-dark);
   }
 
   .ks-navbar-title {
