@@ -1236,7 +1236,7 @@
   }
 
   .ks-sidebar-tab {
-    @apply text-(color:--ks-color-nav-link) [&.active]:text-(color:--ks-color-nav-active) dark:text-(color:--ks-color-nav-link-dark);
+    @apply text-(color:--ks-color-nav-link) [&.active]:text-(color:--ks-color-nav-active) dark:text-(color:--ks-color-nav-link-dark) dark:[&.active]:text-(color:--ks-color-nav-active-dark);
   }
 
   .ks-navbar-title {
