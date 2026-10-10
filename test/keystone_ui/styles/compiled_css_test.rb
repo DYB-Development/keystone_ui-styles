@@ -4409,6 +4409,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-group-label"), "list-style-type: none"
   end
 
+  def test_sidebar_group_label_hides_the_safari_disclosure_marker
+    assert_match(/::-webkit-details-marker \{\s*display: none/m, block(".ks-sidebar-group-label"))
+  end
+
   def test_sidebar_tab_text_reads_the_nav_link_colour_role
     assert_includes block(".ks-sidebar-tab"), "color: var(--ks-color-nav-link)"
   end
