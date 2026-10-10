@@ -1235,6 +1235,10 @@
     @apply text-(color:--ks-color-nav-text);
   }
 
+  .ks-sidebar-tab {
+    @apply text-(color:--ks-color-nav-link);
+  }
+
   .ks-navbar-title {
     @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
