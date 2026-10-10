@@ -4413,6 +4413,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/::-webkit-details-marker \{\s*display: none/m, block(".ks-sidebar-group-label"))
   end
 
+  def test_sidebar_group_label_shows_a_pointer_to_say_it_can_be_clicked
+    assert_includes block(".ks-sidebar-group-label"), "cursor: pointer"
+  end
+
   def test_sidebar_tab_text_reads_the_nav_link_colour_role
     assert_includes block(".ks-sidebar-tab"), "color: var(--ks-color-nav-link)"
   end
