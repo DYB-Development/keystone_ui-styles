@@ -4481,6 +4481,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?\&\.active \{[^}]*inset calc\(var\(--ks-border-width\) \* 4\) 0 0 0 var\(--tw-shadow-color, var\(--ks-color-nav-indicator-dark\)\)/m, block(".ks-sidebar-tab"))
   end
 
+  def test_active_sidebar_tab_squares_its_left_corners_so_its_bar_is_straight
+    assert_match(/\&\.active \{[^}]*border-top-left-radius: 0[^}]*border-bottom-left-radius: 0/m, block(".ks-sidebar-tab"))
+  end
+
   def test_sidebar_logo_links_set_no_underline_of_their_own
     assert_includes block(".ks-sidebar-logo a"), "text-decoration-line: none"
   end
