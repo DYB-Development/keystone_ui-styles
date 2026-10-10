@@ -4429,6 +4429,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/::after \{.*?margin-left: auto/m, block(".ks-sidebar-group-label"))
   end
 
+  def test_sidebar_group_label_turns_its_caret_when_the_group_is_open
+    assert_match(/details\[open\].*?rotate: 90deg/m, block(".ks-sidebar-group-label"))
+  end
+
   def test_sidebar_tab_text_reads_the_nav_link_colour_role
     assert_includes block(".ks-sidebar-tab"), "color: var(--ks-color-nav-link)"
   end
