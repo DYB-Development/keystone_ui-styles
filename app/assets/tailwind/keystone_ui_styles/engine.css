@@ -1240,7 +1240,7 @@
   }
 
   .ks-sidebar-logo {
-    @apply [&_a]:no-underline;
+    @apply px-[calc(var(--ks-spacing)*3)] [&_a]:no-underline;
   }
 
   .ks-navbar-title {

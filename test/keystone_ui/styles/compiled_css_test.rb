@@ -4485,6 +4485,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-logo a"), "text-decoration-line: none"
   end
 
+  def test_sidebar_logo_side_padding_reads_the_spacing_variable
+    assert_includes block(".ks-sidebar-logo"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
