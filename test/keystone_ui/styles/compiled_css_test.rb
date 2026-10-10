@@ -4397,6 +4397,70 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table-toolbar"), "margin-bottom: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_sidebar_background_reads_the_nav_colour_role
+    assert_includes block(".ks-sidebar"), "background-color: var(--ks-color-nav)"
+  end
+
+  def test_sidebar_group_label_text_reads_the_nav_text_colour_role
+    assert_includes block(".ks-sidebar-group-label"), "color: var(--ks-color-nav-text)"
+  end
+
+  def test_sidebar_tab_text_reads_the_nav_link_colour_role
+    assert_includes block(".ks-sidebar-tab"), "color: var(--ks-color-nav-link)"
+  end
+
+  def test_active_sidebar_tab_text_reads_the_nav_active_colour_role
+    assert_match(/\&\.active.*?\scolor: var\(--ks-color-nav-active\)/m, block(".ks-sidebar-tab"))
+  end
+
+  def test_sidebar_stacks_its_contents_vertically
+    assert_includes block(".ks-sidebar"), "flex-direction: column"
+  end
+
+  def test_sidebar_background_reads_the_dark_nav_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-nav-dark\)/m, block(".ks-sidebar"))
+  end
+
+  def test_sidebar_group_label_text_reads_the_dark_nav_text_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-nav-text-dark\)/m, block(".ks-sidebar-group-label"))
+  end
+
+  def test_sidebar_tab_text_reads_the_dark_nav_link_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-nav-link-dark\)/m, block(".ks-sidebar-tab"))
+  end
+
+  def test_active_sidebar_tab_text_reads_the_dark_nav_active_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\&\.active.*?color: var\(--ks-color-nav-active-dark\)/m, block(".ks-sidebar-tab"))
+  end
+
+  def test_active_sidebar_tab_background_reads_the_nav_hover_colour_role
+    assert_match(/\&\.active \{[^}]*background-color: var\(--ks-color-nav-hover\)/m, block(".ks-sidebar-tab"))
+  end
+
+  def test_active_sidebar_tab_background_reads_the_dark_nav_hover_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?\&\.active \{[^}]*background-color: var\(--ks-color-nav-hover-dark\)/m, block(".ks-sidebar-tab"))
+  end
+
+  def test_sidebar_padding_reads_the_spacing_variable
+    assert_includes block(".ks-sidebar"), "padding: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_sidebar_group_label_side_padding_reads_the_spacing_variable
+    assert_includes block(".ks-sidebar-group-label"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_sidebar_tab_side_padding_reads_the_spacing_variable
+    assert_includes block(".ks-sidebar-tab"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_sidebar_tab_end_padding_reads_the_spacing_variable
+    assert_includes block(".ks-sidebar-tab"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_sidebar_tab_corner_radius_reads_the_control_radius_variable
+    assert_includes block(".ks-sidebar-tab"), "border-radius: var(--ks-radius-control)"
+  end
+
   private
 
   def block(selector)
