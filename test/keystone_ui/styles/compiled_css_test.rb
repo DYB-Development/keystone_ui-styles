@@ -4401,6 +4401,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar"), "background-color: var(--ks-color-nav)"
   end
 
+  def test_sidebar_group_label_text_reads_the_nav_text_colour_role
+    assert_includes block(".ks-sidebar-group-label"), "color: var(--ks-color-nav-text)"
+  end
+
   private
 
   def block(selector)

@@ -1231,6 +1231,10 @@
     @apply bg-(color:--ks-color-nav);
   }
 
+  .ks-sidebar-group-label {
+    @apply text-(color:--ks-color-nav-text);
+  }
+
   .ks-navbar-title {
     @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
