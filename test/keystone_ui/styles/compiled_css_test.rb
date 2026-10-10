@@ -4461,6 +4461,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-tab"), "border-radius: var(--ks-radius-control)"
   end
 
+  def test_sidebar_tab_sets_no_underline_of_its_own
+    assert_includes block(".ks-sidebar-tab"), "text-decoration-line: none"
+  end
+
   private
 
   def block(selector)
