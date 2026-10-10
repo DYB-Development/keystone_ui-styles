@@ -5,7 +5,7 @@ require "test_helper"
 class KeystoneUi::Styles::LookGuardTest < Minitest::Test
   STYLESHEET = File.expand_path("../../../app/assets/tailwind/keystone_ui_styles/engine.css", __dir__)
   LOOK_UTILITY = /\A-?(bg|text|border|rounded|shadow|ring|ring-offset|font|divide|p[xytblr]?|m[xytblr]?|gap|space-[xy])(-|\z)/
-  NOT_A_LOOK_VALUE = /\A(text-(xs|sm|base|lg|\d?xl|\[\d+px\]|left|center|right|nowrap)|border-dashed|-?m[xytblr]?-(0|auto)|p[xytblr]?-0|font-mono)\z/
+  NOT_A_LOOK_VALUE = /\A(text-(xs|sm|base|lg|\d?xl|\[\d+px\]|left|center|right|nowrap)|border-dashed|-?m[xytblr]?-(0|auto)|p[xytblr]?-0|rounded-[tblrse]{1,2}-none|font-mono)\z/
 
   def test_no_ks_class_holds_a_fixed_look_value
     assert_empty fixed_look_values

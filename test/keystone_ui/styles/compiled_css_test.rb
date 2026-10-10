@@ -4461,6 +4461,58 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-tab"), "border-radius: var(--ks-radius-control)"
   end
 
+  def test_sidebar_tab_sets_no_underline_of_its_own
+    assert_includes block(".ks-sidebar-tab"), "text-decoration-line: none"
+  end
+
+  def test_sidebar_tab_is_a_block_so_its_padding_takes_room
+    assert_includes block(".ks-sidebar-tab"), "display: block"
+  end
+
+  def test_sidebar_spaces_its_groups_apart_from_the_spacing_variable
+    assert_includes block(".ks-sidebar"), "gap: calc(var(--ks-spacing) * 6)"
+  end
+
+  def test_active_sidebar_tab_shows_an_indicator_bar_in_the_nav_indicator_colour
+    assert_match(/\&\.active \{[^}]*inset calc\(var\(--ks-border-width\) \* 4\) 0 0 0 var\(--tw-shadow-color, var\(--ks-color-nav-indicator\)\)/m, block(".ks-sidebar-tab"))
+  end
+
+  def test_active_sidebar_tab_shows_an_indicator_bar_in_the_dark_nav_indicator_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?\&\.active \{[^}]*inset calc\(var\(--ks-border-width\) \* 4\) 0 0 0 var\(--tw-shadow-color, var\(--ks-color-nav-indicator-dark\)\)/m, block(".ks-sidebar-tab"))
+  end
+
+  def test_active_sidebar_tab_squares_its_left_corners_so_its_bar_is_straight
+    assert_match(/\&\.active \{[^}]*border-top-left-radius: 0[^}]*border-bottom-left-radius: 0/m, block(".ks-sidebar-tab"))
+  end
+
+  def test_sidebar_placed_first_draws_its_edge_on_the_right_from_the_border_width_variable
+    assert_match(/\&:first-child \{[^}]*border-right-width: var\(--ks-border-width\)/m, block(".ks-sidebar"))
+  end
+
+  def test_sidebar_placed_last_draws_its_edge_on_the_left_from_the_border_width_variable
+    assert_match(/\&:last-child \{[^}]*border-left-width: var\(--ks-border-width\)/m, block(".ks-sidebar"))
+  end
+
+  def test_sidebar_edge_reads_the_nav_border_colour_role
+    assert_includes block(".ks-sidebar"), "border-color: var(--ks-color-nav-border)"
+  end
+
+  def test_sidebar_edge_reads_the_dark_nav_border_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-nav-border-dark\)/m, block(".ks-sidebar"))
+  end
+
+  def test_sidebar_logo_links_set_no_underline_of_their_own
+    assert_includes block(".ks-sidebar-logo a"), "text-decoration-line: none"
+  end
+
+  def test_sidebar_logo_side_padding_reads_the_spacing_variable
+    assert_includes block(".ks-sidebar-logo"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_sidebar_logo_end_padding_reads_the_spacing_variable
+    assert_includes block(".ks-sidebar-logo"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
