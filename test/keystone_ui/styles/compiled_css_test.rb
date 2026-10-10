@@ -4441,6 +4441,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?\&\.active \{[^}]*background-color: var\(--ks-color-nav-hover-dark\)/m, block(".ks-sidebar-tab"))
   end
 
+  def test_sidebar_padding_reads_the_spacing_variable
+    assert_includes block(".ks-sidebar"), "padding: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)

@@ -1228,7 +1228,7 @@
   }
 
   .ks-sidebar {
-    @apply flex flex-col bg-(color:--ks-color-nav) dark:bg-(color:--ks-color-nav-dark);
+    @apply flex flex-col p-[calc(var(--ks-spacing)*3)] bg-(color:--ks-color-nav) dark:bg-(color:--ks-color-nav-dark);
   }
 
   .ks-sidebar-group-label {
