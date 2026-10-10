@@ -1232,7 +1232,7 @@
   }
 
   .ks-sidebar-group-label {
-    @apply text-(color:--ks-color-nav-text) dark:text-(color:--ks-color-nav-text-dark);
+    @apply px-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-nav-text) dark:text-(color:--ks-color-nav-text-dark);
   }
 
   .ks-sidebar-tab {
