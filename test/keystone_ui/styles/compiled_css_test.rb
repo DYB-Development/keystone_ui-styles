@@ -4477,6 +4477,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\&\.active \{[^}]*inset calc\(var\(--ks-border-width\) \* 4\) 0 0 0 var\(--tw-shadow-color, var\(--ks-color-nav-indicator\)\)/m, block(".ks-sidebar-tab"))
   end
 
+  def test_active_sidebar_tab_shows_an_indicator_bar_in_the_dark_nav_indicator_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?\&\.active \{[^}]*inset calc\(var\(--ks-border-width\) \* 4\) 0 0 0 var\(--tw-shadow-color, var\(--ks-color-nav-indicator-dark\)\)/m, block(".ks-sidebar-tab"))
+  end
+
   private
 
   def block(selector)
