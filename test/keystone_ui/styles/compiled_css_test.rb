@@ -4485,6 +4485,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\&\.active \{[^}]*border-top-left-radius: 0[^}]*border-bottom-left-radius: 0/m, block(".ks-sidebar-tab"))
   end
 
+  def test_sidebar_placed_first_draws_its_edge_on_the_right_from_the_border_width_variable
+    assert_match(/\&:first-child \{[^}]*border-right-width: var\(--ks-border-width\)/m, block(".ks-sidebar"))
+  end
+
   def test_sidebar_logo_links_set_no_underline_of_their_own
     assert_includes block(".ks-sidebar-logo a"), "text-decoration-line: none"
   end
