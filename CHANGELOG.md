@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.14.0] - 2026-10-10
+
 ### Added
 - `ks-sidebar`, `ks-sidebar-group-label` and `ks-sidebar-tab` style a vertical navigation panel, its group labels and its tabs, with the current tab marked by `active`, in the nav colours, the spacing setting and the control radius, light and dark.
 
