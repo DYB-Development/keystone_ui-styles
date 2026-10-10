@@ -4417,6 +4417,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar"), "flex-direction: column"
   end
 
+  def test_sidebar_background_reads_the_dark_nav_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-nav-dark\)/m, block(".ks-sidebar"))
+  end
+
   private
 
   def block(selector)
