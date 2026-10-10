@@ -231,7 +231,7 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-nav-dropdown`, `ks-nav-dropdown-trigger`, `ks-nav-dropdown-caret`, `ks-nav-dropdown-menu` | Nav dropdown and its parts, including the links inside the menu |
 | `ks-nav-item` | A nav link |
 | `ks-navbar-title` | Navbar title on small screens |
-| `ks-sidebar`, `ks-sidebar-group-label`, `ks-sidebar-tab` | Vertical navigation panel, its group labels and its tabs, with `active` marking the current tab |
+| `ks-sidebar`, `ks-sidebar-logo`, `ks-sidebar-group-label`, `ks-sidebar-tab` | Vertical navigation panel, its logo, its group labels and its tabs, with `active` marking the current tab |
 | `ks-mobile-header-title`, `ks-mobile-header-back`, `ks-mobile-header-subtitle` | Mobile header parts |
 | `ks-page-back`, `ks-breadcrumbs` | Space under a page's desktop Back link and breadcrumbs, with the Back link kept close above the breadcrumbs |
 | `ks-settings-link`, `ks-settings-link-label` | Settings link and its label |
