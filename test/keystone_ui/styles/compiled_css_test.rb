@@ -4457,6 +4457,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-tab"), "padding-block: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_sidebar_tab_corner_radius_reads_the_control_radius_variable
+    assert_includes block(".ks-sidebar-tab"), "border-radius: var(--ks-radius-control)"
+  end
+
   private
 
   def block(selector)
