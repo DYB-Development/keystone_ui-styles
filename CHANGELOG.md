@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## [0.15.0] - 2026-10-10
+
+### Added
+- `ks-sidebar-logo` gives the sidebar's logo its own padding and removes its underline.
+
+### Fixed
+- The sidebar's tabs show no underline whatever the host's link styles, each tab takes the same height, and groups are spaced apart.
+- The current sidebar tab is marked by a straight bar along its edge, visible in light and dark.
+- The sidebar draws a border on the side that faces the page content, so it stands apart from a page of the same colour.
+
 ### Changed
 - `ks-sidebar-group-label` works as the label of a group that opens and closes: it hides the browser's disclosure triangle, shows a pointer, puts a caret at its far edge that turns when the group is open, and shows the group holding the current tab in the nav active colour, light and dark.
 
