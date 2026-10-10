@@ -4421,6 +4421,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-group-label"), "display: flex"
   end
 
+  def test_sidebar_group_label_shows_a_caret_after_its_text
+    assert_match(/::after \{.*?--tw-content: '›'/m, block(".ks-sidebar-group-label"))
+  end
+
   def test_sidebar_tab_text_reads_the_nav_link_colour_role
     assert_includes block(".ks-sidebar-tab"), "color: var(--ks-color-nav-link)"
   end
