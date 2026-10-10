@@ -4433,6 +4433,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?\&\.active.*?color: var\(--ks-color-nav-active-dark\)/m, block(".ks-sidebar-tab"))
   end
 
+  def test_active_sidebar_tab_background_reads_the_nav_hover_colour_role
+    assert_match(/\&\.active \{[^}]*background-color: var\(--ks-color-nav-hover\)/m, block(".ks-sidebar-tab"))
+  end
+
   private
 
   def block(selector)
