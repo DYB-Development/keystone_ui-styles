@@ -4493,6 +4493,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\&:last-child \{[^}]*border-left-width: var\(--ks-border-width\)/m, block(".ks-sidebar"))
   end
 
+  def test_sidebar_edge_reads_the_nav_border_colour_role
+    assert_includes block(".ks-sidebar"), "border-color: var(--ks-color-nav-border)"
+  end
+
   def test_sidebar_logo_links_set_no_underline_of_their_own
     assert_includes block(".ks-sidebar-logo a"), "text-decoration-line: none"
   end
