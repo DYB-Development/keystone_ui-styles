@@ -4421,6 +4421,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-nav-dark\)/m, block(".ks-sidebar"))
   end
 
+  def test_sidebar_group_label_text_reads_the_dark_nav_text_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-nav-text-dark\)/m, block(".ks-sidebar-group-label"))
+  end
+
   private
 
   def block(selector)
