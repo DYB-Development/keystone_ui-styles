@@ -1232,7 +1232,7 @@
   }
 
   .ks-sidebar-group-label {
-    @apply list-none in-[details[open]]:after:rotate-90 after:ml-auto after:content-['›'] flex items-center cursor-pointer [&::-webkit-details-marker]:hidden px-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-nav-text) dark:text-(color:--ks-color-nav-text-dark);
+    @apply list-none in-[details[open]]:after:rotate-90 after:ml-auto after:content-['›'] flex items-center cursor-pointer [&::-webkit-details-marker]:hidden px-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-nav-text) [&.active]:text-(color:--ks-color-nav-active) dark:text-(color:--ks-color-nav-text-dark);
   }
 
   .ks-sidebar-tab {

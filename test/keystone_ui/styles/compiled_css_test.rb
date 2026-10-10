@@ -4433,6 +4433,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/details\[open\].*?rotate: 90deg/m, block(".ks-sidebar-group-label"))
   end
 
+  def test_active_sidebar_group_label_text_reads_the_nav_active_colour_role
+    assert_match(/\&\.active \{[^}]*color: var\(--ks-color-nav-active\)/m, block(".ks-sidebar-group-label"))
+  end
+
   def test_sidebar_tab_text_reads_the_nav_link_colour_role
     assert_includes block(".ks-sidebar-tab"), "color: var(--ks-color-nav-link)"
   end
