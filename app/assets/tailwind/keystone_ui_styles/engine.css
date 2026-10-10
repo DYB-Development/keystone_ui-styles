@@ -1240,7 +1240,7 @@
   }
 
   .ks-sidebar-logo {
-    @apply px-[calc(var(--ks-spacing)*3)];
+    @apply px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)];
   }
 
   .ks-sidebar-logo a {
