@@ -4465,6 +4465,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-tab"), "text-decoration-line: none"
   end
 
+  def test_sidebar_tab_is_a_block_so_its_padding_takes_room
+    assert_includes block(".ks-sidebar-tab"), "display: block"
+  end
+
   private
 
   def block(selector)
