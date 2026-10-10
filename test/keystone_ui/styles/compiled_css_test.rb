@@ -4397,6 +4397,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table-toolbar"), "margin-bottom: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_sidebar_background_reads_the_nav_colour_role
+    assert_includes block(".ks-sidebar"), "background-color: var(--ks-color-nav)"
+  end
+
   private
 
   def block(selector)
