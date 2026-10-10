@@ -4473,6 +4473,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar"), "gap: calc(var(--ks-spacing) * 6)"
   end
 
+  def test_active_sidebar_tab_shows_an_indicator_bar_in_the_nav_indicator_colour
+    assert_match(/\&\.active \{[^}]*inset calc\(var\(--ks-border-width\) \* 4\) 0 0 0 var\(--tw-shadow-color, var\(--ks-color-nav-indicator\)\)/m, block(".ks-sidebar-tab"))
+  end
+
   private
 
   def block(selector)
