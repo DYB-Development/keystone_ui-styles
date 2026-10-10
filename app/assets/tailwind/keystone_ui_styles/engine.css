@@ -1228,7 +1228,7 @@
   }
 
   .ks-sidebar {
-    @apply flex flex-col gap-[calc(var(--ks-spacing)*6)] p-[calc(var(--ks-spacing)*3)] first:border-r-(length:--ks-border-width) bg-(color:--ks-color-nav) dark:bg-(color:--ks-color-nav-dark);
+    @apply flex flex-col gap-[calc(var(--ks-spacing)*6)] p-[calc(var(--ks-spacing)*3)] first:border-r-(length:--ks-border-width) last:border-l-(length:--ks-border-width) bg-(color:--ks-color-nav) dark:bg-(color:--ks-color-nav-dark);
   }
 
   .ks-sidebar-group-label {

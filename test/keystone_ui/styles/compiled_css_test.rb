@@ -4489,6 +4489,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\&:first-child \{[^}]*border-right-width: var\(--ks-border-width\)/m, block(".ks-sidebar"))
   end
 
+  def test_sidebar_placed_last_draws_its_edge_on_the_left_from_the_border_width_variable
+    assert_match(/\&:last-child \{[^}]*border-left-width: var\(--ks-border-width\)/m, block(".ks-sidebar"))
+  end
+
   def test_sidebar_logo_links_set_no_underline_of_their_own
     assert_includes block(".ks-sidebar-logo a"), "text-decoration-line: none"
   end
