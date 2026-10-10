@@ -114,10 +114,10 @@ any layer overrides them wherever it is imported.
 | `--ks-color-code`, `--ks-color-text-code` | Code block background and text | `--color-surface-900`, `--color-surface-100` |
 | `--ks-color-pipeline`, `--ks-color-pipeline-box`, `--ks-color-pipeline-border` | Pipeline and box background, and their border | `--color-surface-800`, `--color-surface-900`, `--color-surface-700` |
 | `--ks-color-text-on-dark`, `--ks-color-pipeline-muted`, `--ks-color-pipeline-label`, `--ks-color-pipeline-amber` | Pipeline title, subtitle, box label and amber count | `--color-white`, `--color-surface-400`, `--color-surface-500`, `--color-amber-400` |
-| `--ks-color-nav`, `--ks-color-nav-border` | Bottom nav and desktop nav menu background and border | `--base-bg-low`, then `--color-white`; `--base-border-tertiary`, then `--color-gray-200` |
-| `--ks-color-nav-text`, `--ks-color-nav-text-hover` | Bottom nav item, and nav links on hover | `--base-text-tertiary`, then `--color-gray-500`; `--base-text-secondary`, then `--color-gray-700` |
-| `--ks-color-nav-link`, `--ks-color-nav-active`, `--ks-color-nav-indicator` | Nav link text, the current page's link, and its underline on wide screens | `--base-text`, `--text-primary` and `--border-primary`, then `--color-gray-900`, `--color-accent-600` and `--color-accent-600` |
-| `--ks-color-nav-menu-mobile`, `--ks-color-nav-hover` | Nav menu background on small screens, and a menu link on hover | `--base-bg-base`, then `--color-white`; `--base-bg-hover`, then `--color-gray-50` |
+| `--ks-color-nav`, `--ks-color-nav-border` | Bottom nav, desktop nav menu and sidebar background, and the bottom nav and nav menu border | `--base-bg-low`, then `--color-white`; `--base-border-tertiary`, then `--color-gray-200` |
+| `--ks-color-nav-text`, `--ks-color-nav-text-hover` | Bottom nav item and sidebar group label, and nav links on hover | `--base-text-tertiary`, then `--color-gray-500`; `--base-text-secondary`, then `--color-gray-700` |
+| `--ks-color-nav-link`, `--ks-color-nav-active`, `--ks-color-nav-indicator` | Nav link and sidebar tab text, the current page's link or tab, and its underline on wide screens | `--base-text`, `--text-primary` and `--border-primary`, then `--color-gray-900`, `--color-accent-600` and `--color-accent-600` |
+| `--ks-color-nav-menu-mobile`, `--ks-color-nav-hover` | Nav menu background on small screens, a menu link on hover, and the current sidebar tab | `--base-bg-base`, then `--color-white`; `--base-bg-hover`, then `--color-gray-50` |
 | `--ks-shadow-menu` | Desktop nav menu shadow | `--shadow-md` |
 | `--ks-font-weight-normal` | Mobile header subtitle weight | `--font-weight-normal` |
 | `--ks-color-hover-soft` | Settings link on hover | `--color-gray-50` |
@@ -231,6 +231,7 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-nav-dropdown`, `ks-nav-dropdown-trigger`, `ks-nav-dropdown-caret`, `ks-nav-dropdown-menu` | Nav dropdown and its parts, including the links inside the menu |
 | `ks-nav-item` | A nav link |
 | `ks-navbar-title` | Navbar title on small screens |
+| `ks-sidebar`, `ks-sidebar-group-label`, `ks-sidebar-tab` | Vertical navigation panel, its group labels and its tabs, with `active` marking the current tab |
 | `ks-mobile-header-title`, `ks-mobile-header-back`, `ks-mobile-header-subtitle` | Mobile header parts |
 | `ks-page-back`, `ks-breadcrumbs` | Space under a page's desktop Back link and breadcrumbs, with the Back link kept close above the breadcrumbs |
 | `ks-settings-link`, `ks-settings-link-label` | Settings link and its label |
