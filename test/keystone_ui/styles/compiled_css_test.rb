@@ -4569,6 +4569,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-group-tabs"), "margin-top: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_sidebar_group_tabs_sit_inset_from_the_sidebar_edge_from_the_spacing_variable
+    assert_includes block(".ks-sidebar-group-tabs"), "margin-left: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
