@@ -1240,7 +1240,7 @@
   }
 
   .ks-sidebar-group-tabs {
-    @apply border-(length:--ks-border-width) border-(color:--ks-color-nav-border);
+    @apply border-(length:--ks-border-width) border-(color:--ks-color-nav-border) dark:border-(color:--ks-color-nav-border-dark);
   }
 
   .ks-sidebar-logo {

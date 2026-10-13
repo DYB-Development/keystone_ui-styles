@@ -4557,6 +4557,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-group-tabs"), "border-color: var(--ks-color-nav-border)"
   end
 
+  def test_sidebar_group_tabs_border_reads_the_dark_nav_border_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-nav-border-dark\)/m, block(".ks-sidebar-group-tabs"))
+  end
+
   private
 
   def block(selector)
