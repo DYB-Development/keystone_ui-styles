@@ -4561,6 +4561,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-nav-border-dark\)/m, block(".ks-sidebar-group-tabs"))
   end
 
+  def test_sidebar_group_tabs_round_their_corners_with_the_surface_radius
+    assert_includes block(".ks-sidebar-group-tabs"), "border-radius: var(--ks-radius-surface)"
+  end
+
   private
 
   def block(selector)
