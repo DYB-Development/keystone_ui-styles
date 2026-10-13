@@ -1244,7 +1244,7 @@
   }
 
   .ks-sidebar-group-tabs > .ks-sidebar-tab + .ks-sidebar-tab {
-    @apply border-t-(length:--ks-border-width);
+    @apply border-t-(length:--ks-border-width) border-t-(color:--ks-color-nav-border);
   }
 
   .ks-sidebar-logo {
