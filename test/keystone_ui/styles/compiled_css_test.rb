@@ -4565,6 +4565,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-group-tabs"), "border-radius: var(--ks-radius-surface)"
   end
 
+  def test_sidebar_group_tabs_leave_a_gap_under_the_group_label_from_the_spacing_variable
+    assert_includes block(".ks-sidebar-group-tabs"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)
