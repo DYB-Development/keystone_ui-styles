@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.16.0] - 2026-10-13
+
 ### Added
 - `ks-sidebar-group-tabs` draws a rounded border in the nav border colour around an open sidebar group's links, inset under the group label, light and dark.
 - Each sidebar tab after the first inside `ks-sidebar-group-tabs` has a dividing line above it in the nav border colour, light and dark, while a tab outside any group has none.
