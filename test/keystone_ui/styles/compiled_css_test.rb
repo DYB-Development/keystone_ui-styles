@@ -4593,6 +4593,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-nav-dropdown-menu > .ks-nav-item + .ks-nav-item"), "border-top-color: var(--ks-color-nav-border)"
   end
 
+  def test_nav_dropdown_dividing_line_reads_the_dark_nav_border_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-top-color: var\(--ks-color-nav-border-dark\)/m, block(".ks-nav-dropdown-menu > .ks-nav-item + .ks-nav-item"))
+  end
+
   private
 
   def block(selector)
