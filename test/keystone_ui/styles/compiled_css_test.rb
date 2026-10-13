@@ -4553,6 +4553,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-group-tabs"), "border-width: var(--ks-border-width)"
   end
 
+  def test_sidebar_group_tabs_border_reads_the_nav_border_colour_role
+    assert_includes block(".ks-sidebar-group-tabs"), "border-color: var(--ks-color-nav-border)"
+  end
+
   private
 
   def block(selector)
