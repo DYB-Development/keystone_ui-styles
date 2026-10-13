@@ -1239,6 +1239,10 @@
     @apply block no-underline px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-control) text-(color:--ks-color-nav-link) [&.active]:text-(color:--ks-color-nav-active) [&.active]:bg-(color:--ks-color-nav-hover) [&.active]:shadow-[inset_calc(var(--ks-border-width)*4)_0_0_0_var(--ks-color-nav-indicator)] [&.active]:rounded-l-none dark:text-(color:--ks-color-nav-link-dark) dark:[&.active]:text-(color:--ks-color-nav-active-dark) dark:[&.active]:bg-(color:--ks-color-nav-hover-dark) dark:[&.active]:shadow-[inset_calc(var(--ks-border-width)*4)_0_0_0_var(--ks-color-nav-indicator-dark)];
   }
 
+  .ks-sidebar-group-tabs {
+    @apply border-(length:--ks-border-width);
+  }
+
   .ks-sidebar-logo {
     @apply px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)];
   }

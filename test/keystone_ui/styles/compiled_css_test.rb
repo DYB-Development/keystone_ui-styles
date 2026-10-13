@@ -4549,6 +4549,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-logo"), "padding-block: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_sidebar_group_tabs_draw_a_border_from_the_border_width_variable
+    assert_includes block(".ks-sidebar-group-tabs"), "border-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)
