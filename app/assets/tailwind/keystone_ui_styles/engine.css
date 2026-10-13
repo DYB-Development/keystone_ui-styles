@@ -1243,6 +1243,10 @@
     @apply border-(length:--ks-border-width) border-(color:--ks-color-nav-border) dark:border-(color:--ks-color-nav-border-dark) rounded-(--ks-radius-surface) mt-[calc(var(--ks-spacing)*1)] ml-[calc(var(--ks-spacing)*3)];
   }
 
+  .ks-sidebar-group-tabs > .ks-sidebar-tab + .ks-sidebar-tab {
+    @apply border-t-(length:--ks-border-width);
+  }
+
   .ks-sidebar-logo {
     @apply px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)];
   }

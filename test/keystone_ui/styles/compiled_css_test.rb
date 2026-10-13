@@ -4573,6 +4573,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-group-tabs"), "margin-left: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_sidebar_tab_after_the_first_in_a_group_draws_a_dividing_line_from_the_border_width_variable
+    assert_includes block(".ks-sidebar-group-tabs > .ks-sidebar-tab + .ks-sidebar-tab"), "border-top-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)
