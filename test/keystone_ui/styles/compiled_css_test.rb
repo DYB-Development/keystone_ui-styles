@@ -4549,6 +4549,54 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-sidebar-logo"), "padding-block: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_sidebar_group_tabs_draw_a_border_from_the_border_width_variable
+    assert_includes block(".ks-sidebar-group-tabs"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_sidebar_group_tabs_border_reads_the_nav_border_colour_role
+    assert_includes block(".ks-sidebar-group-tabs"), "border-color: var(--ks-color-nav-border)"
+  end
+
+  def test_sidebar_group_tabs_border_reads_the_dark_nav_border_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-nav-border-dark\)/m, block(".ks-sidebar-group-tabs"))
+  end
+
+  def test_sidebar_group_tabs_round_their_corners_with_the_surface_radius
+    assert_includes block(".ks-sidebar-group-tabs"), "border-radius: var(--ks-radius-surface)"
+  end
+
+  def test_sidebar_group_tabs_leave_a_gap_under_the_group_label_from_the_spacing_variable
+    assert_includes block(".ks-sidebar-group-tabs"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_sidebar_group_tabs_sit_inset_from_the_sidebar_edge_from_the_spacing_variable
+    assert_includes block(".ks-sidebar-group-tabs"), "margin-left: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_sidebar_tab_after_the_first_in_a_group_draws_a_dividing_line_from_the_border_width_variable
+    assert_includes block(".ks-sidebar-group-tabs > .ks-sidebar-tab + .ks-sidebar-tab"), "border-top-width: var(--ks-border-width)"
+  end
+
+  def test_sidebar_group_dividing_line_reads_the_nav_border_colour_role
+    assert_includes block(".ks-sidebar-group-tabs > .ks-sidebar-tab + .ks-sidebar-tab"), "border-top-color: var(--ks-color-nav-border)"
+  end
+
+  def test_sidebar_group_dividing_line_reads_the_dark_nav_border_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-top-color: var\(--ks-color-nav-border-dark\)/m, block(".ks-sidebar-group-tabs > .ks-sidebar-tab + .ks-sidebar-tab"))
+  end
+
+  def test_nav_item_after_the_first_in_a_dropdown_menu_draws_a_dividing_line_from_the_border_width_variable
+    assert_includes block(".ks-nav-dropdown-menu > .ks-nav-item + .ks-nav-item"), "border-top-width: var(--ks-border-width)"
+  end
+
+  def test_nav_dropdown_dividing_line_reads_the_nav_border_colour_role
+    assert_includes block(".ks-nav-dropdown-menu > .ks-nav-item + .ks-nav-item"), "border-top-color: var(--ks-color-nav-border)"
+  end
+
+  def test_nav_dropdown_dividing_line_reads_the_dark_nav_border_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-top-color: var\(--ks-color-nav-border-dark\)/m, block(".ks-nav-dropdown-menu > .ks-nav-item + .ks-nav-item"))
+  end
+
   private
 
   def block(selector)
