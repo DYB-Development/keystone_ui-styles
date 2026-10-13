@@ -1227,6 +1227,10 @@
     @apply block text-sm no-underline whitespace-nowrap py-[calc(var(--ks-spacing)*3)] pr-[calc(var(--ks-spacing)*4)] pl-[calc(var(--ks-spacing)*8)] lg:py-[calc(var(--ks-spacing)*2)] lg:px-[calc(var(--ks-spacing)*4)] text-(color:--ks-color-nav-link) hover:bg-(color:--ks-color-nav-hover) hover:text-(color:--ks-color-nav-text-hover) [&.active]:bg-(color:--ks-color-nav-hover) [&.active]:text-(color:--ks-color-nav-active) [&.active]:font-(weight:--ks-font-weight-heading) dark:text-(color:--ks-color-nav-link-dark) dark:hover:bg-(color:--ks-color-nav-hover-dark) dark:hover:text-(color:--ks-color-nav-text-hover-dark) dark:[&.active]:bg-(color:--ks-color-nav-hover-dark) dark:[&.active]:text-(color:--ks-color-nav-active-dark);
   }
 
+  .ks-nav-dropdown-menu > .ks-nav-item + .ks-nav-item {
+    @apply border-t-(length:--ks-border-width);
+  }
+
   .ks-sidebar {
     @apply flex flex-col gap-[calc(var(--ks-spacing)*6)] p-[calc(var(--ks-spacing)*3)] first:border-r-(length:--ks-border-width) last:border-l-(length:--ks-border-width) border-(color:--ks-color-nav-border) bg-(color:--ks-color-nav) dark:bg-(color:--ks-color-nav-dark) dark:border-(color:--ks-color-nav-border-dark);
   }
