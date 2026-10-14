@@ -2809,6 +2809,12 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_empty(charts.reject { |name| self.class.compiled.match?(/@layer base \{.*?:root \{.*?#{name}:/m) })
   end
 
+  def test_each_chart_colour_has_a_dark_mode_partner
+    partners = (1..5).map { |n| "--ks-color-chart-#{n}-dark" }
+
+    assert_empty(partners.reject { |name| self.class.compiled.match?(/@layer base \{.*?:root \{.*?#{name}:/m) })
+  end
+
   def test_bucket_gap_is_1_spacing_units
     assert_includes block(".ks-bucket"), "gap: calc(var(--ks-spacing) * 1)"
   end
