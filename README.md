@@ -108,6 +108,7 @@ any layer overrides them wherever it is imported.
 | `--ks-color-text-meter-label` | Progress and funnel labels | `--color-surface-700` |
 | `--ks-color-funnel-accent`, `-sky`, `-violet`, `-amber`, `-rose` | The five funnel step colours | The matching Tailwind 500 shade |
 | `--ks-color-funnel-band`, `--ks-color-text-funnel-band` | The joined funnel's band between steps and its percent | `--color-surface-800`, `--color-white`, and `--color-surface-100`, `--color-surface-900` on a dark page |
+| `--ks-color-chart-1` to `--ks-color-chart-5` | The five chart series colours, for a chart to read | `--color-accent-600`, then teal, amber, violet and rose at Tailwind's 600 shade, and `--color-accent-400`, then the same four at Tailwind's 400 shade, on a dark page |
 | `--ks-color-over-goal`, `--ks-color-over-goal-warning` | Bucket fill over its goal | `--color-green-500`, `--color-amber-500` |
 | `--ks-color-table-head`, `--ks-color-table-body`, `--ks-color-divider` | Table head and body background, and the line between rows | `--color-gray-50`, `--color-white`, `--color-gray-200` |
 | `--ks-shadow-surface-dark` | Table shadow on a dark page | None |
