@@ -2833,7 +2833,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_every_chart_colour_is_a_base_layer_default_a_look_or_palette_can_replace
-    charts = (1..5).flat_map { |n| ["--ks-color-chart-#{n}", "--ks-color-chart-#{n}-dark"] }
+    charts = (1..5).flat_map { |n| [ "--ks-color-chart-#{n}", "--ks-color-chart-#{n}-dark" ] }
     base_defaults = File.read(ENTRY)[/@layer base \{\n  :root \{(.*?)\n  \}/m, 1].scan(/(--ks-[\w-]+):/).flatten
 
     assert_empty charts - base_defaults
