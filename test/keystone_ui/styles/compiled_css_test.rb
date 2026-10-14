@@ -2803,6 +2803,12 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-funnel-rose: var\(--color-rose-500\)/m, self.class.compiled)
   end
 
+  def test_theme_defines_five_chart_colours
+    charts = (1..5).map { |n| "--ks-color-chart-#{n}" }
+
+    assert_empty(charts.reject { |name| self.class.compiled.match?(/@layer base \{.*?:root \{.*?#{name}:/m) })
+  end
+
   def test_bucket_gap_is_1_spacing_units
     assert_includes block(".ks-bucket"), "gap: calc(var(--ks-spacing) * 1)"
   end
