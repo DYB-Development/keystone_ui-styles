@@ -2803,6 +2803,42 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-funnel-rose: var\(--color-rose-500\)/m, self.class.compiled)
   end
 
+  def test_theme_defines_five_chart_colours
+    charts = (1..5).map { |n| "--ks-color-chart-#{n}" }
+
+    assert_empty(charts.reject { |name| self.class.compiled.match?(/@layer base \{.*?:root \{.*?#{name}:/m) })
+  end
+
+  def test_each_chart_colour_has_a_dark_mode_partner
+    partners = (1..5).map { |n| "--ks-color-chart-#{n}-dark" }
+
+    assert_empty(partners.reject { |name| self.class.compiled.match?(/@layer base \{.*?:root \{.*?#{name}:/m) })
+  end
+
+  def test_chart_1_defaults_to_accent_600_on_a_light_page_and_accent_400_on_a_dark_page
+    defaults = { "--ks-color-chart-1" => "var(--color-accent-600)", "--ks-color-chart-1-dark" => "var(--color-accent-400)" }
+
+    assert_empty(defaults.reject { |name, value| self.class.compiled.match?(/@layer base \{.*?:root \{.*?#{name}: #{Regexp.escape(value)};/m) })
+  end
+
+  def test_charts_2_to_5_default_to_teal_amber_violet_and_rose_on_light_and_dark_pages
+    defaults = {
+      "--ks-color-chart-2" => "#0d9488", "--ks-color-chart-2-dark" => "#2dd4bf",
+      "--ks-color-chart-3" => "#d97706", "--ks-color-chart-3-dark" => "#fbbf24",
+      "--ks-color-chart-4" => "#7c3aed", "--ks-color-chart-4-dark" => "#a78bfa",
+      "--ks-color-chart-5" => "#e11d48", "--ks-color-chart-5-dark" => "#fb7185"
+    }
+
+    assert_empty(defaults.reject { |name, value| self.class.compiled.match?(/@layer base \{.*?:root \{.*?#{name}: #{value};/m) })
+  end
+
+  def test_every_chart_colour_is_a_base_layer_default_a_look_or_palette_can_replace
+    charts = (1..5).flat_map { |n| [ "--ks-color-chart-#{n}", "--ks-color-chart-#{n}-dark" ] }
+    base_defaults = File.read(ENTRY)[/@layer base \{\n  :root \{(.*?)\n  \}/m, 1].scan(/(--ks-[\w-]+):/).flatten
+
+    assert_empty charts - base_defaults
+  end
+
   def test_bucket_gap_is_1_spacing_units
     assert_includes block(".ks-bucket"), "gap: calc(var(--ks-spacing) * 1)"
   end
