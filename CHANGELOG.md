@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.17.0] - 2026-10-14
+
 ### Added
 - `--ks-color-chart-1` to `--ks-color-chart-5` and their `-dark` partners give charts five series colours, chart 1 from the accent and charts 2 to 5 teal, amber, violet and rose, which a look or palette can replace.
 
