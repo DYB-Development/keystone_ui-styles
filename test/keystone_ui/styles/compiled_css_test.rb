@@ -2815,6 +2815,12 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_empty(partners.reject { |name| self.class.compiled.match?(/@layer base \{.*?:root \{.*?#{name}:/m) })
   end
 
+  def test_chart_1_defaults_to_accent_600_on_a_light_page_and_accent_400_on_a_dark_page
+    defaults = { "--ks-color-chart-1" => "var(--color-accent-600)", "--ks-color-chart-1-dark" => "var(--color-accent-400)" }
+
+    assert_empty(defaults.reject { |name, value| self.class.compiled.match?(/@layer base \{.*?:root \{.*?#{name}: #{Regexp.escape(value)};/m) })
+  end
+
   def test_bucket_gap_is_1_spacing_units
     assert_includes block(".ks-bucket"), "gap: calc(var(--ks-spacing) * 1)"
   end
