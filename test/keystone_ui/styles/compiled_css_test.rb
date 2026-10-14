@@ -2821,6 +2821,17 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_empty(defaults.reject { |name, value| self.class.compiled.match?(/@layer base \{.*?:root \{.*?#{name}: #{Regexp.escape(value)};/m) })
   end
 
+  def test_charts_2_to_5_default_to_teal_amber_violet_and_rose_on_light_and_dark_pages
+    defaults = {
+      "--ks-color-chart-2" => "#0d9488", "--ks-color-chart-2-dark" => "#2dd4bf",
+      "--ks-color-chart-3" => "#d97706", "--ks-color-chart-3-dark" => "#fbbf24",
+      "--ks-color-chart-4" => "#7c3aed", "--ks-color-chart-4-dark" => "#a78bfa",
+      "--ks-color-chart-5" => "#e11d48", "--ks-color-chart-5-dark" => "#fb7185"
+    }
+
+    assert_empty(defaults.reject { |name, value| self.class.compiled.match?(/@layer base \{.*?:root \{.*?#{name}: #{value};/m) })
+  end
+
   def test_bucket_gap_is_1_spacing_units
     assert_includes block(".ks-bucket"), "gap: calc(var(--ks-spacing) * 1)"
   end
