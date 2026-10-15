@@ -4733,6 +4733,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:hover.*? color: var\(--ks-color-on-hover\)/m, block(".ks-settings-link"))
   end
 
+  def test_on_hover_colour_role_defaults_to_the_text_colour_role
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-hover: var\(--ks-color-text\);/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
