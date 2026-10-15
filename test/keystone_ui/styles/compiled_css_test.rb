@@ -4777,6 +4777,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?:hover.*? color: var\(--ks-color-on-hover-muted-dark\)/m, block(".ks-copy-button"))
   end
 
+  def test_on_overlay_muted_colour_role_defaults_to_the_secondary_text_colour_role
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-overlay-muted: var\(--ks-color-text-secondary\);/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
