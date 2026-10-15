@@ -4693,6 +4693,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-modal-panel"), " color: var(--ks-color-on-overlay)"
   end
 
+  def test_on_overlay_colour_role_defaults_to_the_inherited_text_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-overlay: currentcolor;/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
