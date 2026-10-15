@@ -4953,6 +4953,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/flex-basis: calc\(2\s*\/\s*5 \* 100%\)/, rule(".ks-value-list-label"))
   end
 
+  def test_value_list_label_keeps_its_share_when_the_value_is_long
+    assert_includes rule(".ks-value-list-label"), "flex-shrink: 0"
+  end
+
   private
 
   def block(selector)
