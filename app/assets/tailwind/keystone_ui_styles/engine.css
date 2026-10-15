@@ -292,6 +292,10 @@
     @apply bg-(color:--ks-color-page) text-(color:--ks-color-on-page) dark:bg-(color:--ks-color-page-dark) dark:text-(color:--ks-color-on-page-dark);
   }
 
+  html:not([data-theme]) {
+    color-scheme: light dark;
+  }
+
   html[data-theme="dark"] {
     color-scheme: dark;
   }
