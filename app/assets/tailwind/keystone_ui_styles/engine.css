@@ -495,7 +495,7 @@
   }
 
   .ks-value-list-end .ks-value-list-value {
-    @apply ml-auto;
+    @apply ml-auto text-right;
   }
 
   .ks-card {
