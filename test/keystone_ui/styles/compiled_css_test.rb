@@ -143,8 +143,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*\-\-ks\-color\-accent\-hover:\ var\(\-\-color\-accent\-500\)/m, self.class.compiled)
   end
 
-  def test_primary_button_text_reads_the_on_fill_colour_role
-    assert_includes rule(".ks-button-primary"), "color: var(--ks-color-on-fill)"
+  def test_primary_button_text_reads_the_on_accent_colour_role
+    assert_includes rule(".ks-button-primary"), "color: var(--ks-color-on-accent)"
   end
 
   def test_on_fill_colour_role_defaults_to_white
@@ -163,8 +163,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*\-\-ks\-color\-neutral\-hover:\ var\(\-\-color\-gray\-400\)/m, self.class.compiled)
   end
 
-  def test_secondary_button_text_reads_the_on_fill_colour_role
-    assert_includes rule(".ks-button-secondary"), "color: var(--ks-color-on-fill)"
+  def test_secondary_button_text_reads_the_on_neutral_colour_role
+    assert_includes rule(".ks-button-secondary"), "color: var(--ks-color-on-neutral)"
   end
 
   def test_danger_colour_role_defaults_to_red_600
@@ -179,8 +179,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*\-\-ks\-color\-danger\-hover:\ var\(\-\-color\-red\-500\)/m, self.class.compiled)
   end
 
-  def test_danger_button_text_reads_the_on_fill_colour_role
-    assert_includes rule(".ks-button-danger"), "color: var(--ks-color-on-fill)"
+  def test_danger_button_text_reads_the_on_danger_colour_role
+    assert_includes rule(".ks-button-danger"), "color: var(--ks-color-on-danger)"
   end
 
   def test_primary_button_background_reads_the_dark_accent_colour_role_on_a_dark_page
@@ -231,20 +231,20 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*\-\-ks\-color\-danger\-hover\-dark:\ var\(\-\-color\-red\-500\)/m, self.class.compiled)
   end
 
-  def test_primary_button_text_reads_the_dark_on_fill_colour_role_on_a_dark_page
-    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-fill-dark\)/m, block(".ks-button-primary"))
+  def test_primary_button_text_reads_the_dark_on_accent_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-accent-dark\)/m, block(".ks-button-primary"))
   end
 
   def test_dark_on_fill_colour_role_defaults_to_white
     assert_match(/:root \{[^}]*\-\-ks\-color\-on\-fill\-dark:\ var\(\-\-color\-white\)/m, self.class.compiled)
   end
 
-  def test_secondary_button_text_reads_the_dark_on_fill_colour_role_on_a_dark_page
-    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-fill-dark\)/m, block(".ks-button-secondary"))
+  def test_secondary_button_text_reads_the_dark_on_neutral_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-neutral-dark\)/m, block(".ks-button-secondary"))
   end
 
-  def test_danger_button_text_reads_the_dark_on_fill_colour_role_on_a_dark_page
-    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-fill-dark\)/m, block(".ks-button-danger"))
+  def test_danger_button_text_reads_the_dark_on_danger_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-danger-dark\)/m, block(".ks-button-danger"))
   end
 
   def test_secondary_button_background_reads_the_neutral_colour_role
@@ -1707,8 +1707,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stat-card-disclosure"), "padding: calc(var(--ks-spacing) * 3)"
   end
 
-  def test_stat_card_disclosure_text_reads_the_text_secondary_colour_role
-    assert_includes block(".ks-stat-card-disclosure"), "color: var(--ks-color-text-secondary)"
+  def test_stat_card_disclosure_text_reads_the_on_overlay_muted_colour_role
+    assert_includes block(".ks-stat-card-disclosure"), "color: var(--ks-color-on-overlay-muted)"
   end
 
   def test_stat_card_disclosure_shadow_reads_the_overlay_shadow_variable
@@ -1723,8 +1723,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-overlay-dark\)/m, block(".ks-stat-card-disclosure"))
   end
 
-  def test_stat_card_disclosure_text_reads_the_text_secondary_dark_colour_role_on_a_dark_page
-    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-secondary-dark\)/m, block(".ks-stat-card-disclosure"))
+  def test_stat_card_disclosure_text_reads_the_dark_on_overlay_muted_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-on-overlay-muted-dark\)/m, block(".ks-stat-card-disclosure"))
   end
 
   def test_stat_card_disclosure_vertical_gap_between_children_is_1_spacing_units
@@ -2631,16 +2631,16 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab"), "color: var(--ks-color-text-muted)"
   end
 
-  def test_tab_text_reads_the_text_colour_role_on_hover
-    assert_match(/:hover.*?color: var\(--ks-color-text\)/m, block(".ks-tab"))
+  def test_tab_text_reads_the_on_hover_colour_role_on_hover
+    assert_match(/:hover.*?color: var\(--ks-color-on-hover\)/m, block(".ks-tab"))
   end
 
   def test_tab_text_reads_the_text_muted_dark_colour_role_on_a_dark_page
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-tab"))
   end
 
-  def test_tab_text_reads_the_text_dark_colour_role_on_a_dark_page_and_on_hover
-    assert_match(/data-theme="dark".*?:hover.*?color: var\(--ks-color-text-dark\)/m, block(".ks-tab"))
+  def test_tab_text_reads_the_dark_on_hover_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?color: var\(--ks-color-on-hover-dark\)/m, block(".ks-tab"))
   end
 
   def test_tab_active_fill_reads_the_tint_colour_role_when_active
@@ -4197,8 +4197,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-radio-card-disclosure"), "padding: calc(var(--ks-spacing) * 3)"
   end
 
-  def test_radio_card_disclosure_text_reads_the_text_secondary_colour_role
-    assert_includes block(".ks-radio-card-disclosure"), "color: var(--ks-color-text-secondary)"
+  def test_radio_card_disclosure_text_reads_the_on_overlay_muted_colour_role
+    assert_includes block(".ks-radio-card-disclosure"), "color: var(--ks-color-on-overlay-muted)"
   end
 
   def test_radio_card_disclosure_shadow_reads_the_overlay_shadow_variable
@@ -4213,8 +4213,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-overlay-dark\)/m, block(".ks-radio-card-disclosure"))
   end
 
-  def test_radio_card_disclosure_text_reads_the_text_secondary_dark_colour_role_on_a_dark_page
-    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-secondary-dark\)/m, block(".ks-radio-card-disclosure"))
+  def test_radio_card_disclosure_text_reads_the_dark_on_overlay_muted_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-on-overlay-muted-dark\)/m, block(".ks-radio-card-disclosure"))
   end
 
   def test_radio_card_disclosure_vertical_gap_between_children_is_1_spacing_units
@@ -4631,6 +4631,166 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
 
   def test_nav_dropdown_dividing_line_reads_the_dark_nav_border_colour_role_on_a_dark_page
     assert_match(/data-theme="dark".*?border-top-color: var\(--ks-color-nav-border-dark\)/m, block(".ks-nav-dropdown-menu > .ks-nav-item + .ks-nav-item"))
+  end
+
+  def test_page_background_reads_the_page_colour_role
+    assert_includes rule("html"), "background-color: var(--ks-color-page)"
+  end
+
+  def test_page_colour_role_defaults_to_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-page: transparent;/m, self.class.compiled)
+  end
+
+  def test_page_background_reads_the_dark_page_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-page-dark\)/m, block("html"))
+  end
+
+  def test_dark_page_colour_role_defaults_to_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-page-dark: transparent;/m, self.class.compiled)
+  end
+
+  def test_page_text_reads_the_on_page_colour_role
+    assert_includes rule("html"), " color: var(--ks-color-on-page)"
+  end
+
+  def test_on_page_colour_role_defaults_to_the_browser_text_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-page: CanvasText;/m, self.class.compiled)
+  end
+
+  def test_page_text_reads_the_dark_on_page_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-page-dark\)/m, block("html"))
+  end
+
+  def test_dark_on_page_colour_role_defaults_to_the_browser_text_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-page-dark: CanvasText;/m, self.class.compiled)
+  end
+
+  def test_on_accent_colour_role_defaults_to_the_shared_on_fill_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-accent: var\(--ks-color-on-fill\);/m, self.class.compiled)
+  end
+
+  def test_dark_on_accent_colour_role_defaults_to_the_shared_dark_on_fill_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-accent-dark: var\(--ks-color-on-fill-dark\);/m, self.class.compiled)
+  end
+
+  def test_on_neutral_colour_role_defaults_to_the_shared_on_fill_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-neutral: var\(--ks-color-on-fill\);/m, self.class.compiled)
+  end
+
+  def test_dark_on_neutral_colour_role_defaults_to_the_shared_dark_on_fill_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-neutral-dark: var\(--ks-color-on-fill-dark\);/m, self.class.compiled)
+  end
+
+  def test_on_danger_colour_role_defaults_to_the_shared_on_fill_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-danger: var\(--ks-color-on-fill\);/m, self.class.compiled)
+  end
+
+  def test_dark_on_danger_colour_role_defaults_to_the_shared_dark_on_fill_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-danger-dark: var\(--ks-color-on-fill-dark\);/m, self.class.compiled)
+  end
+
+  def test_modal_panel_text_reads_the_on_overlay_colour_role
+    assert_includes rule(".ks-modal-panel"), " color: var(--ks-color-on-overlay)"
+  end
+
+  def test_on_overlay_colour_role_defaults_to_the_inherited_text_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-overlay: currentcolor;/m, self.class.compiled)
+  end
+
+  def test_modal_panel_text_reads_the_dark_on_overlay_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-overlay-dark\)/m, block(".ks-modal-panel"))
+  end
+
+  def test_dark_on_overlay_colour_role_defaults_to_the_inherited_text_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-overlay-dark: currentcolor;/m, self.class.compiled)
+  end
+
+  def test_action_menu_text_reads_the_on_overlay_colour_role
+    assert_includes rule(".ks-action-menu"), " color: var(--ks-color-on-overlay)"
+  end
+
+  def test_action_menu_text_reads_the_dark_on_overlay_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-overlay-dark\)/m, block(".ks-action-menu"))
+  end
+
+  def test_menu_text_reads_the_on_surface_colour_role
+    assert_includes rule(".ks-menu"), " color: var(--ks-color-on-surface)"
+  end
+
+  def test_menu_text_reads_the_dark_on_surface_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-surface-dark\)/m, block(".ks-menu"))
+  end
+
+  def test_color_picker_panel_text_reads_the_on_overlay_colour_role
+    assert_includes rule(".ks-color-picker-panel"), " color: var(--ks-color-on-overlay)"
+  end
+
+  def test_color_picker_panel_text_reads_the_dark_on_overlay_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-overlay-dark\)/m, block(".ks-color-picker-panel"))
+  end
+
+  def test_settings_link_text_reads_the_on_hover_colour_role_on_hover
+    assert_match(/:hover.*? color: var\(--ks-color-on-hover\)/m, block(".ks-settings-link"))
+  end
+
+  def test_on_hover_colour_role_defaults_to_the_text_colour_role
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-hover: var\(--ks-color-text\);/m, self.class.compiled)
+  end
+
+  def test_settings_link_text_reads_the_dark_on_hover_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*? color: var\(--ks-color-on-hover-dark\)/m, block(".ks-settings-link"))
+  end
+
+  def test_dark_on_hover_colour_role_defaults_to_the_dark_text_colour_role
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-hover-dark: var\(--ks-color-text-dark\);/m, self.class.compiled)
+  end
+
+  def test_menu_option_text_reads_the_on_hover_muted_colour_role_on_hover
+    assert_match(/:hover.*? color: var\(--ks-color-on-hover-muted\)/m, block(".ks-menu-option"))
+  end
+
+  def test_on_hover_muted_colour_role_defaults_to_the_label_text_colour_role
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-hover-muted: var\(--ks-color-text-label\);/m, self.class.compiled)
+  end
+
+  def test_menu_option_text_reads_the_dark_on_hover_muted_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*? color: var\(--ks-color-on-hover-muted-dark\)/m, block(".ks-menu-option"))
+  end
+
+  def test_dark_on_hover_muted_colour_role_defaults_to_the_dark_label_text_colour_role
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-hover-muted-dark: var\(--ks-color-text-label-dark\);/m, self.class.compiled)
+  end
+
+  def test_menu_move_text_reads_the_on_hover_muted_colour_role_on_hover
+    assert_match(/:hover.*? color: var\(--ks-color-on-hover-muted\)/m, block(".ks-menu-move"))
+  end
+
+  def test_menu_move_text_reads_the_dark_on_hover_muted_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*? color: var\(--ks-color-on-hover-muted-dark\)/m, block(".ks-menu-move"))
+  end
+
+  def test_copy_button_text_reads_the_on_hover_muted_colour_role_on_hover
+    assert_match(/:hover.*? color: var\(--ks-color-on-hover-muted\)/m, block(".ks-copy-button"))
+  end
+
+  def test_copy_button_text_reads_the_dark_on_hover_muted_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*? color: var\(--ks-color-on-hover-muted-dark\)/m, block(".ks-copy-button"))
+  end
+
+  def test_on_overlay_muted_colour_role_defaults_to_the_secondary_text_colour_role
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-overlay-muted: var\(--ks-color-text-secondary\);/m, self.class.compiled)
+  end
+
+  def test_dark_on_overlay_muted_colour_role_defaults_to_the_dark_secondary_text_colour_role
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-overlay-muted-dark: var\(--ks-color-text-secondary-dark\);/m, self.class.compiled)
+  end
+
+  def test_on_surface_colour_role_defaults_to_the_inherited_text_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-surface: currentcolor;/m, self.class.compiled)
+  end
+
+  def test_dark_on_surface_colour_role_defaults_to_the_inherited_text_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-surface-dark: currentcolor;/m, self.class.compiled)
   end
 
   private

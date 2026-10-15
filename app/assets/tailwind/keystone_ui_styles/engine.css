@@ -86,8 +86,16 @@
     --ks-color-danger-dark: var(--color-red-600);
     --ks-color-danger-hover-dark: var(--color-red-500);
     --ks-color-on-fill-dark: var(--color-white);
+    --ks-color-on-danger: var(--ks-color-on-fill);
+    --ks-color-on-danger-dark: var(--ks-color-on-fill-dark);
+    --ks-color-on-neutral: var(--ks-color-on-fill);
+    --ks-color-on-neutral-dark: var(--ks-color-on-fill-dark);
+    --ks-color-on-accent: var(--ks-color-on-fill);
+    --ks-color-on-accent-dark: var(--ks-color-on-fill-dark);
     --ks-color-surface: var(--color-white);
     --ks-color-surface-dark: var(--color-surface-900);
+    --ks-color-on-surface: currentcolor;
+    --ks-color-on-surface-dark: currentcolor;
     --ks-color-border: var(--color-surface-200);
     --ks-color-border-dark: var(--color-surface-700);
     --ks-color-border-control: var(--ks-color-border-strong);
@@ -135,6 +143,10 @@
     --ks-color-backdrop: color-mix(in oklab, var(--color-black) 60%, transparent);
     --ks-color-overlay: var(--color-white);
     --ks-color-overlay-dark: var(--color-surface-800);
+    --ks-color-on-overlay: currentcolor;
+    --ks-color-on-overlay-dark: currentcolor;
+    --ks-color-on-overlay-muted: var(--ks-color-text-secondary);
+    --ks-color-on-overlay-muted-dark: var(--ks-color-text-secondary-dark);
     --ks-color-text-heading: var(--ks-color-text);
     --ks-color-text-heading-dark: var(--ks-color-text-dark);
     --ks-color-close: var(--ks-color-icon);
@@ -144,6 +156,10 @@
     --ks-color-ring-dark: color-mix(in oklab, var(--color-white) 10%, transparent);
     --ks-color-hover: var(--color-surface-50);
     --ks-color-hover-dark: var(--color-surface-800);
+    --ks-color-on-hover: var(--ks-color-text);
+    --ks-color-on-hover-dark: var(--ks-color-text-dark);
+    --ks-color-on-hover-muted: var(--ks-color-text-label);
+    --ks-color-on-hover-muted-dark: var(--ks-color-text-label-dark);
     --ks-color-border-strong: var(--color-surface-300);
     --ks-color-border-strong-dark: var(--color-surface-600);
     --ks-color-focus: var(--color-accent-500);
@@ -263,6 +279,14 @@
     --ks-color-link-strong-hover-dark: var(--color-accent-300);
     --ks-color-badge-neutral: var(--color-gray-100);
     --ks-color-badge-neutral-dark: var(--color-zinc-700);
+    --ks-color-page: transparent;
+    --ks-color-page-dark: transparent;
+    --ks-color-on-page: CanvasText;
+    --ks-color-on-page-dark: CanvasText;
+  }
+
+  html {
+    @apply bg-(color:--ks-color-page) text-(color:--ks-color-on-page) dark:bg-(color:--ks-color-page-dark) dark:text-(color:--ks-color-on-page-dark);
   }
 }
 
@@ -272,15 +296,15 @@
   }
 
   .ks-button-primary {
-    @apply bg-(color:--ks-color-accent) text-(color:--ks-color-on-fill) hover:bg-(color:--ks-color-accent-hover) dark:bg-(color:--ks-color-accent-dark) dark:text-(color:--ks-color-on-fill-dark) dark:hover:bg-(color:--ks-color-accent-hover-dark);
+    @apply bg-(color:--ks-color-accent) text-(color:--ks-color-on-accent) hover:bg-(color:--ks-color-accent-hover) dark:bg-(color:--ks-color-accent-dark) dark:text-(color:--ks-color-on-accent-dark) dark:hover:bg-(color:--ks-color-accent-hover-dark);
   }
 
   .ks-button-secondary {
-    @apply bg-(color:--ks-color-neutral) text-(color:--ks-color-on-fill) hover:bg-(color:--ks-color-neutral-hover) dark:bg-(color:--ks-color-neutral-dark) dark:text-(color:--ks-color-on-fill-dark) dark:hover:bg-(color:--ks-color-neutral-hover-dark);
+    @apply bg-(color:--ks-color-neutral) text-(color:--ks-color-on-neutral) hover:bg-(color:--ks-color-neutral-hover) dark:bg-(color:--ks-color-neutral-dark) dark:text-(color:--ks-color-on-neutral-dark) dark:hover:bg-(color:--ks-color-neutral-hover-dark);
   }
 
   .ks-button-danger {
-    @apply bg-(color:--ks-color-danger) text-(color:--ks-color-on-fill) hover:bg-(color:--ks-color-danger-hover) dark:bg-(color:--ks-color-danger-dark) dark:text-(color:--ks-color-on-fill-dark) dark:hover:bg-(color:--ks-color-danger-hover-dark);
+    @apply bg-(color:--ks-color-danger) text-(color:--ks-color-on-danger) hover:bg-(color:--ks-color-danger-hover) dark:bg-(color:--ks-color-danger-dark) dark:text-(color:--ks-color-on-danger-dark) dark:hover:bg-(color:--ks-color-danger-hover-dark);
   }
 
   .ks-button-sm {
@@ -536,7 +560,7 @@
   }
 
   .ks-modal-panel {
-    @apply rounded-[calc(var(--ks-radius-surface)*1.5)] border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-overlay) p-[calc(var(--ks-spacing)*6)] mx-[calc(var(--ks-spacing)*4)] dark:border-(color:--ks-color-border-dark) dark:bg-(color:--ks-color-overlay-dark);
+    @apply rounded-[calc(var(--ks-radius-surface)*1.5)] border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-overlay) text-(color:--ks-color-on-overlay) p-[calc(var(--ks-spacing)*6)] mx-[calc(var(--ks-spacing)*4)] dark:border-(color:--ks-color-border-dark) dark:bg-(color:--ks-color-overlay-dark) dark:text-(color:--ks-color-on-overlay-dark);
   }
 
   .ks-modal-header {
@@ -552,7 +576,7 @@
   }
 
   .ks-action-menu {
-    @apply mt-[calc(var(--ks-spacing)*2)] rounded-[calc(var(--ks-radius-surface)*0.75)] bg-(color:--ks-color-overlay) py-[calc(var(--ks-spacing)*1)] shadow-(--ks-shadow-overlay) ring-(length:--ks-border-width) ring-(color:--ks-color-ring) dark:bg-(color:--ks-color-overlay-dark) dark:ring-(color:--ks-color-ring-dark);
+    @apply mt-[calc(var(--ks-spacing)*2)] rounded-[calc(var(--ks-radius-surface)*0.75)] bg-(color:--ks-color-overlay) text-(color:--ks-color-on-overlay) py-[calc(var(--ks-spacing)*1)] shadow-(--ks-shadow-overlay) ring-(length:--ks-border-width) ring-(color:--ks-color-ring) dark:bg-(color:--ks-color-overlay-dark) dark:text-(color:--ks-color-on-overlay-dark) dark:ring-(color:--ks-color-ring-dark);
   }
 
   .ks-action-menu-button {
@@ -560,7 +584,7 @@
   }
 
   .ks-menu {
-    @apply mt-[calc(var(--ks-spacing)*1)] rounded-[calc(var(--ks-radius-surface)*0.75)] border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-surface) shadow-(--ks-shadow-overlay) dark:border-(color:--ks-color-border-dark) dark:bg-(color:--ks-color-surface-dark);
+    @apply mt-[calc(var(--ks-spacing)*1)] rounded-[calc(var(--ks-radius-surface)*0.75)] border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-surface) text-(color:--ks-color-on-surface) shadow-(--ks-shadow-overlay) dark:border-(color:--ks-color-border-dark) dark:bg-(color:--ks-color-surface-dark) dark:text-(color:--ks-color-on-surface-dark);
   }
 
   .ks-menu-trigger {
@@ -568,7 +592,7 @@
   }
 
   .ks-menu-option {
-    @apply gap-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) hover:bg-(color:--ks-color-hover) dark:text-(color:--ks-color-text-label-dark) dark:hover:bg-(color:--ks-color-hover-dark);
+    @apply gap-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) hover:bg-(color:--ks-color-hover) hover:text-(color:--ks-color-on-hover-muted) dark:text-(color:--ks-color-text-label-dark) dark:hover:bg-(color:--ks-color-hover-dark) dark:hover:text-(color:--ks-color-on-hover-muted-dark);
   }
 
   .ks-menu-option-hidden {
@@ -576,7 +600,7 @@
   }
 
   .ks-menu-move {
-    @apply px-[calc(var(--ks-spacing)*2)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark) hover:bg-(color:--ks-color-hover) dark:hover:bg-(color:--ks-color-hover-dark) disabled:opacity-40;
+    @apply px-[calc(var(--ks-spacing)*2)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark) hover:bg-(color:--ks-color-hover) hover:text-(color:--ks-color-on-hover-muted) dark:hover:bg-(color:--ks-color-hover-dark) dark:hover:text-(color:--ks-color-on-hover-muted-dark) disabled:opacity-40;
   }
 
   .ks-menu-checkbox {
@@ -584,7 +608,7 @@
   }
 
   .ks-copy-button {
-    @apply gap-[calc(var(--ks-spacing)*1.5)] rounded-[calc(var(--ks-radius-control)*0.75)] border-(length:--ks-border-width) border-(color:--ks-color-border-strong) bg-(color:--ks-color-overlay) px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*1.5)] font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-label) hover:bg-(color:--ks-color-hover-raised) dark:border-(color:--ks-color-border-strong-dark) dark:bg-(color:--ks-color-overlay-dark) dark:text-(color:--ks-color-text-label-dark) dark:hover:bg-(color:--ks-color-hover-raised-dark);
+    @apply gap-[calc(var(--ks-spacing)*1.5)] rounded-[calc(var(--ks-radius-control)*0.75)] border-(length:--ks-border-width) border-(color:--ks-color-border-strong) bg-(color:--ks-color-overlay) px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*1.5)] font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-label) hover:bg-(color:--ks-color-hover-raised) hover:text-(color:--ks-color-on-hover-muted) dark:border-(color:--ks-color-border-strong-dark) dark:bg-(color:--ks-color-overlay-dark) dark:text-(color:--ks-color-text-label-dark) dark:hover:bg-(color:--ks-color-hover-raised-dark) dark:hover:text-(color:--ks-color-on-hover-muted-dark);
   }
 
   .ks-theme-toggle-option {
@@ -624,7 +648,7 @@
   }
 
   .ks-radio-card-disclosure {
-    @apply mt-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-overlay) p-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-text-secondary) shadow-(--ks-shadow-overlay) dark:border-(color:--ks-color-border-dark) dark:bg-(color:--ks-color-overlay-dark) dark:text-(color:--ks-color-text-secondary-dark) space-y-[calc(var(--ks-spacing)*1)];
+    @apply mt-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-overlay) p-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-on-overlay-muted) shadow-(--ks-shadow-overlay) dark:border-(color:--ks-color-border-dark) dark:bg-(color:--ks-color-overlay-dark) dark:text-(color:--ks-color-on-overlay-muted-dark) space-y-[calc(var(--ks-spacing)*1)];
   }
 
   .ks-radio-card-info {
@@ -704,7 +728,7 @@
   }
 
   .ks-color-picker-panel {
-    @apply mt-[calc(var(--ks-spacing)*2)] p-[calc(var(--ks-spacing)*3)] rounded-(--ks-radius-surface) shadow-(--ks-shadow-overlay) bg-(color:--ks-color-overlay) border-(length:--ks-border-width) border-(color:--ks-color-border) dark:bg-(color:--ks-color-overlay-dark) dark:border-(color:--ks-color-border-dark);
+    @apply mt-[calc(var(--ks-spacing)*2)] p-[calc(var(--ks-spacing)*3)] rounded-(--ks-radius-surface) shadow-(--ks-shadow-overlay) bg-(color:--ks-color-overlay) text-(color:--ks-color-on-overlay) border-(length:--ks-border-width) border-(color:--ks-color-border) dark:bg-(color:--ks-color-overlay-dark) dark:text-(color:--ks-color-on-overlay-dark) dark:border-(color:--ks-color-border-dark);
   }
 
   .ks-metric-card {
@@ -728,7 +752,7 @@
   }
 
   .ks-stat-card-disclosure {
-    @apply mt-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-overlay) p-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-text-secondary) shadow-(--ks-shadow-overlay) dark:border-(color:--ks-color-border-dark) dark:bg-(color:--ks-color-overlay-dark) dark:text-(color:--ks-color-text-secondary-dark) space-y-[calc(var(--ks-spacing)*1)];
+    @apply mt-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-overlay) p-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-on-overlay-muted) shadow-(--ks-shadow-overlay) dark:border-(color:--ks-color-border-dark) dark:bg-(color:--ks-color-overlay-dark) dark:text-(color:--ks-color-on-overlay-muted-dark) space-y-[calc(var(--ks-spacing)*1)];
   }
 
   .ks-stat-card-emphasis {
@@ -980,7 +1004,7 @@
   }
 
   .ks-tab {
-    @apply rounded-(--ks-radius-surface) px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*2)] font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text-muted) hover:text-(color:--ks-color-text) dark:text-(color:--ks-color-text-muted-dark) dark:hover:text-(color:--ks-color-text-dark);
+    @apply rounded-(--ks-radius-surface) px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*2)] font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text-muted) hover:text-(color:--ks-color-on-hover) dark:text-(color:--ks-color-text-muted-dark) dark:hover:text-(color:--ks-color-on-hover-dark);
   }
 
   .ks-tab-active {
@@ -1298,7 +1322,7 @@
   }
 
   .ks-settings-link {
-    @apply px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-text-option) hover:bg-(color:--ks-color-hover-soft) dark:text-(color:--ks-color-text-option-dark) dark:hover:bg-(color:--ks-color-hover-soft-dark);
+    @apply px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-text-option) hover:bg-(color:--ks-color-hover-soft) hover:text-(color:--ks-color-on-hover) dark:text-(color:--ks-color-text-option-dark) dark:hover:bg-(color:--ks-color-hover-soft-dark) dark:hover:text-(color:--ks-color-on-hover-dark);
   }
 
   .ks-settings-link-label {
