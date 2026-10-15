@@ -4769,6 +4769,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?:hover.*? color: var\(--ks-color-on-hover-muted-dark\)/m, block(".ks-menu-move"))
   end
 
+  def test_copy_button_text_reads_the_on_hover_muted_colour_role_on_hover
+    assert_match(/:hover.*? color: var\(--ks-color-on-hover-muted\)/m, block(".ks-copy-button"))
+  end
+
   private
 
   def block(selector)
