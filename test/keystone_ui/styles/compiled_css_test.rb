@@ -4705,6 +4705,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-overlay-dark: currentcolor;/m, self.class.compiled)
   end
 
+  def test_action_menu_text_reads_the_on_overlay_colour_role
+    assert_includes rule(".ks-action-menu"), " color: var(--ks-color-on-overlay)"
+  end
+
   private
 
   def block(selector)
