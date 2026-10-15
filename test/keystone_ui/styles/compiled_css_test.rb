@@ -4633,6 +4633,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-top-color: var\(--ks-color-nav-border-dark\)/m, block(".ks-nav-dropdown-menu > .ks-nav-item + .ks-nav-item"))
   end
 
+  def test_page_background_reads_the_page_colour_role
+    assert_includes rule("html"), "background-color: var(--ks-color-page)"
+  end
+
   private
 
   def block(selector)

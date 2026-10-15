@@ -264,6 +264,10 @@
     --ks-color-badge-neutral: var(--color-gray-100);
     --ks-color-badge-neutral-dark: var(--color-zinc-700);
   }
+
+  html {
+    @apply bg-(color:--ks-color-page);
+  }
 }
 
 @layer components {
