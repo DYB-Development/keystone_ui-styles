@@ -1707,8 +1707,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stat-card-disclosure"), "padding: calc(var(--ks-spacing) * 3)"
   end
 
-  def test_stat_card_disclosure_text_reads_the_text_secondary_colour_role
-    assert_includes block(".ks-stat-card-disclosure"), "color: var(--ks-color-text-secondary)"
+  def test_stat_card_disclosure_text_reads_the_on_overlay_muted_colour_role
+    assert_includes block(".ks-stat-card-disclosure"), "color: var(--ks-color-on-overlay-muted)"
   end
 
   def test_stat_card_disclosure_shadow_reads_the_overlay_shadow_variable
