@@ -5033,6 +5033,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-bar-chart-bar-shaded"), "opacity: 40%"
   end
 
+  def test_bar_chart_grid_reads_the_border_colour_role
+    assert_includes rule(".ks-bar-chart-grid"), "stroke: var(--ks-color-border)"
+  end
+
   private
 
   def block(selector)
