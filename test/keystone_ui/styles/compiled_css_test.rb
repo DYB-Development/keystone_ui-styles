@@ -5105,6 +5105,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-stat-card-fallback"), "color: var(--ks-color-text-muted)"
   end
 
+  def test_stat_fallback_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-stat-card-fallback"))
+  end
+
   private
 
   def block(selector)
