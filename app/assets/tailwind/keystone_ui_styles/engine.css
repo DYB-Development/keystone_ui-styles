@@ -407,7 +407,7 @@
   }
 
   .ks-page-header-title {
-    @apply font-(family-name:--ks-font-heading) text-2xl font-[weight:calc(var(--ks-font-weight-heading)+100)] text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+    @apply text-2xl font-[weight:calc(var(--ks-font-weight-heading)+100)] text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 
   .ks-page-header-subtitle {
@@ -435,7 +435,7 @@
   }
 
   .ks-section-title {
-    @apply font-(family-name:--ks-font-heading) text-lg font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+    @apply text-lg font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 
   .ks-section-subtitle {
@@ -459,7 +459,7 @@
   }
 
   .ks-card-title {
-    @apply font-(family-name:--ks-font-heading) text-lg font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark) m-0;
+    @apply text-lg font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark) m-0;
   }
 
   .ks-card-summary {
@@ -583,7 +583,7 @@
   }
 
   .ks-modal-title {
-    @apply font-(family-name:--ks-font-heading) font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text-heading) dark:text-(color:--ks-color-text-heading-dark);
+    @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text-heading) dark:text-(color:--ks-color-text-heading-dark);
   }
 
   .ks-modal-close {
@@ -1309,7 +1309,7 @@
   }
 
   .ks-navbar-title {
-    @apply font-(family-name:--ks-font-heading) font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+    @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 
   .ks-mobile-header-title {
@@ -1417,7 +1417,7 @@
   }
 
   .ks-page-title {
-    @apply font-(family-name:--ks-font-heading) font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+    @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 }
 

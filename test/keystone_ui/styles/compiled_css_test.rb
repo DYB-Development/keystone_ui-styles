@@ -4805,30 +4805,6 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-font-heading: var\(--ks-font-body\);/m, self.class.compiled)
   end
 
-  def test_page_title_font_reads_the_heading_font_variable
-    assert_includes rule(".ks-page-title"), "font-family: var(--ks-font-heading)"
-  end
-
-  def test_page_header_title_font_reads_the_heading_font_variable
-    assert_includes rule(".ks-page-header-title"), "font-family: var(--ks-font-heading)"
-  end
-
-  def test_section_title_font_reads_the_heading_font_variable
-    assert_includes rule(".ks-section-title"), "font-family: var(--ks-font-heading)"
-  end
-
-  def test_card_title_font_reads_the_heading_font_variable
-    assert_includes rule(".ks-card-title"), "font-family: var(--ks-font-heading)"
-  end
-
-  def test_modal_title_font_reads_the_heading_font_variable
-    assert_includes rule(".ks-modal-title"), "font-family: var(--ks-font-heading)"
-  end
-
-  def test_navbar_title_font_reads_the_heading_font_variable
-    assert_includes rule(".ks-navbar-title"), "font-family: var(--ks-font-heading)"
-  end
-
   def test_mono_font_variable_defaults_to_the_mono_font_code_has_today
     assert_match(/@layer base \{.*?:root \{.*?--ks-font-mono: var\(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace\);/m, self.class.compiled)
   end
@@ -4851,6 +4827,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
 
   def test_title_font_is_read_in_the_base_layer_at_zero_specificity_so_an_app_heading_rule_outranks_it
     assert_match(/@layer base \{.*?^  :where\(\.ks-page-title, \.ks-page-header-title, \.ks-section-title, \.ks-card-title, \.ks-modal-title, \.ks-navbar-title\) \{\n    font-family: var\(--ks-font-heading\);/m, self.class.compiled)
+  end
+
+  def test_title_classes_set_no_font_of_their_own_in_the_components_layer
+    assert_empty(%w[.ks-page-title .ks-page-header-title .ks-section-title .ks-card-title .ks-modal-title .ks-navbar-title].select { |title| block(title).include?("font-family") })
   end
 
   private
