@@ -4729,6 +4729,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*? color: var\(--ks-color-on-overlay-dark\)/m, block(".ks-color-picker-panel"))
   end
 
+  def test_settings_link_text_reads_the_on_hover_colour_role_on_hover
+    assert_match(/:hover.*? color: var\(--ks-color-on-hover\)/m, block(".ks-settings-link"))
+  end
+
   private
 
   def block(selector)
