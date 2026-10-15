@@ -163,8 +163,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*\-\-ks\-color\-neutral\-hover:\ var\(\-\-color\-gray\-400\)/m, self.class.compiled)
   end
 
-  def test_secondary_button_text_reads_the_on_fill_colour_role
-    assert_includes rule(".ks-button-secondary"), "color: var(--ks-color-on-fill)"
+  def test_secondary_button_text_reads_the_on_neutral_colour_role
+    assert_includes rule(".ks-button-secondary"), "color: var(--ks-color-on-neutral)"
   end
 
   def test_danger_colour_role_defaults_to_red_600
