@@ -265,6 +265,7 @@
     --ks-color-badge-neutral-dark: var(--color-zinc-700);
     --ks-color-page: transparent;
     --ks-color-page-dark: transparent;
+    --ks-color-on-page: CanvasText;
   }
 
   html {

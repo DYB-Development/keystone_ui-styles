@@ -4653,6 +4653,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule("html"), " color: var(--ks-color-on-page)"
   end
 
+  def test_on_page_colour_role_defaults_to_the_browser_text_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-page: CanvasText;/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
