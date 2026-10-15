@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Added
+- `--ks-color-page` and `--ks-color-on-page` and their `-dark` partners set the `html` element background and text, defaulting to transparent and the browser text colour so a page looks as it did.
+- `--ks-color-on-accent`, `--ks-color-on-neutral` and `--ks-color-on-danger` and their `-dark` partners set the primary, secondary and danger button labels, defaulting to `--ks-color-on-fill`.
+- `--ks-color-on-overlay` and its `-dark` partner set the text of the dialog, action menu, menu and colour picker, defaulting to the colour each inherits.
+- `--ks-color-on-hover` and its `-dark` partner set the text of a hovered settings link and tab, defaulting to `--ks-color-text`.
+
 ## [0.17.0] - 2026-10-14
 
 ### Added
