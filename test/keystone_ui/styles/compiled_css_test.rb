@@ -4965,6 +4965,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-secondary-dark\)/m, block(".ks-value-list-label"))
   end
 
+  def test_value_list_note_sits_on_its_own_line_under_the_label
+    assert_includes rule(".ks-value-list-note"), "display: block"
+  end
+
   private
 
   def block(selector)
