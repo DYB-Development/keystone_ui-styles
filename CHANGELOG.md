@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.20.0] - 2026-10-15
+
 ### Added
 - `ks-value-list-row`, `ks-value-list-label`, `ks-value-list-note` and `ks-value-list-value` draw rows of a label and its value, with a line between rows, a muted note under the label and digits of equal width.
 - `ks-value-list-end` on the list pushes each value to the right end of its row and aligns it right, as amounts in a ledger are.
