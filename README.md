@@ -67,7 +67,8 @@ any layer overrides them wherever it is imported.
 | `--ks-color-accent`, `--ks-color-accent-hover` | Primary button fill, and on hover | `--color-accent-600`, `--color-accent-500` |
 | `--ks-color-neutral`, `--ks-color-neutral-hover` | Secondary button fill, and on hover | `--color-gray-500`, `--color-gray-400` |
 | `--ks-color-danger`, `--ks-color-danger-hover` | Danger button fill, and on hover | `--color-red-600`, `--color-red-500` |
-| `--ks-color-on-fill` | Button label colour | `--color-white` |
+| `--ks-color-on-fill` | The label colour the primary, secondary and danger button label colours default to | `--color-white` |
+| `--ks-color-on-accent`, `--ks-color-on-neutral`, `--ks-color-on-danger` | Primary, secondary and danger button label | `--ks-color-on-fill` |
 | `--ks-color-surface` | Panel, card and input background | `--color-white`, and `--color-surface-900` on a dark page |
 | `--ks-color-border` | Panel and card border | `--color-surface-200` |
 | `--ks-color-border-control` | Input border | `--color-gray-300` |
@@ -78,6 +79,7 @@ any layer overrides them wherever it is imported.
 | `--ks-shadow-overlay` | Menu, dialog and colour picker shadow | `--shadow-lg` |
 | `--ks-font-weight-medium` | Copy button, checkbox row and radio card label weight | `--font-weight-medium` |
 | `--ks-color-overlay` | Dialog, action menu, copy button and colour picker background | `--color-white` |
+| `--ks-color-on-overlay` | Dialog, action menu, menu and colour picker text | `currentcolor`, so each keeps the text colour it inherits |
 | `--ks-color-backdrop` | The dimmed page behind a dialog | Black at 60% |
 | `--ks-color-text-heading` | Dialog title | `--color-gray-900` |
 | `--ks-color-close`, `--ks-color-close-hover` | Dialog close button, and on hover | `--color-gray-400`, `--color-gray-600` |
@@ -122,9 +124,11 @@ any layer overrides them wherever it is imported.
 | `--ks-shadow-menu` | Desktop nav menu shadow | `--shadow-md` |
 | `--ks-font-weight-normal` | Mobile header subtitle weight | `--font-weight-normal` |
 | `--ks-color-hover-soft` | Settings link on hover | `--color-gray-50` |
+| `--ks-color-on-hover` | Settings link and tab text on hover | `--ks-color-text` |
 | `--ks-color-focus` | Input and checkbox focus border and ring | `--color-accent-500`, and `--color-accent-400` on a dark page |
 | `--ks-color-link-strong-hover` | Section action and card link on hover | `--color-accent-900`, and `--color-accent-300` on a dark page |
 | `--ks-color-badge-neutral` | Neutral badge background | `--color-gray-100`, and `--color-zinc-700` on a dark page |
+| `--ks-color-page`, `--ks-color-on-page` | The `html` element background and text | `transparent` and `CanvasText`, the browser defaults, so a page keeps the colours it has |
 Each colour variable in the table whose component changes on a dark page has a
 `-dark` partner, such as `--ks-color-surface-dark`, that it reads there.
 
@@ -137,7 +141,7 @@ them, and setting one of them on its own still overrides it:
 
 | Base role | Roles that follow it |
 |---|---|
-| `--ks-color-text` | `text-display`, `text-heading`, `text-option`, `text-choice`, `nav-link` |
+| `--ks-color-text` | `text-display`, `text-heading`, `text-option`, `text-choice`, `nav-link`, `on-hover` |
 | `--ks-color-text-muted` | `text-display-muted`, `text-choice-muted`, `text-option-muted`, `nav-text` |
 | `--ks-color-text-secondary` | `text-body` |
 | `--ks-color-text-label` | `text-meter-label`, `nav-text-hover` |
@@ -148,6 +152,7 @@ them, and setting one of them on its own still overrides it:
 | `--ks-color-overlay` | `raised` |
 | `--ks-color-hover` | `fill-muted`, `hover-raised`, `hover-soft`, `table-head`, `nav-hover` |
 | `--ks-color-link` | `nav-active`, `nav-indicator` |
+| `--ks-color-on-fill` | `on-accent`, `on-neutral`, `on-danger` |
 
 The base roles draw from the surface scale, which keystone_ui-colors sets per
 account. The nav roles read the old `--base-*` variables first when a host sets
