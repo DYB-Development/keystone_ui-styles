@@ -483,7 +483,7 @@
   }
 
   .ks-value-list-label {
-    @apply shrink-0 basis-2/5 text-(color:--ks-color-text-secondary);
+    @apply shrink-0 basis-2/5 text-(color:--ks-color-text-secondary) dark:text-(color:--ks-color-text-secondary-dark);
   }
 
   .ks-card {
