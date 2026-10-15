@@ -443,7 +443,7 @@
   }
 
   .ks-heading {
-    @apply text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+    @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 
   .ks-card {
