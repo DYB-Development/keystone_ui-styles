@@ -5057,6 +5057,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-bar-chart-value"), "fill: var(--ks-color-text)"
   end
 
+  def test_bar_chart_value_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?fill: var\(--ks-color-text-dark\)/m, block(".ks-bar-chart-value"))
+  end
+
   private
 
   def block(selector)

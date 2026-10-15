@@ -531,7 +531,7 @@
   }
 
   .ks-bar-chart-value {
-    @apply fill-(--ks-color-text);
+    @apply fill-(--ks-color-text) dark:fill-(--ks-color-text-dark);
   }
 
   .ks-card {
