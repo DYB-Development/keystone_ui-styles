@@ -4717,6 +4717,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-menu"), " color: var(--ks-color-on-overlay)"
   end
 
+  def test_menu_text_reads_the_dark_on_overlay_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-overlay-dark\)/m, block(".ks-menu"))
+  end
+
   private
 
   def block(selector)
