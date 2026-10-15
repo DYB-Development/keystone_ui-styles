@@ -79,7 +79,9 @@ any layer overrides them wherever it is imported.
 | `--ks-shadow-overlay` | Menu, dialog and colour picker shadow | `--shadow-lg` |
 | `--ks-font-weight-medium` | Copy button, checkbox row and radio card label weight | `--font-weight-medium` |
 | `--ks-color-overlay` | Dialog, action menu, copy button and colour picker background | `--color-white` |
-| `--ks-color-on-overlay` | Dialog, action menu, menu and colour picker text | `currentcolor`, so each keeps the text colour it inherits |
+| `--ks-color-on-overlay` | Dialog, action menu and colour picker text | `currentcolor`, so each keeps the text colour it inherits |
+| `--ks-color-on-overlay-muted` | Radio card and stat card disclosure text | `--ks-color-text-secondary` |
+| `--ks-color-on-surface` | Menu text | `currentcolor`, so it keeps the text colour it inherits |
 | `--ks-color-backdrop` | The dimmed page behind a dialog | Black at 60% |
 | `--ks-color-text-heading` | Dialog title | `--color-gray-900` |
 | `--ks-color-close`, `--ks-color-close-hover` | Dialog close button, and on hover | `--color-gray-400`, `--color-gray-600` |
@@ -125,6 +127,7 @@ any layer overrides them wherever it is imported.
 | `--ks-font-weight-normal` | Mobile header subtitle weight | `--font-weight-normal` |
 | `--ks-color-hover-soft` | Settings link on hover | `--color-gray-50` |
 | `--ks-color-on-hover` | Settings link and tab text on hover | `--ks-color-text` |
+| `--ks-color-on-hover-muted` | Menu option, menu move button and copy button text on hover | `--ks-color-text-label` |
 | `--ks-color-focus` | Input and checkbox focus border and ring | `--color-accent-500`, and `--color-accent-400` on a dark page |
 | `--ks-color-link-strong-hover` | Section action and card link on hover | `--color-accent-900`, and `--color-accent-300` on a dark page |
 | `--ks-color-badge-neutral` | Neutral badge background | `--color-gray-100`, and `--color-zinc-700` on a dark page |
@@ -143,8 +146,8 @@ them, and setting one of them on its own still overrides it:
 |---|---|
 | `--ks-color-text` | `text-display`, `text-heading`, `text-option`, `text-choice`, `nav-link`, `on-hover` |
 | `--ks-color-text-muted` | `text-display-muted`, `text-choice-muted`, `text-option-muted`, `nav-text` |
-| `--ks-color-text-secondary` | `text-body` |
-| `--ks-color-text-label` | `text-meter-label`, `nav-text-hover` |
+| `--ks-color-text-secondary` | `text-body`, `on-overlay-muted` |
+| `--ks-color-text-label` | `text-meter-label`, `nav-text-hover`, `on-hover-muted` |
 | `--ks-color-icon` | `close`, `icon-soft` |
 | `--ks-color-border` | `border-subtle`, `track`, `divider`, `nav-border` |
 | `--ks-color-border-strong` | `border-control`, `border-choice` |
