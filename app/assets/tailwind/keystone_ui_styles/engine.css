@@ -471,7 +471,7 @@
   }
 
   .ks-paragraph {
-    @apply text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+    @apply leading-relaxed text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 
   .ks-card {

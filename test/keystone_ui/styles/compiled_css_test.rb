@@ -4917,6 +4917,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-paragraph"))
   end
 
+  def test_paragraph_spaces_its_lines_for_reading
+    assert_includes rule(".ks-paragraph"), "line-height: var(--leading-relaxed)"
+  end
+
   private
 
   def block(selector)
