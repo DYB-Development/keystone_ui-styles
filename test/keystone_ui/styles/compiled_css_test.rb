@@ -5030,7 +5030,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_a_page_following_the_device_lets_the_browser_follow_it_too
-    assert_match(/^  html:not\(\[data-theme\]\) \{\n    color-scheme: light dark;/m, self.class.compiled)
+    assert_match(/^\s*html:not\(\[data-theme\]\) \{\n\s*color-scheme: light dark;/m, self.class.compiled)
   end
 
   def test_bar_chart_bar_reads_the_first_chart_colour
@@ -5079,6 +5079,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
 
   def test_dark_colours_apply_on_screens_only_so_a_dark_page_prints_light
     assert_match(/@media screen.*?data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-heading"))
+  end
+
+  def test_a_dark_page_tells_the_browser_it_is_dark_on_screens_only
+    assert_match(/@media screen \{\s*html:not\(\[data-theme\]\) \{\s*color-scheme: light dark;\s*\}\s*html\[data-theme="dark"\] \{\s*color-scheme: dark;/m, self.class.compiled)
   end
 
   private
