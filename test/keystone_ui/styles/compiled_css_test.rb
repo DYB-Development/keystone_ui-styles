@@ -4753,6 +4753,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-hover-muted: var\(--ks-color-text-label\);/m, self.class.compiled)
   end
 
+  def test_menu_option_text_reads_the_dark_on_hover_muted_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*? color: var\(--ks-color-on-hover-muted-dark\)/m, block(".ks-menu-option"))
+  end
+
   private
 
   def block(selector)
