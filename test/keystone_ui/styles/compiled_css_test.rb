@@ -4937,6 +4937,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/padding-(block|top): calc\(var\(--ks-spacing\) \* 2\)/, rule(".ks-value-list-row"))
   end
 
+  def test_value_list_draws_a_line_between_rows
+    assert_includes rule(".ks-value-list-row + .ks-value-list-row"), "border-top-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)
