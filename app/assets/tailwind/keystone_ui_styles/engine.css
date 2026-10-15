@@ -543,7 +543,7 @@
   }
 
   .ks-stat-card-note {
-    @apply text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+    @apply mt-[calc(var(--ks-spacing)*1)] text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 
   .ks-card {

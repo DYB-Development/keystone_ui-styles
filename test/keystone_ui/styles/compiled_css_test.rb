@@ -5097,6 +5097,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-stat-card-note"))
   end
 
+  def test_stat_note_sits_just_under_the_value
+    assert_includes rule(".ks-stat-card-note"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)
