@@ -4913,6 +4913,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-paragraph"), "color: var(--ks-color-text)"
   end
 
+  def test_paragraph_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-paragraph"))
+  end
+
   private
 
   def block(selector)
