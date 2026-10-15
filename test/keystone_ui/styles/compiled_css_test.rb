@@ -5101,6 +5101,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-stat-card-note"), "margin-top: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_stat_fallback_reads_the_muted_text_colour_role
+    assert_includes rule(".ks-stat-card-fallback"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)
