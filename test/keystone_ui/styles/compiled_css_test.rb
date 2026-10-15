@@ -5053,6 +5053,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-bar-chart-text"), "font-size: var(--text-xs)"
   end
 
+  def test_bar_chart_value_reads_the_text_colour_role
+    assert_includes rule(".ks-bar-chart-value"), "fill: var(--ks-color-text)"
+  end
+
   private
 
   def block(selector)
