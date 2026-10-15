@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Added
+- `ks-heading` draws a heading in the heading font, heading weight and text colour, and `ks-heading-sm`, `ks-heading-md` and `ks-heading-lg` set its size.
+- `ks-heading-row` and `ks-heading-note` place a short muted note at the right end of a heading's row.
+- `ks-caption` draws small, uppercase, widely spaced muted text for placing above a title or figure.
+- `ks-paragraph` draws running text in the text colour with relaxed line spacing.
+
 ## [0.18.0] - 2026-10-15
 
 ### Added
