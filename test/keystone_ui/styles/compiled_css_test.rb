@@ -4853,6 +4853,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/^  :where\([^)]*\.ks-heading[,)][^{]*\{\n    font-family: var\(--ks-font-heading\);/m, self.class.compiled)
   end
 
+  def test_small_heading_is_large_text
+    assert_includes rule(".ks-heading-sm"), "font-size: var(--text-lg)"
+  end
+
   private
 
   def block(selector)
