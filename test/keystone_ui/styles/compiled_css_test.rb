@@ -4825,6 +4825,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-modal-title"), "font-family: var(--ks-font-heading)"
   end
 
+  def test_navbar_title_font_reads_the_heading_font_variable
+    assert_includes rule(".ks-navbar-title"), "font-family: var(--ks-font-heading)"
+  end
+
   private
 
   def block(selector)
