@@ -2639,8 +2639,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-tab"))
   end
 
-  def test_tab_text_reads_the_text_dark_colour_role_on_a_dark_page_and_on_hover
-    assert_match(/data-theme="dark".*?:hover.*?color: var\(--ks-color-text-dark\)/m, block(".ks-tab"))
+  def test_tab_text_reads_the_dark_on_hover_colour_role_on_a_dark_page_and_on_hover
+    assert_match(/data-theme="dark".*?:hover.*?color: var\(--ks-color-on-hover-dark\)/m, block(".ks-tab"))
   end
 
   def test_tab_active_fill_reads_the_tint_colour_role_when_active
