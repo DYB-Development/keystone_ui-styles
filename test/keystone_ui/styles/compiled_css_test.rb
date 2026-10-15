@@ -4865,6 +4865,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-heading-lg"), "font-size: var(--text-4xl)"
   end
 
+  def test_heading_row_pushes_the_note_to_the_right
+    assert_includes rule(".ks-heading-row"), "justify-content: space-between"
+  end
+
   private
 
   def block(selector)
