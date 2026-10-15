@@ -4781,6 +4781,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-overlay-muted: var\(--ks-color-text-secondary\);/m, self.class.compiled)
   end
 
+  def test_dark_on_overlay_muted_colour_role_defaults_to_the_dark_secondary_text_colour_role
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-overlay-muted-dark: var\(--ks-color-text-secondary-dark\);/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

@@ -144,6 +144,7 @@
     --ks-color-on-overlay: currentcolor;
     --ks-color-on-overlay-dark: currentcolor;
     --ks-color-on-overlay-muted: var(--ks-color-text-secondary);
+    --ks-color-on-overlay-muted-dark: var(--ks-color-text-secondary-dark);
     --ks-color-text-heading: var(--ks-color-text);
     --ks-color-text-heading-dark: var(--ks-color-text-dark);
     --ks-color-close: var(--ks-color-icon);
