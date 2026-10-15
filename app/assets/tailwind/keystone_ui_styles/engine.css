@@ -527,7 +527,7 @@
   }
 
   .ks-bar-chart-text {
-    @apply fill-(--ks-color-text-muted);
+    @apply fill-(--ks-color-text-muted) dark:fill-(--ks-color-text-muted-dark);
   }
 
   .ks-card {
