@@ -59,7 +59,10 @@ any layer overrides them wherever it is imported.
 | `--ks-radius-control` | Button corner radius, and three quarters of it for inputs | `--radius-lg` |
 | `--ks-radius-surface` | Card and panel corner radius, and three quarters of it for alerts | `--radius-lg` |
 | `--ks-shadow-surface` | Panel shadow | `--shadow-sm` |
-| `--ks-font-body` | Button font family | `inherit`, so a button keeps the page's font |
+| `--ks-font-body` | Page body and button font family | `inherit`, so the page and its buttons keep the font they have |
+| `--ks-font-heading` | Page, page header, section, card, modal and navbar title font family | `--ks-font-body` |
+| `--ks-font-mono` | Font family of `code`, `kbd`, `samp` and `pre` | The font list Tailwind gives code, so code keeps its font |
+| `--ks-letter-spacing` | Page body letter spacing | `normal` |
 | `--ks-font-weight-strong` | Button label weight | `--font-weight-semibold` |
 | `--ks-font-weight-heading` | Section, card and alert title weight, and one step heavier for page titles | `--font-weight-semibold` |
 | `--ks-border-width-control` | Button border width | `0px` |
