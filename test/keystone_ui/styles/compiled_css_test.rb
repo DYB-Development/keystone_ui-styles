@@ -4849,6 +4849,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?^  :where\(body\) \{\n    font-family: var\(--ks-font-body\);/m, self.class.compiled)
   end
 
+  def test_title_font_is_read_in_the_base_layer_at_zero_specificity_so_an_app_heading_rule_outranks_it
+    assert_match(/@layer base \{.*?^  :where\(\.ks-page-title, \.ks-page-header-title, \.ks-section-title, \.ks-card-title, \.ks-modal-title, \.ks-navbar-title\) \{\n    font-family: var\(--ks-font-heading\);/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

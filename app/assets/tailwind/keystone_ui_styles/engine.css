@@ -296,6 +296,10 @@
     @apply font-(family-name:--ks-font-body) tracking-(--ks-letter-spacing);
   }
 
+  :where(.ks-page-title, .ks-page-header-title, .ks-section-title, .ks-card-title, .ks-modal-title, .ks-navbar-title) {
+    @apply font-(family-name:--ks-font-heading);
+  }
+
   code, kbd, samp, pre {
     @apply font-(family-name:--ks-font-mono);
   }
