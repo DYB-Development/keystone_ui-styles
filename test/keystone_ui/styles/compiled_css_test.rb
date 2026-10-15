@@ -4921,6 +4921,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-paragraph"), "line-height: var(--leading-relaxed)"
   end
 
+  def test_value_list_row_sets_label_and_value_side_by_side
+    assert_includes rule(".ks-value-list-row"), "display: flex"
+  end
+
   private
 
   def block(selector)
