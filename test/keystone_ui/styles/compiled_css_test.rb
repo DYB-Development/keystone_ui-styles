@@ -4925,6 +4925,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-value-list-row"), "display: flex"
   end
 
+  def test_value_list_row_lines_label_and_value_up_on_their_text
+    assert_includes rule(".ks-value-list-row"), "align-items: baseline"
+  end
+
   private
 
   def block(selector)

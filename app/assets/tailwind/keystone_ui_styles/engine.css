@@ -475,7 +475,7 @@
   }
 
   .ks-value-list-row {
-    @apply flex;
+    @apply flex items-baseline;
   }
 
   .ks-card {
