@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.18.0] - 2026-10-15
+
 ### Added
 - `--ks-color-page` and `--ks-color-on-page` and their `-dark` partners set the `html` element background and text, defaulting to transparent and the browser text colour so a page looks as it did.
 - `--ks-color-on-accent`, `--ks-color-on-neutral` and `--ks-color-on-danger` and their `-dark` partners set the primary, secondary and danger button labels, defaulting to `--ks-color-on-fill`.
