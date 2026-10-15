@@ -4861,6 +4861,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-heading-md"), "font-size: var(--text-2xl)"
   end
 
+  def test_large_heading_is_4xl_text
+    assert_includes rule(".ks-heading-lg"), "font-size: var(--text-4xl)"
+  end
+
   private
 
   def block(selector)
