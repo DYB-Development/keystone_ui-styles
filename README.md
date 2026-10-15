@@ -61,7 +61,7 @@ any layer overrides them wherever it is imported.
 | `--ks-shadow-surface` | Panel shadow | `--shadow-sm` |
 | `--ks-font-body` | Page body and button font family | `inherit`, so the page and its buttons keep the font they have |
 | `--ks-font-heading` | Page, page header, section, card, modal and navbar title font family | `--ks-font-body` |
-| `--ks-font-mono` | Font family of `code`, `kbd`, `samp` and `pre` | The font list Tailwind gives code, so code keeps its font |
+| `--ks-font-mono` | The theme's mono font, which no class reads: code takes its font from Tailwind's `--default-mono-font-family`, and keystone_ui-preferences' theme writer sets that from `--ks-font-mono` when a theme names a mono font | The font list Tailwind gives code |
 | `--ks-letter-spacing` | Page body letter spacing | `normal` |
 | `--ks-font-weight-strong` | Button label weight | `--font-weight-semibold` |
 | `--ks-font-weight-heading` | Section, card and alert title weight, and one step heavier for page titles | `--font-weight-semibold` |
