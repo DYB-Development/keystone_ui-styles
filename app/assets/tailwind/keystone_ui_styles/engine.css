@@ -459,7 +459,7 @@
   }
 
   .ks-heading-row {
-    @apply flex justify-between;
+    @apply flex items-baseline justify-between;
   }
 
   .ks-card {

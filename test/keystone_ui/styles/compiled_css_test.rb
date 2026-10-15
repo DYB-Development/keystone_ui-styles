@@ -4869,6 +4869,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-heading-row"), "justify-content: space-between"
   end
 
+  def test_heading_row_lines_the_note_up_with_the_heading_text
+    assert_includes rule(".ks-heading-row"), "align-items: baseline"
+  end
+
   private
 
   def block(selector)
