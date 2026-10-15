@@ -4697,6 +4697,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-overlay: currentcolor;/m, self.class.compiled)
   end
 
+  def test_modal_panel_text_reads_the_dark_on_overlay_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-overlay-dark\)/m, block(".ks-modal-panel"))
+  end
+
   private
 
   def block(selector)
