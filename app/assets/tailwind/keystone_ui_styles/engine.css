@@ -268,7 +268,7 @@
   }
 
   html {
-    @apply bg-(color:--ks-color-page) dark:bg-(color:--ks-color-page-dark);
+    @apply bg-(color:--ks-color-page) text-(color:--ks-color-on-page) dark:bg-(color:--ks-color-page-dark);
   }
 }
 
