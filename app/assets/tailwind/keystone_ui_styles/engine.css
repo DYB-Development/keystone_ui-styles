@@ -474,6 +474,38 @@
     @apply leading-relaxed text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 
+  .ks-value-list-row {
+    @apply flex items-baseline gap-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*2)];
+  }
+
+  .ks-value-list-row + .ks-value-list-row {
+    @apply border-t-(length:--ks-border-width) border-(color:--ks-color-border) dark:border-(color:--ks-color-border-dark);
+  }
+
+  .ks-value-list-label {
+    @apply shrink-0 basis-2/5 text-(color:--ks-color-text-secondary) dark:text-(color:--ks-color-text-secondary-dark);
+  }
+
+  .ks-value-list-note {
+    @apply block text-xs text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+  }
+
+  .ks-value-list-value {
+    @apply tabular-nums text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+  }
+
+  .ks-value-list-end .ks-value-list-value {
+    @apply ml-auto text-right;
+  }
+
+  .ks-value-list-total {
+    @apply font-(weight:--ks-font-weight-strong);
+  }
+
+  .ks-value-list-total .ks-value-list-label {
+    @apply text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+  }
+
   .ks-card {
     @apply overflow-hidden rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-surface) dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-dark);
   }

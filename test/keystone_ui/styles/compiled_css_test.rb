@@ -4921,6 +4921,98 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-paragraph"), "line-height: var(--leading-relaxed)"
   end
 
+  def test_value_list_row_sets_label_and_value_side_by_side
+    assert_includes rule(".ks-value-list-row"), "display: flex"
+  end
+
+  def test_value_list_row_lines_label_and_value_up_on_their_text
+    assert_includes rule(".ks-value-list-row"), "align-items: baseline"
+  end
+
+  def test_value_list_row_spaces_label_from_value_by_the_theme_spacing
+    assert_includes rule(".ks-value-list-row"), "gap: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_value_list_row_pads_above_and_below_by_the_theme_spacing
+    assert_match(/padding-(block|top): calc\(var\(--ks-spacing\) \* 2\)/, rule(".ks-value-list-row"))
+  end
+
+  def test_value_list_draws_a_line_between_rows
+    assert_includes rule(".ks-value-list-row + .ks-value-list-row"), "border-top-width: var(--ks-border-width)"
+  end
+
+  def test_value_list_line_reads_the_border_colour_role
+    assert_includes rule(".ks-value-list-row + .ks-value-list-row"), "border-color: var(--ks-color-border)"
+  end
+
+  def test_value_list_line_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-value-list-row + .ks-value-list-row"))
+  end
+
+  def test_value_list_label_takes_two_fifths_of_the_row
+    assert_match(/flex-basis: calc\(2\s*\/\s*5 \* 100%\)/, rule(".ks-value-list-label"))
+  end
+
+  def test_value_list_label_keeps_its_share_when_the_value_is_long
+    assert_includes rule(".ks-value-list-label"), "flex-shrink: 0"
+  end
+
+  def test_value_list_label_reads_the_secondary_text_colour_role
+    assert_includes rule(".ks-value-list-label"), "color: var(--ks-color-text-secondary)"
+  end
+
+  def test_value_list_label_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-secondary-dark\)/m, block(".ks-value-list-label"))
+  end
+
+  def test_value_list_note_sits_on_its_own_line_under_the_label
+    assert_includes rule(".ks-value-list-note"), "display: block"
+  end
+
+  def test_value_list_note_is_extra_small_text
+    assert_includes rule(".ks-value-list-note"), "font-size: var(--text-xs)"
+  end
+
+  def test_value_list_note_reads_the_muted_text_colour_role
+    assert_includes rule(".ks-value-list-note"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_value_list_note_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-value-list-note"))
+  end
+
+  def test_value_list_value_reads_the_text_colour_role
+    assert_includes rule(".ks-value-list-value"), "color: var(--ks-color-text)"
+  end
+
+  def test_value_list_value_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-value-list-value"))
+  end
+
+  def test_value_list_value_draws_digits_of_equal_width
+    assert_includes rule(".ks-value-list-value"), "font-variant-numeric"
+  end
+
+  def test_value_list_aligned_to_the_end_pushes_each_value_to_the_right
+    assert_includes rule(".ks-value-list-end .ks-value-list-value"), "margin-left: auto"
+  end
+
+  def test_value_list_aligned_to_the_end_aligns_each_value_right
+    assert_includes rule(".ks-value-list-end .ks-value-list-value"), "text-align: right"
+  end
+
+  def test_value_list_total_row_reads_the_strong_font_weight
+    assert_includes rule(".ks-value-list-total"), "font-weight: var(--ks-font-weight-strong)"
+  end
+
+  def test_value_list_total_label_reads_the_text_colour_role
+    assert_includes rule(".ks-value-list-total .ks-value-list-label"), "color: var(--ks-color-text)"
+  end
+
+  def test_value_list_total_label_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-value-list-total .ks-value-list-label"))
+  end
+
   private
 
   def block(selector)

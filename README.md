@@ -209,6 +209,10 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-heading-row`, `ks-heading-note` | A heading with a short note at the right end of its row |
 | `ks-caption` | Small uppercase text placed above a title or figure |
 | `ks-paragraph` | Running text |
+| `ks-value-list-row` | One row of a label and its value, with a line between rows |
+| `ks-value-list-label`, `ks-value-list-note`, `ks-value-list-value` | A row's label, the short note under it, and its value |
+| `ks-value-list-end` | On the list, pushes each value to the right end of its row |
+| `ks-value-list-total` | A row drawn with more weight, for a total |
 | `ks-card`, `ks-card-edge` | Card, and a card that runs edge to edge on small screens |
 | `ks-card-body`, `ks-card-title`, `ks-card-summary`, `ks-card-cta`, `ks-card-link` | Card parts |
 | `ks-alert` | Every alert |
