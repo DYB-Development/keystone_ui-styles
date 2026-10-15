@@ -42,6 +42,9 @@ element overrides it:
 The `dark:` variant in the host's own Tailwind classes follows the same rule, and
 a custom page never takes it.
 
+Dark mode applies on screens only. A dark page prints in its light colours, so a
+printed page or a PDF always has dark text on white paper.
+
 On a custom page, white is `--color-custom-background`, and every `gray-*` and
 `zinc-*` shade is a blend of `--color-custom-text` into that background, from 3%
 at shade 50 to 100% at shade 950. They default to white and `#18181b`, and
