@@ -4905,6 +4905,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-caption"), "letter-spacing: var(--tracking-wider)"
   end
 
+  def test_caption_reads_the_strong_font_weight
+    assert_includes rule(".ks-caption"), "font-weight: var(--ks-font-weight-strong)"
+  end
+
   private
 
   def block(selector)

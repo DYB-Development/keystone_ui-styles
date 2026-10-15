@@ -467,7 +467,7 @@
   }
 
   .ks-caption {
-    @apply text-xs uppercase tracking-wider text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+    @apply text-xs font-(weight:--ks-font-weight-strong) uppercase tracking-wider text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 
   .ks-card {
