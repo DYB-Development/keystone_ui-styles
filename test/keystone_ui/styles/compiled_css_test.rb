@@ -4901,6 +4901,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-caption"))
   end
 
+  def test_caption_spaces_its_letters_wider
+    assert_includes rule(".ks-caption"), "letter-spacing: var(--tracking-wider)"
+  end
+
   private
 
   def block(selector)
