@@ -264,6 +264,7 @@
     --ks-color-badge-neutral: var(--color-gray-100);
     --ks-color-badge-neutral-dark: var(--color-zinc-700);
     --ks-color-page: transparent;
+    --ks-color-page-dark: transparent;
   }
 
   html {

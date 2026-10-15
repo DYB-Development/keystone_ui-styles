@@ -4645,6 +4645,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-page-dark\)/m, block("html"))
   end
 
+  def test_dark_page_colour_role_defaults_to_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-page-dark: transparent;/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
