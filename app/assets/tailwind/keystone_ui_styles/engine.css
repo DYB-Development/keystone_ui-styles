@@ -523,7 +523,7 @@
   }
 
   .ks-bar-chart-grid {
-    @apply stroke-(--ks-color-border);
+    @apply stroke-(--ks-color-border) dark:stroke-(--ks-color-border-dark);
   }
 
   .ks-card {

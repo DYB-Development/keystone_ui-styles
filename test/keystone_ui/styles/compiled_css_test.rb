@@ -5037,6 +5037,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-bar-chart-grid"), "stroke: var(--ks-color-border)"
   end
 
+  def test_bar_chart_grid_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?stroke: var\(--ks-color-border-dark\)/m, block(".ks-bar-chart-grid"))
+  end
+
   private
 
   def block(selector)
