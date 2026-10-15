@@ -4945,6 +4945,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-value-list-row + .ks-value-list-row"), "border-color: var(--ks-color-border)"
   end
 
+  def test_value_list_line_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-value-list-row + .ks-value-list-row"))
+  end
+
   private
 
   def block(selector)

@@ -479,7 +479,7 @@
   }
 
   .ks-value-list-row + .ks-value-list-row {
-    @apply border-t-(length:--ks-border-width) border-(color:--ks-color-border);
+    @apply border-t-(length:--ks-border-width) border-(color:--ks-color-border) dark:border-(color:--ks-color-border-dark);
   }
 
   .ks-card {
