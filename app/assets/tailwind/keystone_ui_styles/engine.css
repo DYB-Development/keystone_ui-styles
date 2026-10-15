@@ -294,6 +294,10 @@
   body {
     @apply font-(family-name:--ks-font-body);
   }
+
+  code, kbd, samp, pre {
+    @apply font-(family-name:--ks-font-mono);
+  }
 }
 
 @layer components {
