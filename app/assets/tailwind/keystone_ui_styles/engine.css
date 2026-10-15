@@ -596,7 +596,7 @@
   }
 
   .ks-menu-move {
-    @apply px-[calc(var(--ks-spacing)*2)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark) hover:bg-(color:--ks-color-hover) hover:text-(color:--ks-color-on-hover-muted) dark:hover:bg-(color:--ks-color-hover-dark) disabled:opacity-40;
+    @apply px-[calc(var(--ks-spacing)*2)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark) hover:bg-(color:--ks-color-hover) hover:text-(color:--ks-color-on-hover-muted) dark:hover:bg-(color:--ks-color-hover-dark) dark:hover:text-(color:--ks-color-on-hover-muted-dark) disabled:opacity-40;
   }
 
   .ks-menu-checkbox {
