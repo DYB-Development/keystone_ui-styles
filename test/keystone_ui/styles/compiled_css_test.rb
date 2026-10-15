@@ -4885,6 +4885,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-heading-note"), "font-size: var(--text-sm)"
   end
 
+  def test_caption_is_uppercase
+    assert_includes rule(".ks-caption"), "text-transform: uppercase"
+  end
+
   private
 
   def block(selector)
