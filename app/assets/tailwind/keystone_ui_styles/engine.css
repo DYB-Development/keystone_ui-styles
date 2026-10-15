@@ -288,6 +288,10 @@
   html {
     @apply bg-(color:--ks-color-page) text-(color:--ks-color-on-page) dark:bg-(color:--ks-color-page-dark) dark:text-(color:--ks-color-on-page-dark);
   }
+
+  body {
+    @apply font-(family-name:--ks-font-body);
+  }
 }
 
 @layer components {

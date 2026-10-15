@@ -4793,6 +4793,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-surface-dark: currentcolor;/m, self.class.compiled)
   end
 
+  def test_page_body_font_reads_the_body_font_variable
+    assert_includes rule("body"), "font-family: var(--ks-font-body)"
+  end
+
   private
 
   def block(selector)
