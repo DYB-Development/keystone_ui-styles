@@ -4657,6 +4657,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-page: CanvasText;/m, self.class.compiled)
   end
 
+  def test_page_text_reads_the_dark_on_page_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-page-dark\)/m, block("html"))
+  end
+
   private
 
   def block(selector)
