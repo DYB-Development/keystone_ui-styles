@@ -4969,6 +4969,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-value-list-note"), "display: block"
   end
 
+  def test_value_list_note_is_extra_small_text
+    assert_includes rule(".ks-value-list-note"), "font-size: var(--text-xs)"
+  end
+
   private
 
   def block(selector)
