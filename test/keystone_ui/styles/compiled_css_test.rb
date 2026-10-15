@@ -5041,6 +5041,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?stroke: var\(--ks-color-border-dark\)/m, block(".ks-bar-chart-grid"))
   end
 
+  def test_bar_chart_text_reads_the_muted_text_colour_role
+    assert_includes rule(".ks-bar-chart-text"), "fill: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)
