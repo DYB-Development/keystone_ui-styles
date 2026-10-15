@@ -4785,6 +4785,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-overlay-muted-dark: var\(--ks-color-text-secondary-dark\);/m, self.class.compiled)
   end
 
+  def test_on_surface_colour_role_defaults_to_the_inherited_text_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-surface: currentcolor;/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

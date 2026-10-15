@@ -94,6 +94,7 @@
     --ks-color-on-accent-dark: var(--ks-color-on-fill-dark);
     --ks-color-surface: var(--color-white);
     --ks-color-surface-dark: var(--color-surface-900);
+    --ks-color-on-surface: currentcolor;
     --ks-color-border: var(--color-surface-200);
     --ks-color-border-dark: var(--color-surface-700);
     --ks-color-border-control: var(--ks-color-border-strong);
