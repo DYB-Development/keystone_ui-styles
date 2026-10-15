@@ -1,9 +1,11 @@
 @custom-variant dark {
-  &:where(:is([data-theme="dark"], [data-theme="dark"] *):not([data-theme="dark"] [data-theme="light"], [data-theme="dark"] [data-theme="light"] *, [data-theme="dark"] [data-theme="custom"], [data-theme="dark"] [data-theme="custom"] *)) {
-    @slot;
+  @media screen {
+    &:where(:is([data-theme="dark"], [data-theme="dark"] *):not([data-theme="dark"] [data-theme="light"], [data-theme="dark"] [data-theme="light"] *, [data-theme="dark"] [data-theme="custom"], [data-theme="dark"] [data-theme="custom"] *)) {
+      @slot;
+    }
   }
 
-  @media (prefers-color-scheme: dark) {
+  @media screen and (prefers-color-scheme: dark) {
     &:where(:not([data-theme="light"], [data-theme="light"] *, [data-theme="custom"], [data-theme="custom"] *)) {
       @slot;
     }

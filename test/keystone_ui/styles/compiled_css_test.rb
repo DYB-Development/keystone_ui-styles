@@ -5077,6 +5077,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-bar-chart-value"), "font-size: var(--text-xs)"
   end
 
+  def test_dark_colours_apply_on_screens_only_so_a_dark_page_prints_light
+    assert_match(/@media screen.*?data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-heading"))
+  end
+
   private
 
   def block(selector)
