@@ -502,6 +502,10 @@
     @apply font-(weight:--ks-font-weight-strong);
   }
 
+  .ks-value-list-total .ks-value-list-label {
+    @apply text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+  }
+
   .ks-card {
     @apply overflow-hidden rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-surface) dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-dark);
   }

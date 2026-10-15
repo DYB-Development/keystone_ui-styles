@@ -5005,6 +5005,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-value-list-total"), "font-weight: var(--ks-font-weight-strong)"
   end
 
+  def test_value_list_total_label_reads_the_text_colour_role
+    assert_includes rule(".ks-value-list-total .ks-value-list-label"), "color: var(--ks-color-text)"
+  end
+
   private
 
   def block(selector)
