@@ -4794,7 +4794,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_page_body_font_reads_the_body_font_variable
-    assert_includes rule("body"), "font-family: var(--ks-font-body)"
+    assert_includes rule(":where(body)"), "font-family: var(--ks-font-body)"
   end
 
   def test_body_font_variable_defaults_to_the_inherited_font
@@ -4842,7 +4842,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_page_body_letter_spacing_reads_the_letter_spacing_variable
-    assert_includes rule("body"), "letter-spacing: var(--ks-letter-spacing)"
+    assert_includes rule(":where(body)"), "letter-spacing: var(--ks-letter-spacing)"
+  end
+
+  def test_an_app_base_layer_body_font_rule_outranks_the_page_body_reader_whatever_its_order
+    assert_match(/@layer base \{.*?^  :where\(body\) \{\n    font-family: var\(--ks-font-body\);/m, self.class.compiled)
   end
 
   private
