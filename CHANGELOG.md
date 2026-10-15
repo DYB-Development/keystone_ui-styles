@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.23.0] - 2026-10-15
+
 ### Fixed
 - An element inside a `data-theme="light"` or `data-theme="custom"` wrapper no longer takes the `dark:` styles when an element above that wrapper is `data-theme="dark"`, so a light preview drawn on a dark page stays light.
 
