@@ -4637,6 +4637,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule("html"), "background-color: var(--ks-color-page)"
   end
 
+  def test_page_colour_role_defaults_to_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-page: transparent;/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
