@@ -4897,6 +4897,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-caption"), "color: var(--ks-color-text-muted)"
   end
 
+  def test_caption_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-caption"))
+  end
+
   private
 
   def block(selector)
