@@ -4941,6 +4941,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-value-list-row + .ks-value-list-row"), "border-top-width: var(--ks-border-width)"
   end
 
+  def test_value_list_line_reads_the_border_colour_role
+    assert_includes rule(".ks-value-list-row + .ks-value-list-row"), "border-color: var(--ks-color-border)"
+  end
+
   private
 
   def block(selector)
