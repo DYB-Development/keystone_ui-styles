@@ -69,6 +69,9 @@
   :root {
     --ks-radius-control: var(--radius-lg);
     --ks-font-body: inherit;
+    --ks-font-heading: var(--ks-font-body);
+    --ks-font-mono: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+    --ks-letter-spacing: normal;
     --ks-font-weight-strong: var(--font-weight-semibold);
     --ks-border-width-control: 0px;
     --ks-spacing: var(--spacing);
@@ -287,6 +290,14 @@
 
   html {
     @apply bg-(color:--ks-color-page) text-(color:--ks-color-on-page) dark:bg-(color:--ks-color-page-dark) dark:text-(color:--ks-color-on-page-dark);
+  }
+
+  :where(body) {
+    @apply font-(family-name:--ks-font-body) tracking-(--ks-letter-spacing);
+  }
+
+  :where(.ks-page-title, .ks-page-header-title, .ks-section-title, .ks-card-title, .ks-modal-title, .ks-navbar-title) {
+    @apply font-(family-name:--ks-font-heading);
   }
 }
 

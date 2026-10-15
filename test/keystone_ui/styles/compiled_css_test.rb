@@ -4793,6 +4793,50 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-surface-dark: currentcolor;/m, self.class.compiled)
   end
 
+  def test_page_body_font_reads_the_body_font_variable
+    assert_includes rule(":where(body)"), "font-family: var(--ks-font-body)"
+  end
+
+  def test_body_font_variable_defaults_to_the_inherited_font
+    assert_match(/@layer base \{.*?:root \{.*?--ks-font-body: inherit;/m, self.class.compiled)
+  end
+
+  def test_heading_font_variable_defaults_to_the_body_font_variable
+    assert_match(/@layer base \{.*?:root \{.*?--ks-font-heading: var\(--ks-font-body\);/m, self.class.compiled)
+  end
+
+  def test_mono_font_variable_defaults_to_the_mono_font_code_has_today
+    assert_match(/@layer base \{.*?:root \{.*?--ks-font-mono: var\(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace\);/m, self.class.compiled)
+  end
+
+  def test_code_font_is_left_to_the_font_tailwind_gives_code
+    assert_equal 1, self.class.compiled.scan(/^  code, kbd, samp, pre \{\n    font-family:/).size
+  end
+
+  def test_letter_spacing_variable_defaults_to_normal
+    assert_match(/@layer base \{.*?:root \{.*?--ks-letter-spacing: normal;/m, self.class.compiled)
+  end
+
+  def test_page_body_letter_spacing_reads_the_letter_spacing_variable
+    assert_includes rule(":where(body)"), "letter-spacing: var(--ks-letter-spacing)"
+  end
+
+  def test_an_app_base_layer_body_font_rule_outranks_the_page_body_reader_whatever_its_order
+    assert_match(/@layer base \{.*?^  :where\(body\) \{\n    font-family: var\(--ks-font-body\);/m, self.class.compiled)
+  end
+
+  def test_title_font_is_read_in_the_base_layer_at_zero_specificity_so_an_app_heading_rule_outranks_it
+    assert_match(/@layer base \{.*?^  :where\(\.ks-page-title, \.ks-page-header-title, \.ks-section-title, \.ks-card-title, \.ks-modal-title, \.ks-navbar-title\) \{\n    font-family: var\(--ks-font-heading\);/m, self.class.compiled)
+  end
+
+  def test_title_classes_set_no_font_of_their_own_in_the_components_layer
+    assert_empty(%w[.ks-page-title .ks-page-header-title .ks-section-title .ks-card-title .ks-modal-title .ks-navbar-title].select { |title| block(title).include?("font-family") })
+  end
+
+  def test_tailwind_mono_font_variable_is_set_only_by_tailwind
+    assert_equal 1, self.class.compiled.scan(/--default-mono-font-family:/).size
+  end
+
   private
 
   def block(selector)
