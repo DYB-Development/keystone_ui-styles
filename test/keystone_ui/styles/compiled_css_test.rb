@@ -231,8 +231,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*\-\-ks\-color\-danger\-hover\-dark:\ var\(\-\-color\-red\-500\)/m, self.class.compiled)
   end
 
-  def test_primary_button_text_reads_the_dark_on_fill_colour_role_on_a_dark_page
-    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-fill-dark\)/m, block(".ks-button-primary"))
+  def test_primary_button_text_reads_the_dark_on_accent_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-accent-dark\)/m, block(".ks-button-primary"))
   end
 
   def test_dark_on_fill_colour_role_defaults_to_white
