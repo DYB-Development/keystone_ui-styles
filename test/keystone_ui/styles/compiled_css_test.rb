@@ -4817,6 +4817,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-section-title"), "font-family: var(--ks-font-heading)"
   end
 
+  def test_card_title_font_reads_the_heading_font_variable
+    assert_includes rule(".ks-card-title"), "font-family: var(--ks-font-heading)"
+  end
+
   private
 
   def block(selector)
