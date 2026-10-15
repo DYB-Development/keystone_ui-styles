@@ -4809,8 +4809,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-font-mono: var\(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace\);/m, self.class.compiled)
   end
 
-  def test_code_font_reads_the_mono_font_variable
-    assert_match(/^  code, kbd, samp, pre \{\n    font-family: var\(--ks-font-mono\);/, self.class.compiled)
+  def test_code_font_is_left_to_the_font_tailwind_gives_code
+    assert_equal 1, self.class.compiled.scan(/^  code, kbd, samp, pre \{\n    font-family:/).size
   end
 
   def test_letter_spacing_variable_defaults_to_normal
