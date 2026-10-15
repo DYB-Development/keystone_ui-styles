@@ -4826,7 +4826,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_title_font_is_read_in_the_base_layer_at_zero_specificity_so_an_app_heading_rule_outranks_it
-    assert_match(/@layer base \{.*?^  :where\(\.ks-page-title, \.ks-page-header-title, \.ks-section-title, \.ks-card-title, \.ks-modal-title, \.ks-navbar-title\) \{\n    font-family: var\(--ks-font-heading\);/m, self.class.compiled)
+    assert_match(/@layer base \{.*?^  :where\(\.ks-page-title, \.ks-page-header-title, \.ks-section-title, \.ks-card-title, \.ks-modal-title, \.ks-navbar-title, \.ks-heading\) \{\n    font-family: var\(--ks-font-heading\);/m, self.class.compiled)
   end
 
   def test_title_classes_set_no_font_of_their_own_in_the_components_layer
@@ -4847,6 +4847,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
 
   def test_heading_reads_the_heading_font_weight
     assert_includes rule(".ks-heading"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
+  def test_heading_reads_the_heading_font_family
+    assert_match(/^  :where\([^)]*\.ks-heading[,)][^{]*\{\n    font-family: var\(--ks-font-heading\);/m, self.class.compiled)
   end
 
   private

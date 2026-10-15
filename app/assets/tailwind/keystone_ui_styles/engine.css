@@ -296,7 +296,7 @@
     @apply font-(family-name:--ks-font-body) tracking-(--ks-letter-spacing);
   }
 
-  :where(.ks-page-title, .ks-page-header-title, .ks-section-title, .ks-card-title, .ks-modal-title, .ks-navbar-title) {
+  :where(.ks-page-title, .ks-page-header-title, .ks-section-title, .ks-card-title, .ks-modal-title, .ks-navbar-title, .ks-heading) {
     @apply font-(family-name:--ks-font-heading);
   }
 }
