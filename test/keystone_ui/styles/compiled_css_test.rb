@@ -179,8 +179,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*\-\-ks\-color\-danger\-hover:\ var\(\-\-color\-red\-500\)/m, self.class.compiled)
   end
 
-  def test_danger_button_text_reads_the_on_fill_colour_role
-    assert_includes rule(".ks-button-danger"), "color: var(--ks-color-on-fill)"
+  def test_danger_button_text_reads_the_on_danger_colour_role
+    assert_includes rule(".ks-button-danger"), "color: var(--ks-color-on-danger)"
   end
 
   def test_primary_button_background_reads_the_dark_accent_colour_role_on_a_dark_page
