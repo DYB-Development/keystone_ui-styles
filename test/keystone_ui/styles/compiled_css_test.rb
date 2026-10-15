@@ -4993,6 +4993,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-value-list-value"), "font-variant-numeric"
   end
 
+  def test_value_list_aligned_to_the_end_pushes_each_value_to_the_right
+    assert_includes rule(".ks-value-list-end .ks-value-list-value"), "margin-left: auto"
+  end
+
   private
 
   def block(selector)
