@@ -5089,6 +5089,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-metric-plain"), "padding-inline: calc(var(--ks-spacing) * 4)"
   end
 
+  def test_stat_note_reads_the_muted_text_colour_role
+    assert_includes rule(".ks-stat-card-note"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)
