@@ -4837,6 +4837,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_equal 1, self.class.compiled.scan(/--default-mono-font-family:/).size
   end
 
+  def test_heading_reads_the_text_colour_role
+    assert_includes rule(".ks-heading"), "color: var(--ks-color-text)"
+  end
+
   private
 
   def block(selector)
