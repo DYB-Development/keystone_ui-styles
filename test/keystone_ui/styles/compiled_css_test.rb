@@ -4841,6 +4841,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-heading"), "color: var(--ks-color-text)"
   end
 
+  def test_heading_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-heading"))
+  end
+
   private
 
   def block(selector)
