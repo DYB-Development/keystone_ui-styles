@@ -4977,6 +4977,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-value-list-note"), "color: var(--ks-color-text-muted)"
   end
 
+  def test_value_list_note_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-value-list-note"))
+  end
+
   private
 
   def block(selector)
