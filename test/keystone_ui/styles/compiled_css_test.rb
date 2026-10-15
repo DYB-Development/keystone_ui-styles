@@ -4673,6 +4673,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-accent-dark: var\(--ks-color-on-fill-dark\);/m, self.class.compiled)
   end
 
+  def test_on_neutral_colour_role_defaults_to_the_shared_on_fill_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-neutral: var\(--ks-color-on-fill\);/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
