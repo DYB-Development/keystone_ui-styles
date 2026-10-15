@@ -5013,6 +5013,14 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-value-list-total .ks-value-list-label"))
   end
 
+  def test_a_dark_page_tells_the_browser_it_is_dark
+    assert_includes rule('html[data-theme="dark"]'), "color-scheme: dark"
+  end
+
+  def test_a_page_following_the_device_lets_the_browser_follow_it_too
+    assert_match(/^  html:not\(\[data-theme\]\) \{\n    color-scheme: light dark;/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

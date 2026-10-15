@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Changed
+- The `html` element tells the browser a dark page is dark, and lets the browser follow the device on a page that follows the device, so a page left on the default background turns dark with dark mode instead of showing light text on a white page.
+
 ## [0.20.0] - 2026-10-15
 
 ### Added
