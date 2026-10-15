@@ -293,7 +293,7 @@
   }
 
   body {
-    @apply font-(family-name:--ks-font-body);
+    @apply font-(family-name:--ks-font-body) tracking-(--ks-letter-spacing);
   }
 
   code, kbd, samp, pre {

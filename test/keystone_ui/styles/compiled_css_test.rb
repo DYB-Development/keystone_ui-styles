@@ -4841,6 +4841,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-letter-spacing: normal;/m, self.class.compiled)
   end
 
+  def test_page_body_letter_spacing_reads_the_letter_spacing_variable
+    assert_includes rule("body"), "letter-spacing: var(--ks-letter-spacing)"
+  end
+
   private
 
   def block(selector)
