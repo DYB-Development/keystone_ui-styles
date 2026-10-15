@@ -4805,6 +4805,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-font-heading: var\(--ks-font-body\);/m, self.class.compiled)
   end
 
+  def test_page_title_font_reads_the_heading_font_variable
+    assert_includes rule(".ks-page-title"), "font-family: var(--ks-font-heading)"
+  end
+
   private
 
   def block(selector)
