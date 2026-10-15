@@ -204,6 +204,11 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-page-header`, `ks-page-header-title`, `ks-page-header-subtitle`, `ks-page-header-actions` | Page header and its parts |
 | `ks-section-sm`, `ks-section-md`, `ks-section-lg` | Space above a section |
 | `ks-section-header`, `ks-section-title`, `ks-section-subtitle`, `ks-section-action` | Section header and its parts |
+| `ks-heading` | Every heading |
+| `ks-heading-sm`, `ks-heading-md`, `ks-heading-lg` | Heading size |
+| `ks-heading-row`, `ks-heading-note` | A heading with a short note at the right end of its row |
+| `ks-caption` | Small uppercase text placed above a title or figure |
+| `ks-paragraph` | Running text |
 | `ks-card`, `ks-card-edge` | Card, and a card that runs edge to edge on small screens |
 | `ks-card-body`, `ks-card-title`, `ks-card-summary`, `ks-card-cta`, `ks-card-link` | Card parts |
 | `ks-alert` | Every alert |

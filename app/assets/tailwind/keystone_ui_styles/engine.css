@@ -296,7 +296,7 @@
     @apply font-(family-name:--ks-font-body) tracking-(--ks-letter-spacing);
   }
 
-  :where(.ks-page-title, .ks-page-header-title, .ks-section-title, .ks-card-title, .ks-modal-title, .ks-navbar-title) {
+  :where(.ks-page-title, .ks-page-header-title, .ks-section-title, .ks-card-title, .ks-modal-title, .ks-navbar-title, .ks-heading) {
     @apply font-(family-name:--ks-font-heading);
   }
 }
@@ -440,6 +440,38 @@
 
   .ks-section-action {
     @apply text-sm text-(color:--ks-color-link) hover:text-(color:--ks-color-link-strong-hover) dark:text-(color:--ks-color-link-dark) dark:hover:text-(color:--ks-color-link-strong-hover-dark);
+  }
+
+  .ks-heading {
+    @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+  }
+
+  .ks-heading-sm {
+    @apply text-lg;
+  }
+
+  .ks-heading-md {
+    @apply text-2xl;
+  }
+
+  .ks-heading-lg {
+    @apply text-4xl;
+  }
+
+  .ks-heading-row {
+    @apply flex items-baseline justify-between;
+  }
+
+  .ks-heading-note {
+    @apply text-sm text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+  }
+
+  .ks-caption {
+    @apply text-xs font-(weight:--ks-font-weight-strong) uppercase tracking-wider text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+  }
+
+  .ks-paragraph {
+    @apply leading-relaxed text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 
   .ks-card {

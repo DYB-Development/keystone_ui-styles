@@ -4826,7 +4826,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_title_font_is_read_in_the_base_layer_at_zero_specificity_so_an_app_heading_rule_outranks_it
-    assert_match(/@layer base \{.*?^  :where\(\.ks-page-title, \.ks-page-header-title, \.ks-section-title, \.ks-card-title, \.ks-modal-title, \.ks-navbar-title\) \{\n    font-family: var\(--ks-font-heading\);/m, self.class.compiled)
+    assert_match(/@layer base \{.*?^  :where\(\.ks-page-title, \.ks-page-header-title, \.ks-section-title, \.ks-card-title, \.ks-modal-title, \.ks-navbar-title, \.ks-heading\) \{\n    font-family: var\(--ks-font-heading\);/m, self.class.compiled)
   end
 
   def test_title_classes_set_no_font_of_their_own_in_the_components_layer
@@ -4835,6 +4835,90 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
 
   def test_tailwind_mono_font_variable_is_set_only_by_tailwind
     assert_equal 1, self.class.compiled.scan(/--default-mono-font-family:/).size
+  end
+
+  def test_heading_reads_the_text_colour_role
+    assert_includes rule(".ks-heading"), "color: var(--ks-color-text)"
+  end
+
+  def test_heading_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-heading"))
+  end
+
+  def test_heading_reads_the_heading_font_weight
+    assert_includes rule(".ks-heading"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
+  def test_heading_reads_the_heading_font_family
+    assert_match(/^  :where\([^)]*\.ks-heading[,)][^{]*\{\n    font-family: var\(--ks-font-heading\);/m, self.class.compiled)
+  end
+
+  def test_small_heading_is_large_text
+    assert_includes rule(".ks-heading-sm"), "font-size: var(--text-lg)"
+  end
+
+  def test_medium_heading_is_2xl_text
+    assert_includes rule(".ks-heading-md"), "font-size: var(--text-2xl)"
+  end
+
+  def test_large_heading_is_4xl_text
+    assert_includes rule(".ks-heading-lg"), "font-size: var(--text-4xl)"
+  end
+
+  def test_heading_row_pushes_the_note_to_the_right
+    assert_includes rule(".ks-heading-row"), "justify-content: space-between"
+  end
+
+  def test_heading_row_lines_the_note_up_with_the_heading_text
+    assert_includes rule(".ks-heading-row"), "align-items: baseline"
+  end
+
+  def test_heading_note_reads_the_muted_text_colour_role
+    assert_includes rule(".ks-heading-note"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_heading_note_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-heading-note"))
+  end
+
+  def test_heading_note_is_small_text
+    assert_includes rule(".ks-heading-note"), "font-size: var(--text-sm)"
+  end
+
+  def test_caption_is_uppercase
+    assert_includes rule(".ks-caption"), "text-transform: uppercase"
+  end
+
+  def test_caption_is_extra_small_text
+    assert_includes rule(".ks-caption"), "font-size: var(--text-xs)"
+  end
+
+  def test_caption_reads_the_muted_text_colour_role
+    assert_includes rule(".ks-caption"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_caption_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-caption"))
+  end
+
+  def test_caption_spaces_its_letters_wider
+    assert_includes rule(".ks-caption"), "letter-spacing: var(--tracking-wider)"
+  end
+
+  def test_caption_reads_the_strong_font_weight
+    assert_includes rule(".ks-caption"), "font-weight: var(--ks-font-weight-strong)"
+  end
+
+  def test_paragraph_reads_the_text_colour_role
+    assert_includes rule(".ks-paragraph"), "color: var(--ks-color-text)"
+  end
+
+  def test_paragraph_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-paragraph"))
+  end
+
+  def test_paragraph_spaces_its_lines_for_reading
+    assert_includes rule(".ks-paragraph"), "line-height: var(--leading-relaxed)"
   end
 
   private
