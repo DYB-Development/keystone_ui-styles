@@ -4725,6 +4725,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-color-picker-panel"), " color: var(--ks-color-on-overlay)"
   end
 
+  def test_color_picker_panel_text_reads_the_dark_on_overlay_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*? color: var\(--ks-color-on-overlay-dark\)/m, block(".ks-color-picker-panel"))
+  end
+
   private
 
   def block(selector)

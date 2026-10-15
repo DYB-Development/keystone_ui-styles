@@ -720,7 +720,7 @@
   }
 
   .ks-color-picker-panel {
-    @apply mt-[calc(var(--ks-spacing)*2)] p-[calc(var(--ks-spacing)*3)] rounded-(--ks-radius-surface) shadow-(--ks-shadow-overlay) bg-(color:--ks-color-overlay) text-(color:--ks-color-on-overlay) border-(length:--ks-border-width) border-(color:--ks-color-border) dark:bg-(color:--ks-color-overlay-dark) dark:border-(color:--ks-color-border-dark);
+    @apply mt-[calc(var(--ks-spacing)*2)] p-[calc(var(--ks-spacing)*3)] rounded-(--ks-radius-surface) shadow-(--ks-shadow-overlay) bg-(color:--ks-color-overlay) text-(color:--ks-color-on-overlay) border-(length:--ks-border-width) border-(color:--ks-color-border) dark:bg-(color:--ks-color-overlay-dark) dark:text-(color:--ks-color-on-overlay-dark) dark:border-(color:--ks-color-border-dark);
   }
 
   .ks-metric-card {
