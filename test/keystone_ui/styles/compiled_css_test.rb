@@ -4833,6 +4833,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_empty(%w[.ks-page-title .ks-page-header-title .ks-section-title .ks-card-title .ks-modal-title .ks-navbar-title].select { |title| block(title).include?("font-family") })
   end
 
+  def test_tailwind_mono_font_variable_is_set_only_by_tailwind
+    assert_equal 1, self.class.compiled.scan(/--default-mono-font-family:/).size
+  end
+
   private
 
   def block(selector)
