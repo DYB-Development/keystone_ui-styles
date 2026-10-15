@@ -4797,6 +4797,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule("body"), "font-family: var(--ks-font-body)"
   end
 
+  def test_body_font_variable_defaults_to_the_inherited_font
+    assert_match(/@layer base \{.*?:root \{.*?--ks-font-body: inherit;/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
