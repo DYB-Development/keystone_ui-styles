@@ -518,6 +518,10 @@
     @apply fill-(--ks-color-chart-1) dark:fill-(--ks-color-chart-1-dark);
   }
 
+  .ks-bar-chart-bar-shaded {
+    @apply opacity-40;
+  }
+
   .ks-card {
     @apply overflow-hidden rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-surface) dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-dark);
   }

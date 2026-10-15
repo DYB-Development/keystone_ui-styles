@@ -5029,6 +5029,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?fill: var\(--ks-color-chart-1-dark\)/m, block(".ks-bar-chart-bar"))
   end
 
+  def test_bar_chart_shaded_bar_is_faded
+    assert_includes rule(".ks-bar-chart-bar-shaded"), "opacity: 40%"
+  end
+
   private
 
   def block(selector)
