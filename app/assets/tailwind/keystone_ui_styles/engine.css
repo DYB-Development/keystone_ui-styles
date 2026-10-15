@@ -750,7 +750,7 @@
   }
 
   .ks-stat-card-disclosure {
-    @apply mt-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-overlay) p-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-on-overlay-muted) shadow-(--ks-shadow-overlay) dark:border-(color:--ks-color-border-dark) dark:bg-(color:--ks-color-overlay-dark) dark:text-(color:--ks-color-text-secondary-dark) space-y-[calc(var(--ks-spacing)*1)];
+    @apply mt-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-overlay) p-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-on-overlay-muted) shadow-(--ks-shadow-overlay) dark:border-(color:--ks-color-border-dark) dark:bg-(color:--ks-color-overlay-dark) dark:text-(color:--ks-color-on-overlay-muted-dark) space-y-[calc(var(--ks-spacing)*1)];
   }
 
   .ks-stat-card-emphasis {
