@@ -4933,6 +4933,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-value-list-row"), "gap: calc(var(--ks-spacing) * 4)"
   end
 
+  def test_value_list_row_pads_above_and_below_by_the_theme_spacing
+    assert_match(/padding-(block|top): calc\(var\(--ks-spacing\) \* 2\)/, rule(".ks-value-list-row"))
+  end
+
   private
 
   def block(selector)
