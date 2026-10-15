@@ -4741,6 +4741,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?:hover.*? color: var\(--ks-color-on-hover-dark\)/m, block(".ks-settings-link"))
   end
 
+  def test_dark_on_hover_colour_role_defaults_to_the_dark_text_colour_role
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-hover-dark: var\(--ks-color-text-dark\);/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
