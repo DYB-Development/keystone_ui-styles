@@ -4893,6 +4893,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-caption"), "font-size: var(--text-xs)"
   end
 
+  def test_caption_reads_the_muted_text_colour_role
+    assert_includes rule(".ks-caption"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)

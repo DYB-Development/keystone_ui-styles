@@ -467,7 +467,7 @@
   }
 
   .ks-caption {
-    @apply text-xs uppercase;
+    @apply text-xs uppercase text-(color:--ks-color-text-muted);
   }
 
   .ks-card {
