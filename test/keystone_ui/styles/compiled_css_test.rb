@@ -4665,6 +4665,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-page-dark: CanvasText;/m, self.class.compiled)
   end
 
+  def test_on_accent_colour_role_defaults_to_the_shared_on_fill_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-accent: var\(--ks-color-on-fill\);/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
