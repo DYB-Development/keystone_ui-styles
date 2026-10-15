@@ -5085,6 +5085,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@media screen \{\s*html:not\(\[data-theme\]\) \{\s*color-scheme: light dark;\s*\}\s*html\[data-theme="dark"\] \{\s*color-scheme: dark;/m, self.class.compiled)
   end
 
+  def test_plain_stat_is_padded_by_the_theme_spacing_with_no_border
+    assert_includes rule(".ks-metric-plain"), "padding-inline: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)

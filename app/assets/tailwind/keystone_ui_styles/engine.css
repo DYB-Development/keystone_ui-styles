@@ -538,6 +538,10 @@
     @apply text-xs fill-(--ks-color-text) dark:fill-(--ks-color-text-dark);
   }
 
+  .ks-metric-plain {
+    @apply px-[calc(var(--ks-spacing)*4)];
+  }
+
   .ks-card {
     @apply overflow-hidden rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-surface) dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-dark);
   }
