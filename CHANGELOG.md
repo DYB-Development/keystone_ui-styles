@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.22.0] - 2026-10-15
+
 ### Added
 - `ks-bar-chart-bar` fills a bar chart's bars in the first chart colour, and `ks-bar-chart-bar-shaded` draws a bar faded.
 - `ks-bar-chart-grid` draws a bar chart's grid lines in the border colour.
