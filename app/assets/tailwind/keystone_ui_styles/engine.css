@@ -1,5 +1,5 @@
 @custom-variant dark {
-  &:where([data-theme="dark"], [data-theme="dark"] *) {
+  &:where(:is([data-theme="dark"], [data-theme="dark"] *):not([data-theme="dark"] [data-theme="light"], [data-theme="dark"] [data-theme="light"] *)) {
     @slot;
   }
 

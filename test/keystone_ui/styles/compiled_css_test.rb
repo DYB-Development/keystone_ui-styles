@@ -41,6 +41,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/prefers-color-scheme: dark.*?:not\(\[data-theme="light"\], \[data-theme="light"\] \*/m, block(".ks-panel"))
   end
 
+  def test_panel_stays_light_inside_a_light_wrapper_on_a_dark_page
+    assert_match(/\[data-theme="dark"\] \*\):not\(\[data-theme="dark"\] \[data-theme="light"\], \[data-theme="dark"\] \[data-theme="light"\] \*/, block(".ks-panel"))
+  end
+
   def test_panel_stays_light_on_a_dark_operating_system_when_the_page_chooses_custom
     assert_match(/prefers-color-scheme: dark.*?:not\(.*?\[data-theme="custom"\], \[data-theme="custom"\] \*\)/m, block(".ks-panel"))
   end
