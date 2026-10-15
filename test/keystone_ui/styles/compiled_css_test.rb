@@ -5049,6 +5049,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?fill: var\(--ks-color-text-muted-dark\)/m, block(".ks-bar-chart-text"))
   end
 
+  def test_bar_chart_text_is_extra_small
+    assert_includes rule(".ks-bar-chart-text"), "font-size: var(--text-xs)"
+  end
+
   private
 
   def block(selector)
