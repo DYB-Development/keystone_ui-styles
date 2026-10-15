@@ -87,6 +87,7 @@
     --ks-color-danger-hover-dark: var(--color-red-500);
     --ks-color-on-fill-dark: var(--color-white);
     --ks-color-on-danger: var(--ks-color-on-fill);
+    --ks-color-on-danger-dark: var(--ks-color-on-fill-dark);
     --ks-color-on-neutral: var(--ks-color-on-fill);
     --ks-color-on-neutral-dark: var(--ks-color-on-fill-dark);
     --ks-color-on-accent: var(--ks-color-on-fill);
