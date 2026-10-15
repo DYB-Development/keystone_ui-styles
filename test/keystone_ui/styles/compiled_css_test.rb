@@ -4957,6 +4957,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-value-list-label"), "flex-shrink: 0"
   end
 
+  def test_value_list_label_reads_the_secondary_text_colour_role
+    assert_includes rule(".ks-value-list-label"), "color: var(--ks-color-text-secondary)"
+  end
+
   private
 
   def block(selector)
