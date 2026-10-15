@@ -5009,6 +5009,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-value-list-total .ks-value-list-label"), "color: var(--ks-color-text)"
   end
 
+  def test_value_list_total_label_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-value-list-total .ks-value-list-label"))
+  end
+
   private
 
   def block(selector)
