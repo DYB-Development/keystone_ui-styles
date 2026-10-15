@@ -4989,6 +4989,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-dark\)/m, block(".ks-value-list-value"))
   end
 
+  def test_value_list_value_draws_digits_of_equal_width
+    assert_includes rule(".ks-value-list-value"), "font-variant-numeric"
+  end
+
   private
 
   def block(selector)

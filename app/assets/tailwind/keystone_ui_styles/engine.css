@@ -491,7 +491,7 @@
   }
 
   .ks-value-list-value {
-    @apply text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+    @apply tabular-nums text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 
   .ks-card {
