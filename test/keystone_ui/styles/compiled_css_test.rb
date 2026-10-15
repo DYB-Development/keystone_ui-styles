@@ -4881,6 +4881,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-heading-note"))
   end
 
+  def test_heading_note_is_small_text
+    assert_includes rule(".ks-heading-note"), "font-size: var(--text-sm)"
+  end
+
   private
 
   def block(selector)
