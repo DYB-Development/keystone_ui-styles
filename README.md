@@ -134,7 +134,7 @@ any layer overrides them wherever it is imported.
 | `--ks-color-focus` | Input and checkbox focus border and ring | `--color-accent-500`, and `--color-accent-400` on a dark page |
 | `--ks-color-link-strong-hover` | Section action and card link on hover | `--color-accent-900`, and `--color-accent-300` on a dark page |
 | `--ks-color-badge-neutral` | Neutral badge background | `--color-gray-100`, and `--color-zinc-700` on a dark page |
-| `--ks-color-page`, `--ks-color-on-page` | The `html` element background and text | `transparent` and `CanvasText`, the browser defaults, so a page keeps the colours it has |
+| `--ks-color-page`, `--ks-color-on-page` | The `html` element background and text | `transparent` and `CanvasText`, the browser defaults, so a page keeps the colours it has, and the `html` element tells the browser the page's mode so those defaults turn dark on a dark page |
 Each colour variable in the table whose component changes on a dark page has a
 `-dark` partner, such as `--ks-color-surface-dark`, that it reads there.
 
