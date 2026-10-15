@@ -4909,6 +4909,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-caption"), "font-weight: var(--ks-font-weight-strong)"
   end
 
+  def test_paragraph_reads_the_text_colour_role
+    assert_includes rule(".ks-paragraph"), "color: var(--ks-color-text)"
+  end
+
   private
 
   def block(selector)
