@@ -5021,6 +5021,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/^  html:not\(\[data-theme\]\) \{\n    color-scheme: light dark;/m, self.class.compiled)
   end
 
+  def test_bar_chart_bar_reads_the_first_chart_colour
+    assert_includes rule(".ks-bar-chart-bar"), "fill: var(--ks-color-chart-1)"
+  end
+
   private
 
   def block(selector)
