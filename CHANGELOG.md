@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.24.0] - 2026-10-15
+
 ### Changed
 - Dark colours, including every `dark:` class, apply on screens only, so a page in dark mode prints in its light colours on white paper.
 - The `html` element tells the browser a page's mode on screens only, so the browser's own default text prints dark.
