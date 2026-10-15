@@ -12,7 +12,7 @@
 - `--ks-color-on-hover-muted` and its `-dark` partner set the text of a hovered menu option, menu move button and copy button, defaulting to `--ks-color-text-label`.
 - The `body` element reads `--ks-font-body` for its font, which still defaults to `inherit` so the page keeps its font.
 - `--ks-font-heading` sets the page, page header, section, card, modal and navbar title font, defaulting to `--ks-font-body`.
-- `--ks-font-mono` sets the font of `code`, `kbd`, `samp` and `pre`, defaulting to the font list Tailwind gives code.
+- `--ks-font-mono` holds a theme's mono font, defaulting to the font list Tailwind gives code, and code keeps reading Tailwind's `--default-mono-font-family`, which a theme writer sets from it.
 - `--ks-letter-spacing` sets the `body` element letter spacing, defaulting to `normal`.
 
 ## [0.17.0] - 2026-10-14
