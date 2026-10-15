@@ -4837,6 +4837,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/^  code, kbd, samp, pre \{\n    font-family: var\(--ks-font-mono\);/, self.class.compiled)
   end
 
+  def test_letter_spacing_variable_defaults_to_normal
+    assert_match(/@layer base \{.*?:root \{.*?--ks-letter-spacing: normal;/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
