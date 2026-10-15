@@ -5021,6 +5021,50 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/^  html:not\(\[data-theme\]\) \{\n    color-scheme: light dark;/m, self.class.compiled)
   end
 
+  def test_bar_chart_bar_reads_the_first_chart_colour
+    assert_includes rule(".ks-bar-chart-bar"), "fill: var(--ks-color-chart-1)"
+  end
+
+  def test_bar_chart_bar_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?fill: var\(--ks-color-chart-1-dark\)/m, block(".ks-bar-chart-bar"))
+  end
+
+  def test_bar_chart_shaded_bar_is_faded
+    assert_includes rule(".ks-bar-chart-bar-shaded"), "opacity: 40%"
+  end
+
+  def test_bar_chart_grid_reads_the_border_colour_role
+    assert_includes rule(".ks-bar-chart-grid"), "stroke: var(--ks-color-border)"
+  end
+
+  def test_bar_chart_grid_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?stroke: var\(--ks-color-border-dark\)/m, block(".ks-bar-chart-grid"))
+  end
+
+  def test_bar_chart_text_reads_the_muted_text_colour_role
+    assert_includes rule(".ks-bar-chart-text"), "fill: var(--ks-color-text-muted)"
+  end
+
+  def test_bar_chart_text_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?fill: var\(--ks-color-text-muted-dark\)/m, block(".ks-bar-chart-text"))
+  end
+
+  def test_bar_chart_text_is_extra_small
+    assert_includes rule(".ks-bar-chart-text"), "font-size: var(--text-xs)"
+  end
+
+  def test_bar_chart_value_reads_the_text_colour_role
+    assert_includes rule(".ks-bar-chart-value"), "fill: var(--ks-color-text)"
+  end
+
+  def test_bar_chart_value_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?fill: var\(--ks-color-text-dark\)/m, block(".ks-bar-chart-value"))
+  end
+
+  def test_bar_chart_value_is_small
+    assert_includes rule(".ks-bar-chart-value"), "font-size: var(--text-xs)"
+  end
+
   private
 
   def block(selector)
