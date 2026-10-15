@@ -4829,6 +4829,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-navbar-title"), "font-family: var(--ks-font-heading)"
   end
 
+  def test_mono_font_variable_defaults_to_the_mono_font_code_has_today
+    assert_match(/@layer base \{.*?:root \{.*?--ks-font-mono: var\(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace\);/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)

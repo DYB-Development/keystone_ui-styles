@@ -70,6 +70,7 @@
     --ks-radius-control: var(--radius-lg);
     --ks-font-body: inherit;
     --ks-font-heading: var(--ks-font-body);
+    --ks-font-mono: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
     --ks-font-weight-strong: var(--font-weight-semibold);
     --ks-border-width-control: 0px;
     --ks-spacing: var(--spacing);
