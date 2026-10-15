@@ -143,8 +143,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*\-\-ks\-color\-accent\-hover:\ var\(\-\-color\-accent\-500\)/m, self.class.compiled)
   end
 
-  def test_primary_button_text_reads_the_on_fill_colour_role
-    assert_includes rule(".ks-button-primary"), "color: var(--ks-color-on-fill)"
+  def test_primary_button_text_reads_the_on_accent_colour_role
+    assert_includes rule(".ks-button-primary"), "color: var(--ks-color-on-accent)"
   end
 
   def test_on_fill_colour_role_defaults_to_white
