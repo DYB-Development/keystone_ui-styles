@@ -266,6 +266,7 @@
     --ks-color-page: transparent;
     --ks-color-page-dark: transparent;
     --ks-color-on-page: CanvasText;
+    --ks-color-on-page-dark: CanvasText;
   }
 
   html {
