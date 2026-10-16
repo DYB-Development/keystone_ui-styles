@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.25.0] - 2026-10-15
+
 ### Added
 - `ks-metric-plain` draws a stat as a plain figure, padded by the theme's spacing with no card border or background.
 - `ks-stat-card-note` draws a stat's note just under its value in the muted text colour.
