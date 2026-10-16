@@ -219,6 +219,8 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-bar-chart-bar`, `ks-bar-chart-bar-shaded` | A bar chart's bars, filled in the first chart colour, and a bar drawn faded |
 | `ks-bar-chart-grid` | A bar chart's grid lines |
 | `ks-bar-chart-text`, `ks-bar-chart-value` | A bar chart's axis and bar labels, and the value shown on a bar |
+| `ks-metric-plain` | A stat drawn as a plain figure, padded with no card border or background |
+| `ks-stat-card-note`, `ks-stat-card-fallback` | A stat's note under its value, and the muted fallback shown when its value is missing |
 | `ks-card`, `ks-card-edge` | Card, and a card that runs edge to edge on small screens |
 | `ks-card-body`, `ks-card-title`, `ks-card-summary`, `ks-card-cta`, `ks-card-link` | Card parts |
 | `ks-alert` | Every alert |

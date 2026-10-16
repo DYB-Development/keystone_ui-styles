@@ -5085,6 +5085,30 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@media screen \{\s*html:not\(\[data-theme\]\) \{\s*color-scheme: light dark;\s*\}\s*html\[data-theme="dark"\] \{\s*color-scheme: dark;/m, self.class.compiled)
   end
 
+  def test_plain_stat_is_padded_by_the_theme_spacing_with_no_border
+    assert_includes rule(".ks-metric-plain"), "padding-inline: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_stat_note_reads_the_muted_text_colour_role
+    assert_includes rule(".ks-stat-card-note"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_stat_note_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-stat-card-note"))
+  end
+
+  def test_stat_note_sits_just_under_the_value
+    assert_includes rule(".ks-stat-card-note"), "margin-top: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_stat_fallback_reads_the_muted_text_colour_role
+    assert_includes rule(".ks-stat-card-fallback"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_stat_fallback_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-stat-card-fallback"))
+  end
+
   private
 
   def block(selector)
