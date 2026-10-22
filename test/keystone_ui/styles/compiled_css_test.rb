@@ -283,6 +283,18 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-input"), "border-color: var(--ks-color-border-control)"
   end
 
+  def test_input_text_is_large_enough_on_a_phone_that_safari_does_not_zoom_into_it
+    assert_includes rule(".ks-input"), "font-size: var(--text-base)"
+  end
+
+  def test_page_does_not_zoom_on_a_double_tap_and_still_pinches_to_zoom
+    assert_includes rule("html"), "touch-action: manipulation"
+  end
+
+  def test_input_keeps_its_small_text_on_screens_wider_than_a_phone
+    assert_match(/@media \(width >= 40rem\) \{\s*font-size: var\(--text-sm\)/, block(".ks-input"))
+  end
+
   def test_focused_input_rings_in_the_accent_color
     assert_match(/:focus.*?--tw-ring-color: var\(--ks-color-focus\)/m, block(".ks-input"))
   end

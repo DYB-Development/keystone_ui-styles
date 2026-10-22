@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+- `ks-input` text is 16px on phone-width screens, so Safari on iPhone no longer zooms into a field when it is tapped, and it stays 14px on wider screens.
+- Pages no longer zoom on a quick double tap on a phone, and pinch to zoom still works.
+
 ## [0.25.0] - 2026-10-15
 
 ### Added
