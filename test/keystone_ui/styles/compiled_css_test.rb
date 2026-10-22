@@ -287,6 +287,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-input"), "font-size: var(--text-base)"
   end
 
+  def test_input_keeps_its_small_text_on_screens_wider_than_a_phone
+    assert_match(/@media \(width >= 40rem\) \{\s*font-size: var\(--text-sm\)/, block(".ks-input"))
+  end
+
   def test_focused_input_rings_in_the_accent_color
     assert_match(/:focus.*?--tw-ring-color: var\(--ks-color-focus\)/m, block(".ks-input"))
   end
