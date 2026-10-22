@@ -291,7 +291,7 @@
   }
 
   html {
-    @apply bg-(color:--ks-color-page) text-(color:--ks-color-on-page) dark:bg-(color:--ks-color-page-dark) dark:text-(color:--ks-color-on-page-dark);
+    @apply touch-manipulation bg-(color:--ks-color-page) text-(color:--ks-color-on-page) dark:bg-(color:--ks-color-page-dark) dark:text-(color:--ks-color-on-page-dark);
   }
 
   @media screen {
