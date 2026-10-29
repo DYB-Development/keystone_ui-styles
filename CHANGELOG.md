@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Added
+- A `ks-menu-option` marked `aria-selected="true"` is drawn like one under the mouse, in light and dark mode, so the option a keyboard highlights can be seen.
+
 ## [0.26.0] - 2026-10-22
 
 ### Fixed

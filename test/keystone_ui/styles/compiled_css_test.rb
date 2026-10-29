@@ -147,6 +147,14 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*\-\-ks\-color\-accent:\ var\(\-\-color\-accent\-600\)/m, self.class.compiled)
   end
 
+  def test_a_highlighted_menu_option_reads_the_hover_colour_role
+    assert_match(/aria-selected="true".*?background-color: var\(--ks-color-hover\)/m, block(".ks-menu-option"))
+  end
+
+  def test_a_highlighted_menu_option_reads_the_dark_hover_colour_role_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?aria-selected="true".*?background-color: var\(--ks-color-hover-dark\)/m, block(".ks-menu-option"))
+  end
+
   def test_primary_button_hover_reads_the_accent_hover_colour_role
     assert_match(/&:hover.*?background-color: var\(--ks-color-accent-hover\)/m, block(".ks-button-primary"))
   end
