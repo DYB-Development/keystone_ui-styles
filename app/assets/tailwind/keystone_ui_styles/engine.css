@@ -711,7 +711,7 @@
   }
 
   .ks-menu-option {
-    @apply gap-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) hover:bg-(color:--ks-color-hover) hover:text-(color:--ks-color-on-hover-muted) aria-selected:bg-(color:--ks-color-hover) aria-selected:text-(color:--ks-color-on-hover-muted) dark:text-(color:--ks-color-text-label-dark) dark:hover:bg-(color:--ks-color-hover-dark) dark:hover:text-(color:--ks-color-on-hover-muted-dark);
+    @apply gap-[calc(var(--ks-spacing)*2)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-(color:--ks-color-text-label) hover:bg-(color:--ks-color-hover) hover:text-(color:--ks-color-on-hover-muted) aria-selected:bg-(color:--ks-color-hover) aria-selected:text-(color:--ks-color-on-hover-muted) dark:text-(color:--ks-color-text-label-dark) dark:hover:bg-(color:--ks-color-hover-dark) dark:hover:text-(color:--ks-color-on-hover-muted-dark) dark:aria-selected:bg-(color:--ks-color-hover-dark) dark:aria-selected:text-(color:--ks-color-on-hover-muted-dark);
   }
 
   .ks-menu-option-hidden {
