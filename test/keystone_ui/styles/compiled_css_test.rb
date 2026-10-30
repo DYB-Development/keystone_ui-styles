@@ -4393,6 +4393,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-table-body-dark\)/m, block(".ks-table-cell-locked"))
   end
 
+  def test_current_row_tints_each_of_its_cells_over_the_cell_fill
+    assert_includes rule(":is(.ks-table-row-current > *)"), "background-image: linear-gradient(var(--ks-color-tint),var(--ks-color-tint))"
+  end
+
   def test_locked_header_cell_shows_an_edge_on_its_right
     assert_includes block(".ks-table-header-locked"), "border-right-width: var(--ks-border-width)"
   end
