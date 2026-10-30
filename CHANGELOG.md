@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.28.0] - 2026-10-30
+
 ### Added
 - `ks-table-row-current` tints every cell of a table row in the accent tint, over each cell's own fill, so the row stands out in light and dark mode, including in a locked first column.
 
