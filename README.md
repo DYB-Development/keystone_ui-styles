@@ -107,7 +107,7 @@ any layer overrides them wherever it is imported.
 
 | `--ks-radius-pill` | Progress bar, hero badge and swipe button corners | Fully rounded |
 | `--ks-color-hover-border` | Link card and feature card border on hover | Accent 500 at 50% |
-| `--ks-color-tint`, `--ks-color-tint-border` | Feature icon, hero badge and active tab background, and the hero badge border | Accent 500 at 10% and 20% |
+| `--ks-color-tint`, `--ks-color-tint-border` | Feature icon, hero badge, active tab and current table row background, and the hero badge border | Accent 500 at 10% and 20% |
 | `--ks-color-border-subtle` | Call to action, feature card, code, accordion and disclosure border | `--color-surface-200` |
 | `--ks-color-fill-muted` | Call to action and code caption background | `--color-surface-50` |
 | `--ks-color-raised` | Feature card background | `--color-white` |
