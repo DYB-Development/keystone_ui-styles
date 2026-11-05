@@ -4405,6 +4405,38 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(":is(.ks-table-row-current > *)"), "background-image: linear-gradient(var(--ks-color-tint),var(--ks-color-tint))"
   end
 
+  def test_danger_row_tints_each_of_its_cells_in_the_danger_colour
+    assert_includes rule(":is(.ks-table-row-danger > *)"), "background-image: linear-gradient(var(--ks-color-danger-100),var(--ks-color-danger-100))"
+  end
+
+  def test_danger_row_in_the_dark_theme_tints_each_of_its_cells_in_the_dark_danger_colour
+    assert_match(/:is\(\.ks-table-row-danger:where\(:is\(\[data-theme="dark"\][^{]*> \*\) \{[^}]*background-image: linear-gradient\(color-mix\(in oklab,var\(--ks-color-danger-900\) 50%,transparent\),color-mix\(in oklab,var\(--ks-color-danger-900\) 50%,transparent\)\)/, self.class.compiled)
+  end
+
+  def test_warning_row_tints_each_of_its_cells_in_the_warning_colour
+    assert_includes rule(":is(.ks-table-row-warning > *)"), "background-image: linear-gradient(var(--ks-color-warning-100),var(--ks-color-warning-100))"
+  end
+
+  def test_warning_row_in_the_dark_theme_tints_each_of_its_cells_in_the_dark_warning_colour
+    assert_match(/:is\(\.ks-table-row-warning:where\(:is\(\[data-theme="dark"\][^{]*> \*\) \{[^}]*background-image: linear-gradient\(color-mix\(in oklab,var\(--ks-color-warning-900\) 50%,transparent\),color-mix\(in oklab,var\(--ks-color-warning-900\) 50%,transparent\)\)/, self.class.compiled)
+  end
+
+  def test_success_row_tints_each_of_its_cells_in_the_success_colour
+    assert_includes rule(":is(.ks-table-row-success > *)"), "background-image: linear-gradient(var(--ks-color-success-100),var(--ks-color-success-100))"
+  end
+
+  def test_success_row_in_the_dark_theme_tints_each_of_its_cells_in_the_dark_success_colour
+    assert_match(/:is\(\.ks-table-row-success:where\(:is\(\[data-theme="dark"\][^{]*> \*\) \{[^}]*background-image: linear-gradient\(color-mix\(in oklab,var\(--ks-color-success-900\) 50%,transparent\),color-mix\(in oklab,var\(--ks-color-success-900\) 50%,transparent\)\)/, self.class.compiled)
+  end
+
+  def test_info_row_tints_each_of_its_cells_in_the_info_colour
+    assert_includes rule(":is(.ks-table-row-info > *)"), "background-image: linear-gradient(var(--ks-color-info-100),var(--ks-color-info-100))"
+  end
+
+  def test_info_row_in_the_dark_theme_tints_each_of_its_cells_in_the_dark_info_colour
+    assert_match(/:is\(\.ks-table-row-info:where\(:is\(\[data-theme="dark"\][^{]*> \*\) \{[^}]*background-image: linear-gradient\(color-mix\(in oklab,var\(--ks-color-info-900\) 50%,transparent\),color-mix\(in oklab,var\(--ks-color-info-900\) 50%,transparent\)\)/, self.class.compiled)
+  end
+
   def test_locked_header_cell_shows_an_edge_on_its_right
     assert_includes block(".ks-table-header-locked"), "border-right-width: var(--ks-border-width)"
   end
