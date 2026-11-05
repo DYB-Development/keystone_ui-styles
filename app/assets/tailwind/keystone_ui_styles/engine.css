@@ -1319,7 +1319,7 @@
   }
 
   .ks-empty-state {
-    @apply py-[calc(var(--ks-spacing)*8)];
+    @apply py-[calc(var(--ks-spacing)*8)] gap-[calc(var(--ks-spacing)*2)];
   }
 
   .ks-swipe-actions {
