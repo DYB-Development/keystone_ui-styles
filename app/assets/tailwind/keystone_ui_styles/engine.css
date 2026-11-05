@@ -1035,7 +1035,7 @@
   }
 
   .ks-table-row-danger {
-    @apply *:bg-[linear-gradient(var(--ks-color-danger-100),var(--ks-color-danger-100))];
+    @apply *:bg-[linear-gradient(var(--ks-color-danger-100),var(--ks-color-danger-100))] dark:*:bg-[linear-gradient(color-mix(in_oklab,var(--ks-color-danger-900)_50%,transparent),color-mix(in_oklab,var(--ks-color-danger-900)_50%,transparent))];
   }
 
   .ks-table-body {
