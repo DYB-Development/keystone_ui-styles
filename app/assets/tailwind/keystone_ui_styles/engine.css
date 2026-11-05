@@ -1043,7 +1043,7 @@
   }
 
   .ks-table-row-success {
-    @apply *:bg-[linear-gradient(var(--ks-color-success-100),var(--ks-color-success-100))];
+    @apply *:bg-[linear-gradient(var(--ks-color-success-100),var(--ks-color-success-100))] dark:*:bg-[linear-gradient(color-mix(in_oklab,var(--ks-color-success-900)_50%,transparent),color-mix(in_oklab,var(--ks-color-success-900)_50%,transparent))];
   }
 
   .ks-table-body {
