@@ -3155,6 +3155,14 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-swipe-empty-message"))
   end
 
+  def test_empty_state_padding_block_is_8_spacing_units
+    assert_includes block(".ks-empty-state"), "padding-block: calc(var(--ks-spacing) * 8)"
+  end
+
+  def test_empty_state_gap_is_2_spacing_units
+    assert_includes block(".ks-empty-state"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
   def test_swipe_actions_gap_is_8_spacing_units
     assert_includes block(".ks-swipe-actions"), "gap: calc(var(--ks-spacing) * 8)"
   end
