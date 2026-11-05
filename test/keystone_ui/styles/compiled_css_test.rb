@@ -4421,6 +4421,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:is\(\.ks-table-row-success:where\(:is\(\[data-theme="dark"\][^{]*> \*\) \{[^}]*background-image: linear-gradient\(color-mix\(in oklab,var\(--ks-color-success-900\) 50%,transparent\),color-mix\(in oklab,var\(--ks-color-success-900\) 50%,transparent\)\)/, self.class.compiled)
   end
 
+  def test_info_row_tints_each_of_its_cells_in_the_info_colour
+    assert_includes rule(":is(.ks-table-row-info > *)"), "background-image: linear-gradient(var(--ks-color-info-100),var(--ks-color-info-100))"
+  end
+
   def test_locked_header_cell_shows_an_edge_on_its_right
     assert_includes block(".ks-table-header-locked"), "border-right-width: var(--ks-border-width)"
   end
