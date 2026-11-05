@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Added
+- `ks-table-row-danger`, `ks-table-row-warning`, `ks-table-row-success` and `ks-table-row-info` tint every cell of a table row in that colour, over each cell's own fill, in light and dark mode, using the same colours as the badge of the same name.
+
 ## [0.28.0] - 2026-10-30
 
 ### Added
