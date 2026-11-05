@@ -4397,6 +4397,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(":is(.ks-table-row-current > *)"), "background-image: linear-gradient(var(--ks-color-tint),var(--ks-color-tint))"
   end
 
+  def test_danger_row_tints_each_of_its_cells_in_the_danger_colour
+    assert_includes rule(":is(.ks-table-row-danger > *)"), "background-image: linear-gradient(var(--ks-color-danger-100),var(--ks-color-danger-100))"
+  end
+
   def test_locked_header_cell_shows_an_edge_on_its_right
     assert_includes block(".ks-table-header-locked"), "border-right-width: var(--ks-border-width)"
   end
