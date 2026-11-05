@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.29.0] - 2026-11-05
+
 ### Added
 - `ks-empty-state` pads an empty state above and below and spaces its title, message and action apart.
 
