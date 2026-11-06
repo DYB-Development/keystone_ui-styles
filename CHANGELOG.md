@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Added
+- The `hotwire-native` and `not-hotwire-native` variants style an element only inside or only outside a page whose `html` element has the `hotwire-native` class, so a host no longer defines them itself.
+
 ## [0.29.0] - 2026-11-05
 
 ### Added
