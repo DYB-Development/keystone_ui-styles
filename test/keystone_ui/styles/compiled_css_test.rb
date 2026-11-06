@@ -11,7 +11,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     @compiled ||= Dir.mktmpdir do |dir|
       input = File.join(dir, "application.css")
       output = File.join(dir, "out.css")
-      File.write(input, %(@import "tailwindcss";\n@import "#{ENTRY}";\n))
+      File.write(input, %(@import "tailwindcss";\n@import "#{ENTRY}";\n@source inline("hotwire-native:hidden");\n))
       system(Tailwindcss::Ruby.executable, "-i", input, "-o", output, chdir: dir, exception: true, err: File::NULL)
       File.read(output)
     end
@@ -5171,6 +5171,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
 
   def test_stat_fallback_turns_dark_when_the_page_chooses_dark
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-stat-card-fallback"))
+  end
+
+  def test_hotwire_native_variant_applies_inside_a_hotwire_native_page
+    assert_match(/html\.hotwire-native \.hotwire-native\\:hidden \{\s*display: none;/, self.class.compiled)
   end
 
   private
