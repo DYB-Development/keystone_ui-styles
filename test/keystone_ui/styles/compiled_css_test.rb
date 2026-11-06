@@ -11,7 +11,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     @compiled ||= Dir.mktmpdir do |dir|
       input = File.join(dir, "application.css")
       output = File.join(dir, "out.css")
-      File.write(input, %(@import "tailwindcss";\n@import "#{ENTRY}";\n@source inline("hotwire-native:hidden");\n))
+      File.write(input, %(@import "tailwindcss";\n@import "#{ENTRY}";\n@source inline("hotwire-native:hidden not-hotwire-native:hidden");\n))
       system(Tailwindcss::Ruby.executable, "-i", input, "-o", output, chdir: dir, exception: true, err: File::NULL)
       File.read(output)
     end
@@ -5175,6 +5175,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
 
   def test_hotwire_native_variant_applies_inside_a_hotwire_native_page
     assert_match(/html\.hotwire-native \.hotwire-native\\:hidden \{\s*display: none;/, self.class.compiled)
+  end
+
+  def test_not_hotwire_native_variant_applies_outside_a_hotwire_native_page
+    assert_match(/html:not\(\.hotwire-native\) \.not-hotwire-native\\:hidden \{\s*display: none;/, self.class.compiled)
   end
 
   private
