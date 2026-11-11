@@ -5393,6 +5393,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-radio-card-value"), "padding-block: calc(var(--ks-spacing) * 0.5)"
   end
 
+  def test_radio_card_value_sits_half_a_spacing_unit_below_the_top_of_the_card
+    assert_includes rule(".ks-radio-card-value"), "margin-top: calc(var(--ks-spacing) * 0.5)"
+  end
+
   private
 
   def block(selector)
