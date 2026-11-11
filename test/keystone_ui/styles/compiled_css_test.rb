@@ -5269,6 +5269,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-text-button"), "text-decoration-line: underline"
   end
 
+  def test_text_button_underline_sits_two_pixels_below_the_text
+    assert_includes rule(".ks-text-button"), "text-underline-offset: 2px"
+  end
+
   private
 
   def block(selector)
