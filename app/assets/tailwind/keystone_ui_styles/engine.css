@@ -464,7 +464,7 @@
   }
 
   .ks-text-button {
-    @apply text-(color:--ks-color-text-muted) text-sm underline underline-offset-2 cursor-pointer hover:text-(color:--ks-color-text) dark:text-(color:--ks-color-text-muted-dark);
+    @apply text-(color:--ks-color-text-muted) text-sm underline underline-offset-2 cursor-pointer hover:text-(color:--ks-color-text) dark:text-(color:--ks-color-text-muted-dark) dark:hover:text-(color:--ks-color-text-dark);
   }
 
   .ks-heading {
