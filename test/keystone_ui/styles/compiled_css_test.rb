@@ -5349,6 +5349,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-raised-dark\)/m, block(".ks-fact"))
   end
 
+  def test_fact_border_reads_the_dark_border_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-fact"))
+  end
+
   private
 
   def block(selector)
