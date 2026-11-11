@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Fixed
+- `ks-panel`, `ks-paragraph`, `ks-value-list-value` and `ks-page-header-subtitle` break a word longer than their line, such as a file path or a web address, onto the next line, so it no longer makes the page wider than a phone screen. Text with spaces still breaks between words.
+
 ## [0.32.0] - 2026-11-10
 
 ### Changed

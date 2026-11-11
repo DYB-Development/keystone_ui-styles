@@ -348,7 +348,7 @@
   }
 
   .ks-panel {
-    @apply border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-surface) dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-dark);
+    @apply wrap-anywhere border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-surface) dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-dark);
   }
 
   .ks-input {
@@ -424,7 +424,7 @@
   }
 
   .ks-page-header-subtitle {
-    @apply mt-[calc(var(--ks-spacing)*1)] text-sm text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+    @apply mt-[calc(var(--ks-spacing)*1)] text-sm wrap-anywhere text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 
   .ks-page-header-actions {
@@ -488,7 +488,7 @@
   }
 
   .ks-paragraph {
-    @apply leading-relaxed text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+    @apply leading-relaxed wrap-anywhere text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 
   .ks-value-list-row {
@@ -508,7 +508,7 @@
   }
 
   .ks-value-list-value {
-    @apply tabular-nums text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+    @apply tabular-nums wrap-anywhere text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 
   .ks-value-list-end .ks-value-list-value {

@@ -5221,6 +5221,22 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/html:not\(\.hotwire-native\) \.not-hotwire-native\\:hidden \{\s*display: none;/, self.class.compiled)
   end
 
+  def test_panel_breaks_a_word_longer_than_its_line
+    assert_includes rule(".ks-panel"), "overflow-wrap: anywhere"
+  end
+
+  def test_paragraph_breaks_a_word_longer_than_its_line
+    assert_includes rule(".ks-paragraph"), "overflow-wrap: anywhere"
+  end
+
+  def test_value_list_value_breaks_a_word_longer_than_its_line
+    assert_includes rule(".ks-value-list-value"), "overflow-wrap: anywhere"
+  end
+
+  def test_page_header_subtitle_breaks_a_word_longer_than_its_line
+    assert_includes rule(".ks-page-header-subtitle"), "overflow-wrap: anywhere"
+  end
+
   private
 
   def block(selector)
