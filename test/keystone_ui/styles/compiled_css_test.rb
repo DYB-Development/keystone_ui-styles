@@ -5273,6 +5273,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-text-button"), "text-underline-offset: 2px"
   end
 
+  def test_text_button_shows_the_pointer_cursor
+    assert_includes rule(".ks-text-button"), "cursor: pointer"
+  end
+
   private
 
   def block(selector)
