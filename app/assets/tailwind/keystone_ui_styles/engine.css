@@ -460,7 +460,7 @@
   }
 
   .ks-link {
-    @apply text-(color:--ks-color-link) text-sm;
+    @apply text-(color:--ks-color-link) text-sm hover:text-(color:--ks-color-link-hover);
   }
 
   .ks-heading {

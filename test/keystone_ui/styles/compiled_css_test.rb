@@ -5245,6 +5245,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-link"), "font-size: var(--text-sm)"
   end
 
+  def test_link_under_the_pointer_reads_the_link_hover_colour
+    assert_match(/&:hover.*?color: var\(--ks-color-link-hover\)/m, block(".ks-link"))
+  end
+
   private
 
   def block(selector)
