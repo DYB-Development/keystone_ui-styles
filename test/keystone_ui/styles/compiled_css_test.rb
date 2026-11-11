@@ -239,6 +239,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-button-secondary"), "--tw-inset-ring-color: var(--ks-color-neutral-border)"
   end
 
+  def test_secondary_button_outline_is_an_inset_ring_as_wide_as_the_border_width
+    assert_includes rule(".ks-button-secondary"), "--tw-inset-ring-shadow: inset 0 0 0 var(--ks-border-width)"
+  end
+
   def test_neutral_border_colour_role_defaults_to_the_control_border_colour
     assert_match(/:root \{[^}]*--ks-color-neutral-border: var\(--ks-color-border-control\);/m, self.class.compiled)
   end
