@@ -464,7 +464,7 @@
   }
 
   .ks-text-button {
-    @apply text-(color:--ks-color-text-muted);
+    @apply text-(color:--ks-color-text-muted) text-sm;
   }
 
   .ks-heading {

@@ -5261,6 +5261,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-text-button"), "color: var(--ks-color-text-muted)"
   end
 
+  def test_text_button_text_is_small
+    assert_includes rule(".ks-text-button"), "font-size: var(--text-sm)"
+  end
+
   private
 
   def block(selector)
