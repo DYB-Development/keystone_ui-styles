@@ -5397,6 +5397,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-radio-card-value"), "margin-top: calc(var(--ks-spacing) * 0.5)"
   end
 
+  def test_radio_card_value_reads_the_dark_link_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-link-dark\)/m, block(".ks-radio-card-value"))
+  end
+
   private
 
   def block(selector)
