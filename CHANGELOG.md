@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.33.1] - 2026-11-11
+
 ### Fixed
 - `ks-bottom-nav-item` can shrink narrower than its label's longest word, and `ks-bottom-nav-label` breaks a word too long for its tab onto the next line and centres each line, so a bar of five tabs with long labels fits a 390 pixel screen.
 
