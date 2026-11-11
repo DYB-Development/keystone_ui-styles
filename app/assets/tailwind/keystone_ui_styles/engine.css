@@ -328,7 +328,7 @@
   }
 
   .ks-button-secondary {
-    @apply bg-(color:--ks-color-neutral) text-(color:--ks-color-on-neutral) hover:bg-(color:--ks-color-neutral-hover) dark:bg-(color:--ks-color-neutral-dark) dark:text-(color:--ks-color-on-neutral-dark) dark:hover:bg-(color:--ks-color-neutral-hover-dark) inset-ring-(length:--ks-border-width) inset-ring-(color:--ks-color-neutral-border) dark:inset-ring-(color:--ks-color-neutral-border-dark) disabled:opacity-50;
+    @apply bg-(color:--ks-color-neutral) text-(color:--ks-color-on-neutral) hover:bg-(color:--ks-color-neutral-hover) dark:bg-(color:--ks-color-neutral-dark) dark:text-(color:--ks-color-on-neutral-dark) dark:hover:bg-(color:--ks-color-neutral-hover-dark) inset-ring-(length:--ks-border-width) inset-ring-(color:--ks-color-neutral-border) dark:inset-ring-(color:--ks-color-neutral-border-dark) disabled:opacity-50 disabled:cursor-not-allowed;
   }
 
   .ks-button-danger {
