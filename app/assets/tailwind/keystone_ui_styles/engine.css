@@ -463,6 +463,10 @@
     @apply text-(color:--ks-color-link) text-sm hover:text-(color:--ks-color-link-hover) dark:text-(color:--ks-color-link-dark) dark:hover:text-(color:--ks-color-link-hover-dark);
   }
 
+  .ks-text-button {
+    @apply text-(color:--ks-color-text-muted);
+  }
+
   .ks-heading {
     @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
