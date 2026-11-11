@@ -488,7 +488,7 @@
   }
 
   .ks-paragraph {
-    @apply leading-relaxed text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+    @apply leading-relaxed wrap-anywhere text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 
   .ks-value-list-row {
