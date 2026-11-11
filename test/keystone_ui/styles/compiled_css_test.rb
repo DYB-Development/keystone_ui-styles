@@ -5317,6 +5317,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-fact"), "font-size: var(--text-sm)"
   end
 
+  def test_fact_reads_the_raised_colour
+    assert_includes rule(".ks-fact"), "background-color: var(--ks-color-raised)"
+  end
+
   private
 
   def block(selector)

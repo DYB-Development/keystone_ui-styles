@@ -504,7 +504,7 @@
   }
 
   .ks-fact {
-    @apply text-(color:--ks-color-text-muted) text-sm;
+    @apply text-(color:--ks-color-text-muted) text-sm bg-(color:--ks-color-raised);
   }
 
   .ks-paragraph {
