@@ -1410,7 +1410,7 @@
   }
 
   .ks-bottom-nav-label {
-    @apply text-[10px] font-(weight:--ks-font-weight-medium) leading-none;
+    @apply text-[10px] font-(weight:--ks-font-weight-medium) leading-none wrap-anywhere;
   }
 
   .ks-nav-dropdown {
