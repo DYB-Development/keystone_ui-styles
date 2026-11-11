@@ -5301,6 +5301,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-caption-link"), "margin-bottom: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_facts_leave_two_spacing_units_between_facts
+    assert_includes rule(".ks-facts"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)

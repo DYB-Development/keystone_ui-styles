@@ -499,6 +499,10 @@
     @apply text-(color:--ks-color-link) dark:text-(color:--ks-color-link-dark) mb-[calc(var(--ks-spacing)*2)];
   }
 
+  .ks-facts {
+    @apply gap-[calc(var(--ks-spacing)*2)];
+  }
+
   .ks-paragraph {
     @apply leading-relaxed wrap-anywhere text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
