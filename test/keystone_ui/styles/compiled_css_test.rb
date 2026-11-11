@@ -5405,6 +5405,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-radio-card-block"), "gap: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_block_radio_card_under_the_pointer_reads_the_hover_border_colour
+    assert_match(/&:hover.*?border-color: var\(--ks-color-hover-border\)/m, block(".ks-radio-card-block"))
+  end
+
   private
 
   def block(selector)

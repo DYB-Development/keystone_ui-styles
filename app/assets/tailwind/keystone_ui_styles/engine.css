@@ -796,7 +796,7 @@
   }
 
   .ks-radio-card-block {
-    @apply gap-[calc(var(--ks-spacing)*3)];
+    @apply gap-[calc(var(--ks-spacing)*3)] hover:border-(color:--ks-color-hover-border);
   }
 
   .ks-radio-card-disclosure {
