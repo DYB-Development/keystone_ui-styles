@@ -5309,6 +5309,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-facts"), "margin-bottom: calc(var(--ks-spacing) * 8)"
   end
 
+  def test_fact_reads_the_muted_text_colour
+    assert_includes rule(".ks-fact"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)

@@ -503,6 +503,10 @@
     @apply gap-[calc(var(--ks-spacing)*2)] mb-[calc(var(--ks-spacing)*8)];
   }
 
+  .ks-fact {
+    @apply text-(color:--ks-color-text-muted);
+  }
+
   .ks-paragraph {
     @apply leading-relaxed wrap-anywhere text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
