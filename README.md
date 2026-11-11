@@ -214,6 +214,10 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-heading-sm`, `ks-heading-md`, `ks-heading-lg` | Heading size |
 | `ks-heading-row`, `ks-heading-note` | A heading with a short note at the right end of its row |
 | `ks-caption` | Small uppercase text placed above a title or figure |
+| `ks-caption-link` | Beside `ks-caption`, a caption in the link colour with space under it, such as the label above a quiz question |
+| `ks-link` | A text link in the link colour |
+| `ks-text-button` | A button drawn as small, underlined, muted text |
+| `ks-fact`, `ks-facts` | A fact drawn as a small bordered box, and the row of facts holding it |
 | `ks-paragraph` | Running text |
 | `ks-value-list-row` | One row of a label and its value, with a line between rows |
 | `ks-value-list-label`, `ks-value-list-note`, `ks-value-list-value` | A row's label, the short note under it, and its value |
@@ -238,6 +242,7 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-theme-toggle-option` | Theme toggle button, filled when pressed |
 | `ks-checkbox-row`, `ks-checkbox-row-input`, `ks-checkbox-row-label`, `ks-checkbox-row-hint` | Checkbox row and its parts |
 | `ks-radio-card`, `ks-radio-card-highlight`, `ks-radio-card-label`, `ks-radio-card-hint` | Radio card and its parts |
+| `ks-radio-card-value`, `ks-radio-card-block` | An answer's value shown on a radio card, and a full-width radio card that holds one beside its label |
 | `ks-option-card`, `ks-option-card-selected` | Option card, and a chosen one |
 | `ks-file-upload`, `ks-file-upload-drop-zone`, `ks-file-upload-drop-zone-active`, `ks-file-upload-inner`, `ks-file-upload-icon`, `ks-file-upload-prompt`, `ks-file-upload-browse`, `ks-file-upload-hint`, `ks-file-upload-file-name` | File upload and its parts |
 | `ks-color-swatch`, `ks-color-picker-panel` | Colour picker swatch and its panel |
