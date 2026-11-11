@@ -5297,6 +5297,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-link-dark\)/m, block(".ks-caption-link"))
   end
 
+  def test_link_caption_leaves_two_spacing_units_under_it
+    assert_includes rule(".ks-caption-link"), "margin-bottom: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
