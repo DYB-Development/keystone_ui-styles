@@ -5341,6 +5341,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-fact"), "padding-block: calc(var(--ks-spacing) * 1.5)"
   end
 
+  def test_fact_reads_the_dark_muted_text_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-fact"))
+  end
+
   private
 
   def block(selector)

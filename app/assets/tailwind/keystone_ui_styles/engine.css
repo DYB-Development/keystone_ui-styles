@@ -504,7 +504,7 @@
   }
 
   .ks-fact {
-    @apply text-(color:--ks-color-text-muted) text-sm bg-(color:--ks-color-raised) border-(length:--ks-border-width) border-(color:--ks-color-border) rounded-[calc(var(--ks-radius-control)*0.75)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*1.5)];
+    @apply text-(color:--ks-color-text-muted) text-sm bg-(color:--ks-color-raised) border-(length:--ks-border-width) border-(color:--ks-color-border) rounded-[calc(var(--ks-radius-control)*0.75)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*1.5)] dark:text-(color:--ks-color-text-muted-dark);
   }
 
   .ks-paragraph {
