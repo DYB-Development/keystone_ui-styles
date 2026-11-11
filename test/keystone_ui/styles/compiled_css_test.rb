@@ -235,6 +235,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-color-neutral-hover-dark: var\(--ks-color-hover-dark\);/m, self.class.compiled)
   end
 
+  def test_secondary_button_outline_reads_the_neutral_border_colour_role
+    assert_includes rule(".ks-button-secondary"), "--tw-inset-ring-color: var(--ks-color-neutral-border)"
+  end
+
   def test_neutral_border_colour_role_defaults_to_the_control_border_colour
     assert_match(/:root \{[^}]*--ks-color-neutral-border: var\(--ks-color-border-control\);/m, self.class.compiled)
   end
