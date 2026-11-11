@@ -5329,6 +5329,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-fact"), "border-color: var(--ks-color-border)"
   end
 
+  def test_fact_corners_are_three_quarters_of_the_control_radius
+    assert_includes rule(".ks-fact"), "border-radius: calc(var(--ks-radius-control) * 0.75)"
+  end
+
   private
 
   def block(selector)
