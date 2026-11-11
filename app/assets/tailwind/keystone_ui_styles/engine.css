@@ -795,6 +795,10 @@
     @apply text-(color:--ks-color-link) text-xs font-(weight:--ks-font-weight-strong) uppercase tracking-wider border-(length:--ks-border-width) border-(color:--ks-color-tint-border) rounded-[calc(var(--ks-radius-control)*0.5)] px-[calc(var(--ks-spacing)*2)] py-[calc(var(--ks-spacing)*0.5)] mt-[calc(var(--ks-spacing)*0.5)] dark:text-(color:--ks-color-link-dark);
   }
 
+  .ks-radio-card-block {
+    @apply gap-[calc(var(--ks-spacing)*3)];
+  }
+
   .ks-radio-card-disclosure {
     @apply mt-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-overlay) p-[calc(var(--ks-spacing)*3)] text-(color:--ks-color-on-overlay-muted) shadow-(--ks-shadow-overlay) dark:border-(color:--ks-color-border-dark) dark:bg-(color:--ks-color-overlay-dark) dark:text-(color:--ks-color-on-overlay-muted-dark) space-y-[calc(var(--ks-spacing)*1)];
   }

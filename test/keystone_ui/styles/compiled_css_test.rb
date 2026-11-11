@@ -5401,6 +5401,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-link-dark\)/m, block(".ks-radio-card-value"))
   end
 
+  def test_block_radio_card_leaves_three_spacing_units_between_its_value_and_label
+    assert_includes rule(".ks-radio-card-block"), "gap: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
