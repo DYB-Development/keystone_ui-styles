@@ -3395,6 +3395,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav-item"), "flex: 1"
   end
 
+  def test_bottom_nav_item_can_shrink_narrower_than_its_longest_word
+    assert_includes block(".ks-bottom-nav-item"), "min-width: 0px"
+  end
+
   def test_bottom_nav_item_icon_sits_above_its_label
     assert_includes block(".ks-bottom-nav-item"), "flex-direction: column"
   end
@@ -3469,6 +3473,14 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
 
   def test_bottom_nav_label_weight_reads_the_medium_font_weight_variable
     assert_includes block(".ks-bottom-nav-label"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_bottom_nav_label_breaks_a_word_too_long_for_its_tab
+    assert_includes block(".ks-bottom-nav-label"), "overflow-wrap: anywhere"
+  end
+
+  def test_bottom_nav_label_centres_each_line_of_a_label_that_wraps
+    assert_includes block(".ks-bottom-nav-label"), "text-align: center"
   end
 
   def test_bottom_nav_label_label_has_no_extra_line_height
