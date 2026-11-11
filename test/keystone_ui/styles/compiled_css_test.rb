@@ -5369,6 +5369,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-radio-card-value"), "text-transform: uppercase"
   end
 
+  def test_radio_card_value_letters_are_spaced_wider
+    assert_includes rule(".ks-radio-card-value"), "letter-spacing: var(--tracking-wider)"
+  end
+
   private
 
   def block(selector)
