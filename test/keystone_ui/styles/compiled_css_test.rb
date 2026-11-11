@@ -5321,6 +5321,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-fact"), "background-color: var(--ks-color-raised)"
   end
 
+  def test_fact_has_a_border_as_wide_as_the_border_width
+    assert_includes rule(".ks-fact"), "border-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)
