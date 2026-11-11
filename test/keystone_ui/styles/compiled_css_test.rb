@@ -5385,6 +5385,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-radio-card-value"), "border-radius: calc(var(--ks-radius-control) * 0.5)"
   end
 
+  def test_radio_card_value_has_two_spacing_units_at_its_sides
+    assert_includes rule(".ks-radio-card-value"), "padding-inline: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
