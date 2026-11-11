@@ -424,7 +424,7 @@
   }
 
   .ks-page-header-subtitle {
-    @apply mt-[calc(var(--ks-spacing)*1)] text-sm text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+    @apply mt-[calc(var(--ks-spacing)*1)] text-sm wrap-anywhere text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 
   .ks-page-header-actions {
