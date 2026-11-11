@@ -5353,6 +5353,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-fact"))
   end
 
+  def test_radio_card_value_reads_the_link_colour
+    assert_includes rule(".ks-radio-card-value"), "color: var(--ks-color-link)"
+  end
+
   private
 
   def block(selector)
