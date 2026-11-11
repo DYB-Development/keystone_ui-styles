@@ -90,7 +90,7 @@
     --ks-color-accent-dark: var(--color-accent-600);
     --ks-color-accent-hover-dark: var(--color-accent-500);
     --ks-color-neutral-dark: var(--ks-color-surface-dark);
-    --ks-color-neutral-hover-dark: var(--color-gray-400);
+    --ks-color-neutral-hover-dark: var(--ks-color-hover-dark);
     --ks-color-danger-dark: var(--color-red-600);
     --ks-color-danger-hover-dark: var(--color-red-500);
     --ks-color-on-fill-dark: var(--color-white);

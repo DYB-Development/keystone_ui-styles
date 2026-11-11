@@ -231,8 +231,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?&:hover.*?background-color: var\(--ks-color-neutral-hover-dark\)/m, block(".ks-button-secondary"))
   end
 
-  def test_dark_neutral_hover_colour_role_defaults_to_gray_400
-    assert_match(/:root \{[^}]*\-\-ks\-color\-neutral\-hover\-dark:\ var\(\-\-color\-gray\-400\)/m, self.class.compiled)
+  def test_dark_neutral_hover_colour_role_defaults_to_the_dark_hover_colour
+    assert_match(/:root \{[^}]*--ks-color-neutral-hover-dark: var\(--ks-color-hover-dark\);/m, self.class.compiled)
   end
 
   def test_danger_button_background_reads_the_dark_danger_colour_role_on_a_dark_page
