@@ -2399,6 +2399,18 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-table-cell-last"), "font-weight: var(--ks-font-weight-medium)"
   end
 
+  def test_table_phone_list_cell_padding_left_is_3_spacing_units_on_a_phone
+    assert_match(/@media \(width < 40rem\) \{\s*\.ks-table-phone-list-cell \{\s*padding-left: calc\(var\(--ks-spacing\) \* 3\)/, self.class.compiled)
+  end
+
+  def test_table_phone_list_cell_padding_wins_over_the_first_cells_and_headers_padding
+    compiled = self.class.compiled
+    phone_list_cell = compiled.index(".ks-table-phone-list-cell {")
+    first_cells = [ ".ks-table-cell-first {", ".ks-table-header-first {", ".ks-table-header-last {", ".ks-table-cell-last {" ].map { |selector| compiled.index(selector) }
+
+    assert_operator phone_list_cell, :>, first_cells.max
+  end
+
   def test_table_sort_link_gap_is_1_spacing_units
     assert_includes block(".ks-table-sort-link"), "gap: calc(var(--ks-spacing) * 1)"
   end
