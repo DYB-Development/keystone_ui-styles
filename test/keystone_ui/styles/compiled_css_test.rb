@@ -3479,6 +3479,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-nav-label"), "overflow-wrap: anywhere"
   end
 
+  def test_bottom_nav_label_centres_each_line_of_a_label_that_wraps
+    assert_includes block(".ks-bottom-nav-label"), "text-align: center"
+  end
+
   def test_bottom_nav_label_label_has_no_extra_line_height
     assert_includes block(".ks-bottom-nav-label"), "line-height: 1"
   end
