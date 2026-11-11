@@ -5253,6 +5253,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-link-dark\)/m, block(".ks-link"))
   end
 
+  def test_link_under_the_pointer_reads_the_dark_link_hover_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?&:hover.*?color: var\(--ks-color-link-hover-dark\)/m, block(".ks-link"))
+  end
+
   private
 
   def block(selector)
