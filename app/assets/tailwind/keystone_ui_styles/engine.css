@@ -459,6 +459,10 @@
     @apply text-sm text-(color:--ks-color-link) hover:text-(color:--ks-color-link-strong-hover) dark:text-(color:--ks-color-link-dark) dark:hover:text-(color:--ks-color-link-strong-hover-dark);
   }
 
+  .ks-link {
+    @apply text-(color:--ks-color-link);
+  }
+
   .ks-heading {
     @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }

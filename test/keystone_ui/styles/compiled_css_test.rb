@@ -5237,6 +5237,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-page-header-subtitle"), "overflow-wrap: anywhere"
   end
 
+  def test_link_reads_the_link_colour
+    assert_includes rule(".ks-link"), "color: var(--ks-color-link)"
+  end
+
   private
 
   def block(selector)
