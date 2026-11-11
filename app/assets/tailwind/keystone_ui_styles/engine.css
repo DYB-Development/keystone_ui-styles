@@ -348,7 +348,7 @@
   }
 
   .ks-panel {
-    @apply border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-surface) dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-dark);
+    @apply wrap-anywhere border-(length:--ks-border-width) border-(color:--ks-color-border) bg-(color:--ks-color-surface) dark:bg-(color:--ks-color-surface-dark) dark:border-(color:--ks-color-border-dark);
   }
 
   .ks-input {
