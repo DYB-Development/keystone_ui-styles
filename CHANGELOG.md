@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.33.0] - 2026-11-11
+
 ### Added
 - `ks-link` draws a text link in small text in the link colour, and in the link hover colour under the pointer, in light and dark mode.
 - `ks-text-button` draws a button as small, underlined, muted text that turns to the text colour under the pointer, in light and dark mode.
