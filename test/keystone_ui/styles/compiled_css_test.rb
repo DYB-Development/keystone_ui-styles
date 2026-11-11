@@ -5365,6 +5365,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-radio-card-value"), "font-weight: var(--ks-font-weight-strong)"
   end
 
+  def test_radio_card_value_is_uppercase
+    assert_includes rule(".ks-radio-card-value"), "text-transform: uppercase"
+  end
+
   private
 
   def block(selector)
