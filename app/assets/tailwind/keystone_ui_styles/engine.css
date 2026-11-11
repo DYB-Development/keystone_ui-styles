@@ -83,21 +83,23 @@
     --ks-color-accent: var(--color-accent-600);
     --ks-color-accent-hover: var(--color-accent-500);
     --ks-color-on-fill: var(--color-white);
-    --ks-color-neutral: var(--color-gray-500);
-    --ks-color-neutral-hover: var(--color-gray-400);
+    --ks-color-neutral: var(--ks-color-surface);
+    --ks-color-neutral-hover: var(--ks-color-hover);
     --ks-color-danger: var(--color-red-600);
     --ks-color-danger-hover: var(--color-red-500);
     --ks-color-accent-dark: var(--color-accent-600);
     --ks-color-accent-hover-dark: var(--color-accent-500);
-    --ks-color-neutral-dark: var(--color-gray-500);
-    --ks-color-neutral-hover-dark: var(--color-gray-400);
+    --ks-color-neutral-dark: var(--ks-color-surface-dark);
+    --ks-color-neutral-hover-dark: var(--ks-color-hover-dark);
+    --ks-color-neutral-border: var(--ks-color-border-control);
+    --ks-color-neutral-border-dark: var(--ks-color-border-control-dark);
     --ks-color-danger-dark: var(--color-red-600);
     --ks-color-danger-hover-dark: var(--color-red-500);
     --ks-color-on-fill-dark: var(--color-white);
     --ks-color-on-danger: var(--ks-color-on-fill);
     --ks-color-on-danger-dark: var(--ks-color-on-fill-dark);
-    --ks-color-on-neutral: var(--ks-color-on-fill);
-    --ks-color-on-neutral-dark: var(--ks-color-on-fill-dark);
+    --ks-color-on-neutral: var(--ks-color-text);
+    --ks-color-on-neutral-dark: var(--ks-color-text-dark);
     --ks-color-on-accent: var(--ks-color-on-fill);
     --ks-color-on-accent-dark: var(--ks-color-on-fill-dark);
     --ks-color-surface: var(--color-white);
@@ -326,7 +328,7 @@
   }
 
   .ks-button-secondary {
-    @apply bg-(color:--ks-color-neutral) text-(color:--ks-color-on-neutral) hover:bg-(color:--ks-color-neutral-hover) dark:bg-(color:--ks-color-neutral-dark) dark:text-(color:--ks-color-on-neutral-dark) dark:hover:bg-(color:--ks-color-neutral-hover-dark);
+    @apply bg-(color:--ks-color-neutral) text-(color:--ks-color-on-neutral) hover:bg-(color:--ks-color-neutral-hover) dark:bg-(color:--ks-color-neutral-dark) dark:text-(color:--ks-color-on-neutral-dark) dark:hover:bg-(color:--ks-color-neutral-hover-dark) inset-ring-(length:--ks-border-width) inset-ring-(color:--ks-color-neutral-border) dark:inset-ring-(color:--ks-color-neutral-border-dark) disabled:opacity-50 disabled:cursor-not-allowed;
   }
 
   .ks-button-danger {

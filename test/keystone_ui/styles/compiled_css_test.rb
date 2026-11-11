@@ -171,16 +171,16 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*\-\-ks\-color\-on\-fill:\ var\(\-\-color\-white\)/m, self.class.compiled)
   end
 
-  def test_neutral_colour_role_defaults_to_gray_500
-    assert_match(/:root \{[^}]*\-\-ks\-color\-neutral:\ var\(\-\-color\-gray\-500\)/m, self.class.compiled)
+  def test_neutral_colour_role_defaults_to_the_surface_colour
+    assert_match(/:root \{[^}]*--ks-color-neutral: var\(--ks-color-surface\);/m, self.class.compiled)
   end
 
   def test_secondary_button_hover_reads_the_neutral_hover_colour_role
     assert_match(/&:hover.*?background-color: var\(--ks-color-neutral-hover\)/m, block(".ks-button-secondary"))
   end
 
-  def test_neutral_hover_colour_role_defaults_to_gray_400
-    assert_match(/:root \{[^}]*\-\-ks\-color\-neutral\-hover:\ var\(\-\-color\-gray\-400\)/m, self.class.compiled)
+  def test_neutral_hover_colour_role_defaults_to_the_hover_colour
+    assert_match(/:root \{[^}]*--ks-color-neutral-hover: var\(--ks-color-hover\);/m, self.class.compiled)
   end
 
   def test_secondary_button_text_reads_the_on_neutral_colour_role
@@ -223,16 +223,44 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-neutral-dark\)/m, block(".ks-button-secondary"))
   end
 
-  def test_dark_neutral_colour_role_defaults_to_gray_500
-    assert_match(/:root \{[^}]*\-\-ks\-color\-neutral\-dark:\ var\(\-\-color\-gray\-500\)/m, self.class.compiled)
+  def test_dark_neutral_colour_role_defaults_to_the_dark_surface_colour
+    assert_match(/:root \{[^}]*--ks-color-neutral-dark: var\(--ks-color-surface-dark\);/m, self.class.compiled)
   end
 
   def test_secondary_button_hover_reads_the_dark_neutral_hover_colour_role_on_a_dark_page
     assert_match(/data-theme="dark".*?&:hover.*?background-color: var\(--ks-color-neutral-hover-dark\)/m, block(".ks-button-secondary"))
   end
 
-  def test_dark_neutral_hover_colour_role_defaults_to_gray_400
-    assert_match(/:root \{[^}]*\-\-ks\-color\-neutral\-hover\-dark:\ var\(\-\-color\-gray\-400\)/m, self.class.compiled)
+  def test_dark_neutral_hover_colour_role_defaults_to_the_dark_hover_colour
+    assert_match(/:root \{[^}]*--ks-color-neutral-hover-dark: var\(--ks-color-hover-dark\);/m, self.class.compiled)
+  end
+
+  def test_secondary_button_outline_reads_the_neutral_border_colour_role
+    assert_includes rule(".ks-button-secondary"), "--tw-inset-ring-color: var(--ks-color-neutral-border)"
+  end
+
+  def test_secondary_button_outline_is_an_inset_ring_as_wide_as_the_border_width
+    assert_includes rule(".ks-button-secondary"), "--tw-inset-ring-shadow: inset 0 0 0 var(--ks-border-width)"
+  end
+
+  def test_secondary_button_outline_reads_the_dark_neutral_border_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?--tw-inset-ring-color: var\(--ks-color-neutral-border-dark\)/m, block(".ks-button-secondary"))
+  end
+
+  def test_disabled_secondary_button_is_drawn_at_half_opacity
+    assert_match(/&:disabled \{\s*opacity: 50%;/m, block(".ks-button-secondary"))
+  end
+
+  def test_disabled_secondary_button_shows_the_not_allowed_cursor
+    assert_match(/&:disabled \{\s*cursor: not-allowed;/m, block(".ks-button-secondary"))
+  end
+
+  def test_neutral_border_colour_role_defaults_to_the_control_border_colour
+    assert_match(/:root \{[^}]*--ks-color-neutral-border: var\(--ks-color-border-control\);/m, self.class.compiled)
+  end
+
+  def test_dark_neutral_border_colour_role_defaults_to_the_dark_control_border_colour
+    assert_match(/:root \{[^}]*--ks-color-neutral-border-dark: var\(--ks-color-border-control-dark\);/m, self.class.compiled)
   end
 
   def test_danger_button_background_reads_the_dark_danger_colour_role_on_a_dark_page
@@ -4761,12 +4789,12 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-accent-dark: var\(--ks-color-on-fill-dark\);/m, self.class.compiled)
   end
 
-  def test_on_neutral_colour_role_defaults_to_the_shared_on_fill_colour
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-neutral: var\(--ks-color-on-fill\);/m, self.class.compiled)
+  def test_on_neutral_colour_role_defaults_to_the_text_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-neutral: var\(--ks-color-text\);/m, self.class.compiled)
   end
 
-  def test_dark_on_neutral_colour_role_defaults_to_the_shared_dark_on_fill_colour
-    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-neutral-dark: var\(--ks-color-on-fill-dark\);/m, self.class.compiled)
+  def test_dark_on_neutral_colour_role_defaults_to_the_dark_text_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-on-neutral-dark: var\(--ks-color-text-dark\);/m, self.class.compiled)
   end
 
   def test_on_danger_colour_role_defaults_to_the_shared_on_fill_colour

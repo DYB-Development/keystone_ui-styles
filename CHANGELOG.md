@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+### Changed
+- `ks-button-secondary` is drawn on the surface colour with its label in the text colour and an outline inside its edge, in light and dark mode, so a secondary button no longer looks disabled beside a primary button, and it stays the height of a primary button. A look file that sets `--ks-color-neutral`, `--ks-color-neutral-hover` or `--ks-color-on-neutral` still sets them.
+- A disabled `ks-button-secondary` is drawn at half opacity with the not-allowed cursor, so it looks different from an enabled one.
+
+### Added
+- `--ks-color-neutral-border` and `--ks-color-neutral-border-dark` set the secondary button outline colour, and default to the control border colour.
+
 ## [0.31.0] - 2026-11-10
 
 ### Added

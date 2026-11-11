@@ -71,10 +71,12 @@ any layer overrides them wherever it is imported.
 | `--ks-border-width-control` | Button border width | `0px` |
 | `--ks-spacing` | The unit every button, input, page, card, alert and panel padding is a multiple of | `--spacing` |
 | `--ks-color-accent`, `--ks-color-accent-hover` | Primary button fill, and on hover | `--color-accent-600`, `--color-accent-500` |
-| `--ks-color-neutral`, `--ks-color-neutral-hover` | Secondary button fill, and on hover | `--color-gray-500`, `--color-gray-400` |
+| `--ks-color-neutral`, `--ks-color-neutral-hover` | Secondary button fill, and on hover | `--ks-color-surface`, `--ks-color-hover` |
+| `--ks-color-neutral-border` | Secondary button outline, drawn inside its edge at `--ks-border-width` | `--ks-color-border-control` |
 | `--ks-color-danger`, `--ks-color-danger-hover` | Danger button fill, and on hover | `--color-red-600`, `--color-red-500` |
-| `--ks-color-on-fill` | The label colour the primary, secondary and danger button label colours default to | `--color-white` |
-| `--ks-color-on-accent`, `--ks-color-on-neutral`, `--ks-color-on-danger` | Primary, secondary and danger button label | `--ks-color-on-fill` |
+| `--ks-color-on-fill` | The label colour the primary and danger button label colours default to | `--color-white` |
+| `--ks-color-on-accent`, `--ks-color-on-danger` | Primary and danger button label | `--ks-color-on-fill` |
+| `--ks-color-on-neutral` | Secondary button label | `--ks-color-text` |
 | `--ks-color-surface` | Panel, card and input background | `--color-white`, and `--color-surface-900` on a dark page |
 | `--ks-color-border` | Panel and card border | `--color-surface-200` |
 | `--ks-color-border-control` | Input border | `--color-gray-300` |
@@ -150,18 +152,19 @@ them, and setting one of them on its own still overrides it:
 
 | Base role | Roles that follow it |
 |---|---|
-| `--ks-color-text` | `text-display`, `text-heading`, `text-option`, `text-choice`, `nav-link`, `on-hover` |
+| `--ks-color-text` | `text-display`, `text-heading`, `text-option`, `text-choice`, `nav-link`, `on-hover`, `on-neutral` |
 | `--ks-color-text-muted` | `text-display-muted`, `text-choice-muted`, `text-option-muted`, `nav-text` |
 | `--ks-color-text-secondary` | `text-body`, `on-overlay-muted` |
 | `--ks-color-text-label` | `text-meter-label`, `nav-text-hover`, `on-hover-muted` |
 | `--ks-color-icon` | `close`, `icon-soft` |
 | `--ks-color-border` | `border-subtle`, `track`, `divider`, `nav-border` |
 | `--ks-color-border-strong` | `border-control`, `border-choice` |
-| `--ks-color-surface` | `table-body`, `nav`, `nav-menu-mobile` |
+| `--ks-color-surface` | `table-body`, `nav`, `nav-menu-mobile`, `neutral` |
 | `--ks-color-overlay` | `raised` |
-| `--ks-color-hover` | `fill-muted`, `hover-raised`, `hover-soft`, `table-head`, `nav-hover` |
+| `--ks-color-hover` | `fill-muted`, `hover-raised`, `hover-soft`, `table-head`, `nav-hover`, `neutral-hover` |
 | `--ks-color-link` | `nav-active`, `nav-indicator` |
-| `--ks-color-on-fill` | `on-accent`, `on-neutral`, `on-danger` |
+| `--ks-color-on-fill` | `on-accent`, `on-danger` |
+| `--ks-color-border-control` | `neutral-border` |
 
 The base roles draw from the surface scale, which keystone_ui-colors sets per
 account. The nav roles read the old `--base-*` variables first when a host sets
