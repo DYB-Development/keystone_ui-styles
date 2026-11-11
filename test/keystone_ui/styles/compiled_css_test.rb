@@ -5277,6 +5277,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-text-button"), "cursor: pointer"
   end
 
+  def test_text_button_under_the_pointer_reads_the_text_colour
+    assert_match(/&:hover.*?color: var\(--ks-color-text\)/m, block(".ks-text-button"))
+  end
+
   private
 
   def block(selector)
