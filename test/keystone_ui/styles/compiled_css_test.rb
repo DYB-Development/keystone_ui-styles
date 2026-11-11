@@ -179,8 +179,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/&:hover.*?background-color: var\(--ks-color-neutral-hover\)/m, block(".ks-button-secondary"))
   end
 
-  def test_neutral_hover_colour_role_defaults_to_gray_400
-    assert_match(/:root \{[^}]*\-\-ks\-color\-neutral\-hover:\ var\(\-\-color\-gray\-400\)/m, self.class.compiled)
+  def test_neutral_hover_colour_role_defaults_to_the_hover_colour
+    assert_match(/:root \{[^}]*--ks-color-neutral-hover: var\(--ks-color-hover\);/m, self.class.compiled)
   end
 
   def test_secondary_button_text_reads_the_on_neutral_colour_role
