@@ -5373,6 +5373,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-radio-card-value"), "letter-spacing: var(--tracking-wider)"
   end
 
+  def test_radio_card_value_has_a_border_as_wide_as_the_border_width
+    assert_includes rule(".ks-radio-card-value"), "border-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)
