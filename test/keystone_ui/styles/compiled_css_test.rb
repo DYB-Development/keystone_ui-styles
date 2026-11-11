@@ -5337,6 +5337,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-fact"), "padding-inline: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_fact_has_one_and_a_half_spacing_units_above_and_below
+    assert_includes rule(".ks-fact"), "padding-block: calc(var(--ks-spacing) * 1.5)"
+  end
+
   private
 
   def block(selector)
