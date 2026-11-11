@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.31.0] - 2026-11-10
+
 ### Added
 - `ks-table-phone-list-cell` gives a table cell 12px of left padding on phone-width screens, over the left padding of the first, middle and last cell and header classes, so every field of a table row shown as a card on a phone starts at the same left edge, and it changes nothing on wider screens.
 
