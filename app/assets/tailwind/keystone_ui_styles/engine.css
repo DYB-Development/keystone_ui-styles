@@ -1085,6 +1085,10 @@
     @apply py-[calc(var(--ks-spacing)*4)] pr-[calc(var(--ks-spacing)*6)] pl-[calc(var(--ks-spacing)*3)] font-(weight:--ks-font-weight-medium);
   }
 
+  .ks-table-phone-list-cell {
+    @apply max-sm:pl-[calc(var(--ks-spacing)*3)];
+  }
+
   .ks-table-sort-link {
     @apply gap-[calc(var(--ks-spacing)*1)];
   }
