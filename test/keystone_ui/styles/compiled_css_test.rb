@@ -5289,6 +5289,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?&:hover.*?color: var\(--ks-color-text-dark\)/m, block(".ks-text-button"))
   end
 
+  def test_link_caption_reads_the_link_colour
+    assert_includes rule(".ks-caption-link"), "color: var(--ks-color-link)"
+  end
+
   private
 
   def block(selector)
