@@ -5237,6 +5237,178 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-page-header-subtitle"), "overflow-wrap: anywhere"
   end
 
+  def test_link_reads_the_link_colour
+    assert_includes rule(".ks-link"), "color: var(--ks-color-link)"
+  end
+
+  def test_link_text_is_small
+    assert_includes rule(".ks-link"), "font-size: var(--text-sm)"
+  end
+
+  def test_link_under_the_pointer_reads_the_link_hover_colour
+    assert_match(/&:hover.*?color: var\(--ks-color-link-hover\)/m, block(".ks-link"))
+  end
+
+  def test_link_reads_the_dark_link_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-link-dark\)/m, block(".ks-link"))
+  end
+
+  def test_link_under_the_pointer_reads_the_dark_link_hover_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?&:hover.*?color: var\(--ks-color-link-hover-dark\)/m, block(".ks-link"))
+  end
+
+  def test_text_button_reads_the_muted_text_colour
+    assert_includes rule(".ks-text-button"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_text_button_text_is_small
+    assert_includes rule(".ks-text-button"), "font-size: var(--text-sm)"
+  end
+
+  def test_text_button_is_underlined
+    assert_includes rule(".ks-text-button"), "text-decoration-line: underline"
+  end
+
+  def test_text_button_underline_sits_two_pixels_below_the_text
+    assert_includes rule(".ks-text-button"), "text-underline-offset: 2px"
+  end
+
+  def test_text_button_shows_the_pointer_cursor
+    assert_includes rule(".ks-text-button"), "cursor: pointer"
+  end
+
+  def test_text_button_under_the_pointer_reads_the_text_colour
+    assert_match(/&:hover.*?color: var\(--ks-color-text\)/m, block(".ks-text-button"))
+  end
+
+  def test_text_button_reads_the_dark_muted_text_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-text-button"))
+  end
+
+  def test_text_button_under_the_pointer_reads_the_dark_text_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?&:hover.*?color: var\(--ks-color-text-dark\)/m, block(".ks-text-button"))
+  end
+
+  def test_link_caption_reads_the_link_colour
+    assert_includes rule(".ks-caption-link"), "color: var(--ks-color-link)"
+  end
+
+  def test_link_caption_reads_the_dark_link_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-link-dark\)/m, block(".ks-caption-link"))
+  end
+
+  def test_link_caption_leaves_two_spacing_units_under_it
+    assert_includes rule(".ks-caption-link"), "margin-bottom: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_facts_leave_two_spacing_units_between_facts
+    assert_includes rule(".ks-facts"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_facts_leave_eight_spacing_units_under_them
+    assert_includes rule(".ks-facts"), "margin-bottom: calc(var(--ks-spacing) * 8)"
+  end
+
+  def test_fact_reads_the_muted_text_colour
+    assert_includes rule(".ks-fact"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_fact_text_is_small
+    assert_includes rule(".ks-fact"), "font-size: var(--text-sm)"
+  end
+
+  def test_fact_reads_the_raised_colour
+    assert_includes rule(".ks-fact"), "background-color: var(--ks-color-raised)"
+  end
+
+  def test_fact_has_a_border_as_wide_as_the_border_width
+    assert_includes rule(".ks-fact"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_fact_border_reads_the_border_colour
+    assert_includes rule(".ks-fact"), "border-color: var(--ks-color-border)"
+  end
+
+  def test_fact_corners_are_three_quarters_of_the_control_radius
+    assert_includes rule(".ks-fact"), "border-radius: calc(var(--ks-radius-control) * 0.75)"
+  end
+
+  def test_fact_has_three_spacing_units_at_its_sides
+    assert_includes rule(".ks-fact"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_fact_has_one_and_a_half_spacing_units_above_and_below
+    assert_includes rule(".ks-fact"), "padding-block: calc(var(--ks-spacing) * 1.5)"
+  end
+
+  def test_fact_reads_the_dark_muted_text_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-fact"))
+  end
+
+  def test_fact_reads_the_dark_raised_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-raised-dark\)/m, block(".ks-fact"))
+  end
+
+  def test_fact_border_reads_the_dark_border_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-fact"))
+  end
+
+  def test_radio_card_value_reads_the_link_colour
+    assert_includes rule(".ks-radio-card-value"), "color: var(--ks-color-link)"
+  end
+
+  def test_radio_card_value_text_is_extra_small
+    assert_includes rule(".ks-radio-card-value"), "font-size: var(--text-xs)"
+  end
+
+  def test_radio_card_value_reads_the_strong_font_weight
+    assert_includes rule(".ks-radio-card-value"), "font-weight: var(--ks-font-weight-strong)"
+  end
+
+  def test_radio_card_value_is_uppercase
+    assert_includes rule(".ks-radio-card-value"), "text-transform: uppercase"
+  end
+
+  def test_radio_card_value_letters_are_spaced_wider
+    assert_includes rule(".ks-radio-card-value"), "letter-spacing: var(--tracking-wider)"
+  end
+
+  def test_radio_card_value_has_a_border_as_wide_as_the_border_width
+    assert_includes rule(".ks-radio-card-value"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_radio_card_value_border_reads_the_tint_border_colour
+    assert_includes rule(".ks-radio-card-value"), "border-color: var(--ks-color-tint-border)"
+  end
+
+  def test_radio_card_value_corners_are_half_the_control_radius
+    assert_includes rule(".ks-radio-card-value"), "border-radius: calc(var(--ks-radius-control) * 0.5)"
+  end
+
+  def test_radio_card_value_has_two_spacing_units_at_its_sides
+    assert_includes rule(".ks-radio-card-value"), "padding-inline: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_radio_card_value_has_half_a_spacing_unit_above_and_below
+    assert_includes rule(".ks-radio-card-value"), "padding-block: calc(var(--ks-spacing) * 0.5)"
+  end
+
+  def test_radio_card_value_sits_half_a_spacing_unit_below_the_top_of_the_card
+    assert_includes rule(".ks-radio-card-value"), "margin-top: calc(var(--ks-spacing) * 0.5)"
+  end
+
+  def test_radio_card_value_reads_the_dark_link_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-link-dark\)/m, block(".ks-radio-card-value"))
+  end
+
+  def test_block_radio_card_leaves_three_spacing_units_between_its_value_and_label
+    assert_includes rule(".ks-radio-card-block"), "gap: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_block_radio_card_under_the_pointer_reads_the_hover_border_colour
+    assert_match(/&:hover.*?border-color: var\(--ks-color-hover-border\)/m, block(".ks-radio-card-block"))
+  end
+
   private
 
   def block(selector)

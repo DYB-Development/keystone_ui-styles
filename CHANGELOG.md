@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+### Added
+- `ks-link` draws a text link in small text in the link colour, and in the link hover colour under the pointer, in light and dark mode.
+- `ks-text-button` draws a button as small, underlined, muted text that turns to the text colour under the pointer, in light and dark mode.
+- `ks-caption-link`, worn beside `ks-caption`, draws the caption in the link colour with two spacing units under it, as the label above a quiz question.
+- `ks-radio-card-value` draws an answer's value on a radio card as small uppercase link-coloured text inside a thin tinted border.
+- `ks-radio-card-block` leaves three spacing units between a full-width radio card's value and its label, and draws its border in the hover border colour under the pointer.
+- `ks-fact` draws a fact as small muted text on the raised colour inside a bordered, rounded box, and `ks-facts` spaces a row of facts and leaves room under it.
+
 ## [0.32.1] - 2026-11-11
 
 ### Fixed

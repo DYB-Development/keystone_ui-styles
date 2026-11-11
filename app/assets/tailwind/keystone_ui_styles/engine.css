@@ -459,6 +459,14 @@
     @apply text-sm text-(color:--ks-color-link) hover:text-(color:--ks-color-link-strong-hover) dark:text-(color:--ks-color-link-dark) dark:hover:text-(color:--ks-color-link-strong-hover-dark);
   }
 
+  .ks-link {
+    @apply text-(color:--ks-color-link) text-sm hover:text-(color:--ks-color-link-hover) dark:text-(color:--ks-color-link-dark) dark:hover:text-(color:--ks-color-link-hover-dark);
+  }
+
+  .ks-text-button {
+    @apply text-(color:--ks-color-text-muted) text-sm underline underline-offset-2 cursor-pointer hover:text-(color:--ks-color-text) dark:text-(color:--ks-color-text-muted-dark) dark:hover:text-(color:--ks-color-text-dark);
+  }
+
   .ks-heading {
     @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
@@ -485,6 +493,18 @@
 
   .ks-caption {
     @apply text-xs font-(weight:--ks-font-weight-strong) uppercase tracking-wider text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+  }
+
+  .ks-caption-link {
+    @apply text-(color:--ks-color-link) dark:text-(color:--ks-color-link-dark) mb-[calc(var(--ks-spacing)*2)];
+  }
+
+  .ks-facts {
+    @apply gap-[calc(var(--ks-spacing)*2)] mb-[calc(var(--ks-spacing)*8)];
+  }
+
+  .ks-fact {
+    @apply text-(color:--ks-color-text-muted) text-sm bg-(color:--ks-color-raised) border-(length:--ks-border-width) border-(color:--ks-color-border) rounded-[calc(var(--ks-radius-control)*0.75)] px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*1.5)] dark:text-(color:--ks-color-text-muted-dark) dark:bg-(color:--ks-color-raised-dark) dark:border-(color:--ks-color-border-dark);
   }
 
   .ks-paragraph {
@@ -769,6 +789,14 @@
 
   .ks-radio-card-hint {
     @apply mt-[calc(var(--ks-spacing)*1)] text-(color:--ks-color-text-option-muted) dark:text-(color:--ks-color-text-option-muted-dark);
+  }
+
+  .ks-radio-card-value {
+    @apply text-(color:--ks-color-link) text-xs font-(weight:--ks-font-weight-strong) uppercase tracking-wider border-(length:--ks-border-width) border-(color:--ks-color-tint-border) rounded-[calc(var(--ks-radius-control)*0.5)] px-[calc(var(--ks-spacing)*2)] py-[calc(var(--ks-spacing)*0.5)] mt-[calc(var(--ks-spacing)*0.5)] dark:text-(color:--ks-color-link-dark);
+  }
+
+  .ks-radio-card-block {
+    @apply gap-[calc(var(--ks-spacing)*3)] hover:border-(color:--ks-color-hover-border);
   }
 
   .ks-radio-card-disclosure {
