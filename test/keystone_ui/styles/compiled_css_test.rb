@@ -239,6 +239,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*--ks-color-neutral-border: var\(--ks-color-border-control\);/m, self.class.compiled)
   end
 
+  def test_dark_neutral_border_colour_role_defaults_to_the_dark_control_border_colour
+    assert_match(/:root \{[^}]*--ks-color-neutral-border-dark: var\(--ks-color-border-control-dark\);/m, self.class.compiled)
+  end
+
   def test_danger_button_background_reads_the_dark_danger_colour_role_on_a_dark_page
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-danger-dark\)/m, block(".ks-button-danger"))
   end

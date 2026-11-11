@@ -92,6 +92,7 @@
     --ks-color-neutral-dark: var(--ks-color-surface-dark);
     --ks-color-neutral-hover-dark: var(--ks-color-hover-dark);
     --ks-color-neutral-border: var(--ks-color-border-control);
+    --ks-color-neutral-border-dark: var(--ks-color-border-control-dark);
     --ks-color-danger-dark: var(--color-red-600);
     --ks-color-danger-hover-dark: var(--color-red-500);
     --ks-color-on-fill-dark: var(--color-white);
