@@ -496,7 +496,7 @@
   }
 
   .ks-caption-link {
-    @apply text-(color:--ks-color-link);
+    @apply text-(color:--ks-color-link) dark:text-(color:--ks-color-link-dark);
   }
 
   .ks-paragraph {
