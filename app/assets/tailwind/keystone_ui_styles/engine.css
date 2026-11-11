@@ -792,7 +792,7 @@
   }
 
   .ks-radio-card-value {
-    @apply text-(color:--ks-color-link) text-xs;
+    @apply text-(color:--ks-color-link) text-xs font-(weight:--ks-font-weight-strong);
   }
 
   .ks-radio-card-disclosure {
