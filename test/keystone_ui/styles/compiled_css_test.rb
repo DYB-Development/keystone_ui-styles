@@ -5229,6 +5229,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-paragraph"), "overflow-wrap: anywhere"
   end
 
+  def test_value_list_value_breaks_a_word_longer_than_its_line
+    assert_includes rule(".ks-value-list-value"), "overflow-wrap: anywhere"
+  end
+
   private
 
   def block(selector)
