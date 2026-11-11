@@ -171,8 +171,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/:root \{[^}]*\-\-ks\-color\-on\-fill:\ var\(\-\-color\-white\)/m, self.class.compiled)
   end
 
-  def test_neutral_colour_role_defaults_to_gray_500
-    assert_match(/:root \{[^}]*\-\-ks\-color\-neutral:\ var\(\-\-color\-gray\-500\)/m, self.class.compiled)
+  def test_neutral_colour_role_defaults_to_the_surface_colour
+    assert_match(/:root \{[^}]*--ks-color-neutral: var\(--ks-color-surface\);/m, self.class.compiled)
   end
 
   def test_secondary_button_hover_reads_the_neutral_hover_colour_role
