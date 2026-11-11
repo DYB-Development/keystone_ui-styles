@@ -5357,6 +5357,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-radio-card-value"), "color: var(--ks-color-link)"
   end
 
+  def test_radio_card_value_text_is_extra_small
+    assert_includes rule(".ks-radio-card-value"), "font-size: var(--text-xs)"
+  end
+
   private
 
   def block(selector)
