@@ -5381,6 +5381,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-radio-card-value"), "border-color: var(--ks-color-tint-border)"
   end
 
+  def test_radio_card_value_corners_are_half_the_control_radius
+    assert_includes rule(".ks-radio-card-value"), "border-radius: calc(var(--ks-radius-control) * 0.5)"
+  end
+
   private
 
   def block(selector)
