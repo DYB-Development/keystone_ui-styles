@@ -5265,6 +5265,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-text-button"), "font-size: var(--text-sm)"
   end
 
+  def test_text_button_is_underlined
+    assert_includes rule(".ks-text-button"), "text-decoration-line: underline"
+  end
+
   private
 
   def block(selector)
