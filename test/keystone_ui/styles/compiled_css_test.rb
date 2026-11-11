@@ -5333,6 +5333,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-fact"), "border-radius: calc(var(--ks-radius-control) * 0.75)"
   end
 
+  def test_fact_has_three_spacing_units_at_its_sides
+    assert_includes rule(".ks-fact"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
