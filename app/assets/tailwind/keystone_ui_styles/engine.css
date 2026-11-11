@@ -500,7 +500,7 @@
   }
 
   .ks-facts {
-    @apply gap-[calc(var(--ks-spacing)*2)];
+    @apply gap-[calc(var(--ks-spacing)*2)] mb-[calc(var(--ks-spacing)*8)];
   }
 
   .ks-paragraph {
