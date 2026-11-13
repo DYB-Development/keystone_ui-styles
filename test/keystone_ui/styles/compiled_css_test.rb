@@ -5541,6 +5541,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-top-color: var\(--ks-color-nav-border-dark\)/m, block(".ks-bottom-action"))
   end
 
+  def test_bottom_action_sits_directly_above_the_bottom_tab_bar
+    assert_includes rule("body:has(.ks-bottom-nav) .ks-bottom-action"), "bottom: var(--ks-bottom-nav-height)"
+  end
+
   private
 
   def block(selector)

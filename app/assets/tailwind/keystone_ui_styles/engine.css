@@ -280,6 +280,7 @@
     --ks-color-nav-active-dark: var(--text-primary, var(--ks-color-link-dark));
     --ks-color-nav-link: var(--base-text, var(--ks-color-text));
     --ks-color-nav-link-dark: var(--base-text, var(--ks-color-text-dark));
+    --ks-bottom-nav-height: calc(var(--spacing) * 14 + var(--ks-border-width) + env(safe-area-inset-bottom));
     --ks-color-nav-indicator: var(--border-primary, var(--ks-color-link));
     --ks-color-nav-indicator-dark: var(--border-primary, var(--ks-color-link-dark));
     --ks-color-nav-menu-mobile: var(--base-bg-base, var(--ks-color-surface));
@@ -1469,6 +1470,10 @@
 
   .ks-bottom-action {
     @apply fixed bottom-0 left-0 right-0 z-40 flex px-[calc(var(--ks-spacing)*4)] pt-[calc(var(--ks-spacing)*3)] pb-[calc(var(--ks-spacing)*3+env(safe-area-inset-bottom))] lg:hidden bg-(color:--ks-color-nav) dark:bg-(color:--ks-color-nav-dark) border-t-(length:--ks-border-width) border-t-(color:--ks-color-nav-border) dark:border-t-(color:--ks-color-nav-border-dark);
+  }
+
+  body:has(.ks-bottom-nav) .ks-bottom-action {
+    bottom: var(--ks-bottom-nav-height);
   }
 
   .ks-nav-dropdown {
