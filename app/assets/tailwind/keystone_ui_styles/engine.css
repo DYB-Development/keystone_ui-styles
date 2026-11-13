@@ -1173,6 +1173,10 @@
     @apply bg-(color:--ks-color-code) p-[calc(var(--ks-spacing)*4)] text-(color:--ks-color-text-code) dark:bg-(color:--ks-color-code-dark);
   }
 
+  .ks-diff-removed {
+    @apply bg-(color:--ks-color-danger-100);
+  }
+
   .ks-accordion {
     @apply gap-[calc(var(--ks-spacing)*4)];
   }

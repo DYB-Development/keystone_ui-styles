@@ -5497,6 +5497,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-info-400\)/m, block(".ks-status-dot-info"))
   end
 
+  def test_removed_diff_line_has_a_light_danger_background
+    assert_includes block(".ks-diff-removed"), "background-color: var(--ks-color-danger-100)"
+  end
+
   private
 
   def block(selector)
