@@ -5421,6 +5421,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/&:hover.*?border-color: var\(--ks-color-hover-border\)/m, block(".ks-radio-card-block"))
   end
 
+  def test_timeline_track_reads_the_timeline_track_colour
+    assert_includes block(".ks-timeline-track"), "background-color: var(--ks-color-timeline-track)"
+  end
+
   private
 
   def block(selector)
