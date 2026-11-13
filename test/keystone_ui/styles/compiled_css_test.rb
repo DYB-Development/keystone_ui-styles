@@ -5477,6 +5477,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-status-dot-danger"), "background-color: var(--ks-color-danger-700)"
   end
 
+  def test_danger_status_dot_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-danger-400\)/m, block(".ks-status-dot-danger"))
+  end
+
   private
 
   def block(selector)

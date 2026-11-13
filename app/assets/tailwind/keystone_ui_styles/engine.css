@@ -690,7 +690,7 @@
   }
 
   .ks-status-dot-danger {
-    @apply bg-(color:--ks-color-danger-700);
+    @apply bg-(color:--ks-color-danger-700) dark:bg-(color:--ks-color-danger-400);
   }
 
   .ks-panel-radius-md {
