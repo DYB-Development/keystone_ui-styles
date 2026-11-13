@@ -5521,6 +5521,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-bottom-action"), "padding-bottom: calc(var(--ks-spacing) * 3 + env(safe-area-inset-bottom))"
   end
 
+  def test_bottom_action_is_hidden_on_a_wide_screen
+    assert_match(/@media \(width >= 64rem\) \{\s*display: none;/m, block(".ks-bottom-action"))
+  end
+
   private
 
   def block(selector)
