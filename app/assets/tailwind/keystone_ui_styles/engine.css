@@ -682,7 +682,7 @@
   }
 
   .ks-status-dot-neutral {
-    @apply bg-(color:--ks-color-text-label);
+    @apply bg-(color:--ks-color-text-label) dark:bg-(color:--ks-color-text-label-dark);
   }
 
   .ks-panel-radius-md {

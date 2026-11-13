@@ -5461,6 +5461,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-status-dot-neutral"), "background-color: var(--ks-color-text-label)"
   end
 
+  def test_neutral_status_dot_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-text-label-dark\)/m, block(".ks-status-dot-neutral"))
+  end
+
   private
 
   def block(selector)
