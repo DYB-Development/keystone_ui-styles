@@ -1214,7 +1214,7 @@
   }
 
   .ks-timeline-failed {
-    @apply bg-(color:--ks-color-danger);
+    @apply bg-(color:--ks-color-danger) dark:bg-(color:--ks-color-danger-dark);
   }
 
   .ks-meter-label {

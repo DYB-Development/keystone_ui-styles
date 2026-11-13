@@ -5449,6 +5449,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-timeline-failed"), "background-color: var(--ks-color-danger)"
   end
 
+  def test_failed_timeline_try_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-danger-dark\)/m, block(".ks-timeline-failed"))
+  end
+
   private
 
   def block(selector)
