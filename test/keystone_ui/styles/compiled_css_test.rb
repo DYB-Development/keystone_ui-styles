@@ -5457,6 +5457,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-status-dot"), "border-radius: var(--ks-radius-pill)"
   end
 
+  def test_neutral_status_dot_is_the_colour_of_the_neutral_badge_text
+    assert_includes block(".ks-status-dot-neutral"), "background-color: var(--ks-color-text-label)"
+  end
+
   private
 
   def block(selector)

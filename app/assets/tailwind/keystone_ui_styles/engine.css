@@ -681,6 +681,10 @@
     @apply inline-block size-2 shrink-0 rounded-(--ks-radius-pill);
   }
 
+  .ks-status-dot-neutral {
+    @apply bg-(color:--ks-color-text-label);
+  }
+
   .ks-panel-radius-md {
     @apply rounded-(--ks-radius-surface);
   }
