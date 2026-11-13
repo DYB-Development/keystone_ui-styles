@@ -5441,6 +5441,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-timeline-queued"), "background-color: var(--ks-color-timeline-queued)"
   end
 
+  def test_timeline_queued_segment_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-timeline-queued-dark\)/m, block(".ks-timeline-queued"))
+  end
+
   private
 
   def block(selector)
