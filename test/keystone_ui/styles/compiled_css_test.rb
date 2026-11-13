@@ -5513,6 +5513,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: color-mix\(in oklab, var\(--ks-color-success-900\) 50%, transparent\)/m, block(".ks-diff-added"))
   end
 
+  def test_bottom_action_is_fixed_to_the_bottom_of_the_screen
+    assert_match(/position: fixed;.*?bottom: 0px;/m, block(".ks-bottom-action"))
+  end
+
   private
 
   def block(selector)

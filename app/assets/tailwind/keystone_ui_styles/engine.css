@@ -1467,6 +1467,10 @@
     @apply text-[10px] font-(weight:--ks-font-weight-medium) leading-none wrap-anywhere text-center;
   }
 
+  .ks-bottom-action {
+    @apply fixed bottom-0 left-0 right-0 z-40 flex px-[calc(var(--ks-spacing)*4)] pt-[calc(var(--ks-spacing)*3)];
+  }
+
   .ks-nav-dropdown {
     @apply relative w-full lg:w-auto;
   }
