@@ -5481,6 +5481,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-danger-400\)/m, block(".ks-status-dot-danger"))
   end
 
+  def test_warning_status_dot_is_the_colour_of_the_warning_badge_text
+    assert_includes block(".ks-status-dot-warning"), "background-color: var(--ks-color-warning-700)"
+  end
+
   private
 
   def block(selector)
