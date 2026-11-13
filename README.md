@@ -118,6 +118,7 @@ any layer overrides them wherever it is imported.
 | `--ks-color-icon-soft` | Disclosure icon | `--color-surface-400` |
 | `--ks-color-track`, `--ks-color-meter` | Progress track, and the progress bar, funnel accent step and bucket fill | `--color-surface-200`, `--color-accent-500` |
 | `--ks-color-text-meter-label` | Progress and funnel labels | `--color-surface-700` |
+| `--ks-color-timeline-track`, `--ks-color-timeline-bar`, `--ks-color-timeline-queued` | A timeline's track, a try's bar, and the time a try spent queued | `--ks-color-track`, `--ks-color-meter`, `--ks-color-warning-300`, and `--ks-color-track-dark`, `--ks-color-meter`, `--ks-color-warning-700` on a dark page |
 | `--ks-color-funnel-accent`, `-sky`, `-violet`, `-amber`, `-rose` | The five funnel step colours | The matching Tailwind 500 shade |
 | `--ks-color-funnel-band`, `--ks-color-text-funnel-band` | The joined funnel's band between steps and its percent | `--color-surface-800`, `--color-white`, and `--color-surface-100`, `--color-surface-900` on a dark page |
 | `--ks-color-chart-1` to `--ks-color-chart-5` | The five chart series colours, for a chart to read | `--color-accent-600`, then teal, amber, violet and rose at Tailwind's 600 shade, and `--color-accent-400`, then the same four at Tailwind's 400 shade, on a dark page |
@@ -132,6 +133,7 @@ any layer overrides them wherever it is imported.
 | `--ks-color-nav-link`, `--ks-color-nav-active`, `--ks-color-nav-indicator` | Nav link and sidebar tab text, the current page's link or tab, and the underline under the current link on wide screens and the bar beside the current sidebar tab | `--base-text`, `--text-primary` and `--border-primary`, then `--color-gray-900`, `--color-accent-600` and `--color-accent-600` |
 | `--ks-color-nav-menu-mobile`, `--ks-color-nav-hover` | Nav menu background on small screens, a menu link on hover, and the current sidebar tab | `--base-bg-base`, then `--color-white`; `--base-bg-hover`, then `--color-gray-50` |
 | `--ks-shadow-menu` | Desktop nav menu shadow | `--shadow-md` |
+| `--ks-bottom-nav-height` | How far a bottom action bar sits above the bottom of the screen on a page with the bottom nav | Fourteen spacing units, plus the border width and the safe area |
 | `--ks-font-weight-normal` | Mobile header subtitle weight | `--font-weight-normal` |
 | `--ks-color-hover-soft` | Settings link on hover | `--color-gray-50` |
 | `--ks-color-on-hover` | Settings link and tab text on hover | `--ks-color-text` |
@@ -235,6 +237,8 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-alert-body`, `ks-alert-content`, `ks-alert-title`, `ks-alert-message`, `ks-alert-message-titled`, `ks-alert-dismiss` | Alert parts |
 | `ks-badge` | Every badge |
 | `ks-badge-neutral`, `ks-badge-success`, `ks-badge-danger`, `ks-badge-warning`, `ks-badge-info` | Badge color |
+| `ks-status-dot` | A small round mark showing an item's state |
+| `ks-status-dot-neutral`, `ks-status-dot-success`, `ks-status-dot-danger`, `ks-status-dot-warning`, `ks-status-dot-info` | Status dot colour, the same as the text of the badge of that state |
 | `ks-modal-backdrop`, `ks-modal-panel`, `ks-modal-header`, `ks-modal-title`, `ks-modal-close` | Dialog and its parts |
 | `ks-action-menu`, `ks-action-menu-button` | Mobile action menu and the button that opens it |
 | `ks-menu`, `ks-menu-trigger`, `ks-menu-option`, `ks-menu-checkbox`, `ks-menu-option-hidden`, `ks-menu-move` | Column picker and multi select menu and their parts |
@@ -256,16 +260,19 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-hero`, `ks-hero-inner`, `ks-hero-content`, `ks-hero-split`, `ks-hero-title`, `ks-hero-subtitle`, `ks-hero-badge`, `ks-hero-actions` | Hero and its parts |
 | `ks-table`, `ks-table-head`, `ks-table-body`, `ks-table-header`, `ks-table-header-first`, `ks-table-header-middle`, `ks-table-header-last`, `ks-table-cell-first`, `ks-table-cell-middle`, `ks-table-cell-last`, `ks-table-phone-list-cell`, `ks-table-header-locked`, `ks-table-cell-locked`, `ks-table-toolbar`, `ks-table-sort-link`, `ks-table-sort-icon`, `ks-table-sort-icon-active` | Data table and its parts |
 | `ks-code`, `ks-code-caption`, `ks-code-block` | Code block and its caption |
+| `ks-diff-removed`, `ks-diff-added` | A line removed from a diff, on a light danger background, and a line added, on a light success background |
 | `ks-accordion`, `ks-accordion-item`, `ks-accordion-button`, `ks-accordion-answer` | Accordion and its parts |
 | `ks-disclosure`, `ks-disclosure-summary`, `ks-disclosure-body`, `ks-disclosure-icon` | Disclosure and its parts |
 | `ks-tab-bar`, `ks-tab`, `ks-tab-active` | Tab switcher, a tab, and the active tab |
 | `ks-progress-track`, `ks-progress-bar`, `ks-meter-label` | Progress bar and its label |
+| `ks-timeline-track`, `ks-timeline-bar`, `ks-timeline-queued`, `ks-timeline-failed` | Timeline track, a try's bar, the time a try spent queued, and a failed try in the danger colour |
 | `ks-funnel`, `ks-funnel-layer`, `ks-funnel-row`, `ks-funnel-label`, `ks-funnel-value`, `ks-funnel-bar`, `ks-funnel-transition`, `ks-funnel-bar-accent`, `ks-funnel-bar-sky`, `ks-funnel-bar-violet`, `ks-funnel-bar-amber`, `ks-funnel-bar-rose`, `ks-funnel-joined`, `ks-funnel-band`, `ks-funnel-band-label` | Funnel and its parts |
 | `ks-bucket`, `ks-bucket-series`, `ks-bucket-label`, `ks-bucket-goal`, `ks-bucket-percent`, `ks-bucket-tank`, `ks-bucket-actual`, `ks-bucket-fill`, `ks-bucket-fill-over`, `ks-bucket-fill-over-warning` | Bucket and its parts |
 | `ks-pipeline`, `ks-pipeline-header`, `ks-pipeline-title`, `ks-pipeline-subtitle`, `ks-pipeline-track`, `ks-pipeline-box`, `ks-pipeline-box-label`, `ks-pipeline-count`, `ks-pipeline-link-healthy`, `ks-pipeline-link-broken`, `ks-pipeline-count-amber`, `ks-pipeline-count-emerald`, `ks-pipeline-count-danger`, `ks-pipeline-count-muted` | Pipeline and its parts |
 | `ks-empty-state` | Empty state, shown where a list or section has nothing in it |
 | `ks-swipe-card`, `ks-swipe-empty`, `ks-swipe-empty-title`, `ks-swipe-empty-message`, `ks-swipe-actions`, `ks-swipe-button`, `ks-swipe-button-reject`, `ks-swipe-button-accept` | Swipe deck and its parts |
 | `ks-bottom-nav`, `ks-bottom-nav-item`, `ks-bottom-nav-label` | Bottom nav bar, fixed to the bottom of small screens, and its items |
+| `ks-bottom-action` | A page's main action, fixed to the bottom of small screens above the safe area, or directly above the bottom nav on a page that has one |
 | `ks-nav-dropdown`, `ks-nav-dropdown-trigger`, `ks-nav-dropdown-caret`, `ks-nav-dropdown-menu` | Nav dropdown and its parts, including the links inside the menu |
 | `ks-nav-item` | A nav link |
 | `ks-navbar-title` | Navbar title on small screens |
