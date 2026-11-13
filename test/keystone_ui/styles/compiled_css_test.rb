@@ -5465,6 +5465,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-text-label-dark\)/m, block(".ks-status-dot-neutral"))
   end
 
+  def test_success_status_dot_is_the_colour_of_the_success_badge_text
+    assert_includes block(".ks-status-dot-success"), "background-color: var(--ks-color-success-700)"
+  end
+
   private
 
   def block(selector)
