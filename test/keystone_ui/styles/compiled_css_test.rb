@@ -5429,6 +5429,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-timeline-track-dark\)/m, block(".ks-timeline-track"))
   end
 
+  def test_timeline_bar_reads_the_timeline_bar_colour
+    assert_includes block(".ks-timeline-bar"), "background-color: var(--ks-color-timeline-bar)"
+  end
+
   private
 
   def block(selector)
