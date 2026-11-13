@@ -698,7 +698,7 @@
   }
 
   .ks-status-dot-info {
-    @apply bg-(color:--ks-color-info-700);
+    @apply bg-(color:--ks-color-info-700) dark:bg-(color:--ks-color-info-400);
   }
 
   .ks-panel-radius-md {
