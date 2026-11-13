@@ -686,7 +686,7 @@
   }
 
   .ks-status-dot-success {
-    @apply bg-(color:--ks-color-success-700);
+    @apply bg-(color:--ks-color-success-700) dark:bg-(color:--ks-color-success-400);
   }
 
   .ks-panel-radius-md {
