@@ -697,6 +697,10 @@
     @apply bg-(color:--ks-color-warning-700) dark:bg-(color:--ks-color-warning-400);
   }
 
+  .ks-status-dot-info {
+    @apply bg-(color:--ks-color-info-700);
+  }
+
   .ks-panel-radius-md {
     @apply rounded-(--ks-radius-surface);
   }
