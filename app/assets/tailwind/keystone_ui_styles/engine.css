@@ -232,6 +232,12 @@
     --ks-color-track: var(--ks-color-border);
     --ks-color-track-dark: var(--ks-color-border-dark);
     --ks-color-meter: var(--color-accent-500);
+    --ks-color-timeline-track: var(--ks-color-track);
+    --ks-color-timeline-track-dark: var(--ks-color-track-dark);
+    --ks-color-timeline-bar: var(--ks-color-meter);
+    --ks-color-timeline-bar-dark: var(--ks-color-meter);
+    --ks-color-timeline-queued: var(--ks-color-warning-300);
+    --ks-color-timeline-queued-dark: var(--ks-color-warning-700);
     --ks-color-text-meter-label: var(--ks-color-text-label);
     --ks-color-text-meter-label-dark: var(--ks-color-text-label-dark);
     --ks-color-funnel-accent: var(--color-accent-500);
@@ -274,6 +280,7 @@
     --ks-color-nav-active-dark: var(--text-primary, var(--ks-color-link-dark));
     --ks-color-nav-link: var(--base-text, var(--ks-color-text));
     --ks-color-nav-link-dark: var(--base-text, var(--ks-color-text-dark));
+    --ks-bottom-nav-height: calc(var(--spacing) * 14 + var(--ks-border-width) + env(safe-area-inset-bottom));
     --ks-color-nav-indicator: var(--border-primary, var(--ks-color-link));
     --ks-color-nav-indicator-dark: var(--border-primary, var(--ks-color-link-dark));
     --ks-color-nav-menu-mobile: var(--base-bg-base, var(--ks-color-surface));
@@ -669,6 +676,30 @@
 
   .ks-badge-info {
     @apply bg-(color:--ks-color-info-100) text-(color:--ks-color-info-700) dark:bg-(color:--ks-color-info-900)/50 dark:text-(color:--ks-color-info-400);
+  }
+
+  .ks-status-dot {
+    @apply inline-block size-2 shrink-0 rounded-(--ks-radius-pill);
+  }
+
+  .ks-status-dot-neutral {
+    @apply bg-(color:--ks-color-text-label) dark:bg-(color:--ks-color-text-label-dark);
+  }
+
+  .ks-status-dot-success {
+    @apply bg-(color:--ks-color-success-700) dark:bg-(color:--ks-color-success-400);
+  }
+
+  .ks-status-dot-danger {
+    @apply bg-(color:--ks-color-danger-700) dark:bg-(color:--ks-color-danger-400);
+  }
+
+  .ks-status-dot-warning {
+    @apply bg-(color:--ks-color-warning-700) dark:bg-(color:--ks-color-warning-400);
+  }
+
+  .ks-status-dot-info {
+    @apply bg-(color:--ks-color-info-700) dark:bg-(color:--ks-color-info-400);
   }
 
   .ks-panel-radius-md {
@@ -1143,6 +1174,14 @@
     @apply bg-(color:--ks-color-code) p-[calc(var(--ks-spacing)*4)] text-(color:--ks-color-text-code) dark:bg-(color:--ks-color-code-dark);
   }
 
+  .ks-diff-removed {
+    @apply bg-(color:--ks-color-danger-100) dark:bg-(color:--ks-color-danger-900)/50;
+  }
+
+  .ks-diff-added {
+    @apply bg-(color:--ks-color-success-100) dark:bg-(color:--ks-color-success-900)/50;
+  }
+
   .ks-accordion {
     @apply gap-[calc(var(--ks-spacing)*4)];
   }
@@ -1193,6 +1232,22 @@
 
   .ks-progress-bar {
     @apply bg-(color:--ks-color-meter) rounded-(--ks-radius-pill);
+  }
+
+  .ks-timeline-track {
+    @apply bg-(color:--ks-color-timeline-track) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-track-dark);
+  }
+
+  .ks-timeline-bar {
+    @apply bg-(color:--ks-color-timeline-bar) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-bar-dark);
+  }
+
+  .ks-timeline-queued {
+    @apply bg-(color:--ks-color-timeline-queued) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-queued-dark);
+  }
+
+  .ks-timeline-failed {
+    @apply bg-(color:--ks-color-danger) dark:bg-(color:--ks-color-danger-dark);
   }
 
   .ks-meter-label {
@@ -1411,6 +1466,15 @@
 
   .ks-bottom-nav-label {
     @apply text-[10px] font-(weight:--ks-font-weight-medium) leading-none wrap-anywhere text-center;
+  }
+
+  .ks-bottom-action {
+    @apply fixed bottom-0 left-0 right-0 z-40 flex px-[calc(var(--ks-spacing)*4)] pt-[calc(var(--ks-spacing)*3)] pb-[calc(var(--ks-spacing)*3+env(safe-area-inset-bottom))] lg:hidden bg-(color:--ks-color-nav) dark:bg-(color:--ks-color-nav-dark) border-t-(length:--ks-border-width) border-t-(color:--ks-color-nav-border) dark:border-t-(color:--ks-color-nav-border-dark);
+  }
+
+  body:has(.ks-bottom-nav) .ks-bottom-action {
+    bottom: var(--ks-bottom-nav-height);
+    padding-bottom: calc(var(--ks-spacing) * 3);
   }
 
   .ks-nav-dropdown {

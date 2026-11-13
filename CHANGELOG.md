@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## [0.34.0] - 2026-11-13
+
+### Added
+- `ks-timeline-track`, `ks-timeline-bar` and `ks-timeline-queued` colour a timeline's track, a try's bar and the time a try spent queued, in light and dark mode, from their own look variables.
+- `ks-timeline-failed` colours a failed try's bar in the danger colour, in light and dark mode.
+- `ks-status-dot` draws a small round mark, and `ks-status-dot-neutral`, `-success`, `-danger`, `-warning` and `-info` colour it like the text of the badge of that state, in light and dark mode.
+- `ks-diff-removed` and `ks-diff-added` give a removed line a light danger background and an added line a light success background, in light and dark mode.
+- `ks-bottom-action` fixes a page's main action to the bottom of a small screen above the safe area, in the bottom nav's colours.
+- On a page with the bottom nav, `ks-bottom-action` sits directly above it, at the height `--ks-bottom-nav-height` gives.
+
 ## [0.33.1] - 2026-11-11
 
 ### Fixed

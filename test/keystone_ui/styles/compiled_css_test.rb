@@ -5421,6 +5421,134 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/&:hover.*?border-color: var\(--ks-color-hover-border\)/m, block(".ks-radio-card-block"))
   end
 
+  def test_timeline_track_reads_the_timeline_track_colour
+    assert_includes block(".ks-timeline-track"), "background-color: var(--ks-color-timeline-track)"
+  end
+
+  def test_timeline_track_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-timeline-track-dark\)/m, block(".ks-timeline-track"))
+  end
+
+  def test_timeline_bar_reads_the_timeline_bar_colour
+    assert_includes block(".ks-timeline-bar"), "background-color: var(--ks-color-timeline-bar)"
+  end
+
+  def test_timeline_bar_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-timeline-bar-dark\)/m, block(".ks-timeline-bar"))
+  end
+
+  def test_timeline_queued_segment_reads_the_timeline_queued_colour
+    assert_includes block(".ks-timeline-queued"), "background-color: var(--ks-color-timeline-queued)"
+  end
+
+  def test_timeline_queued_segment_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-timeline-queued-dark\)/m, block(".ks-timeline-queued"))
+  end
+
+  def test_failed_timeline_try_reads_the_danger_colour
+    assert_includes block(".ks-timeline-failed"), "background-color: var(--ks-color-danger)"
+  end
+
+  def test_failed_timeline_try_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-danger-dark\)/m, block(".ks-timeline-failed"))
+  end
+
+  def test_status_dot_is_round
+    assert_includes block(".ks-status-dot"), "border-radius: var(--ks-radius-pill)"
+  end
+
+  def test_neutral_status_dot_is_the_colour_of_the_neutral_badge_text
+    assert_includes block(".ks-status-dot-neutral"), "background-color: var(--ks-color-text-label)"
+  end
+
+  def test_neutral_status_dot_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-text-label-dark\)/m, block(".ks-status-dot-neutral"))
+  end
+
+  def test_success_status_dot_is_the_colour_of_the_success_badge_text
+    assert_includes block(".ks-status-dot-success"), "background-color: var(--ks-color-success-700)"
+  end
+
+  def test_success_status_dot_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-success-400\)/m, block(".ks-status-dot-success"))
+  end
+
+  def test_danger_status_dot_is_the_colour_of_the_danger_badge_text
+    assert_includes block(".ks-status-dot-danger"), "background-color: var(--ks-color-danger-700)"
+  end
+
+  def test_danger_status_dot_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-danger-400\)/m, block(".ks-status-dot-danger"))
+  end
+
+  def test_warning_status_dot_is_the_colour_of_the_warning_badge_text
+    assert_includes block(".ks-status-dot-warning"), "background-color: var(--ks-color-warning-700)"
+  end
+
+  def test_warning_status_dot_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-warning-400\)/m, block(".ks-status-dot-warning"))
+  end
+
+  def test_info_status_dot_is_the_colour_of_the_info_badge_text
+    assert_includes block(".ks-status-dot-info"), "background-color: var(--ks-color-info-700)"
+  end
+
+  def test_info_status_dot_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-info-400\)/m, block(".ks-status-dot-info"))
+  end
+
+  def test_removed_diff_line_has_a_light_danger_background
+    assert_includes block(".ks-diff-removed"), "background-color: var(--ks-color-danger-100)"
+  end
+
+  def test_removed_diff_line_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?background-color: color-mix\(in oklab, var\(--ks-color-danger-900\) 50%, transparent\)/m, block(".ks-diff-removed"))
+  end
+
+  def test_added_diff_line_has_a_light_success_background
+    assert_includes block(".ks-diff-added"), "background-color: var(--ks-color-success-100)"
+  end
+
+  def test_added_diff_line_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?background-color: color-mix\(in oklab, var\(--ks-color-success-900\) 50%, transparent\)/m, block(".ks-diff-added"))
+  end
+
+  def test_bottom_action_is_fixed_to_the_bottom_of_the_screen
+    assert_match(/position: fixed;.*?bottom: 0px;/m, block(".ks-bottom-action"))
+  end
+
+  def test_bottom_action_sits_above_the_safe_area
+    assert_includes block(".ks-bottom-action"), "padding-bottom: calc(var(--ks-spacing) * 3 + env(safe-area-inset-bottom))"
+  end
+
+  def test_bottom_action_is_hidden_on_a_wide_screen
+    assert_match(/@media \(width >= 64rem\) \{\s*display: none;/m, block(".ks-bottom-action"))
+  end
+
+  def test_bottom_action_has_the_navigation_bars_background
+    assert_includes block(".ks-bottom-action"), "background-color: var(--ks-color-nav)"
+  end
+
+  def test_bottom_action_has_the_navigation_bars_background_in_dark_mode
+    assert_match(/data-theme="dark".*?background-color: var\(--ks-color-nav-dark\)/m, block(".ks-bottom-action"))
+  end
+
+  def test_bottom_action_has_the_navigation_bars_top_border_colour
+    assert_includes block(".ks-bottom-action"), "border-top-color: var(--ks-color-nav-border)"
+  end
+
+  def test_bottom_action_has_the_navigation_bars_top_border_colour_in_dark_mode
+    assert_match(/data-theme="dark".*?border-top-color: var\(--ks-color-nav-border-dark\)/m, block(".ks-bottom-action"))
+  end
+
+  def test_bottom_action_sits_directly_above_the_bottom_tab_bar
+    assert_includes rule("body:has(.ks-bottom-nav) .ks-bottom-action"), "bottom: var(--ks-bottom-nav-height)"
+  end
+
+  def test_bottom_action_above_the_bottom_tab_bar_leaves_the_safe_area_to_the_tab_bar
+    assert_includes rule("body:has(.ks-bottom-nav) .ks-bottom-action"), "padding-bottom: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
