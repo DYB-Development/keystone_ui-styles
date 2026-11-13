@@ -1174,7 +1174,7 @@
   }
 
   .ks-diff-removed {
-    @apply bg-(color:--ks-color-danger-100);
+    @apply bg-(color:--ks-color-danger-100) dark:bg-(color:--ks-color-danger-900)/50;
   }
 
   .ks-accordion {

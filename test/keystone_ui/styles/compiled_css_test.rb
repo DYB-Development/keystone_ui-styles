@@ -5501,6 +5501,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-diff-removed"), "background-color: var(--ks-color-danger-100)"
   end
 
+  def test_removed_diff_line_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?background-color: color-mix\(in oklab, var\(--ks-color-danger-900\) 50%, transparent\)/m, block(".ks-diff-removed"))
+  end
+
   private
 
   def block(selector)
