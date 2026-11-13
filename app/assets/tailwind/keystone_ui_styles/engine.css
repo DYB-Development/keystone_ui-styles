@@ -1177,6 +1177,10 @@
     @apply bg-(color:--ks-color-danger-100) dark:bg-(color:--ks-color-danger-900)/50;
   }
 
+  .ks-diff-added {
+    @apply bg-(color:--ks-color-success-100);
+  }
+
   .ks-accordion {
     @apply gap-[calc(var(--ks-spacing)*4)];
   }

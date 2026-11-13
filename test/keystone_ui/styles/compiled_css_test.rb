@@ -5505,6 +5505,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: color-mix\(in oklab, var\(--ks-color-danger-900\) 50%, transparent\)/m, block(".ks-diff-removed"))
   end
 
+  def test_added_diff_line_has_a_light_success_background
+    assert_includes block(".ks-diff-added"), "background-color: var(--ks-color-success-100)"
+  end
+
   private
 
   def block(selector)
