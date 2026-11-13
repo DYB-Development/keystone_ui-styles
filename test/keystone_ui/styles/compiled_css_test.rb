@@ -5525,6 +5525,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@media \(width >= 64rem\) \{\s*display: none;/m, block(".ks-bottom-action"))
   end
 
+  def test_bottom_action_has_the_navigation_bars_background
+    assert_includes block(".ks-bottom-action"), "background-color: var(--ks-color-nav)"
+  end
+
   private
 
   def block(selector)
