@@ -5445,6 +5445,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-timeline-queued-dark\)/m, block(".ks-timeline-queued"))
   end
 
+  def test_failed_timeline_try_reads_the_danger_colour
+    assert_includes block(".ks-timeline-failed"), "background-color: var(--ks-color-danger)"
+  end
+
   private
 
   def block(selector)

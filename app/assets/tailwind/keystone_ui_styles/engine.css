@@ -1213,6 +1213,10 @@
     @apply bg-(color:--ks-color-timeline-queued) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-queued-dark);
   }
 
+  .ks-timeline-failed {
+    @apply bg-(color:--ks-color-danger);
+  }
+
   .ks-meter-label {
     @apply mb-[calc(var(--ks-spacing)*1)] font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-meter-label) dark:text-(color:--ks-color-text-meter-label-dark);
   }
