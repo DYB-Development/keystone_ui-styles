@@ -235,6 +235,7 @@
     --ks-color-timeline-track: var(--ks-color-track);
     --ks-color-timeline-track-dark: var(--ks-color-track-dark);
     --ks-color-timeline-bar: var(--ks-color-meter);
+    --ks-color-timeline-bar-dark: var(--ks-color-meter);
     --ks-color-text-meter-label: var(--ks-color-text-label);
     --ks-color-text-meter-label-dark: var(--ks-color-text-label-dark);
     --ks-color-funnel-accent: var(--color-accent-500);
@@ -1203,7 +1204,7 @@
   }
 
   .ks-timeline-bar {
-    @apply bg-(color:--ks-color-timeline-bar) rounded-(--ks-radius-pill);
+    @apply bg-(color:--ks-color-timeline-bar) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-bar-dark);
   }
 
   .ks-meter-label {
