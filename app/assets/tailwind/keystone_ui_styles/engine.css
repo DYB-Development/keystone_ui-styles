@@ -1474,6 +1474,7 @@
 
   body:has(.ks-bottom-nav) .ks-bottom-action {
     bottom: var(--ks-bottom-nav-height);
+    padding-bottom: calc(var(--ks-spacing) * 3);
   }
 
   .ks-nav-dropdown {

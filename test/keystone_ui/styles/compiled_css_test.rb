@@ -5545,6 +5545,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule("body:has(.ks-bottom-nav) .ks-bottom-action"), "bottom: var(--ks-bottom-nav-height)"
   end
 
+  def test_bottom_action_above_the_bottom_tab_bar_leaves_the_safe_area_to_the_tab_bar
+    assert_includes rule("body:has(.ks-bottom-nav) .ks-bottom-action"), "padding-bottom: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
