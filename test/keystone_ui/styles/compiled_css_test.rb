@@ -5453,6 +5453,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-danger-dark\)/m, block(".ks-timeline-failed"))
   end
 
+  def test_status_dot_is_round
+    assert_includes block(".ks-status-dot"), "border-radius: var(--ks-radius-pill)"
+  end
+
   private
 
   def block(selector)
