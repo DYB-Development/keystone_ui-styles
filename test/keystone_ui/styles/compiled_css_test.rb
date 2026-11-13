@@ -5517,6 +5517,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/position: fixed;.*?bottom: 0px;/m, block(".ks-bottom-action"))
   end
 
+  def test_bottom_action_sits_above_the_safe_area
+    assert_includes block(".ks-bottom-action"), "padding-bottom: calc(var(--ks-spacing) * 3 + env(safe-area-inset-bottom))"
+  end
+
   private
 
   def block(selector)
