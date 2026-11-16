@@ -5747,6 +5747,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar-underline .ks-tab-active[data-active]"), "border-bottom-width: calc(var(--ks-border-width) * 2)"
   end
 
+  def test_selected_underlined_tab_underline_reads_the_accent_colour_role
+    assert_includes block(".ks-tab-bar-underline .ks-tab-active[data-active]"), "border-color: var(--ks-color-accent)"
+  end
+
   private
 
   def block(selector)
