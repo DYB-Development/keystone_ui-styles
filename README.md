@@ -124,6 +124,7 @@ any layer overrides them wherever it is imported.
 | `--ks-color-funnel-accent`, `-sky`, `-violet`, `-amber`, `-rose` | The five funnel step colours | The matching Tailwind 500 shade |
 | `--ks-color-funnel-band`, `--ks-color-text-funnel-band` | The joined funnel's band between steps and its percent | `--color-surface-800`, `--color-white`, and `--color-surface-100`, `--color-surface-900` on a dark page |
 | `--ks-color-chart-1` to `--ks-color-chart-5` | The five chart series colours, for a chart to read | `--color-accent-600`, then teal, amber, violet and rose at Tailwind's 600 shade, and `--color-accent-400`, then the same four at Tailwind's 400 shade, on a dark page |
+| `--ks-color-bar-group-1` to `--ks-color-bar-group-5` | The five bar group fills, oldest group first | `--color-surface-300` mixed toward `--ks-color-chart-1` in quarter steps, ending at `--ks-color-chart-1`, and `--color-surface-600` mixed toward `--ks-color-chart-1-dark` the same way on a dark page |
 | `--ks-color-over-goal`, `--ks-color-over-goal-warning` | Bucket fill over its goal | `--color-green-500`, `--color-amber-500` |
 | `--ks-color-table-head`, `--ks-color-table-body`, `--ks-color-divider` | Table head and body background, and the line between rows | `--color-gray-50`, `--color-white`, `--color-gray-200` |
 | `--ks-shadow-surface-dark` | Table shadow on a dark page | None |
@@ -230,6 +231,7 @@ warning 400, and 700 on a dark page.
 | `ks-value-list-end` | On the list, pushes each value to the right end of its row |
 | `ks-value-list-total` | A row drawn with more weight, for a total |
 | `ks-bar-chart-bar`, `ks-bar-chart-bar-shaded` | A bar chart's bars, filled in the first chart colour, and a bar drawn faded |
+| `ks-bar-chart-bar-group-1` to `ks-bar-chart-bar-group-5` | On a `ks-bar-chart-bar`, fills the bar in its group's colour, from grey for the oldest group to the first chart colour for the newest |
 | `ks-bar-chart-grid` | A bar chart's grid lines |
 | `ks-bar-chart-text`, `ks-bar-chart-value` | A bar chart's axis and bar labels, and the value shown on a bar |
 | `ks-metric-plain` | A stat drawn as a plain figure, padded with no card border or background |

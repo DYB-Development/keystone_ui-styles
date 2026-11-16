@@ -2935,6 +2935,30 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_empty charts - base_defaults
   end
 
+  def test_bar_group_colours_fade_from_surface_300_to_chart_1_in_quarter_steps
+    defaults = {
+      "--ks-color-bar-group-1" => "var(--color-surface-300)",
+      "--ks-color-bar-group-2" => "color-mix(in oklab, var(--ks-color-chart-1) 25%, var(--color-surface-300))",
+      "--ks-color-bar-group-3" => "color-mix(in oklab, var(--ks-color-chart-1) 50%, var(--color-surface-300))",
+      "--ks-color-bar-group-4" => "color-mix(in oklab, var(--ks-color-chart-1) 75%, var(--color-surface-300))",
+      "--ks-color-bar-group-5" => "var(--ks-color-chart-1)"
+    }
+
+    assert_empty(defaults.reject { |name, value| self.class.compiled.match?(/@layer base \{.*?:root \{.*?#{name}: #{Regexp.escape(value)};/m) })
+  end
+
+  def test_dark_bar_group_colours_fade_from_surface_600_to_dark_chart_1_in_quarter_steps
+    defaults = {
+      "--ks-color-bar-group-1-dark" => "var(--color-surface-600)",
+      "--ks-color-bar-group-2-dark" => "color-mix(in oklab, var(--ks-color-chart-1-dark) 25%, var(--color-surface-600))",
+      "--ks-color-bar-group-3-dark" => "color-mix(in oklab, var(--ks-color-chart-1-dark) 50%, var(--color-surface-600))",
+      "--ks-color-bar-group-4-dark" => "color-mix(in oklab, var(--ks-color-chart-1-dark) 75%, var(--color-surface-600))",
+      "--ks-color-bar-group-5-dark" => "var(--ks-color-chart-1-dark)"
+    }
+
+    assert_empty(defaults.reject { |name, value| self.class.compiled.match?(/@layer base \{.*?:root \{.*?#{name}: #{Regexp.escape(value)};/m) })
+  end
+
   def test_bucket_gap_is_1_spacing_units
     assert_includes block(".ks-bucket"), "gap: calc(var(--ks-spacing) * 1)"
   end
@@ -5199,6 +5223,20 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
 
   def test_bar_chart_bar_turns_dark_when_the_page_chooses_dark
     assert_match(/data-theme="dark".*?fill: var\(--ks-color-chart-1-dark\)/m, block(".ks-bar-chart-bar"))
+  end
+
+  def test_each_bar_chart_group_bar_fills_with_its_bar_group_colour
+    groups = (1..5).reject { |n| rule(".ks-bar-chart-bar-group-#{n}").include?("fill: var(--ks-color-bar-group-#{n})") }
+
+    assert_empty groups
+  end
+
+  def test_each_bar_chart_group_bar_fills_with_its_dark_bar_group_colour_on_a_dark_operating_system_unless_the_page_is_custom
+    groups = (1..5).reject do |n|
+      block(".ks-bar-chart-bar-group-#{n}").match?(/prefers-color-scheme: dark.*?\[data-theme="custom"\] \*\).*?fill: var\(--ks-color-bar-group-#{n}-dark\)/m)
+    end
+
+    assert_empty groups
   end
 
   def test_bar_chart_shaded_bar_is_faded
