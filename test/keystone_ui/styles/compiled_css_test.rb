@@ -5735,6 +5735,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar-underline .ks-tab"), "font-size: 13px"
   end
 
+  def test_underlined_tab_weight_reads_the_normal_font_weight_variable
+    assert_includes block(".ks-tab-bar-underline .ks-tab"), "font-weight: var(--ks-font-weight-normal)"
+  end
+
   private
 
   def block(selector)
