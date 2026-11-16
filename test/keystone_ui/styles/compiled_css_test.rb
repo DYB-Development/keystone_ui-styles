@@ -5695,6 +5695,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar-pills .ks-tab"), "font-size: var(--text-xs)"
   end
 
+  def test_pill_tab_weight_reads_the_normal_font_weight_variable
+    assert_includes block(".ks-tab-bar-pills .ks-tab"), "font-weight: var(--ks-font-weight-normal)"
+  end
+
   private
 
   def block(selector)
