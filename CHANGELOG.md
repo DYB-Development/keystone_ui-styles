@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## [0.40.0] - 2026-11-16
+
+### Added
+- `--ks-color-text-code-dark` holds the code block's text on a dark page, and defaults to `--color-surface-100`.
+
+### Changed
+- `ks-code-block` is drawn light grey with dark text on a light page, so `--ks-color-code` now defaults to `--color-surface-100` and `--ks-color-text-code` to `--color-surface-900`.
+- `ks-diff-removed` draws its text in danger 800 and `ks-diff-added` in success 800 on a light page, so both read against their pale fills.
+- `ks-diff-removed` and `ks-diff-added` keep the code block's light text on a dark page.
+
 ## [0.39.0] - 2026-11-16
 
 ### Added
