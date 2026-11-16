@@ -5085,6 +5085,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-border-width-current: 3px;/m, self.class.compiled)
   end
 
+  def test_current_value_list_row_draws_a_left_bar_as_wide_as_the_current_bar_width
+    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "border-left-width: var(--ks-border-width-current)"
+  end
+
   def test_value_list_label_takes_two_fifths_of_the_row
     assert_match(/flex-basis: calc\(2\s*\/\s*5 \* 100%\)/, rule(".ks-value-list-label"))
   end

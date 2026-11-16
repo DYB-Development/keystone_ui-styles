@@ -530,7 +530,7 @@
   }
 
   .ks-value-list-row.ks-value-list-row-current {
-    @apply bg-(color:--ks-color-tint);
+    @apply bg-(color:--ks-color-tint) border-l-(length:--ks-border-width-current);
   }
 
   .ks-value-list-label {
