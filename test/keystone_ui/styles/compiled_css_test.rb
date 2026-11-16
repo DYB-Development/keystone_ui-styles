@@ -5727,6 +5727,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar-underline .ks-tab"), "padding-inline: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_underlined_tab_padding_block_is_two_spacing_units
+    assert_includes block(".ks-tab-bar-underline .ks-tab"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
