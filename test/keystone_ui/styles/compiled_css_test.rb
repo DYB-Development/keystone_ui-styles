@@ -499,6 +499,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-card-meta"), "border-top-width: var(--ks-border-width)"
   end
 
+  def test_card_meta_top_border_reads_the_border_colour_role
+    assert_includes block(".ks-card-meta"), "border-color: var(--ks-color-border)"
+  end
+
   def test_input_background_reads_the_surface_colour_role
     assert_includes rule(".ks-input"), "background-color: var(--ks-color-surface)"
   end
