@@ -1275,6 +1275,10 @@
     @apply mb-[calc(var(--ks-spacing)*2.5)] gap-[calc(var(--ks-spacing)*1.5)];
   }
 
+  .ks-tab-bar-pills .ks-tab {
+    @apply rounded-(--ks-radius-pill);
+  }
+
   .ks-progress-track {
     @apply bg-(color:--ks-color-track) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-track-dark);
   }
