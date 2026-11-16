@@ -5771,6 +5771,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-count"), "color: var(--ks-color-text-muted)"
   end
 
+  def test_tab_count_text_reads_the_dark_text_muted_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-tab-count"))
+  end
+
   private
 
   def block(selector)
