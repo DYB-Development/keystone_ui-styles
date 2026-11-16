@@ -2935,6 +2935,18 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_empty charts - base_defaults
   end
 
+  def test_bar_group_colours_fade_from_surface_300_to_chart_1_in_quarter_steps
+    defaults = {
+      "--ks-color-bar-group-1" => "var(--color-surface-300)",
+      "--ks-color-bar-group-2" => "color-mix(in oklab, var(--ks-color-chart-1) 25%, var(--color-surface-300))",
+      "--ks-color-bar-group-3" => "color-mix(in oklab, var(--ks-color-chart-1) 50%, var(--color-surface-300))",
+      "--ks-color-bar-group-4" => "color-mix(in oklab, var(--ks-color-chart-1) 75%, var(--color-surface-300))",
+      "--ks-color-bar-group-5" => "var(--ks-color-chart-1)"
+    }
+
+    assert_empty(defaults.reject { |name, value| self.class.compiled.match?(/@layer base \{.*?:root \{.*?#{name}: #{Regexp.escape(value)};/m) })
+  end
+
   def test_bucket_gap_is_1_spacing_units
     assert_includes block(".ks-bucket"), "gap: calc(var(--ks-spacing) * 1)"
   end
