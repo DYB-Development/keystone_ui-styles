@@ -5719,6 +5719,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar-underline"), "--tw-shadow: inset 0 calc(var(--ks-border-width) * -1) 0 var(--tw-shadow-color, var(--ks-color-border))"
   end
 
+  def test_underlined_tab_bar_line_reads_the_dark_border_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?--tw-shadow: inset 0 calc\(var\(--ks-border-width\) \* -1\) 0 var\(--tw-shadow-color, var\(--ks-color-border-dark\)\)/m, block(".ks-tab-bar-underline"))
+  end
+
   private
 
   def block(selector)
