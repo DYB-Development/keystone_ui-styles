@@ -225,7 +225,7 @@
     --ks-color-table-body-dark: var(--ks-color-surface-dark);
     --ks-color-divider: var(--ks-color-border);
     --ks-color-divider-dark: var(--ks-color-border-dark);
-    --ks-color-code: var(--color-surface-900);
+    --ks-color-code: var(--color-surface-100);
     --ks-color-code-dark: var(--color-black);
     --ks-color-text-code: var(--color-surface-900);
     --ks-color-text-code-dark: var(--color-surface-100);
