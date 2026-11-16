@@ -622,7 +622,7 @@
   }
 
   .ks-card-meta {
-    @apply border-t-(length:--ks-border-width) border-(color:--ks-color-border) pt-[calc(var(--ks-spacing)*2)];
+    @apply border-t-(length:--ks-border-width) border-(color:--ks-color-border) pt-[calc(var(--ks-spacing)*2)] dark:border-(color:--ks-color-border-dark);
   }
 
   .ks-alert {

@@ -507,6 +507,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-card-meta"), "padding-top: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_card_meta_top_border_reads_the_dark_border_colour_on_a_dark_operating_system_unless_the_page_is_custom
+    assert_match(/prefers-color-scheme: dark.*?\[data-theme="custom"\] \*\).*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-card-meta"))
+  end
+
   def test_input_background_reads_the_surface_colour_role
     assert_includes rule(".ks-input"), "background-color: var(--ks-color-surface)"
   end
