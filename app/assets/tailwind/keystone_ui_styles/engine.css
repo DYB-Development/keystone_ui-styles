@@ -238,6 +238,7 @@
     --ks-color-timeline-bar-dark: var(--ks-color-meter);
     --ks-color-timeline-queued: var(--ks-color-warning-300);
     --ks-color-timeline-queued-dark: var(--ks-color-warning-700);
+    --ks-color-timeline-waiting: var(--ks-color-warning-300);
     --ks-color-text-meter-label: var(--ks-color-text-label);
     --ks-color-text-meter-label-dark: var(--ks-color-text-label-dark);
     --ks-color-funnel-accent: var(--color-accent-500);
