@@ -487,6 +487,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-card-edge"))
   end
 
+  def test_warning_card_border_reads_the_warning_400_colour
+    assert_includes block(".ks-card-warning"), "border-color: var(--ks-color-warning-400)"
+  end
+
   def test_input_background_reads_the_surface_colour_role
     assert_includes rule(".ks-input"), "background-color: var(--ks-color-surface)"
   end
