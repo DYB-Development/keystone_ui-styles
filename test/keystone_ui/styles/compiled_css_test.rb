@@ -5691,6 +5691,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar-pills .ks-tab"), "padding-block: calc(var(--ks-spacing) * 1.25)"
   end
 
+  def test_pill_tab_text_is_extra_small
+    assert_includes block(".ks-tab-bar-pills .ks-tab"), "font-size: var(--text-xs)"
+  end
+
   private
 
   def block(selector)

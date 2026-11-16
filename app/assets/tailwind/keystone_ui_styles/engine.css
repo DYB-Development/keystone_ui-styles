@@ -1276,7 +1276,7 @@
   }
 
   .ks-tab-bar-pills .ks-tab {
-    @apply rounded-(--ks-radius-pill) border-(length:--ks-border-width) border-(color:--ks-color-border) dark:border-(color:--ks-color-border-dark) px-[calc(var(--ks-spacing)*2.5)] py-[calc(var(--ks-spacing)*1.25)];
+    @apply rounded-(--ks-radius-pill) border-(length:--ks-border-width) border-(color:--ks-color-border) dark:border-(color:--ks-color-border-dark) px-[calc(var(--ks-spacing)*2.5)] py-[calc(var(--ks-spacing)*1.25)] text-xs;
   }
 
   .ks-progress-track {
