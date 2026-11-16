@@ -84,6 +84,7 @@ any layer overrides them wherever it is imported.
 | `--ks-color-text-label` | Field labels | `--color-surface-700` |
 | `--ks-color-text-muted` | Hints, subtitles and card summaries | `--color-surface-500` |
 | `--ks-border-width` | Border and ring width of menus, dialogs, form controls and cards, doubled for radio and option cards and the file drop zone | `1px` |
+| `--ks-border-width-current` | Width of the accent bar on a current link list row's left edge | `3px` |
 | `--ks-shadow-overlay` | Menu, dialog and colour picker shadow | `--shadow-lg` |
 | `--ks-font-weight-medium` | Copy button, checkbox row and radio card label weight | `--font-weight-medium` |
 | `--ks-color-overlay` | Dialog, action menu, copy button and colour picker background | `--color-white` |
@@ -109,7 +110,7 @@ any layer overrides them wherever it is imported.
 
 | `--ks-radius-pill` | Progress bar, hero badge and swipe button corners | Fully rounded |
 | `--ks-color-hover-border` | Link card and feature card border on hover | Accent 500 at 50% |
-| `--ks-color-tint`, `--ks-color-tint-border` | Feature icon, hero badge, active tab and current table row background, and the hero badge border | Accent 500 at 10% and 20% |
+| `--ks-color-tint`, `--ks-color-tint-border` | Feature icon, hero badge, active tab, current table row and current link list row background, and the hero badge border | Accent 500 at 10% and 20% |
 | `--ks-color-border-subtle` | Call to action, feature card, code, accordion and disclosure border | `--color-surface-200` |
 | `--ks-color-fill-muted` | Call to action and code caption background | `--color-surface-50` |
 | `--ks-color-raised` | Feature card background | `--color-white` |
@@ -223,6 +224,7 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-fact`, `ks-facts` | A fact drawn as a small bordered box, and the row of facts holding it |
 | `ks-paragraph` | Running text |
 | `ks-value-list-row` | One row of a label and its value, with a line between rows |
+| `ks-value-list-row-current` | On a `ks-value-list-row`, marks the current row of a link list with the accent tint across the row and an accent bar on its left edge |
 | `ks-value-list-label`, `ks-value-list-note`, `ks-value-list-value` | A row's label, the short note under it, and its value |
 | `ks-value-list-end` | On the list, pushes each value to the right end of its row |
 | `ks-value-list-total` | A row drawn with more weight, for a total |

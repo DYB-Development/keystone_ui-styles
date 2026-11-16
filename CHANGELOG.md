@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.36.0] - 2026-11-15
+
+### Added
+- `ks-value-list-row-current` marks a link list's current row with the accent tint across the whole row and a left bar in the accent colour, as wide as the new `--ks-border-width-current` look variable, which defaults to 3px.
+
 ## [0.35.0] - 2026-11-15
 
 ### Added

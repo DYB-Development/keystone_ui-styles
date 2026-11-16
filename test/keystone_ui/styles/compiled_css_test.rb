@@ -5077,6 +5077,26 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-value-list-row + .ks-value-list-row"))
   end
 
+  def test_current_value_list_row_fills_the_whole_row_with_the_accent_tint
+    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "background-color: var(--ks-color-tint)"
+  end
+
+  def test_current_bar_width_defaults_to_three_pixels
+    assert_match(/@layer base \{.*?:root \{.*?--ks-border-width-current: 3px;/m, self.class.compiled)
+  end
+
+  def test_current_value_list_row_draws_a_left_bar_as_wide_as_the_current_bar_width
+    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "border-left-width: var(--ks-border-width-current)"
+  end
+
+  def test_current_value_list_row_bar_reads_the_accent_colour
+    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "border-left-color: var(--ks-color-accent)"
+  end
+
+  def test_current_value_list_row_bar_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?border-left-color: var\(--ks-color-accent-dark\)/m, block(".ks-value-list-row.ks-value-list-row-current"))
+  end
+
   def test_value_list_label_takes_two_fifths_of_the_row
     assert_match(/flex-basis: calc\(2\s*\/\s*5 \* 100%\)/, rule(".ks-value-list-label"))
   end

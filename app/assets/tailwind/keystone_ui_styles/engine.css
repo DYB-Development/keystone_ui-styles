@@ -148,6 +148,7 @@
     --ks-color-info-800: var(--color-accent-800);
     --ks-color-info-900: var(--color-accent-900);
     --ks-border-width: 1px;
+    --ks-border-width-current: 3px;
     --ks-shadow-overlay: var(--shadow-lg);
     --ks-font-weight-medium: var(--font-weight-medium);
     --ks-color-backdrop: color-mix(in oklab, var(--color-black) 60%, transparent);
@@ -526,6 +527,10 @@
 
   .ks-value-list-row + .ks-value-list-row {
     @apply border-t-(length:--ks-border-width) border-(color:--ks-color-border) dark:border-(color:--ks-color-border-dark);
+  }
+
+  .ks-value-list-row.ks-value-list-row-current {
+    @apply bg-(color:--ks-color-tint) border-l-(length:--ks-border-width-current) border-l-(color:--ks-color-accent) dark:border-l-(color:--ks-color-accent-dark);
   }
 
   .ks-value-list-label {
