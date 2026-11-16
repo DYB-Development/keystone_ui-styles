@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.38.0] - 2026-11-16
+
+### Added
+- `ks-bar-chart-bar-group-1` to `ks-bar-chart-bar-group-5` fill a bar in its group's colour, fading from grey for the oldest group to the first chart colour for the newest.
+- `--ks-color-bar-group-1` to `--ks-color-bar-group-5` hold those colours, each with a dark page partner.
+
 ## [0.37.0] - 2026-11-15
 
 ### Added
