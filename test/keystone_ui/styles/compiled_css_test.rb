@@ -5465,6 +5465,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-timeline-waiting"), "border-radius: var(--ks-radius-pill)"
   end
 
+  def test_timeline_queued_colour_defaults_to_the_strong_border_colour
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-timeline-queued: var\(--ks-color-border-strong\);/m, self.class.compiled)
+  end
+
   def test_failed_timeline_try_reads_the_danger_colour
     assert_includes block(".ks-timeline-failed"), "background-color: var(--ks-color-danger)"
   end
