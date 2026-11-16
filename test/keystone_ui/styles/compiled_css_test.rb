@@ -5743,6 +5743,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar-underline .ks-tab"), "border-bottom-right-radius: 0"
   end
 
+  def test_selected_underlined_tab_draws_its_underline_at_twice_the_border_width
+    assert_includes block(".ks-tab-bar-underline .ks-tab-active[data-active]"), "border-bottom-width: calc(var(--ks-border-width) * 2)"
+  end
+
   private
 
   def block(selector)

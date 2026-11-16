@@ -1291,6 +1291,10 @@
     @apply px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-[13px] font-(weight:--ks-font-weight-normal) rounded-b-none;
   }
 
+  .ks-tab-bar-underline .ks-tab-active {
+    @apply data-[active]:border-b-[length:calc(var(--ks-border-width)*2)];
+  }
+
   .ks-progress-track {
     @apply bg-(color:--ks-color-track) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-track-dark);
   }
