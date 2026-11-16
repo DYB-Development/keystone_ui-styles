@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.41.0] - 2026-11-16
+
+### Changed
+- `ks-value-list-row-current` leaves 16px between the accent bar and the row's text and 16px after the text on the right, and reaches 16px past the other rows on each side so its text stays in line with theirs.
+
 ## [0.40.0] - 2026-11-16
 
 ### Added
