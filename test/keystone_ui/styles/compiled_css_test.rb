@@ -5775,6 +5775,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-tab-count"))
   end
 
+  def test_tab_count_weight_reads_the_normal_font_weight_variable
+    assert_includes block(".ks-tab-count"), "font-weight: var(--ks-font-weight-normal)"
+  end
+
   private
 
   def block(selector)

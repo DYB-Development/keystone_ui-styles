@@ -1297,7 +1297,7 @@
   }
 
   .ks-tab-count {
-    @apply text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+    @apply text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark) font-(weight:--ks-font-weight-normal);
   }
 
   .ks-progress-track {
