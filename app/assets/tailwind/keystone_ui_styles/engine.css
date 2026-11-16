@@ -1279,6 +1279,10 @@
     @apply rounded-(--ks-radius-pill) border-(length:--ks-border-width) border-(color:--ks-color-border) dark:border-(color:--ks-color-border-dark) px-[calc(var(--ks-spacing)*2.5)] py-[calc(var(--ks-spacing)*1.25)] text-xs font-(weight:--ks-font-weight-normal);
   }
 
+  .ks-tab-bar-pills .ks-tab-active {
+    @apply data-[active]:border-(color:--ks-color-accent);
+  }
+
   .ks-progress-track {
     @apply bg-(color:--ks-color-track) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-track-dark);
   }

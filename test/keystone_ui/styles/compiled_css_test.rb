@@ -5699,6 +5699,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar-pills .ks-tab"), "font-weight: var(--ks-font-weight-normal)"
   end
 
+  def test_selected_pill_outline_reads_the_accent_colour_role
+    assert_includes block(".ks-tab-bar-pills .ks-tab-active[data-active]"), "border-color: var(--ks-color-accent)"
+  end
+
   private
 
   def block(selector)
