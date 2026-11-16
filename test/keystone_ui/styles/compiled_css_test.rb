@@ -5461,6 +5461,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: var\(--ks-color-timeline-waiting-dark\)/m, block(".ks-timeline-waiting"))
   end
 
+  def test_timeline_waiting_bar_is_pill_shaped
+    assert_includes block(".ks-timeline-waiting"), "border-radius: var(--ks-radius-pill)"
+  end
+
   def test_failed_timeline_try_reads_the_danger_colour
     assert_includes block(".ks-timeline-failed"), "background-color: var(--ks-color-danger)"
   end

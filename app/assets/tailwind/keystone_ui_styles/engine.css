@@ -1249,7 +1249,7 @@
   }
 
   .ks-timeline-waiting {
-    @apply bg-(color:--ks-color-timeline-waiting) dark:bg-(color:--ks-color-timeline-waiting-dark);
+    @apply bg-(color:--ks-color-timeline-waiting) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-waiting-dark);
   }
 
   .ks-timeline-failed {
