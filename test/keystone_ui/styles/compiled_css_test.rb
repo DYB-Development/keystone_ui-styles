@@ -5153,6 +5153,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-left-color: var\(--ks-color-accent-dark\)/m, block(".ks-value-list-row.ks-value-list-row-current"))
   end
 
+  def test_current_value_list_row_leaves_space_between_its_bar_and_its_text
+    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "padding-left: calc(var(--ks-spacing) * 4 - var(--ks-border-width-current))"
+  end
+
   def test_value_list_label_takes_two_fifths_of_the_row
     assert_match(/flex-basis: calc\(2\s*\/\s*5 \* 100%\)/, rule(".ks-value-list-label"))
   end
