@@ -5231,6 +5231,14 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_empty groups
   end
 
+  def test_each_bar_chart_group_bar_fills_with_its_dark_bar_group_colour_on_a_dark_operating_system_unless_the_page_is_custom
+    groups = (1..5).reject do |n|
+      block(".ks-bar-chart-bar-group-#{n}").match?(/prefers-color-scheme: dark.*?\[data-theme="custom"\] \*\).*?fill: var\(--ks-color-bar-group-#{n}-dark\)/m)
+    end
+
+    assert_empty groups
+  end
+
   def test_bar_chart_shaded_bar_is_faded
     assert_includes rule(".ks-bar-chart-bar-shaded"), "opacity: 40%"
   end

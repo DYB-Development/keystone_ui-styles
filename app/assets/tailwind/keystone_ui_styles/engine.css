@@ -576,23 +576,23 @@
   }
 
   .ks-bar-chart-bar-group-1 {
-    @apply fill-(--ks-color-bar-group-1);
+    @apply fill-(--ks-color-bar-group-1) dark:fill-(--ks-color-bar-group-1-dark);
   }
 
   .ks-bar-chart-bar-group-2 {
-    @apply fill-(--ks-color-bar-group-2);
+    @apply fill-(--ks-color-bar-group-2) dark:fill-(--ks-color-bar-group-2-dark);
   }
 
   .ks-bar-chart-bar-group-3 {
-    @apply fill-(--ks-color-bar-group-3);
+    @apply fill-(--ks-color-bar-group-3) dark:fill-(--ks-color-bar-group-3-dark);
   }
 
   .ks-bar-chart-bar-group-4 {
-    @apply fill-(--ks-color-bar-group-4);
+    @apply fill-(--ks-color-bar-group-4) dark:fill-(--ks-color-bar-group-4-dark);
   }
 
   .ks-bar-chart-bar-group-5 {
-    @apply fill-(--ks-color-bar-group-5);
+    @apply fill-(--ks-color-bar-group-5) dark:fill-(--ks-color-bar-group-5-dark);
   }
 
   .ks-bar-chart-grid {
