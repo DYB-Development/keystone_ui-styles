@@ -5446,7 +5446,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_timeline_waiting_colour_defaults_to_the_light_warning_colour
-    assert_match(/:root \{[^}]*--ks-color-timeline-waiting: var\(--ks-color-warning-300\);/m, self.class.compiled)
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-timeline-waiting: var\(--ks-color-warning-300\);/m, self.class.compiled)
   end
 
   def test_failed_timeline_try_reads_the_danger_colour
