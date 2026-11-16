@@ -5225,6 +5225,12 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?fill: var\(--ks-color-chart-1-dark\)/m, block(".ks-bar-chart-bar"))
   end
 
+  def test_each_bar_chart_group_bar_fills_with_its_bar_group_colour
+    groups = (1..5).reject { |n| rule(".ks-bar-chart-bar-group-#{n}").include?("fill: var(--ks-color-bar-group-#{n})") }
+
+    assert_empty groups
+  end
+
   def test_bar_chart_shaded_bar_is_faded
     assert_includes rule(".ks-bar-chart-bar-shaded"), "opacity: 40%"
   end
