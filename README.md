@@ -129,7 +129,7 @@ any layer overrides them wherever it is imported.
 | `--ks-color-over-goal`, `--ks-color-over-goal-warning` | Bucket fill over its goal | `--color-green-500`, `--color-amber-500` |
 | `--ks-color-table-head`, `--ks-color-table-body`, `--ks-color-divider` | Table head and body background, and the line between rows | `--color-gray-50`, `--color-white`, `--color-gray-200` |
 | `--ks-shadow-surface-dark` | Table shadow on a dark page | None |
-| `--ks-color-code`, `--ks-color-text-code` | Code block background and text | `--color-surface-900`, `--color-surface-100` |
+| `--ks-color-code`, `--ks-color-text-code` | Code block background and text | `--color-surface-100`, `--color-surface-900`, and `--color-black`, `--color-surface-100` on a dark page |
 | `--ks-color-pipeline`, `--ks-color-pipeline-box`, `--ks-color-pipeline-border` | Pipeline and box background, and their border | `--color-surface-800`, `--color-surface-900`, `--color-surface-700` |
 | `--ks-color-text-on-dark`, `--ks-color-pipeline-muted`, `--ks-color-pipeline-label`, `--ks-color-pipeline-amber` | Pipeline title, subtitle, box label and amber count | `--color-white`, `--color-surface-400`, `--color-surface-500`, `--color-amber-400` |
 | `--ks-color-nav`, `--ks-color-nav-border` | Bottom nav, desktop nav menu and sidebar background, and the bottom nav, nav menu, sidebar and open sidebar group border and the lines between their links | `--base-bg-low`, then `--color-white`; `--base-border-tertiary`, then `--color-gray-200` |
@@ -269,7 +269,7 @@ warning 400, and 700 on a dark page.
 | `ks-hero`, `ks-hero-inner`, `ks-hero-content`, `ks-hero-split`, `ks-hero-title`, `ks-hero-subtitle`, `ks-hero-badge`, `ks-hero-actions` | Hero and its parts |
 | `ks-table`, `ks-table-head`, `ks-table-body`, `ks-table-header`, `ks-table-header-first`, `ks-table-header-middle`, `ks-table-header-last`, `ks-table-cell-first`, `ks-table-cell-middle`, `ks-table-cell-last`, `ks-table-phone-list-cell`, `ks-table-header-locked`, `ks-table-cell-locked`, `ks-table-toolbar`, `ks-table-sort-link`, `ks-table-sort-icon`, `ks-table-sort-icon-active` | Data table and its parts |
 | `ks-code`, `ks-code-caption`, `ks-code-block` | Code block and its caption |
-| `ks-diff-removed`, `ks-diff-added` | A line removed from a diff, on a light danger background, and a line added, on a light success background |
+| `ks-diff-removed`, `ks-diff-added` | A line removed from a diff, in danger 800 text on a light danger background, and a line added, in success 800 text on a light success background, each keeping the code block's light text on a dark page |
 | `ks-accordion`, `ks-accordion-item`, `ks-accordion-button`, `ks-accordion-answer` | Accordion and its parts |
 | `ks-disclosure`, `ks-disclosure-summary`, `ks-disclosure-body`, `ks-disclosure-icon` | Disclosure and its parts |
 | `ks-tab-bar`, `ks-tab`, `ks-tab-active` | Tab switcher, a tab, and the active tab |
