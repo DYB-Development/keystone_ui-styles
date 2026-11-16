@@ -1293,7 +1293,7 @@
   }
 
   .ks-tab-bar-underline .ks-tab-active {
-    @apply data-[active]:border-b-[length:calc(var(--ks-border-width)*2)] data-[active]:border-(color:--ks-color-accent) dark:data-[active]:border-(color:--ks-color-accent-dark) data-[active]:font-(weight:--ks-font-weight-medium);
+    @apply data-[active]:border-b-[length:calc(var(--ks-border-width)*2)] data-[active]:border-(color:--ks-color-accent) dark:data-[active]:border-(color:--ks-color-accent-dark) data-[active]:font-(weight:--ks-font-weight-medium) data-[active]:bg-(color:--ks-color-tab-underline-fill);
   }
 
   .ks-progress-track {

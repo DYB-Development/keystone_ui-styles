@@ -5763,6 +5763,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-color-tab-underline-fill: transparent/m, self.class.compiled)
   end
 
+  def test_selected_underlined_tab_fill_reads_the_underlined_tab_fill_variable
+    assert_includes block(".ks-tab-bar-underline .ks-tab-active[data-active]"), "background-color: var(--ks-color-tab-underline-fill)"
+  end
+
   private
 
   def block(selector)
