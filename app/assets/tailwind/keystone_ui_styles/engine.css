@@ -1288,7 +1288,7 @@
   }
 
   .ks-tab-bar-underline .ks-tab {
-    @apply px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-[13px] font-(weight:--ks-font-weight-normal);
+    @apply px-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*2)] text-[13px] font-(weight:--ks-font-weight-normal) rounded-b-none;
   }
 
   .ks-progress-track {

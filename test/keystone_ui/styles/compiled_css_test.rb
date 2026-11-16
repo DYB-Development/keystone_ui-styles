@@ -5739,6 +5739,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar-underline .ks-tab"), "font-weight: var(--ks-font-weight-normal)"
   end
 
+  def test_underlined_tab_has_square_bottom_corners
+    assert_includes block(".ks-tab-bar-underline .ks-tab"), "border-bottom-right-radius: 0"
+  end
+
   private
 
   def block(selector)
