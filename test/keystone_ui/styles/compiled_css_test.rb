@@ -487,6 +487,30 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-card-edge"))
   end
 
+  def test_warning_card_border_reads_the_warning_400_colour
+    assert_includes block(".ks-card-warning"), "border-color: var(--ks-color-warning-400)"
+  end
+
+  def test_warning_card_border_reads_the_warning_700_colour_on_a_dark_operating_system_unless_the_page_is_custom
+    assert_match(/prefers-color-scheme: dark.*?\[data-theme="custom"\] \*\).*?border-color: var\(--ks-color-warning-700\)/m, block(".ks-card-warning"))
+  end
+
+  def test_card_meta_draws_a_top_border_as_wide_as_the_border_width
+    assert_includes block(".ks-card-meta"), "border-top-width: var(--ks-border-width)"
+  end
+
+  def test_card_meta_top_border_reads_the_border_colour_role
+    assert_includes block(".ks-card-meta"), "border-color: var(--ks-color-border)"
+  end
+
+  def test_card_meta_leaves_two_spacing_units_between_its_top_border_and_its_text
+    assert_includes block(".ks-card-meta"), "padding-top: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_card_meta_top_border_reads_the_dark_border_colour_on_a_dark_operating_system_unless_the_page_is_custom
+    assert_match(/prefers-color-scheme: dark.*?\[data-theme="custom"\] \*\).*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-card-meta"))
+  end
+
   def test_input_background_reads_the_surface_colour_role
     assert_includes rule(".ks-input"), "background-color: var(--ks-color-surface)"
   end

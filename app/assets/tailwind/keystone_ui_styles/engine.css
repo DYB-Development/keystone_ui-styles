@@ -617,6 +617,14 @@
     @apply text-sm font-(weight:--ks-font-weight-medium) no-underline text-(color:--ks-color-link) hover:text-(color:--ks-color-link-strong-hover) dark:text-(color:--ks-color-link-dark);
   }
 
+  .ks-card-warning {
+    @apply border-(color:--ks-color-warning-400) dark:border-(color:--ks-color-warning-700);
+  }
+
+  .ks-card-meta {
+    @apply border-t-(length:--ks-border-width) border-(color:--ks-color-border) pt-[calc(var(--ks-spacing)*2)] dark:border-(color:--ks-color-border-dark);
+  }
+
   .ks-alert {
     @apply rounded-[calc(var(--ks-radius-surface)*0.75)] p-[calc(var(--ks-spacing)*4)];
   }

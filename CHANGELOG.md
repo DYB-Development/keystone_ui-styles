@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.37.0] - 2026-11-15
+
+### Added
+- `ks-card-warning` draws a card's whole border in the warning colour, warning 400 on a light page and warning 700 on a dark page.
+- `ks-card-meta` draws a line in the border colour above a card's meta line, with two spacing units between the line and the text.
+
 ## [0.36.0] - 2026-11-15
 
 ### Added
