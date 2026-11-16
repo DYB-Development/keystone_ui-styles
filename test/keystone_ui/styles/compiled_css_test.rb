@@ -5635,6 +5635,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_operator light_contrast(".ks-diff-added"), :>=, 4.5
   end
 
+  def test_removed_diff_line_text_reads_the_dark_code_text_on_a_dark_page
+    assert_match(/data-theme="dark".*?\n\s*color: var\(--ks-color-text-code-dark\)/m, block(".ks-diff-removed"))
+  end
+
   def test_bottom_action_is_fixed_to_the_bottom_of_the_screen
     assert_match(/position: fixed;.*?bottom: 0px;/m, block(".ks-bottom-action"))
   end
