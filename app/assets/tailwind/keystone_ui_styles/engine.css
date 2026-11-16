@@ -1221,7 +1221,7 @@
   }
 
   .ks-diff-removed {
-    @apply bg-(color:--ks-color-danger-100) dark:bg-(color:--ks-color-danger-900)/50;
+    @apply bg-(color:--ks-color-danger-100) text-(color:--ks-color-danger-800) dark:bg-(color:--ks-color-danger-900)/50;
   }
 
   .ks-diff-added {

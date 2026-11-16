@@ -5623,6 +5623,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?background-color: color-mix\(in oklab, var\(--ks-color-success-900\) 50%, transparent\)/m, block(".ks-diff-added"))
   end
 
+  def test_removed_diff_line_text_is_readable_against_its_fill_on_a_light_page
+    assert_operator light_contrast(".ks-diff-removed"), :>=, 4.5
+  end
+
   def test_bottom_action_is_fixed_to_the_bottom_of_the_screen
     assert_match(/position: fixed;.*?bottom: 0px;/m, block(".ks-bottom-action"))
   end
@@ -5787,5 +5791,44 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
 
   def rule(selector)
     self.class.compiled[/^\s*#{Regexp.escape(selector)}\s*\{(.*?)\}/m, 1].to_s
+  end
+
+  def light_contrast(selector)
+    text = luminance(light_value(selector, "color") || light_value(".ks-code-block", "color"))
+    fill = luminance(light_value(selector, "background-color"))
+    (([ text, fill ].max + 0.05) / ([ text, fill ].min + 0.05)).round(2)
+  end
+
+  def light_value(selector, property)
+    value = block(selector)[/\A.*?(?=^\s*@|\z)/m][/^\s*#{property}: (.*);$/, 1]
+    value = self.class.compiled[/^\s*#{Regexp.last_match(1)}: (.*);$/, 1] while value&.match(/\Avar\((--[\w-]+)\)\z/)
+    value
+  end
+
+  def luminance(colour)
+    red, green, blue = colour.start_with?("#") ? hex_to_linear(colour) : oklch_to_linear(colour)
+    (0.2126 * red) + (0.7152 * green) + (0.0722 * blue)
+  end
+
+  def hex_to_linear(hex)
+    hex.delete("#").scan(/../).map do |pair|
+      channel = pair.to_i(16) / 255.0
+      channel <= 0.04045 ? channel / 12.92 : ((channel + 0.055) / 1.055)**2.4
+    end
+  end
+
+  def oklch_to_linear(oklch)
+    lightness, chroma, hue = oklch.scan(/[\d.]+/).map(&:to_f)
+    lightness /= 100
+    a = chroma * Math.cos(hue * Math::PI / 180)
+    b = chroma * Math.sin(hue * Math::PI / 180)
+    l = (lightness + (0.3963377774 * a) + (0.2158037573 * b))**3
+    m = (lightness - (0.1055613458 * a) - (0.0638541728 * b))**3
+    s = (lightness - (0.0894841775 * a) - (1.2914855480 * b))**3
+    [
+      (4.0767416621 * l) - (3.3077115913 * m) + (0.2309699292 * s),
+      (-1.2684380046 * l) + (2.6097574011 * m) - (0.3413193965 * s),
+      (-0.0041960863 * l) - (0.7034186147 * m) + (1.7076147010 * s)
+    ].map { |channel| channel.clamp(0.0, 1.0) }
   end
 end
