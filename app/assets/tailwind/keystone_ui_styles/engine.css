@@ -1248,6 +1248,10 @@
     @apply bg-(color:--ks-color-timeline-queued) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-queued-dark);
   }
 
+  .ks-timeline-waiting {
+    @apply bg-(color:--ks-color-timeline-waiting);
+  }
+
   .ks-timeline-failed {
     @apply bg-(color:--ks-color-danger) dark:bg-(color:--ks-color-danger-dark);
   }
