@@ -236,8 +236,10 @@
     --ks-color-timeline-track-dark: var(--ks-color-track-dark);
     --ks-color-timeline-bar: var(--ks-color-meter);
     --ks-color-timeline-bar-dark: var(--ks-color-meter);
-    --ks-color-timeline-queued: var(--ks-color-warning-300);
-    --ks-color-timeline-queued-dark: var(--ks-color-warning-700);
+    --ks-color-timeline-queued: var(--ks-color-border-strong);
+    --ks-color-timeline-queued-dark: var(--ks-color-border-strong-dark);
+    --ks-color-timeline-waiting: var(--ks-color-warning-300);
+    --ks-color-timeline-waiting-dark: var(--ks-color-warning-700);
     --ks-color-text-meter-label: var(--ks-color-text-label);
     --ks-color-text-meter-label-dark: var(--ks-color-text-label-dark);
     --ks-color-funnel-accent: var(--color-accent-500);
@@ -1244,6 +1246,10 @@
 
   .ks-timeline-queued {
     @apply bg-(color:--ks-color-timeline-queued) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-queued-dark);
+  }
+
+  .ks-timeline-waiting {
+    @apply bg-(color:--ks-color-timeline-waiting) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-waiting-dark);
   }
 
   .ks-timeline-failed {

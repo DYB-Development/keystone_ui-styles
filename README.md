@@ -118,7 +118,8 @@ any layer overrides them wherever it is imported.
 | `--ks-color-icon-soft` | Disclosure icon | `--color-surface-400` |
 | `--ks-color-track`, `--ks-color-meter` | Progress track, and the progress bar, funnel accent step and bucket fill | `--color-surface-200`, `--color-accent-500` |
 | `--ks-color-text-meter-label` | Progress and funnel labels | `--color-surface-700` |
-| `--ks-color-timeline-track`, `--ks-color-timeline-bar`, `--ks-color-timeline-queued` | A timeline's track, a try's bar, and the time a try spent queued | `--ks-color-track`, `--ks-color-meter`, `--ks-color-warning-300`, and `--ks-color-track-dark`, `--ks-color-meter`, `--ks-color-warning-700` on a dark page |
+| `--ks-color-timeline-track`, `--ks-color-timeline-bar`, `--ks-color-timeline-queued` | A timeline's track, a try's bar, and the time a try spent queued | `--ks-color-track`, `--ks-color-meter`, `--ks-color-border-strong`, and `--ks-color-track-dark`, `--ks-color-meter`, `--ks-color-border-strong-dark` on a dark page |
+| `--ks-color-timeline-waiting` | A timeline's waiting bar, for a step still waiting | `--ks-color-warning-300`, and `--ks-color-warning-700` on a dark page |
 | `--ks-color-funnel-accent`, `-sky`, `-violet`, `-amber`, `-rose` | The five funnel step colours | The matching Tailwind 500 shade |
 | `--ks-color-funnel-band`, `--ks-color-text-funnel-band` | The joined funnel's band between steps and its percent | `--color-surface-800`, `--color-white`, and `--color-surface-100`, `--color-surface-900` on a dark page |
 | `--ks-color-chart-1` to `--ks-color-chart-5` | The five chart series colours, for a chart to read | `--color-accent-600`, then teal, amber, violet and rose at Tailwind's 600 shade, and `--color-accent-400`, then the same four at Tailwind's 400 shade, on a dark page |
@@ -265,7 +266,7 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-disclosure`, `ks-disclosure-summary`, `ks-disclosure-body`, `ks-disclosure-icon` | Disclosure and its parts |
 | `ks-tab-bar`, `ks-tab`, `ks-tab-active` | Tab switcher, a tab, and the active tab |
 | `ks-progress-track`, `ks-progress-bar`, `ks-meter-label` | Progress bar and its label |
-| `ks-timeline-track`, `ks-timeline-bar`, `ks-timeline-queued`, `ks-timeline-failed` | Timeline track, a try's bar, the time a try spent queued, and a failed try in the danger colour |
+| `ks-timeline-track`, `ks-timeline-bar`, `ks-timeline-queued`, `ks-timeline-waiting`, `ks-timeline-failed` | Timeline track, a try's bar, the time a try spent queued in a neutral grey, a step's waiting bar in the warning colour, and a failed try in the danger colour |
 | `ks-funnel`, `ks-funnel-layer`, `ks-funnel-row`, `ks-funnel-label`, `ks-funnel-value`, `ks-funnel-bar`, `ks-funnel-transition`, `ks-funnel-bar-accent`, `ks-funnel-bar-sky`, `ks-funnel-bar-violet`, `ks-funnel-bar-amber`, `ks-funnel-bar-rose`, `ks-funnel-joined`, `ks-funnel-band`, `ks-funnel-band-label` | Funnel and its parts |
 | `ks-bucket`, `ks-bucket-series`, `ks-bucket-label`, `ks-bucket-goal`, `ks-bucket-percent`, `ks-bucket-tank`, `ks-bucket-actual`, `ks-bucket-fill`, `ks-bucket-fill-over`, `ks-bucket-fill-over-warning` | Bucket and its parts |
 | `ks-pipeline`, `ks-pipeline-header`, `ks-pipeline-title`, `ks-pipeline-subtitle`, `ks-pipeline-track`, `ks-pipeline-box`, `ks-pipeline-box-label`, `ks-pipeline-count`, `ks-pipeline-link-healthy`, `ks-pipeline-link-broken`, `ks-pipeline-count-amber`, `ks-pipeline-count-emerald`, `ks-pipeline-count-danger`, `ks-pipeline-count-muted` | Pipeline and its parts |
