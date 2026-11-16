@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [0.35.0] - 2026-11-15
+
+### Added
+- `ks-timeline-waiting` colours a step's waiting bar from its own look variables, which default to the light warning colour and the dark warning colour in dark mode.
+
+### Changed
+- `ks-timeline-queued` defaults to the strong border colour in light and dark mode, a neutral grey, so queued time no longer looks like a waiting bar.
+
 ## [0.34.0] - 2026-11-13
 
 ### Added
