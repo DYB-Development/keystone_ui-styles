@@ -5627,6 +5627,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_operator light_contrast(".ks-diff-removed"), :>=, 4.5
   end
 
+  def test_added_diff_line_text_is_readable_against_its_fill_on_a_light_page
+    assert_operator light_contrast(".ks-diff-added"), :>=, 4.5
+  end
+
   def test_bottom_action_is_fixed_to_the_bottom_of_the_screen
     assert_match(/position: fixed;.*?bottom: 0px;/m, block(".ks-bottom-action"))
   end
