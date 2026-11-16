@@ -5089,6 +5089,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "border-left-width: var(--ks-border-width-current)"
   end
 
+  def test_current_value_list_row_bar_reads_the_accent_colour
+    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "border-left-color: var(--ks-color-accent)"
+  end
+
   def test_value_list_label_takes_two_fifths_of_the_row
     assert_match(/flex-basis: calc\(2\s*\/\s*5 \* 100%\)/, rule(".ks-value-list-label"))
   end
