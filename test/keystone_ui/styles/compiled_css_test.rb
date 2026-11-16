@@ -5711,6 +5711,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar-underline"), "margin-bottom: calc(var(--ks-spacing) * 4)"
   end
 
+  def test_underlined_tab_bar_gap_is_one_spacing_unit
+    assert_includes block(".ks-tab-bar-underline"), "gap: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)

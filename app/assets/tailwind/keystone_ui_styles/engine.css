@@ -1284,7 +1284,7 @@
   }
 
   .ks-tab-bar-underline {
-    @apply mb-[calc(var(--ks-spacing)*4)];
+    @apply mb-[calc(var(--ks-spacing)*4)] gap-[calc(var(--ks-spacing)*1)];
   }
 
   .ks-progress-track {
