@@ -618,7 +618,7 @@
   }
 
   .ks-card-warning {
-    @apply border-(color:--ks-color-warning-400);
+    @apply border-(color:--ks-color-warning-400) dark:border-(color:--ks-color-warning-700);
   }
 
   .ks-alert {
