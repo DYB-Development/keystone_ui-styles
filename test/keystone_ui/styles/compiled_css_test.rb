@@ -5707,6 +5707,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/\.ks-tab-bar-pills \.ks-tab-active(?![\w-]).*?data-theme="dark".*?\[data-active\].*?border-color: var\(--ks-color-accent-dark\)/m, self.class.compiled)
   end
 
+  def test_underlined_tab_bar_leaves_four_spacing_units_under_the_row
+    assert_includes block(".ks-tab-bar-underline"), "margin-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
   private
 
   def block(selector)

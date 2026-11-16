@@ -1283,6 +1283,10 @@
     @apply data-[active]:border-(color:--ks-color-accent) dark:data-[active]:border-(color:--ks-color-accent-dark);
   }
 
+  .ks-tab-bar-underline {
+    @apply mb-[calc(var(--ks-spacing)*4)];
+  }
+
   .ks-progress-track {
     @apply bg-(color:--ks-color-track) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-track-dark);
   }
