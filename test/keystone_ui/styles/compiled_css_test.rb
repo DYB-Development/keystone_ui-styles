@@ -5723,6 +5723,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?--tw-shadow: inset 0 calc\(var\(--ks-border-width\) \* -1\) 0 var\(--tw-shadow-color, var\(--ks-color-border-dark\)\)/m, block(".ks-tab-bar-underline"))
   end
 
+  def test_underlined_tab_padding_inline_is_three_spacing_units
+    assert_includes block(".ks-tab-bar-underline .ks-tab"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)

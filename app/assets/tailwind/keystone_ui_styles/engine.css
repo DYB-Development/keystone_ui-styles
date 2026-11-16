@@ -1287,6 +1287,10 @@
     @apply mb-[calc(var(--ks-spacing)*4)] gap-[calc(var(--ks-spacing)*1)] shadow-[inset_0_calc(var(--ks-border-width)*-1)_0_var(--ks-color-border)] dark:shadow-[inset_0_calc(var(--ks-border-width)*-1)_0_var(--ks-color-border-dark)];
   }
 
+  .ks-tab-bar-underline .ks-tab {
+    @apply px-[calc(var(--ks-spacing)*3)];
+  }
+
   .ks-progress-track {
     @apply bg-(color:--ks-color-track) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-track-dark);
   }
