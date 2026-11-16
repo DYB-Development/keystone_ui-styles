@@ -111,6 +111,7 @@ any layer overrides them wherever it is imported.
 | `--ks-radius-pill` | Progress bar, hero badge and swipe button corners | Fully rounded |
 | `--ks-color-hover-border` | Link card and feature card border on hover | Accent 500 at 50% |
 | `--ks-color-tint`, `--ks-color-tint-border` | Feature icon, hero badge, active tab, current table row and current link list row background, and the hero badge border | Accent 500 at 10% and 20% |
+| `--ks-color-tab-underline-fill` | The active tab's background in the underlined tab row | Transparent |
 | `--ks-color-border-subtle` | Call to action, feature card, code, accordion and disclosure border | `--color-surface-200` |
 | `--ks-color-fill-muted` | Call to action and code caption background | `--color-surface-50` |
 | `--ks-color-raised` | Feature card background | `--color-white` |
@@ -272,6 +273,9 @@ warning 400, and 700 on a dark page.
 | `ks-accordion`, `ks-accordion-item`, `ks-accordion-button`, `ks-accordion-answer` | Accordion and its parts |
 | `ks-disclosure`, `ks-disclosure-summary`, `ks-disclosure-body`, `ks-disclosure-icon` | Disclosure and its parts |
 | `ks-tab-bar`, `ks-tab`, `ks-tab-active` | Tab switcher, a tab, and the active tab |
+| `ks-tab-bar-pills` | On a `ks-tab-bar`, draws each tab as a small outlined pill with 12px text, outlines the active tab in the accent colour, and leaves 10px under the row. Its tabs take their text size from it, so they carry no text size class of their own |
+| `ks-tab-bar-underline` | On a `ks-tab-bar`, draws the tabs as plain 13px text over a line in the border colour under the whole row, underlines the active tab in the accent colour, and leaves 16px under the row. Its tabs take their text size from it, so they carry no text size class of their own |
+| `ks-tab-count` | A tab's count, as plain muted text after its label |
 | `ks-progress-track`, `ks-progress-bar`, `ks-meter-label` | Progress bar and its label |
 | `ks-timeline-track`, `ks-timeline-bar`, `ks-timeline-queued`, `ks-timeline-waiting`, `ks-timeline-failed` | Timeline track, a try's bar, the time a try spent queued in a neutral grey, a step's waiting bar in the warning colour, and a failed try in the danger colour |
 | `ks-funnel`, `ks-funnel-layer`, `ks-funnel-row`, `ks-funnel-label`, `ks-funnel-value`, `ks-funnel-bar`, `ks-funnel-transition`, `ks-funnel-bar-accent`, `ks-funnel-bar-sky`, `ks-funnel-bar-violet`, `ks-funnel-bar-amber`, `ks-funnel-bar-rose`, `ks-funnel-joined`, `ks-funnel-band`, `ks-funnel-band-label` | Funnel and its parts |
