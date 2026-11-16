@@ -5715,6 +5715,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar-underline"), "gap: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_underlined_tab_bar_draws_a_line_in_the_border_colour_under_the_whole_row
+    assert_includes block(".ks-tab-bar-underline"), "--tw-shadow: inset 0 calc(var(--ks-border-width) * -1) 0 var(--tw-shadow-color, var(--ks-color-border))"
+  end
+
   private
 
   def block(selector)
