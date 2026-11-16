@@ -1226,7 +1226,7 @@
   }
 
   .ks-diff-added {
-    @apply bg-(color:--ks-color-success-100) text-(color:--ks-color-success-800) dark:bg-(color:--ks-color-success-900)/50;
+    @apply bg-(color:--ks-color-success-100) text-(color:--ks-color-success-800) dark:bg-(color:--ks-color-success-900)/50 dark:text-(color:--ks-color-text-code-dark);
   }
 
   .ks-accordion {
