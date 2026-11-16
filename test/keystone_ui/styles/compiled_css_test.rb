@@ -5161,6 +5161,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "margin-inline: calc(var(--ks-spacing) * -4)"
   end
 
+  def test_current_value_list_row_leaves_space_after_its_text_on_the_right
+    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "padding-right: calc(var(--ks-spacing) * 4)"
+  end
+
   def test_value_list_label_takes_two_fifths_of_the_row
     assert_match(/flex-basis: calc\(2\s*\/\s*5 \* 100%\)/, rule(".ks-value-list-label"))
   end
