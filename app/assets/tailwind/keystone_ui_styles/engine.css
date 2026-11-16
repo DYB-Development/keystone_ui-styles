@@ -225,9 +225,10 @@
     --ks-color-table-body-dark: var(--ks-color-surface-dark);
     --ks-color-divider: var(--ks-color-border);
     --ks-color-divider-dark: var(--ks-color-border-dark);
-    --ks-color-code: var(--color-surface-900);
+    --ks-color-code: var(--color-surface-100);
     --ks-color-code-dark: var(--color-black);
-    --ks-color-text-code: var(--color-surface-100);
+    --ks-color-text-code: var(--color-surface-900);
+    --ks-color-text-code-dark: var(--color-surface-100);
     --ks-color-text-body: var(--ks-color-text-secondary);
     --ks-color-text-body-dark: var(--ks-color-text-secondary-dark);
     --ks-color-icon-soft: var(--ks-color-icon);
@@ -1217,15 +1218,15 @@
   }
 
   .ks-code-block {
-    @apply bg-(color:--ks-color-code) p-[calc(var(--ks-spacing)*4)] text-(color:--ks-color-text-code) dark:bg-(color:--ks-color-code-dark);
+    @apply bg-(color:--ks-color-code) p-[calc(var(--ks-spacing)*4)] text-(color:--ks-color-text-code) dark:bg-(color:--ks-color-code-dark) dark:text-(color:--ks-color-text-code-dark);
   }
 
   .ks-diff-removed {
-    @apply bg-(color:--ks-color-danger-100) dark:bg-(color:--ks-color-danger-900)/50;
+    @apply bg-(color:--ks-color-danger-100) text-(color:--ks-color-danger-800) dark:bg-(color:--ks-color-danger-900)/50 dark:text-(color:--ks-color-text-code-dark);
   }
 
   .ks-diff-added {
-    @apply bg-(color:--ks-color-success-100) dark:bg-(color:--ks-color-success-900)/50;
+    @apply bg-(color:--ks-color-success-100) text-(color:--ks-color-success-800) dark:bg-(color:--ks-color-success-900)/50 dark:text-(color:--ks-color-text-code-dark);
   }
 
   .ks-accordion {
