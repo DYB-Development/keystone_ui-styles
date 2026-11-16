@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [0.39.0] - 2026-11-16
+
+### Added
+- `ks-tab-bar-pills` draws a tab row as small outlined pills with 12px text and 6px between them, outlines the active pill in the accent colour, and leaves 10px under the row.
+- `ks-tab-bar-underline` draws a tab row as plain 13px text over a line under the whole row, underlines the active tab in the accent colour, and leaves 16px under the row.
+- `ks-tab-count` draws a tab's count as plain muted text after its label.
+- `--ks-color-tab-underline-fill` holds the active tab's background in the underlined tab row, and defaults to transparent.
+
 ## [0.38.0] - 2026-11-16
 
 ### Added
