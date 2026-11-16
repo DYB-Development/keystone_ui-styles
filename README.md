@@ -78,7 +78,7 @@ any layer overrides them wherever it is imported.
 | `--ks-color-on-accent`, `--ks-color-on-danger` | Primary and danger button label | `--ks-color-on-fill` |
 | `--ks-color-on-neutral` | Secondary button label | `--ks-color-text` |
 | `--ks-color-surface` | Panel, card and input background | `--color-white`, and `--color-surface-900` on a dark page |
-| `--ks-color-border` | Panel and card border | `--color-surface-200` |
+| `--ks-color-border` | Panel and card border, and the line above a card's meta line | `--color-surface-200` |
 | `--ks-color-border-control` | Input border | `--color-gray-300` |
 | `--ks-color-text` | Input text and page, section and card titles | `--color-surface-900` |
 | `--ks-color-text-label` | Field labels | `--color-surface-700` |
@@ -179,7 +179,8 @@ Alerts and badges read a shade scale per status instead:
 `--ks-color-info-*`, each with shades 50, 100, 300, 400, 600, 700, 800 and 900, and 500 for danger. They
 default to Tailwind's green, yellow and red, and to the accent scale for info.
 An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
-100 and 700, and 900 and 400 on a dark page.
+100 and 700, and 900 and 400 on a dark page. A warning card's border uses
+warning 400, and 700 on a dark page.
 
 ```css
 :root {
@@ -235,6 +236,8 @@ An alert uses shades 50 and 800, and 900 and 300 on a dark page. A badge uses
 | `ks-stat-card-note`, `ks-stat-card-fallback` | A stat's note under its value, and the muted fallback shown when its value is missing |
 | `ks-card`, `ks-card-edge` | Card, and a card that runs edge to edge on small screens |
 | `ks-card-body`, `ks-card-title`, `ks-card-summary`, `ks-card-cta`, `ks-card-link` | Card parts |
+| `ks-card-warning` | On a `ks-card` or `ks-card-edge`, draws the whole border in the warning colour |
+| `ks-card-meta` | A card's meta line, with a line in the border colour above it and two spacing units between that line and the text |
 | `ks-alert` | Every alert |
 | `ks-alert-info`, `ks-alert-success`, `ks-alert-warning`, `ks-alert-error` | Alert color |
 | `ks-alert-body`, `ks-alert-content`, `ks-alert-title`, `ks-alert-message`, `ks-alert-message-titled`, `ks-alert-dismiss` | Alert parts |
