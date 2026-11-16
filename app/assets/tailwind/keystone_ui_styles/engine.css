@@ -528,6 +528,10 @@
     @apply border-t-(length:--ks-border-width) border-(color:--ks-color-border) dark:border-(color:--ks-color-border-dark);
   }
 
+  .ks-value-list-row.ks-value-list-row-current {
+    @apply bg-(color:--ks-color-tint);
+  }
+
   .ks-value-list-label {
     @apply shrink-0 basis-2/5 text-(color:--ks-color-text-secondary) dark:text-(color:--ks-color-text-secondary-dark);
   }

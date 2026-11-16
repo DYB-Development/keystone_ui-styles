@@ -5077,6 +5077,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-value-list-row + .ks-value-list-row"))
   end
 
+  def test_current_value_list_row_fills_the_whole_row_with_the_accent_tint
+    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "background-color: var(--ks-color-tint)"
+  end
+
   def test_value_list_label_takes_two_fifths_of_the_row
     assert_match(/flex-basis: calc\(2\s*\/\s*5 \* 100%\)/, rule(".ks-value-list-label"))
   end
