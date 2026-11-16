@@ -5687,6 +5687,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar-pills .ks-tab"), "padding-inline: calc(var(--ks-spacing) * 2.5)"
   end
 
+  def test_pill_tab_padding_block_is_one_and_a_quarter_spacing_units
+    assert_includes block(".ks-tab-bar-pills .ks-tab"), "padding-block: calc(var(--ks-spacing) * 1.25)"
+  end
+
   private
 
   def block(selector)
