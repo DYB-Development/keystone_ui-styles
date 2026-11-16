@@ -5659,6 +5659,126 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule("body:has(.ks-bottom-nav) .ks-bottom-action"), "padding-bottom: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_pill_tab_bar_leaves_two_and_a_half_spacing_units_under_the_row
+    assert_includes block(".ks-tab-bar-pills"), "margin-bottom: calc(var(--ks-spacing) * 2.5)"
+  end
+
+  def test_pill_tab_bar_gap_is_one_and_a_half_spacing_units
+    assert_includes block(".ks-tab-bar-pills"), "gap: calc(var(--ks-spacing) * 1.5)"
+  end
+
+  def test_pill_tab_radius_reads_the_pill_radius
+    assert_includes block(".ks-tab-bar-pills .ks-tab"), "border-radius: var(--ks-radius-pill)"
+  end
+
+  def test_pill_tab_is_outlined_at_the_border_width
+    assert_includes block(".ks-tab-bar-pills .ks-tab"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_pill_tab_outline_reads_the_border_colour_role
+    assert_includes block(".ks-tab-bar-pills .ks-tab"), "border-color: var(--ks-color-border)"
+  end
+
+  def test_pill_tab_outline_reads_the_dark_border_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-tab-bar-pills .ks-tab"))
+  end
+
+  def test_pill_tab_padding_inline_is_two_and_a_half_spacing_units
+    assert_includes block(".ks-tab-bar-pills .ks-tab"), "padding-inline: calc(var(--ks-spacing) * 2.5)"
+  end
+
+  def test_pill_tab_padding_block_is_one_and_a_quarter_spacing_units
+    assert_includes block(".ks-tab-bar-pills .ks-tab"), "padding-block: calc(var(--ks-spacing) * 1.25)"
+  end
+
+  def test_pill_tab_text_is_extra_small
+    assert_includes block(".ks-tab-bar-pills .ks-tab"), "font-size: var(--text-xs)"
+  end
+
+  def test_pill_tab_weight_reads_the_normal_font_weight_variable
+    assert_includes block(".ks-tab-bar-pills .ks-tab"), "font-weight: var(--ks-font-weight-normal)"
+  end
+
+  def test_selected_pill_outline_reads_the_accent_colour_role
+    assert_includes block(".ks-tab-bar-pills .ks-tab-active[data-active]"), "border-color: var(--ks-color-accent)"
+  end
+
+  def test_selected_pill_outline_reads_the_dark_accent_colour_role_on_a_dark_page
+    assert_match(/\.ks-tab-bar-pills \.ks-tab-active(?![\w-]).*?data-theme="dark".*?\[data-active\].*?border-color: var\(--ks-color-accent-dark\)/m, self.class.compiled)
+  end
+
+  def test_underlined_tab_bar_leaves_four_spacing_units_under_the_row
+    assert_includes block(".ks-tab-bar-underline"), "margin-bottom: calc(var(--ks-spacing) * 4)"
+  end
+
+  def test_underlined_tab_bar_gap_is_one_spacing_unit
+    assert_includes block(".ks-tab-bar-underline"), "gap: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_underlined_tab_bar_draws_a_line_in_the_border_colour_under_the_whole_row
+    assert_includes block(".ks-tab-bar-underline"), "--tw-shadow: inset 0 calc(var(--ks-border-width) * -1) 0 var(--tw-shadow-color, var(--ks-color-border))"
+  end
+
+  def test_underlined_tab_bar_line_reads_the_dark_border_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?--tw-shadow: inset 0 calc\(var\(--ks-border-width\) \* -1\) 0 var\(--tw-shadow-color, var\(--ks-color-border-dark\)\)/m, block(".ks-tab-bar-underline"))
+  end
+
+  def test_underlined_tab_padding_inline_is_three_spacing_units
+    assert_includes block(".ks-tab-bar-underline .ks-tab"), "padding-inline: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_underlined_tab_padding_block_is_two_spacing_units
+    assert_includes block(".ks-tab-bar-underline .ks-tab"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_underlined_tab_text_is_13px
+    assert_includes block(".ks-tab-bar-underline .ks-tab"), "font-size: 13px"
+  end
+
+  def test_underlined_tab_weight_reads_the_normal_font_weight_variable
+    assert_includes block(".ks-tab-bar-underline .ks-tab"), "font-weight: var(--ks-font-weight-normal)"
+  end
+
+  def test_underlined_tab_has_square_bottom_corners
+    assert_includes block(".ks-tab-bar-underline .ks-tab"), "border-bottom-right-radius: 0"
+  end
+
+  def test_selected_underlined_tab_draws_its_underline_at_twice_the_border_width
+    assert_includes block(".ks-tab-bar-underline .ks-tab-active[data-active]"), "border-bottom-width: calc(var(--ks-border-width) * 2)"
+  end
+
+  def test_selected_underlined_tab_underline_reads_the_accent_colour_role
+    assert_includes block(".ks-tab-bar-underline .ks-tab-active[data-active]"), "border-color: var(--ks-color-accent)"
+  end
+
+  def test_selected_underlined_tab_underline_reads_the_dark_accent_colour_role_on_a_dark_page
+    assert_match(/\.ks-tab-bar-underline \.ks-tab-active(?![\w-]).*?data-theme="dark".*?\[data-active\].*?border-color: var\(--ks-color-accent-dark\)/m, self.class.compiled)
+  end
+
+  def test_selected_underlined_tab_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-tab-bar-underline .ks-tab-active[data-active]"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_underlined_tab_fill_defaults_to_transparent
+    assert_match(/@layer base \{.*?:root \{.*?--ks-color-tab-underline-fill: transparent/m, self.class.compiled)
+  end
+
+  def test_selected_underlined_tab_fill_reads_the_underlined_tab_fill_variable
+    assert_includes block(".ks-tab-bar-underline .ks-tab-active[data-active]"), "background-color: var(--ks-color-tab-underline-fill)"
+  end
+
+  def test_tab_count_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-tab-count"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_tab_count_text_reads_the_dark_text_muted_colour_role_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-tab-count"))
+  end
+
+  def test_tab_count_weight_reads_the_normal_font_weight_variable
+    assert_includes block(".ks-tab-count"), "font-weight: var(--ks-font-weight-normal)"
+  end
+
   private
 
   def block(selector)
