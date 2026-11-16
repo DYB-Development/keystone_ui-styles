@@ -5671,6 +5671,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar-pills .ks-tab"), "border-radius: var(--ks-radius-pill)"
   end
 
+  def test_pill_tab_is_outlined_at_the_border_width
+    assert_includes block(".ks-tab-bar-pills .ks-tab"), "border-width: var(--ks-border-width)"
+  end
+
   private
 
   def block(selector)
