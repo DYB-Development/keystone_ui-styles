@@ -227,7 +227,7 @@ warning 400, and 700 on a dark page.
 | `ks-fact`, `ks-facts` | A fact drawn as a small bordered box, and the row of facts holding it |
 | `ks-paragraph` | Running text |
 | `ks-value-list-row` | One row of a label and its value, with a line between rows |
-| `ks-value-list-row-current` | On a `ks-value-list-row`, marks the current row of a link list with the accent tint across the row and an accent bar on its left edge |
+| `ks-value-list-row-current` | On a `ks-value-list-row`, marks the current row of a link list with the accent tint across the row and an accent bar on its left edge, and reaches 16px past the other rows on each side with 16px of padding back so its text stays in line with theirs |
 | `ks-value-list-label`, `ks-value-list-note`, `ks-value-list-value` | A row's label, the short note under it, and its value |
 | `ks-value-list-end` | On the list, pushes each value to the right end of its row |
 | `ks-value-list-total` | A row drawn with more weight, for a total |
