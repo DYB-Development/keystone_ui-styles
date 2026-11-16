@@ -263,6 +263,11 @@
     --ks-color-bar-group-3: color-mix(in oklab, var(--ks-color-chart-1) 50%, var(--color-surface-300));
     --ks-color-bar-group-4: color-mix(in oklab, var(--ks-color-chart-1) 75%, var(--color-surface-300));
     --ks-color-bar-group-5: var(--ks-color-chart-1);
+    --ks-color-bar-group-1-dark: var(--color-surface-600);
+    --ks-color-bar-group-2-dark: color-mix(in oklab, var(--ks-color-chart-1-dark) 25%, var(--color-surface-600));
+    --ks-color-bar-group-3-dark: color-mix(in oklab, var(--ks-color-chart-1-dark) 50%, var(--color-surface-600));
+    --ks-color-bar-group-4-dark: color-mix(in oklab, var(--ks-color-chart-1-dark) 75%, var(--color-surface-600));
+    --ks-color-bar-group-5-dark: var(--ks-color-chart-1-dark);
     --ks-color-text-funnel-band-dark: var(--color-surface-900);
     --ks-color-text-funnel-band: var(--color-white);
     --ks-color-funnel-band-dark: var(--color-surface-100);

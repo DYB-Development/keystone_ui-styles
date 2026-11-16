@@ -2947,6 +2947,18 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_empty(defaults.reject { |name, value| self.class.compiled.match?(/@layer base \{.*?:root \{.*?#{name}: #{Regexp.escape(value)};/m) })
   end
 
+  def test_dark_bar_group_colours_fade_from_surface_600_to_dark_chart_1_in_quarter_steps
+    defaults = {
+      "--ks-color-bar-group-1-dark" => "var(--color-surface-600)",
+      "--ks-color-bar-group-2-dark" => "color-mix(in oklab, var(--ks-color-chart-1-dark) 25%, var(--color-surface-600))",
+      "--ks-color-bar-group-3-dark" => "color-mix(in oklab, var(--ks-color-chart-1-dark) 50%, var(--color-surface-600))",
+      "--ks-color-bar-group-4-dark" => "color-mix(in oklab, var(--ks-color-chart-1-dark) 75%, var(--color-surface-600))",
+      "--ks-color-bar-group-5-dark" => "var(--ks-color-chart-1-dark)"
+    }
+
+    assert_empty(defaults.reject { |name, value| self.class.compiled.match?(/@layer base \{.*?:root \{.*?#{name}: #{Regexp.escape(value)};/m) })
+  end
+
   def test_bucket_gap_is_1_spacing_units
     assert_includes block(".ks-bucket"), "gap: calc(var(--ks-spacing) * 1)"
   end
