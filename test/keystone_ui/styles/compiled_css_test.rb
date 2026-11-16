@@ -5767,6 +5767,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar-underline .ks-tab-active[data-active]"), "background-color: var(--ks-color-tab-underline-fill)"
   end
 
+  def test_tab_count_text_reads_the_text_muted_colour_role
+    assert_includes block(".ks-tab-count"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)
