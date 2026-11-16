@@ -1272,7 +1272,7 @@
   }
 
   .ks-tab-bar-pills {
-    @apply mb-[calc(var(--ks-spacing)*2.5)];
+    @apply mb-[calc(var(--ks-spacing)*2.5)] gap-[calc(var(--ks-spacing)*1.5)];
   }
 
   .ks-progress-track {
