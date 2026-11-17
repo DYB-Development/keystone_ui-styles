@@ -1851,13 +1851,17 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-metric-card-compact"), "padding: calc(var(--ks-spacing) * 2)"
   end
 
-def test_compact_metric_card_radius_reads_the_surface_radius
-  assert_includes block(".ks-metric-card-compact"), "border-radius: var(--ks-radius-surface)"
-end
+  def test_compact_metric_card_radius_reads_the_surface_radius
+    assert_includes block(".ks-metric-card-compact"), "border-radius: var(--ks-radius-surface)"
+  end
 
-def test_compact_stat_card_value_has_no_space_above_it
-  assert_includes block(".ks-stat-card-value-compact"), "margin-top: 0px"
-end
+  def test_compact_stat_card_value_has_no_space_above_it
+    assert_includes block(".ks-stat-card-value-compact"), "margin-top: 0px"
+  end
+
+  def test_compact_stat_card_value_leaves_1_5_spacing_units_before_its_change_or_note
+    assert_includes block(".ks-stat-card-value-compact"), "column-gap: calc(var(--ks-spacing) * 1.5)"
+  end
 
   def test_tone_neutral_text_reads_the_text_colour_role
     assert_includes block(".ks-tone-neutral"), "color: var(--ks-color-text)"
