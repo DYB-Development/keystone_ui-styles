@@ -5451,6 +5451,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-caption-normal-case a"), "color: var(--ks-color-link)"
   end
 
+  def test_normal_case_caption_draws_its_links_in_the_dark_link_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-link-dark\)/m, block(".ks-caption-normal-case a"))
+  end
+
   def test_facts_leave_two_spacing_units_between_facts
     assert_includes rule(".ks-facts"), "gap: calc(var(--ks-spacing) * 2)"
   end

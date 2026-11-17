@@ -526,7 +526,7 @@
   }
 
   .ks-caption-normal-case a {
-    @apply text-(color:--ks-color-link);
+    @apply text-(color:--ks-color-link) dark:text-(color:--ks-color-link-dark);
   }
 
   .ks-facts {
