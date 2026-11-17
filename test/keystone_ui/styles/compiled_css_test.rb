@@ -5174,7 +5174,7 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_current_value_list_row_leaves_space_between_its_bar_and_its_text
-    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "padding-left: calc(var(--ks-spacing) * 4 - var(--ks-border-width-current))"
+    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "padding-left: calc(var(--ks-value-list-reach) - var(--ks-border-width-current))"
   end
 
   def test_value_list_reach_defaults_to_four_spacing_units

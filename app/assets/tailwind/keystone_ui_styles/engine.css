@@ -551,7 +551,7 @@
   }
 
   .ks-value-list-row.ks-value-list-row-current {
-    @apply bg-(color:--ks-color-tint) mx-[calc(var(--ks-value-list-reach)*-1)] pr-(--ks-value-list-reach) pl-[calc(var(--ks-spacing)*4-var(--ks-border-width-current))] border-l-(length:--ks-border-width-current) border-l-(color:--ks-color-accent) dark:border-l-(color:--ks-color-accent-dark);
+    @apply bg-(color:--ks-color-tint) mx-[calc(var(--ks-value-list-reach)*-1)] pr-(--ks-value-list-reach) pl-[calc(var(--ks-value-list-reach)-var(--ks-border-width-current))] border-l-(length:--ks-border-width-current) border-l-(color:--ks-color-accent) dark:border-l-(color:--ks-color-accent-dark);
   }
 
   .ks-value-list-label {
