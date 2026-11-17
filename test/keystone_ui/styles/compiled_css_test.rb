@@ -5181,8 +5181,8 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/@layer base \{.*?:root \{.*?--ks-value-list-reach: calc\(var\(--ks-spacing\) \* 4\);/m, self.class.compiled)
   end
 
-  def test_current_value_list_row_reaches_out_past_the_other_rows_by_its_side_padding
-    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "margin-inline: calc(var(--ks-spacing) * -4)"
+  def test_current_value_list_row_reaches_out_past_the_other_rows_by_the_value_list_reach
+    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "margin-inline: calc(var(--ks-value-list-reach) * -1)"
   end
 
   def test_current_value_list_row_leaves_space_after_its_text_on_the_right
