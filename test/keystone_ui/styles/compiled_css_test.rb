@@ -5863,7 +5863,9 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_underlined_tab_has_square_bottom_corners
-    assert_includes block(".ks-tab-bar-underline .ks-tab"), "border-bottom-right-radius: 0"
+    square_corners = block(".ks-tab-bar-underline .ks-tab").scan(/border-bottom-(left|right)-radius: 0;/).flatten
+
+    assert_equal %w[left right], square_corners.sort
   end
 
   def test_selected_underlined_tab_draws_its_underline_at_twice_the_border_width
