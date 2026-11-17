@@ -149,6 +149,7 @@
     --ks-color-info-900: var(--color-accent-900);
     --ks-border-width: 1px;
     --ks-border-width-current: 3px;
+    --ks-value-list-reach: calc(var(--ks-spacing) * 4);
     --ks-shadow-overlay: var(--shadow-lg);
     --ks-font-weight-medium: var(--font-weight-medium);
     --ks-color-backdrop: color-mix(in oklab, var(--color-black) 60%, transparent);

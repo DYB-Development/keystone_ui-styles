@@ -5177,6 +5177,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "padding-left: calc(var(--ks-spacing) * 4 - var(--ks-border-width-current))"
   end
 
+  def test_value_list_reach_defaults_to_four_spacing_units
+    assert_match(/@layer base \{.*?:root \{.*?--ks-value-list-reach: calc\(var\(--ks-spacing\) \* 4\);/m, self.class.compiled)
+  end
+
   def test_current_value_list_row_reaches_out_past_the_other_rows_by_its_side_padding
     assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "margin-inline: calc(var(--ks-spacing) * -4)"
   end
