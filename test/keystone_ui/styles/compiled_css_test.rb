@@ -663,6 +663,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/width >= 40rem.*?padding-inline: calc\(var\(--ks-spacing\) \* 6\)/m, block(".ks-card-body"))
   end
 
+  def test_card_body_sets_the_value_list_reach_to_its_side_padding_below_the_small_breakpoint
+    assert_match(/\A[^@]*--ks-value-list-reach: calc\(var\(--ks-spacing\) \* 4\)/, block(".ks-card-body"))
+  end
+
   def test_card_body_sets_the_value_list_reach_to_its_side_padding_from_the_small_breakpoint
     assert_match(/width >= 40rem.*?--ks-value-list-reach: calc\(var\(--ks-spacing\) \* 6\)/m, block(".ks-card-body"))
   end
