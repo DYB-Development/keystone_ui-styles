@@ -1851,6 +1851,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-metric-card-compact"), "padding: calc(var(--ks-spacing) * 2)"
   end
 
+def test_compact_metric_card_radius_reads_the_surface_radius
+  assert_includes block(".ks-metric-card-compact"), "border-radius: var(--ks-radius-surface)"
+end
+
   def test_tone_neutral_text_reads_the_text_colour_role
     assert_includes block(".ks-tone-neutral"), "color: var(--ks-color-text)"
   end

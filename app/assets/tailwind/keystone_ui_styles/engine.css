@@ -998,7 +998,7 @@
   }
 
   .ks-metric-card-compact {
-    @apply p-[calc(var(--ks-spacing)*2)];
+    @apply rounded-(--ks-radius-surface) p-[calc(var(--ks-spacing)*2)];
   }
 
   .ks-tone-neutral {
