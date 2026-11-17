@@ -1863,6 +1863,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stat-card-value-compact"), "column-gap: calc(var(--ks-spacing) * 1.5)"
   end
 
+  def test_compact_stat_card_change_and_note_have_no_space_above_them
+    assert_includes block(".ks-stat-card-value-compact > *"), "margin-top: 0px"
+  end
+
   def test_tone_neutral_text_reads_the_text_colour_role
     assert_includes block(".ks-tone-neutral"), "color: var(--ks-color-text)"
   end

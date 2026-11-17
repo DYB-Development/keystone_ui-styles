@@ -1005,6 +1005,10 @@
     @apply mt-0 gap-x-[calc(var(--ks-spacing)*1.5)];
   }
 
+  .ks-stat-card-value-compact > * {
+    @apply mt-0;
+  }
+
   .ks-tone-neutral {
     @apply text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
