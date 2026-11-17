@@ -1847,6 +1847,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?:hover.*?color: var\(--ks-color-link-dark\)/m, block(".ks-stat-card-info"))
   end
 
+  def test_compact_metric_card_padding_is_2_spacing_units
+    assert_includes block(".ks-metric-card-compact"), "padding: calc(var(--ks-spacing) * 2)"
+  end
+
   def test_tone_neutral_text_reads_the_text_colour_role
     assert_includes block(".ks-tone-neutral"), "color: var(--ks-color-text)"
   end

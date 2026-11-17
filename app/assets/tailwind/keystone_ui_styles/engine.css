@@ -997,6 +997,10 @@
     @apply text-(color:--ks-color-close) hover:text-(color:--ks-color-link) dark:hover:text-(color:--ks-color-link-dark);
   }
 
+  .ks-metric-card-compact {
+    @apply p-[calc(var(--ks-spacing)*2)];
+  }
+
   .ks-tone-neutral {
     @apply text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
