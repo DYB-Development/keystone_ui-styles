@@ -1883,6 +1883,13 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stat-card-value-compact > *"), "margin-top: 0px"
   end
 
+  def test_compact_stat_card_lines_lose_the_top_margin_of_the_plain_value_change_and_note
+    compact = [ ".ks-stat-card-value-compact", ".ks-stat-card-value-compact > *" ].map { |selector| position(selector) }
+    plain = [ ".ks-stat-card-value", ".ks-stat-card-change", ".ks-stat-card-note" ].map { |selector| position(selector) }
+
+    assert_operator compact.min, :>, plain.max
+  end
+
   def test_tone_neutral_text_reads_the_text_colour_role
     assert_includes block(".ks-tone-neutral"), "color: var(--ks-color-text)"
   end
