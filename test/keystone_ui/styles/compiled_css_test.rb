@@ -491,6 +491,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-card-warning"), "border-color: var(--ks-color-warning-400)"
   end
 
+  def test_warning_card_border_wins_over_the_card_border
+    assert_operator position(".ks-card-warning"), :>, position(".ks-card")
+  end
+
   def test_warning_card_border_reads_the_warning_700_colour_on_a_dark_operating_system_unless_the_page_is_custom
     assert_match(/prefers-color-scheme: dark.*?\[data-theme="custom"\] \*\).*?border-color: var\(--ks-color-warning-700\)/m, block(".ks-card-warning"))
   end
@@ -5887,6 +5891,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
 
   def block(selector)
     self.class.compiled[/^  #{Regexp.escape(selector)} \{\n(.*?)^  \}\n/m, 1].to_s
+  end
+
+  def position(selector)
+    self.class.compiled.index(/^  #{Regexp.escape(selector)} \{$/)
   end
 
   def rule(selector)
