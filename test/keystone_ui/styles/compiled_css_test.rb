@@ -1847,6 +1847,26 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?:hover.*?color: var\(--ks-color-link-dark\)/m, block(".ks-stat-card-info"))
   end
 
+  def test_compact_metric_card_padding_is_2_spacing_units
+    assert_includes block(".ks-metric-card-compact"), "padding: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_compact_metric_card_radius_reads_the_surface_radius
+    assert_includes block(".ks-metric-card-compact"), "border-radius: var(--ks-radius-surface)"
+  end
+
+  def test_compact_stat_card_value_has_no_space_above_it
+    assert_includes block(".ks-stat-card-value-compact"), "margin-top: 0px"
+  end
+
+  def test_compact_stat_card_value_leaves_1_5_spacing_units_before_its_change_or_note
+    assert_includes block(".ks-stat-card-value-compact"), "column-gap: calc(var(--ks-spacing) * 1.5)"
+  end
+
+  def test_compact_stat_card_change_and_note_have_no_space_above_them
+    assert_includes block(".ks-stat-card-value-compact > *"), "margin-top: 0px"
+  end
+
   def test_tone_neutral_text_reads_the_text_colour_role
     assert_includes block(".ks-tone-neutral"), "color: var(--ks-color-text)"
   end
@@ -5413,6 +5433,26 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
 
   def test_link_caption_leaves_two_spacing_units_under_it
     assert_includes rule(".ks-caption-link"), "margin-bottom: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_normal_case_caption_is_not_drawn_in_capitals
+    assert_includes block(".ks-caption-normal-case"), "text-transform: none"
+  end
+
+  def test_normal_case_caption_spaces_its_letters_normally
+    assert_includes block(".ks-caption-normal-case"), "letter-spacing: var(--tracking-normal)"
+  end
+
+  def test_normal_case_caption_reads_the_normal_font_weight
+    assert_includes block(".ks-caption-normal-case"), "font-weight: var(--ks-font-weight-normal)"
+  end
+
+  def test_normal_case_caption_draws_its_links_in_the_link_colour
+    assert_includes block(".ks-caption-normal-case a"), "color: var(--ks-color-link)"
+  end
+
+  def test_normal_case_caption_draws_its_links_in_the_dark_link_colour_on_a_dark_page
+    assert_match(/data-theme="dark".*?color: var\(--ks-color-link-dark\)/m, block(".ks-caption-normal-case a"))
   end
 
   def test_facts_leave_two_spacing_units_between_facts

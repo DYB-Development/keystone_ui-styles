@@ -521,6 +521,14 @@
     @apply text-(color:--ks-color-link) dark:text-(color:--ks-color-link-dark) mb-[calc(var(--ks-spacing)*2)];
   }
 
+  .ks-caption-normal-case {
+    @apply normal-case tracking-normal font-(weight:--ks-font-weight-normal);
+  }
+
+  .ks-caption-normal-case a {
+    @apply text-(color:--ks-color-link) dark:text-(color:--ks-color-link-dark);
+  }
+
   .ks-facts {
     @apply gap-[calc(var(--ks-spacing)*2)] mb-[calc(var(--ks-spacing)*8)];
   }
@@ -995,6 +1003,18 @@
 
   .ks-stat-card-info {
     @apply text-(color:--ks-color-close) hover:text-(color:--ks-color-link) dark:hover:text-(color:--ks-color-link-dark);
+  }
+
+  .ks-metric-card-compact {
+    @apply rounded-(--ks-radius-surface) p-[calc(var(--ks-spacing)*2)];
+  }
+
+  .ks-stat-card-value-compact {
+    @apply mt-0 gap-x-[calc(var(--ks-spacing)*1.5)];
+  }
+
+  .ks-stat-card-value-compact > * {
+    @apply mt-0;
   }
 
   .ks-tone-neutral {
