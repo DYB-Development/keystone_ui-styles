@@ -5161,6 +5161,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-value-list-row + .ks-value-list-row"))
   end
 
+  def test_current_value_list_row_draws_no_divider_of_its_own_across_its_wider_width
+    assert_includes block(".ks-value-list-row + .ks-value-list-row.ks-value-list-row-current"), "border-top-width: 0"
+  end
+
   def test_current_value_list_row_fills_the_whole_row_with_the_accent_tint
     assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "background-color: var(--ks-color-tint)"
   end

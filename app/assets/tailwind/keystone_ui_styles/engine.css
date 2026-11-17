@@ -554,6 +554,10 @@
     @apply bg-(color:--ks-color-tint) mx-[calc(var(--ks-value-list-reach)*-1)] pr-(--ks-value-list-reach) pl-[calc(var(--ks-value-list-reach)-var(--ks-border-width-current))] border-l-(length:--ks-border-width-current) border-l-(color:--ks-color-accent) dark:border-l-(color:--ks-color-accent-dark);
   }
 
+  .ks-value-list-row + .ks-value-list-row.ks-value-list-row-current {
+    @apply border-t-0;
+  }
+
   .ks-value-list-label {
     @apply shrink-0 basis-2/5 text-(color:--ks-color-text-secondary) dark:text-(color:--ks-color-text-secondary-dark);
   }
