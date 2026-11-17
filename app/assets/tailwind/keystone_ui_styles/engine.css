@@ -521,6 +521,10 @@
     @apply text-(color:--ks-color-link) dark:text-(color:--ks-color-link-dark) mb-[calc(var(--ks-spacing)*2)];
   }
 
+  .ks-caption-normal-case {
+    @apply normal-case;
+  }
+
   .ks-facts {
     @apply gap-[calc(var(--ks-spacing)*2)] mb-[calc(var(--ks-spacing)*8)];
   }
