@@ -525,6 +525,10 @@
     @apply normal-case tracking-normal font-(weight:--ks-font-weight-normal);
   }
 
+  .ks-caption-normal-case a {
+    @apply text-(color:--ks-color-link);
+  }
+
   .ks-facts {
     @apply gap-[calc(var(--ks-spacing)*2)] mb-[calc(var(--ks-spacing)*8)];
   }
