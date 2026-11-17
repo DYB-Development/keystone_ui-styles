@@ -558,6 +558,10 @@
     @apply border-t-0;
   }
 
+  .ks-value-list-row:has(+ .ks-value-list-row.ks-value-list-row-current) {
+    @apply border-b-(length:--ks-border-width);
+  }
+
   .ks-value-list-label {
     @apply shrink-0 basis-2/5 text-(color:--ks-color-text-secondary) dark:text-(color:--ks-color-text-secondary-dark);
   }
