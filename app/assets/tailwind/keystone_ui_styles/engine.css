@@ -522,7 +522,7 @@
   }
 
   .ks-caption-normal-case {
-    @apply normal-case tracking-normal;
+    @apply normal-case tracking-normal font-(weight:--ks-font-weight-normal);
   }
 
   .ks-facts {
