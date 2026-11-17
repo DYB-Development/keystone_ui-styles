@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [0.42.0] - 2026-11-17
+
+### Added
+- `ks-metric-card-compact`, beside `ks-metric-card`, pads a compact stat card by 2 spacing units and rounds its corners at the surface radius.
+- `ks-stat-card-value-compact`, beside `ks-stat-card-value`, sets a compact stat card's value straight under its label, leaves 1.5 spacing units before the change or note beside it, and keeps that change or note level with the value.
+- `ks-caption-normal-case`, beside `ks-caption`, draws a small muted line in the case it was written, with letters spaced normally, in the normal weight, and its links in the link colour.
+
 ## [0.41.0] - 2026-11-16
 
 ### Changed

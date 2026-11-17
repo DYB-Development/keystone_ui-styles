@@ -222,6 +222,7 @@ warning 400, and 700 on a dark page.
 | `ks-heading-row`, `ks-heading-note` | A heading with a short note at the right end of its row |
 | `ks-caption` | Small uppercase text placed above a title or figure |
 | `ks-caption-link` | Beside `ks-caption`, a caption in the link colour with space under it, such as the label above a quiz question |
+| `ks-caption-normal-case` | Beside `ks-caption`, a small muted line in the case it was written, with letters spaced normally, in the normal weight, and its links in the link colour |
 | `ks-link` | A text link in the link colour |
 | `ks-text-button` | A button drawn as small, underlined, muted text |
 | `ks-fact`, `ks-facts` | A fact drawn as a small bordered box, and the row of facts holding it |
@@ -260,6 +261,8 @@ warning 400, and 700 on a dark page.
 | `ks-file-upload`, `ks-file-upload-drop-zone`, `ks-file-upload-drop-zone-active`, `ks-file-upload-inner`, `ks-file-upload-icon`, `ks-file-upload-prompt`, `ks-file-upload-browse`, `ks-file-upload-hint`, `ks-file-upload-file-name` | File upload and its parts |
 | `ks-color-swatch`, `ks-color-picker-panel` | Colour picker swatch and its panel |
 | `ks-metric-card` | Stat card and chart card |
+| `ks-metric-card-compact` | Beside `ks-metric-card`, a compact stat card padded by 2 spacing units with corners at the surface radius |
+| `ks-stat-card-value-compact` | Beside `ks-stat-card-value`, a compact stat card's value row, straight under its label, leaving 1.5 spacing units before the change or note beside the value, which sit level with it |
 | `ks-stat-card-header`, `ks-stat-card-label`, `ks-stat-card-value`, `ks-stat-card-suffix`, `ks-stat-card-disclosure`, `ks-stat-card-emphasis`, `ks-stat-card-change`, `ks-stat-card-info` | Stat card parts |
 | `ks-tone-neutral`, `ks-tone-muted`, `ks-tone-success`, `ks-tone-danger`, `ks-tone-warning`, `ks-tone-info` | Stat card value and change colour |
 | `ks-chart-card-title` | Chart card title |
