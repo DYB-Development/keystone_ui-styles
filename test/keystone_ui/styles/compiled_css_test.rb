@@ -1855,6 +1855,10 @@ def test_compact_metric_card_radius_reads_the_surface_radius
   assert_includes block(".ks-metric-card-compact"), "border-radius: var(--ks-radius-surface)"
 end
 
+def test_compact_stat_card_value_has_no_space_above_it
+  assert_includes block(".ks-stat-card-value-compact"), "margin-top: 0px"
+end
+
   def test_tone_neutral_text_reads_the_text_colour_role
     assert_includes block(".ks-tone-neutral"), "color: var(--ks-color-text)"
   end

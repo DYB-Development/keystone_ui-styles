@@ -1001,6 +1001,10 @@
     @apply rounded-(--ks-radius-surface) p-[calc(var(--ks-spacing)*2)];
   }
 
+  .ks-stat-card-value-compact {
+    @apply mt-0;
+  }
+
   .ks-tone-neutral {
     @apply text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
