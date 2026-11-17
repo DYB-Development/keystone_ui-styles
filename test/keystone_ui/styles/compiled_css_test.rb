@@ -5478,6 +5478,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes rule(".ks-caption-link"), "margin-bottom: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_normal_case_caption_wins_over_the_caption
+    assert_operator position(".ks-caption-normal-case"), :>, position(".ks-caption")
+  end
+
   def test_normal_case_caption_is_not_drawn_in_capitals
     assert_includes block(".ks-caption-normal-case"), "text-transform: none"
   end
