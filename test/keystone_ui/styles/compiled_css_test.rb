@@ -5439,6 +5439,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-caption-normal-case"), "text-transform: none"
   end
 
+  def test_normal_case_caption_spaces_its_letters_normally
+    assert_includes block(".ks-caption-normal-case"), "letter-spacing: var(--tracking-normal)"
+  end
+
   def test_facts_leave_two_spacing_units_between_facts
     assert_includes rule(".ks-facts"), "gap: calc(var(--ks-spacing) * 2)"
   end
