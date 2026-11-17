@@ -1867,6 +1867,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-metric-card-compact"), "border-radius: var(--ks-radius-surface)"
   end
 
+  def test_compact_metric_card_padding_and_radius_win_over_the_metric_card
+    assert_operator position(".ks-metric-card-compact"), :>, position(".ks-metric-card")
+  end
+
   def test_compact_stat_card_value_has_no_space_above_it
     assert_includes block(".ks-stat-card-value-compact"), "margin-top: 0px"
   end
