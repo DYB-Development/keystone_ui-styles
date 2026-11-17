@@ -559,7 +559,7 @@
   }
 
   .ks-value-list-row:has(+ .ks-value-list-row.ks-value-list-row-current) {
-    @apply border-b-(length:--ks-border-width);
+    @apply border-b-(length:--ks-border-width) border-b-(color:--ks-color-border);
   }
 
   .ks-value-list-label {
