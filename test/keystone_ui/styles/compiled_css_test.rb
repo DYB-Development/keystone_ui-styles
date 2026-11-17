@@ -5738,6 +5738,12 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_operator light_contrast(".ks-diff-added"), :>=, 4.5
   end
 
+  def test_diff_contrast_check_refuses_a_colour_that_is_neither_a_hex_code_nor_oklch
+    error = assert_raises(ArgumentError) { luminance("rgb(0 0 0)") }
+
+    assert_match(/rgb\(0 0 0\)/, error.message)
+  end
+
   def test_removed_diff_line_text_reads_the_dark_code_text_on_a_dark_page
     assert_match(/data-theme="dark".*?\n\s*color: var\(--ks-color-text-code-dark\)/m, block(".ks-diff-removed"))
   end
@@ -5931,8 +5937,15 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def luminance(colour)
-    red, green, blue = colour.start_with?("#") ? hex_to_linear(colour) : oklch_to_linear(colour)
+    red, green, blue = linear_channels(colour)
     (0.2126 * red) + (0.7152 * green) + (0.0722 * blue)
+  end
+
+  def linear_channels(colour)
+    return hex_to_linear(colour) if colour.start_with?("#")
+    return oklch_to_linear(colour) if colour.start_with?("oklch(")
+
+    raise ArgumentError, "The contrast check reads only hex codes and oklch() values, not #{colour}"
   end
 
   def hex_to_linear(hex)
