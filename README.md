@@ -85,6 +85,7 @@ any layer overrides them wherever it is imported.
 | `--ks-color-text-muted` | Hints, subtitles and card summaries | `--color-surface-500` |
 | `--ks-border-width` | Border and ring width of menus, dialogs, form controls and cards, doubled for radio and option cards and the file drop zone | `1px` |
 | `--ks-border-width-current` | Width of the accent bar on a current link list row's left edge | `3px` |
+| `--ks-value-list-reach` | How far a current link list row reaches past the other rows on each side, and the padding it leaves back so its text stays in line with theirs; `ks-card-body` sets it to its own side padding | 4 spacing units |
 | `--ks-shadow-overlay` | Menu, dialog and colour picker shadow | `--shadow-lg` |
 | `--ks-font-weight-medium` | Copy button, checkbox row and radio card label weight | `--font-weight-medium` |
 | `--ks-color-overlay` | Dialog, action menu, copy button and colour picker background | `--color-white` |
@@ -228,7 +229,7 @@ warning 400, and 700 on a dark page.
 | `ks-fact`, `ks-facts` | A fact drawn as a small bordered box, and the row of facts holding it |
 | `ks-paragraph` | Running text |
 | `ks-value-list-row` | One row of a label and its value, with a line between rows |
-| `ks-value-list-row-current` | On a `ks-value-list-row`, marks the current row of a link list with the accent tint across the row and an accent bar on its left edge, and reaches 16px past the other rows on each side with 16px of padding back so its text stays in line with theirs |
+| `ks-value-list-row-current` | On a `ks-value-list-row`, marks the current row of a link list with the accent tint across the row and an accent bar on its left edge, and reaches `--ks-value-list-reach` past the other rows on each side with the same padding back so its text stays in line with theirs, while the line above it stays as wide as the other rows' lines |
 | `ks-value-list-label`, `ks-value-list-note`, `ks-value-list-value` | A row's label, the short note under it, and its value |
 | `ks-value-list-end` | On the list, pushes each value to the right end of its row |
 | `ks-value-list-total` | A row drawn with more weight, for a total |

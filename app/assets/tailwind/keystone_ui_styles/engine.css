@@ -149,6 +149,7 @@
     --ks-color-info-900: var(--color-accent-900);
     --ks-border-width: 1px;
     --ks-border-width-current: 3px;
+    --ks-value-list-reach: calc(var(--ks-spacing) * 4);
     --ks-shadow-overlay: var(--shadow-lg);
     --ks-font-weight-medium: var(--font-weight-medium);
     --ks-color-backdrop: color-mix(in oklab, var(--color-black) 60%, transparent);
@@ -550,7 +551,15 @@
   }
 
   .ks-value-list-row.ks-value-list-row-current {
-    @apply bg-(color:--ks-color-tint) mx-[calc(var(--ks-spacing)*-4)] pr-[calc(var(--ks-spacing)*4)] pl-[calc(var(--ks-spacing)*4-var(--ks-border-width-current))] border-l-(length:--ks-border-width-current) border-l-(color:--ks-color-accent) dark:border-l-(color:--ks-color-accent-dark);
+    @apply bg-(color:--ks-color-tint) mx-[calc(var(--ks-value-list-reach)*-1)] pr-(--ks-value-list-reach) pl-[calc(var(--ks-value-list-reach)-var(--ks-border-width-current))] border-l-(length:--ks-border-width-current) border-l-(color:--ks-color-accent) dark:border-l-(color:--ks-color-accent-dark);
+  }
+
+  .ks-value-list-row + .ks-value-list-row.ks-value-list-row-current {
+    @apply border-t-0;
+  }
+
+  .ks-value-list-row:has(+ .ks-value-list-row.ks-value-list-row-current) {
+    @apply border-b-(length:--ks-border-width) border-b-(color:--ks-color-border) dark:border-b-(color:--ks-color-border-dark);
   }
 
   .ks-value-list-label {
@@ -638,7 +647,7 @@
   }
 
   .ks-card-body {
-    @apply px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*4)] sm:px-[calc(var(--ks-spacing)*6)] sm:pt-[calc(var(--ks-spacing)*6)] sm:pb-[calc(var(--ks-spacing)*4)];
+    @apply px-[calc(var(--ks-spacing)*4)] py-[calc(var(--ks-spacing)*4)] sm:px-[calc(var(--ks-spacing)*6)] sm:pt-[calc(var(--ks-spacing)*6)] sm:pb-[calc(var(--ks-spacing)*4)] [--ks-value-list-reach:calc(var(--ks-spacing)*4)] sm:[--ks-value-list-reach:calc(var(--ks-spacing)*6)];
   }
 
   .ks-card-title {

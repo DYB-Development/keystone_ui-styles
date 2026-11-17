@@ -491,6 +491,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-card-warning"), "border-color: var(--ks-color-warning-400)"
   end
 
+  def test_warning_card_border_wins_over_the_card_border
+    assert_operator position(".ks-card-warning"), :>, position(".ks-card")
+  end
+
   def test_warning_card_border_reads_the_warning_700_colour_on_a_dark_operating_system_unless_the_page_is_custom
     assert_match(/prefers-color-scheme: dark.*?\[data-theme="custom"\] \*\).*?border-color: var\(--ks-color-warning-700\)/m, block(".ks-card-warning"))
   end
@@ -661,6 +665,14 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
 
   def test_card_body_px_sm_reads_the_spacing_variable
     assert_match(/width >= 40rem.*?padding-inline: calc\(var\(--ks-spacing\) \* 6\)/m, block(".ks-card-body"))
+  end
+
+  def test_card_body_sets_the_value_list_reach_to_its_side_padding_below_the_small_breakpoint
+    assert_match(/\A[^@]*--ks-value-list-reach: calc\(var\(--ks-spacing\) \* 4\)/, block(".ks-card-body"))
+  end
+
+  def test_card_body_sets_the_value_list_reach_to_its_side_padding_from_the_small_breakpoint
+    assert_match(/width >= 40rem.*?--ks-value-list-reach: calc\(var\(--ks-spacing\) \* 6\)/m, block(".ks-card-body"))
   end
 
   def test_card_body_pt_sm_reads_the_spacing_variable
@@ -1855,6 +1867,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-metric-card-compact"), "border-radius: var(--ks-radius-surface)"
   end
 
+  def test_compact_metric_card_padding_and_radius_win_over_the_metric_card
+    assert_operator position(".ks-metric-card-compact"), :>, position(".ks-metric-card")
+  end
+
   def test_compact_stat_card_value_has_no_space_above_it
     assert_includes block(".ks-stat-card-value-compact"), "margin-top: 0px"
   end
@@ -1865,6 +1881,13 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
 
   def test_compact_stat_card_change_and_note_have_no_space_above_them
     assert_includes block(".ks-stat-card-value-compact > *"), "margin-top: 0px"
+  end
+
+  def test_compact_stat_card_lines_lose_the_top_margin_of_the_plain_value_change_and_note
+    compact = [ ".ks-stat-card-value-compact", ".ks-stat-card-value-compact > *" ].map { |selector| position(selector) }
+    plain = [ ".ks-stat-card-value", ".ks-stat-card-change", ".ks-stat-card-note" ].map { |selector| position(selector) }
+
+    assert_operator compact.min, :>, plain.max
   end
 
   def test_tone_neutral_text_reads_the_text_colour_role
@@ -5153,6 +5176,22 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/data-theme="dark".*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-value-list-row + .ks-value-list-row"))
   end
 
+  def test_current_value_list_row_draws_no_divider_of_its_own_across_its_wider_width
+    assert_includes block(".ks-value-list-row + .ks-value-list-row.ks-value-list-row-current"), "border-top-width: 0"
+  end
+
+  def test_row_before_the_current_value_list_row_draws_the_divider_at_its_own_width
+    assert_includes block(".ks-value-list-row:has(+ .ks-value-list-row.ks-value-list-row-current)"), "border-bottom-width: var(--ks-border-width)"
+  end
+
+  def test_divider_above_the_current_value_list_row_reads_the_border_colour_role
+    assert_includes block(".ks-value-list-row:has(+ .ks-value-list-row.ks-value-list-row-current)"), "border-bottom-color: var(--ks-color-border)"
+  end
+
+  def test_divider_above_the_current_value_list_row_turns_dark_when_the_page_chooses_dark
+    assert_match(/data-theme="dark".*?border-bottom-color: var\(--ks-color-border-dark\)/m, block(".ks-value-list-row:has(+ .ks-value-list-row.ks-value-list-row-current)"))
+  end
+
   def test_current_value_list_row_fills_the_whole_row_with_the_accent_tint
     assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "background-color: var(--ks-color-tint)"
   end
@@ -5174,15 +5213,19 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_current_value_list_row_leaves_space_between_its_bar_and_its_text
-    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "padding-left: calc(var(--ks-spacing) * 4 - var(--ks-border-width-current))"
+    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "padding-left: calc(var(--ks-value-list-reach) - var(--ks-border-width-current))"
   end
 
-  def test_current_value_list_row_reaches_out_past_the_other_rows_by_its_side_padding
-    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "margin-inline: calc(var(--ks-spacing) * -4)"
+  def test_value_list_reach_defaults_to_four_spacing_units
+    assert_match(/@layer base \{.*?:root \{.*?--ks-value-list-reach: calc\(var\(--ks-spacing\) \* 4\);/m, self.class.compiled)
+  end
+
+  def test_current_value_list_row_reaches_out_past_the_other_rows_by_the_value_list_reach
+    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "margin-inline: calc(var(--ks-value-list-reach) * -1)"
   end
 
   def test_current_value_list_row_leaves_space_after_its_text_on_the_right
-    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "padding-right: calc(var(--ks-spacing) * 4)"
+    assert_includes block(".ks-value-list-row.ks-value-list-row-current"), "padding-right: var(--ks-value-list-reach)"
   end
 
   def test_value_list_label_takes_two_fifths_of_the_row
@@ -5433,6 +5476,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
 
   def test_link_caption_leaves_two_spacing_units_under_it
     assert_includes rule(".ks-caption-link"), "margin-bottom: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_normal_case_caption_wins_over_the_caption
+    assert_operator position(".ks-caption-normal-case"), :>, position(".ks-caption")
   end
 
   def test_normal_case_caption_is_not_drawn_in_capitals
@@ -5691,6 +5738,12 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_operator light_contrast(".ks-diff-added"), :>=, 4.5
   end
 
+  def test_diff_contrast_check_refuses_a_colour_that_is_neither_a_hex_code_nor_oklch
+    error = assert_raises(ArgumentError) { luminance("rgb(0 0 0)") }
+
+    assert_match(/rgb\(0 0 0\)/, error.message)
+  end
+
   def test_removed_diff_line_text_reads_the_dark_code_text_on_a_dark_page
     assert_match(/data-theme="dark".*?\n\s*color: var\(--ks-color-text-code-dark\)/m, block(".ks-diff-removed"))
   end
@@ -5816,7 +5869,9 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def test_underlined_tab_has_square_bottom_corners
-    assert_includes block(".ks-tab-bar-underline .ks-tab"), "border-bottom-right-radius: 0"
+    square_corners = block(".ks-tab-bar-underline .ks-tab").scan(/border-bottom-(left|right)-radius: 0;/).flatten
+
+    assert_equal %w[left right], square_corners.sort
   end
 
   def test_selected_underlined_tab_draws_its_underline_at_twice_the_border_width
@@ -5861,6 +5916,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     self.class.compiled[/^  #{Regexp.escape(selector)} \{\n(.*?)^  \}\n/m, 1].to_s
   end
 
+  def position(selector)
+    self.class.compiled.index(/^  #{Regexp.escape(selector)} \{$/)
+  end
+
   def rule(selector)
     self.class.compiled[/^\s*#{Regexp.escape(selector)}\s*\{(.*?)\}/m, 1].to_s
   end
@@ -5878,8 +5937,15 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   end
 
   def luminance(colour)
-    red, green, blue = colour.start_with?("#") ? hex_to_linear(colour) : oklch_to_linear(colour)
+    red, green, blue = linear_channels(colour)
     (0.2126 * red) + (0.7152 * green) + (0.0722 * blue)
+  end
+
+  def linear_channels(colour)
+    return hex_to_linear(colour) if colour.start_with?("#")
+    return oklch_to_linear(colour) if colour.start_with?("oklch(")
+
+    raise ArgumentError, "The contrast check reads only hex codes and oklch() values, not #{colour}"
   end
 
   def hex_to_linear(hex)

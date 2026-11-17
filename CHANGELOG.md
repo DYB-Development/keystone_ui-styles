@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## [0.43.0] - 2026-11-17
+
+### Added
+- `--ks-value-list-reach` sets how far `ks-value-list-row-current` reaches past the other rows on each side, defaults to 4 spacing units, and is set by `ks-card-body` to its own side padding at each width.
+
+### Fixed
+- `ks-value-list-row-current` inside `ks-card-body` reaches the card's edges from the small breakpoint up, where it stopped 2 spacing units short.
+- The line above `ks-value-list-row-current` is as wide as the lines between the other rows, where it was 8 spacing units wider.
+
 ## [0.42.0] - 2026-11-17
 
 ### Added
