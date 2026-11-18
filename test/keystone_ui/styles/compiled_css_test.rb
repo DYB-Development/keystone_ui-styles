@@ -5975,6 +5975,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-chip"), "flex: 1"
   end
 
+  def test_chip_can_shrink_below_its_text_width_so_a_row_never_overflows
+    assert_includes block(".ks-chip"), "min-width: 0px"
+  end
+
   private
 
   def block(selector)
