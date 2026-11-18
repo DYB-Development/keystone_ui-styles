@@ -224,6 +224,7 @@ warning 400, and 700 on a dark page.
 | `ks-caption` | Small uppercase text placed above a title or figure |
 | `ks-caption-link` | Beside `ks-caption`, a caption in the link colour with space under it, such as the label above a quiz question |
 | `ks-caption-normal-case` | Beside `ks-caption`, a small muted line in the case it was written, with letters spaced normally, in the normal weight, and its links in the link colour |
+| `ks-label-caps` | The look of `ks-caption` put on another component's label, such as a stat card label, a table column heading, a value list label or a link list row's type, and it overrides that label's own size, weight and colour |
 | `ks-link` | A text link in the link colour |
 | `ks-text-button` | A button drawn as small, underlined, muted text |
 | `ks-fact`, `ks-facts` | A fact drawn as a small bordered box, and the row of facts holding it |
@@ -248,6 +249,9 @@ warning 400, and 700 on a dark page.
 | `ks-alert-body`, `ks-alert-content`, `ks-alert-title`, `ks-alert-message`, `ks-alert-message-titled`, `ks-alert-dismiss` | Alert parts |
 | `ks-badge` | Every badge |
 | `ks-badge-neutral`, `ks-badge-success`, `ks-badge-danger`, `ks-badge-warning`, `ks-badge-info` | Badge color |
+| `ks-chip-row` | A row of chips laid side by side with 2 spacing units between them |
+| `ks-chip` | A summary chip: centred extra small text in a box rounded at the control radius, taking an equal share of its row and breaking a long word rather than running past the screen |
+| `ks-chip-neutral`, `ks-chip-success`, `ks-chip-danger`, `ks-chip-warning`, `ks-chip-info` | Chip tone, drawn in the tinted background and text colours of the badge of that tone |
 | `ks-status-dot` | A small round mark showing an item's state |
 | `ks-status-dot-neutral`, `ks-status-dot-success`, `ks-status-dot-danger`, `ks-status-dot-warning`, `ks-status-dot-info` | Status dot colour, the same as the text of the badge of that state |
 | `ks-modal-backdrop`, `ks-modal-panel`, `ks-modal-header`, `ks-modal-title`, `ks-modal-close` | Dialog and its parts |
