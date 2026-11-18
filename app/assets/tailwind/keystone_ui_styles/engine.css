@@ -1756,6 +1756,10 @@
   .ks-page-title {
     @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
+
+  .ks-label-caps {
+    @apply text-xs font-(weight:--ks-font-weight-strong) uppercase tracking-wider text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+  }
 }
 
 @media (max-width: 1023px) {

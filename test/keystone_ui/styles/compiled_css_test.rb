@@ -5910,6 +5910,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-count"), "font-weight: var(--ks-font-weight-normal)"
   end
 
+  def test_label_caps_draws_the_same_look_as_the_caption
+    assert_equal block(".ks-caption"), block(".ks-label-caps")
+  end
+
   private
 
   def block(selector)
