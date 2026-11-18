@@ -747,7 +747,7 @@
   }
 
   .ks-chip {
-    @apply rounded-(--ks-radius-control) px-[calc(var(--ks-spacing)*2.5)] py-[calc(var(--ks-spacing)*2)] text-center text-xs font-(weight:--ks-font-weight-medium);
+    @apply flex-1 rounded-(--ks-radius-control) px-[calc(var(--ks-spacing)*2.5)] py-[calc(var(--ks-spacing)*2)] text-center text-xs font-(weight:--ks-font-weight-medium);
   }
 
   .ks-chip-success {

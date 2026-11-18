@@ -5971,6 +5971,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-chip-row"), "gap: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_chip_takes_an_equal_share_of_its_row_whatever_its_text
+    assert_includes block(".ks-chip"), "flex: 1"
+  end
+
   private
 
   def block(selector)
