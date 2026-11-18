@@ -750,6 +750,10 @@
     @apply bg-(color:--ks-color-success-100) text-(color:--ks-color-success-700) dark:bg-(color:--ks-color-success-900)/50 dark:text-(color:--ks-color-success-400);
   }
 
+  .ks-chip-warning {
+    @apply bg-(color:--ks-color-warning-100) text-(color:--ks-color-warning-700) dark:bg-(color:--ks-color-warning-900)/50 dark:text-(color:--ks-color-warning-400);
+  }
+
   .ks-status-dot {
     @apply inline-block size-2 shrink-0 rounded-(--ks-radius-pill);
   }

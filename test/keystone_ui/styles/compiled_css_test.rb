@@ -5947,6 +5947,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_equal block(".ks-badge-success"), block(".ks-chip-success")
   end
 
+  def test_chip_warning_tone_reads_the_same_colours_as_the_warning_badge
+    assert_equal block(".ks-badge-warning"), block(".ks-chip-warning")
+  end
+
   private
 
   def block(selector)
