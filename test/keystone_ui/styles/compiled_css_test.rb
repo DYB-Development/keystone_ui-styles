@@ -5979,6 +5979,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-chip"), "min-width: 0px"
   end
 
+  def test_chip_breaks_a_long_word_onto_a_new_line_instead_of_widening
+    assert_includes block(".ks-chip"), "overflow-wrap: anywhere"
+  end
+
   private
 
   def block(selector)
