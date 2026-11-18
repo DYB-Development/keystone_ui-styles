@@ -743,7 +743,7 @@
   }
 
   .ks-chip-row {
-    @apply flex;
+    @apply flex gap-[calc(var(--ks-spacing)*2)];
   }
 
   .ks-chip {
