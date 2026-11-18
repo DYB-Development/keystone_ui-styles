@@ -2506,6 +2506,20 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_operator phone_list_cell, :>, first_cells.max
   end
 
+  def test_table_compact_padding_inline_is_2_5_spacing_units
+    assert_includes block(".ks-table-compact"), "padding-inline: calc(var(--ks-spacing) * 2.5)"
+  end
+
+  def test_table_compact_padding_block_is_2_spacing_units
+    assert_includes block(".ks-table-compact"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_table_compact_padding_wins_over_the_first_middle_and_last_cells_and_headers_padding
+    cells = [ ".ks-table-header-first", ".ks-table-header-middle", ".ks-table-header-last", ".ks-table-cell-first", ".ks-table-cell-middle", ".ks-table-cell-last" ]
+
+    assert_operator position(".ks-table-compact"), :>, cells.map { |selector| position(selector) }.max
+  end
+
   def test_table_sort_link_gap_is_1_spacing_units
     assert_includes block(".ks-table-sort-link"), "gap: calc(var(--ks-spacing) * 1)"
   end

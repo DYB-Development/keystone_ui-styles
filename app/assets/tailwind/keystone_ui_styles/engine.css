@@ -1250,6 +1250,10 @@
     @apply py-[calc(var(--ks-spacing)*4)] pr-[calc(var(--ks-spacing)*6)] pl-[calc(var(--ks-spacing)*3)] font-(weight:--ks-font-weight-medium);
   }
 
+  .ks-table-compact {
+    @apply px-[calc(var(--ks-spacing)*2.5)] py-[calc(var(--ks-spacing)*2)];
+  }
+
   .ks-table-phone-list-cell {
     @apply max-sm:pl-[calc(var(--ks-spacing)*3)];
   }

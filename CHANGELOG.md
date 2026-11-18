@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.45.0] - 2026-11-18
+
+### Added
+- `ks-table-compact` gives a table cell or header 2.5 spacing units of padding on each side and 2 above and below, and comes after the first, middle and last cell and header classes so its padding wins over theirs.
+
 ## [0.44.0] - 2026-11-18
 
 ### Added
