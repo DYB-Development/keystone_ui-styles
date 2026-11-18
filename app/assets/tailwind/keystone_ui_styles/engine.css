@@ -746,6 +746,10 @@
     @apply rounded-(--ks-radius-control) px-[calc(var(--ks-spacing)*2.5)] py-[calc(var(--ks-spacing)*2)] text-center text-xs font-(weight:--ks-font-weight-medium);
   }
 
+  .ks-chip-success {
+    @apply bg-(color:--ks-color-success-100) text-(color:--ks-color-success-700) dark:bg-(color:--ks-color-success-900)/50 dark:text-(color:--ks-color-success-400);
+  }
+
   .ks-status-dot {
     @apply inline-block size-2 shrink-0 rounded-(--ks-radius-pill);
   }

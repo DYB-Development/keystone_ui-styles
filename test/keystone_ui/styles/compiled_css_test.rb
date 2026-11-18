@@ -5943,6 +5943,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-chip"), "font-weight: var(--ks-font-weight-medium)"
   end
 
+  def test_chip_success_tone_reads_the_same_colours_as_the_success_badge
+    assert_equal block(".ks-badge-success"), block(".ks-chip-success")
+  end
+
   private
 
   def block(selector)
