@@ -5963,6 +5963,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_equal block(".ks-badge-neutral"), block(".ks-chip-neutral")
   end
 
+  def test_chip_row_lays_its_chips_side_by_side
+    assert_includes block(".ks-chip-row"), "display: flex"
+  end
+
   private
 
   def block(selector)
