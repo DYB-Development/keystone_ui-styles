@@ -5919,6 +5919,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_operator position(".ks-label-caps"), :>, others.map { |selector| position(selector) }.max
   end
 
+  def test_chip_centres_its_text
+    assert_includes block(".ks-chip"), "text-align: center"
+  end
+
   private
 
   def block(selector)
