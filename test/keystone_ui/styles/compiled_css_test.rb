@@ -5914,6 +5914,11 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_equal block(".ks-caption"), block(".ks-label-caps")
   end
 
+  def test_label_caps_comes_after_every_other_ks_class_so_it_overrides_a_label_it_is_put_on
+    others = self.class.compiled.scan(/^  (\.ks-[^\s{]+) \{$/).flatten.uniq - [ ".ks-label-caps" ]
+    assert_operator position(".ks-label-caps"), :>, others.map { |selector| position(selector) }.max
+  end
+
   private
 
   def block(selector)
