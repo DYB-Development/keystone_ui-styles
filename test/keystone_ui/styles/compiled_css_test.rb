@@ -5927,6 +5927,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-chip"), "border-radius: var(--ks-radius-control)"
   end
 
+  def test_chip_padding_inline_is_2_5_spacing_units
+    assert_includes block(".ks-chip"), "padding-inline: calc(var(--ks-spacing) * 2.5)"
+  end
+
   private
 
   def block(selector)
