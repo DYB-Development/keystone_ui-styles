@@ -342,10 +342,6 @@
 }
 
 @layer components {
-  .ks-table-compact {
-    @apply px-[calc(var(--ks-spacing)*2.5)] py-[calc(var(--ks-spacing)*2)];
-  }
-
   .ks-button {
     @apply inline-flex items-center justify-center font-(family-name:--ks-font-body) font-(weight:--ks-font-weight-strong) rounded-(--ks-radius-control) border-(length:--ks-border-width-control) cursor-pointer no-underline;
   }
@@ -1252,6 +1248,10 @@
 
   .ks-table-cell-last {
     @apply py-[calc(var(--ks-spacing)*4)] pr-[calc(var(--ks-spacing)*6)] pl-[calc(var(--ks-spacing)*3)] font-(weight:--ks-font-weight-medium);
+  }
+
+  .ks-table-compact {
+    @apply px-[calc(var(--ks-spacing)*2.5)] py-[calc(var(--ks-spacing)*2)];
   }
 
   .ks-table-phone-list-cell {
