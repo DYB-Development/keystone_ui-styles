@@ -5935,6 +5935,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-chip"), "padding-block: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_chip_is_extra_small_text
+    assert_includes block(".ks-chip"), "font-size: var(--text-xs)"
+  end
+
   private
 
   def block(selector)
