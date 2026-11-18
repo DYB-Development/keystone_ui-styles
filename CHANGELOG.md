@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [0.44.0] - 2026-11-18
+
+### Added
+- `ks-label-caps` draws the small-capitals look of `ks-caption` on another component's label, and comes after every other class so it overrides that label's own size, weight and colour.
+- `ks-chip-row` lays chips side by side with 2 spacing units between them.
+- `ks-chip` draws a summary chip with centred extra small text, corners rounded at the control radius and an equal share of its row, and breaks a long word rather than running past the screen.
+- `ks-chip-neutral`, `ks-chip-success`, `ks-chip-danger`, `ks-chip-warning` and `ks-chip-info` give a chip the tinted background and text colours of the badge of that tone, in light and dark mode.
+
 ## [0.43.0] - 2026-11-17
 
 ### Added

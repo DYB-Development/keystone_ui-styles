@@ -5910,6 +5910,79 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-count"), "font-weight: var(--ks-font-weight-normal)"
   end
 
+  def test_label_caps_draws_the_same_look_as_the_caption
+    assert_equal block(".ks-caption"), block(".ks-label-caps")
+  end
+
+  def test_label_caps_comes_after_every_other_ks_class_so_it_overrides_a_label_it_is_put_on
+    others = self.class.compiled.scan(/^  (\.ks-[^\s{]+) \{$/).flatten.uniq - [ ".ks-label-caps" ]
+    assert_operator position(".ks-label-caps"), :>, others.map { |selector| position(selector) }.max
+  end
+
+  def test_chip_centres_its_text
+    assert_includes block(".ks-chip"), "text-align: center"
+  end
+
+  def test_chip_rounds_its_corners_at_the_control_radius
+    assert_includes block(".ks-chip"), "border-radius: var(--ks-radius-control)"
+  end
+
+  def test_chip_padding_inline_is_2_5_spacing_units
+    assert_includes block(".ks-chip"), "padding-inline: calc(var(--ks-spacing) * 2.5)"
+  end
+
+  def test_chip_padding_block_is_2_spacing_units
+    assert_includes block(".ks-chip"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_chip_is_extra_small_text
+    assert_includes block(".ks-chip"), "font-size: var(--text-xs)"
+  end
+
+  def test_chip_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-chip"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
+  def test_chip_success_tone_reads_the_same_colours_as_the_success_badge
+    assert_equal block(".ks-badge-success"), block(".ks-chip-success")
+  end
+
+  def test_chip_warning_tone_reads_the_same_colours_as_the_warning_badge
+    assert_equal block(".ks-badge-warning"), block(".ks-chip-warning")
+  end
+
+  def test_chip_danger_tone_reads_the_same_colours_as_the_danger_badge
+    assert_equal block(".ks-badge-danger"), block(".ks-chip-danger")
+  end
+
+  def test_chip_info_tone_reads_the_same_colours_as_the_info_badge
+    assert_equal block(".ks-badge-info"), block(".ks-chip-info")
+  end
+
+  def test_chip_neutral_tone_reads_the_same_colours_as_the_neutral_badge
+    assert_equal block(".ks-badge-neutral"), block(".ks-chip-neutral")
+  end
+
+  def test_chip_row_lays_its_chips_side_by_side
+    assert_includes block(".ks-chip-row"), "display: flex"
+  end
+
+  def test_chip_row_gap_is_2_spacing_units
+    assert_includes block(".ks-chip-row"), "gap: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_chip_takes_an_equal_share_of_its_row_whatever_its_text
+    assert_includes block(".ks-chip"), "flex: 1"
+  end
+
+  def test_chip_can_shrink_below_its_text_width_so_a_row_never_overflows
+    assert_includes block(".ks-chip"), "min-width: 0px"
+  end
+
+  def test_chip_breaks_a_long_word_onto_a_new_line_instead_of_widening
+    assert_includes block(".ks-chip"), "overflow-wrap: anywhere"
+  end
+
   private
 
   def block(selector)

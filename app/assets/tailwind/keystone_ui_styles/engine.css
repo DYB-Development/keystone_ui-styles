@@ -742,6 +742,34 @@
     @apply bg-(color:--ks-color-info-100) text-(color:--ks-color-info-700) dark:bg-(color:--ks-color-info-900)/50 dark:text-(color:--ks-color-info-400);
   }
 
+  .ks-chip-row {
+    @apply flex gap-[calc(var(--ks-spacing)*2)];
+  }
+
+  .ks-chip {
+    @apply min-w-0 flex-1 wrap-anywhere rounded-(--ks-radius-control) px-[calc(var(--ks-spacing)*2.5)] py-[calc(var(--ks-spacing)*2)] text-center text-xs font-(weight:--ks-font-weight-medium);
+  }
+
+  .ks-chip-success {
+    @apply bg-(color:--ks-color-success-100) text-(color:--ks-color-success-700) dark:bg-(color:--ks-color-success-900)/50 dark:text-(color:--ks-color-success-400);
+  }
+
+  .ks-chip-warning {
+    @apply bg-(color:--ks-color-warning-100) text-(color:--ks-color-warning-700) dark:bg-(color:--ks-color-warning-900)/50 dark:text-(color:--ks-color-warning-400);
+  }
+
+  .ks-chip-danger {
+    @apply bg-(color:--ks-color-danger-100) text-(color:--ks-color-danger-700) dark:bg-(color:--ks-color-danger-900)/50 dark:text-(color:--ks-color-danger-400);
+  }
+
+  .ks-chip-info {
+    @apply bg-(color:--ks-color-info-100) text-(color:--ks-color-info-700) dark:bg-(color:--ks-color-info-900)/50 dark:text-(color:--ks-color-info-400);
+  }
+
+  .ks-chip-neutral {
+    @apply bg-(color:--ks-color-badge-neutral) text-(color:--ks-color-text-label) dark:bg-(color:--ks-color-badge-neutral-dark) dark:text-(color:--ks-color-text-label-dark);
+  }
+
   .ks-status-dot {
     @apply inline-block size-2 shrink-0 rounded-(--ks-radius-pill);
   }
@@ -1755,6 +1783,10 @@
 
   .ks-page-title {
     @apply font-(weight:--ks-font-weight-heading) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+  }
+
+  .ks-label-caps {
+    @apply text-xs font-(weight:--ks-font-weight-strong) uppercase tracking-wider text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 }
 
