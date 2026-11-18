@@ -5939,6 +5939,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-chip"), "font-size: var(--text-xs)"
   end
 
+  def test_chip_weight_reads_the_medium_font_weight_variable
+    assert_includes block(".ks-chip"), "font-weight: var(--ks-font-weight-medium)"
+  end
+
   private
 
   def block(selector)
