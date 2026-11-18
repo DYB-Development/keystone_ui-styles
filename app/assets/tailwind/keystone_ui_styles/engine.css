@@ -743,7 +743,7 @@
   }
 
   .ks-chip {
-    @apply text-center;
+    @apply rounded-(--ks-radius-control) text-center;
   }
 
   .ks-status-dot {

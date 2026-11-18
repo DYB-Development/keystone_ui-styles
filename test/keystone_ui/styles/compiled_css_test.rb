@@ -5923,6 +5923,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-chip"), "text-align: center"
   end
 
+  def test_chip_rounds_its_corners_at_the_control_radius
+    assert_includes block(".ks-chip"), "border-radius: var(--ks-radius-control)"
+  end
+
   private
 
   def block(selector)
