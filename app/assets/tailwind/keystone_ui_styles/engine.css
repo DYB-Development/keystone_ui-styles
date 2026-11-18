@@ -343,7 +343,7 @@
 
 @layer components {
   .ks-table-compact {
-    @apply px-[calc(var(--ks-spacing)*2.5)];
+    @apply px-[calc(var(--ks-spacing)*2.5)] py-[calc(var(--ks-spacing)*2)];
   }
 
   .ks-button {
