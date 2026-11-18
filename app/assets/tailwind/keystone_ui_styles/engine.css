@@ -342,6 +342,10 @@
 }
 
 @layer components {
+  .ks-table-compact {
+    @apply px-[calc(var(--ks-spacing)*2.5)];
+  }
+
   .ks-button {
     @apply inline-flex items-center justify-center font-(family-name:--ks-font-body) font-(weight:--ks-font-weight-strong) rounded-(--ks-radius-control) border-(length:--ks-border-width-control) cursor-pointer no-underline;
   }
