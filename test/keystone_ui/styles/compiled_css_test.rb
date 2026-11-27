@@ -6128,6 +6128,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-tip"), "--tw-shadow: var(--ks-shadow-overlay)"
   end
 
+  def test_stacked_bar_tip_padding_inline_is_2_5_spacing_units
+    assert_includes block(".ks-stacked-bar-tip"), "padding-inline: calc(var(--ks-spacing) * 2.5)"
+  end
+
   private
 
   def block(selector)
