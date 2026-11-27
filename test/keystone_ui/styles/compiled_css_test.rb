@@ -6184,6 +6184,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-legend"), "font-size: 13px"
   end
 
+  def test_stacked_bar_legend_reads_the_muted_text_colour
+    assert_includes block(".ks-stacked-bar-legend"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)
