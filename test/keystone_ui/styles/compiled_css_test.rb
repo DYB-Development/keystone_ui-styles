@@ -6322,6 +6322,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/&:focus-within \{\s*--tw-ring-color: var\(--ks-color-focus\);/, block(".ks-input-group"))
   end
 
+  def test_input_group_border_turns_the_dark_focus_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?&:focus-within \{\s*border-color: var\(--ks-color-focus-dark\)/m, block(".ks-input-group"))
+  end
+
   private
 
   def block(selector)
