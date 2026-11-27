@@ -6266,6 +6266,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/prefers-color-scheme: dark.*?background-color: var\(--ks-color-shaded-dark\)/m, block(".ks-panel.ks-panel-shaded"))
   end
 
+  def test_shaded_panel_border_matches_its_fill_so_no_outline_shows
+    assert_includes block(".ks-panel.ks-panel-shaded"), "border-color: var(--ks-color-shaded)"
+  end
+
   private
 
   def block(selector)
