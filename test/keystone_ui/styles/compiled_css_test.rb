@@ -6132,6 +6132,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-tip"), "padding-inline: calc(var(--ks-spacing) * 2.5)"
   end
 
+  def test_stacked_bar_tip_padding_block_is_2_spacing_units
+    assert_includes block(".ks-stacked-bar-tip"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
