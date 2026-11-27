@@ -818,6 +818,10 @@
     @apply bg-(color:--ks-color-pass);
   }
 
+  .ks-status-icon-fail {
+    @apply bg-(color:--ks-color-fail);
+  }
+
   .ks-panel-radius-md {
     @apply rounded-(--ks-radius-surface);
   }

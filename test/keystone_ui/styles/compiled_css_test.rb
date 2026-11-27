@@ -6243,6 +6243,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-status-icon-pass"), "background-color: var(--ks-color-pass)"
   end
 
+  def test_fail_status_icon_fills_with_the_fail_colour
+    assert_includes block(".ks-status-icon-fail"), "background-color: var(--ks-color-fail)"
+  end
+
   private
 
   def block(selector)
