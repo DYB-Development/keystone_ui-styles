@@ -6056,6 +6056,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/prefers-color-scheme: dark.*?\bcolor: var\(--ks-color-on-fill-amber-dark\)/m, block(".ks-fill-amber"))
   end
 
+  def test_stacked_bar_leaves_half_a_spacing_unit_between_segments
+    assert_includes block(".ks-stacked-bar"), "gap: calc(var(--ks-spacing) * 0.5)"
+  end
+
   private
 
   def block(selector)

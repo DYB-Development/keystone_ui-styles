@@ -1396,6 +1396,10 @@
     @apply bg-(color:--ks-color-fill-amber) dark:bg-(color:--ks-color-fill-amber-dark) text-(color:--ks-color-on-fill-amber) dark:text-(color:--ks-color-on-fill-amber-dark);
   }
 
+  .ks-stacked-bar {
+    @apply gap-[calc(var(--ks-spacing)*0.5)];
+  }
+
   .ks-timeline-track {
     @apply bg-(color:--ks-color-timeline-track) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-track-dark);
   }
