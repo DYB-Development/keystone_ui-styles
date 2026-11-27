@@ -146,6 +146,10 @@ any layer overrides them wherever it is imported.
 | `--ks-color-focus` | Input and checkbox focus border and ring | `--color-accent-500`, and `--color-accent-400` on a dark page |
 | `--ks-color-link-strong-hover` | Section action and card link on hover | `--color-accent-900`, and `--color-accent-300` on a dark page |
 | `--ks-color-badge-neutral` | Neutral badge background | `--color-gray-100`, and `--color-zinc-700` on a dark page |
+| `--ks-color-fill-teal`, `-orange`, `-blue`, `-amber` | The four fill tones, for a stacked bar's segments and swatches and a toned progress bar | `#00b894`, `#f47230`, `#257de0` and `#f2a600`, and `#00a888`, `#e76624`, `#338ced` and `#d28e05` on a dark page |
+| `--ks-color-on-fill-amber` | Text on the amber fill, where the other fills' text reads `--ks-color-on-fill` | `#0b0b0b`, and `#ffffff` on a dark page |
+| `--ks-color-pass`, `--ks-color-fail` | A status line's pass and fail icon | `#0aac23`, `#dc3c3d` |
+| `--ks-color-shaded` | Shaded panel background and border | `--color-surface-100`, and `--color-surface-800` on a dark page |
 | `--ks-color-page`, `--ks-color-on-page` | The `html` element background and text | `transparent` and `CanvasText`, the browser defaults, so a page keeps the colours it has, and the `html` element tells the browser the page's mode so those defaults turn dark on a dark page |
 Each colour variable in the table whose component changes on a dark page has a
 `-dark` partner, such as `--ks-color-surface-dark`, that it reads there.
@@ -205,8 +209,11 @@ warning 400, and 700 on a dark page.
 | `ks-panel-radius-md`, `ks-panel-radius-lg`, `ks-panel-radius-xl` | Panel corner radius |
 | `ks-panel-padding-sm`, `ks-panel-padding-md`, `ks-panel-padding-lg` | Panel padding |
 | `ks-panel-shadow` | Panel shadow |
+| `ks-panel-shaded` | On a `ks-panel`, fills it with the shaded colour and draws its border in the same colour, for a result box |
+| `ks-panel-selected` | On a `ks-panel`, outlines it in the selected border colour, for the option in use, including a shaded one |
 | `ks-input` | Text inputs, text areas and selects |
 | `ks-input-disabled` | A disabled input |
+| `ks-input-group`, `ks-input-grouped`, `ks-input-addon` | A field with short text such as `$` or `hours` inside its border: the group draws the input's border, background and focus ring, the input inside it draws neither border nor focus ring, and the addon is that short text in small muted type |
 | `ks-label` | Field label |
 | `ks-required` | Required field marker |
 | `ks-hint` | Field hint |
@@ -234,6 +241,7 @@ warning 400, and 700 on a dark page.
 | `ks-value-list-label`, `ks-value-list-note`, `ks-value-list-value` | A row's label, the short note under it, and its value |
 | `ks-value-list-end` | On the list, pushes each value to the right end of its row |
 | `ks-value-list-total` | A row drawn with more weight, for a total |
+| `ks-value-list-key` | On a `ks-value-list-row`, draws its value in large text without making the row a total |
 | `ks-bar-chart-bar`, `ks-bar-chart-bar-shaded` | A bar chart's bars, filled in the first chart colour, and a bar drawn faded |
 | `ks-bar-chart-bar-group-1` to `ks-bar-chart-bar-group-5` | On a `ks-bar-chart-bar`, fills the bar in its group's colour, from grey for the oldest group to the first chart colour for the newest |
 | `ks-bar-chart-grid` | A bar chart's grid lines |
@@ -254,6 +262,7 @@ warning 400, and 700 on a dark page.
 | `ks-chip-neutral`, `ks-chip-success`, `ks-chip-danger`, `ks-chip-warning`, `ks-chip-info` | Chip tone, drawn in the tinted background and text colours of the badge of that tone |
 | `ks-status-dot` | A small round mark showing an item's state |
 | `ks-status-dot-neutral`, `ks-status-dot-success`, `ks-status-dot-danger`, `ks-status-dot-warning`, `ks-status-dot-info` | Status dot colour, the same as the text of the badge of that state |
+| `ks-status-line`, `ks-status-icon`, `ks-status-icon-pass`, `ks-status-icon-fail` | A line of 13px text after a round icon, the icon with its check or cross in the on-fill colour, and the icon filled in the pass or fail colour |
 | `ks-modal-backdrop`, `ks-modal-panel`, `ks-modal-header`, `ks-modal-title`, `ks-modal-close` | Dialog and its parts |
 | `ks-action-menu`, `ks-action-menu-button` | Mobile action menu and the button that opens it |
 | `ks-menu`, `ks-menu-trigger`, `ks-menu-option`, `ks-menu-checkbox`, `ks-menu-option-hidden`, `ks-menu-move` | Column picker and multi select menu and their parts |
@@ -285,6 +294,8 @@ warning 400, and 700 on a dark page.
 | `ks-tab-bar-underline` | On a `ks-tab-bar`, draws the tabs as plain 13px text over a line in the border colour under the whole row, underlines the active tab in the accent colour, and leaves 16px under the row. Its tabs take their text size from it, so they carry no text size class of their own |
 | `ks-tab-count` | A tab's count, as plain muted text after its label |
 | `ks-progress-track`, `ks-progress-bar`, `ks-meter-label` | Progress bar and its label |
+| `ks-fill-teal`, `ks-fill-orange`, `ks-fill-blue`, `ks-fill-amber` | Fill tones, each filling the background in its colour and drawing text in the colour that sits on it, in light and dark mode, and coming after `ks-progress-bar` so a progress bar given a tone takes the tone's colour |
+| `ks-stacked-bar`, `ks-stacked-bar-segment`, `ks-stacked-bar-amount`, `ks-stacked-bar-tip`, `ks-stacked-bar-tip-name`, `ks-stacked-bar-tip-value`, `ks-stacked-bar-legend`, `ks-stacked-bar-legend-item`, `ks-stacked-bar-swatch`, `ks-stacked-bar-legend-value` | Stacked bar and its parts: segments half a spacing unit apart with a focus ring for the keyboard, the amount inside a segment, the tooltip drawn as an overlay with a muted name and a strong amount, and the legend under the bar with its swatches and amounts |
 | `ks-timeline-track`, `ks-timeline-bar`, `ks-timeline-queued`, `ks-timeline-waiting`, `ks-timeline-failed` | Timeline track, a try's bar, the time a try spent queued in a neutral grey, a step's waiting bar in the warning colour, and a failed try in the danger colour |
 | `ks-funnel`, `ks-funnel-layer`, `ks-funnel-row`, `ks-funnel-label`, `ks-funnel-value`, `ks-funnel-bar`, `ks-funnel-transition`, `ks-funnel-bar-accent`, `ks-funnel-bar-sky`, `ks-funnel-bar-violet`, `ks-funnel-bar-amber`, `ks-funnel-bar-rose`, `ks-funnel-joined`, `ks-funnel-band`, `ks-funnel-band-label` | Funnel and its parts |
 | `ks-bucket`, `ks-bucket-series`, `ks-bucket-label`, `ks-bucket-goal`, `ks-bucket-percent`, `ks-bucket-tank`, `ks-bucket-actual`, `ks-bucket-fill`, `ks-bucket-fill-over`, `ks-bucket-fill-over-warning` | Bucket and its parts |

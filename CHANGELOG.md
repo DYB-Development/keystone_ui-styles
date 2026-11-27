@@ -2,6 +2,21 @@
 
 ## [Unreleased]
 
+### Added
+- `ks-fill-teal`, `ks-fill-orange`, `ks-fill-blue` and `ks-fill-amber` fill an element's background in that tone's colour and draw its text in the colour that sits on it, in light and dark mode.
+- The fill tones come after `ks-progress-bar`, so a progress bar given a tone is filled in the tone's colour.
+- `--ks-color-fill-teal`, `--ks-color-fill-orange`, `--ks-color-fill-blue` and `--ks-color-fill-amber` set the four fill colours, each with a `-dark` partner, and `--ks-color-on-fill-amber` sets the text colour on the amber fill.
+- `ks-stacked-bar` and its parts draw a bar split into segments half a spacing unit apart, the amount inside each segment, a tooltip drawn as an overlay, and a legend under the bar.
+- A stacked bar segment reached by the keyboard draws a focus ring in the text colour twice the border width.
+- `ks-status-line` and `ks-status-icon` draw 13px text after a round icon whose check or cross is in the on-fill colour.
+- `ks-status-icon-pass` and `ks-status-icon-fail` fill the icon in `--ks-color-pass` or `--ks-color-fail`, which default to `#0aac23` and `#dc3c3d`.
+- `ks-panel-shaded` fills a panel with `--ks-color-shaded` and draws its border in the same colour, defaulting to surface 100 and to surface 800 on a dark page.
+- `ks-panel-selected` outlines a panel in the selected border colour, and comes after `ks-panel-shaded` so a shaded panel that is selected shows the outline.
+- `ks-value-list-key` draws a value list row's value in large text without making the row a total.
+- `ks-input-group` draws an input's border, background, corners and focus ring around a field and its short prefix or suffix text.
+- `ks-input-grouped` drops an input's own border and focus ring inside an input group and draws its digits at equal widths.
+- `ks-input-addon` draws a field's prefix or suffix in small muted text.
+
 ## [0.45.0] - 2026-11-18
 
 ### Added

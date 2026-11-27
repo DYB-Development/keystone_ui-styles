@@ -316,6 +316,20 @@
     --ks-color-page-dark: transparent;
     --ks-color-on-page: CanvasText;
     --ks-color-on-page-dark: CanvasText;
+    --ks-color-fill-teal: #00b894;
+    --ks-color-fill-orange: #f47230;
+    --ks-color-fill-blue: #257de0;
+    --ks-color-fill-amber: #f2a600;
+    --ks-color-fill-teal-dark: #00a888;
+    --ks-color-fill-orange-dark: #e76624;
+    --ks-color-fill-blue-dark: #338ced;
+    --ks-color-fill-amber-dark: #d28e05;
+    --ks-color-on-fill-amber: #0b0b0b;
+    --ks-color-on-fill-amber-dark: #ffffff;
+    --ks-color-pass: #0aac23;
+    --ks-color-fail: #dc3c3d;
+    --ks-color-shaded: var(--color-surface-100);
+    --ks-color-shaded-dark: var(--color-surface-800);
   }
 
   html {
@@ -380,6 +394,18 @@
 
   .ks-input-disabled {
     @apply cursor-not-allowed bg-(color:--ks-color-hover) text-(color:--ks-color-text-muted) dark:bg-(color:--ks-color-hover-dark) dark:text-(color:--ks-color-text-muted-dark);
+  }
+
+  .ks-input-group {
+    @apply border-(length:--ks-border-width) border-(color:--ks-color-border-control) dark:border-(color:--ks-color-border-control-dark) rounded-[calc(var(--ks-radius-control)*0.75)] bg-(color:--ks-color-surface) dark:bg-(color:--ks-color-surface-dark) px-[calc(var(--ks-spacing)*2)] focus-within:border-(color:--ks-color-focus) focus-within:ring-(length:--ks-border-width) focus-within:ring-(color:--ks-color-focus) dark:focus-within:border-(color:--ks-color-focus-dark) dark:focus-within:ring-(color:--ks-color-focus-dark);
+  }
+
+  .ks-input.ks-input-grouped {
+    @apply border-0 focus:ring-0 px-[calc(var(--ks-spacing)*1)] tabular-nums;
+  }
+
+  .ks-input-addon {
+    @apply text-sm text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 
   .ks-label {
@@ -584,6 +610,10 @@
 
   .ks-value-list-total .ks-value-list-label {
     @apply text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+  }
+
+  .ks-value-list-key .ks-value-list-value {
+    @apply text-lg;
   }
 
   .ks-bar-chart-bar {
@@ -794,6 +824,22 @@
     @apply bg-(color:--ks-color-info-700) dark:bg-(color:--ks-color-info-400);
   }
 
+  .ks-status-line {
+    @apply gap-[calc(var(--ks-spacing)*1.5)] text-[13px];
+  }
+
+  .ks-status-icon {
+    @apply rounded-(--ks-radius-pill) text-(color:--ks-color-on-fill) dark:text-(color:--ks-color-on-fill-dark);
+  }
+
+  .ks-status-icon-pass {
+    @apply bg-(color:--ks-color-pass);
+  }
+
+  .ks-status-icon-fail {
+    @apply bg-(color:--ks-color-fail);
+  }
+
   .ks-panel-radius-md {
     @apply rounded-(--ks-radius-surface);
   }
@@ -820,6 +866,14 @@
 
   .ks-panel-padding-lg {
     @apply p-[calc(var(--ks-spacing)*6)];
+  }
+
+  .ks-panel.ks-panel-shaded {
+    @apply bg-(color:--ks-color-shaded) dark:bg-(color:--ks-color-shaded-dark) border-(color:--ks-color-shaded) dark:border-(color:--ks-color-shaded-dark);
+  }
+
+  .ks-panel.ks-panel-selected {
+    @apply border-(color:--ks-color-selected-border);
   }
 
   .ks-modal-backdrop {
@@ -1368,6 +1422,62 @@
 
   .ks-progress-bar {
     @apply bg-(color:--ks-color-meter) rounded-(--ks-radius-pill);
+  }
+
+  .ks-fill-teal {
+    @apply bg-(color:--ks-color-fill-teal) dark:bg-(color:--ks-color-fill-teal-dark) text-(color:--ks-color-on-fill) dark:text-(color:--ks-color-on-fill-dark);
+  }
+
+  .ks-fill-orange {
+    @apply bg-(color:--ks-color-fill-orange) dark:bg-(color:--ks-color-fill-orange-dark) text-(color:--ks-color-on-fill) dark:text-(color:--ks-color-on-fill-dark);
+  }
+
+  .ks-fill-blue {
+    @apply bg-(color:--ks-color-fill-blue) dark:bg-(color:--ks-color-fill-blue-dark) text-(color:--ks-color-on-fill) dark:text-(color:--ks-color-on-fill-dark);
+  }
+
+  .ks-fill-amber {
+    @apply bg-(color:--ks-color-fill-amber) dark:bg-(color:--ks-color-fill-amber-dark) text-(color:--ks-color-on-fill-amber) dark:text-(color:--ks-color-on-fill-amber-dark);
+  }
+
+  .ks-stacked-bar {
+    @apply gap-[calc(var(--ks-spacing)*0.5)];
+  }
+
+  .ks-stacked-bar-segment {
+    @apply rounded-[calc(var(--ks-radius-control)*0.5)] text-[13px] font-(weight:--ks-font-weight-strong) outline-none focus-visible:ring-[length:calc(var(--ks-border-width)*2)] focus-visible:ring-(color:--ks-color-text) dark:focus-visible:ring-(color:--ks-color-text-dark);
+  }
+
+  .ks-stacked-bar-amount {
+    @apply px-[calc(var(--ks-spacing)*1.75)] tabular-nums;
+  }
+
+  .ks-stacked-bar-tip {
+    @apply mb-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) dark:border-(color:--ks-color-border-dark) bg-(color:--ks-color-overlay) dark:bg-(color:--ks-color-overlay-dark) shadow-(--ks-shadow-overlay) px-[calc(var(--ks-spacing)*2.5)] py-[calc(var(--ks-spacing)*2)] text-[13px] font-(weight:--ks-font-weight-normal);
+  }
+
+  .ks-stacked-bar-tip-name {
+    @apply text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+  }
+
+  .ks-stacked-bar-tip-value {
+    @apply text-[15px] font-(weight:--ks-font-weight-strong) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
+  }
+
+  .ks-stacked-bar-legend {
+    @apply mt-[calc(var(--ks-spacing)*2)] gap-x-[calc(var(--ks-spacing)*4.5)] gap-y-[calc(var(--ks-spacing)*1.5)] text-[13px] text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
+  }
+
+  .ks-stacked-bar-legend-item {
+    @apply gap-[calc(var(--ks-spacing)*1.5)];
+  }
+
+  .ks-stacked-bar-swatch {
+    @apply rounded-[calc(var(--ks-radius-control)*0.375)];
+  }
+
+  .ks-stacked-bar-legend-value {
+    @apply tabular-nums text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 
   .ks-timeline-track {

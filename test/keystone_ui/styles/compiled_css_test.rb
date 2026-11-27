@@ -5997,6 +5997,367 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-chip"), "overflow-wrap: anywhere"
   end
 
+  def test_fill_tones_default_to_their_light_colours
+    colours = { "teal" => "#00b894", "orange" => "#f47230", "blue" => "#257de0", "amber" => "#f2a600" }
+    missing = colours.reject { |tone, colour| self.class.compiled.include?("--ks-color-fill-#{tone}: #{colour};") }
+
+    assert_equal({}, missing)
+  end
+
+  def test_fill_tones_default_to_their_dark_colours
+    colours = { "teal" => "#00a888", "orange" => "#e76624", "blue" => "#338ced", "amber" => "#d28e05" }
+    missing = colours.reject { |tone, colour| self.class.compiled.include?("--ks-color-fill-#{tone}-dark: #{colour};") }
+
+    assert_equal({}, missing)
+  end
+
+  def test_each_fill_tone_fills_its_background_with_its_colour
+    missing = %w[teal orange blue amber].reject { |tone| block(".ks-fill-#{tone}").include?("background-color: var(--ks-color-fill-#{tone})") }
+
+    assert_equal [], missing
+  end
+
+  def test_each_fill_tone_fills_its_background_with_its_dark_colour_on_a_dark_page
+    missing = %w[teal orange blue amber].reject { |tone| block(".ks-fill-#{tone}").match?(/prefers-color-scheme: dark.*?background-color: var\(--ks-color-fill-#{tone}-dark\)/m) }
+
+    assert_equal [], missing
+  end
+
+  def test_fill_tones_come_after_the_progress_bar_so_a_toned_meter_takes_the_tone_colour
+    early = %w[teal orange blue amber].reject { |tone| position(".ks-fill-#{tone}") > position(".ks-progress-bar") }
+
+    assert_equal [], early
+  end
+
+  def test_teal_orange_and_blue_fills_draw_their_text_in_the_on_fill_colour
+    missing = %w[teal orange blue].reject { |tone| block(".ks-fill-#{tone}").include?("    color: var(--ks-color-on-fill);") }
+
+    assert_equal [], missing
+  end
+
+  def test_teal_orange_and_blue_fills_draw_their_text_in_the_dark_on_fill_colour_on_a_dark_page
+    missing = %w[teal orange blue].reject { |tone| block(".ks-fill-#{tone}").match?(/prefers-color-scheme: dark.*?\bcolor: var\(--ks-color-on-fill-dark\)/m) }
+
+    assert_equal [], missing
+  end
+
+  def test_text_on_the_amber_fill_defaults_to_near_black_and_to_white_on_a_dark_page
+    colours = { "--ks-color-on-fill-amber" => "#0b0b0b", "--ks-color-on-fill-amber-dark" => "#ffffff" }
+    missing = colours.reject { |name, colour| self.class.compiled.include?("#{name}: #{colour};") }
+
+    assert_equal({}, missing)
+  end
+
+  def test_amber_fill_draws_its_text_in_the_on_amber_colour
+    assert_includes block(".ks-fill-amber"), "    color: var(--ks-color-on-fill-amber);"
+  end
+
+  def test_amber_fill_draws_its_text_in_the_dark_on_amber_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?\bcolor: var\(--ks-color-on-fill-amber-dark\)/m, block(".ks-fill-amber"))
+  end
+
+  def test_stacked_bar_leaves_half_a_spacing_unit_between_segments
+    assert_includes block(".ks-stacked-bar"), "gap: calc(var(--ks-spacing) * 0.5)"
+  end
+
+  def test_stacked_bar_segment_rounds_its_corners_at_half_the_control_radius
+    assert_includes block(".ks-stacked-bar-segment"), "border-radius: calc(var(--ks-radius-control) * 0.5)"
+  end
+
+  def test_stacked_bar_segment_text_is_13px
+    assert_includes block(".ks-stacked-bar-segment"), "font-size: 13px"
+  end
+
+  def test_stacked_bar_segment_weight_reads_the_strong_font_weight_variable
+    assert_includes block(".ks-stacked-bar-segment"), "font-weight: var(--ks-font-weight-strong)"
+  end
+
+  def test_stacked_bar_segment_draws_no_browser_outline
+    assert_includes block(".ks-stacked-bar-segment"), "outline-style: none"
+  end
+
+  def test_stacked_bar_segment_draws_a_focus_ring_twice_the_border_width
+    assert_match(/&:focus-visible \{\s*--tw-ring-shadow: [^;]*calc\(calc\(var\(--ks-border-width\) \* 2\)/, block(".ks-stacked-bar-segment"))
+  end
+
+  def test_stacked_bar_segment_focus_ring_reads_the_text_colour
+    assert_match(/&:focus-visible \{\s*--tw-ring-color: var\(--ks-color-text\);/, block(".ks-stacked-bar-segment"))
+  end
+
+  def test_stacked_bar_segment_focus_ring_reads_the_dark_text_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?&:focus-visible \{\s*--tw-ring-color: var\(--ks-color-text-dark\)/m, block(".ks-stacked-bar-segment"))
+  end
+
+  def test_stacked_bar_amount_padding_inline_is_1_75_spacing_units
+    assert_includes block(".ks-stacked-bar-amount"), "padding-inline: calc(var(--ks-spacing) * 1.75)"
+  end
+
+  def test_stacked_bar_amount_draws_its_digits_at_equal_widths
+    assert_includes block(".ks-stacked-bar-amount"), "--tw-numeric-spacing: tabular-nums"
+  end
+
+  def test_stacked_bar_tip_sits_2_spacing_units_above_the_bar
+    assert_includes block(".ks-stacked-bar-tip"), "margin-bottom: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_stacked_bar_tip_rounds_its_corners_at_the_surface_radius
+    assert_includes block(".ks-stacked-bar-tip"), "border-radius: var(--ks-radius-surface)"
+  end
+
+  def test_stacked_bar_tip_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-stacked-bar-tip"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_stacked_bar_tip_border_reads_the_border_colour
+    assert_includes block(".ks-stacked-bar-tip"), "border-color: var(--ks-color-border)"
+  end
+
+  def test_stacked_bar_tip_border_reads_the_dark_border_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-stacked-bar-tip"))
+  end
+
+  def test_stacked_bar_tip_background_reads_the_overlay_colour
+    assert_includes block(".ks-stacked-bar-tip"), "background-color: var(--ks-color-overlay)"
+  end
+
+  def test_stacked_bar_tip_background_reads_the_dark_overlay_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?background-color: var\(--ks-color-overlay-dark\)/m, block(".ks-stacked-bar-tip"))
+  end
+
+  def test_stacked_bar_tip_shadow_reads_the_overlay_shadow
+    assert_includes block(".ks-stacked-bar-tip"), "--tw-shadow: var(--ks-shadow-overlay)"
+  end
+
+  def test_stacked_bar_tip_padding_inline_is_2_5_spacing_units
+    assert_includes block(".ks-stacked-bar-tip"), "padding-inline: calc(var(--ks-spacing) * 2.5)"
+  end
+
+  def test_stacked_bar_tip_padding_block_is_2_spacing_units
+    assert_includes block(".ks-stacked-bar-tip"), "padding-block: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_stacked_bar_tip_text_is_13px
+    assert_includes block(".ks-stacked-bar-tip"), "font-size: 13px"
+  end
+
+  def test_stacked_bar_tip_weight_reads_the_normal_font_weight_variable
+    assert_includes block(".ks-stacked-bar-tip"), "font-weight: var(--ks-font-weight-normal)"
+  end
+
+  def test_stacked_bar_tip_name_reads_the_muted_text_colour
+    assert_includes block(".ks-stacked-bar-tip-name"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_stacked_bar_tip_name_reads_the_dark_muted_text_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-stacked-bar-tip-name"))
+  end
+
+  def test_stacked_bar_tip_value_text_is_15px
+    assert_includes block(".ks-stacked-bar-tip-value"), "font-size: 15px"
+  end
+
+  def test_stacked_bar_tip_value_weight_reads_the_strong_font_weight_variable
+    assert_includes block(".ks-stacked-bar-tip-value"), "font-weight: var(--ks-font-weight-strong)"
+  end
+
+  def test_stacked_bar_tip_value_reads_the_text_colour
+    assert_includes block(".ks-stacked-bar-tip-value"), "    color: var(--ks-color-text);"
+  end
+
+  def test_stacked_bar_tip_value_reads_the_dark_text_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?color: var\(--ks-color-text-dark\)/m, block(".ks-stacked-bar-tip-value"))
+  end
+
+  def test_stacked_bar_legend_sits_2_spacing_units_under_the_bar
+    assert_includes block(".ks-stacked-bar-legend"), "margin-top: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_stacked_bar_legend_leaves_4_5_spacing_units_between_items_across
+    assert_includes block(".ks-stacked-bar-legend"), "column-gap: calc(var(--ks-spacing) * 4.5)"
+  end
+
+  def test_stacked_bar_legend_leaves_1_5_spacing_units_between_wrapped_lines
+    assert_includes block(".ks-stacked-bar-legend"), "row-gap: calc(var(--ks-spacing) * 1.5)"
+  end
+
+  def test_stacked_bar_legend_text_is_13px
+    assert_includes block(".ks-stacked-bar-legend"), "font-size: 13px"
+  end
+
+  def test_stacked_bar_legend_reads_the_muted_text_colour
+    assert_includes block(".ks-stacked-bar-legend"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_stacked_bar_legend_reads_the_dark_muted_text_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-stacked-bar-legend"))
+  end
+
+  def test_stacked_bar_legend_item_leaves_1_5_spacing_units_between_its_parts
+    assert_includes block(".ks-stacked-bar-legend-item"), "gap: calc(var(--ks-spacing) * 1.5)"
+  end
+
+  def test_stacked_bar_swatch_rounds_its_corners_at_three_eighths_of_the_control_radius
+    assert_includes block(".ks-stacked-bar-swatch"), "border-radius: calc(var(--ks-radius-control) * 0.375)"
+  end
+
+  def test_stacked_bar_legend_value_draws_its_digits_at_equal_widths
+    assert_includes block(".ks-stacked-bar-legend-value"), "--tw-numeric-spacing: tabular-nums"
+  end
+
+  def test_stacked_bar_legend_value_reads_the_text_colour
+    assert_includes block(".ks-stacked-bar-legend-value"), "    color: var(--ks-color-text);"
+  end
+
+  def test_stacked_bar_legend_value_reads_the_dark_text_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?color: var\(--ks-color-text-dark\)/m, block(".ks-stacked-bar-legend-value"))
+  end
+
+  def test_status_line_leaves_1_5_spacing_units_between_its_icon_and_text
+    assert_includes block(".ks-status-line"), "gap: calc(var(--ks-spacing) * 1.5)"
+  end
+
+  def test_status_line_text_is_13px
+    assert_includes block(".ks-status-line"), "font-size: 13px"
+  end
+
+  def test_status_icon_is_round
+    assert_includes block(".ks-status-icon"), "border-radius: var(--ks-radius-pill)"
+  end
+
+  def test_status_icon_draws_its_mark_in_the_on_fill_colour
+    assert_includes block(".ks-status-icon"), "    color: var(--ks-color-on-fill);"
+  end
+
+  def test_status_icon_draws_its_mark_in_the_dark_on_fill_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?color: var\(--ks-color-on-fill-dark\)/m, block(".ks-status-icon"))
+  end
+
+  def test_pass_and_fail_colours_default_to_the_reference_green_and_red
+    colours = { "--ks-color-pass" => "#0aac23", "--ks-color-fail" => "#dc3c3d" }
+    missing = colours.reject { |name, colour| self.class.compiled.include?("#{name}: #{colour};") }
+
+    assert_equal({}, missing)
+  end
+
+  def test_pass_status_icon_fills_with_the_pass_colour
+    assert_includes block(".ks-status-icon-pass"), "background-color: var(--ks-color-pass)"
+  end
+
+  def test_fail_status_icon_fills_with_the_fail_colour
+    assert_includes block(".ks-status-icon-fail"), "background-color: var(--ks-color-fail)"
+  end
+
+  def test_selected_panel_border_reads_the_selected_border_colour
+    assert_includes block(".ks-panel.ks-panel-selected"), "border-color: var(--ks-color-selected-border)"
+  end
+
+  def test_shaded_panel_colour_defaults_to_surface_100_and_surface_800_on_a_dark_page
+    colours = { "--ks-color-shaded" => "var(--color-surface-100)", "--ks-color-shaded-dark" => "var(--color-surface-800)" }
+    missing = colours.reject { |name, colour| self.class.compiled.include?("#{name}: #{colour};") }
+
+    assert_equal({}, missing)
+  end
+
+  def test_shaded_panel_fills_with_the_shaded_colour
+    assert_includes block(".ks-panel.ks-panel-shaded"), "background-color: var(--ks-color-shaded)"
+  end
+
+  def test_shaded_panel_fills_with_the_dark_shaded_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?background-color: var\(--ks-color-shaded-dark\)/m, block(".ks-panel.ks-panel-shaded"))
+  end
+
+  def test_shaded_panel_border_matches_its_fill_so_no_outline_shows
+    assert_includes block(".ks-panel.ks-panel-shaded"), "border-color: var(--ks-color-shaded)"
+  end
+
+  def test_shaded_panel_border_matches_its_dark_fill_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?border-color: var\(--ks-color-shaded-dark\)/m, block(".ks-panel.ks-panel-shaded"))
+  end
+
+  def test_selected_panel_comes_after_shaded_so_a_shaded_selected_panel_shows_its_outline
+    assert_operator position(".ks-panel.ks-panel-selected"), :>, position(".ks-panel.ks-panel-shaded")
+  end
+
+  def test_key_value_list_row_draws_its_value_in_large_text
+    assert_includes block(".ks-value-list-key .ks-value-list-value"), "font-size: var(--text-lg)"
+  end
+
+  def test_input_group_border_width_reads_the_border_width_variable
+    assert_includes block(".ks-input-group"), "border-width: var(--ks-border-width)"
+  end
+
+  def test_input_group_border_reads_the_input_border_colour
+    assert_includes block(".ks-input-group"), "border-color: var(--ks-color-border-control)"
+  end
+
+  def test_input_group_border_reads_the_dark_input_border_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?border-color: var\(--ks-color-border-control-dark\)/m, block(".ks-input-group"))
+  end
+
+  def test_input_group_rounds_its_corners_at_three_quarters_of_the_control_radius
+    assert_includes block(".ks-input-group"), "border-radius: calc(var(--ks-radius-control) * 0.75)"
+  end
+
+  def test_input_group_background_reads_the_surface_colour
+    assert_includes block(".ks-input-group"), "background-color: var(--ks-color-surface)"
+  end
+
+  def test_input_group_background_reads_the_dark_surface_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?background-color: var\(--ks-color-surface-dark\)/m, block(".ks-input-group"))
+  end
+
+  def test_input_group_padding_inline_is_2_spacing_units
+    assert_includes block(".ks-input-group"), "padding-inline: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_input_group_border_turns_the_focus_colour_while_its_field_has_focus
+    assert_match(/&:focus-within \{\s*border-color: var\(--ks-color-focus\);/, block(".ks-input-group"))
+  end
+
+  def test_input_group_draws_a_focus_ring_of_the_border_width_while_its_field_has_focus
+    assert_match(/&:focus-within \{\s*--tw-ring-shadow: [^;]*calc\(var\(--ks-border-width\) /, block(".ks-input-group"))
+  end
+
+  def test_input_group_focus_ring_reads_the_focus_colour
+    assert_match(/&:focus-within \{\s*--tw-ring-color: var\(--ks-color-focus\);/, block(".ks-input-group"))
+  end
+
+  def test_input_group_border_turns_the_dark_focus_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?&:focus-within \{\s*border-color: var\(--ks-color-focus-dark\)/m, block(".ks-input-group"))
+  end
+
+  def test_input_group_focus_ring_reads_the_dark_focus_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?&:focus-within \{\s*--tw-ring-color: var\(--ks-color-focus-dark\)/m, block(".ks-input-group"))
+  end
+
+  def test_grouped_input_draws_no_border_of_its_own
+    assert_includes block(".ks-input.ks-input-grouped"), "border-width: 0px"
+  end
+
+  def test_grouped_input_draws_no_focus_ring_of_its_own
+    assert_match(/&:focus \{\s*--tw-ring-shadow: [^;]*calc\(0px /, block(".ks-input.ks-input-grouped"))
+  end
+
+  def test_grouped_input_padding_inline_is_1_spacing_unit
+    assert_includes block(".ks-input.ks-input-grouped"), "padding-inline: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_grouped_input_draws_its_digits_at_equal_widths
+    assert_includes block(".ks-input.ks-input-grouped"), "--tw-numeric-spacing: tabular-nums"
+  end
+
+  def test_input_addon_text_is_small
+    assert_includes block(".ks-input-addon"), "font-size: var(--text-sm)"
+  end
+
+  def test_input_addon_reads_the_muted_text_colour
+    assert_includes block(".ks-input-addon"), "color: var(--ks-color-text-muted)"
+  end
+
+  def test_input_addon_reads_the_dark_muted_text_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-input-addon"))
+  end
+
   private
 
   def block(selector)
