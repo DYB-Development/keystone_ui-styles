@@ -600,6 +600,10 @@
     @apply text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 
+  .ks-value-list-key .ks-value-list-value {
+    @apply text-lg;
+  }
+
   .ks-bar-chart-bar {
     @apply fill-(--ks-color-chart-1) dark:fill-(--ks-color-chart-1-dark);
   }

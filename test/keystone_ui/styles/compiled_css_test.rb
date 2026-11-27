@@ -6278,6 +6278,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_operator position(".ks-panel.ks-panel-selected"), :>, position(".ks-panel.ks-panel-shaded")
   end
 
+  def test_key_value_list_row_draws_its_value_in_large_text
+    assert_includes block(".ks-value-list-key .ks-value-list-value"), "font-size: var(--text-lg)"
+  end
+
   private
 
   def block(selector)
