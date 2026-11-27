@@ -6035,6 +6035,12 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_equal [], missing
   end
 
+  def test_teal_orange_and_blue_fills_draw_their_text_in_the_dark_on_fill_colour_on_a_dark_page
+    missing = %w[teal orange blue].reject { |tone| block(".ks-fill-#{tone}").match?(/prefers-color-scheme: dark.*?\bcolor: var\(--ks-color-on-fill-dark\)/m) }
+
+    assert_equal [], missing
+  end
+
   private
 
   def block(selector)

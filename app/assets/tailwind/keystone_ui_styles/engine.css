@@ -1379,15 +1379,15 @@
   }
 
   .ks-fill-teal {
-    @apply bg-(color:--ks-color-fill-teal) dark:bg-(color:--ks-color-fill-teal-dark) text-(color:--ks-color-on-fill);
+    @apply bg-(color:--ks-color-fill-teal) dark:bg-(color:--ks-color-fill-teal-dark) text-(color:--ks-color-on-fill) dark:text-(color:--ks-color-on-fill-dark);
   }
 
   .ks-fill-orange {
-    @apply bg-(color:--ks-color-fill-orange) dark:bg-(color:--ks-color-fill-orange-dark) text-(color:--ks-color-on-fill);
+    @apply bg-(color:--ks-color-fill-orange) dark:bg-(color:--ks-color-fill-orange-dark) text-(color:--ks-color-on-fill) dark:text-(color:--ks-color-on-fill-dark);
   }
 
   .ks-fill-blue {
-    @apply bg-(color:--ks-color-fill-blue) dark:bg-(color:--ks-color-fill-blue-dark) text-(color:--ks-color-on-fill);
+    @apply bg-(color:--ks-color-fill-blue) dark:bg-(color:--ks-color-fill-blue-dark) text-(color:--ks-color-on-fill) dark:text-(color:--ks-color-on-fill-dark);
   }
 
   .ks-fill-amber {
