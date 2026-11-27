@@ -1420,6 +1420,10 @@
     @apply text-[15px] font-(weight:--ks-font-weight-strong) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 
+  .ks-stacked-bar-legend {
+    @apply mt-[calc(var(--ks-spacing)*2)];
+  }
+
   .ks-timeline-track {
     @apply bg-(color:--ks-color-timeline-track) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-track-dark);
   }

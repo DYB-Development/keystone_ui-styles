@@ -6168,6 +6168,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/prefers-color-scheme: dark.*?color: var\(--ks-color-text-dark\)/m, block(".ks-stacked-bar-tip-value"))
   end
 
+  def test_stacked_bar_legend_sits_2_spacing_units_under_the_bar
+    assert_includes block(".ks-stacked-bar-legend"), "margin-top: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
