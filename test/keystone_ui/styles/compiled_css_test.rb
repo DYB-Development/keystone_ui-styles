@@ -6112,6 +6112,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-tip"), "border-color: var(--ks-color-border)"
   end
 
+  def test_stacked_bar_tip_border_reads_the_dark_border_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?border-color: var\(--ks-color-border-dark\)/m, block(".ks-stacked-bar-tip"))
+  end
+
   private
 
   def block(selector)
