@@ -6200,6 +6200,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-swatch"), "border-radius: calc(var(--ks-radius-control) * 0.375)"
   end
 
+  def test_stacked_bar_legend_value_draws_its_digits_at_equal_widths
+    assert_includes block(".ks-stacked-bar-legend-value"), "--tw-numeric-spacing: tabular-nums"
+  end
+
   private
 
   def block(selector)

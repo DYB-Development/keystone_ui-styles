@@ -1432,6 +1432,10 @@
     @apply rounded-[calc(var(--ks-radius-control)*0.375)];
   }
 
+  .ks-stacked-bar-legend-value {
+    @apply tabular-nums;
+  }
+
   .ks-timeline-track {
     @apply bg-(color:--ks-color-timeline-track) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-track-dark);
   }
