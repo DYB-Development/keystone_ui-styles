@@ -1417,7 +1417,7 @@
   }
 
   .ks-stacked-bar-tip-value {
-    @apply text-[15px] font-(weight:--ks-font-weight-strong) text-(color:--ks-color-text);
+    @apply text-[15px] font-(weight:--ks-font-weight-strong) text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }
 
   .ks-timeline-track {
