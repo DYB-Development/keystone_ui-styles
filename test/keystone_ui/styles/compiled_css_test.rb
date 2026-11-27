@@ -6224,6 +6224,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-status-icon"), "border-radius: var(--ks-radius-pill)"
   end
 
+  def test_status_icon_draws_its_mark_in_the_on_fill_colour
+    assert_includes block(".ks-status-icon"), "    color: var(--ks-color-on-fill);"
+  end
+
   private
 
   def block(selector)

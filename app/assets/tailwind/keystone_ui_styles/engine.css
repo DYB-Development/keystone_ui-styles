@@ -809,7 +809,7 @@
   }
 
   .ks-status-icon {
-    @apply rounded-(--ks-radius-pill);
+    @apply rounded-(--ks-radius-pill) text-(color:--ks-color-on-fill);
   }
 
   .ks-panel-radius-md {
