@@ -6338,6 +6338,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/&:focus \{\s*--tw-ring-shadow: [^;]*calc\(0px /, block(".ks-input.ks-input-grouped"))
   end
 
+  def test_grouped_input_padding_inline_is_1_spacing_unit
+    assert_includes block(".ks-input.ks-input-grouped"), "padding-inline: calc(var(--ks-spacing) * 1)"
+  end
+
   private
 
   def block(selector)
