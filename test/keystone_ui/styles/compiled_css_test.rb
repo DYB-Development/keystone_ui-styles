@@ -6208,6 +6208,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-legend-value"), "    color: var(--ks-color-text);"
   end
 
+  def test_stacked_bar_legend_value_reads_the_dark_text_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?color: var\(--ks-color-text-dark\)/m, block(".ks-stacked-bar-legend-value"))
+  end
+
   private
 
   def block(selector)
