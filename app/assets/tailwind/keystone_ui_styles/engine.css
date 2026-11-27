@@ -1409,7 +1409,7 @@
   }
 
   .ks-stacked-bar-tip {
-    @apply mb-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) dark:border-(color:--ks-color-border-dark) bg-(color:--ks-color-overlay) dark:bg-(color:--ks-color-overlay-dark) shadow-(--ks-shadow-overlay) px-[calc(var(--ks-spacing)*2.5)] py-[calc(var(--ks-spacing)*2)];
+    @apply mb-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) dark:border-(color:--ks-color-border-dark) bg-(color:--ks-color-overlay) dark:bg-(color:--ks-color-overlay-dark) shadow-(--ks-shadow-overlay) px-[calc(var(--ks-spacing)*2.5)] py-[calc(var(--ks-spacing)*2)] text-[13px];
   }
 
   .ks-timeline-track {

@@ -6136,6 +6136,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-tip"), "padding-block: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_stacked_bar_tip_text_is_13px
+    assert_includes block(".ks-stacked-bar-tip"), "font-size: 13px"
+  end
+
   private
 
   def block(selector)
