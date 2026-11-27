@@ -1424,6 +1424,10 @@
     @apply mt-[calc(var(--ks-spacing)*2)] gap-x-[calc(var(--ks-spacing)*4.5)] gap-y-[calc(var(--ks-spacing)*1.5)] text-[13px] text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 
+  .ks-stacked-bar-legend-item {
+    @apply gap-[calc(var(--ks-spacing)*1.5)];
+  }
+
   .ks-timeline-track {
     @apply bg-(color:--ks-color-timeline-track) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-track-dark);
   }

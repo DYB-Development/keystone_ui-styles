@@ -6192,6 +6192,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/prefers-color-scheme: dark.*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-stacked-bar-legend"))
   end
 
+  def test_stacked_bar_legend_item_leaves_1_5_spacing_units_between_its_parts
+    assert_includes block(".ks-stacked-bar-legend-item"), "gap: calc(var(--ks-spacing) * 1.5)"
+  end
+
   private
 
   def block(selector)
