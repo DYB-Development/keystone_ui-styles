@@ -6004,6 +6004,13 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_equal({}, missing)
   end
 
+  def test_fill_tones_default_to_their_dark_colours
+    colours = { "teal" => "#00a888", "orange" => "#e76624", "blue" => "#338ced", "amber" => "#d28e05" }
+    missing = colours.reject { |tone, colour| self.class.compiled.include?("--ks-color-fill-#{tone}-dark: #{colour};") }
+    
+    assert_equal({}, missing)
+  end
+
   private
 
   def block(selector)

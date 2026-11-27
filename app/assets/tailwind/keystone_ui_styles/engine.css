@@ -320,6 +320,10 @@
     --ks-color-fill-orange: #f47230;
     --ks-color-fill-blue: #257de0;
     --ks-color-fill-amber: #f2a600;
+    --ks-color-fill-teal-dark: #00a888;
+    --ks-color-fill-orange-dark: #e76624;
+    --ks-color-fill-blue-dark: #338ced;
+    --ks-color-fill-amber-dark: #d28e05;
   }
 
   html {
