@@ -396,6 +396,10 @@
     @apply cursor-not-allowed bg-(color:--ks-color-hover) text-(color:--ks-color-text-muted) dark:bg-(color:--ks-color-hover-dark) dark:text-(color:--ks-color-text-muted-dark);
   }
 
+  .ks-input-group {
+    @apply border-(length:--ks-border-width);
+  }
+
   .ks-label {
     @apply block text-sm font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark);
   }
