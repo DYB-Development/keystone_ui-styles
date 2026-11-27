@@ -6342,6 +6342,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-input.ks-input-grouped"), "padding-inline: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_grouped_input_draws_its_digits_at_equal_widths
+    assert_includes block(".ks-input.ks-input-grouped"), "--tw-numeric-spacing: tabular-nums"
+  end
+
   private
 
   def block(selector)
