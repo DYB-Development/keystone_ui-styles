@@ -6041,6 +6041,13 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_equal [], missing
   end
 
+  def test_text_on_the_amber_fill_defaults_to_near_black_and_to_white_on_a_dark_page
+    colours = { "--ks-color-on-fill-amber" => "#0b0b0b", "--ks-color-on-fill-amber-dark" => "#ffffff" }
+    missing = colours.reject { |name, colour| self.class.compiled.include?("#{name}: #{colour};") }
+
+    assert_equal({}, missing)
+  end
+
   private
 
   def block(selector)
