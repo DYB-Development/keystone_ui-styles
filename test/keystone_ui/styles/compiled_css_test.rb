@@ -6140,6 +6140,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-tip"), "font-size: 13px"
   end
 
+  def test_stacked_bar_tip_weight_reads_the_normal_font_weight_variable
+    assert_includes block(".ks-stacked-bar-tip"), "font-weight: var(--ks-font-weight-normal)"
+  end
+
   private
 
   def block(selector)
