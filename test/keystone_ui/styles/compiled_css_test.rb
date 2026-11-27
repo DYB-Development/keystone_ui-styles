@@ -6100,6 +6100,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-tip"), "margin-bottom: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_stacked_bar_tip_rounds_its_corners_at_the_surface_radius
+    assert_includes block(".ks-stacked-bar-tip"), "border-radius: var(--ks-radius-surface)"
+  end
+
   private
 
   def block(selector)
