@@ -6302,6 +6302,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-input-group"), "background-color: var(--ks-color-surface)"
   end
 
+  def test_input_group_background_reads_the_dark_surface_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?background-color: var\(--ks-color-surface-dark\)/m, block(".ks-input-group"))
+  end
+
   private
 
   def block(selector)
