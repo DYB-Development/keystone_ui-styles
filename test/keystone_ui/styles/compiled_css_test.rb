@@ -6354,6 +6354,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-input-addon"), "color: var(--ks-color-text-muted)"
   end
 
+  def test_input_addon_reads_the_dark_muted_text_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-input-addon"))
+  end
+
   private
 
   def block(selector)
