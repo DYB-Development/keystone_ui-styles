@@ -397,7 +397,7 @@
   }
 
   .ks-input-group {
-    @apply border-(length:--ks-border-width) border-(color:--ks-color-border-control) dark:border-(color:--ks-color-border-control-dark) rounded-[calc(var(--ks-radius-control)*0.75)] bg-(color:--ks-color-surface) dark:bg-(color:--ks-color-surface-dark) px-[calc(var(--ks-spacing)*2)] focus-within:border-(color:--ks-color-focus) focus-within:ring-(length:--ks-border-width) focus-within:ring-(color:--ks-color-focus) dark:focus-within:border-(color:--ks-color-focus-dark);
+    @apply border-(length:--ks-border-width) border-(color:--ks-color-border-control) dark:border-(color:--ks-color-border-control-dark) rounded-[calc(var(--ks-radius-control)*0.75)] bg-(color:--ks-color-surface) dark:bg-(color:--ks-color-surface-dark) px-[calc(var(--ks-spacing)*2)] focus-within:border-(color:--ks-color-focus) focus-within:ring-(length:--ks-border-width) focus-within:ring-(color:--ks-color-focus) dark:focus-within:border-(color:--ks-color-focus-dark) dark:focus-within:ring-(color:--ks-color-focus-dark);
   }
 
   .ks-label {
