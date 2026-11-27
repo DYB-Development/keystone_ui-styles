@@ -6196,6 +6196,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-legend-item"), "gap: calc(var(--ks-spacing) * 1.5)"
   end
 
+  def test_stacked_bar_swatch_rounds_its_corners_at_three_eighths_of_the_control_radius
+    assert_includes block(".ks-stacked-bar-swatch"), "border-radius: calc(var(--ks-radius-control) * 0.375)"
+  end
+
   private
 
   def block(selector)
