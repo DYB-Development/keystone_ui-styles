@@ -6120,6 +6120,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-tip"), "background-color: var(--ks-color-overlay)"
   end
 
+  def test_stacked_bar_tip_background_reads_the_dark_overlay_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?background-color: var\(--ks-color-overlay-dark\)/m, block(".ks-stacked-bar-tip"))
+  end
+
   private
 
   def block(selector)
