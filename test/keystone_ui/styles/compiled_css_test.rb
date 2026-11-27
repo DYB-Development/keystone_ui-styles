@@ -6084,6 +6084,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/&:focus-visible \{\s*--tw-ring-color: var\(--ks-color-text\);/, block(".ks-stacked-bar-segment"))
   end
 
+  def test_stacked_bar_segment_focus_ring_reads_the_dark_text_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?&:focus-visible \{\s*--tw-ring-color: var\(--ks-color-text-dark\)/m, block(".ks-stacked-bar-segment"))
+  end
+
   private
 
   def block(selector)
