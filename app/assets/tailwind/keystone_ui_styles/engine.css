@@ -814,6 +814,10 @@
     @apply rounded-(--ks-radius-pill) text-(color:--ks-color-on-fill) dark:text-(color:--ks-color-on-fill-dark);
   }
 
+  .ks-status-icon-pass {
+    @apply bg-(color:--ks-color-pass);
+  }
+
   .ks-panel-radius-md {
     @apply rounded-(--ks-radius-surface);
   }

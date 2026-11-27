@@ -6239,6 +6239,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_equal({}, missing)
   end
 
+  def test_pass_status_icon_fills_with_the_pass_colour
+    assert_includes block(".ks-status-icon-pass"), "background-color: var(--ks-color-pass)"
+  end
+
   private
 
   def block(selector)
