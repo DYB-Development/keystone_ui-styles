@@ -6076,6 +6076,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-segment"), "outline-style: none"
   end
 
+  def test_stacked_bar_segment_draws_a_focus_ring_twice_the_border_width
+    assert_match(/&:focus-visible \{\s*--tw-ring-shadow: [^;]*calc\(calc\(var\(--ks-border-width\) \* 2\)/, block(".ks-stacked-bar-segment"))
+  end
+
   private
 
   def block(selector)
