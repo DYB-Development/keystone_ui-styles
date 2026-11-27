@@ -328,6 +328,8 @@
     --ks-color-on-fill-amber-dark: #ffffff;
     --ks-color-pass: #0aac23;
     --ks-color-fail: #dc3c3d;
+    --ks-color-shaded: var(--color-surface-100);
+    --ks-color-shaded-dark: var(--color-surface-800);
   }
 
   html {

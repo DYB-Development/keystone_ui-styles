@@ -6251,6 +6251,13 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-panel.ks-panel-selected"), "border-color: var(--ks-color-selected-border)"
   end
 
+  def test_shaded_panel_colour_defaults_to_surface_100_and_surface_800_on_a_dark_page
+    colours = { "--ks-color-shaded" => "var(--color-surface-100)", "--ks-color-shaded-dark" => "var(--color-surface-800)" }
+    missing = colours.reject { |name, colour| self.class.compiled.include?("#{name}: #{colour};") }
+
+    assert_equal({}, missing)
+  end
+
   private
 
   def block(selector)
