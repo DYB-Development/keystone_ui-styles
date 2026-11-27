@@ -5997,6 +5997,13 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-chip"), "overflow-wrap: anywhere"
   end
 
+  def test_fill_tones_default_to_their_light_colours
+    colours = { "teal" => "#00b894", "orange" => "#f47230", "blue" => "#257de0", "amber" => "#f2a600" }
+    missing = colours.reject { |tone, colour| self.class.compiled.include?("--ks-color-fill-#{tone}: #{colour};") }
+    
+    assert_equal({}, missing)
+  end
+
   private
 
   def block(selector)

@@ -316,6 +316,10 @@
     --ks-color-page-dark: transparent;
     --ks-color-on-page: CanvasText;
     --ks-color-on-page-dark: CanvasText;
+    --ks-color-fill-teal: #00b894;
+    --ks-color-fill-orange: #f47230;
+    --ks-color-fill-blue: #257de0;
+    --ks-color-fill-amber: #f2a600;
   }
 
   html {
