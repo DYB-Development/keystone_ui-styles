@@ -1393,7 +1393,7 @@
   }
 
   .ks-fill-amber {
-    @apply bg-(color:--ks-color-fill-amber) dark:bg-(color:--ks-color-fill-amber-dark) text-(color:--ks-color-on-fill-amber);
+    @apply bg-(color:--ks-color-fill-amber) dark:bg-(color:--ks-color-fill-amber-dark) text-(color:--ks-color-on-fill-amber) dark:text-(color:--ks-color-on-fill-amber-dark);
   }
 
   .ks-timeline-track {

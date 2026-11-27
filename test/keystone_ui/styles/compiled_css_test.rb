@@ -6052,6 +6052,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-fill-amber"), "    color: var(--ks-color-on-fill-amber);"
   end
 
+  def test_amber_fill_draws_its_text_in_the_dark_on_amber_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?\bcolor: var\(--ks-color-on-fill-amber-dark\)/m, block(".ks-fill-amber"))
+  end
+
   private
 
   def block(selector)
