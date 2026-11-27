@@ -803,19 +803,19 @@
   }
 
   .ks-fill-teal {
-    @apply bg-(color:--ks-color-fill-teal);
+    @apply bg-(color:--ks-color-fill-teal) dark:bg-(color:--ks-color-fill-teal-dark);
   }
 
   .ks-fill-orange {
-    @apply bg-(color:--ks-color-fill-orange);
+    @apply bg-(color:--ks-color-fill-orange) dark:bg-(color:--ks-color-fill-orange-dark);
   }
 
   .ks-fill-blue {
-    @apply bg-(color:--ks-color-fill-blue);
+    @apply bg-(color:--ks-color-fill-blue) dark:bg-(color:--ks-color-fill-blue-dark);
   }
 
   .ks-fill-amber {
-    @apply bg-(color:--ks-color-fill-amber);
+    @apply bg-(color:--ks-color-fill-amber) dark:bg-(color:--ks-color-fill-amber-dark);
   }
 
   .ks-panel-radius-md {
