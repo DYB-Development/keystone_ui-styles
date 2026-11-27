@@ -6286,6 +6286,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-input-group"), "border-width: var(--ks-border-width)"
   end
 
+  def test_input_group_border_reads_the_input_border_colour
+    assert_includes block(".ks-input-group"), "border-color: var(--ks-color-border-control)"
+  end
+
   private
 
   def block(selector)
