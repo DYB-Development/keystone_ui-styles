@@ -6180,6 +6180,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-legend"), "row-gap: calc(var(--ks-spacing) * 1.5)"
   end
 
+  def test_stacked_bar_legend_text_is_13px
+    assert_includes block(".ks-stacked-bar-legend"), "font-size: 13px"
+  end
+
   private
 
   def block(selector)
