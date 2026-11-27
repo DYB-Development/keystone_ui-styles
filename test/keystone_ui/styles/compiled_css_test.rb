@@ -6247,6 +6247,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-status-icon-fail"), "background-color: var(--ks-color-fail)"
   end
 
+  def test_selected_panel_border_reads_the_selected_border_colour
+    assert_includes block(".ks-panel.ks-panel-selected"), "border-color: var(--ks-color-selected-border)"
+  end
+
   private
 
   def block(selector)

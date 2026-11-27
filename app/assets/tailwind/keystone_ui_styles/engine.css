@@ -850,6 +850,10 @@
     @apply p-[calc(var(--ks-spacing)*6)];
   }
 
+  .ks-panel.ks-panel-selected {
+    @apply border-(color:--ks-color-selected-border);
+  }
+
   .ks-modal-backdrop {
     @apply bg-(color:--ks-color-backdrop);
   }
