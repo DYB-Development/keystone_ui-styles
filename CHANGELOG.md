@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.46.0] - 2026-11-27
+
 ### Added
 - `ks-fill-teal`, `ks-fill-orange`, `ks-fill-blue` and `ks-fill-amber` fill an element's background in that tone's colour and draw its text in the colour that sits on it, in light and dark mode.
 - The fill tones come after `ks-progress-bar`, so a progress bar given a tone is filled in the tone's colour.
