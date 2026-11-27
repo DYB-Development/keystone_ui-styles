@@ -6072,6 +6072,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-segment"), "font-weight: var(--ks-font-weight-strong)"
   end
 
+  def test_stacked_bar_segment_draws_no_browser_outline
+    assert_includes block(".ks-stacked-bar-segment"), "outline-style: none"
+  end
+
   private
 
   def block(selector)
