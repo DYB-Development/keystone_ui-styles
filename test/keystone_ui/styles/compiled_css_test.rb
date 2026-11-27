@@ -6294,6 +6294,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/prefers-color-scheme: dark.*?border-color: var\(--ks-color-border-control-dark\)/m, block(".ks-input-group"))
   end
 
+  def test_input_group_rounds_its_corners_at_three_quarters_of_the_control_radius
+    assert_includes block(".ks-input-group"), "border-radius: calc(var(--ks-radius-control) * 0.75)"
+  end
+
   private
 
   def block(selector)
