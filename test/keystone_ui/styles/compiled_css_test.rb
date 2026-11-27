@@ -6330,6 +6330,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/prefers-color-scheme: dark.*?&:focus-within \{\s*--tw-ring-color: var\(--ks-color-focus-dark\)/m, block(".ks-input-group"))
   end
 
+  def test_grouped_input_draws_no_border_of_its_own
+    assert_includes block(".ks-input.ks-input-grouped"), "border-width: 0px"
+  end
+
   private
 
   def block(selector)
