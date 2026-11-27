@@ -404,6 +404,10 @@
     @apply border-0 focus:ring-0 px-[calc(var(--ks-spacing)*1)] tabular-nums;
   }
 
+  .ks-input-addon {
+    @apply text-sm;
+  }
+
   .ks-label {
     @apply block text-sm font-(weight:--ks-font-weight-medium) text-(color:--ks-color-text-label) dark:text-(color:--ks-color-text-label-dark);
   }

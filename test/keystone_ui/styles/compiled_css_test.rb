@@ -6346,6 +6346,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-input.ks-input-grouped"), "--tw-numeric-spacing: tabular-nums"
   end
 
+  def test_input_addon_text_is_small
+    assert_includes block(".ks-input-addon"), "font-size: var(--text-sm)"
+  end
+
   private
 
   def block(selector)
