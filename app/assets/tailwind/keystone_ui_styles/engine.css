@@ -857,7 +857,7 @@
   }
 
   .ks-panel.ks-panel-shaded {
-    @apply bg-(color:--ks-color-shaded);
+    @apply bg-(color:--ks-color-shaded) dark:bg-(color:--ks-color-shaded-dark);
   }
 
   .ks-modal-backdrop {
