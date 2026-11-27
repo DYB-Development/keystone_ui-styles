@@ -6023,6 +6023,12 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_equal [], missing
   end
 
+  def test_fill_tones_come_after_the_progress_bar_so_a_toned_meter_takes_the_tone_colour
+    early = %w[teal orange blue amber].reject { |tone| position(".ks-fill-#{tone}") > position(".ks-progress-bar") }
+    
+    assert_equal [], early
+  end
+
   private
 
   def block(selector)

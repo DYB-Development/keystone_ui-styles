@@ -802,22 +802,6 @@
     @apply bg-(color:--ks-color-info-700) dark:bg-(color:--ks-color-info-400);
   }
 
-  .ks-fill-teal {
-    @apply bg-(color:--ks-color-fill-teal) dark:bg-(color:--ks-color-fill-teal-dark);
-  }
-
-  .ks-fill-orange {
-    @apply bg-(color:--ks-color-fill-orange) dark:bg-(color:--ks-color-fill-orange-dark);
-  }
-
-  .ks-fill-blue {
-    @apply bg-(color:--ks-color-fill-blue) dark:bg-(color:--ks-color-fill-blue-dark);
-  }
-
-  .ks-fill-amber {
-    @apply bg-(color:--ks-color-fill-amber) dark:bg-(color:--ks-color-fill-amber-dark);
-  }
-
   .ks-panel-radius-md {
     @apply rounded-(--ks-radius-surface);
   }
@@ -1392,6 +1376,22 @@
 
   .ks-progress-bar {
     @apply bg-(color:--ks-color-meter) rounded-(--ks-radius-pill);
+  }
+
+  .ks-fill-teal {
+    @apply bg-(color:--ks-color-fill-teal) dark:bg-(color:--ks-color-fill-teal-dark);
+  }
+
+  .ks-fill-orange {
+    @apply bg-(color:--ks-color-fill-orange) dark:bg-(color:--ks-color-fill-orange-dark);
+  }
+
+  .ks-fill-blue {
+    @apply bg-(color:--ks-color-fill-blue) dark:bg-(color:--ks-color-fill-blue-dark);
+  }
+
+  .ks-fill-amber {
+    @apply bg-(color:--ks-color-fill-amber) dark:bg-(color:--ks-color-fill-amber-dark);
   }
 
   .ks-timeline-track {
