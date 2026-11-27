@@ -1416,6 +1416,10 @@
     @apply text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 
+  .ks-stacked-bar-tip-value {
+    @apply text-[15px];
+  }
+
   .ks-timeline-track {
     @apply bg-(color:--ks-color-timeline-track) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-track-dark);
   }

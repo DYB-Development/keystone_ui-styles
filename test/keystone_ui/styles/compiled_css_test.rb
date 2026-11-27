@@ -6152,6 +6152,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/prefers-color-scheme: dark.*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-stacked-bar-tip-name"))
   end
 
+  def test_stacked_bar_tip_value_text_is_15px
+    assert_includes block(".ks-stacked-bar-tip-value"), "font-size: 15px"
+  end
+
   private
 
   def block(selector)
