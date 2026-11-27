@@ -6298,6 +6298,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-input-group"), "border-radius: calc(var(--ks-radius-control) * 0.75)"
   end
 
+  def test_input_group_background_reads_the_surface_colour
+    assert_includes block(".ks-input-group"), "background-color: var(--ks-color-surface)"
+  end
+
   private
 
   def block(selector)
