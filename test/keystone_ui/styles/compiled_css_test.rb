@@ -6212,6 +6212,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/prefers-color-scheme: dark.*?color: var\(--ks-color-text-dark\)/m, block(".ks-stacked-bar-legend-value"))
   end
 
+  def test_status_line_leaves_1_5_spacing_units_between_its_icon_and_text
+    assert_includes block(".ks-status-line"), "gap: calc(var(--ks-spacing) * 1.5)"
+  end
+
   private
 
   def block(selector)
