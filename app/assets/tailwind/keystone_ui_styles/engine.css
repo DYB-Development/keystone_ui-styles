@@ -1408,6 +1408,10 @@
     @apply px-[calc(var(--ks-spacing)*1.75)] tabular-nums;
   }
 
+  .ks-stacked-bar-tip {
+    @apply mb-[calc(var(--ks-spacing)*2)];
+  }
+
   .ks-timeline-track {
     @apply bg-(color:--ks-color-timeline-track) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-track-dark);
   }
