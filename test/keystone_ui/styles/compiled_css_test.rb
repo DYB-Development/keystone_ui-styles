@@ -6350,6 +6350,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-input-addon"), "font-size: var(--text-sm)"
   end
 
+  def test_input_addon_reads_the_muted_text_colour
+    assert_includes block(".ks-input-addon"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)

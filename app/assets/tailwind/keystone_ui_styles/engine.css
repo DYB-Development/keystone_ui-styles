@@ -405,7 +405,7 @@
   }
 
   .ks-input-addon {
-    @apply text-sm;
+    @apply text-sm text-(color:--ks-color-text-muted);
   }
 
   .ks-label {
