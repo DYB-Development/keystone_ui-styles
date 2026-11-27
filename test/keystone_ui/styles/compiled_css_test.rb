@@ -6176,6 +6176,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-legend"), "column-gap: calc(var(--ks-spacing) * 4.5)"
   end
 
+  def test_stacked_bar_legend_leaves_1_5_spacing_units_between_wrapped_lines
+    assert_includes block(".ks-stacked-bar-legend"), "row-gap: calc(var(--ks-spacing) * 1.5)"
+  end
+
   private
 
   def block(selector)
