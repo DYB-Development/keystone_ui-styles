@@ -1413,7 +1413,7 @@
   }
 
   .ks-stacked-bar-tip-name {
-    @apply text-(color:--ks-color-text-muted);
+    @apply text-(color:--ks-color-text-muted) dark:text-(color:--ks-color-text-muted-dark);
   }
 
   .ks-timeline-track {
