@@ -1401,7 +1401,7 @@
   }
 
   .ks-stacked-bar-segment {
-    @apply rounded-[calc(var(--ks-radius-control)*0.5)] text-[13px];
+    @apply rounded-[calc(var(--ks-radius-control)*0.5)] text-[13px] font-(weight:--ks-font-weight-strong);
   }
 
   .ks-timeline-track {
