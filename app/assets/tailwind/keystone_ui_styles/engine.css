@@ -1412,6 +1412,10 @@
     @apply mb-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-(length:--ks-border-width) border-(color:--ks-color-border) dark:border-(color:--ks-color-border-dark) bg-(color:--ks-color-overlay) dark:bg-(color:--ks-color-overlay-dark) shadow-(--ks-shadow-overlay) px-[calc(var(--ks-spacing)*2.5)] py-[calc(var(--ks-spacing)*2)] text-[13px] font-(weight:--ks-font-weight-normal);
   }
 
+  .ks-stacked-bar-tip-name {
+    @apply text-(color:--ks-color-text-muted);
+  }
+
   .ks-timeline-track {
     @apply bg-(color:--ks-color-timeline-track) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-track-dark);
   }

@@ -6144,6 +6144,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-tip"), "font-weight: var(--ks-font-weight-normal)"
   end
 
+  def test_stacked_bar_tip_name_reads_the_muted_text_colour
+    assert_includes block(".ks-stacked-bar-tip-name"), "color: var(--ks-color-text-muted)"
+  end
+
   private
 
   def block(selector)
