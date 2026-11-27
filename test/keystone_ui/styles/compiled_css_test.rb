@@ -6318,6 +6318,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/&:focus-within \{\s*--tw-ring-shadow: [^;]*calc\(var\(--ks-border-width\) /, block(".ks-input-group"))
   end
 
+  def test_input_group_focus_ring_reads_the_focus_colour
+    assert_match(/&:focus-within \{\s*--tw-ring-color: var\(--ks-color-focus\);/, block(".ks-input-group"))
+  end
+
   private
 
   def block(selector)
