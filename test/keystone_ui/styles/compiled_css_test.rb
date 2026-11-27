@@ -6011,6 +6011,12 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_equal({}, missing)
   end
 
+  def test_each_fill_tone_fills_its_background_with_its_colour
+    missing = %w[teal orange blue amber].reject { |tone| block(".ks-fill-#{tone}").include?("background-color: var(--ks-color-fill-#{tone})") }
+    
+    assert_equal [], missing
+  end
+
   private
 
   def block(selector)
