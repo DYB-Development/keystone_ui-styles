@@ -6216,6 +6216,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-status-line"), "gap: calc(var(--ks-spacing) * 1.5)"
   end
 
+  def test_status_line_text_is_13px
+    assert_includes block(".ks-status-line"), "font-size: 13px"
+  end
+
   private
 
   def block(selector)

@@ -805,7 +805,7 @@
   }
 
   .ks-status-line {
-    @apply gap-[calc(var(--ks-spacing)*1.5)];
+    @apply gap-[calc(var(--ks-spacing)*1.5)] text-[13px];
   }
 
   .ks-panel-radius-md {
