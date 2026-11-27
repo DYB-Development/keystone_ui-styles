@@ -6088,6 +6088,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/prefers-color-scheme: dark.*?&:focus-visible \{\s*--tw-ring-color: var\(--ks-color-text-dark\)/m, block(".ks-stacked-bar-segment"))
   end
 
+  def test_stacked_bar_amount_padding_inline_is_1_75_spacing_units
+    assert_includes block(".ks-stacked-bar-amount"), "padding-inline: calc(var(--ks-spacing) * 1.75)"
+  end
+
   private
 
   def block(selector)

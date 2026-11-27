@@ -1404,6 +1404,10 @@
     @apply rounded-[calc(var(--ks-radius-control)*0.5)] text-[13px] font-(weight:--ks-font-weight-strong) outline-none focus-visible:ring-[length:calc(var(--ks-border-width)*2)] focus-visible:ring-(color:--ks-color-text) dark:focus-visible:ring-(color:--ks-color-text-dark);
   }
 
+  .ks-stacked-bar-amount {
+    @apply px-[calc(var(--ks-spacing)*1.75)];
+  }
+
   .ks-timeline-track {
     @apply bg-(color:--ks-color-timeline-track) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-track-dark);
   }
