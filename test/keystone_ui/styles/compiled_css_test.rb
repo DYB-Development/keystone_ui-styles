@@ -6092,6 +6092,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-amount"), "padding-inline: calc(var(--ks-spacing) * 1.75)"
   end
 
+  def test_stacked_bar_amount_draws_its_digits_at_equal_widths
+    assert_includes block(".ks-stacked-bar-amount"), "--tw-numeric-spacing: tabular-nums"
+  end
+
   private
 
   def block(selector)

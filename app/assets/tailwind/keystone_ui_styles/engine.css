@@ -1405,7 +1405,7 @@
   }
 
   .ks-stacked-bar-amount {
-    @apply px-[calc(var(--ks-spacing)*1.75)];
+    @apply px-[calc(var(--ks-spacing)*1.75)] tabular-nums;
   }
 
   .ks-timeline-track {
