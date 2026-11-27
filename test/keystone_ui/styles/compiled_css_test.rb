@@ -6334,6 +6334,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-input.ks-input-grouped"), "border-width: 0px"
   end
 
+  def test_grouped_input_draws_no_focus_ring_of_its_own
+    assert_match(/&:focus \{\s*--tw-ring-shadow: [^;]*calc\(0px /, block(".ks-input.ks-input-grouped"))
+  end
+
   private
 
   def block(selector)

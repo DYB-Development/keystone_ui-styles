@@ -401,7 +401,7 @@
   }
 
   .ks-input.ks-input-grouped {
-    @apply border-0;
+    @apply border-0 focus:ring-0;
   }
 
   .ks-label {
