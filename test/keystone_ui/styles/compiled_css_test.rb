@@ -6228,6 +6228,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-status-icon"), "    color: var(--ks-color-on-fill);"
   end
 
+  def test_status_icon_draws_its_mark_in_the_dark_on_fill_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?color: var\(--ks-color-on-fill-dark\)/m, block(".ks-status-icon"))
+  end
+
   private
 
   def block(selector)
