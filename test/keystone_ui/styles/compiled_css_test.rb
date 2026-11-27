@@ -6310,6 +6310,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-input-group"), "padding-inline: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_input_group_border_turns_the_focus_colour_while_its_field_has_focus
+    assert_match(/&:focus-within \{\s*border-color: var\(--ks-color-focus\);/, block(".ks-input-group"))
+  end
+
   private
 
   def block(selector)
