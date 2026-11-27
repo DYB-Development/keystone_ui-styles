@@ -6306,6 +6306,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/prefers-color-scheme: dark.*?background-color: var\(--ks-color-surface-dark\)/m, block(".ks-input-group"))
   end
 
+  def test_input_group_padding_inline_is_2_spacing_units
+    assert_includes block(".ks-input-group"), "padding-inline: calc(var(--ks-spacing) * 2)"
+  end
+
   private
 
   def block(selector)
