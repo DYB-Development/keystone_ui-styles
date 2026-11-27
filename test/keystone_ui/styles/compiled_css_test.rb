@@ -6290,6 +6290,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-input-group"), "border-color: var(--ks-color-border-control)"
   end
 
+  def test_input_group_border_reads_the_dark_input_border_colour_on_a_dark_page
+    assert_match(/prefers-color-scheme: dark.*?border-color: var\(--ks-color-border-control-dark\)/m, block(".ks-input-group"))
+  end
+
   private
 
   def block(selector)

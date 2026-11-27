@@ -397,7 +397,7 @@
   }
 
   .ks-input-group {
-    @apply border-(length:--ks-border-width) border-(color:--ks-color-border-control);
+    @apply border-(length:--ks-border-width) border-(color:--ks-color-border-control) dark:border-(color:--ks-color-border-control-dark);
   }
 
   .ks-label {
