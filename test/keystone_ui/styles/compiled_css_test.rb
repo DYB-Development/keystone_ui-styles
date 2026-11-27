@@ -6064,6 +6064,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-segment"), "border-radius: calc(var(--ks-radius-control) * 0.5)"
   end
 
+  def test_stacked_bar_segment_text_is_13px
+    assert_includes block(".ks-stacked-bar-segment"), "font-size: 13px"
+  end
+
   private
 
   def block(selector)
