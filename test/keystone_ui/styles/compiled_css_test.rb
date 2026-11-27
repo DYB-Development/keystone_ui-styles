@@ -6048,6 +6048,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_equal({}, missing)
   end
 
+  def test_amber_fill_draws_its_text_in_the_on_amber_colour
+    assert_includes block(".ks-fill-amber"), "    color: var(--ks-color-on-fill-amber);"
+  end
+
   private
 
   def block(selector)
