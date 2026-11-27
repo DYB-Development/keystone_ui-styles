@@ -1400,6 +1400,10 @@
     @apply gap-[calc(var(--ks-spacing)*0.5)];
   }
 
+  .ks-stacked-bar-segment {
+    @apply rounded-[calc(var(--ks-radius-control)*0.5)];
+  }
+
   .ks-timeline-track {
     @apply bg-(color:--ks-color-timeline-track) rounded-(--ks-radius-pill) dark:bg-(color:--ks-color-timeline-track-dark);
   }

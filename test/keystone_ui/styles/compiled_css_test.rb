@@ -6060,6 +6060,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar"), "gap: calc(var(--ks-spacing) * 0.5)"
   end
 
+  def test_stacked_bar_segment_rounds_its_corners_at_half_the_control_radius
+    assert_includes block(".ks-stacked-bar-segment"), "border-radius: calc(var(--ks-radius-control) * 0.5)"
+  end
+
   private
 
   def block(selector)
