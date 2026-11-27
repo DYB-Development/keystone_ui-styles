@@ -6232,6 +6232,13 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/prefers-color-scheme: dark.*?color: var\(--ks-color-on-fill-dark\)/m, block(".ks-status-icon"))
   end
 
+  def test_pass_and_fail_colours_default_to_the_reference_green_and_red
+    colours = { "--ks-color-pass" => "#0aac23", "--ks-color-fail" => "#dc3c3d" }
+    missing = colours.reject { |name, colour| self.class.compiled.include?("#{name}: #{colour};") }
+
+    assert_equal({}, missing)
+  end
+
   private
 
   def block(selector)

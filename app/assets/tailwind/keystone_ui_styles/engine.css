@@ -326,6 +326,8 @@
     --ks-color-fill-amber-dark: #d28e05;
     --ks-color-on-fill-amber: #0b0b0b;
     --ks-color-on-fill-amber-dark: #ffffff;
+    --ks-color-pass: #0aac23;
+    --ks-color-fail: #dc3c3d;
   }
 
   html {
