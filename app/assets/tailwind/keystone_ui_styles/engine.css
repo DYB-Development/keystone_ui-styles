@@ -1433,7 +1433,7 @@
   }
 
   .ks-stacked-bar-legend-value {
-    @apply tabular-nums;
+    @apply tabular-nums text-(color:--ks-color-text);
   }
 
   .ks-timeline-track {

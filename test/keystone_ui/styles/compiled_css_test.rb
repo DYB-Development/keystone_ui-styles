@@ -6204,6 +6204,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stacked-bar-legend-value"), "--tw-numeric-spacing: tabular-nums"
   end
 
+  def test_stacked_bar_legend_value_reads_the_text_colour
+    assert_includes block(".ks-stacked-bar-legend-value"), "    color: var(--ks-color-text);"
+  end
+
   private
 
   def block(selector)
