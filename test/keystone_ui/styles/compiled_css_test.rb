@@ -6000,38 +6000,38 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
   def test_fill_tones_default_to_their_light_colours
     colours = { "teal" => "#00b894", "orange" => "#f47230", "blue" => "#257de0", "amber" => "#f2a600" }
     missing = colours.reject { |tone, colour| self.class.compiled.include?("--ks-color-fill-#{tone}: #{colour};") }
-    
+
     assert_equal({}, missing)
   end
 
   def test_fill_tones_default_to_their_dark_colours
     colours = { "teal" => "#00a888", "orange" => "#e76624", "blue" => "#338ced", "amber" => "#d28e05" }
     missing = colours.reject { |tone, colour| self.class.compiled.include?("--ks-color-fill-#{tone}-dark: #{colour};") }
-    
+
     assert_equal({}, missing)
   end
 
   def test_each_fill_tone_fills_its_background_with_its_colour
     missing = %w[teal orange blue amber].reject { |tone| block(".ks-fill-#{tone}").include?("background-color: var(--ks-color-fill-#{tone})") }
-    
+
     assert_equal [], missing
   end
 
   def test_each_fill_tone_fills_its_background_with_its_dark_colour_on_a_dark_page
     missing = %w[teal orange blue amber].reject { |tone| block(".ks-fill-#{tone}").match?(/prefers-color-scheme: dark.*?background-color: var\(--ks-color-fill-#{tone}-dark\)/m) }
-    
+
     assert_equal [], missing
   end
 
   def test_fill_tones_come_after_the_progress_bar_so_a_toned_meter_takes_the_tone_colour
     early = %w[teal orange blue amber].reject { |tone| position(".ks-fill-#{tone}") > position(".ks-progress-bar") }
-    
+
     assert_equal [], early
   end
 
   def test_teal_orange_and_blue_fills_draw_their_text_in_the_on_fill_colour
-    missing = %w[teal orange blue].reject { |tone| light_value(".ks-fill-#{tone}", "color") == "var(--ks-color-on-fill)" }
-    
+    missing = %w[teal orange blue].reject { |tone| block(".ks-fill-#{tone}").include?("    color: var(--ks-color-on-fill);") }
+
     assert_equal [], missing
   end
 
