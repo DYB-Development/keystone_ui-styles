@@ -808,6 +808,10 @@
     @apply gap-[calc(var(--ks-spacing)*1.5)] text-[13px];
   }
 
+  .ks-status-icon {
+    @apply rounded-(--ks-radius-pill);
+  }
+
   .ks-panel-radius-md {
     @apply rounded-(--ks-radius-surface);
   }

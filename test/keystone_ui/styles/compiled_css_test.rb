@@ -6220,6 +6220,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-status-line"), "font-size: 13px"
   end
 
+  def test_status_icon_is_round
+    assert_includes block(".ks-status-icon"), "border-radius: var(--ks-radius-pill)"
+  end
+
   private
 
   def block(selector)
