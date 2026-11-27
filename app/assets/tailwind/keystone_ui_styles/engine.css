@@ -1421,7 +1421,7 @@
   }
 
   .ks-stacked-bar-legend {
-    @apply mt-[calc(var(--ks-spacing)*2)];
+    @apply mt-[calc(var(--ks-spacing)*2)] gap-x-[calc(var(--ks-spacing)*4.5)];
   }
 
   .ks-timeline-track {
