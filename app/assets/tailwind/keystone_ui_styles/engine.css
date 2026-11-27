@@ -1409,7 +1409,7 @@
   }
 
   .ks-stacked-bar-tip {
-    @apply mb-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface);
+    @apply mb-[calc(var(--ks-spacing)*2)] rounded-(--ks-radius-surface) border-(length:--ks-border-width);
   }
 
   .ks-timeline-track {
