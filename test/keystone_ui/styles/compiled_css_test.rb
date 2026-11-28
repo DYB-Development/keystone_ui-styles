@@ -6390,6 +6390,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-value-list-compact .ks-value-list-value"), "text-align: right"
   end
 
+  def test_text_underline_tab_bar_underlines_the_active_tab_in_the_text_colour
+    assert_includes block(".ks-tab-bar-text-underline .ks-tab-active[data-active]"), "border-color: var(--ks-color-text)"
+  end
+
   private
 
   def block(selector)
