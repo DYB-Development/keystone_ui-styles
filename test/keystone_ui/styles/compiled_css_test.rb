@@ -6370,6 +6370,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-value-list-compact .ks-value-list-row"), "padding-block: calc(var(--ks-spacing) * 0.75)"
   end
 
+  def test_compact_value_list_draws_no_line_between_rows
+    assert_includes block(".ks-value-list-compact .ks-value-list-row + .ks-value-list-row"), "border-top-width: 0px"
+  end
+
   private
 
   def block(selector)

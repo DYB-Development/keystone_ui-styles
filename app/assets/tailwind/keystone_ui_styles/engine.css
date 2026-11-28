@@ -620,6 +620,10 @@
     @apply justify-between gap-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*0.75)];
   }
 
+  .ks-value-list-compact .ks-value-list-row + .ks-value-list-row {
+    @apply border-t-0;
+  }
+
   .ks-bar-chart-bar {
     @apply fill-(--ks-color-chart-1) dark:fill-(--ks-color-chart-1-dark);
   }
