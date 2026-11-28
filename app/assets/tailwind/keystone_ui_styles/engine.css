@@ -1923,6 +1923,10 @@
     @apply text-xs;
   }
 
+  .ks-form-compact .ks-input {
+    @apply py-[calc(var(--ks-spacing)*1.75)];
+  }
+
   .ks-theme-toggle {
     @apply gap-[calc(var(--ks-spacing)*1)];
   }

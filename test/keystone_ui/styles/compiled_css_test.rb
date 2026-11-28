@@ -6442,6 +6442,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-form-compact .ks-label"), "font-size: var(--text-xs)"
   end
 
+  def test_compact_form_input_padding_block_is_one_and_three_quarter_spacing_units
+    assert_includes block(".ks-form-compact .ks-input"), "padding-block: calc(var(--ks-spacing) * 1.75)"
+  end
+
   private
 
   def block(selector)
