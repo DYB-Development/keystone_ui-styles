@@ -629,7 +629,7 @@
   }
 
   .ks-value-list-compact .ks-value-list-value {
-    @apply font-(weight:--ks-font-weight-strong);
+    @apply font-(weight:--ks-font-weight-strong) text-right;
   }
 
   .ks-bar-chart-bar {

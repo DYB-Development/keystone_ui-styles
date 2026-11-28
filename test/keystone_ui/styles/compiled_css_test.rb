@@ -6386,6 +6386,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-value-list-compact .ks-value-list-value"), "font-weight: var(--ks-font-weight-strong)"
   end
 
+  def test_compact_value_list_value_lines_up_on_the_right
+    assert_includes block(".ks-value-list-compact .ks-value-list-value"), "text-align: right"
+  end
+
   private
 
   def block(selector)
