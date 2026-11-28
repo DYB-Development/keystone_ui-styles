@@ -6358,6 +6358,110 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/prefers-color-scheme: dark.*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-input-addon"))
   end
 
+  def test_compact_value_list_row_puts_its_value_at_the_far_end
+    assert_includes block(".ks-value-list-compact .ks-value-list-row"), "justify-content: space-between"
+  end
+
+  def test_compact_value_list_row_leaves_3_spacing_units_between_label_and_value
+    assert_includes block(".ks-value-list-compact .ks-value-list-row"), "gap: calc(var(--ks-spacing) * 3)"
+  end
+
+  def test_compact_value_list_row_padding_block_is_three_quarters_of_a_spacing_unit
+    assert_includes block(".ks-value-list-compact .ks-value-list-row"), "padding-block: calc(var(--ks-spacing) * 0.75)"
+  end
+
+  def test_compact_value_list_draws_no_line_between_rows
+    assert_includes block(".ks-value-list-compact .ks-value-list-row + .ks-value-list-row"), "border-top-width: 0px"
+  end
+
+  def test_compact_value_list_label_takes_its_natural_width
+    assert_includes block(".ks-value-list-compact .ks-value-list-label"), "flex-basis: auto"
+  end
+
+  def test_compact_value_list_label_wraps_when_the_row_is_too_narrow_for_it
+    assert_includes block(".ks-value-list-compact .ks-value-list-label"), "flex-shrink: 1"
+  end
+
+  def test_compact_value_list_value_reads_the_strong_font_weight
+    assert_includes block(".ks-value-list-compact .ks-value-list-value"), "font-weight: var(--ks-font-weight-strong)"
+  end
+
+  def test_compact_value_list_value_lines_up_on_the_right
+    assert_includes block(".ks-value-list-compact .ks-value-list-value"), "text-align: right"
+  end
+
+  def test_text_underline_tab_bar_underlines_the_active_tab_in_the_text_colour
+    assert_includes block(".ks-tab-bar-text-underline .ks-tab-active[data-active]"), "border-color: var(--ks-color-text)"
+  end
+
+  def test_text_underline_tab_bar_underlines_the_active_tab_in_the_dark_text_colour_on_a_dark_page
+    assert_match(/\.ks-tab-bar-text-underline \.ks-tab-active(?![\w-]).*?data-theme="dark".*?\[data-active\].*?border-color: var\(--ks-color-text-dark\)/m, self.class.compiled)
+  end
+
+  def test_text_underline_tab_bar_draws_the_active_tab_label_in_the_text_colour
+    assert_match(/^\s*color: var\(--ks-color-text\);/, block(".ks-tab-bar-text-underline .ks-tab-active[data-active]"))
+  end
+
+  def test_text_underline_tab_bar_draws_the_active_tab_label_in_the_dark_text_colour_on_a_dark_page
+    assert_match(/^\s*\.ks-tab-bar-text-underline \.ks-tab-active:where\(:is\(\[data-theme="dark"\][^{]*\[data-active\] \{[^}]*^\s*color: var\(--ks-color-text-dark\);/m, self.class.compiled)
+  end
+
+  def test_text_underline_tab_bar_draws_the_active_tab_label_in_the_heading_font_weight
+    assert_includes block(".ks-tab-bar-text-underline .ks-tab-active[data-active]"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
+  def test_text_underline_tab_bar_draws_its_tabs_in_small_text
+    assert_includes block(".ks-tab-bar-text-underline .ks-tab"), "font-size: var(--text-sm)"
+  end
+
+  def test_panel_action_reaches_one_and_a_half_spacing_units_into_the_panel_s_top_padding
+    assert_includes block(".ks-panel-action"), "margin-top: calc(var(--ks-spacing) * -1.5)"
+  end
+
+  def test_panel_action_reaches_one_and_a_half_spacing_units_into_the_panel_s_right_padding
+    assert_includes block(".ks-panel-action"), "margin-right: calc(var(--ks-spacing) * -1.5)"
+  end
+
+  def test_panel_action_text_button_padding_inline_is_one_and_a_half_spacing_units
+    assert_includes block(".ks-panel-action .ks-text-button"), "padding-inline: calc(var(--ks-spacing) * 1.5)"
+  end
+
+  def test_panel_action_text_button_padding_block_is_1_spacing_unit
+    assert_includes block(".ks-panel-action .ks-text-button"), "padding-block: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_small_stat_card_value_is_22px
+    assert_includes block(".ks-stat-card-value-sm"), "font-size: 22px"
+  end
+
+  def test_small_stat_card_value_reads_the_heading_font_weight
+    assert_includes block(".ks-stat-card-value-sm"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
+  def test_compact_form_draws_its_labels_in_extra_small_text
+    assert_includes block(".ks-form-compact .ks-label"), "font-size: var(--text-xs)"
+  end
+
+  def test_compact_form_input_padding_block_is_one_and_three_quarter_spacing_units
+    assert_includes block(".ks-form-compact .ks-input"), "padding-block: calc(var(--ks-spacing) * 1.75)"
+  end
+
+  def test_compact_form_input_padding_inline_is_2_spacing_units
+    assert_includes block(".ks-form-compact .ks-input"), "padding-inline: calc(var(--ks-spacing) * 2)"
+  end
+
+  def test_compact_form_input_rounds_its_corners_at_seven_eighths_of_the_control_radius
+    assert_includes block(".ks-form-compact .ks-input"), "border-radius: calc(var(--ks-radius-control) * 0.875)"
+  end
+
+  def test_compact_form_grouped_input_keeps_1_spacing_unit_on_each_side
+    assert_includes block(".ks-form-compact .ks-input.ks-input-grouped"), "padding-inline: calc(var(--ks-spacing) * 1)"
+  end
+
+  def test_compact_form_input_group_rounds_its_corners_at_seven_eighths_of_the_control_radius
+    assert_includes block(".ks-form-compact .ks-input-group"), "border-radius: calc(var(--ks-radius-control) * 0.875)"
+  end
+
   private
 
   def block(selector)

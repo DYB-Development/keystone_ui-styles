@@ -616,6 +616,22 @@
     @apply text-lg;
   }
 
+  .ks-value-list-compact .ks-value-list-row {
+    @apply justify-between gap-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*0.75)];
+  }
+
+  .ks-value-list-compact .ks-value-list-row + .ks-value-list-row {
+    @apply border-t-0;
+  }
+
+  .ks-value-list-compact .ks-value-list-label {
+    @apply basis-auto shrink;
+  }
+
+  .ks-value-list-compact .ks-value-list-value {
+    @apply font-(weight:--ks-font-weight-strong) text-right;
+  }
+
   .ks-bar-chart-bar {
     @apply fill-(--ks-color-chart-1) dark:fill-(--ks-color-chart-1-dark);
   }
@@ -876,6 +892,14 @@
     @apply border-(color:--ks-color-selected-border);
   }
 
+  .ks-panel-action {
+    @apply mt-[calc(var(--ks-spacing)*-1.5)] mr-[calc(var(--ks-spacing)*-1.5)];
+  }
+
+  .ks-panel-action .ks-text-button {
+    @apply px-[calc(var(--ks-spacing)*1.5)] py-[calc(var(--ks-spacing)*1)];
+  }
+
   .ks-modal-backdrop {
     @apply bg-(color:--ks-color-backdrop);
   }
@@ -1106,6 +1130,10 @@
 
   .ks-stat-card-value-compact > * {
     @apply mt-0;
+  }
+
+  .ks-stat-card-value-sm {
+    @apply text-[22px] font-(weight:--ks-font-weight-heading);
   }
 
   .ks-tone-neutral {
@@ -1410,6 +1438,14 @@
 
   .ks-tab-bar-underline .ks-tab-active {
     @apply data-[active]:border-b-[length:calc(var(--ks-border-width)*2)] data-[active]:border-(color:--ks-color-accent) dark:data-[active]:border-(color:--ks-color-accent-dark) data-[active]:font-(weight:--ks-font-weight-medium) data-[active]:bg-(color:--ks-color-tab-underline-fill);
+  }
+
+  .ks-tab-bar-text-underline .ks-tab {
+    @apply text-sm;
+  }
+
+  .ks-tab-bar-text-underline .ks-tab-active {
+    @apply data-[active]:border-(color:--ks-color-text) dark:data-[active]:border-(color:--ks-color-text-dark) data-[active]:text-(color:--ks-color-text) dark:data-[active]:text-(color:--ks-color-text-dark) data-[active]:font-(weight:--ks-font-weight-heading);
   }
 
   .ks-tab-count {
@@ -1881,6 +1917,22 @@
 
   .ks-form-field-checkbox {
     @apply gap-[calc(var(--ks-spacing)*2)];
+  }
+
+  .ks-form-compact .ks-label {
+    @apply text-xs;
+  }
+
+  .ks-form-compact .ks-input {
+    @apply py-[calc(var(--ks-spacing)*1.75)] px-[calc(var(--ks-spacing)*2)] rounded-[calc(var(--ks-radius-control)*0.875)];
+  }
+
+  .ks-form-compact .ks-input.ks-input-grouped {
+    @apply px-[calc(var(--ks-spacing)*1)];
+  }
+
+  .ks-form-compact .ks-input-group {
+    @apply rounded-[calc(var(--ks-radius-control)*0.875)];
   }
 
   .ks-theme-toggle {

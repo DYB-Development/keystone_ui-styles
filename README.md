@@ -211,6 +211,7 @@ warning 400, and 700 on a dark page.
 | `ks-panel-shadow` | Panel shadow |
 | `ks-panel-shaded` | On a `ks-panel`, fills it with the shaded colour and draws its border in the same colour, for a result box |
 | `ks-panel-selected` | On a `ks-panel`, outlines it in the selected border colour, for the option in use, including a shaded one |
+| `ks-panel-action` | The row holding a panel's top-right text button, reaching 1.5 spacing units into the panel's top and right padding, with its `ks-text-button` padded by 1.5 spacing units on each side and 1 above and below |
 | `ks-input` | Text inputs, text areas and selects |
 | `ks-input-disabled` | A disabled input |
 | `ks-input-group`, `ks-input-grouped`, `ks-input-addon` | A field with short text such as `$` or `hours` inside its border: the group draws the input's border, background and focus ring, the input inside it draws neither border nor focus ring, and the addon is that short text in small muted type |
@@ -242,6 +243,7 @@ warning 400, and 700 on a dark page.
 | `ks-value-list-end` | On the list, pushes each value to the right end of its row |
 | `ks-value-list-total` | A row drawn with more weight, for a total |
 | `ks-value-list-key` | On a `ks-value-list-row`, draws its value in large text without making the row a total |
+| `ks-value-list-compact` | On the list, a compact result list: each label takes its natural width and wraps only when the row is too narrow, each value is drawn in the strong weight at the right end of its row, rows are three quarters of a spacing unit apart above and below with 3 spacing units between label and value, and no line is drawn between rows |
 | `ks-bar-chart-bar`, `ks-bar-chart-bar-shaded` | A bar chart's bars, filled in the first chart colour, and a bar drawn faded |
 | `ks-bar-chart-bar-group-1` to `ks-bar-chart-bar-group-5` | On a `ks-bar-chart-bar`, fills the bar in its group's colour, from grey for the oldest group to the first chart colour for the newest |
 | `ks-bar-chart-grid` | A bar chart's grid lines |
@@ -277,6 +279,7 @@ warning 400, and 700 on a dark page.
 | `ks-metric-card` | Stat card and chart card |
 | `ks-metric-card-compact` | Beside `ks-metric-card`, a compact stat card padded by 2 spacing units with corners at the surface radius |
 | `ks-stat-card-value-compact` | Beside `ks-stat-card-value`, a compact stat card's value row, straight under its label, leaving 1.5 spacing units before the change or note beside the value, which sit level with it |
+| `ks-stat-card-value-sm` | Beside `ks-stat-card-value`, a stat card's value drawn at 22px in the heading weight |
 | `ks-stat-card-header`, `ks-stat-card-label`, `ks-stat-card-value`, `ks-stat-card-suffix`, `ks-stat-card-disclosure`, `ks-stat-card-emphasis`, `ks-stat-card-change`, `ks-stat-card-info` | Stat card parts |
 | `ks-tone-neutral`, `ks-tone-muted`, `ks-tone-success`, `ks-tone-danger`, `ks-tone-warning`, `ks-tone-info` | Stat card value and change colour |
 | `ks-chart-card-title` | Chart card title |
@@ -292,6 +295,7 @@ warning 400, and 700 on a dark page.
 | `ks-tab-bar`, `ks-tab`, `ks-tab-active` | Tab switcher, a tab, and the active tab |
 | `ks-tab-bar-pills` | On a `ks-tab-bar`, draws each tab as a small outlined pill with 12px text, outlines the active tab in the accent colour, and leaves 10px under the row. Its tabs take their text size from it, so they carry no text size class of their own |
 | `ks-tab-bar-underline` | On a `ks-tab-bar`, draws the tabs as plain 13px text over a line in the border colour under the whole row, underlines the active tab in the accent colour, and leaves 16px under the row. Its tabs take their text size from it, so they carry no text size class of their own |
+| `ks-tab-bar-text-underline` | Beside `ks-tab-bar-underline`, draws the tabs in 14px text and the active tab's label and underline in the text colour, in the heading weight |
 | `ks-tab-count` | A tab's count, as plain muted text after its label |
 | `ks-progress-track`, `ks-progress-bar`, `ks-meter-label` | Progress bar and its label |
 | `ks-fill-teal`, `ks-fill-orange`, `ks-fill-blue`, `ks-fill-amber` | Fill tones, each filling the background in its colour and drawing text in the colour that sits on it, in light and dark mode, and coming after `ks-progress-bar` so a progress bar given a tone takes the tone's colour |
@@ -313,6 +317,7 @@ warning 400, and 700 on a dark page.
 | `ks-settings-link`, `ks-settings-link-label` | Settings link and its label |
 | `ks-grid-gap-sm`, `ks-grid-gap-md`, `ks-grid-gap-lg`, `ks-grid-gap-xl`, and the same with `-x-` and `-y-` | Grid gaps, both ways, across or down |
 | `ks-form`, `ks-form-field`, `ks-form-field-checkbox` | Space between a form's fields, inside a field, and beside a checkbox |
+| `ks-form-compact` | On a form, draws its field labels in extra small text and its inputs, selects and input groups with corners at seven eighths of the control radius, with 1.75 spacing units above and below an input's text and 2 on each side, keeping 1 on each side of an input inside an input group |
 | `ks-theme-toggle` | Space between the theme toggle's buttons |
 | `ks-color-picker-label` | Space under the colour picker's label |
 | `ks-settings-link-chevron` | Settings link arrow colour |

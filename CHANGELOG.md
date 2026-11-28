@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+### Added
+- `ks-value-list-compact` draws a value list as a compact result list: each label takes its natural width, each value is drawn in the strong weight at the right end of its row, and no line is drawn between rows.
+- `ks-tab-bar-text-underline`, beside `ks-tab-bar-underline`, draws the tabs in 14px text and the active tab's label and underline in the text colour, in the heading weight.
+- `ks-panel-action` pulls the row holding a panel's top-right text button 1.5 spacing units into the panel's top and right padding, and pads its `ks-text-button` so the button is easier to tap.
+- `ks-stat-card-value-sm`, beside `ks-stat-card-value`, draws a stat card's value at 22px in the heading weight.
+- `ks-form-compact` draws a form's field labels in extra small text and its inputs, selects and input groups with less padding and smaller corners.
+
 ## [0.46.0] - 2026-11-27
 
 ### Added
