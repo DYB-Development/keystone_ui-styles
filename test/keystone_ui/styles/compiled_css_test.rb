@@ -6382,6 +6382,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-value-list-compact .ks-value-list-label"), "flex-shrink: 1"
   end
 
+  def test_compact_value_list_value_reads_the_strong_font_weight
+    assert_includes block(".ks-value-list-compact .ks-value-list-value"), "font-weight: var(--ks-font-weight-strong)"
+  end
+
   private
 
   def block(selector)

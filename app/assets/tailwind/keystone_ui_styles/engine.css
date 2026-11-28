@@ -628,6 +628,10 @@
     @apply basis-auto shrink;
   }
 
+  .ks-value-list-compact .ks-value-list-value {
+    @apply font-(weight:--ks-font-weight-strong);
+  }
+
   .ks-bar-chart-bar {
     @apply fill-(--ks-color-chart-1) dark:fill-(--ks-color-chart-1-dark);
   }
