@@ -6394,6 +6394,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar-text-underline .ks-tab-active[data-active]"), "border-color: var(--ks-color-text)"
   end
 
+  def test_text_underline_tab_bar_underlines_the_active_tab_in_the_dark_text_colour_on_a_dark_page
+    assert_match(/\.ks-tab-bar-text-underline \.ks-tab-active(?![\w-]).*?data-theme="dark".*?\[data-active\].*?border-color: var\(--ks-color-text-dark\)/m, self.class.compiled)
+  end
+
   private
 
   def block(selector)
