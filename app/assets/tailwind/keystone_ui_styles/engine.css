@@ -1132,6 +1132,10 @@
     @apply mt-0;
   }
 
+  .ks-stat-card-value-sm {
+    @apply text-[22px];
+  }
+
   .ks-tone-neutral {
     @apply text-(color:--ks-color-text) dark:text-(color:--ks-color-text-dark);
   }

@@ -6430,6 +6430,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-panel-action .ks-text-button"), "padding-block: calc(var(--ks-spacing) * 1)"
   end
 
+  def test_small_stat_card_value_is_22px
+    assert_includes block(".ks-stat-card-value-sm"), "font-size: 22px"
+  end
+
   private
 
   def block(selector)
