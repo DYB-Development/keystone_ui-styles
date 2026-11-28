@@ -1919,6 +1919,10 @@
     @apply gap-[calc(var(--ks-spacing)*2)];
   }
 
+  .ks-form-compact .ks-label {
+    @apply text-xs;
+  }
+
   .ks-theme-toggle {
     @apply gap-[calc(var(--ks-spacing)*1)];
   }

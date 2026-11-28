@@ -6438,6 +6438,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stat-card-value-sm"), "font-weight: var(--ks-font-weight-heading)"
   end
 
+  def test_compact_form_draws_its_labels_in_extra_small_text
+    assert_includes block(".ks-form-compact .ks-label"), "font-size: var(--text-xs)"
+  end
+
   private
 
   def block(selector)
