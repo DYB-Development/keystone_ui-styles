@@ -6450,6 +6450,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-form-compact .ks-input"), "padding-inline: calc(var(--ks-spacing) * 2)"
   end
 
+  def test_compact_form_input_rounds_its_corners_at_seven_eighths_of_the_control_radius
+    assert_includes block(".ks-form-compact .ks-input"), "border-radius: calc(var(--ks-radius-control) * 0.875)"
+  end
+
   private
 
   def block(selector)
