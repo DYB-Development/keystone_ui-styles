@@ -1931,6 +1931,10 @@
     @apply px-[calc(var(--ks-spacing)*1)];
   }
 
+  .ks-form-compact .ks-input-group {
+    @apply rounded-[calc(var(--ks-radius-control)*0.875)];
+  }
+
   .ks-theme-toggle {
     @apply gap-[calc(var(--ks-spacing)*1)];
   }
