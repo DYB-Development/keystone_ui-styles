@@ -6374,6 +6374,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-value-list-compact .ks-value-list-row + .ks-value-list-row"), "border-top-width: 0px"
   end
 
+  def test_compact_value_list_label_takes_its_natural_width
+    assert_includes block(".ks-value-list-compact .ks-value-list-label"), "flex-basis: auto"
+  end
+
   private
 
   def block(selector)

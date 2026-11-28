@@ -624,6 +624,10 @@
     @apply border-t-0;
   }
 
+  .ks-value-list-compact .ks-value-list-label {
+    @apply basis-auto;
+  }
+
   .ks-bar-chart-bar {
     @apply fill-(--ks-color-chart-1) dark:fill-(--ks-color-chart-1-dark);
   }
