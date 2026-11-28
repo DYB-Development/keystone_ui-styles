@@ -6410,6 +6410,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar-text-underline .ks-tab-active[data-active]"), "font-weight: var(--ks-font-weight-heading)"
   end
 
+  def test_text_underline_tab_bar_draws_its_tabs_in_small_text
+    assert_includes block(".ks-tab-bar-text-underline .ks-tab"), "font-size: var(--text-sm)"
+  end
+
   private
 
   def block(selector)
