@@ -1927,6 +1927,10 @@
     @apply py-[calc(var(--ks-spacing)*1.75)] px-[calc(var(--ks-spacing)*2)] rounded-[calc(var(--ks-radius-control)*0.875)];
   }
 
+  .ks-form-compact .ks-input.ks-input-grouped {
+    @apply px-[calc(var(--ks-spacing)*1)];
+  }
+
   .ks-theme-toggle {
     @apply gap-[calc(var(--ks-spacing)*1)];
   }
