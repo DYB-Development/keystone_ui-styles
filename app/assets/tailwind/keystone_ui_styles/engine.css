@@ -617,7 +617,7 @@
   }
 
   .ks-value-list-compact .ks-value-list-row {
-    @apply justify-between gap-[calc(var(--ks-spacing)*3)];
+    @apply justify-between gap-[calc(var(--ks-spacing)*3)] py-[calc(var(--ks-spacing)*0.75)];
   }
 
   .ks-bar-chart-bar {

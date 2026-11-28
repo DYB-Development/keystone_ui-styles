@@ -6366,6 +6366,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-value-list-compact .ks-value-list-row"), "gap: calc(var(--ks-spacing) * 3)"
   end
 
+  def test_compact_value_list_row_padding_block_is_three_quarters_of_a_spacing_unit
+    assert_includes block(".ks-value-list-compact .ks-value-list-row"), "padding-block: calc(var(--ks-spacing) * 0.75)"
+  end
+
   private
 
   def block(selector)
