@@ -6434,6 +6434,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-stat-card-value-sm"), "font-size: 22px"
   end
 
+  def test_small_stat_card_value_reads_the_heading_font_weight
+    assert_includes block(".ks-stat-card-value-sm"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
   private
 
   def block(selector)

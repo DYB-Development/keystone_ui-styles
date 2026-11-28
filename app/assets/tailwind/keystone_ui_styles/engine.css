@@ -1133,7 +1133,7 @@
   }
 
   .ks-stat-card-value-sm {
-    @apply text-[22px];
+    @apply text-[22px] font-(weight:--ks-font-weight-heading);
   }
 
   .ks-tone-neutral {
