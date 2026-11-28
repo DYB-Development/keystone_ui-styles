@@ -893,7 +893,7 @@
   }
 
   .ks-panel-action {
-    @apply mt-[calc(var(--ks-spacing)*-1.5)];
+    @apply mt-[calc(var(--ks-spacing)*-1.5)] mr-[calc(var(--ks-spacing)*-1.5)];
   }
 
   .ks-modal-backdrop {
