@@ -6358,6 +6358,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/prefers-color-scheme: dark.*?color: var\(--ks-color-text-muted-dark\)/m, block(".ks-input-addon"))
   end
 
+  def test_compact_value_list_row_puts_its_value_at_the_far_end
+    assert_includes block(".ks-value-list-compact .ks-value-list-row"), "justify-content: space-between"
+  end
+
   private
 
   def block(selector)

@@ -616,6 +616,10 @@
     @apply text-lg;
   }
 
+  .ks-value-list-compact .ks-value-list-row {
+    @apply justify-between;
+  }
+
   .ks-bar-chart-bar {
     @apply fill-(--ks-color-chart-1) dark:fill-(--ks-color-chart-1-dark);
   }
