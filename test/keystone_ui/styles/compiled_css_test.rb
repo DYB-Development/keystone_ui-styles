@@ -6422,6 +6422,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-panel-action"), "margin-right: calc(var(--ks-spacing) * -1.5)"
   end
 
+  def test_panel_action_text_button_padding_inline_is_one_and_a_half_spacing_units
+    assert_includes block(".ks-panel-action .ks-text-button"), "padding-inline: calc(var(--ks-spacing) * 1.5)"
+  end
+
   private
 
   def block(selector)

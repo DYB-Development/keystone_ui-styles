@@ -896,6 +896,10 @@
     @apply mt-[calc(var(--ks-spacing)*-1.5)] mr-[calc(var(--ks-spacing)*-1.5)];
   }
 
+  .ks-panel-action .ks-text-button {
+    @apply px-[calc(var(--ks-spacing)*1.5)];
+  }
+
   .ks-modal-backdrop {
     @apply bg-(color:--ks-color-backdrop);
   }
