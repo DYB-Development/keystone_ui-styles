@@ -1429,7 +1429,7 @@
   }
 
   .ks-tab-bar-text-underline .ks-tab-active {
-    @apply data-[active]:border-(color:--ks-color-text) dark:data-[active]:border-(color:--ks-color-text-dark) data-[active]:text-(color:--ks-color-text);
+    @apply data-[active]:border-(color:--ks-color-text) dark:data-[active]:border-(color:--ks-color-text-dark) data-[active]:text-(color:--ks-color-text) dark:data-[active]:text-(color:--ks-color-text-dark);
   }
 
   .ks-tab-count {
