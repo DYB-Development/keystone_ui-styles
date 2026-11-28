@@ -1429,7 +1429,7 @@
   }
 
   .ks-tab-bar-text-underline .ks-tab-active {
-    @apply data-[active]:border-(color:--ks-color-text) dark:data-[active]:border-(color:--ks-color-text-dark) data-[active]:text-(color:--ks-color-text) dark:data-[active]:text-(color:--ks-color-text-dark);
+    @apply data-[active]:border-(color:--ks-color-text) dark:data-[active]:border-(color:--ks-color-text-dark) data-[active]:text-(color:--ks-color-text) dark:data-[active]:text-(color:--ks-color-text-dark) data-[active]:font-(weight:--ks-font-weight-heading);
   }
 
   .ks-tab-count {

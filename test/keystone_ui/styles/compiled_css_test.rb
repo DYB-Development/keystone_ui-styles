@@ -6406,6 +6406,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_match(/^\s*\.ks-tab-bar-text-underline \.ks-tab-active:where\(:is\(\[data-theme="dark"\][^{]*\[data-active\] \{[^}]*^\s*color: var\(--ks-color-text-dark\);/m, self.class.compiled)
   end
 
+  def test_text_underline_tab_bar_draws_the_active_tab_label_in_the_heading_font_weight
+    assert_includes block(".ks-tab-bar-text-underline .ks-tab-active[data-active]"), "font-weight: var(--ks-font-weight-heading)"
+  end
+
   private
 
   def block(selector)
