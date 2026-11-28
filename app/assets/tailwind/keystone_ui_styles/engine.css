@@ -897,7 +897,7 @@
   }
 
   .ks-panel-action .ks-text-button {
-    @apply px-[calc(var(--ks-spacing)*1.5)];
+    @apply px-[calc(var(--ks-spacing)*1.5)] py-[calc(var(--ks-spacing)*1)];
   }
 
   .ks-modal-backdrop {
