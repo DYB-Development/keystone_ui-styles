@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.47.0] - 2026-11-28
+
 ### Added
 - `ks-value-list-compact` draws a value list as a compact result list: each label takes its natural width, each value is drawn in the strong weight at the right end of its row, and no line is drawn between rows.
 - `ks-tab-bar-text-underline`, beside `ks-tab-bar-underline`, draws the tabs in 14px text and the active tab's label and underline in the text colour, in the heading weight.
