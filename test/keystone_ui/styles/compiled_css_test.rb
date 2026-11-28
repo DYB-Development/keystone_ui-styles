@@ -6362,6 +6362,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-value-list-compact .ks-value-list-row"), "justify-content: space-between"
   end
 
+  def test_compact_value_list_row_leaves_3_spacing_units_between_label_and_value
+    assert_includes block(".ks-value-list-compact .ks-value-list-row"), "gap: calc(var(--ks-spacing) * 3)"
+  end
+
   private
 
   def block(selector)
