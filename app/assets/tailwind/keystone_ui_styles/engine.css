@@ -625,7 +625,7 @@
   }
 
   .ks-value-list-compact .ks-value-list-label {
-    @apply basis-auto;
+    @apply basis-auto shrink;
   }
 
   .ks-bar-chart-bar {
