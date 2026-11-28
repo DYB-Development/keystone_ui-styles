@@ -6414,6 +6414,10 @@ class KeystoneUi::Styles::CompiledCssTest < Minitest::Test
     assert_includes block(".ks-tab-bar-text-underline .ks-tab"), "font-size: var(--text-sm)"
   end
 
+  def test_panel_action_reaches_one_and_a_half_spacing_units_into_the_panel_s_top_padding
+    assert_includes block(".ks-panel-action"), "margin-top: calc(var(--ks-spacing) * -1.5)"
+  end
+
   private
 
   def block(selector)

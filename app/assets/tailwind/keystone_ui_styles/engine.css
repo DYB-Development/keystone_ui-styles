@@ -892,6 +892,10 @@
     @apply border-(color:--ks-color-selected-border);
   }
 
+  .ks-panel-action {
+    @apply mt-[calc(var(--ks-spacing)*-1.5)];
+  }
+
   .ks-modal-backdrop {
     @apply bg-(color:--ks-color-backdrop);
   }
